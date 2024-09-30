@@ -1,6 +1,6 @@
+import type { UrlObject } from 'node:url';
 import type { StaticImageData } from 'next/image';
 import type { JSX } from 'react';
-import type { UrlObject } from 'url';
 
 type ProjectType = {
   id: string;
