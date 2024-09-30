@@ -15,4 +15,5 @@ jobs:
           cache: 'pnpm'
       - run: pnpm install
       - run: pnpm eslint . --max-warnings 0
+      - run: pnpm build
       - run: pnpm tsc
