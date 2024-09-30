@@ -8,6 +8,15 @@ const nextConfig: NextConfig = {
     dynamicIO: true,
     typedRoutes: true,
   },
+
+  typescript: {
+    // Types are already checked in CI
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    // Linting is already checked in CI
+    ignoreDuringBuilds: true,
+  },
 };
 
 const withMDX = createMDX({});
