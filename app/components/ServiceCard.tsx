@@ -30,19 +30,20 @@ const ServiceCard: FC<ServiceCardProps> = ({
           <p className="mt-2 text-sm text-neutral-400 md:text-base">
             {description}
           </p>
-          {options && (
-            <ul className="mt-2 list-disc pl-5 text-sm text-neutral-400">
-              {options.map((option) => (
-                <li key={option}>{option}</li>
-              ))}
-            </ul>
-          )}
+          <ul className="mt-2 list-disc pl-5 text-sm text-neutral-400">
+            {options.map((option) => (
+              <li key={`option-${option}`}>{option}</li>
+            ))}
+          </ul>
           {limitedProjects.length > 0 && (
             <div className="mt-6 flex items-center">
               <h3 className="font-semibold mr-4">Related Projects:</h3>
               <div className="flex space-x-4">
                 {limitedProjects.map((project) => (
-                  <Link key={project.id} href={`/projects/${project.slug}`}>
+                  <Link
+                    key={`project-${project.id}`}
+                    href={`/projects/${project.slug}`}
+                  >
                     <p className="text-white hover:underline">{project.name}</p>
                   </Link>
                 ))}

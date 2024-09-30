@@ -22,7 +22,7 @@ import webDevelopment from '../images/services/web-development.png';
 export const navLinks = [
   { name: 'Featured Projects', href: '/#project' },
   { name: 'Services', href: '/#service' },
-];
+] as const;
 
 export const heroSectionData = {
   heading: 'Want better visual science communication?',
@@ -196,4 +196,4 @@ export const footerdata = {
     },
     { Icon: BsGithub, href: 'https://github.com/jonaschlegel' },
   ],
-};
+} as const;

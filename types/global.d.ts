@@ -1,5 +1,6 @@
 import type { StaticImageData } from 'next/image';
 import type { JSX } from 'react';
+import type { UrlObject } from 'url';
 
 type ProjectType = {
   id: string;
@@ -38,7 +39,7 @@ type StatType = {
 
 type SocialType = {
   Icon: React.ComponentType;
-  href: string;
+  href: UrlObject;
 };
 
 declare module '*.mdx' {

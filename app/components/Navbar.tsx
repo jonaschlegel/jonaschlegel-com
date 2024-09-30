@@ -49,14 +49,14 @@ const Navbar = () => {
       >
         <ul className="flex w-full flex-col items-center gap-6 lg:flex-row lg:gap-8">
           {navLinks.map((navItem) => (
-            <li className="list-none" key={navItem.name}>
+            <li className="list-none" key={`nav-${navItem.name}`}>
               <Button href={navItem.href} onClick={handleToggleMenu}>
                 {navItem.name}
               </Button>
             </li>
           ))}
           {externalLinks.map((link) => (
-            <li className="list-none" key={link.name}>
+            <li className="list-none" key={`external-${link.name}`}>
               <a
                 href={link.href}
                 target="_blank"
