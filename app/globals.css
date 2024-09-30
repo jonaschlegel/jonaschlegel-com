@@ -1,21 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 4rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+body,
+p,
+div {
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+h1 {
+  @apply font-merriweather text-5xl font-bold leading-snug tracking-tight xl:text-[4.5rem];
+}
+
+h2 {
+  @apply text-left font-merriweather text-2xl font-semibold md:text-3xl;
+}
+
+h3 {
+  @apply text-left text-lg font-medium text-gray-500 uppercase;
+}
+
+p {
+  @apply tracking-tight text-neutral-300 my-6;
+}
+
+ul {
+  @apply my-6 list-disc list-outside space-y-2 ml-6;
+}
+
+ol {
+  @apply my-6 list-decimal list-outside space-y-2 ml-6;
+}
+
+.caption {
+  @apply text-sm text-gray-500 italic mb-10 mt-2 leading-tight;
+}
+
+.container {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }

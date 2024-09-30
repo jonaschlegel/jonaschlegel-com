@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Business Portfolio Website
 
-## Getting Started
+This repository contains the code for the business portfolio website [jonaschlegel.com](https://jonaschlegel.com), showcasing Jona Schlegel’s projects in archaeological science communication, illustration, and web development.
 
-First, run the development server:
+## Technologies Used
+
+- **Framework**: [Next.js 13+](https://nextjs.org/)
+- **Package Manager**: [pnpm](https://pnpm.io/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **TypeScript**: For type safety and improved developer experience.
+- **ESLint**: [UpLeveled ESLint Config](https://github.com/upleveled/eslint-config-upleveled) for linting and code quality.
+
+## Setup and Installation
+
+To set up the project locally, follow these steps:
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/<your-username>/business-portfolio.git
+   cd business-portfolio
+   ```
+
+2. **Install dependencies using pnpm**:
+
+   ```bash
+   pnpm install
+   ```
+
+3. **Start the development server**:
+
+   ```bash
+   pnpm dev
+   ```
+
+   The site will be running locally at `http://localhost:3000`.
+
+## Project Setup Command
+
+The project was created using the following command:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm create next-app@canary . --app --no-turbo --no-src-dir --no-eslint --import-alias @/* --tailwind
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This command configures the project with:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- No turbo pack.
+- No `src` directory.
+- No ESLint (configured separately with [UpLeveled ESLint](https://github.com/upleveled/eslint-config-upleveled)).
+- Tailwind CSS for styling.
+- TypeScript support.
+- Import alias for simplified path imports (`@/`).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Folder Structure
 
-## Learn More
+```plaintext
+.
+├── .vscode/             # VSCode settings and configurations
+├── app/                 # Next.js app directory
+├── node_modules/        # Project dependencies
+├── public/              # Public assets
+├── .gitignore           # Files to ignore in git
+├── eslint.config.js     # ESLint configuration (UpLeveled)
+├── next-env.d.ts        # TypeScript environment file
+├── next.config.ts       # Next.js configuration
+├── package.json         # Project dependencies and scripts
+├── pnpm-lock.yaml       # Lockfile for pnpm dependencies
+├── postcss.config.mjs   # PostCSS configuration
+├── prettier.config.js   # Prettier configuration
+├── README.md            # Project documentation
+├── stylelint.config.js  # Stylelint configuration
+├── tailwind.config.ts   # Tailwind CSS configuration
+├── tsconfig.json        # TypeScript configuration
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Linting and Formatting
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The project uses the [UpLeveled ESLint config](https://github.com/upleveled/eslint-config-upleveled) for consistent code formatting and linting. You can run linting using the following command:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+pnpm lint
+```
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The website is deployed using [Vercel](https://vercel.com/). You can find the production site at [jonaschlegel.com](https://jonaschlegel.com).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
