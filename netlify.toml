@@ -1,0 +1,3 @@
+[build]
+  command = "pnpm build"
+  environment = { NODE_VERSION = "18.18.0" }
