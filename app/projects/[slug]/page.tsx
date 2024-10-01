@@ -6,17 +6,26 @@ import type { ProjectType } from '../../../types/global';
 import { projectsData } from '../../data/content';
 
 interface ProjectPageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
+}
+
+export function generateStaticParams(): Array<{ slug: string }> {
+  return projectsData.projectsList.map((project) => ({
+    slug: project.slug,
+  }));
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
+  const resolvedParams = await params;
   const project: ProjectType | undefined = projectsData.projectsList.find(
-    (proj) => proj.slug === params.slug,
+    (proj) => proj.slug === resolvedParams.slug,
   );
 
   if (!project) {
     notFound();
+    return null;
   }
+
   const MDXContent = (
     (await import(`../../data/projects/${project.slug}.mdx`)) as {
       default: (props: {
@@ -32,6 +41,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           src={project.image}
           alt={project.name}
           width={2000}
+          height={1000}
           className="object-cover"
         />
       </div>

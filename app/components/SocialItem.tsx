@@ -3,8 +3,16 @@ import type { FC } from 'react';
 import type { SocialType } from '../../types/global';
 
 const SocialItem: FC<SocialType> = ({ Icon, href }) => {
-  return (
-    <Link href={href} target="_blank">
+  const isExternal = typeof href === 'string';
+
+  return isExternal ? (
+    <a href={href} target="_blank" rel="noopener noreferrer">
+      <span className="inline-block rounded-full border p-2">
+        <Icon />
+      </span>
+    </a>
+  ) : (
+    <Link href={href}>
       <span className="inline-block rounded-full border p-2">
         <Icon />
       </span>
