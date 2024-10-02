@@ -10,9 +10,9 @@ import Logo from './Logo';
 
 const externalLinks = [
   {
-    name: 'The TrowelJournal Blog',
+    name: 'The archaeoINK Blog',
     shortName: 'blog',
-    href: 'https://www.troweljournal.com/',
+    href: 'https://www.archaeoink.com/',
   },
   {
     name: 'The archaeoINK newsletter',
