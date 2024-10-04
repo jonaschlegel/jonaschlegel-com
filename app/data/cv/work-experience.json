@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Freelancer",
+    "organization": "archaeoINK",
+    "startDate": "January 2024",
+    "endDate": "Present",
+    "description": "Providing services in scientific communication, including web development (consulting and execution), illustration, knowledge management, database structures (CIDOC CRM), and controlled vocabulary for archaeological data sharing.",
+    "location": "Vienna, Austria"
+  },
+  {
+    "title": "Researcher",
+    "organization": "Ludwig Boltzmann Institute for Archaeological Prospection and Virtual Archaeology",
+    "startDate": "May 2018",
+    "endDate": "September 2023",
+    "description": "Specialised in ground-penetrating radar (GPR) surveys, magnetic motorised surveying, data interpretation using GIS, and project management across multiple international sites.",
+    "location": "Vienna, Austria"
+  },
+  {
+    "title": "Student Assistant",
+    "organization": "Hochschule für Technik und Wirtschaft",
+    "startDate": "November 2017",
+    "endDate": "December 2017",
+    "description": "Involved in post-processing and interpretation of geophysical data from the Seleukia Sidera project, Turkey.",
+    "location": "Berlin, Germany"
+  },
+  {
+    "title": "Intern",
+    "organization": "Ludwig Boltzmann Institute for Archaeological Prospection and Virtual Archaeology",
+    "startDate": "April 2017",
+    "endDate": "June 2017",
+    "description": "Worked on magnetic and ground-penetrating radar data processing and the reconstruction of archaeological sites in Herforst, Germany.",
+    "location": "Vienna, Austria"
+  }
+]

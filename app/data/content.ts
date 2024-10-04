@@ -22,6 +22,7 @@ import webDevelopment from '../images/services/web-development.png';
 export const navLinks = [
   { name: 'Featured Projects', href: '/#project' },
   { name: 'Services', href: '/#service' },
+  { name: 'CV', href: 'cv' },
 ] as const;
 
 export const heroSectionData = {

@@ -1,0 +1,26 @@
+[
+  {
+    "degree": "Ph.D. in Prehistory and Historical Archaeology",
+    "institution": "University of Vienna",
+    "startDate": "March 2019",
+    "endDate": "Present",
+    "description": "Doctoral studies focusing on prehistoric and historical archaeological research.",
+    "location": "Vienna, Austria"
+  },
+  {
+    "degree": "M.Sc. in Landscape Archaeology",
+    "institution": "Hochschule für Technik und Wirtschaft / Freie Universität",
+    "startDate": "April 2016",
+    "endDate": "June 2018",
+    "description": "Master thesis on ancient archaeological sites using modern field archaeology methods.",
+    "location": "Berlin, Germany"
+  },
+  {
+    "degree": "B.A. in Conservation & Restoration / Field Archaeology",
+    "institution": "Hochschule für Technik und Wirtschaft",
+    "startDate": "October 2012",
+    "endDate": "March 2016",
+    "description": "Focus on field archaeology and excavation techniques.",
+    "location": "Berlin, Germany"
+  }
+]
