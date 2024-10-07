@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import React from 'react';
@@ -48,15 +49,9 @@ const CvPage = async () => {
 
   const parseDate = (dateStr: string): Date => {
     if (dateStr.toLowerCase() === 'present') {
-      return new Date(); // Current date for ongoing entries
+      return new Date();
     }
     return new Date(dateStr);
-  };
-
-  const calculateSpanInYears = (startDate: Date, endDate: Date): number => {
-    const startYear = startDate.getFullYear();
-    const endYear = Math.min(endDate.getFullYear(), new Date().getFullYear());
-    return endYear - startYear + 1;
   };
 
   const combinedItems = [
@@ -72,19 +67,15 @@ const CvPage = async () => {
       endDate: parseDate(edu.endDate || 'Present'),
       data: edu,
     })),
-    ...publications.map((pub) => ({
-      type: 'publication',
-      startDate: parseDate(pub.date),
-      endDate: parseDate(pub.date),
-      data: pub,
-    })),
   ];
 
   const earliestYear = Math.min(
     ...combinedItems.map((item) => item.startDate.getFullYear()),
+    ...publications.map((pub) => parseDate(pub.date).getFullYear()),
   );
   const latestYear = Math.max(
     ...combinedItems.map((item) => item.endDate.getFullYear()),
+    ...publications.map((pub) => parseDate(pub.date).getFullYear()),
   );
 
   const allYears = [];
@@ -92,172 +83,103 @@ const CvPage = async () => {
     allYears.push(year);
   }
 
-  const getItemsForYear = (year: number) => {
-    return combinedItems.filter(
-      (item) =>
-        item.startDate.getFullYear() <= year &&
-        item.endDate.getFullYear() >= year,
-    );
+  const calculateRowSpan = (startDate: Date, endDate: Date) => {
+    return endDate.getFullYear() - startDate.getFullYear() + 1;
   };
-
-  // Track already rendered work and education items to avoid repeating
-  const renderedWorkItems = new Set();
-  const renderedEducationItems = new Set();
 
   return (
     <div className="min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="mb-6">Curriculum Vitae</h1>
 
-        <div className="grid gap-4">
-          <div
-            className="grid"
-            style={{
-              gridTemplateColumns: '100px 1fr 1fr 1fr',
-              gridAutoRows: 'minmax(50px, auto)',
-            }}
-          >
-            <h2>Year</h2>
-            <h2>Work</h2>
-            <h2>Education</h2>
-            <h2>Publications</h2>
-          </div>
+        <div
+          className="grid"
+          style={{
+            gridTemplateColumns: '100px 1fr 1fr 1fr',
+            gridAutoRows: 'minmax(50px, auto)',
+          }}
+        >
+          <div className="font-bold text-lg" />
+          <h2 className="font-bold text-lg">Work</h2>
+          <h2 className="font-bold text-lg">Education</h2>
+          <h2 className="font-bold text-lg">Publications</h2>
 
           {allYears.map((year) => {
-            const itemsForYear = getItemsForYear(year);
-
+            const yearRow = latestYear - year + 2;
             return (
               <div
                 key={`year-${year}`}
-                className="grid items-start"
+                className="border-t py-2 text-white font-bold"
+                style={{ gridColumn: 1, gridRow: yearRow }}
+              >
+                {year}
+              </div>
+            );
+          })}
+
+          {combinedItems.map((item) => {
+            const rowSpan = calculateRowSpan(item.startDate, item.endDate);
+            const startYear = item.startDate.getFullYear();
+            const endYear = item.endDate.getFullYear();
+            const gridRowStart = latestYear - endYear + 2;
+
+            return (
+              <div
+                key={`${item.type}-${item.startDate.getTime()}`}
+                className="p-4 border rounded-lg shadow bg-white h-full"
                 style={{
-                  gridTemplateColumns: '100px 1fr 1fr 1fr',
-                  gridTemplateRows: 'auto',
+                  gridColumn: item.type === 'work' ? 2 : 3,
+                  gridRow: `${gridRowStart} / span ${rowSpan}`,
                 }}
               >
-                <div>
-                  <div className="border-t" />
-                  <div className="text-white font-bold">{year}</div>
-                </div>
-                {/* Work Experience Column (spanning multiple years) */}
-                <div>
-                  {itemsForYear
-                    .filter((item) => item.type === 'work')
-                    .map((item) => {
-                      const spanInYears = calculateSpanInYears(
-                        item.startDate,
-                        item.endDate,
-                      );
+                <h3 className="font-semibold text-gray-900">
+                  {item.type === 'work'
+                    ? `${(item.data as Job).title} at ${(item.data as Job).organization}`
+                    : `${(item.data as Education).degree} at ${(item.data as Education).institution}`}
+                </h3>
+                <p className="text-sm text-gray-700">
+                  {startYear} -{' '}
+                  {endYear === new Date().getFullYear() ? 'Present' : endYear} |{' '}
+                  {item.type === 'work'
+                    ? (item.data as Job).location
+                    : (item.data as Education).location}
+                </p>
+                <p className="text-gray-500">
+                  {item.type === 'work'
+                    ? (item.data as Job).description
+                    : (item.data as Education).description}
+                </p>
+              </div>
+            );
+          })}
 
-                      if (
-                        item.startDate.getFullYear() === year &&
-                        !renderedWorkItems.has(item)
-                      ) {
-                        renderedWorkItems.add(item);
-                        return (
-                          <div
-                            key={`${item.type}-${item.startDate.getTime()}`}
-                            className="p-4 border rounded-lg shadow bg-white"
-                            style={{
-                              gridRow: `span ${spanInYears}`,
-                            }}
-                          >
-                            <h3 className="font-semibold text-gray-900">
-                              {(item.data as Job).title} at{' '}
-                              {(item.data as Job).organization}
-                            </h3>
-                            <p className="text-sm text-gray-700">
-                              {item.startDate.getFullYear()} -{' '}
-                              {item.endDate.getFullYear() ===
-                              new Date().getFullYear()
-                                ? 'Present'
-                                : item.endDate.getFullYear()}{' '}
-                              | {(item.data as Job).location}
-                            </p>
-                            <p className="text-gray-500">
-                              {(item.data as Job).description}
-                            </p>
-                          </div>
-                        );
-                      } else {
-                        return null; // Prevent rendering in non-start years
-                      }
-                    })}
-                </div>
-
-                {/* Educational Experience Column (spanning multiple years) */}
-                <div>
-                  {itemsForYear
-                    .filter((item) => item.type === 'education')
-                    .map((item) => {
-                      const spanInYears = calculateSpanInYears(
-                        item.startDate,
-                        item.endDate,
-                      );
-
-                      if (
-                        item.startDate.getFullYear() === year &&
-                        !renderedEducationItems.has(item)
-                      ) {
-                        renderedEducationItems.add(item);
-                        return (
-                          <div
-                            key={`${item.type}-${item.startDate.getTime()}`}
-                            className="p-4 border rounded-lg shadow bg-white"
-                            style={{
-                              gridRow: `span ${spanInYears}`,
-                            }}
-                          >
-                            <h3 className="font-semibold text-gray-900">
-                              {(item.data as Education).degree} at{' '}
-                              {(item.data as Education).institution}
-                            </h3>
-                            <p className="text-sm text-gray-700">
-                              {item.startDate.getFullYear()} -{' '}
-                              {item.endDate.getFullYear() ===
-                              new Date().getFullYear()
-                                ? 'Present'
-                                : item.endDate.getFullYear()}{' '}
-                              | {(item.data as Education).location}
-                            </p>
-                            <p className="text-gray-500">
-                              {(item.data as Education).description}
-                            </p>
-                          </div>
-                        );
-                      } else {
-                        return null; // Prevent rendering in non-start years
-                      }
-                    })}
-                </div>
-
-                {/* Publications Column (single row) */}
-                <div>
-                  {itemsForYear
-                    .filter((item) => item.type === 'publication')
-                    .map((item) => (
-                      <div
-                        key={`${item.type}-${item.startDate.getTime()}`}
-                        className="p-2 border rounded-lg shadow bg-white mb-2"
-                      >
-                        <h3 className="font-semibold text-gray-900 text-sm">
-                          {(item.data as Publication).title}
-                        </h3>
-                        <p className="text-xs text-gray-700">
-                          {(item.data as Publication).date} |{' '}
-                          {(item.data as Publication).authors.join(', ')}
-                        </p>
-                        <a
-                          href={(item.data as Publication).url}
-                          className="text-primary-accent underline text-xs"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          View Publication
-                        </a>
-                      </div>
-                    ))}
-                </div>
+          {/* Publications Column */}
+          {publications.map((pub, index) => {
+            const pubYear = parseDate(pub.date).getFullYear();
+            const gridRow = latestYear - pubYear + 2;
+            return (
+              <div
+                key={`publication-${index}`}
+                className="p-2 border rounded-lg shadow bg-white mb-2"
+                style={{
+                  gridColumn: 4,
+                  gridRow: `${gridRow} / span 1`,
+                }}
+              >
+                <h3 className="font-semibold text-gray-900 text-sm">
+                  {pub.title}
+                </h3>
+                <p className="text-xs text-gray-700">
+                  {pub.date} | {pub.authors.join(', ')}
+                </p>
+                <a
+                  href={pub.url}
+                  className="text-primary-accent underline text-xs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Publication
+                </a>
               </div>
             );
           })}
