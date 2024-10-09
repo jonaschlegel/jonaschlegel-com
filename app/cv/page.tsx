@@ -23,9 +23,11 @@ interface Education {
 
 interface Publication {
   title: string;
+  type: string;
   date: string;
   authors: string[];
   url: string;
+  location: string;
 }
 
 const CvPage = async () => {
@@ -54,6 +56,26 @@ const CvPage = async () => {
     return new Date(dateStr);
   };
 
+  const monthOrder = [
+    'December',
+    'November',
+    'October',
+    'September',
+    'August',
+    'July',
+    'June',
+    'May',
+    'April',
+    'March',
+    'February',
+    'January',
+  ];
+
+  const getMonthIndex = (dateStr: string): number => {
+    const [month] = dateStr.split(' ');
+    return month ? monthOrder.indexOf(month) : -1;
+  };
+
   const combinedItems = [
     ...workExperience.map((job) => ({
       type: 'work',
@@ -71,18 +93,23 @@ const CvPage = async () => {
       type: 'publication',
       startDate: parseDate(pub.date),
       endDate: parseDate(pub.date),
+      monthIndex: getMonthIndex(pub.date),
       data: pub,
     })),
   ];
 
-  // Sort combinedItems to ensure proper ordering of overlapping entries
   combinedItems.sort((a, b) => {
-    // First, compare start dates
-    if (a.startDate.getTime() !== b.startDate.getTime()) {
-      return a.startDate.getTime() - b.startDate.getTime();
+    const yearDiff = b.startDate.getFullYear() - a.startDate.getFullYear();
+    if (yearDiff !== 0) return yearDiff;
+
+    if (a.type === 'publication' && b.type === 'publication') {
+      return (
+        (a as { monthIndex: number }).monthIndex -
+        (b as { monthIndex: number }).monthIndex
+      );
     }
-    // If start dates are the same, compare end dates
-    return b.endDate.getTime() - a.endDate.getTime();
+
+    return 0;
   });
 
   const combinedByYear: {
@@ -233,9 +260,12 @@ const CvPage = async () => {
                       <h3 className="font-semibold text-gray-900 text-sm">
                         {pub.title}
                       </h3>
-                      <p className="text-xs text-gray-700">
+                      <div className="text-xs uppercase my-2 text-gray-700">
+                        {pub.type}
+                      </div>
+                      <div className="text-xs text-gray-700">
                         {pub.date} | {pub.authors.join(', ')}
-                      </p>
+                      </div>
                       {pub.url && (
                         <a
                           href={pub.url}
