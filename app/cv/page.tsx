@@ -56,84 +56,141 @@ const CvPage = async () => {
     return new Date(dateStr);
   };
 
-  const combinedItems = [
-    ...workExperience.map((job) => ({
+  const allYearsSet = new Set<number>();
+  const collectYears = (startDate: Date, endDate: Date) => {
+    const years = [];
+    const startYear = startDate.getFullYear();
+    const endYear = endDate.getFullYear();
+    for (let year = startYear; year <= endYear; year++) {
+      years.push(year);
+      allYearsSet.add(year);
+    }
+    return years;
+  };
+
+  type Entry = {
+    id: string;
+    type: 'work' | 'education';
+    data: Job | Education;
+    years: number[];
+    startDate: Date;
+    endDate: Date;
+  };
+
+  const workEntries: Entry[] = workExperience.map((job, index) => {
+    const startDate = parseDate(job.startDate);
+    const endDate = parseDate(job.endDate || 'Present');
+    const years = collectYears(startDate, endDate);
+    return {
+      id: `work-${index}`,
       type: 'work',
-      startDate: parseDate(job.startDate),
-      endDate: parseDate(job.endDate || 'Present'),
       data: job,
-    })),
-    ...educationalExperience.map((edu) => ({
-      type: 'education',
-      startDate: parseDate(edu.startDate),
-      endDate: parseDate(edu.endDate || 'Present'),
-      data: edu,
-    })),
-  ];
-
-  combinedItems.sort((a, b) => {
-    const yearDiff = b.startDate.getFullYear() - a.startDate.getFullYear();
-    if (yearDiff !== 0) return yearDiff;
-
-    return b.startDate.getTime() - a.startDate.getTime();
-  });
-
-  const combinedByYear: {
-    [year: number]: {
-      work: Job[];
-      education: Education[];
-      publications: Publication[];
+      years,
+      startDate,
+      endDate,
     };
-  } = {};
-
-  combinedItems.forEach((item) => {
-    const startYear = item.startDate.getFullYear();
-    const endYear = item.endDate.getFullYear();
-
-    for (let year = endYear; year >= startYear; year--) {
-      if (!combinedByYear[year]) {
-        combinedByYear[year] = { work: [], education: [], publications: [] };
-      }
-
-      if (item.type === 'work') {
-        combinedByYear[year]?.work.push(item.data as Job);
-      } else if (item.type === 'education') {
-        combinedByYear[year]?.education.push(item.data as Education);
-      }
-    }
   });
 
-  publications.forEach((pub) => {
-    const year = parseDate(pub.date).getFullYear();
-    if (!combinedByYear[year]) {
-      combinedByYear[year] = { work: [], education: [], publications: [] };
-    }
-    combinedByYear[year].publications.push(pub);
+  const educationEntries: Entry[] = educationalExperience.map((edu, index) => {
+    const startDate = parseDate(edu.startDate);
+    const endDate = parseDate(edu.endDate || 'Present');
+    const years = collectYears(startDate, endDate);
+    return {
+      id: `education-${index}`,
+      type: 'education',
+      data: edu,
+      years,
+      startDate,
+      endDate,
+    };
   });
 
-  const earliestYear = Math.min(
-    ...Object.keys(combinedByYear).map((year) => parseInt(year, 10)),
-  );
-  const latestYear = Math.max(
-    ...Object.keys(combinedByYear).map((year) => parseInt(year, 10)),
-  );
+  const sortEntriesByDate = (a: Entry, b: Entry) => {
+    const yearDiff = b.startDate.getFullYear() - a.startDate.getFullYear();
+    if (yearDiff !== 0) {
+      return yearDiff;
+    }
+    return b.startDate.getMonth() - a.startDate.getMonth();
+  };
 
-  const allYears: number[] = [];
-  for (let year = latestYear; year >= earliestYear; year--) {
-    allYears.push(year);
-  }
+  const sortedWorkEntries = workEntries.sort(sortEntriesByDate);
+  const sortedEducationEntries = educationEntries.sort(sortEntriesByDate);
+
+  const allYears = Array.from(allYearsSet).sort((a, b) => b - a);
+
+  type TimelineEntry = {
+    entry: Entry;
+    layer: number;
+  };
+
+  type ColumnTimeline = {
+    [year: number]: TimelineEntry[];
+  };
+
+  const workTimeline: ColumnTimeline = {};
+  const educationTimeline: ColumnTimeline = {};
+
+  allYears.forEach((year) => {
+    workTimeline[year] = [];
+    educationTimeline[year] = [];
+  });
+
+  const assignLayers = (entries: Entry[], timeline: ColumnTimeline) => {
+    entries.forEach((entry) => {
+      entry.years.forEach((year) => {
+        const yearEntries = timeline[year];
+        let layer = 0;
+        const isLayerOccupied = (
+          checkLayer: number,
+          entriesInYear: TimelineEntry[],
+        ) => {
+          return entriesInYear.some((e) => e.layer === checkLayer);
+        };
+
+        while (yearEntries && isLayerOccupied(layer, yearEntries)) {
+          layer++;
+        }
+        if (yearEntries) {
+          yearEntries.push({ entry, layer });
+        }
+      });
+    });
+  };
+
+  assignLayers(sortedWorkEntries, workTimeline);
+  assignLayers(sortedEducationEntries, educationTimeline);
+
+  const totalLayersPerYear: { [year: number]: number } = {};
+  allYears.forEach((year) => {
+    const workLayers =
+      workTimeline[year] && workTimeline[year].length > 0
+        ? Math.max(...workTimeline[year].map((e) => e.layer)) + 1
+        : 0;
+    const educationLayers =
+      (educationTimeline[year]?.length ?? 0) > 0
+        ? Math.max(...(educationTimeline[year] ?? []).map((e) => e.layer)) + 1
+        : 0;
+    totalLayersPerYear[year] = Math.max(workLayers, educationLayers, 1);
+  });
+
+  const yearRowStart: { [year: number]: number } = {};
+  let currentRow = 2;
+  allYears.forEach((year) => {
+    yearRowStart[year] = currentRow;
+    currentRow += totalLayersPerYear[year] ?? 0;
+  });
 
   return (
     <div className="min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="mb-8">Curriculum Vitae</h1>
 
-        {/* Grid container with rows representing each year */}
+        {/* Grid container */}
         <div
           className="grid gap-1"
           style={{
             gridTemplateColumns: '100px 1fr 1fr 1fr',
-            gridAutoRows: 'minmax(40px, auto)',
+            gridTemplateRows: `repeat(${currentRow - 1}, auto)`,
           }}
         >
           {/* Column headers */}
@@ -142,89 +199,114 @@ const CvPage = async () => {
           <h2 className="font-bold text-xl">Education</h2>
           <h2 className="font-bold text-xl">Publications</h2>
 
-          {/* Iterate over each year */}
-          {allYears.map((year) => {
-            const yearData = combinedByYear[year] || {
-              work: [],
-              education: [],
-              publications: [],
-            };
+          {/* Render year labels */}
+          {allYears.map((year) => (
+            <div
+              key={`year-${year}`}
+              className="border-t py-2 text-white font-bold"
+              style={{
+                gridColumn: 1,
+                gridRow: `${yearRowStart[year]} / span ${totalLayersPerYear[year]}`,
+              }}
+            >
+              {year}
+            </div>
+          ))}
+
+          {/* Render work entries */}
+          {sortedWorkEntries.map((entry) => {
+            const startYear = entry.startDate.getFullYear();
+            const endYear = entry.endDate.getFullYear();
+            const rowStart =
+              (yearRowStart[startYear] ?? 0) +
+              (workTimeline[startYear]?.find((e) => e.entry.id === entry.id)
+                ?.layer ?? 0);
+            const rowEnd =
+              (yearRowStart[endYear] ?? 0) +
+              (workTimeline[endYear]?.find((e) => e.entry.id === entry.id)
+                ?.layer ?? 0) +
+              1;
 
             return (
-              <React.Fragment key={`year-${year}`}>
-                {/* Year Column */}
-                <div
-                  className="border-t py-2 text-white font-bold"
-                  style={{ gridColumn: 1 }}
-                >
-                  {year}
-                </div>
+              <div
+                key={`work-${entry.id}`}
+                style={{
+                  gridColumn: 2,
+                  gridRow: `${rowStart} / ${rowEnd}`,
+                }}
+                className="p-2 border rounded-lg shadow bg-white"
+              >
+                <h3 className="font-semibold text-gray-900 text-sm">
+                  {(entry.data as Job).title} at{' '}
+                  {(entry.data as Job).organization}
+                </h3>
+                <p className="text-xs text-gray-700">
+                  {(entry.data as Job).startDate} -{' '}
+                  {(entry.data as Job).endDate || 'Present'} |{' '}
+                  {(entry.data as Job).location}
+                </p>
+                <p className="text-gray-500">
+                  {(entry.data as Job).description}
+                </p>
+              </div>
+            );
+          })}
 
-                {/* Work Column Spanning Entries */}
-                {yearData.work.length > 0 &&
-                  yearData.work.map((job, index) => {
-                    const startYear = parseDate(job.startDate).getFullYear();
-                    const endYear = job.endDate
-                      ? parseDate(job.endDate).getFullYear()
-                      : new Date().getFullYear();
-                    const rowSpan = endYear - startYear + 1;
+          {/* Render education entries */}
+          {sortedEducationEntries.map((entry) => {
+            const startYear = entry.startDate.getFullYear();
+            const endYear = entry.endDate.getFullYear();
+            const startLayer =
+              educationTimeline[startYear]?.find((e) => e.entry.id === entry.id)
+                ?.layer ?? 0;
+            const rowStart = (yearRowStart[startYear] ?? 0) + startLayer;
+            const endLayer =
+              educationTimeline[endYear]?.find((e) => e.entry.id === entry.id)
+                ?.layer ?? 0;
+            const rowEnd = (yearRowStart[endYear] ?? 0) + endLayer + 1;
 
-                    return (
-                      <div
-                        key={`work-${year}-${index}`}
-                        style={{
-                          gridColumn: 2,
-                          gridRowStart: allYears.indexOf(endYear) + 2,
-                          gridRowEnd: `span ${rowSpan}`,
-                        }}
-                        className="p-2 border rounded-lg shadow bg-white"
-                      >
-                        <h3 className="font-semibold text-gray-900 text-sm">
-                          {job.title} at {job.organization}
-                        </h3>
-                        <p className="text-xs text-gray-700">
-                          {job.startDate} - {job.endDate || 'Present'} |{' '}
-                          {job.location}
-                        </p>
-                        <p className="text-gray-500">{job.description}</p>
-                      </div>
-                    );
-                  })}
+            return (
+              <div
+                key={`education-${entry.id}`}
+                style={{
+                  gridColumn: 3,
+                  gridRow: `${rowStart} / ${rowEnd}`,
+                }}
+                className="p-2 border rounded-lg shadow bg-white"
+              >
+                <h3 className="font-semibold text-gray-900 text-sm">
+                  {(entry.data as Education).degree} at{' '}
+                  {(entry.data as Education).institution}
+                </h3>
+                <p className="text-xs text-gray-700">
+                  {(entry.data as Education).startDate} -{' '}
+                  {(entry.data as Education).endDate || 'Present'} |{' '}
+                  {(entry.data as Education).location}
+                </p>
+                <p className="text-gray-500">
+                  {(entry.data as Education).description}
+                </p>
+              </div>
+            );
+          })}
 
-                {/* Education Column Spanning Entries */}
-                {yearData.education.length > 0 &&
-                  yearData.education.map((edu, index) => {
-                    const startYear = parseDate(edu.startDate).getFullYear();
-                    const endYear = edu.endDate
-                      ? parseDate(edu.endDate).getFullYear()
-                      : new Date().getFullYear();
-                    const rowSpan = endYear - startYear + 1;
+          {/* Iterate over each year */}
+          {allYears.map((year) => {
+            const yearPublications = publications.filter(
+              (pub) => parseDate(pub.date).getFullYear() === year,
+            );
 
-                    return (
-                      <div
-                        key={`education-${year}-${index}`}
-                        style={{
-                          gridColumn: 3,
-                          gridRowStart: allYears.indexOf(endYear) + 2,
-                          gridRowEnd: `span ${rowSpan}`,
-                        }}
-                        className="p-2 border rounded-lg shadow bg-white"
-                      >
-                        <h3 className="font-semibold text-gray-900 text-sm">
-                          {edu.degree} at {edu.institution}
-                        </h3>
-                        <p className="text-xs text-gray-700">
-                          {edu.startDate} - {edu.endDate || 'Present'} |{' '}
-                          {edu.location}
-                        </p>
-                        <p className="text-gray-500">{edu.description}</p>
-                      </div>
-                    );
-                  })}
-
+            return (
+              <React.Fragment key={`pubs-${year}`}>
                 {/* Publications Column */}
-                <div className="flex flex-col gap-2" style={{ gridColumn: 4 }}>
-                  {yearData.publications.map((pub, index) => (
+                <div
+                  style={{
+                    gridColumn: 4,
+                    gridRow: `${yearRowStart[year]} / span ${totalLayersPerYear[year]}`,
+                  }}
+                  className="flex flex-col gap-2"
+                >
+                  {yearPublications.map((pub, index) => (
                     <div
                       key={`publication-${year}-${index}`}
                       className="p-2 border rounded-lg shadow bg-white"
