@@ -17,7 +17,7 @@
   },
   {
     "title": "Student Assistant",
-    "organization": "Hochschule für Technik und Wirtschaft",
+    "organization": "Hochschule für Technik und Wirtschaft, Berlin",
     "startDate": "November 2017",
     "endDate": "December 2017",
     "description": "Involved in post-processing and interpretation of geophysical data from the Seleukia Sidera project, Turkey.",
@@ -30,5 +30,133 @@
     "endDate": "June 2017",
     "description": "Worked on magnetic and ground-penetrating radar data processing and the reconstruction of archaeological sites in Herforst, Germany.",
     "location": "Vienna, Austria"
+  },
+  {
+    "title": "Student Assistant",
+    "organization": "Hochschule für Technik und Wirtschaft, Granada, Spain",
+    "startDate": "October 2016",
+    "endDate": "October 2016",
+    "description": "Conducted documentation using strip-light laser scanning and image-based modelling for the Alhambra, Torres de las Damas project.",
+    "location": "Granada, Spain"
+  },
+  {
+    "title": "Student Assistant",
+    "organization": "Humboldt University, Rocher-des-Aures, France",
+    "startDate": "September 2016",
+    "endDate": "September 2016",
+    "description": "Participated in excavation, surveying, and documentation of features at a Celtic oppidum. Created 3D models and orthographic images, and produced illustrations in AutoCAD and GIS.",
+    "location": "Rocher-des-Aures, France"
+  },
+  {
+    "title": "Student Assistant",
+    "organization": "Hochschule für Technik und Wirtschaft, Isparta, Turkey",
+    "startDate": "August 2016",
+    "endDate": "August 2016",
+    "description": "Conducted documentation work using terrestrial laser scanning, drones, and image-based modelling at Seleukeia Sidera and Erenler Tepe, including geomagnetic data collection.",
+    "location": "Isparta, Turkey"
+  },
+  {
+    "title": "Student Assistant",
+    "organization": "Hochschule für Technik und Wirtschaft, Berlin, Germany",
+    "startDate": "February 2016",
+    "endDate": "April 2016",
+    "description": "Performed close-range scanning of reliefs from the city of Samarra, Iran, and processed the data for the MOSYS3D project.",
+    "location": "Berlin, Germany"
+  },
+  {
+    "title": "Student Assistant",
+    "organization": "Deutsches Archäologisches Institut, Istanbul, Turkey",
+    "startDate": "March 2016",
+    "endDate": "March 2016",
+    "description": "Developed data structures, mapped find groups, and integrated maps into GIS for the Pergamon project.",
+    "location": "Istanbul, Turkey"
+  },
+  {
+    "title": "Student Assistant",
+    "organization": "Hochschule für Technik und Wirtschaft, Berlin, Germany",
+    "startDate": "September 2015",
+    "endDate": "September 2015",
+    "description": "Conducted close-range scanning of reliefs from the city of Samarra, Iran, and processed the data for the MOSYS3D project.",
+    "location": "Berlin, Germany"
+  },
+  {
+    "title": "Student Assistant",
+    "organization": "Hochschule für Technik und Wirtschaft, Isparta, Turkey",
+    "startDate": "August 2015",
+    "endDate": "August 2015",
+    "description": "Documented the Bronze Age hilltop settlement at Kale Tepe using terrestrial laser scanning, total station surveying, and drone photography.",
+    "location": "Isparta, Turkey"
+  },
+  {
+    "title": "Student Assistant",
+    "organization": "Deutsches Archäologisches Institut, Vig, Albania",
+    "startDate": "March 2015",
+    "endDate": "April 2015",
+    "description": "Created a survey network, conducted topographic surveying, and planned, analysed, and implemented visualisations of the preservation state of the late antique fort at Vig.",
+    "location": "Vig, Albania"
+  },
+  {
+    "title": "Student Assistant",
+    "organization": "Hochschule für Technik und Wirtschaft, Berlin, Germany",
+    "startDate": "November 2014",
+    "endDate": "November 2014",
+    "description": "Performed close-range scanning of reliefs from the city of Samarra, Iran, and processed the data for the MOSYS3D project.",
+    "location": "Berlin, Germany"
+  },
+  {
+    "title": "Student Assistant",
+    "organization": "OREA, Selçuk, Turkey",
+    "startDate": "August 2014",
+    "endDate": "October 2014",
+    "description": "Conducted excavation and surveying work at the Neolithic to Chalcolithic mound of Çukuriçi Höyük, including Leica total station measurements, TachyCAD documentation, 2D photogrammetry, and data processing using AutoCAD and Adobe InDesign.",
+    "location": "Selçuk, Turkey"
+  },
+  {
+    "title": "Excavation Worker",
+    "organization": "Baden-Württemberg Landesdenkmalpflege, Ellwangen, Germany",
+    "startDate": "August 2013",
+    "endDate": "September 2013",
+    "description": "Performed surveying with a total station, processed data using survey2GIS and QGIS, excavated, cleaned, and packaged finds for the rescue excavation at Ellwangen.",
+    "location": "Ellwangen, Germany"
+  },
+  {
+    "title": "Intern",
+    "organization": "University of Tübingen, Germolles, France",
+    "startDate": "August 2013",
+    "endDate": "September 2013",
+    "description": "Conducted excavation and surveying work at the Paleolithic caves of Grottes de la Verpillière I and II, and instructed students in excavation techniques.",
+    "location": "Germolles, France"
+  },
+  {
+    "title": "Intern",
+    "organization": "Ostfriesische Landschaft, Hattersum, Germany",
+    "startDate": "August 2013",
+    "endDate": "August 2013",
+    "description": "Participated in excavation, surveying, and documentation work at the medieval industrial site of Hattersum.",
+    "location": "Hattersum, Germany"
+  },
+  {
+    "title": "Excavation Worker",
+    "organization": "Baden-Württemberg Landesdenkmalpflege, Ellwangen, Germany",
+    "startDate": "August 2013",
+    "endDate": "September 2013",
+    "description": "Performed surveying with a total station, processed data using survey2GIS and QGIS, and conducted excavation work, including cleaning and packaging of finds for the rescue excavation at Ellwangen.",
+    "location": "Ellwangen, Germany"
+  },
+  {
+    "title": "Intern",
+    "organization": "University of Tübingen, Germolles, France",
+    "startDate": "August 2013",
+    "endDate": "September 2013",
+    "description": "Conducted excavation and surveying work at the Paleolithic caves of Grottes de la Verpillière I and II, and instructed students in excavation techniques.",
+    "location": "Germolles, France"
+  },
+  {
+    "title": "Intern",
+    "organization": "Ostfriesische Landschaft, Hattersum, Germany",
+    "startDate": "August 2013",
+    "endDate": "August 2013",
+    "description": "Participated in excavation, surveying, and documentation work at the medieval industrial site of Hattersum.",
+    "location": "Hattersum, Germany"
   }
 ]

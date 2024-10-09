@@ -67,120 +67,189 @@ const CvPage = async () => {
       endDate: parseDate(edu.endDate || 'Present'),
       data: edu,
     })),
+    ...publications.map((pub) => ({
+      type: 'publication',
+      startDate: parseDate(pub.date),
+      endDate: parseDate(pub.date),
+      data: pub,
+    })),
   ];
 
+  // Sort combinedItems to ensure proper ordering of overlapping entries
+  combinedItems.sort((a, b) => {
+    // First, compare start dates
+    if (a.startDate.getTime() !== b.startDate.getTime()) {
+      return a.startDate.getTime() - b.startDate.getTime();
+    }
+    // If start dates are the same, compare end dates
+    return b.endDate.getTime() - a.endDate.getTime();
+  });
+
+  const combinedByYear: {
+    [year: number]: {
+      work: Job[];
+      education: Education[];
+      publications: Publication[];
+    };
+  } = {};
+
+  combinedItems.forEach((item) => {
+    const startYear = item.startDate.getFullYear();
+    const endYear = item.endDate.getFullYear();
+
+    for (let year = endYear; year >= startYear; year--) {
+      if (!combinedByYear[year]) {
+        combinedByYear[year] = { work: [], education: [], publications: [] };
+      }
+
+      if (item.type === 'work') {
+        combinedByYear[year]?.work.push(item.data as Job);
+      } else if (item.type === 'education') {
+        combinedByYear[year]?.education.push(item.data as Education);
+      } else if (item.type === 'publication') {
+        combinedByYear[year]?.publications.push(item.data as Publication);
+      }
+    }
+  });
+
   const earliestYear = Math.min(
-    ...combinedItems.map((item) => item.startDate.getFullYear()),
-    ...publications.map((pub) => parseDate(pub.date).getFullYear()),
+    ...Object.keys(combinedByYear).map((year) => parseInt(year, 10)),
   );
   const latestYear = Math.max(
-    ...combinedItems.map((item) => item.endDate.getFullYear()),
-    ...publications.map((pub) => parseDate(pub.date).getFullYear()),
+    ...Object.keys(combinedByYear).map((year) => parseInt(year, 10)),
   );
 
-  const allYears = [];
+  const allYears: number[] = [];
   for (let year = latestYear; year >= earliestYear; year--) {
     allYears.push(year);
   }
-
-  const calculateRowSpan = (startDate: Date, endDate: Date) => {
-    return endDate.getFullYear() - startDate.getFullYear() + 1;
-  };
 
   return (
     <div className="min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="mb-6">Curriculum Vitae</h1>
 
+        {/* Grid container with rows representing each year */}
         <div
-          className="grid"
+          className="grid gap-y-4"
           style={{
             gridTemplateColumns: '100px 1fr 1fr 1fr',
             gridAutoRows: 'minmax(50px, auto)',
           }}
         >
+          {/* Column headers */}
           <div className="font-bold text-lg" />
           <h2 className="font-bold text-lg">Work</h2>
           <h2 className="font-bold text-lg">Education</h2>
           <h2 className="font-bold text-lg">Publications</h2>
 
+          {/* Iterate over each year */}
           {allYears.map((year) => {
-            const yearRow = latestYear - year + 2;
-            return (
-              <div
-                key={`year-${year}`}
-                className="border-t py-2 text-white font-bold"
-                style={{ gridColumn: 1, gridRow: yearRow }}
-              >
-                {year}
-              </div>
-            );
-          })}
-
-          {combinedItems.map((item) => {
-            const rowSpan = calculateRowSpan(item.startDate, item.endDate);
-            const startYear = item.startDate.getFullYear();
-            const endYear = item.endDate.getFullYear();
-            const gridRowStart = latestYear - endYear + 2;
+            const yearData = combinedByYear[year] || {
+              work: [],
+              education: [],
+              publications: [],
+            };
 
             return (
-              <div
-                key={`${item.type}-${item.startDate.getTime()}`}
-                className="p-4 border rounded-lg shadow bg-white h-full"
-                style={{
-                  gridColumn: item.type === 'work' ? 2 : 3,
-                  gridRow: `${gridRowStart} / span ${rowSpan}`,
-                }}
-              >
-                <h3 className="font-semibold text-gray-900">
-                  {item.type === 'work'
-                    ? `${(item.data as Job).title} at ${(item.data as Job).organization}`
-                    : `${(item.data as Education).degree} at ${(item.data as Education).institution}`}
-                </h3>
-                <p className="text-sm text-gray-700">
-                  {startYear} -{' '}
-                  {endYear === new Date().getFullYear() ? 'Present' : endYear} |{' '}
-                  {item.type === 'work'
-                    ? (item.data as Job).location
-                    : (item.data as Education).location}
-                </p>
-                <p className="text-gray-500">
-                  {item.type === 'work'
-                    ? (item.data as Job).description
-                    : (item.data as Education).description}
-                </p>
-              </div>
-            );
-          })}
-
-          {/* Publications Column */}
-          {publications.map((pub, index) => {
-            const pubYear = parseDate(pub.date).getFullYear();
-            const gridRow = latestYear - pubYear + 2;
-            return (
-              <div
-                key={`publication-${index}`}
-                className="p-2 border rounded-lg shadow bg-white mb-2"
-                style={{
-                  gridColumn: 4,
-                  gridRow: `${gridRow} / span 1`,
-                }}
-              >
-                <h3 className="font-semibold text-gray-900 text-sm">
-                  {pub.title}
-                </h3>
-                <p className="text-xs text-gray-700">
-                  {pub.date} | {pub.authors.join(', ')}
-                </p>
-                <a
-                  href={pub.url}
-                  className="text-primary-accent underline text-xs"
-                  target="_blank"
-                  rel="noopener noreferrer"
+              <React.Fragment key={`year-${year}`}>
+                {/* Year Column */}
+                <div
+                  className="border-t py-2 text-white font-bold"
+                  style={{ gridColumn: 1 }}
                 >
-                  View Publication
-                </a>
-              </div>
+                  {year}
+                </div>
+
+                {/* Work Column Spanning Entries */}
+                {yearData.work.length > 0 &&
+                  yearData.work.map((job, index) => {
+                    const startYear = parseDate(job.startDate).getFullYear();
+                    const endYear = job.endDate
+                      ? parseDate(job.endDate).getFullYear()
+                      : new Date().getFullYear();
+                    const rowSpan = endYear - startYear + 1;
+
+                    return (
+                      <div
+                        key={`work-${year}-${index}`}
+                        style={{
+                          gridColumn: 2,
+                          gridRowStart: allYears.indexOf(endYear) + 2,
+                          gridRowEnd: `span ${rowSpan}`,
+                        }}
+                        className="p-2 border rounded-lg shadow bg-white mb-2"
+                      >
+                        <h3 className="font-semibold text-gray-900 text-sm">
+                          {job.title} at {job.organization}
+                        </h3>
+                        <p className="text-xs text-gray-700">
+                          {job.startDate} - {job.endDate || 'Present'} |{' '}
+                          {job.location}
+                        </p>
+                        <p className="text-gray-500">{job.description}</p>
+                      </div>
+                    );
+                  })}
+
+                {/* Education Column Spanning Entries */}
+                {yearData.education.length > 0 &&
+                  yearData.education.map((edu, index) => {
+                    const startYear = parseDate(edu.startDate).getFullYear();
+                    const endYear = edu.endDate
+                      ? parseDate(edu.endDate).getFullYear()
+                      : new Date().getFullYear();
+                    const rowSpan = endYear - startYear + 1;
+
+                    return (
+                      <div
+                        key={`education-${year}-${index}`}
+                        style={{
+                          gridColumn: 3,
+                          gridRowStart: allYears.indexOf(endYear) + 2,
+                          gridRowEnd: `span ${rowSpan}`,
+                        }}
+                        className="p-2 border rounded-lg shadow bg-white mb-2"
+                      >
+                        <h3 className="font-semibold text-gray-900 text-sm">
+                          {edu.degree} at {edu.institution}
+                        </h3>
+                        <p className="text-xs text-gray-700">
+                          {edu.startDate} - {edu.endDate || 'Present'} |{' '}
+                          {edu.location}
+                        </p>
+                        <p className="text-gray-500">{edu.description}</p>
+                      </div>
+                    );
+                  })}
+
+                {/* Publications Column */}
+                <div className="flex flex-col gap-2" style={{ gridColumn: 4 }}>
+                  {yearData.publications.map((pub, index) => (
+                    <div
+                      key={`publication-${year}-${index}`}
+                      className="p-2 border rounded-lg shadow bg-white"
+                    >
+                      <h3 className="font-semibold text-gray-900 text-sm">
+                        {pub.title}
+                      </h3>
+                      <p className="text-xs text-gray-700">
+                        {pub.date} | {pub.authors.join(', ')}
+                      </p>
+                      {pub.url && (
+                        <a
+                          href={pub.url}
+                          className="text-primary-accent underline text-xs"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          View Publication
+                        </a>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </React.Fragment>
             );
           })}
         </div>
