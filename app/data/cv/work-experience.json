@@ -105,7 +105,7 @@
   },
   {
     "title": "Student Assistant",
-    "organization": "OREA, Selçuk, Turkey",
+    "organization": "OREA",
     "startDate": "August 2014",
     "endDate": "October 2014",
     "description": "Conducted excavation and surveying work at the Neolithic to Chalcolithic mound of Çukuriçi Höyük, including Leica total station measurements, TachyCAD documentation, 2D photogrammetry, and data processing using AutoCAD and Adobe InDesign.",
@@ -114,39 +114,15 @@
   {
     "title": "Excavation Worker",
     "organization": "Baden-Württemberg Landesdenkmalpflege, Ellwangen, Germany",
-    "startDate": "August 2013",
-    "endDate": "September 2013",
-    "description": "Performed surveying with a total station, processed data using survey2GIS and QGIS, excavated, cleaned, and packaged finds for the rescue excavation at Ellwangen.",
-    "location": "Ellwangen, Germany"
-  },
-  {
-    "title": "Intern",
-    "organization": "University of Tübingen, Germolles, France",
-    "startDate": "August 2013",
-    "endDate": "September 2013",
-    "description": "Conducted excavation and surveying work at the Paleolithic caves of Grottes de la Verpillière I and II, and instructed students in excavation techniques.",
-    "location": "Germolles, France"
-  },
-  {
-    "title": "Intern",
-    "organization": "Ostfriesische Landschaft, Hattersum, Germany",
-    "startDate": "August 2013",
-    "endDate": "August 2013",
-    "description": "Participated in excavation, surveying, and documentation work at the medieval industrial site of Hattersum.",
-    "location": "Hattersum, Germany"
-  },
-  {
-    "title": "Excavation Worker",
-    "organization": "Baden-Württemberg Landesdenkmalpflege, Ellwangen, Germany",
-    "startDate": "August 2013",
-    "endDate": "September 2013",
+    "startDate": "March 2013",
+    "endDate": "April 2013",
     "description": "Performed surveying with a total station, processed data using survey2GIS and QGIS, and conducted excavation work, including cleaning and packaging of finds for the rescue excavation at Ellwangen.",
     "location": "Ellwangen, Germany"
   },
   {
     "title": "Intern",
     "organization": "University of Tübingen, Germolles, France",
-    "startDate": "August 2013",
+    "startDate": "September 2013",
     "endDate": "September 2013",
     "description": "Conducted excavation and surveying work at the Paleolithic caves of Grottes de la Verpillière I and II, and instructed students in excavation techniques.",
     "location": "Germolles, France"
@@ -158,5 +134,29 @@
     "endDate": "August 2013",
     "description": "Participated in excavation, surveying, and documentation work at the medieval industrial site of Hattersum.",
     "location": "Hattersum, Germany"
+  },
+  {
+    "title": "Intern",
+    "organization": "University of Tübingen, Germolles, France",
+    "startDate": "July 2012",
+    "endDate": "September 2012",
+    "description": "Conducted excavation and surveying work at the Paleolithic caves of Grottes de la Verpillière I and II, and instructed students in excavation techniques.",
+    "location": "Germolles, France"
+  },
+  {
+    "title": "Intern",
+    "organization": "Deutsches Archäologisches Institut, Fier, Albania",
+    "startDate": "June 2012",
+    "endDate": "July 2012",
+    "description": "Participated in excavation, surveying, and documentation work at the ancient Greek theatre of Apollonia, Albania.",
+    "location": "Fier, Albania"
+  },
+  {
+    "title": "Intern",
+    "organization": "LVR - Amt für Bodendenkmalpflege im Rheinland, Nideggen-Wollersheim, Germany",
+    "startDate": "October 2011",
+    "endDate": "May 2012",
+    "description": "Worked on rescue excavations across various sites in Germany, including Bronze and Iron Age settlements, a medieval city gate, a Roman settlement, and a WWII bunker. Responsibilities included excavation, surveying with a total station, technical documentation (drawings, photography), and site management.",
+    "location": "Nideggen-Wollersheim, Germany"
   }
 ]

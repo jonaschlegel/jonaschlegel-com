@@ -56,26 +56,6 @@ const CvPage = async () => {
     return new Date(dateStr);
   };
 
-  const monthOrder = [
-    'December',
-    'November',
-    'October',
-    'September',
-    'August',
-    'July',
-    'June',
-    'May',
-    'April',
-    'March',
-    'February',
-    'January',
-  ];
-
-  const getMonthIndex = (dateStr: string): number => {
-    const [month] = dateStr.split(' ');
-    return month ? monthOrder.indexOf(month) : -1;
-  };
-
   const combinedItems = [
     ...workExperience.map((job) => ({
       type: 'work',
@@ -89,27 +69,13 @@ const CvPage = async () => {
       endDate: parseDate(edu.endDate || 'Present'),
       data: edu,
     })),
-    ...publications.map((pub) => ({
-      type: 'publication',
-      startDate: parseDate(pub.date),
-      endDate: parseDate(pub.date),
-      monthIndex: getMonthIndex(pub.date),
-      data: pub,
-    })),
   ];
 
   combinedItems.sort((a, b) => {
     const yearDiff = b.startDate.getFullYear() - a.startDate.getFullYear();
     if (yearDiff !== 0) return yearDiff;
 
-    if (a.type === 'publication' && b.type === 'publication') {
-      return (
-        (a as { monthIndex: number }).monthIndex -
-        (b as { monthIndex: number }).monthIndex
-      );
-    }
-
-    return 0;
+    return b.startDate.getTime() - a.startDate.getTime();
   });
 
   const combinedByYear: {
@@ -133,10 +99,16 @@ const CvPage = async () => {
         combinedByYear[year]?.work.push(item.data as Job);
       } else if (item.type === 'education') {
         combinedByYear[year]?.education.push(item.data as Education);
-      } else if (item.type === 'publication') {
-        combinedByYear[year]?.publications.push(item.data as Publication);
       }
     }
+  });
+
+  publications.forEach((pub) => {
+    const year = parseDate(pub.date).getFullYear();
+    if (!combinedByYear[year]) {
+      combinedByYear[year] = { work: [], education: [], publications: [] };
+    }
+    combinedByYear[year].publications.push(pub);
   });
 
   const earliestYear = Math.min(
@@ -154,21 +126,21 @@ const CvPage = async () => {
   return (
     <div className="min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="mb-6">Curriculum Vitae</h1>
+        <h1 className="mb-8">Curriculum Vitae</h1>
 
         {/* Grid container with rows representing each year */}
         <div
-          className="grid gap-y-4"
+          className="grid gap-1"
           style={{
             gridTemplateColumns: '100px 1fr 1fr 1fr',
-            gridAutoRows: 'minmax(50px, auto)',
+            gridAutoRows: 'minmax(40px, auto)',
           }}
         >
           {/* Column headers */}
-          <div className="font-bold text-lg" />
-          <h2 className="font-bold text-lg">Work</h2>
-          <h2 className="font-bold text-lg">Education</h2>
-          <h2 className="font-bold text-lg">Publications</h2>
+          <div className="font-bold text-xl" />
+          <h2 className="font-bold text-xl">Work</h2>
+          <h2 className="font-bold text-xl">Education</h2>
+          <h2 className="font-bold text-xl">Publications</h2>
 
           {/* Iterate over each year */}
           {allYears.map((year) => {
@@ -205,7 +177,7 @@ const CvPage = async () => {
                           gridRowStart: allYears.indexOf(endYear) + 2,
                           gridRowEnd: `span ${rowSpan}`,
                         }}
-                        className="p-2 border rounded-lg shadow bg-white mb-2"
+                        className="p-2 border rounded-lg shadow bg-white"
                       >
                         <h3 className="font-semibold text-gray-900 text-sm">
                           {job.title} at {job.organization}
@@ -236,7 +208,7 @@ const CvPage = async () => {
                           gridRowStart: allYears.indexOf(endYear) + 2,
                           gridRowEnd: `span ${rowSpan}`,
                         }}
-                        className="p-2 border rounded-lg shadow bg-white mb-2"
+                        className="p-2 border rounded-lg shadow bg-white"
                       >
                         <h3 className="font-semibold text-gray-900 text-sm">
                           {edu.degree} at {edu.institution}
