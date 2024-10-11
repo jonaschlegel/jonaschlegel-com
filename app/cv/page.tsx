@@ -61,10 +61,12 @@ const CvPage = async () => {
     const years = [];
     const startYear = startDate.getFullYear();
     const endYear = endDate.getFullYear();
+
     for (let year = startYear; year <= endYear; year++) {
       years.push(year);
       allYearsSet.add(year);
     }
+
     return years;
   };
 
@@ -135,6 +137,7 @@ const CvPage = async () => {
     educationTimeline[year] = [];
   });
 
+  // Assigning layers to ensure no overlap in a given year
   const assignLayers = (entries: Entry[], timeline: ColumnTimeline) => {
     entries.forEach((entry) => {
       entry.years.forEach((year) => {
@@ -147,6 +150,7 @@ const CvPage = async () => {
           return entriesInYear.some((e) => e.layer === checkLayer);
         };
 
+        // Find an available layer (row) for the entry in that year
         while (yearEntries && isLayerOccupied(layer, yearEntries)) {
           layer++;
         }
@@ -217,15 +221,10 @@ const CvPage = async () => {
           {sortedWorkEntries.map((entry) => {
             const startYear = entry.startDate.getFullYear();
             const endYear = entry.endDate.getFullYear();
-            const rowStart =
-              (yearRowStart[startYear] ?? 0) +
-              (workTimeline[startYear]?.find((e) => e.entry.id === entry.id)
-                ?.layer ?? 0);
+            const rowStart = yearRowStart[endYear];
             const rowEnd =
-              (yearRowStart[endYear] ?? 0) +
-              (workTimeline[endYear]?.find((e) => e.entry.id === entry.id)
-                ?.layer ?? 0) +
-              1;
+              (yearRowStart[startYear] ?? 0) +
+              (totalLayersPerYear[startYear] ?? 0);
 
             return (
               <div
@@ -256,14 +255,10 @@ const CvPage = async () => {
           {sortedEducationEntries.map((entry) => {
             const startYear = entry.startDate.getFullYear();
             const endYear = entry.endDate.getFullYear();
-            const startLayer =
-              educationTimeline[startYear]?.find((e) => e.entry.id === entry.id)
-                ?.layer ?? 0;
-            const rowStart = (yearRowStart[startYear] ?? 0) + startLayer;
-            const endLayer =
-              educationTimeline[endYear]?.find((e) => e.entry.id === entry.id)
-                ?.layer ?? 0;
-            const rowEnd = (yearRowStart[endYear] ?? 0) + endLayer + 1;
+            const rowStart = yearRowStart[endYear];
+            const rowEnd =
+              (yearRowStart[startYear] ?? 0) +
+              (totalLayersPerYear[startYear] ?? 0);
 
             return (
               <div
@@ -290,7 +285,7 @@ const CvPage = async () => {
             );
           })}
 
-          {/* Iterate over each year */}
+          {/* Render publications */}
           {allYears.map((year) => {
             const yearPublications = publications.filter(
               (pub) => parseDate(pub.date).getFullYear() === year,
