@@ -6,18 +6,18 @@ import {
   BsTwitter,
 } from 'react-icons/bs';
 import profile01 from '../images/clients/profile01.jpg';
-import heroBg from '../images/herobg.webp';
+import heroBg from '../images/herobg.jpg';
 import jona from '../images/jona.webp';
 import overview from '../images/overview.webp';
 import adventuressCover from '../images/projects/adventuress-cover.jpg';
-import archaeoZine from '../images/projects/archaeo-zine.png';
-import exploringArchaeologicalDisciplines from '../images/projects/exploring-archaeological-disciplines.png';
-import romanBurial from '../images/projects/roman-burial.png';
-import trowelJournalBlog from '../images/projects/trowel-journal-blog.png';
-import urbanChameleon from '../images/projects/urban-chameleon.png';
-import illustrating from '../images/services/archaeological-illustrating.png';
-import archaeologySciComm from '../images/services/archaeological-sci-comm.png';
-import webDevelopment from '../images/services/web-development.png';
+import archaeoZine from '../images/projects/archaeo-zine.jpg';
+import exploringArchaeologicalDisciplines from '../images/projects/exploring-archaeological-disciplines.jpg';
+import romanBurial from '../images/projects/roman-burial.jpg';
+import trowelJournalBlog from '../images/projects/trowel-journal-blog.jpg';
+import urbanChameleon from '../images/projects/urban-chameleon.jpg';
+import illustrating from '../images/services/archaeological-illustrating.jpg';
+import archaeologySciComm from '../images/services/archaeological-sci-comm.jpg';
+import webDevelopment from '../images/services/web-development.jpg';
 
 export const navLinks = [
   { name: 'Featured Projects', href: '/#project' },
