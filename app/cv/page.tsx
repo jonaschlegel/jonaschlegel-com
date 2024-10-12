@@ -221,10 +221,15 @@ const CvPage = async () => {
           {sortedWorkEntries.map((entry) => {
             const startYear = entry.startDate.getFullYear();
             const endYear = entry.endDate.getFullYear();
-            const rowStart = yearRowStart[endYear];
-            const rowEnd =
+            const rowStart =
               (yearRowStart[startYear] ?? 0) +
-              (totalLayersPerYear[startYear] ?? 0);
+              (workTimeline[startYear]?.find((e) => e.entry.id === entry.id)
+                ?.layer ?? 0) +
+              1;
+            const rowEnd =
+              (yearRowStart[endYear] ?? 0) +
+              (workTimeline[endYear]?.find((e) => e.entry.id === entry.id)
+                ?.layer ?? 0);
 
             return (
               <div
@@ -255,10 +260,14 @@ const CvPage = async () => {
           {sortedEducationEntries.map((entry) => {
             const startYear = entry.startDate.getFullYear();
             const endYear = entry.endDate.getFullYear();
-            const rowStart = yearRowStart[endYear];
-            const rowEnd =
-              (yearRowStart[startYear] ?? 0) +
-              (totalLayersPerYear[startYear] ?? 0);
+            const startLayer =
+              educationTimeline[startYear]?.find((e) => e.entry.id === entry.id)
+                ?.layer ?? 0;
+            const rowStart = (yearRowStart[startYear] ?? 0) + startLayer + 1;
+            const endLayer =
+              educationTimeline[endYear]?.find((e) => e.entry.id === entry.id)
+                ?.layer ?? 0;
+            const rowEnd = (yearRowStart[endYear] ?? 0) + endLayer;
 
             return (
               <div
