@@ -192,6 +192,7 @@ const CvPage = async () => {
     <div className="min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="mb-8">Curriculum Vitae</h1>
+
         {/* Mobile Tabs */}
         <div className="block md:hidden">
           <CvTabs
@@ -208,8 +209,6 @@ const CvPage = async () => {
         </div>
 
         {/* Desktop version with grid */}
-
-        {/* Grid container */}
         <div
           className="hidden md:grid gap-1"
           style={{
