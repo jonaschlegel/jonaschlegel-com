@@ -27,7 +27,7 @@ interface Publication {
   id: string;
   title: string;
   type: string;
-  date: string;
+  date: string; // Ensure this is in 'YYYY-MM-DD' or 'YYYY' format
   authors: string[];
   url?: string;
 }
@@ -46,6 +46,11 @@ const CvTabs: React.FC<CvTabsProps> = ({
   const [activeTab, setActiveTab] = useState<
     'work' | 'education' | 'publications'
   >('work');
+
+  // Sort publications by date in descending order
+  const sortedPublications = publications.sort((a, b) => {
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  });
 
   return (
     <div>
@@ -115,7 +120,6 @@ const CvTabs: React.FC<CvTabsProps> = ({
               <p className="text-xs text-gray-700 my-2">
                 {entry.data.startDate} - {entry.data.endDate || 'Present'} |{' '}
                 {entry.data.location}
-                {entry.data.endDate || 'Present'} | {entry.data.location}
               </p>
               <div className="text-gray-700">{entry.data.description}</div>
               {entry.data.url && (
@@ -136,7 +140,7 @@ const CvTabs: React.FC<CvTabsProps> = ({
       {/* Publications Tab */}
       {activeTab === 'publications' && (
         <div>
-          {publications.map((pub) => (
+          {sortedPublications.map((pub) => (
             <div
               key={`mobile-publication-${pub.id}`}
               className="mb-4 p-4 rounded-lg shadow bg-gray-50"
