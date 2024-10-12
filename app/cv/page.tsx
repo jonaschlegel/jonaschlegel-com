@@ -240,28 +240,35 @@ const CvPage = async () => {
                 }}
                 className="p-2 rounded-lg shadow bg-gray-50"
               >
-                <h3 className="font-semibold text-gray-900 text-sm">
-                  {(entry.data as Job).title} at{' '}
-                  {(entry.data as Job).organization}
-                </h3>
-                <p className="text-xs text-gray-700">
-                  {(entry.data as Job).startDate} -{' '}
-                  {(entry.data as Job).endDate || 'Present'} |{' '}
-                  {(entry.data as Job).location}
-                </p>
-                <p className="text-gray-700">
-                  {(entry.data as Job).description}
-                </p>
-                {entry.data.url && (
-                  <a
-                    href={(entry.data as Job).url}
-                    className="text-primary-accent underline text-xs"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View Project or Institution
-                  </a>
-                )}
+                <div
+                  style={{
+                    position: 'sticky',
+                    top: '10px',
+                  }}
+                >
+                  <h3 className="font-semibold text-gray-900 text-sm">
+                    {(entry.data as Job).title} at{' '}
+                    {(entry.data as Job).organization}
+                  </h3>
+                  <p className="text-xs text-gray-700">
+                    {(entry.data as Job).startDate} -{' '}
+                    {(entry.data as Job).endDate || 'Present'} |{' '}
+                    {(entry.data as Job).location}
+                  </p>
+                  <p className="text-gray-700">
+                    {(entry.data as Job).description}
+                  </p>
+                  {entry.data.url && (
+                    <a
+                      href={(entry.data as Job).url}
+                      className="text-primary-accent underline text-xs"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View Project or Institution
+                    </a>
+                  )}
+                </div>
               </div>
             );
           })}
@@ -288,28 +295,35 @@ const CvPage = async () => {
                 }}
                 className="p-2 rounded-lg shadow bg-gray-50"
               >
-                <h3 className="font-semibold text-gray-900 text-sm">
-                  {(entry.data as Education).degree} at{' '}
-                  {(entry.data as Education).institution}
-                </h3>
-                <p className="text-xs text-gray-700 my-2">
-                  {(entry.data as Education).startDate} -{' '}
-                  {(entry.data as Education).endDate || 'Present'} |{' '}
-                  {(entry.data as Education).location}
-                </p>
-                <p className="text-gray-700">
-                  {(entry.data as Education).description}
-                </p>
-                {entry.data.url && (
-                  <a
-                    href={(entry.data as Education).url}
-                    className="text-primary-accent underline text-xs"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View Department
-                  </a>
-                )}
+                <div
+                  style={{
+                    position: 'sticky',
+                    top: '10px',
+                  }}
+                >
+                  <h3 className="font-semibold text-gray-900 text-sm">
+                    {(entry.data as Education).degree} at{' '}
+                    {(entry.data as Education).institution}
+                  </h3>
+                  <p className="text-xs text-gray-700 my-2">
+                    {(entry.data as Education).startDate} -{' '}
+                    {(entry.data as Education).endDate || 'Present'} |{' '}
+                    {(entry.data as Education).location}
+                  </p>
+                  <p className="text-gray-700">
+                    {(entry.data as Education).description}
+                  </p>
+                  {entry.data.url && (
+                    <a
+                      href={(entry.data as Education).url}
+                      className="text-primary-accent underline text-xs"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View Department
+                    </a>
+                  )}
+                </div>
               </div>
             );
           })}
