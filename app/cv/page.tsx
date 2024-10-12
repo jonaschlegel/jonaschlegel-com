@@ -2,8 +2,10 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import React from 'react';
+import CvTabs from '../components/CvTabs';
 
 interface Job {
+  id: string;
   title: string;
   organization: string;
   startDate: string;
@@ -14,6 +16,7 @@ interface Job {
 }
 
 interface Education {
+  id: string;
   degree: string;
   institution: string;
   startDate: string;
@@ -24,6 +27,7 @@ interface Education {
 }
 
 interface Publication {
+  id: string;
   title: string;
   type: string;
   date: string;
@@ -188,10 +192,26 @@ const CvPage = async () => {
     <div className="min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="mb-8">Curriculum Vitae</h1>
+        {/* Mobile Tabs */}
+        <div className="block md:hidden">
+          <CvTabs
+            workEntries={workEntries.map((entry) => ({
+              id: entry.id,
+              data: entry.data as Job,
+            }))}
+            educationEntries={educationEntries.map((entry) => ({
+              id: entry.id,
+              data: entry.data as Education,
+            }))}
+            publications={publications}
+          />
+        </div>
+
+        {/* Desktop version with grid */}
 
         {/* Grid container */}
         <div
-          className="grid gap-1"
+          className="hidden md:grid gap-1"
           style={{
             gridTemplateColumns: '100px 1fr 1fr 1fr',
             gridTemplateRows: `repeat(${currentRow - 1}, auto)`,
