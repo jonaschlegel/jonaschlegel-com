@@ -1,0 +1,672 @@
+[
+  {
+    "title": "Disseminate | Analyse | Understand Graffiti-Scapes. Proceedings of the GoINDIGO2023 International Graffiti Symposium",
+    "authors": [
+      "Geert Verhoeven",
+      "Jona Schlegel",
+      "Benjamin Wild",
+      "Stefan Wogrin"
+    ],
+    "date": "September 2024",
+    "url": "https://journals.ap2.pt/index.php/indigo/issue/view/64",
+    "type": "Book",
+    "publisher": "Urban Creativity",
+    "location": "Lisbon, Portugal"
+  },
+  {
+    "title": "Editorial Introduction",
+    "authors": [
+      "Geert Verhoeven",
+      "Jona Schlegel",
+      "Benjamin Wild",
+      "Stefan Wogrin"
+    ],
+    "date": "September 2024",
+    "url": "https://doi.org/10.48619/indigo.v0i0.971",
+    "type": "Editorial",
+    "journal": "2023: disseminate | analyse | understand graffiti-scapes",
+    "pages": "6-11",
+    "publisher": "Urban Creativity",
+    "location": "Lisbon, Portugal"
+  },
+  {
+    "title": "Getting Hold of the Urban Chameleon",
+    "authors": ["Jona Schlegel", "Martin Wieser", "Geert Verhoeven"],
+    "date": "September 2024",
+    "url": "https://doi.org/10.48619/indigo.v0i0.975",
+    "type": "Journal article",
+    "journal": "2023: disseminate | analyse | understand graffiti-scapes",
+    "pages": "48-61",
+    "publisher": "Urban Creativity",
+    "location": "Lisbon, Portugal"
+  },
+  {
+    "title": "Each Graffito Deserves Its Polygon",
+    "authors": ["Geert Verhoeven", "Jona Schlegel", "Benjamin Wild"],
+    "date": "September 2024",
+    "url": "https://doi.org/10.48619/indigo.v0i0.981",
+    "type": "Journal article",
+    "journal": "2023: disseminate | analyse | understand graffiti-scapes",
+    "pages": "163-185",
+    "publisher": "Urban Creativity",
+    "location": "Lisbon, Portugal"
+  },
+  {
+    "title": "Document | Archive | Disseminate Graffiti-Scapes. Proceedings of the GoINDIGO2022 International Graffiti Symposium",
+    "authors": [
+      "Geert Verhoeven",
+      "Jona Schlegel",
+      "Benjamin Wild",
+      "Stefan Wogrin",
+      "Massimiliano Carloni"
+    ],
+    "date": "May 2023",
+    "url": "https://journals.ap2.pt/index.php/indigo/issue/view/48",
+    "type": "Book",
+    "publisher": "Urban Creativity",
+    "location": "Lisbon, Portugal"
+  },
+  {
+    "title": "“Different Folks, Different Strokes”: GoINDIGO 2022’s « Creators vs Academics » Discussion Round’",
+    "authors": [
+      "Samuel Merrill",
+      "Geert Verhoeven",
+      "Benjamin Wild",
+      "Massimiliano Carloni",
+      "Martin Iglesia",
+      "Francisca Merino",
+      "Liiljana Radošević",
+      "Chiara Ricci",
+      "Jona Schlegel",
+      "Stefan Wogrin"
+    ],
+    "date": "May 2023",
+    "url": "https://doi.org/10.48619/indigo.v0i0.701",
+    "type": "Conference paper",
+    "journal": "goINDIGO",
+    "issue": "2022: document | archive | disseminate graffiti-scapes",
+    "pages": "25-44",
+    "publisher": "Urban Creativity",
+    "location": "Lisbon, Portugal"
+  },
+  {
+    "title": "Making a Mark—Towards a Graffiti Thesaurus",
+    "authors": [
+      "Jona Schlegel",
+      "Massimiliano Carloni",
+      "Stefan Wogrin",
+      "Ann M. Graff",
+      "Geert Verhoeven"
+    ],
+    "date": "May 2023",
+    "url": "https://doi.org/10.48619/indigo.v0i0.710",
+    "type": "Conference paper",
+    "journal": "goINDIGO",
+    "issue": "2022: document | archive | disseminate graffiti-scapes",
+    "pages": "203-219",
+    "publisher": "Urban Creativity",
+    "location": "Lisbon, Portugal"
+  },
+  {
+    "title": "Finding Listeners for Walls That Speak",
+    "authors": [
+      "Geert Verhoeven",
+      "Massimiliano Carloni",
+      "Jona Schlegel",
+      "Benjamin Wild",
+      "Stefan Wogrin"
+    ],
+    "date": "May 2023",
+    "url": "https://doi.org/10.48619/indigo.v0i0.699",
+    "type": "Conference paper",
+    "journal": "goINDIGO",
+    "issue": "2022: document | archive | disseminate graffiti-scapes",
+    "pages": "25-44",
+    "publisher": "Urban Creativity",
+    "location": "Lisbon, Portugal"
+  },
+  {
+    "title": "Facing a Chameleon—How Project INDIGO Discovers and Records New Graffiti",
+    "authors": [
+      "Geert Verhoeven",
+      "Stefan Wogrin",
+      "Jona Schlegel",
+      "Martin Wieser",
+      "Benjamin Wild"
+    ],
+    "date": "May 2023",
+    "url": "https://doi.org/10.48619/indigo.v0i0.703",
+    "type": "Conference paper",
+    "journal": "goINDIGO",
+    "issue": "2022: document | archive | disseminate graffiti-scapes",
+    "pages": "63-85",
+    "publisher": "Urban Creativity",
+    "location": "Lisbon, Portugal"
+  },
+  {
+    "title": "‘Imagine Being a Racist’: GoINDIGO 2022’s «Ethics & Legality in Graffiti Research» Discussion Round",
+    "authors": [
+      "Benjamin Wild",
+      "Geert Verhoeven",
+      "Norbert Pfeifer",
+      "Enrico Bonadio",
+      "Massimiliano Carloni",
+      "Chiara Ricci",
+      "Christine Koblitz",
+      "Jona Schlegel"
+    ],
+    "date": "May 2023",
+    "url": "https://doi.org/10.48619/indigo.v0i0.702",
+    "type": "Conference paper",
+    "journal": "goINDIGO",
+    "issue": "2022: document | archive | disseminate graffiti-scapes",
+    "pages": "45-62",
+    "publisher": "Urban Creativity",
+    "location": "Lisbon, Portugal"
+  },
+  {
+    "title": "Towards a Graffiti Thesaurus in SKOS",
+    "authors": [
+      "Jona Schlegel",
+      "Massimiliano Carloni",
+      "Stefan Wogrin",
+      "Geert Verhoeven"
+    ],
+    "date": "May 2022",
+    "url": "https://doi.org/10.5281/zenodo.6578470",
+    "type": "Presentation",
+    "conference": "goINDIGO 2022 International Graffiti Symposium",
+    "location": "Vienna, Austria"
+  },
+  {
+    "title": "PROJECT INDIGO – Document, Disseminate & Analyse a Graffiti-Scape",
+    "authors": [
+      "Geert Verhoeven",
+      "Benjamin Wild",
+      "Jona Schlegel",
+      "Martin Wieser",
+      "Norbert Pfeifer",
+      "Stefan Wogrin",
+      "Lothar Eysn"
+    ],
+    "date": "February 2022",
+    "url": "https://doi.org/10.5194/isprs-archives-XLVI-2-W1-2022-513-2022",
+    "type": "Journal article",
+    "journal": "The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences",
+    "volume": "XLVI-2/W1-2022",
+    "pages": "513-520"
+  },
+  {
+    "title": "GoINDIGO 2022 International Graffiti Symposium: Book of Abstracts",
+    "authors": [
+      "Geert Verhoeven",
+      "Massimiliano Carloni",
+      "Jona Schlegel",
+      "Martina Trognitz",
+      "Benjamin Wild",
+      "Stefan Wogrin",
+      "Alex Hale"
+    ],
+    "date": "May 2022",
+    "url": "https://doi.org/10.5281/zenodo.6591241",
+    "type": "Booklet",
+    "location": "Vienna, Austria"
+  },
+  {
+    "title": "INDIGO - Status-Quo Presentation",
+    "authors": [
+      "Geert Verhoeven",
+      "Benjamin Wild",
+      "Jona Schlegel",
+      "Massimiliano Carloni",
+      "Alexander Watzinger",
+      "Bernhard Koschiček-Krombholz",
+      "Nina Richards"
+    ],
+    "date": "October 2022",
+    "url": "https://zenodo.org/record/7232644",
+    "type": "Presentation",
+    "conference": "goINDIGO 2022 International Graffiti Symposium",
+    "location": "Vienna, Austria"
+  },
+  {
+    "title": "Discovering & Recording New Graffiti within Project INDIGO",
+    "authors": [
+      "Geert Verhoeven",
+      "Jona Schlegel",
+      "Martin Wieser",
+      "Stefan Wogrin"
+    ],
+    "date": "May 2022",
+    "url": "https://doi.org/10.5281/zenodo.6574796",
+    "type": "Presentation",
+    "conference": "goINDIGO 2022 International Graffiti Symposium",
+    "location": "Vienna, Austria"
+  },
+  {
+    "title": "AUTOGRAF—AUTomated Orthorectification of GRAFfiti Photos",
+    "authors": [
+      "Benjamin Wild",
+      "Geert Verhoeven",
+      "Martin Wieser",
+      "Camillo Ressl",
+      "Jona Schlegel",
+      "Stefan Wogrin",
+      "Johannes Otepka-Schremmer",
+      "Norbert Pfeifer"
+    ],
+    "date": "December 2022",
+    "url": "https://doi.org/10.3390/heritage5040155",
+    "type": "Journal article",
+    "journal": "Heritage",
+    "volume": "5",
+    "issue": "4",
+    "pages": "2987-3009"
+  },
+  {
+    "title": "Project INDIGO - Document, Disseminate & Analyse a Graffiti-Scape",
+    "authors": [
+      "Benjamin Wild",
+      "Geert Verhoeven",
+      "Jona Schlegel",
+      "Martin Wieser",
+      "Norbert Pfeifer",
+      "Stefan Wogrin",
+      "Lothar Eysn",
+      "Massimiliano Carloni",
+      "Bernhard Koschiček-Krombholz",
+      "Adolfo Molada-Tebar",
+      "Johannes Otepka-Schremmer",
+      "Camillo Ressl",
+      "Martina Trognitz",
+      "Alexander Watzinger"
+    ],
+    "date": "March 2022",
+    "url": "https://doi.org/10.5281/zenodo.6339489",
+    "type": "Presentation",
+    "conference": "3D Virtual Reconstruction and Visualization of Complex Architectures – 9th International Workshop (3D-ARCH 2022)",
+    "location": "Mantova, Italy"
+  },
+  {
+    "title": "Prospecting the UNESCO World Heritage Site of Müstair (Switzerland)",
+    "authors": [
+      "Jona Schlegel",
+      "Geert J. Verhoeven",
+      "Patrick Cassitti",
+      "Alois Hinterleitner",
+      "Klaus Löcker",
+      "Hannes Schiel",
+      "Christoph Walser",
+      "Thomas Reitmaier",
+      "Wolfgang Neubauer"
+    ],
+    "date": "June 2021",
+    "url": "https://doi.org/10.3390/rs13132515",
+    "type": "Journal article",
+    "journal": "Remote Sensing",
+    "volume": "13",
+    "issue": "13",
+    "pages": "2515-2535"
+  },
+  {
+    "title": "CrowdSlide - a Mobile Web Application for Building a Database of Gravitational Mass Movements Using Volunteer Field Reports",
+    "authors": ["Jona Schlegel", "Annemarie Grass", "Florian Fuchs"],
+    "date": "2020",
+    "url": "https://doi.org/10.5194/egusphere-egu2020-16503",
+    "type": "Conference abstract",
+    "volume": "EGU2020",
+    "pages": "16503"
+  },
+  {
+    "title": "Towards an Automated Analysis of Geophysical Archaeological Prospection Data",
+    "authors": [
+      "Immo Trinks",
+      "Alois Hinterleitner",
+      "Mario Wallner",
+      "Klaus Löcker",
+      "Alexander Bornik",
+      "Johannes Höller",
+      "Matthias Kucera",
+      "Roland Filzwieser",
+      "Hannes Schiel",
+      "Tanja Trausmuth",
+      "Alexandra Vonkilch",
+      "Jona Schlegel",
+      "David Ruß",
+      "Wolfgang Neubauer"
+    ],
+    "date": "November 2020",
+    "url": "https://www.chnt.at/wp-content/uploads/Towards-an-automated-analysis-of-geophysical-archaeological-prospection-data.pdf",
+    "type": "Conference paper",
+    "journal": "Proceedings of the 25th Conference on Cultural Heritage and New Technologies.",
+    "pages": "1-4"
+  },
+  {
+    "title": "Pliska – Integrated Geophysical Prospection of the First Early Medieval Bulgarian Capital",
+    "authors": [
+      "Roland Filzwieser",
+      "Andrey Aladzhov",
+      "Jona Schlegel",
+      "Alois Hinterleitner",
+      "Nives Doneus",
+      "Hannes Schiel",
+      "Janko Dimitrov",
+      "Martin Gamon",
+      "Falko Daim",
+      "Wolfgang Neubauer"
+    ],
+    "date": "December 2019",
+    "url": "https://be-ja.org/index.php/journal/article/view/be-ja-9-2-2019-229-261",
+    "type": "Journal article",
+    "journal": "Bulgarian e-Journal of Archaeology",
+    "volume": "9",
+    "issue": "2",
+    "pages": "229-261"
+  },
+  {
+    "title": "Recreating an Ancient Roman Delicacy Market",
+    "authors": ["Kelly Gillikin Schoueri", "Jona Schlegel"],
+    "date": "October 2018",
+    "url": "https://doi.org/10.1109/DigitalHeritage44163.2018",
+    "type": "Conference poster",
+    "conference": "Digital Heritage 2018",
+    "location": "San Francisco, USA"
+  },
+  {
+    "title": "Spatial Contextualization of Cultural Heritage - The Cupola of the Torres de Las Damas in the Alhambra",
+    "authors": [
+      "Arie Kai-Browne",
+      "Thomas Bremer",
+      "Kay Kohlmeyer",
+      "Julia Gonnella",
+      "Sebastian Plesch",
+      "Susanne Brandhorst",
+      "Jona Schlegel"
+    ],
+    "date": "November 2018",
+    "url": "https://archiv.chnt.at/spatial-contextualization-of-cultural-heritage-the-cupola-of-the-torres-de-las-damas-on-the-alhambra/",
+    "type": "Conference paper",
+    "conference": "CHNT 2018",
+    "location": "Vienna, Austria"
+  },
+  {
+    "title": "Entdeckung Und Erkundung Des Antiken Stadtgrundrisses von Seleukeia Sidera, Türkei – Ein Erster Überblick",
+    "authors": ["Thomas Schenk", "Jona Schlegel"],
+    "date": "April 2018",
+    "url": "https://feldarchaeologie.de/wordpress/wp-content/uploads/2018/06/2018_Programm_Ulm_und_Abstracts.pdf",
+    "type": "Presentation",
+    "conference": "VGFA 2018",
+    "location": "Ulm, Germany"
+  },
+  {
+    "title": "Seleukeia Sidera Antik Kenti 2016-2017 Jeofizik Çalışmalarının Sonuçları",
+    "authors": [
+      "Thomas Schenk",
+      "Evrim Tutunsatar",
+      "Jona Schlegel",
+      "Mustafa Akaslan",
+      "Bilge Hürmüzlü",
+      "İlkay Atav Köker"
+    ],
+    "date": "May 2018",
+    "url": "https://seleukeiasiderakazilari.sdu.edu.tr/page28.html",
+    "type": "Presentation",
+    "conference": "34 ARKEOMETRİ SONUÇLARI TOPLANTISI",
+    "location": "Çanakkale, Turkey"
+  },
+  {
+    "title": "The Challenges of Preservation: Digitizing Graffiti in the Urban Landscape",
+    "authors": [
+      "Massimiliano Carloni",
+      "Geert J. Verhoeven",
+      "Jona Schlegel",
+      "Stefan Wogrin"
+    ],
+    "date": "July 2023",
+    "url": "https://doi.org/10.5281/zenodo.8004645",
+    "type": "Conference paper",
+    "journal": "AIUCD 2023 - La Memoria Digitale",
+    "pages": "338-342",
+    "location": "Siena, Italy"
+  },
+  {
+    "title": "goINDIGO 2023 International Graffiti Symposium: Disseminate | Analyse | Understand Graffiti-Scapes. Book of Abstracts",
+    "authors": [
+      "Geert J. Verhoeven",
+      "Jona Schlegel",
+      "Benjamin Wild",
+      "Stefan Wogrin",
+      "Oskar Baumann",
+      "Enrico Bonadio",
+      "Massimiliano Carloni",
+      "Luca Davico",
+      "DEADBEAT HERO",
+      "Siri-Helen Egeland",
+      "Francisca Fernández Merino",
+      "Giulia Flenghi",
+      "Paola Guerreschi",
+      "Elena Ippoliti",
+      "Johannes Jungfleisch",
+      "Bernhard Koschiček-Krombholz",
+      "Paul Lorah",
+      "Alessandra Meschini",
+      "Gunther Michels",
+      "Luisa Montobbio",
+      "Konstantin Oedl",
+      "Norbert Pfeifer",
+      "Ljiljana Radošević",
+      "Michele Russo",
+      "Nora Shalaby",
+      "Heather Shirey",
+      "Holly Sypniewski",
+      "David Todd Lawrence",
+      "Noemi Tommasella",
+      "Valentina Tretti-Beckles",
+      "Martina Trognitz",
+      "Richard van Tiggelen",
+      "Adrián Vergara-Heidke",
+      "Brett Webb",
+      "Martin Wieser"
+    ],
+    "date": "June 2023",
+    "url": "https://doi.org/10.5281/zenodo.8029994",
+    "type": "Booklet",
+    "pages": "1-50"
+  },
+  {
+    "title": "INDIGO and the Graffito: Navigating Definitions and Digital Representations",
+    "authors": ["Jona Schlegel", "Massimiliano Carloni", "Geert J. Verhoeven"],
+    "date": "December 2023",
+    "url": "https://doi.org/10.5281/zenodo.10361156",
+    "type": "Presentation",
+    "conference": "Leaving a Mark: Onsite – On Surface – Online",
+    "location": "Karlsruhe, Germany"
+  },
+  {
+    "title": "Catching the Urban Chameleon",
+    "authors": ["Jona Schlegel", "Martin Wieser", "Geert J. Verhoeven"],
+    "date": "June 2023",
+    "url": "https://doi.org/10.5281/zenodo.8112788",
+    "type": "Presentation",
+    "conference": "goINDIGO 2023: Disseminate | Analyse | Understand Graffiti-Scapes",
+    "location": "Vienna, Austria"
+  },
+  {
+    "title": "One Polygon at a Time – Trying to Manage a Graffiti-Scape's Spatio-Temporality",
+    "authors": ["Geert J. Verhoeven", "Jona Schlegel"],
+    "date": "June 2023",
+    "url": "https://doi.org/10.5281/zenodo.8105895",
+    "type": "Presentation",
+    "conference": "goINDIGO 2023: Disseminate | Analyse | Understand Graffiti-Scapes",
+    "location": "Vienna, Austria"
+  },
+  {
+    "title": "Towards a Graffiti Thesaurus in SKOS",
+    "authors": [
+      "Jona Schlegel",
+      "Massimiliano Carloni",
+      "Stefan Wogrin",
+      "Geert J. Verhoeven"
+    ],
+    "date": "May 2022",
+    "url": "https://doi.org/10.5281/zenodo.6578470",
+    "type": "Presentation",
+    "conference": "goINDIGO 2022: Document | Archive | Disseminate Graffiti-Scapes",
+    "location": "Vienna, Austria"
+  },
+  {
+    "title": "Discovering & Recording New Graffiti within Project INDIGO",
+    "authors": [
+      "Geert J. Verhoeven",
+      "Jona Schlegel",
+      "Martin Wieser",
+      "Stefan Wogrin"
+    ],
+    "date": "May 2022",
+    "url": "https://doi.org/10.5281/zenodo.6574796",
+    "type": "Presentation",
+    "conference": "goINDIGO 2022: Document | Archive | Disseminate Graffiti-Scapes",
+    "location": "Vienna, Austria"
+  },
+  {
+    "title": "Dem Donaukanal-Chamäleon auf der Spur",
+    "authors": ["Benjamin Wild", "Jona Schlegel"],
+    "date": "March 2023",
+    "url": "https://www.derstandard.at/story/2000144976673/dem-donaukanal-chamaeleon-auf-der-spur",
+    "type": "News blog",
+    "journal": "Der Standard - Archäologieblog",
+    "location": "Vienna, Austria"
+  },
+  {
+    "title": "Grabungstechnik Praktische Archäologie",
+    "authors": ["Jona Schlegel"],
+    "date": "June 2014",
+    "url": "https://www.youtube.com/watch?v=aGiQ8BXSamE",
+    "type": "Video",
+    "language": "German",
+    "location": "Germany",
+    "platform": "YouTube"
+  },
+  {
+    "title": "Auswertung von berührungslosen Prospektionsmethoden am Beispiel der antiken Fundstätte Kale Tepe bei Gönen, Isparta",
+    "authors": ["Jona Schlegel"],
+    "date": "December 2015",
+    "url": "https://scholar.google.com",
+    "type": "Bachelor thesis",
+    "institution": "Hochschule für Technik und Wirtschaft Berlin",
+    "location": "Berlin, Germany"
+  },
+  {
+    "title": "Seleukeia Sidera",
+    "authors": ["Jona Schlegel"],
+    "date": "March 2018",
+    "url": "",
+    "type": "Master thesis",
+    "institution": "Hochschule für Technik und Wirtschaft Berlin and Freie Universität Berlin",
+    "location": "Berlin, Germany"
+  },
+  {
+    "title": "Documenting Graffiti Past and Present: Disparate Traditions, Shared Objectives",
+    "authors": [
+      "Ondrej Škrabal (Chair)",
+      "Anna Marie Krüger",
+      "Mia Gaia Trentin",
+      "Rebecca R. Benefiel",
+      "Holly M. Sypniewski",
+      "Jona Schlegel"
+    ],
+    "date": "September 2023",
+    "url": "https://arthist.net/archive/40077/lang=en_US",
+    "type": "Panel discussion",
+    "conference": "Studying Written Artefacts: Challenges and Perspectives, Excellence Cluster: Understanding Written Artefacts Conference 2023",
+    "location": "Hamburg, Germany"
+  },
+  {
+    "title": "Eggendorf am Walde (NÖ) – Die Kreisgrabenanlage und das Fortleben einer bandkeramischen Großsiedlung im Mittelneolithikum",
+    "authors": [
+      "David Ruß",
+      "Jona Schlegel",
+      "Katharina Riederer",
+      "Matthias Kucera",
+      "Mario Wallner",
+      "Hannes Schiel",
+      "Constantin Hladik",
+      "Wolfgang Neubauer"
+    ],
+    "date": "January 2022",
+    "url": "",
+    "type": "Presentation",
+    "conference": "rondel'22 - Ritualarena, Kalenderbau oder performative Architektur?",
+    "location": "Online "
+  },
+  {
+    "title": "Eggendorf Am Walde and Niederleis − Two Newly Discovered Middle Neolithic Kreisgrabenanlagen in Lower Austria",
+    "authors": [
+      "David Ruß",
+      "Jona Schlegel",
+      "Mario Wallner",
+      "Katharina Riederer",
+      "Matthias Kucera",
+      "Hannes Schiel",
+      "Julia Rechling",
+      "Alois Hinterleitner",
+      "Wolfgang Neubauer"
+    ],
+    "date": "August 2023",
+    "url": "",
+    "journal": "Berliner Archäologische Forschungen",
+    "editor": "Wolfram Schier",
+    "pages": "97-108",
+    "publisher": "Berliner Archäologische Forschungen",
+    "type": "Conference paper"
+  },
+  {
+    "title": "Geophysical Archaeological Prospection at the Inner City of Pliska in 2018",
+    "authors": [
+      "Roland Filzwieser",
+      "Wolfgang Neubauer",
+      "Andrey Aladzhov",
+      "Jona Schlegel",
+      "Alois Hinterleitner",
+      "Nives Doneus",
+      "Hannes Schiel",
+      "Martin Gamon"
+    ],
+    "date": "May 2019",
+    "url": "",
+    "type": "Presentation",
+    "conference": "LVIII National Archaeological Conference",
+    "location": "Byala, Bulgaria"
+  },
+  {
+    "title": "Non-Invasive Archaeological Prospection of Pliska",
+    "authors": [
+      "Wolfgang Neubauer",
+      "Roland Filzwieser",
+      "Hannes Schiel",
+      "Jona Schlegel"
+    ],
+    "date": "October 2019",
+    "url": "",
+    "type": "Presentation",
+    "conference": "The Pliska Phenomenon and Early Medieval Archaeology in Central and South-Eastern Europe",
+    "location": "Shumen, Bulgaria"
+  },
+  {
+    "title": "Speicher-Herforst - a Roman Industrial Landscape in the Hinterland of the Augusta Treverorum (Trier, UNESCO World Heritage)",
+    "authors": [
+      "Jona Schlegel",
+      "Petra Schneidhofer",
+      "Mario Wallner",
+      "Jakob Kainz",
+      "Wolfgang Neubauer",
+      "Holger Schaaf",
+      "Angelika Hunold"
+    ],
+    "date": "April 2019",
+    "url": "",
+    "type": "Presentation",
+    "conference": "DigiKult 2019",
+    "location": " Krems, Austria"
+  }
+]

@@ -1,0 +1,192 @@
+[
+  {
+    "title": "Freelancer",
+    "organization": "archaeoINK",
+    "startDate": "January 2024",
+    "endDate": "Present",
+    "description": "Providing services in scientific communication, including web development (consulting and execution), illustration, knowledge management, database structures (CIDOC CRM), and controlled vocabulary for archaeological data sharing.",
+    "location": "Vienna, Austria",
+    "director": "Jonas Schlegel",
+    "url": "https://jonaschlegel.com"
+  },
+  {
+    "title": "Researcher",
+    "organization": "Ludwig Boltzmann Institute for Archaeological Prospection and Virtual Archaeology",
+    "startDate": "May 2018",
+    "endDate": "September 2023",
+    "description": "Specialised in ground-penetrating radar (GPR) surveys, magnetic motorised surveying, data interpretation using GIS, and project management across multiple international sites.",
+    "location": "Vienna, Austria",
+    "director": "Wolfgang Neubauer",
+    "connected project(s)": [
+      {
+        "title": "Project INDIGO",
+        "startDate": "September 2021",
+        "endDate": "August 2023",
+        "location": "Vienna, Austria",
+        "role(s)": [
+          "CIDOC CRM data model",
+          "photogrammetry",
+          "Graffiti definition",
+          "web development",
+          "thesaurus creation"
+        ],
+        "url": "https://projectindigo.eu/"
+      },
+      {
+        "title": "Montlingerberg",
+        "location": "Montlingerberg, Switzerland",
+        "role(s)": ["GPR survey", "magnetic survey", "GIS data interpretation"]
+      },
+      {
+        "title": "Herforst",
+        "location": "Vienna, Austria",
+        "role(s)": ["3D modelling", "GIS data interpretation"]
+      }
+    ],
+    "url": "https://www.lbi-archpro.ac.at/en/"
+  },
+  {
+    "title": "Student Assistant",
+    "organization": "Hochschule für Technik und Wirtschaft, Berlin",
+    "startDate": "November 2017",
+    "endDate": "December 2017",
+    "description": "Involved in post-processing and interpretation of geophysical data from the Seleukia Sidera project, Turkey.",
+    "location": "Berlin, Germany"
+  },
+  {
+    "title": "Intern",
+    "organization": "Ludwig Boltzmann Institute for Archaeological Prospection and Virtual Archaeology",
+    "startDate": "April 2017",
+    "endDate": "June 2017",
+    "description": "Worked on magnetic and ground-penetrating radar data processing and the reconstruction of archaeological sites in Herforst, Germany.",
+    "location": "Vienna, Austria"
+  },
+  {
+    "title": "Student Assistant",
+    "organization": "Hochschule für Technik und Wirtschaft, Granada, Spain",
+    "startDate": "October 2016",
+    "endDate": "October 2016",
+    "description": "Conducted documentation using strip-light laser scanning and image-based modelling for the Alhambra, Torres de las Damas project.",
+    "location": "Granada, Spain"
+  },
+  {
+    "title": "Student Assistant",
+    "organization": "Humboldt University, Rocher-des-Aures, France",
+    "startDate": "September 2016",
+    "endDate": "September 2016",
+    "description": "Participated in excavation, surveying, and documentation of features at a Celtic oppidum. Created 3D models and orthographic images, and produced illustrations in AutoCAD and GIS.",
+    "location": "Rocher-des-Aures, France"
+  },
+  {
+    "title": "Student Assistant",
+    "organization": "Hochschule für Technik und Wirtschaft, Isparta, Turkey",
+    "startDate": "August 2016",
+    "endDate": "August 2016",
+    "description": "Conducted documentation work using terrestrial laser scanning, drones, and image-based modelling at Seleukeia Sidera and Erenler Tepe, including geomagnetic data collection.",
+    "location": "Isparta, Turkey"
+  },
+  {
+    "title": "Student Assistant",
+    "organization": "Hochschule für Technik und Wirtschaft, Berlin, Germany",
+    "startDate": "February 2016",
+    "endDate": "April 2016",
+    "description": "Performed close-range scanning of reliefs from the city of Samarra, Iran, and processed the data for the MOSYS3D project.",
+    "location": "Berlin, Germany"
+  },
+  {
+    "title": "Student Assistant",
+    "organization": "Deutsches Archäologisches Institut, Istanbul, Turkey",
+    "startDate": "March 2016",
+    "endDate": "March 2016",
+    "description": "Developed data structures, mapped find groups, and integrated maps into GIS for the Pergamon project.",
+    "location": "Istanbul, Turkey"
+  },
+  {
+    "title": "Student Assistant",
+    "organization": "Hochschule für Technik und Wirtschaft, Berlin, Germany",
+    "startDate": "September 2015",
+    "endDate": "September 2015",
+    "description": "Conducted close-range scanning of reliefs from the city of Samarra, Iran, and processed the data for the MOSYS3D project.",
+    "location": "Berlin, Germany"
+  },
+  {
+    "title": "Student Assistant",
+    "organization": "Hochschule für Technik und Wirtschaft, Isparta, Turkey",
+    "startDate": "August 2015",
+    "endDate": "August 2015",
+    "description": "Documented the Bronze Age hilltop settlement at Kale Tepe using terrestrial laser scanning, total station surveying, and drone photography.",
+    "location": "Isparta, Turkey"
+  },
+  {
+    "title": "Student Assistant",
+    "organization": "Deutsches Archäologisches Institut, Vig, Albania",
+    "startDate": "March 2015",
+    "endDate": "April 2015",
+    "description": "Created a survey network, conducted topographic surveying, and planned, analysed, and implemented visualisations of the preservation state of the late antique fort at Vig.",
+    "location": "Vig, Albania"
+  },
+  {
+    "title": "Student Assistant",
+    "organization": "Hochschule für Technik und Wirtschaft, Berlin, Germany",
+    "startDate": "November 2014",
+    "endDate": "November 2014",
+    "description": "Performed close-range scanning of reliefs from the city of Samarra, Iran, and processed the data for the MOSYS3D project.",
+    "location": "Berlin, Germany"
+  },
+  {
+    "title": "Student Assistant",
+    "organization": "OREA",
+    "startDate": "August 2014",
+    "endDate": "October 2014",
+    "description": "Conducted excavation and surveying work at the Neolithic to Chalcolithic mound of Çukuriçi Höyük, including Leica total station measurements, TachyCAD documentation, 2D photogrammetry, and data processing using AutoCAD and Adobe InDesign.",
+    "location": "Selçuk, Turkey"
+  },
+  {
+    "title": "Excavation Worker",
+    "organization": "Baden-Württemberg Landesdenkmalpflege, Ellwangen, Germany",
+    "startDate": "March 2013",
+    "endDate": "April 2013",
+    "description": "Performed surveying with a total station, processed data using survey2GIS and QGIS, and conducted excavation work, including cleaning and packaging of finds for the rescue excavation at Ellwangen.",
+    "location": "Ellwangen, Germany"
+  },
+  {
+    "title": "Intern",
+    "organization": "University of Tübingen, Germolles, France",
+    "startDate": "September 2013",
+    "endDate": "September 2013",
+    "description": "Conducted excavation and surveying work at the Paleolithic caves of Grottes de la Verpillière I and II, and instructed students in excavation techniques.",
+    "location": "Germolles, France"
+  },
+  {
+    "title": "Intern",
+    "organization": "Ostfriesische Landschaft, Hattersum, Germany",
+    "startDate": "August 2013",
+    "endDate": "August 2013",
+    "description": "Participated in excavation, surveying, and documentation work at the medieval industrial site of Hattersum.",
+    "location": "Hattersum, Germany"
+  },
+  {
+    "title": "Intern",
+    "organization": "University of Tübingen, Germolles, France",
+    "startDate": "July 2012",
+    "endDate": "September 2012",
+    "description": "Conducted excavation and surveying work at the Paleolithic caves of Grottes de la Verpillière I and II, and instructed students in excavation techniques.",
+    "location": "Germolles, France"
+  },
+  {
+    "title": "Intern",
+    "organization": "Deutsches Archäologisches Institut, Fier, Albania",
+    "startDate": "June 2012",
+    "endDate": "July 2012",
+    "description": "Participated in excavation, surveying, and documentation work at the ancient Greek theatre of Apollonia, Albania.",
+    "location": "Fier, Albania"
+  },
+  {
+    "title": "Intern",
+    "organization": "LVR - Amt für Bodendenkmalpflege im Rheinland, Nideggen-Wollersheim, Germany",
+    "startDate": "October 2011",
+    "endDate": "May 2012",
+    "description": "Worked on rescue excavations across various sites in Germany, including Bronze and Iron Age settlements, a medieval city gate, a Roman settlement, and a WWII bunker. Responsibilities included excavation, surveying with a total station, technical documentation (drawings, photography), and site management.",
+    "location": "Nideggen-Wollersheim, Germany"
+  }
+]
