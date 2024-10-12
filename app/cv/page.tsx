@@ -137,7 +137,6 @@ const CvPage = async () => {
     educationTimeline[year] = [];
   });
 
-  // Assigning layers to ensure no overlap in a given year
   const assignLayers = (entries: Entry[], timeline: ColumnTimeline) => {
     entries.forEach((entry) => {
       entry.years.forEach((year) => {
@@ -150,7 +149,6 @@ const CvPage = async () => {
           return entriesInYear.some((e) => e.layer === checkLayer);
         };
 
-        // Find an available layer (row) for the entry in that year
         while (yearEntries && isLayerOccupied(layer, yearEntries)) {
           layer++;
         }
