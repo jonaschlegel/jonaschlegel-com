@@ -2,8 +2,10 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import React from 'react';
+import CvTabs from '../components/CvTabs';
 
 interface Job {
+  id: string;
   title: string;
   organization: string;
   startDate: string;
@@ -14,6 +16,7 @@ interface Job {
 }
 
 interface Education {
+  id: string;
   degree: string;
   institution: string;
   startDate: string;
@@ -24,6 +27,7 @@ interface Education {
 }
 
 interface Publication {
+  id: string;
   title: string;
   type: string;
   date: string;
@@ -189,9 +193,24 @@ const CvPage = async () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="mb-8">Curriculum Vitae</h1>
 
-        {/* Grid container */}
+        {/* Mobile Tabs */}
+        <div className="block md:hidden">
+          <CvTabs
+            workEntries={workEntries.map((entry) => ({
+              id: entry.id,
+              data: entry.data as Job,
+            }))}
+            educationEntries={educationEntries.map((entry) => ({
+              id: entry.id,
+              data: entry.data as Education,
+            }))}
+            publications={publications}
+          />
+        </div>
+
+        {/* Desktop version with grid */}
         <div
-          className="grid gap-1"
+          className="hidden md:grid gap-1"
           style={{
             gridTemplateColumns: '100px 1fr 1fr 1fr',
             gridTemplateRows: `repeat(${currentRow - 1}, auto)`,
@@ -240,28 +259,35 @@ const CvPage = async () => {
                 }}
                 className="p-2 rounded-lg shadow bg-gray-50"
               >
-                <h3 className="font-semibold text-gray-900 text-sm">
-                  {(entry.data as Job).title} at{' '}
-                  {(entry.data as Job).organization}
-                </h3>
-                <p className="text-xs text-gray-700">
-                  {(entry.data as Job).startDate} -{' '}
-                  {(entry.data as Job).endDate || 'Present'} |{' '}
-                  {(entry.data as Job).location}
-                </p>
-                <p className="text-gray-700">
-                  {(entry.data as Job).description}
-                </p>
-                {entry.data.url && (
-                  <a
-                    href={(entry.data as Job).url}
-                    className="text-primary-accent underline text-xs"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View Project or Institution
-                  </a>
-                )}
+                <div
+                  style={{
+                    position: 'sticky',
+                    top: '10px',
+                  }}
+                >
+                  <h3 className="font-semibold text-gray-900 text-sm">
+                    {(entry.data as Job).title} at{' '}
+                    {(entry.data as Job).organization}
+                  </h3>
+                  <p className="text-xs text-gray-700">
+                    {(entry.data as Job).startDate} -{' '}
+                    {(entry.data as Job).endDate || 'Present'} |{' '}
+                    {(entry.data as Job).location}
+                  </p>
+                  <p className="text-gray-700">
+                    {(entry.data as Job).description}
+                  </p>
+                  {entry.data.url && (
+                    <a
+                      href={(entry.data as Job).url}
+                      className="text-primary-accent underline text-xs"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View Project or Institution
+                    </a>
+                  )}
+                </div>
               </div>
             );
           })}
@@ -288,28 +314,35 @@ const CvPage = async () => {
                 }}
                 className="p-2 rounded-lg shadow bg-gray-50"
               >
-                <h3 className="font-semibold text-gray-900 text-sm">
-                  {(entry.data as Education).degree} at{' '}
-                  {(entry.data as Education).institution}
-                </h3>
-                <p className="text-xs text-gray-700 my-2">
-                  {(entry.data as Education).startDate} -{' '}
-                  {(entry.data as Education).endDate || 'Present'} |{' '}
-                  {(entry.data as Education).location}
-                </p>
-                <p className="text-gray-700">
-                  {(entry.data as Education).description}
-                </p>
-                {entry.data.url && (
-                  <a
-                    href={(entry.data as Education).url}
-                    className="text-primary-accent underline text-xs"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View Department
-                  </a>
-                )}
+                <div
+                  style={{
+                    position: 'sticky',
+                    top: '10px',
+                  }}
+                >
+                  <h3 className="font-semibold text-gray-900 text-sm">
+                    {(entry.data as Education).degree} at{' '}
+                    {(entry.data as Education).institution}
+                  </h3>
+                  <p className="text-xs text-gray-700 my-2">
+                    {(entry.data as Education).startDate} -{' '}
+                    {(entry.data as Education).endDate || 'Present'} |{' '}
+                    {(entry.data as Education).location}
+                  </p>
+                  <p className="text-gray-700">
+                    {(entry.data as Education).description}
+                  </p>
+                  {entry.data.url && (
+                    <a
+                      href={(entry.data as Education).url}
+                      className="text-primary-accent underline text-xs"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View Department
+                    </a>
+                  )}
+                </div>
               </div>
             );
           })}
