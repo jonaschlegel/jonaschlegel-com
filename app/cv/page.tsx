@@ -236,7 +236,7 @@ const CvPage = async () => {
                   gridColumn: 2,
                   gridRow: `${rowStart} / ${rowEnd}`,
                 }}
-                className="p-2 border rounded-lg shadow bg-white"
+                className="p-2 rounded-lg shadow bg-gray-50"
               >
                 <h3 className="font-semibold text-gray-900 text-sm">
                   {(entry.data as Job).title} at{' '}
@@ -247,7 +247,7 @@ const CvPage = async () => {
                   {(entry.data as Job).endDate || 'Present'} |{' '}
                   {(entry.data as Job).location}
                 </p>
-                <p className="text-gray-500">
+                <p className="text-gray-700">
                   {(entry.data as Job).description}
                 </p>
               </div>
@@ -274,7 +274,7 @@ const CvPage = async () => {
                   gridColumn: 3,
                   gridRow: `${rowStart} / ${rowEnd}`,
                 }}
-                className="p-2 border rounded-lg shadow bg-white"
+                className="p-2 border rounded-lg shadow bg-gray-50"
               >
                 <h3 className="font-semibold text-gray-900 text-sm">
                   {(entry.data as Education).degree} at{' '}
@@ -285,7 +285,7 @@ const CvPage = async () => {
                   {(entry.data as Education).endDate || 'Present'} |{' '}
                   {(entry.data as Education).location}
                 </p>
-                <p className="text-gray-500">
+                <p className="text-gray-700">
                   {(entry.data as Education).description}
                 </p>
               </div>
@@ -311,7 +311,7 @@ const CvPage = async () => {
                   {yearPublications.map((pub, index) => (
                     <div
                       key={`publication-${year}-${index}`}
-                      className="p-2 border rounded-lg shadow bg-white"
+                      className="p-2 border rounded-lg shadow bg-gray-50"
                     >
                       <h3 className="font-semibold text-gray-900 text-sm">
                         {pub.title}
