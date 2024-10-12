@@ -10,6 +10,7 @@ interface Job {
   endDate?: string;
   location: string;
   description: string;
+  url?: string;
 }
 
 interface Education {
@@ -19,6 +20,7 @@ interface Education {
   endDate?: string;
   location: string;
   description: string;
+  url?: string;
 }
 
 interface Publication {
@@ -250,6 +252,16 @@ const CvPage = async () => {
                 <p className="text-gray-700">
                   {(entry.data as Job).description}
                 </p>
+                {entry.data.url && (
+                  <a
+                    href={(entry.data as Job).url}
+                    className="text-primary-accent underline text-xs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Project or Institution
+                  </a>
+                )}
               </div>
             );
           })}
@@ -274,13 +286,13 @@ const CvPage = async () => {
                   gridColumn: 3,
                   gridRow: `${rowStart} / ${rowEnd}`,
                 }}
-                className="p-2 border rounded-lg shadow bg-gray-50"
+                className="p-2 rounded-lg shadow bg-gray-50"
               >
                 <h3 className="font-semibold text-gray-900 text-sm">
                   {(entry.data as Education).degree} at{' '}
                   {(entry.data as Education).institution}
                 </h3>
-                <p className="text-xs text-gray-700">
+                <p className="text-xs text-gray-700 my-2">
                   {(entry.data as Education).startDate} -{' '}
                   {(entry.data as Education).endDate || 'Present'} |{' '}
                   {(entry.data as Education).location}
@@ -288,6 +300,16 @@ const CvPage = async () => {
                 <p className="text-gray-700">
                   {(entry.data as Education).description}
                 </p>
+                {entry.data.url && (
+                  <a
+                    href={(entry.data as Education).url}
+                    className="text-primary-accent underline text-xs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Department
+                  </a>
+                )}
               </div>
             );
           })}
@@ -311,7 +333,7 @@ const CvPage = async () => {
                   {yearPublications.map((pub, index) => (
                     <div
                       key={`publication-${year}-${index}`}
-                      className="p-2 border rounded-lg shadow bg-gray-50"
+                      className="p-2 rounded-lg shadow bg-gray-50"
                     >
                       <h3 className="font-semibold text-gray-900 text-sm">
                         {pub.title}

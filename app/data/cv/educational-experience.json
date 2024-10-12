@@ -5,7 +5,8 @@
     "startDate": "March 2019",
     "endDate": "Present",
     "description": "Doctoral studies focusing on prehistoric and historical archaeological research.",
-    "location": "Vienna, Austria"
+    "location": "Vienna, Austria",
+    "url": "https://uha.univie.ac.at/en/"
   },
   {
     "degree": "M.Sc. in Landscape Archaeology",
@@ -13,7 +14,8 @@
     "startDate": "April 2016",
     "endDate": "June 2018",
     "description": "Master thesis on ancient archaeological sites using modern field archaeology methods.",
-    "location": "Berlin, Germany"
+    "location": "Berlin, Germany",
+    "url": "https://la.htw-berlin.de/"
   },
   {
     "degree": "B.A. in Conservation & Restoration / Field Archaeology",
@@ -21,6 +23,7 @@
     "startDate": "October 2012",
     "endDate": "March 2016",
     "description": "Focus on field archaeology and excavation techniques.",
-    "location": "Berlin, Germany"
+    "location": "Berlin, Germany",
+    "url": "https://krg.htw-berlin.de/studium/studienschwerpunkte/grabungstechnik-feldarchaeologie-gfa/"
   }
 ]

@@ -5,7 +5,9 @@
     "startDate": "January 2024",
     "endDate": "Present",
     "description": "Providing services in scientific communication, including web development (consulting and execution), illustration, knowledge management, database structures (CIDOC CRM), and controlled vocabulary for archaeological data sharing.",
-    "location": "Vienna, Austria"
+    "location": "Vienna, Austria",
+    "director": "Jonas Schlegel",
+    "url": "https://jonaschlegel.com"
   },
   {
     "title": "Researcher",
@@ -13,7 +15,35 @@
     "startDate": "May 2018",
     "endDate": "September 2023",
     "description": "Specialised in ground-penetrating radar (GPR) surveys, magnetic motorised surveying, data interpretation using GIS, and project management across multiple international sites.",
-    "location": "Vienna, Austria"
+    "location": "Vienna, Austria",
+    "director": "Wolfgang Neubauer",
+    "connected project(s)": [
+      {
+        "title": "Project INDIGO",
+        "startDate": "September 2021",
+        "endDate": "August 2023",
+        "location": "Vienna, Austria",
+        "role(s)": [
+          "CIDOC CRM data model",
+          "photogrammetry",
+          "Graffiti definition",
+          "web development",
+          "thesaurus creation"
+        ],
+        "url": "https://projectindigo.eu/"
+      },
+      {
+        "title": "Montlingerberg",
+        "location": "Montlingerberg, Switzerland",
+        "role(s)": ["GPR survey", "magnetic survey", "GIS data interpretation"]
+      },
+      {
+        "title": "Herforst",
+        "location": "Vienna, Austria",
+        "role(s)": ["3D modelling", "GIS data interpretation"]
+      }
+    ],
+    "url": "https://www.lbi-archpro.ac.at/en/"
   },
   {
     "title": "Student Assistant",
