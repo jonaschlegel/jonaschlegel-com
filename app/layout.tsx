@@ -4,6 +4,7 @@ import CalendlyScript from './components/CalendlyScript';
 import CrispScript from './components/CrispScript';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import ScrollToTop from './components/ScrollUpArrow';
 import Tracking from './Tracking';
 
 export const metadata: Metadata = {
@@ -42,6 +43,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <ScrollToTop />
         <Tracking />
         <CalendlyScript />
         <CrispScript />
