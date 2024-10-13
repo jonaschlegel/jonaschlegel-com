@@ -11,7 +11,8 @@
     "url": "https://journals.ap2.pt/index.php/indigo/issue/view/64",
     "type": "Book",
     "publisher": "Urban Creativity",
-    "location": "Lisbon, Portugal"
+    "location": "Lisbon, Portugal",
+    "abstract": "In the year of Hip-Hop's 50th anniversary and the 40th birthday of Wild Style, goINDIGO 2023 managed to bring various disciplines together to discuss the various ways of dissipating and understanding bits of graffiti bytes. The proceedings of this symposium pick up and reiterate where the previous proceedings left off: with the contemporary ways of disseminating old or new graffiti. Afterwards, several papers discuss practical and theoretical ways to unravel graffiti-scapes and develop new insights. In summation, tackling graffiti as sociocultural artefacts demands multidisciplinary frameworks. The editors hope the interconnected graffiti themes covered here and in the goINDIGO 2022 proceedings provide inspiration and an up-to-date overview of various framework components to deal with ancient and contemporary graffiti-scapes."
   },
   {
     "title": "Editorial Introduction",
@@ -27,7 +28,8 @@
     "journal": "2023: disseminate | analyse | understand graffiti-scapes",
     "pages": "6-11",
     "publisher": "Urban Creativity",
-    "location": "Lisbon, Portugal"
+    "location": "Lisbon, Portugal",
+    "abstract": "In the year of Hip-Hop's 50th anniversary and the 40th birthday of Wild Style, goINDIGO 2023 managed to bring various disciplines together to discuss the various ways of dissipating and understanding bits of graffiti bytes. The proceedings of this symposium pick up and reiterate where the previous proceedings left off: with the contemporary ways of disseminating old or new graffiti. Afterwards, several papers discuss practical and theoretical ways to unravel graffiti-scapes and develop new insights. In summation, tackling graffiti as sociocultural artefacts demands multidisciplinary frameworks. The editors hope the interconnected graffiti themes covered here and in the goINDIGO 2022 proceedings provide inspiration and an up-to-date overview of various framework components to deal with ancient and contemporary graffiti-scapes."
   },
   {
     "title": "Getting Hold of the Urban Chameleon",
@@ -38,7 +40,8 @@
     "journal": "2023: disseminate | analyse | understand graffiti-scapes",
     "pages": "48-61",
     "publisher": "Urban Creativity",
-    "location": "Lisbon, Portugal"
+    "location": "Lisbon, Portugal",
+    "abstract": "This paper presents Urban Chameleon, an online platform currently developed within INDIGO, an academic project that aims to inventory, disseminate, and analyse contemporary graffiti along the Donaukanal (Eng. Danube Canal) in Vienna, Austria. Urban Chameleon serves as a digital space to visually and analytically explore these graffiti. The paper provides an in-depth overview of the platform's development process, including data modelling underpinnings and Web development technologies. The text further discusses the platform's potential applications for researchers, heritage professionals, graffitists and the wider public interested in engaging with the vibrant and dynamic graffiti-scape along the Danube Canal. In that way, the article contributes to the ongoing discourse on graffiti as a multi-faceted, modern cultural practice with heritage value."
   },
   {
     "title": "Each Graffito Deserves Its Polygon",
@@ -49,7 +52,8 @@
     "journal": "2023: disseminate | analyse | understand graffiti-scapes",
     "pages": "163-185",
     "publisher": "Urban Creativity",
-    "location": "Lisbon, Portugal"
+    "location": "Lisbon, Portugal",
+    "abstract": "Time has remained one of the hardest-to-grasp properties of nature despite humans talking about time… all the time. However, even academic fields that are indifferent to the exact physical or philosophical characteristics of time must find ways to engage with the temporal dimension of their data. This applies to all of the Digital Humanities and maybe most to archaeology, a discipline focused on examining space- and time-bound anthropogenic activities. Like archaeological sites and landscapes, graffiti-scapes are spatially and temporally stratified. That is why the academic graffiti project INDIGO uses an archaeological lens to document, disseminate and investigate an urban graffiti-scape in space and time. However, since archaeologists still lack effective practical approaches to manage and visualise the temporal data dimension (besides a handful of data modelling standards and tools, both mainly created by geographers), INDIGO is currently developing graffiti-specific approaches to manage, visualise and analyse the uncertain spatio-temporal boundaries characterising these contemporary artefacts. After a general introduction to time and its relevance for archaeology and the study of graffiti, this paper explains why and how INDIGO uses polygons as digital representations for each real-world graffito. These polygons, stored in a human- and machine-readable file format and annotated with detailed temporal data, aim to provide a nuanced documentation of a graffiti-scape's spatio-temporal dimensions."
   },
   {
     "title": "Document | Archive | Disseminate Graffiti-Scapes. Proceedings of the GoINDIGO2022 International Graffiti Symposium",
@@ -64,10 +68,11 @@
     "url": "https://journals.ap2.pt/index.php/indigo/issue/view/48",
     "type": "Book",
     "publisher": "Urban Creativity",
-    "location": "Lisbon, Portugal"
+    "location": "Lisbon, Portugal",
+    "abstract": "goINDIGO 2022 has managed to bring various disciplines together. That is why the editors hope that the contributions in these proceedings can collectively be considered a proper methodological status quo on the inventorying and dissemination of graffiti records. Because most academic efforts focus on the analyses of graffiti, these proceedings also hope to kickstart further discussion and interdisciplinary scholarly action on the (need for) proper documentation and dissemination of graffiti. Critical, maybe even uncomfortable, reflections like those vented in this volume form an essential part of this discourse."
   },
   {
-    "title": "“Different Folks, Different Strokes”: GoINDIGO 2022’s « Creators vs Academics » Discussion Round’",
+    "title": "“Different Folks, Different Strokes”: GoINDIGO 2022's « Creators vs Academics » Discussion Round'",
     "authors": [
       "Samuel Merrill",
       "Geert Verhoeven",
@@ -87,7 +92,20 @@
     "issue": "2022: document | archive | disseminate graffiti-scapes",
     "pages": "25-44",
     "publisher": "Urban Creativity",
-    "location": "Lisbon, Portugal"
+    "location": "Lisbon, Portugal",
+    "abstract": [
+      "During the first discussion round of goINDIGO 2022, which took place on Thursday, 12 May and was called Creators vs Academics, four local graffiti creators were invited to consider a series of (potentially provocative) statements in discussion with symposium participants (joining in-person and online). The statements, compiled by Geert Verhoeven in consultation with Samuel Merrill, were:",
+
+      "Academia CHANGES graffiti",
+      "Graffiti MUST be recorded",
+      "ALL graffiti are archive-worthy",
+      "Decontextualisation MATTERS",
+      "Graffiti NEED categorisation",
+      "Digital media are ESSENTIAL",
+
+      "The four attending graffiti creators agreed to participate following their contact and invitation via Instagram. When introducing themselves, each conveyed their own, often close, relationship to the Donaukanal as well as their different levels of experience and exposure within Vienna’s wider graffiti scene. JANER ONE (active since 2012), for instance, took hope from doing graffiti in “tough times” and identified the Donaukanal as a really big playground—”it does not have many rules, and the few rules it has, you must pick up by yourself”—and a site of graffiti history. MANUEL SKIRL (active since 2006) meanwhile recounted how the openness and inclusiveness of the Donaukanal offered the chance to begin creating and, in time, to develop a personal style in “more artistic” directions. SERT (active since 2009) highlighted moving to Vienna partly to be close to the Donaukanal after growing up in a “pretty small village” in the countryside. SNUF’s (active since 2012) first piece was at the prestigious Donaukanal, the “best art gallery of the city with almost daily changing exhibitions”. Each of the four brought their personal, ‘inside’ perspectives to the discussion of the selected statements that is recorded in the following text. This text is not, however, a verbatim nor sequential account of that discussion. Firstly, although retaining the ‘feel’ of the discussion has been prioritised, the text has been edited for readability, and some superfluous content removed.Secondly, as is often the way with the most exploratory of dialogues, the main topic of conversation shifted quickly and regularly. Thus, although the six statements were originally detailed by Merrill (in his capacity as moderator) following a preamble at the start of the discussion round, in this text these statements (and their more detailed elaborations) have been chronologically redeployed to structure the text in a manner that might better serve the reader. The reordering of the transcription in this way means that in some places the text does not always flow consecutively in the way it did during the discussion. These places are indicated by […] and they do not only represent hops forward, but also hops backward in time.",
+      "Finally, it is essential to know that all authors—of which none was a minor—have read this text and confirmed in writing that they were fine with their statements. This agreement notwithstanding, one must understand that these statements were raised in a lively discussion and must also be understood and treated this way."
+    ]
   },
   {
     "title": "Making a Mark—Towards a Graffiti Thesaurus",
@@ -105,7 +123,8 @@
     "issue": "2022: document | archive | disseminate graffiti-scapes",
     "pages": "203-219",
     "publisher": "Urban Creativity",
-    "location": "Lisbon, Portugal"
+    "location": "Lisbon, Portugal",
+    "abstract": "What does it mean to create graffiti? What exactly is (or are) graffiti? Graffiti and street art differ, right? Almost everyone has an opinion on what constitutes (modern) graffiti. Consequently, the term has taken on the most varied meanings in the conversations of academics, in media coverage, or in daily life. So how can one be sure about the meaning of the term (or any graffiti-related term, for that matter)? This is why glossaries, dictionaries, and other types of lists with definitions exist on websites, at the beginning or end of coffee-table books, and in scientific articles. However, there is currently no generally available, updateable, broadly accepted and easy-to-expand list of graffiti-related terms. Therefore, in order to meet the need for systematisation and consistency required for a more comprehensive study of graffiti, project INDIGO embarked on the journey to create a graffiti thesaurus. Being a finite set of terms (i.e. a controlled vocabulary) with hierarchical relations, this thesaurus will make INDIGO’s graffiti classification explicit and hopes to serve as a reference for the broader (academic) graffiti community."
   },
   {
     "title": "Finding Listeners for Walls That Speak",
@@ -123,7 +142,8 @@
     "issue": "2022: document | archive | disseminate graffiti-scapes",
     "pages": "25-44",
     "publisher": "Urban Creativity",
-    "location": "Lisbon, Portugal"
+    "location": "Lisbon, Portugal",
+    "abstract": "Colourful and quickly changing: graffiti can be considered the chameleon skin of any urban landscape (Curtis, 2005). Two millennia ago, people were already writing their thoughts on the urban surfaces of Greek Aphrodisias in present-day Turkey (Chaniotis, 2011) or Roman Pompeii in Italy (Garrucci, 1856), and this practice has lived on throughout many cultures until this very day (Lovata & Olton, 2015; McDonald, 2013). Because of this long history and the multitude of surfaces on which graffiti have appeared, defining ‘graffiti’ is complicated. A safe but overly general definition could be that graffiti are a multifaceted, ‘self-authorised’ (Blanché, 2015) form of personal mark-making that exploits the public space using a visual intervention. ‘Graffiti’ can thus be an umbrella term for many ancient and contemporary mark-making practices, including engravings, paintings, sprayings, stickers, and other personal expressions attached to public (urban) surfaces in legal or illegal ways. [Note that we use the adjective ’ancient’ instead of the commonly found ‘historic’ since the latter excludes prehistoric paintings and inscriptions from the graffiti definition. For more info on how to define ‘graffiti’, see Schlegel et al. in this volume]."
   },
   {
     "title": "Facing a Chameleon—How Project INDIGO Discovers and Records New Graffiti",
