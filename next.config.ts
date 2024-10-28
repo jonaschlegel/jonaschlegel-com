@@ -7,6 +7,9 @@ const nextConfig: NextConfig = {
   experimental: {
     dynamicIO: true,
     typedRoutes: true,
+    turbo: {
+      loaders: {},
+    },
   },
 
   typescript: {
