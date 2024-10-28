@@ -1,7 +1,7 @@
 /* eslint-disable react/no-array-index-key */
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import React from 'react';
+import { Fragment } from 'react';
 import CvTabs from '../components/CvTabs';
 
 interface Job {
@@ -354,7 +354,7 @@ const CvPage = async () => {
             );
 
             return (
-              <React.Fragment key={`pubs-${year}`}>
+              <Fragment key={`pubs-${year}`}>
                 {/* Publications Column */}
                 <div
                   style={{
@@ -390,7 +390,7 @@ const CvPage = async () => {
                     </div>
                   ))}
                 </div>
-              </React.Fragment>
+              </Fragment>
             );
           })}
         </div>

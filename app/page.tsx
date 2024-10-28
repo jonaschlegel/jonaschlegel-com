@@ -1,4 +1,3 @@
-import React from 'react';
 import Banner from './components/Banner';
 import FeaturedProjects from './components/FeaturedProjects';
 import Hero from './components/Hero';

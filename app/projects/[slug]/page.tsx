@@ -1,7 +1,7 @@
 import type { MDXComponents } from 'mdx/types';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import { JSX } from 'react';
+import type { JSX } from 'react';
 import type { ProjectType } from '../../../types/global';
 import { projectsData } from '../../data/content';
 
