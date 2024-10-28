@@ -1,3 +1,5 @@
+import CurrentYear from '../components/CurrentYear';
+
 const Imprint = () => {
   return (
     <div className="container mx-auto px-4 py-16">
@@ -70,7 +72,9 @@ const Imprint = () => {
       </section>
 
       <div className="mt-16 text-center text-sm text-gray-600">
-        <p>Last Updated: {new Date().getFullYear()}</p>
+        <p>
+          Last Updated: <CurrentYear />
+        </p>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import React from 'react';
 import { footerdata } from '../data/content';
 import ButtonPrimary from './ButtonPrimary';
+import CurrentYear from './CurrentYear';
 import SocialItem from './SocialItem';
 
 const Footer = () => {
@@ -40,7 +40,7 @@ const Footer = () => {
           <Link href="/terms-and-conditions">Terms and Conditions</Link>
         </div>
         <div className="mt-6 flex justify-center text-[10px]">
-          © Jona Schlegel {new Date().getFullYear()}. All rights reserved.
+          © Jona Schlegel <CurrentYear />. All rights reserved.
         </div>
       </div>
     </div>
