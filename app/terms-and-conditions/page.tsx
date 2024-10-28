@@ -1,3 +1,5 @@
+import CurrentYear from '../components/CurrentYear';
+
 const TermsAndConditions = () => {
   return (
     <div className="container mx-auto px-4 py-16">
@@ -86,7 +88,9 @@ const TermsAndConditions = () => {
       </section>
 
       <div className="mt-16 text-center text-sm text-gray-600">
-        <p>Last Updated: {new Date().getFullYear()}</p>
+        <p>
+          Last Updated: <CurrentYear />
+        </p>
       </div>
     </div>
   );
