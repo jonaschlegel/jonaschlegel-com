@@ -1,6 +1,8 @@
+import { connection } from 'next/server';
 import CurrentYear from '../components/CurrentYear';
 
-const Imprint = () => {
+export default async function Imprint() {
+  await connection();
   return (
     <div className="container mx-auto px-4 py-16">
       <h1>Imprint</h1>
@@ -78,6 +80,4 @@ const Imprint = () => {
       </div>
     </div>
   );
-};
-
-export default Imprint;
+}

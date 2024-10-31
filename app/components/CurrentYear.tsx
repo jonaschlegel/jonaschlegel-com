@@ -1,8 +1,3 @@
-'use client';
-
-const CurrentYear = () => {
-  const currentYear = new Date().getFullYear();
-  return currentYear;
-};
-
-export default CurrentYear;
+export default function CurrentYear() {
+  return new Date().getFullYear().toString();
+}

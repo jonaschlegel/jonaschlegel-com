@@ -1,6 +1,8 @@
+import { connection } from 'next/server';
 import CurrentYear from '../components/CurrentYear';
 
-const TermsAndConditions = () => {
+export default async function TermsAndConditions() {
+  await connection();
   return (
     <div className="container mx-auto px-4 py-16">
       <h1>Terms and Conditions</h1>
@@ -94,6 +96,4 @@ const TermsAndConditions = () => {
       </div>
     </div>
   );
-};
-
-export default TermsAndConditions;
+}
