@@ -1,7 +1,7 @@
 'use client';
-import { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 
-export default function CurrentYear() {
+function YearComponent() {
   const [currentYear, setCurrentYear] = useState('');
 
   useEffect(() => {
@@ -9,4 +9,12 @@ export default function CurrentYear() {
   }, []);
 
   return currentYear;
+}
+
+export default function CurrentYear() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <YearComponent />
+    </Suspense>
+  );
 }
