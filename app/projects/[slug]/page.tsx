@@ -6,7 +6,11 @@ import type { ProjectType } from '../../../types/global';
 import { projectsData } from '../../data/content';
 
 interface ProjectPageProps {
-  params: { slug: string };
+  params: Params;
+}
+
+interface Params {
+  slug: string;
 }
 
 export function generateStaticParams(): Array<{ slug: string }> {

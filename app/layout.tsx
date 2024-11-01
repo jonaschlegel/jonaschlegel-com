@@ -7,7 +7,7 @@ import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollUpArrow';
 import Tracking from './Tracking';
 
-export const metadata: Metadata = {
+export const metadata: typeof Metadata = {
   icons: [
     {
       rel: 'apple-touch-icon',
