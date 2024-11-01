@@ -1,8 +1,4 @@
-import { connection } from 'next/server';
-import CurrentYear from '../components/CurrentYear';
-
-export default async function PrivacyPolicy() {
-  await connection();
+export default function PrivacyPolicy() {
   return (
     <div className="container mx-auto px-4 py-16">
       <h1>Privacy Policy</h1>
@@ -99,12 +95,6 @@ export default async function PrivacyPolicy() {
           website after changes indicates your acceptance of the revised policy.
         </p>
       </section>
-
-      <div className="mt-16 text-center text-sm text-gray-600">
-        <p>
-          Last Updated: <CurrentYear />
-        </p>
-      </div>
     </div>
   );
 }

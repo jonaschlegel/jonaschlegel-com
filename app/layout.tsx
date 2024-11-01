@@ -1,5 +1,5 @@
 import './globals.css';
-import type { Metadata } from 'next';
+import Metadata from 'next';
 import CalendlyScript from './components/CalendlyScript';
 import CrispScript from './components/CrispScript';
 import Footer from './components/Footer';

@@ -1,8 +1,4 @@
-import { connection } from 'next/server';
-
-export default async function NotFound() {
-  await connection();
-
+export default function NotFound() {
   return (
     <div className="container mx-auto py-16">
       <h1>Page Not Found</h1>

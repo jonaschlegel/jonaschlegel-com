@@ -6,7 +6,7 @@ import type { ProjectType } from '../../../types/global';
 import { projectsData } from '../../data/content';
 
 interface ProjectPageProps {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 }
 
 export function generateStaticParams(): Array<{ slug: string }> {
@@ -16,9 +16,8 @@ export function generateStaticParams(): Array<{ slug: string }> {
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
-  const resolvedParams = await params;
   const project: ProjectType | undefined = projectsData.projectsList.find(
-    (proj) => proj.slug === resolvedParams.slug,
+    (proj) => proj.slug === params.slug,
   );
 
   if (!project) {
@@ -26,6 +25,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     return null;
   }
 
+  // Load MDX content dynamically
   const MDXContent = (
     (await import(`../../data/projects/${project.slug}.mdx`)) as {
       default: (props: {

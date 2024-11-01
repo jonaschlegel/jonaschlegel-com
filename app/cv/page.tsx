@@ -1,4 +1,3 @@
-/* eslint-disable react/no-array-index-key */
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { Fragment } from 'react';
@@ -363,9 +362,9 @@ const CvPage = async () => {
                   }}
                   className="flex flex-col gap-2"
                 >
-                  {yearPublications.map((pub, index) => (
+                  {yearPublications.map((pub) => (
                     <div
-                      key={`publication-${year}-${index}`}
+                      key={`publication-${pub.id}`}
                       className="p-2 rounded-lg shadow bg-gray-50"
                     >
                       <h3 className="font-semibold text-gray-900 text-sm">

@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "title": "Disseminate | Analyse | Understand Graffiti-Scapes. Proceedings of the GoINDIGO2023 International Graffiti Symposium",
     "authors": [
       "Geert Verhoeven",
@@ -15,6 +16,7 @@
     "abstract": "In the year of Hip-Hop's 50th anniversary and the 40th birthday of Wild Style, goINDIGO 2023 managed to bring various disciplines together to discuss the various ways of dissipating and understanding bits of graffiti bytes. The proceedings of this symposium pick up and reiterate where the previous proceedings left off: with the contemporary ways of disseminating old or new graffiti. Afterwards, several papers discuss practical and theoretical ways to unravel graffiti-scapes and develop new insights. In summation, tackling graffiti as sociocultural artefacts demands multidisciplinary frameworks. The editors hope the interconnected graffiti themes covered here and in the goINDIGO 2022 proceedings provide inspiration and an up-to-date overview of various framework components to deal with ancient and contemporary graffiti-scapes."
   },
   {
+    "id": 2,
     "title": "Editorial Introduction",
     "authors": [
       "Geert Verhoeven",
@@ -32,6 +34,7 @@
     "abstract": "In the year of Hip-Hop's 50th anniversary and the 40th birthday of Wild Style, goINDIGO 2023 managed to bring various disciplines together to discuss the various ways of dissipating and understanding bits of graffiti bytes. The proceedings of this symposium pick up and reiterate where the previous proceedings left off: with the contemporary ways of disseminating old or new graffiti. Afterwards, several papers discuss practical and theoretical ways to unravel graffiti-scapes and develop new insights. In summation, tackling graffiti as sociocultural artefacts demands multidisciplinary frameworks. The editors hope the interconnected graffiti themes covered here and in the goINDIGO 2022 proceedings provide inspiration and an up-to-date overview of various framework components to deal with ancient and contemporary graffiti-scapes."
   },
   {
+    "id": 3,
     "title": "Getting Hold of the Urban Chameleon",
     "authors": ["Jona Schlegel", "Martin Wieser", "Geert Verhoeven"],
     "date": "September 2024",
@@ -44,6 +47,7 @@
     "abstract": "This paper presents Urban Chameleon, an online platform currently developed within INDIGO, an academic project that aims to inventory, disseminate, and analyse contemporary graffiti along the Donaukanal (Eng. Danube Canal) in Vienna, Austria. Urban Chameleon serves as a digital space to visually and analytically explore these graffiti. The paper provides an in-depth overview of the platform's development process, including data modelling underpinnings and Web development technologies. The text further discusses the platform's potential applications for researchers, heritage professionals, graffitists and the wider public interested in engaging with the vibrant and dynamic graffiti-scape along the Danube Canal. In that way, the article contributes to the ongoing discourse on graffiti as a multi-faceted, modern cultural practice with heritage value."
   },
   {
+    "id": 4,
     "title": "Each Graffito Deserves Its Polygon",
     "authors": ["Geert Verhoeven", "Jona Schlegel", "Benjamin Wild"],
     "date": "September 2024",
@@ -56,6 +60,7 @@
     "abstract": "Time has remained one of the hardest-to-grasp properties of nature despite humans talking about time… all the time. However, even academic fields that are indifferent to the exact physical or philosophical characteristics of time must find ways to engage with the temporal dimension of their data. This applies to all of the Digital Humanities and maybe most to archaeology, a discipline focused on examining space- and time-bound anthropogenic activities. Like archaeological sites and landscapes, graffiti-scapes are spatially and temporally stratified. That is why the academic graffiti project INDIGO uses an archaeological lens to document, disseminate and investigate an urban graffiti-scape in space and time. However, since archaeologists still lack effective practical approaches to manage and visualise the temporal data dimension (besides a handful of data modelling standards and tools, both mainly created by geographers), INDIGO is currently developing graffiti-specific approaches to manage, visualise and analyse the uncertain spatio-temporal boundaries characterising these contemporary artefacts. After a general introduction to time and its relevance for archaeology and the study of graffiti, this paper explains why and how INDIGO uses polygons as digital representations for each real-world graffito. These polygons, stored in a human- and machine-readable file format and annotated with detailed temporal data, aim to provide a nuanced documentation of a graffiti-scape's spatio-temporal dimensions."
   },
   {
+    "id": 5,
     "title": "Document | Archive | Disseminate Graffiti-Scapes. Proceedings of the GoINDIGO2022 International Graffiti Symposium",
     "authors": [
       "Geert Verhoeven",
@@ -72,6 +77,7 @@
     "abstract": "goINDIGO 2022 has managed to bring various disciplines together. That is why the editors hope that the contributions in these proceedings can collectively be considered a proper methodological status quo on the inventorying and dissemination of graffiti records. Because most academic efforts focus on the analyses of graffiti, these proceedings also hope to kickstart further discussion and interdisciplinary scholarly action on the (need for) proper documentation and dissemination of graffiti. Critical, maybe even uncomfortable, reflections like those vented in this volume form an essential part of this discourse."
   },
   {
+    "id": 6,
     "title": "“Different Folks, Different Strokes”: GoINDIGO 2022's « Creators vs Academics » Discussion Round'",
     "authors": [
       "Samuel Merrill",
@@ -108,6 +114,7 @@
     ]
   },
   {
+    "id": 7,
     "title": "Making a Mark—Towards a Graffiti Thesaurus",
     "authors": [
       "Jona Schlegel",
@@ -127,6 +134,7 @@
     "abstract": "What does it mean to create graffiti? What exactly is (or are) graffiti? Graffiti and street art differ, right? Almost everyone has an opinion on what constitutes (modern) graffiti. Consequently, the term has taken on the most varied meanings in the conversations of academics, in media coverage, or in daily life. So how can one be sure about the meaning of the term (or any graffiti-related term, for that matter)? This is why glossaries, dictionaries, and other types of lists with definitions exist on websites, at the beginning or end of coffee-table books, and in scientific articles. However, there is currently no generally available, updateable, broadly accepted and easy-to-expand list of graffiti-related terms. Therefore, in order to meet the need for systematisation and consistency required for a more comprehensive study of graffiti, project INDIGO embarked on the journey to create a graffiti thesaurus. Being a finite set of terms (i.e. a controlled vocabulary) with hierarchical relations, this thesaurus will make INDIGO’s graffiti classification explicit and hopes to serve as a reference for the broader (academic) graffiti community."
   },
   {
+    "id": 8,
     "title": "Finding Listeners for Walls That Speak",
     "authors": [
       "Geert Verhoeven",
@@ -146,6 +154,7 @@
     "abstract": "Colourful and quickly changing: graffiti can be considered the chameleon skin of any urban landscape (Curtis, 2005). Two millennia ago, people were already writing their thoughts on the urban surfaces of Greek Aphrodisias in present-day Turkey (Chaniotis, 2011) or Roman Pompeii in Italy (Garrucci, 1856), and this practice has lived on throughout many cultures until this very day (Lovata & Olton, 2015; McDonald, 2013). Because of this long history and the multitude of surfaces on which graffiti have appeared, defining ‘graffiti’ is complicated. A safe but overly general definition could be that graffiti are a multifaceted, ‘self-authorised’ (Blanché, 2015) form of personal mark-making that exploits the public space using a visual intervention. ‘Graffiti’ can thus be an umbrella term for many ancient and contemporary mark-making practices, including engravings, paintings, sprayings, stickers, and other personal expressions attached to public (urban) surfaces in legal or illegal ways. [Note that we use the adjective ’ancient’ instead of the commonly found ‘historic’ since the latter excludes prehistoric paintings and inscriptions from the graffiti definition. For more info on how to define ‘graffiti’, see Schlegel et al. in this volume]."
   },
   {
+    "id": 9,
     "title": "Facing a Chameleon—How Project INDIGO Discovers and Records New Graffiti",
     "authors": [
       "Geert Verhoeven",
@@ -164,6 +173,7 @@
     "location": "Lisbon, Portugal"
   },
   {
+    "id": 10,
     "title": "‘Imagine Being a Racist’: GoINDIGO 2022’s «Ethics & Legality in Graffiti Research» Discussion Round",
     "authors": [
       "Benjamin Wild",
@@ -185,6 +195,7 @@
     "location": "Lisbon, Portugal"
   },
   {
+    "id": 11,
     "title": "Towards a Graffiti Thesaurus in SKOS",
     "authors": [
       "Jona Schlegel",
@@ -199,6 +210,7 @@
     "location": "Vienna, Austria"
   },
   {
+    "id": 12,
     "title": "PROJECT INDIGO – Document, Disseminate & Analyse a Graffiti-Scape",
     "authors": [
       "Geert Verhoeven",
@@ -217,6 +229,7 @@
     "pages": "513-520"
   },
   {
+    "id": 13,
     "title": "GoINDIGO 2022 International Graffiti Symposium: Book of Abstracts",
     "authors": [
       "Geert Verhoeven",
@@ -233,6 +246,7 @@
     "location": "Vienna, Austria"
   },
   {
+    "id": 14,
     "title": "INDIGO - Status-Quo Presentation",
     "authors": [
       "Geert Verhoeven",
@@ -250,6 +264,7 @@
     "location": "Vienna, Austria"
   },
   {
+    "id": 15,
     "title": "Discovering & Recording New Graffiti within Project INDIGO",
     "authors": [
       "Geert Verhoeven",
@@ -264,6 +279,7 @@
     "location": "Vienna, Austria"
   },
   {
+    "id": 16,
     "title": "AUTOGRAF—AUTomated Orthorectification of GRAFfiti Photos",
     "authors": [
       "Benjamin Wild",
@@ -284,6 +300,7 @@
     "pages": "2987-3009"
   },
   {
+    "id": 17,
     "title": "Project INDIGO - Document, Disseminate & Analyse a Graffiti-Scape",
     "authors": [
       "Benjamin Wild",
@@ -308,6 +325,7 @@
     "location": "Mantova, Italy"
   },
   {
+    "id": 18,
     "title": "Prospecting the UNESCO World Heritage Site of Müstair (Switzerland)",
     "authors": [
       "Jona Schlegel",
@@ -329,6 +347,7 @@
     "pages": "2515-2535"
   },
   {
+    "id": 19,
     "title": "CrowdSlide - a Mobile Web Application for Building a Database of Gravitational Mass Movements Using Volunteer Field Reports",
     "authors": ["Jona Schlegel", "Annemarie Grass", "Florian Fuchs"],
     "date": "2020",
@@ -338,6 +357,7 @@
     "pages": "16503"
   },
   {
+    "id": 20,
     "title": "Towards an Automated Analysis of Geophysical Archaeological Prospection Data",
     "authors": [
       "Immo Trinks",
@@ -362,6 +382,7 @@
     "pages": "1-4"
   },
   {
+    "id": 21,
     "title": "Pliska – Integrated Geophysical Prospection of the First Early Medieval Bulgarian Capital",
     "authors": [
       "Roland Filzwieser",
@@ -384,6 +405,7 @@
     "pages": "229-261"
   },
   {
+    "id": 22,
     "title": "Recreating an Ancient Roman Delicacy Market",
     "authors": ["Kelly Gillikin Schoueri", "Jona Schlegel"],
     "date": "October 2018",
@@ -393,6 +415,7 @@
     "location": "San Francisco, USA"
   },
   {
+    "id": 23,
     "title": "Spatial Contextualization of Cultural Heritage - The Cupola of the Torres de Las Damas in the Alhambra",
     "authors": [
       "Arie Kai-Browne",
@@ -410,6 +433,7 @@
     "location": "Vienna, Austria"
   },
   {
+    "id": 24,
     "title": "Entdeckung Und Erkundung Des Antiken Stadtgrundrisses von Seleukeia Sidera, Türkei – Ein Erster Überblick",
     "authors": ["Thomas Schenk", "Jona Schlegel"],
     "date": "April 2018",
@@ -419,6 +443,7 @@
     "location": "Ulm, Germany"
   },
   {
+    "id": 25,
     "title": "Seleukeia Sidera Antik Kenti 2016-2017 Jeofizik Çalışmalarının Sonuçları",
     "authors": [
       "Thomas Schenk",
@@ -435,6 +460,7 @@
     "location": "Çanakkale, Turkey"
   },
   {
+    "id": 26,
     "title": "The Challenges of Preservation: Digitizing Graffiti in the Urban Landscape",
     "authors": [
       "Massimiliano Carloni",
@@ -450,6 +476,7 @@
     "location": "Siena, Italy"
   },
   {
+    "id": 27,
     "title": "goINDIGO 2023 International Graffiti Symposium: Disseminate | Analyse | Understand Graffiti-Scapes. Book of Abstracts",
     "authors": [
       "Geert J. Verhoeven",
@@ -494,6 +521,7 @@
     "pages": "1-50"
   },
   {
+    "id": 28,
     "title": "INDIGO and the Graffito: Navigating Definitions and Digital Representations",
     "authors": ["Jona Schlegel", "Massimiliano Carloni", "Geert J. Verhoeven"],
     "date": "December 2023",
@@ -503,6 +531,7 @@
     "location": "Karlsruhe, Germany"
   },
   {
+    "id": 29,
     "title": "Catching the Urban Chameleon",
     "authors": ["Jona Schlegel", "Martin Wieser", "Geert J. Verhoeven"],
     "date": "June 2023",
@@ -512,6 +541,7 @@
     "location": "Vienna, Austria"
   },
   {
+    "id": 30,
     "title": "One Polygon at a Time – Trying to Manage a Graffiti-Scape's Spatio-Temporality",
     "authors": ["Geert J. Verhoeven", "Jona Schlegel"],
     "date": "June 2023",
@@ -521,6 +551,7 @@
     "location": "Vienna, Austria"
   },
   {
+    "id": 31,
     "title": "Towards a Graffiti Thesaurus in SKOS",
     "authors": [
       "Jona Schlegel",
@@ -535,6 +566,7 @@
     "location": "Vienna, Austria"
   },
   {
+    "id": 32,
     "title": "Discovering & Recording New Graffiti within Project INDIGO",
     "authors": [
       "Geert J. Verhoeven",
@@ -549,6 +581,7 @@
     "location": "Vienna, Austria"
   },
   {
+    "id": 33,
     "title": "Dem Donaukanal-Chamäleon auf der Spur",
     "authors": ["Benjamin Wild", "Jona Schlegel"],
     "date": "March 2023",
@@ -558,6 +591,7 @@
     "location": "Vienna, Austria"
   },
   {
+    "id": 34,
     "title": "Grabungstechnik Praktische Archäologie",
     "authors": ["Jona Schlegel"],
     "date": "June 2014",
@@ -568,6 +602,7 @@
     "platform": "YouTube"
   },
   {
+    "id": 35,
     "title": "Auswertung von berührungslosen Prospektionsmethoden am Beispiel der antiken Fundstätte Kale Tepe bei Gönen, Isparta",
     "authors": ["Jona Schlegel"],
     "date": "December 2015",
@@ -577,6 +612,7 @@
     "location": "Berlin, Germany"
   },
   {
+    "id": 36,
     "title": "Seleukeia Sidera",
     "authors": ["Jona Schlegel"],
     "date": "March 2018",
@@ -586,6 +622,7 @@
     "location": "Berlin, Germany"
   },
   {
+    "id": 37,
     "title": "Documenting Graffiti Past and Present: Disparate Traditions, Shared Objectives",
     "authors": [
       "Ondrej Škrabal (Chair)",
@@ -602,6 +639,7 @@
     "location": "Hamburg, Germany"
   },
   {
+    "id": 38,
     "title": "Eggendorf am Walde (NÖ) – Die Kreisgrabenanlage und das Fortleben einer bandkeramischen Großsiedlung im Mittelneolithikum",
     "authors": [
       "David Ruß",
@@ -620,6 +658,7 @@
     "location": "Online "
   },
   {
+    "id": 39,
     "title": "Eggendorf Am Walde and Niederleis − Two Newly Discovered Middle Neolithic Kreisgrabenanlagen in Lower Austria",
     "authors": [
       "David Ruß",
@@ -641,6 +680,7 @@
     "type": "Conference paper"
   },
   {
+    "id": 40,
     "title": "Geophysical Archaeological Prospection at the Inner City of Pliska in 2018",
     "authors": [
       "Roland Filzwieser",
@@ -659,6 +699,7 @@
     "location": "Byala, Bulgaria"
   },
   {
+    "id": 41,
     "title": "Non-Invasive Archaeological Prospection of Pliska",
     "authors": [
       "Wolfgang Neubauer",
@@ -673,6 +714,7 @@
     "location": "Shumen, Bulgaria"
   },
   {
+    "id": 42,
     "title": "Speicher-Herforst - a Roman Industrial Landscape in the Hinterland of the Augusta Treverorum (Trier, UNESCO World Heritage)",
     "authors": [
       "Jona Schlegel",

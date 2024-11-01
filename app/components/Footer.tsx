@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { footerdata } from '../data/content';
 import ButtonPrimary from './ButtonPrimary';
-import CurrentYear from './CurrentYear';
 import SocialItem from './SocialItem';
 
 const Footer = () => {
@@ -19,20 +18,16 @@ const Footer = () => {
       </div>
       <div className="space-y-3">
         <div className="flex justify-center gap-6">
-          {footerdata.navLinks.map((navItem) => {
-            return (
-              <Link key={`nav-${navItem.name}`} href={navItem.href}>
-                {navItem.name}
-              </Link>
-            );
-          })}
+          {footerdata.navLinks.map((navItem) => (
+            <Link key={`nav-${navItem.name}`} href={navItem.href}>
+              {navItem.name}
+            </Link>
+          ))}
         </div>
         <div className="flex justify-center gap-4">
-          {footerdata.socialLinks.map((socialItem) => {
-            return (
-              <SocialItem key={`social-${socialItem.href}`} {...socialItem} />
-            );
-          })}
+          {footerdata.socialLinks.map((socialItem) => (
+            <SocialItem key={`social-${socialItem.href}`} {...socialItem} />
+          ))}
         </div>
         <div className="mt-6 flex flex-col justify-center gap-1 text-center text-sm md:flex-row md:gap-4">
           <Link href="/imprint">Imprint</Link>
@@ -40,7 +35,7 @@ const Footer = () => {
           <Link href="/terms-and-conditions">Terms and Conditions</Link>
         </div>
         <div className="mt-6 flex justify-center text-[10px]">
-          © Jona Schlegel <CurrentYear />. All rights reserved.
+          © Jona Schlegel 2024. All rights reserved.
         </div>
       </div>
     </div>
