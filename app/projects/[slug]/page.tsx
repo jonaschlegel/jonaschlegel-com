@@ -6,7 +6,7 @@ import type { ProjectType } from '../../../types/global';
 import { projectsData } from '../../data/content';
 
 interface ProjectPageProps {
-  params: Params;
+  params: Promise<Params>;
 }
 
 interface Params {
@@ -20,8 +20,9 @@ export function generateStaticParams(): Array<{ slug: string }> {
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
+  const slug = (await params).slug;
   const project: ProjectType | undefined = projectsData.projectsList.find(
-    (proj) => proj.slug === params.slug,
+    (proj) => proj.slug === slug,
   );
 
   if (!project) {

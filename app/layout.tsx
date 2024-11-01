@@ -1,36 +1,10 @@
 import './globals.css';
-import Metadata from 'next';
 import CalendlyScript from './components/CalendlyScript';
 import CrispScript from './components/CrispScript';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollUpArrow';
 import Tracking from './Tracking';
-
-export const metadata: typeof Metadata = {
-  icons: [
-    {
-      rel: 'apple-touch-icon',
-      url: '/apple-touch-icon.png',
-    },
-    {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '32x32',
-      url: '/favicon-32x32.png',
-    },
-    {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '16x16',
-      url: '/favicon-16x16.png',
-    },
-    {
-      rel: 'icon',
-      url: '/favicon.ico',
-    },
-  ],
-};
 
 export default function RootLayout({
   children,
@@ -39,6 +13,23 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="bg-neutral-800 text-white">
+      <head>
+        {/* Add your icons here */}
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body>
         <Navbar />
         {children}

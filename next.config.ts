@@ -1,7 +1,6 @@
 import createMDX from '@next/mdx';
-import NextConfig from 'next';
 
-const nextConfig: typeof NextConfig = {
+const nextConfig = {
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
 
   experimental: {
