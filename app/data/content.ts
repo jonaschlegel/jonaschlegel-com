@@ -6,6 +6,7 @@ import {
   BsTwitter,
 } from 'react-icons/bs';
 import profile01 from '../images/clients/profile01.jpg';
+import profile02 from '../images/clients/profile02.jpg';
 import heroBg from '../images/herobg.jpg';
 import jona from '../images/jona.webp';
 import overview from '../images/overview.webp';
@@ -177,6 +178,14 @@ export const testimonialsData = [
     image: profile01,
     comment:
       'I am so glad that I was able to work with Jona. Her art is incredible and I know this is only the beginning of big things for her. And thanks for the extras! I know how much work and creativity Jona is put into this, so thanks.',
+  },
+
+  {
+    name: 'Tuna Çapar',
+    role: 'Research Associate',
+    image: profile02,
+    comment:
+      'After viewing Jona’s portfolio, I requested a logo design, and it was the best decision. She worked diligently, brought fresh ideas, and delivered an outstanding final concept. I’m very happy with my brand identity and grateful for her talent and dedication.',
   },
 ];
 
