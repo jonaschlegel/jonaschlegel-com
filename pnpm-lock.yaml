@@ -41,8 +41,8 @@ importers:
         specifier: ^2.0.13
         version: 2.0.13
       '@types/node':
-        specifier: ^20.17.1
-        version: 20.17.5
+        specifier: ^22.0.0
+        version: 22.9.0
       '@types/react':
         specifier: npm:types-react@19.0.0-rc.1
         version: types-react@19.0.0-rc.1
@@ -54,7 +54,7 @@ importers:
         version: 9.13.0(jiti@1.21.6)
       eslint-config-upleveled:
         specifier: ^8.11.2
-        version: 8.11.3(@babel/core@7.26.0)(@types/eslint@9.6.1)(@types/node@20.17.5)(eslint@9.13.0(jiti@1.21.6))(globals@15.11.0)(types-react-dom@19.0.0)(types-react@19.0.0-rc.1)(typescript@5.6.3)
+        version: 8.11.3(@babel/core@7.26.0)(@types/eslint@9.6.1)(@types/node@22.9.0)(eslint@9.13.0(jiti@1.21.6))(globals@15.11.0)(types-react-dom@19.0.0)(types-react@19.0.0-rc.1)(typescript@5.6.3)
       postcss:
         specifier: ^8.4.47
         version: 8.4.47
@@ -576,8 +576,8 @@ packages:
   '@types/ms@0.7.34':
     resolution: {integrity: sha512-nG96G3Wp6acyAgJqGasjODb+acrI7KltPiRxzHPXnP3NgI28bpQDRv53olbqGXbfcgF5aiiHmO3xpwEpS5Ld9g==}
 
-  '@types/node@20.17.5':
-    resolution: {integrity: sha512-n8FYY/pRxu496441gIcAQFZPKXbhsd6VZygcq+PTSZ75eMh/Ke0hCAROdUa21qiFqKNsPPYic46yXDO1JGiPBQ==}
+  '@types/node@22.9.0':
+    resolution: {integrity: sha512-vuyHg81vvWA1Z1ELfvLko2c8f34gyA0zaic0+Rllc5lbCnbSyuvb2Oxpm6TAUAC/2xZN3QGqxBNggD1nNR2AfQ==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -3519,7 +3519,7 @@ snapshots:
   '@types/ms@0.7.34':
     optional: true
 
-  '@types/node@20.17.5':
+  '@types/node@22.9.0':
     dependencies:
       undici-types: 6.19.8
 
@@ -4263,13 +4263,13 @@ snapshots:
       eslint: 9.13.0(jiti@1.21.6)
       find-up-simple: 1.0.0
 
-  eslint-config-upleveled@8.11.3(@babel/core@7.26.0)(@types/eslint@9.6.1)(@types/node@20.17.5)(eslint@9.13.0(jiti@1.21.6))(globals@15.11.0)(types-react-dom@19.0.0)(types-react@19.0.0-rc.1)(typescript@5.6.3):
+  eslint-config-upleveled@8.11.3(@babel/core@7.26.0)(@types/eslint@9.6.1)(@types/node@22.9.0)(eslint@9.13.0(jiti@1.21.6))(globals@15.11.0)(types-react-dom@19.0.0)(types-react@19.0.0-rc.1)(typescript@5.6.3):
     dependencies:
       '@babel/eslint-parser': 7.25.9(@babel/core@7.26.0)(eslint@9.13.0(jiti@1.21.6))
       '@eslint/compat': 1.2.2(eslint@9.13.0(jiti@1.21.6))
       '@next/eslint-plugin-next': 15.0.2
       '@types/eslint': 9.6.1
-      '@types/node': 20.17.5
+      '@types/node': 22.9.0
       '@types/react': types-react@19.0.0-rc.1
       '@types/react-dom': types-react-dom@19.0.0
       '@typescript-eslint/eslint-plugin': 8.12.2(@typescript-eslint/parser@8.12.2(eslint@9.13.0(jiti@1.21.6))(typescript@5.6.3))(eslint@9.13.0(jiti@1.21.6))(typescript@5.6.3)
@@ -5041,7 +5041,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 20.17.5
+      '@types/node': 22.9.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
     optional: true
