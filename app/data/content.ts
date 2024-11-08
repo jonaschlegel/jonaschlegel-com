@@ -13,7 +13,7 @@ import overview from '../images/overview.webp';
 import adventuressCover from '../images/projects/adventuress-cover.jpg';
 import archaeoZine from '../images/projects/archaeo-zine.jpg';
 import exploringArchaeologicalDisciplines from '../images/projects/exploring-archaeological-disciplines.jpg';
-import romanBurial from '../images/projects/roman-burial.jpg';
+// import romanBurial from '../images/projects/roman-burial.jpg';
 import trowelJournalBlog from '../images/projects/trowel-journal-blog.jpg';
 import urbanChameleon from '../images/projects/urban-chameleon.jpg';
 import illustrating from '../images/services/archaeological-illustrating.jpg';
@@ -94,15 +94,15 @@ export const projectsData = {
       ],
       isFeatured: true,
     },
-    {
-      id: '5',
-      name: 'Roman Burial',
-      slug: 'roman-burial',
-      image: romanBurial,
-      description: 'An archaeological illustration of a Roman burial.',
-      services: ['scientific & archaeological illustration'],
-      isFeatured: true,
-    },
+    // {
+    //   id: '5',
+    //   name: 'Roman Burial',
+    //   slug: 'roman-burial',
+    //   image: romanBurial,
+    //   description: 'An archaeological illustration of a Roman burial.',
+    //   services: ['scientific & archaeological illustration'],
+    //   isFeatured: true,
+    // },
     {
       id: '6',
       name: 'Adventuress Journal Cover',
