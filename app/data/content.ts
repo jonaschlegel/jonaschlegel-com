@@ -27,8 +27,8 @@ export const navLinks = [
 ] as const;
 
 export const heroSectionData = {
-  heading: 'Want better visual science communication?',
-  text: 'I transform data into narratives, web presences and create illustrative content.',
+  heading: 'Need visuals that make your research stand out?',
+  text: 'I transform data into narratives, web presences and create illustrative content – especially for science.',
   statsData: [
     { name: '(Scientific) Articles Written', number: '15' },
     { name: 'Illustrations', number: '253' },
