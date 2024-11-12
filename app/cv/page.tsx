@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { Fragment } from 'react';
 import CvTabs from '../components/CvTabs';
+import RootLayout from '../layout';
 
 interface Job {
   id: string;
@@ -36,6 +37,13 @@ interface Publication {
 }
 
 const CvPage = async () => {
+  const cvMetadata = {
+    title: "Jona Schlegel's CV – Archaeology & Science Communication",
+    description:
+      "Explore Jona Schlegel's detailed CV, showcasing a journey in archaeological research, science communication, and education.",
+    image: 'https://jonaschlegel.com/images/social-image-cv.jpg',
+  };
+
   const workPath = path.join(process.cwd(), 'app/data/cv/work-experience.json');
   const educationPath = path.join(
     process.cwd(),
@@ -188,213 +196,216 @@ const CvPage = async () => {
   });
 
   return (
-    <div className="min-h-screen py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="mb-8">Curriculum Vitae</h1>
+    <RootLayout metadata={cvMetadata}>
+      <div className="min-h-screen py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="mb-8">Curriculum Vitae</h1>
 
-        {/* Mobile Tabs */}
-        <div className="block md:hidden">
-          <CvTabs
-            workEntries={workEntries.map((entry) => ({
-              id: entry.id,
-              data: entry.data as Job,
-            }))}
-            educationEntries={educationEntries.map((entry) => ({
-              id: entry.id,
-              data: entry.data as Education,
-            }))}
-            publications={publications}
-          />
-        </div>
+          {/* Mobile Tabs */}
+          <div className="block md:hidden">
+            <CvTabs
+              workEntries={workEntries.map((entry) => ({
+                id: entry.id,
+                data: entry.data as Job,
+              }))}
+              educationEntries={educationEntries.map((entry) => ({
+                id: entry.id,
+                data: entry.data as Education,
+              }))}
+              publications={publications}
+            />
+          </div>
 
-        {/* Desktop version with grid */}
-        <div
-          className="hidden md:grid gap-1"
-          style={{
-            gridTemplateColumns: '100px 1fr 1fr 1fr',
-            gridTemplateRows: `repeat(${currentRow - 1}, auto)`,
-          }}
-        >
-          {/* Column headers */}
-          <div className="font-bold text-xl" />
-          <h2 className="font-bold text-xl">Work</h2>
-          <h2 className="font-bold text-xl">Education</h2>
-          <h2 className="font-bold text-xl">Publications</h2>
+          {/* Desktop version with grid */}
+          <div
+            className="hidden md:grid gap-1"
+            style={{
+              gridTemplateColumns: '100px 1fr 1fr 1fr',
+              gridTemplateRows: `repeat(${currentRow - 1}, auto)`,
+            }}
+          >
+            {/* Column headers */}
+            <div className="font-bold text-xl" />
+            <h2 className="font-bold text-xl">Work</h2>
+            <h2 className="font-bold text-xl">Education</h2>
+            <h2 className="font-bold text-xl">Publications</h2>
 
-          {/* Render year labels */}
-          {allYears.map((year) => (
-            <div
-              key={`year-${year}`}
-              className="border-t py-2 text-white font-bold"
-              style={{
-                gridColumn: 1,
-                gridRow: `${yearRowStart[year]} / span ${totalLayersPerYear[year]}`,
-              }}
-            >
-              {year}
-            </div>
-          ))}
-
-          {/* Render work entries */}
-          {sortedWorkEntries.map((entry) => {
-            const startYear = entry.startDate.getFullYear();
-            const endYear = entry.endDate.getFullYear();
-            const rowStart =
-              (yearRowStart[startYear] ?? 0) +
-              (workTimeline[startYear]?.find((e) => e.entry.id === entry.id)
-                ?.layer ?? 0) +
-              1;
-            const rowEnd =
-              (yearRowStart[endYear] ?? 0) +
-              (workTimeline[endYear]?.find((e) => e.entry.id === entry.id)
-                ?.layer ?? 0);
-
-            return (
+            {/* Render year labels */}
+            {allYears.map((year) => (
               <div
-                key={`work-${entry.id}`}
+                key={`year-${year}`}
+                className="border-t py-2 text-white font-bold"
                 style={{
-                  gridColumn: 2,
-                  gridRow: `${rowStart} / ${rowEnd}`,
+                  gridColumn: 1,
+                  gridRow: `${yearRowStart[year]} / span ${totalLayersPerYear[year]}`,
                 }}
-                className="p-2 rounded-lg shadow bg-gray-50"
               >
-                <div
-                  style={{
-                    position: 'sticky',
-                    top: '10px',
-                  }}
-                >
-                  <h3 className="font-semibold text-gray-900 text-sm">
-                    {(entry.data as Job).title} at{' '}
-                    {(entry.data as Job).organization}
-                  </h3>
-                  <p className="text-xs text-gray-700">
-                    {(entry.data as Job).startDate} -{' '}
-                    {(entry.data as Job).endDate || 'Present'} |{' '}
-                    {(entry.data as Job).location}
-                  </p>
-                  <p className="text-gray-700">
-                    {(entry.data as Job).description}
-                  </p>
-                  {entry.data.url && (
-                    <a
-                      href={(entry.data as Job).url}
-                      className="text-primary-accent underline text-xs"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      View Project or Institution
-                    </a>
-                  )}
-                </div>
+                {year}
               </div>
-            );
-          })}
+            ))}
 
-          {/* Render education entries */}
-          {sortedEducationEntries.map((entry) => {
-            const startYear = entry.startDate.getFullYear();
-            const endYear = entry.endDate.getFullYear();
-            const startLayer =
-              educationTimeline[startYear]?.find((e) => e.entry.id === entry.id)
-                ?.layer ?? 0;
-            const rowStart = (yearRowStart[startYear] ?? 0) + startLayer + 1;
-            const endLayer =
-              educationTimeline[endYear]?.find((e) => e.entry.id === entry.id)
-                ?.layer ?? 0;
-            const rowEnd = (yearRowStart[endYear] ?? 0) + endLayer;
+            {/* Render work entries */}
+            {sortedWorkEntries.map((entry) => {
+              const startYear = entry.startDate.getFullYear();
+              const endYear = entry.endDate.getFullYear();
+              const rowStart =
+                (yearRowStart[startYear] ?? 0) +
+                (workTimeline[startYear]?.find((e) => e.entry.id === entry.id)
+                  ?.layer ?? 0) +
+                1;
+              const rowEnd =
+                (yearRowStart[endYear] ?? 0) +
+                (workTimeline[endYear]?.find((e) => e.entry.id === entry.id)
+                  ?.layer ?? 0);
 
-            return (
-              <div
-                key={`education-${entry.id}`}
-                style={{
-                  gridColumn: 3,
-                  gridRow: `${rowStart} / ${rowEnd}`,
-                }}
-                className="p-2 rounded-lg shadow bg-gray-50"
-              >
+              return (
                 <div
+                  key={`work-${entry.id}`}
                   style={{
-                    position: 'sticky',
-                    top: '10px',
+                    gridColumn: 2,
+                    gridRow: `${rowStart} / ${rowEnd}`,
                   }}
+                  className="p-2 rounded-lg shadow bg-gray-50"
                 >
-                  <h3 className="font-semibold text-gray-900 text-sm">
-                    {(entry.data as Education).degree} at{' '}
-                    {(entry.data as Education).institution}
-                  </h3>
-                  <p className="text-xs text-gray-700 my-2">
-                    {(entry.data as Education).startDate} -{' '}
-                    {(entry.data as Education).endDate || 'Present'} |{' '}
-                    {(entry.data as Education).location}
-                  </p>
-                  <p className="text-gray-700">
-                    {(entry.data as Education).description}
-                  </p>
-                  {entry.data.url && (
-                    <a
-                      href={(entry.data as Education).url}
-                      className="text-primary-accent underline text-xs"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      View Department
-                    </a>
-                  )}
+                  <div
+                    style={{
+                      position: 'sticky',
+                      top: '10px',
+                    }}
+                  >
+                    <h3 className="font-semibold text-gray-900 text-sm">
+                      {(entry.data as Job).title} at{' '}
+                      {(entry.data as Job).organization}
+                    </h3>
+                    <p className="text-xs text-gray-700">
+                      {(entry.data as Job).startDate} -{' '}
+                      {(entry.data as Job).endDate || 'Present'} |{' '}
+                      {(entry.data as Job).location}
+                    </p>
+                    <p className="text-gray-700">
+                      {(entry.data as Job).description}
+                    </p>
+                    {entry.data.url && (
+                      <a
+                        href={(entry.data as Job).url}
+                        className="text-primary-accent underline text-xs"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        View Project or Institution
+                      </a>
+                    )}
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
 
-          {/* Render publications */}
-          {allYears.map((year) => {
-            const yearPublications = publications.filter(
-              (pub) => parseDate(pub.date).getFullYear() === year,
-            );
+            {/* Render education entries */}
+            {sortedEducationEntries.map((entry) => {
+              const startYear = entry.startDate.getFullYear();
+              const endYear = entry.endDate.getFullYear();
+              const startLayer =
+                educationTimeline[startYear]?.find(
+                  (e) => e.entry.id === entry.id,
+                )?.layer ?? 0;
+              const rowStart = (yearRowStart[startYear] ?? 0) + startLayer + 1;
+              const endLayer =
+                educationTimeline[endYear]?.find((e) => e.entry.id === entry.id)
+                  ?.layer ?? 0;
+              const rowEnd = (yearRowStart[endYear] ?? 0) + endLayer;
 
-            return (
-              <Fragment key={`pubs-${year}`}>
-                {/* Publications Column */}
+              return (
                 <div
+                  key={`education-${entry.id}`}
                   style={{
-                    gridColumn: 4,
-                    gridRow: `${yearRowStart[year]} / span ${totalLayersPerYear[year]}`,
+                    gridColumn: 3,
+                    gridRow: `${rowStart} / ${rowEnd}`,
                   }}
-                  className="flex flex-col gap-2"
+                  className="p-2 rounded-lg shadow bg-gray-50"
                 >
-                  {yearPublications.map((pub) => (
-                    <div
-                      key={`publication-${pub.id}`}
-                      className="p-2 rounded-lg shadow bg-gray-50"
-                    >
-                      <h3 className="font-semibold text-gray-900 text-sm">
-                        {pub.title}
-                      </h3>
-                      <div className="text-xs uppercase my-2 text-gray-700">
-                        {pub.type}
-                      </div>
-                      <div className="text-xs text-gray-700">
-                        {pub.date} | {pub.authors.join(', ')}
-                      </div>
-                      {pub.url && (
-                        <a
-                          href={pub.url}
-                          className="text-primary-accent underline text-xs"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          View Publication
-                        </a>
-                      )}
-                    </div>
-                  ))}
+                  <div
+                    style={{
+                      position: 'sticky',
+                      top: '10px',
+                    }}
+                  >
+                    <h3 className="font-semibold text-gray-900 text-sm">
+                      {(entry.data as Education).degree} at{' '}
+                      {(entry.data as Education).institution}
+                    </h3>
+                    <p className="text-xs text-gray-700 my-2">
+                      {(entry.data as Education).startDate} -{' '}
+                      {(entry.data as Education).endDate || 'Present'} |{' '}
+                      {(entry.data as Education).location}
+                    </p>
+                    <p className="text-gray-700">
+                      {(entry.data as Education).description}
+                    </p>
+                    {entry.data.url && (
+                      <a
+                        href={(entry.data as Education).url}
+                        className="text-primary-accent underline text-xs"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        View Department
+                      </a>
+                    )}
+                  </div>
                 </div>
-              </Fragment>
-            );
-          })}
+              );
+            })}
+
+            {/* Render publications */}
+            {allYears.map((year) => {
+              const yearPublications = publications.filter(
+                (pub) => parseDate(pub.date).getFullYear() === year,
+              );
+
+              return (
+                <Fragment key={`pubs-${year}`}>
+                  {/* Publications Column */}
+                  <div
+                    style={{
+                      gridColumn: 4,
+                      gridRow: `${yearRowStart[year]} / span ${totalLayersPerYear[year]}`,
+                    }}
+                    className="flex flex-col gap-2"
+                  >
+                    {yearPublications.map((pub) => (
+                      <div
+                        key={`publication-${pub.id}`}
+                        className="p-2 rounded-lg shadow bg-gray-50"
+                      >
+                        <h3 className="font-semibold text-gray-900 text-sm">
+                          {pub.title}
+                        </h3>
+                        <div className="text-xs uppercase my-2 text-gray-700">
+                          {pub.type}
+                        </div>
+                        <div className="text-xs text-gray-700">
+                          {pub.date} | {pub.authors.join(', ')}
+                        </div>
+                        {pub.url && (
+                          <a
+                            href={pub.url}
+                            className="text-primary-accent underline text-xs"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            View Publication
+                          </a>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </Fragment>
+              );
+            })}
+          </div>
         </div>
       </div>
-    </div>
+    </RootLayout>
   );
 };
 
