@@ -14,8 +14,8 @@
     "@mdx-js/react": "^3.1.0",
     "@next/mdx": "15.0.3",
     "next": "15.0.3",
-    "react": "19.0.0-rc-66855b96-20241106",
-    "react-dom": "19.0.0-rc-66855b96-20241106",
+    "react": "19.0.0-rc-fb9a90fa48-20240614",
+    "react-dom": "19.0.0-rc-fb9a90fa48-20240614",
     "react-icons": "^5.3.0"
   },
   "devDependencies": {
@@ -33,7 +33,7 @@
     "tailwindcss": "^3.4.14",
     "typescript": "^5.6.3"
   },
-  "packageManager": "pnpm@9.13.0+sha512.beb9e2a803db336c10c9af682b58ad7181ca0fbd0d4119f2b33d5f2582e96d6c0d93c85b23869295b765170fbdaa92890c0da6ada457415039769edf3c959efe",
+  "packageManager": "pnpm@9.14.2+sha512.6e2baf77d06b9362294152c851c4f278ede37ab1eba3a55fda317a4a17b209f4dbb973fb250a77abc463a341fcb1f17f17cfa24091c4eb319cda0d9b84278387",
   "pnpm": {
     "overrides": {
       "@types/react": "npm:types-react@19.0.0-rc.1",
