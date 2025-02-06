@@ -33,7 +33,7 @@
     "tailwindcss": "^3.4.14",
     "typescript": "^5.6.3"
   },
-  "packageManager": "pnpm@9.13.0+sha512.beb9e2a803db336c10c9af682b58ad7181ca0fbd0d4119f2b33d5f2582e96d6c0d93c85b23869295b765170fbdaa92890c0da6ada457415039769edf3c959efe",
+  "packageManager": "pnpm@10.2.1+sha512.398035c7bd696d0ba0b10a688ed558285329d27ea994804a52bad9167d8e3a72bcb993f9699585d3ca25779ac64949ef422757a6c31102c12ab932e5cbe5cc92",
   "pnpm": {
     "overrides": {
       "@types/react": "npm:types-react@19.0.0-rc.1",
