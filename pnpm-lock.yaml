@@ -41,8 +41,8 @@ importers:
         specifier: ^2.0.13
         version: 2.0.13
       '@types/node':
-        specifier: ^22.0.0
-        version: 22.9.0
+        specifier: ^24.0.0
+        version: 24.1.0
       '@types/react':
         specifier: npm:types-react@19.0.0-rc.1
         version: types-react@19.0.0-rc.1
@@ -54,7 +54,7 @@ importers:
         version: 9.14.0(jiti@1.21.6)
       eslint-config-upleveled:
         specifier: ^9.0.0
-        version: 9.0.0(@babel/core@7.26.0)(@types/node@22.9.0)(eslint@9.14.0(jiti@1.21.6))(globals@15.12.0)(types-react-dom@19.0.0)(types-react@19.0.0-rc.1)(typescript@5.6.3)
+        version: 9.0.0(@babel/core@7.26.0)(@types/node@24.1.0)(eslint@9.14.0(jiti@1.21.6))(globals@15.12.0)(types-react-dom@19.0.0)(types-react@19.0.0-rc.1)(typescript@5.6.3)
       postcss:
         specifier: ^8.4.47
         version: 8.4.49
@@ -1046,8 +1046,8 @@ packages:
   '@types/ms@0.7.34':
     resolution: {integrity: sha512-nG96G3Wp6acyAgJqGasjODb+acrI7KltPiRxzHPXnP3NgI28bpQDRv53olbqGXbfcgF5aiiHmO3xpwEpS5Ld9g==}
 
-  '@types/node@22.9.0':
-    resolution: {integrity: sha512-vuyHg81vvWA1Z1ELfvLko2c8f34gyA0zaic0+Rllc5lbCnbSyuvb2Oxpm6TAUAC/2xZN3QGqxBNggD1nNR2AfQ==}
+  '@types/node@24.1.0':
+    resolution: {integrity: sha512-ut5FthK5moxFKH2T1CUOC6ctR67rQRvvHdFLCD2Ql6KXmMuCrjsSsRI9UsLCm9M18BMwClv4pn327UvB7eeO1w==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -3343,8 +3343,8 @@ packages:
     resolution: {integrity: sha512-nWJ91DjeOkej/TA8pXQ3myruKpKEYgqvpw9lz4OPHj/NWFNluYrjbz9j01CJ8yKQd2g4jFoOkINCTW2I5LEEyw==}
     engines: {node: '>= 0.4'}
 
-  undici-types@6.19.8:
-    resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
+  undici-types@7.8.0:
+    resolution: {integrity: sha512-9UJ2xGDvQ43tYyVMpuHlsgApydB8ZKfVYTsLDhXkFL/6gfkp+U8xTGdh8pMJv1SpZna0zxG1DwsKZsreLbXBxw==}
 
   unicode-canonical-property-names-ecmascript@2.0.1:
     resolution: {integrity: sha512-dA8WbNeb2a6oQzAQ55YlT5vQAWGV9WXOsi3SskE3bcCdM0P4SDd+24zS/OCacdRq5BkdsRj9q3Pg6YyQoxIGqg==}
@@ -4645,9 +4645,9 @@ snapshots:
   '@types/ms@0.7.34':
     optional: true
 
-  '@types/node@22.9.0':
+  '@types/node@24.1.0':
     dependencies:
-      undici-types: 6.19.8
+      undici-types: 7.8.0
 
   '@types/normalize-package-data@2.4.4': {}
 
@@ -5438,12 +5438,12 @@ snapshots:
       eslint: 9.14.0(jiti@1.21.6)
       find-up-simple: 1.0.0
 
-  eslint-config-upleveled@9.0.0(@babel/core@7.26.0)(@types/node@22.9.0)(eslint@9.14.0(jiti@1.21.6))(globals@15.12.0)(types-react-dom@19.0.0)(types-react@19.0.0-rc.1)(typescript@5.6.3):
+  eslint-config-upleveled@9.0.0(@babel/core@7.26.0)(@types/node@24.1.0)(eslint@9.14.0(jiti@1.21.6))(globals@15.12.0)(types-react-dom@19.0.0)(types-react@19.0.0-rc.1)(typescript@5.6.3):
     dependencies:
       '@babel/eslint-parser': 7.26.5(@babel/core@7.26.0)(eslint@9.14.0(jiti@1.21.6))
       '@eslint/compat': 1.2.5(eslint@9.14.0(jiti@1.21.6))
       '@next/eslint-plugin-next': 15.1.6
-      '@types/node': 22.9.0
+      '@types/node': 24.1.0
       '@types/react': types-react@19.0.0-rc.1
       '@types/react-dom': types-react-dom@19.0.0
       '@typescript-eslint/eslint-plugin': 8.21.0(@typescript-eslint/parser@8.21.0(eslint@9.14.0(jiti@1.21.6))(typescript@5.6.3))(eslint@9.14.0(jiti@1.21.6))(typescript@5.6.3)
@@ -6242,7 +6242,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 22.9.0
+      '@types/node': 24.1.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
     optional: true
@@ -7736,7 +7736,7 @@ snapshots:
       has-symbols: 1.1.0
       which-boxed-primitive: 1.1.1
 
-  undici-types@6.19.8: {}
+  undici-types@7.8.0: {}
 
   unicode-canonical-property-names-ecmascript@2.0.1: {}
 

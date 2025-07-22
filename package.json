@@ -21,7 +21,7 @@
   "devDependencies": {
     "@types/glidejs__glide": "^3.6.5",
     "@types/mdx": "^2.0.13",
-    "@types/node": "^22.0.0",
+    "@types/node": "^24.0.0",
     "@types/react": "npm:types-react@19.0.0-rc.1",
     "@types/react-dom": "npm:types-react-dom@19.0.0",
     "eslint": "^9.13.0",
