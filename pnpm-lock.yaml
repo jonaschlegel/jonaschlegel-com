@@ -490,7 +490,7 @@ packages:
   '@mdx-js/react@3.1.0':
     resolution: {integrity: sha512-QjHtSaoameoalGnKDT3FoIl4+9RwyTmo9ZJGBdLOks/YOiWHoRDI3PUwEzOE7kEmGcV3AFcp9K6dYu9rEuKLAQ==}
     peerDependencies:
-      '@types/react': npm:types-react@19.0.0-rc.1
+      '@types/react': '>=16'
       react: '>=16'
 
   '@napi-rs/wasm-runtime@0.2.12':
@@ -1319,8 +1319,8 @@ packages:
     hasBin: true
     peerDependencies:
       '@types/node': '>=24.1.0'
-      '@types/react': npm:types-react@19.0.0-rc.1
-      '@types/react-dom': npm:types-react-dom@19.0.0
+      '@types/react': ^19.1.8
+      '@types/react-dom': ^19.1.6
       eslint: ^9.31.0
       globals: ^16.3.0
       typescript: ^5.8.3
