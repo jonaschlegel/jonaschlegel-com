@@ -13,6 +13,8 @@ import overview from '../images/overview.webp';
 import adventuressCover from '../images/projects/adventuress-cover.jpg';
 import archaeoZine from '../images/projects/archaeo-zine.jpg';
 import exploringArchaeologicalDisciplines from '../images/projects/exploring-archaeological-disciplines.jpg';
+import necessaryReunions from '../images/projects/necessary-reunions.png';
+import pastrace from '../images/projects/pastrace.jpg';
 import romanBurial from '../images/projects/roman-burial.jpg';
 import trowelJournalBlog from '../images/projects/trowel-journal-blog.jpg';
 import urbanChameleon from '../images/projects/urban-chameleon.jpg';
@@ -22,7 +24,7 @@ import webDevelopment from '../images/services/web-development.jpg';
 
 export const navLinks = [
   { name: 'About', href: '/about' },
-  { name: 'Featured Projects', href: '/#project' },
+  { name: 'Projects', href: '/projects' },
   { name: 'Services', href: '/#service' },
   { name: 'CV', href: '/cv' },
 ] as const;
@@ -141,6 +143,26 @@ export const projectsData = {
       image: adventuressCover,
       description:
         'A cover illustration for the first issue of the Adventuress Archaeologist journal.',
+      services: ['scientific & archaeological illustration'],
+      isFeatured: true,
+    },
+    {
+      id: '7',
+      name: 'Necessary Reunions',
+      slug: 'necessary-reunions',
+      image: necessaryReunions,
+      description:
+        'Digital cartographic research platform reuniting Dutch VOC maps with textual archives.',
+      services: ['web development & design for archaeology'],
+      isFeatured: true,
+    },
+    {
+      id: '8',
+      name: 'PasTrace',
+      slug: 'pastrace',
+      image: pastrace,
+      description:
+        'Logo design and visual identity for digital heritage technology company.',
       services: ['scientific & archaeological illustration'],
       isFeatured: true,
     },

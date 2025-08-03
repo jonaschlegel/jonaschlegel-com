@@ -24,6 +24,15 @@ const config: Config = {
         merriweather: ['Merriweather', 'sans-serif'],
       },
       colors: {
+        primary: {
+          dark: '#1C1F23', // Main dark background
+          green: '#009D6F', // Primary green
+          teal: '#42CBB3', // Secondary teal/cyan
+          cream: '#F5F4F2', // Light cream/off-white
+          yellow: '#E6D67C', // Accent yellow
+          brown: '#9A6100', // Medium brown
+          'brown-dark': '#532700', // Dark brown
+        },
         gray: {
           50: '#E3DDDD',
           100: '#f7fafc',
