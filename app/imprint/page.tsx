@@ -1,3 +1,18 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Imprint',
+  description:
+    'Legal information and business details for Jona Schlegel, Archaeological Science Communication specialist based in Vienna, Austria.',
+  robots: {
+    index: true,
+    follow: false,
+  },
+  alternates: {
+    canonical: 'https://jonaschlegel.com/imprint',
+  },
+};
+
 export default function Imprint() {
   return (
     <div className="container mx-auto px-4 py-16">

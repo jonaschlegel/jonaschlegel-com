@@ -1,7 +1,6 @@
-import type { MDXComponents } from 'mdx/types';
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import type { JSX } from 'react';
 import type { ProjectType } from '../../../types/global';
 import { projectsData } from '../../data/content';
 
@@ -13,10 +12,74 @@ interface Params {
   slug: string;
 }
 
-export function generateStaticParams(): Array<{ slug: string }> {
-  return projectsData.projectsList.map((project) => ({
-    slug: project.slug,
-  }));
+// Temporarily disable static generation to resolve build issues
+export const dynamic = 'force-dynamic';
+
+// export function generateStaticParams(): Array<{ slug: string }> {
+//   return projectsData.projectsList.map((project) => ({
+//     slug: project.slug,
+//   }));
+// }
+
+export async function generateMetadata({
+  params,
+}: ProjectPageProps): Promise<Metadata> {
+  const slug = (await params).slug;
+  const project: ProjectType | undefined = projectsData.projectsList.find(
+    (proj) => proj.slug === slug,
+  );
+
+  if (!project) {
+    return {
+      title: 'Project Not Found',
+      description: 'The requested project could not be found.',
+    };
+  }
+
+  const projectTitle = `${project.name} - Project Portfolio`;
+  const projectDescription =
+    project.description ||
+    `Explore ${project.name}, a project by Jona Schlegel showcasing expertise in archaeological research, science communication, and knowledge management.`;
+
+  return {
+    title: projectTitle,
+    description: projectDescription,
+    keywords: [
+      'archaeology project',
+      'science communication',
+      project.name.toLowerCase(),
+      'archaeological research',
+      'portfolio project',
+      'knowledge management',
+      'public engagement',
+      'archaeological illustration',
+    ],
+    openGraph: {
+      title: projectTitle,
+      description: projectDescription,
+      images: [
+        {
+          url: project.image,
+          width: 1200,
+          height: 630,
+          alt: `${project.name} - Archaeological Project by Jona Schlegel`,
+        },
+      ],
+      type: 'article',
+      authors: ['Jona Schlegel'],
+      section: 'Projects',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: projectTitle,
+      description: projectDescription,
+      images: [project.image],
+      creator: '@jonaschlegel',
+    },
+    alternates: {
+      canonical: `https://jonaschlegel.com/projects/${slug}`,
+    },
+  };
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
@@ -30,15 +93,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     return null;
   }
 
-  // Load MDX content dynamically
-  const MDXContent = (
-    (await import(`../../data/projects/${project.slug}.mdx`)) as {
-      default: (props: {
-        readonly components?: MDXComponents | undefined;
-      }) => JSX.Element;
-    }
-  ).default;
-
   return (
     <div className="container mx-auto py-16">
       <div className="relative mb-4 aspect-[2/1] overflow-hidden rounded-[2.5rem]">
@@ -48,12 +102,22 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           width={2000}
           height={1000}
           className="object-cover"
+          priority
         />
       </div>
-      <div className="md:px-10 lg:px-[140px]">
-        <h1>{project.name}</h1>
-        <MDXContent />
-      </div>
+      <article className="md:px-10 lg:px-[140px]">
+        <header>
+          <h1>{project.name}</h1>
+        </header>
+        <div>
+          <h2>About this project</h2>
+          <p>{project.description}</p>
+          <p>Services: {project.services.join(', ')}</p>
+          <p>
+            <em>Full project content coming soon...</em>
+          </p>
+        </div>
+      </article>
     </div>
   );
 }

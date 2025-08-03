@@ -5,8 +5,14 @@ const googleAnalyticsTrackingId = 'G-6S9J34MPR3';
 export default function Tracking() {
   return (
     <>
+      {/* Google Analytics */}
       <Script
-        id="_next-ga-init"
+        src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsTrackingId}`}
+        strategy="afterInteractive"
+      />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
               window.dataLayer = window.dataLayer || [];
@@ -26,16 +32,17 @@ export default function Tracking() {
               gtag('set', 'ads_data_redaction', true);
               gtag('set', 'url_passthrough', true);
               gtag('js', new Date());
-              gtag('config', '${googleAnalyticsTrackingId}');
+              gtag('config', '${googleAnalyticsTrackingId}', {
+                page_title: document.title,
+                page_location: window.location.href
+              });
             `,
         }}
       />
+
+      {/* Facebook Pixel */}
       <Script
-        id="_next-ga"
-        src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsTrackingId}`}
-      />
-      <Script
-        id="fb-pixel"
+        id="facebook-pixel"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
@@ -61,14 +68,19 @@ export default function Tracking() {
           `,
         }}
       />
+
+      {/* Simple Analytics */}
       <Script
         src="https://scripts.simpleanalyticscdn.com/latest.js"
         strategy="afterInteractive"
         defer
       />
+
+      {/* Cookie Consent */}
       <Script
         id="cookieyes"
         src="https://cdn-cookieyes.com/client_data/f49132772cc1d9f89dfe9534/script.js"
+        strategy="afterInteractive"
       />
     </>
   );

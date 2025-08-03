@@ -1,3 +1,18 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Terms and Conditions',
+  description:
+    'Terms and conditions for using jonaschlegel.com, outlining user rights and responsibilities for accessing content and services.',
+  robots: {
+    index: true,
+    follow: false,
+  },
+  alternates: {
+    canonical: 'https://jonaschlegel.com/terms-and-conditions',
+  },
+};
+
 export default function TermsAndConditions() {
   return (
     <div className="container mx-auto px-4 py-16">

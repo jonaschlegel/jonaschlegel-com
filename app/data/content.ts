@@ -126,7 +126,7 @@ export const serviceData = {
       description:
         'Providing comprehensive archaeological research and data interpretation services, with a focus on accessible communication through digital tools',
       image: archaeologySciComm,
-      alt: 'Archaeology service image',
+      alt: 'Archaeological research and scientific communication tools and methods by Jona Schlegel',
       tools:
         'ArcGIS, QGIS, Ground-penetrating radar, Geophysical surveys, CIDOC CRM',
       options: [
@@ -143,7 +143,7 @@ export const serviceData = {
       description:
         'Specialising in creating detailed, scientifically accurate illustrations for archaeological publications, reconstructions, and educational materials',
       image: illustrating,
-      alt: 'Illustration service image',
+      alt: 'Scientific and archaeological illustration examples and digital artwork by Jona Schlegel',
       tools: 'Procreate, Inkscape, ArcGIS, QGIS',
       options: [
         'Reconstruction Illustrations: Accurate depictions of historical scenes for academic use',
@@ -159,7 +159,7 @@ export const serviceData = {
       description:
         'Offering tailored web development and design solutions to enhance digital engagement for archaeological projects',
       image: webDevelopment,
-      alt: 'Web Development service image',
+      alt: 'Web development and design portfolio for archaeological projects by Jona Schlegel',
       tools: 'Next.js, TypeScript, Tailwind CSS, Three.js, CesiumJS, Leaflet',
       options: [
         'Website Development: Custom-built platforms for archaeological projects and databases',

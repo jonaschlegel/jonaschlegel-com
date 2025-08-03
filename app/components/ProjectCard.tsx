@@ -11,10 +11,10 @@ const ProjectCard: FC<ProjectType> = ({ slug, image, name }) => {
     >
       <Image
         src={image}
-        alt={name}
+        alt={`${name} - Archaeological illustration and scientific communication project by Jona Schlegel`}
         fill
         className="object-cover"
-        sizes="100%"
+        sizes="(max-width: 768px) 100vw, 50vw"
       />
       <div className="absolute bottom-0 w-full bg-black/50 p-4 text-center text-white opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
         <p>{name}</p>
