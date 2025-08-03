@@ -53,7 +53,7 @@ export const metadata: Metadata = {
       'Explore archaeology, scientific communication, and knowledge management. Discover how archaeological insights are shared with public engagement and innovation.',
     images: [
       {
-        url: '/images/social-image.jpg',
+        url: '/api/og?title=Jona%20Schlegel&subtitle=Archaeological%20Science%20Communication%20%26%20Knowledge%20Management',
         width: 1200,
         height: 630,
         alt: 'Jona Schlegel - Archaeology & Science Communication',
@@ -66,7 +66,9 @@ export const metadata: Metadata = {
       'Jona Schlegel – Archaeological Science Communication & Knowledge Management',
     description:
       'Explore archaeology, scientific communication, and knowledge management. Discover how archaeological insights are shared with public engagement and innovation.',
-    images: ['/images/social-image.jpg'],
+    images: [
+      '/api/og?title=Jona%20Schlegel&subtitle=Archaeological%20Science%20Communication%20%26%20Knowledge%20Management',
+    ],
     creator: '@jonaschlegel',
   },
   alternates: {

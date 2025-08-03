@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import type { ProjectType } from '../../../types/global';
 import { projectsData } from '../../data/content';
+import { generateProjectOGImageUrl } from '../../lib/og-utils';
 
 interface ProjectPageProps {
   params: Promise<Params>;
@@ -41,6 +42,13 @@ export async function generateMetadata({
     project.description ||
     `Explore ${project.name}, a project by Jona Schlegel showcasing expertise in archaeological research, science communication, and knowledge management.`;
 
+  // Create OG image URL with project data
+  const ogImageUrl = generateProjectOGImageUrl({
+    title: project.name,
+    description: project.description,
+    services: project.services,
+  });
+
   return {
     title: projectTitle,
     description: projectDescription,
@@ -59,7 +67,7 @@ export async function generateMetadata({
       description: projectDescription,
       images: [
         {
-          url: project.image,
+          url: ogImageUrl,
           width: 1200,
           height: 630,
           alt: `${project.name} - Archaeological Project by Jona Schlegel`,
@@ -73,7 +81,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: projectTitle,
       description: projectDescription,
-      images: [project.image],
+      images: [ogImageUrl],
       creator: '@jonaschlegel',
     },
     alternates: {

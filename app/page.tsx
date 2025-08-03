@@ -26,7 +26,7 @@ export const metadata: Metadata = {
       "Welcome to Jona Schlegel's professional portfolio. Specializing in archaeological science communication, knowledge management, and public engagement.",
     images: [
       {
-        url: '/images/social-image.jpg',
+        url: '/api/og?title=Welcome%20to%20my%20Portfolio&subtitle=Archaeological%20Science%20Communication%20%26%20Knowledge%20Management',
         width: 1200,
         height: 630,
         alt: 'Jona Schlegel - Archaeology & Science Communication Portfolio',

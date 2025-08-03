@@ -14,7 +14,7 @@ export const metadata: Metadata = {
       "Explore Jona Schlegel's detailed CV, showcasing a journey in archaeological research, science communication, and education.",
     images: [
       {
-        url: 'https://jonaschlegel.com/images/social-image-cv.jpg',
+        url: '/api/og/cv',
         width: 1200,
         height: 630,
         alt: "Jona Schlegel's CV",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: "Jona Schlegel's CV – Archaeology & Science Communication",
     description:
       "Explore Jona Schlegel's detailed CV, showcasing a journey in archaeological research, science communication, and education.",
-    images: ['https://jonaschlegel.com/images/social-image-cv.jpg'],
+    images: ['/api/og/cv'],
   },
 };
 
