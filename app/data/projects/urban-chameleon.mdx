@@ -5,67 +5,91 @@ import UrbanChameleon1 from '../../images/projects/urban-chameleon-1.jpg';
 import UrbanChameleon2 from '../../images/projects/urban-chameleon-2.jpg';
 import UrbanChameleon3 from '../../images/projects/urban-chameleon-3.jpg';
 
-<h3>Urban Chameleon – Graffiti as Cultural Heritage</h3>
+# Urban Chameleon: A Digital Platform for INDIGO Project
 
-The **Urban Chameleon** project was developed to create an intuitive and interactive platform that enables users to explore and analyse graffiti in its spatial and temporal context. The project aimed to preserve graffiti as cultural heritage, making it accessible to researchers, artists, and the general public. The platform was built with a focus on the ever-changing and ephemeral nature of graffiti, allowing users to examine the evolution of graffiti works along the Danube Canal in Vienna, Austria.
+**Urban Chameleon** serves as the public-facing digital platform for Project INDIGO, a two-year research initiative funded by the Austrian Academy of Sciences to systematically document and analyse graffiti along Vienna's Danube Canal. As part of the project team, I developed this web platform to make the research accessible to both academic users and the general public.
 
-## Objectives
+Project INDIGO aims to document approximately 13 kilometres of continuous graffiti along the Danube Canal over the next decade. The research treats graffiti as a form of cultural heritage that balances between tangible and intangible, examining how these urban expressions reflect societal thoughts and artistic practices. My role involved creating the digital infrastructure that would house and present this extensive documentation work.
 
-The primary objectives of Urban Chameleon were to:
+## Research Context and Collaboration
 
-- Create a user-friendly platform for **researchers** and **artists** to explore graffiti in its urban context.
-- Develop a system to **preserve graffiti** as part of cultural heritage, capturing its temporary nature and presenting it for future studies.
-- Provide an **interactive** tool that allows users to engage with graffiti works, understanding their spatial, temporal, and cultural relevance.
-- Ensure the platform could serve both **academic researchers** and the **general public**, catering to various needs.
+The INDIGO project brings together multiple research institutions including the Austrian Centre for Digital Humanities, TU Wien, and VRVis, along with community partners like Spray City. This interdisciplinary approach combines archaeological documentation methods, geospatial analysis, and community engagement to create a comprehensive record of graffiti culture along the canal.
 
-## Challenges
-
-The project faced several significant challenges:
-
-- **Ephemerality of Graffiti**: Graffiti is often short-lived, making its preservation difficult. Capturing these temporary works of art while maintaining a dynamic, up-to-date system was essential.
-- **Complexity of Metadata**: Creating a metadata schema that balances the need for research-grade data while still being user-friendly was a challenge. This balance was key to making the platform both academically robust and accessible.
-- **Performance**: The project needed to handle large datasets and high-resolution surface models while maintaining smooth performance across various devices.
+Working within this research framework, I needed to design a platform that could accommodate the project's systematic documentation approach whilst remaining accessible to diverse user groups. The challenge involved translating academic research goals into practical digital tools that could serve both scholarly analysis and public engagement.
 
 <Image
   src={UrbanChameleon1}
-  alt="Workflow process of the creation of the Urban Chameleon website"
+  alt="AGIL workflow methodology used in developing the Urban Chameleon platform for Project INDIGO"
   className="mt-10"
 />
 <div className="caption">
-  Fig. 1: AGIL workflow process of the creation of the Urban Chameleon website
+  Fig. 1: Development workflow adapting agile methodology for archaeological
+  research requirements
 </div>
 
-## Target Group & Pain Points
+## Technical Implementation
 
-The Urban Chameleon platform was designed to cater to a diverse set of users, each with specific needs and pain points:
+The platform needed to handle the project's extensive data collection, including regular photographic documentation, spatial database management, and metadata organisation covering style classifications, artist pseudonyms, and creation dates. I built the system using Next.js and TypeScript to ensure scalability as the dataset grows over the project's timeline.
 
-- **Researchers**: Needed a tool to efficiently query graffiti metadata, including details on location, temporal changes, and creator information, without overwhelming the system.
-- **Graffitists**: Required a platform that accurately represented their work and intentions, preserving the ephemeral nature of their art while allowing for virtual engagement.
-- **Cultural Heritage Professionals**: Needed tools to document, preserve, and analyse graffiti within a broader urban and cultural context.
-- **General Public**: Required a visually engaging and intuitive platform that allowed them to explore graffiti along the Danube Canal without technical complexities.
+Integration with OpenAtlas provides the spatial database functionality required for managing the complex relationships within graffiti documentation. The platform includes features for virtual exploration of the canal route and temporal analysis showing how graffiti changes over time. These tools support both research queries and public education about graffiti culture.
+
+Performance considerations proved important given the high-resolution imagery and extensive spatial data involved. The platform processes regular photo documentation and manages metadata whilst maintaining responsive performance across different devices and connection speeds.
 
 <Image
   src={UrbanChameleon2}
-  alt="Process of getting the research done for the Urban Chameleon website"
+  alt="Documentation methodology combining systematic photography with community engagement for Project INDIGO"
   className="mt-10"
 />
 <div className="caption">
-  Fig. 2: Process of getting the research done for the Urban Chameleon website
+  Fig. 2: Research methodology integrating regular documentation with graffiti
+  community input
 </div>
 
-## Tools & Development
+## Community Engagement Features
 
-The project was completed over a two-month intensive period, using a range of modern web development tools:
+Following Project INDIGO's commitment to community involvement, the platform includes features that enable graffiti creators and scholars to contribute to documentation accuracy. Users can report new graffiti through online forms and contribute contextual information about documented works.
 
-- **Framework**: Next.js 13+ for server-side rendering and React components.
-- **Styling**: SCSS for custom styling and design consistency.
-- **Language**: TypeScript for type safety and codebase maintainability.
-- **Design**: Figma for wireframing and prototyping, Miro for collaborative design discussions.
-- **Data Modelling**: OpenAtlas for managing archaeological data and Resium/CesiumJS for 3D visualisation.
+This collaborative approach addresses one of the project's key goals: ensuring that documentation represents graffiti culture authentically rather than imposing external interpretations. The platform provides space for artists to explain their work and for community members to contribute local knowledge about specific locations or artistic practices.
+
+The design balances research requirements with accessibility, offering guided exploration paths for casual users alongside detailed search and analysis tools for academic researchers. This dual functionality supports the project's aim to build bridges between academic research and public understanding.
 
 <Image
   src={UrbanChameleon3}
-  alt="Wireframe of the Urban Chameleon website"
+  alt="Interface design showing navigation and exploration features for the Urban Chameleon platform"
   className="mt-10"
 />
-<div className="caption">Fig. 3: Wireframe of the Urban Chameleon website</div>
+<div className="caption">
+  Fig. 3: User interface designed to accommodate both research tools and public
+  exploration
+</div>
+
+## Documentation Standards and Preservation
+
+Working within Project INDIGO's framework required implementing documentation standards that ensure long-term data preservation and accessibility. The platform connects to certified repositories that guarantee digital longevity and enable free data download, supporting the project's commitment to open research.
+
+The systematic approach involves regular photographic visits to document changes along the canal route. This temporal documentation creates a unique record of how graffiti evolves, with works appearing, changing, and disappearing over time. The platform's temporal analysis features allow users to explore these changes and understand graffiti's ephemeral nature.
+
+## Research Applications and Impact
+
+The platform supports various research applications within Project INDIGO's framework. Scholars use the spatial and temporal analysis tools to study graffiti distribution patterns, artistic style evolution, and social aspects of urban expression. The systematic documentation approach enables longitudinal studies that weren't previously possible with ad-hoc graffiti research.
+
+Educational applications have emerged as teachers and museum educators use the platform to introduce students to concepts of cultural heritage, urban archaeology, and digital documentation methods. The platform demonstrates how contemporary cultural practices can be studied using systematic research approaches.
+
+## Project Integration and Future Development
+
+Urban Chameleon functions as one component within Project INDIGO's broader research infrastructure. The platform connects with other project outputs including academic publications, conference presentations, and the graffiti literature database. This integration ensures that digital tools support rather than replace traditional research communication.
+
+Future development follows Project INDIGO's timeline, with planned enhancements including expanded coverage areas, improved community contribution features, and enhanced analysis tools. The platform's modular design enables these additions whilst maintaining system stability and user accessibility.
+
+## Reflection on Digital Research Tools
+
+Developing Urban Chameleon within Project INDIGO's research framework highlighted how digital platforms can support systematic cultural documentation whilst remaining accessible to diverse audiences. The platform demonstrates that academic research tools don't need to compromise user experience or community engagement.
+
+The project reinforced the value of interdisciplinary collaboration in digital humanities work. Combining archaeological methodology, geospatial analysis, community engagement, and web development creates research infrastructure that individual disciplines couldn't achieve independently.
+
+Most importantly, the work shows how digital tools can support community-based research that respects both scholarly standards and cultural authenticity. When designed collaboratively, these platforms can strengthen connections between academic research and the communities being studied.
+
+**Project context**: Part of two-year INDIGO research project (Austrian Academy of Sciences)
+**Development period**: Two months intensive development
+**Technical framework**: Next.js, TypeScript, SCSS, OpenAtlas integration
+**Research scope**: 13km systematic documentation along Vienna's Danube Canal
