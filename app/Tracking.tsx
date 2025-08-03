@@ -1,3 +1,5 @@
+'use client';
+
 import Script from 'next/script.js';
 
 const googleAnalyticsTrackingId = 'G-6S9J34MPR3';

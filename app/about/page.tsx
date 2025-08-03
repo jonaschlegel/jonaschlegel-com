@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import CalendlyButton from '../components/CalendlyButton';
 import { aboutStudioData, jonaImage } from '../data/content';
 
 export const metadata: Metadata = {
@@ -152,6 +153,25 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="mx-auto max-w-4xl rounded-2xl bg-primary-green/10 p-8 text-center">
+        <h2 className="mb-6 text-2xl font-semibold">Let's Collaborate</h2>
+        <p className="mb-8 text-lg leading-relaxed">
+          For collaboration enquiries or to discuss how archaeoINK can support
+          your research communication needs, please get in touch.
+        </p>
+        <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <CalendlyButton text="Schedule a Consultation" />
+          <span className="text-sm">or</span>
+          <a
+            href="mailto:archaeoink@jonaschlegel.com"
+            className="inline-flex items-center rounded-full border-2 border-primary-green px-8 py-3 font-semibold text-primary-green transition-all duration-300 hover:bg-primary-green hover:text-primary-dark"
+          >
+            Send an Email
+          </a>
         </div>
       </section>
     </div>
