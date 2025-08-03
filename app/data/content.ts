@@ -21,26 +21,57 @@ import archaeologySciComm from '../images/services/archaeological-sci-comm.jpg';
 import webDevelopment from '../images/services/web-development.jpg';
 
 export const navLinks = [
+  { name: 'About', href: '/about' },
   { name: 'Featured Projects', href: '/#project' },
   { name: 'Services', href: '/#service' },
   { name: 'CV', href: '/cv' },
 ] as const;
 
 export const heroSectionData = {
-  heading: 'Need visuals that make your research stand out?',
-  text: 'I transform data into narratives, web presences and create illustrative content – especially for science.',
+  heading: 'Visual communication for archaeological research',
+  text: 'archaeoINK transforms research data into clear narratives through illustration, design, and structured knowledge representation.',
   statsData: [
-    { name: '(Scientific) Articles Written', number: '15' },
-    { name: 'Illustrations', number: '253' },
-    { name: 'Programming Projects', number: '13' },
+    { name: 'Scientific Articles Written', number: '15' },
+    { name: 'Illustrations Created', number: '253' },
+    { name: 'Digital Projects', number: '13' },
   ],
   bgImage: heroBg,
   heroImage: overview,
 };
 
 export const bannerData = [
-  'Hi, my name is Jona Schlegel and I am specializing in scientific communication, web design, and illustration. I am passionate about creating engaging content that makes science accessible and inclusive. I am here to help you elevate your scientific communication and create a unique showcase of your scientific insights.',
+  'archaeoINK specialises in visual science communication for archaeology, creating accurate illustrations and structured knowledge representations that bridge academic research and public understanding. Founded by landscape archaeologist Jona Schlegel, the studio combines disciplinary expertise with visual communication skills to support researchers, institutions, and educators in making archaeological knowledge more accessible.',
 ];
+
+export const aboutStudioData = {
+  heading: 'About archaeoINK',
+  sections: [
+    {
+      title: 'The Studio',
+      content: `archaeoINK is a visual science communication studio specialising in archaeology, where illustration, design, and structured knowledge representation serve to advance research understanding and public engagement. Founded by landscape archaeologist and science communicator Jona Schlegel, the studio bridges the space between rigorous academic research and accessible visual communication.
+
+The work centres on creating accurate, concept-driven visuals that respect the complexity and context inherent in archaeological data. Each project begins with careful collaboration between researcher and illustrator, ensuring that visual interpretations maintain scientific integrity whilst becoming more approachable for diverse audiences.`,
+    },
+    {
+      title: 'Approach',
+      content: `Every archaeological site, artefact, and dataset contains layers of information that require thoughtful interpretation. The studio's approach prioritises accuracy and contextual understanding, working directly with researchers to translate complex archaeological concepts into clear visual narratives.
+
+Rather than simplifying for the sake of accessibility, the focus lies in finding visual languages that honour both scholarly rigour and public curiosity. This includes developing database-informed graphics that maintain connection to underlying research whilst serving educational and engagement purposes.`,
+    },
+    {
+      title: 'Expertise',
+      content: `The studio specialises in archaeological illustration, from site reconstructions to artefact documentation, always grounded in current research and methodological best practice. Additional expertise encompasses concept-driven visual design for academic publications, educational materials, and digital platforms that support knowledge sharing within and beyond academic communities.
+
+Communication strategies developed here aim to bridge gaps between specialist knowledge and broader understanding, recognising that effective science communication requires both technical accuracy and thoughtful presentation. This includes designing digital tools and interfaces that make archaeological databases and research findings more accessible to various user groups.`,
+    },
+    {
+      title: 'Collaboration',
+      content: `Successful visual communication in archaeology depends on close collaboration between researchers, institutions, and communication specialists. The studio works as a partner in research projects, contributing visual expertise whilst learning from domain specialists to ensure authentic representation of archaeological work.
+
+This collaborative approach extends to understanding the specific needs of different audiences, from academic peers to students, heritage professionals, and members of the public with varying levels of archaeological knowledge. The goal is always to create visuals that serve their intended purpose whilst maintaining respect for the discipline's complexity and cultural significance.`,
+    },
+  ],
+};
 
 export const jonaImage = jona;
 
@@ -124,7 +155,7 @@ export const serviceData = {
       slug: 'archaeology',
       name: 'Archaeological Research & Communication',
       description:
-        'Providing comprehensive archaeological research and data interpretation services, with a focus on accessible communication through digital tools',
+        'Comprehensive archaeological research and data interpretation services, focusing on accessible communication through digital tools and structured knowledge representation',
       image: archaeologySciComm,
       alt: 'Archaeological research and scientific communication tools and methods by Jona Schlegel',
       tools:
@@ -141,7 +172,7 @@ export const serviceData = {
       slug: 'illustration',
       name: 'Scientific & Archaeological Illustration',
       description:
-        'Specialising in creating detailed, scientifically accurate illustrations for archaeological publications, reconstructions, and educational materials',
+        'Creating detailed, scientifically accurate illustrations for archaeological publications, site reconstructions, and educational materials, grounded in current research and methodological best practice',
       image: illustrating,
       alt: 'Scientific and archaeological illustration examples and digital artwork by Jona Schlegel',
       tools: 'Procreate, Inkscape, ArcGIS, QGIS',
@@ -157,7 +188,7 @@ export const serviceData = {
       slug: 'web-development',
       name: 'Web Development & Design for Archaeology',
       description:
-        'Offering tailored web development and design solutions to enhance digital engagement for archaeological projects',
+        'Tailored web development and design solutions that enhance digital engagement for archaeological projects, including database-driven platforms and interactive visualisation tools',
       image: webDevelopment,
       alt: 'Web development and design portfolio for archaeological projects by Jona Schlegel',
       tools: 'Next.js, TypeScript, Tailwind CSS, Three.js, CesiumJS, Leaflet',

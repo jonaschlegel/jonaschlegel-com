@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
+import React from 'react';
 import type { ProjectType } from '../../../types/global';
 import { projectsData } from '../../data/content';
 import { generateProjectOGImageUrl } from '../../lib/og-utils';
@@ -15,6 +16,21 @@ interface Params {
 
 // Temporarily disable static generation to resolve build issues
 export const dynamic = 'force-dynamic';
+
+// Dynamic import function for MDX files
+async function importProjectMdx(
+  slug: string,
+): Promise<React.ComponentType | null> {
+  try {
+    const { default: mdxContent } = await import(
+      `../../data/projects/${slug}.mdx`
+    );
+    return mdxContent as React.ComponentType;
+  } catch (error) {
+    console.warn(`No MDX file found for project: ${slug}`, error);
+    return null;
+  }
+}
 
 // export function generateStaticParams(): Array<{ slug: string }> {
 //   return projectsData.projectsList.map((project) => ({
@@ -101,6 +117,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     return null;
   }
 
+  // Try to load the MDX content for this project
+  const mdxContent = await importProjectMdx(slug);
+
   return (
     <div className="container mx-auto py-16">
       <div className="relative mb-4 aspect-[2/1] overflow-hidden rounded-[2.5rem]">
@@ -113,18 +132,25 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           priority
         />
       </div>
-      <article className="md:px-10 lg:px-[140px]">
-        <header>
-          <h1>{project.name}</h1>
-        </header>
-        <div>
-          <h2>About this project</h2>
-          <p>{project.description}</p>
-          <p>Services: {project.services.join(', ')}</p>
-          <p>
-            <em>Full project content coming soon...</em>
-          </p>
-        </div>
+      <article className="prose prose-lg prose-invert max-w-none md:px-10 lg:px-[140px]">
+        {mdxContent ? (
+          React.createElement(mdxContent)
+        ) : (
+          // Fallback content if no MDX file exists
+          <>
+            <header>
+              <h1>{project.name}</h1>
+            </header>
+            <div>
+              <h2>About this project</h2>
+              <p>{project.description}</p>
+              <p>Services: {project.services.join(', ')}</p>
+              <p>
+                <em>Full project content coming soon...</em>
+              </p>
+            </div>
+          </>
+        )}
       </article>
     </div>
   );

@@ -3,11 +3,10 @@ import { NextRequest } from 'next/server';
 
 export const runtime = 'edge';
 
-export async function GET(request: NextRequest) {
+export function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
 
-    // Get parameters from URL
     const title = searchParams.get('title') || 'Jona Schlegel';
     const subtitle =
       searchParams.get('subtitle') ||
@@ -24,7 +23,7 @@ export async function GET(request: NextRequest) {
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            backgroundColor: '#262626', // neutral-800
+            backgroundColor: '#262626',
             backgroundImage: 'linear-gradient(45deg, #262626 0%, #171717 100%)',
           }}
         >
@@ -72,7 +71,7 @@ export async function GET(request: NextRequest) {
               <p
                 style={{
                   fontSize: 24,
-                  color: '#d4d4d8', // neutral-300
+                  color: '#d4d4d8',
                   lineHeight: 1.4,
                   margin: 0,
                   textAlign: 'center',
