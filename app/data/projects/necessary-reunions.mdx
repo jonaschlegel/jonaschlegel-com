@@ -1,0 +1,113 @@
+export const title =
+  'Necessary Reunions – Digital Cartographic Research Platform';
+
+import Image from 'next/image';
+import KeralaMapsAnnotated from '../../images/projects/necessary-reunions/kerala-coast-annotated-map.png';
+import KeralaAnnotationExample from '../../images/projects/necessary-reunions/kerala-map-annotation-example.jpg';
+import RechartedLogo from '../../images/projects/necessary-reunions/recharted-interface-logo.png';
+
+# Reuniting Archives Through Digital Innovation
+
+When historical maps and textual records exist in separate collections, crucial geographical and cultural information remains disconnected. The **Necessary Reunions** project addresses this gap by developing digital tools that reconnect Dutch East India Company (VOC) maps with their corresponding textual archives, focusing specifically on early modern Kerala, India.
+
+As junior researcher on this interdisciplinary team, I contributed to creating **re:Charted**, a web-based platform that combines emerging techniques in computer vision, handwritten text recognition, and georeferencing to unlock new perspectives on 17th and 18th-century Indian Ocean trade networks.
+
+## Project Context and Objectives
+
+The Dutch East India Company maintained extensive archives during their colonial presence in Kerala from 1663 to 1795. These materials include detailed cartographic records alongside rich textual descriptions of places, political boundaries, and commercial activities. However, these complementary sources have remained artificially separated in archival collections, preventing historians from accessing their combined insights.
+
+Our research team—led by Dr. Manjusha Kuruppath at the Huygens Institute and data engineer Leon van Wissen at the University of Amsterdam—recognised that new computational methods could bridge this divide. The project received funding from the Netherlands Organisation for Scientific Research (NWO) as part of their commitment to innovative digital humanities research.
+
+The primary objective involves creating a comprehensive gazetteer of place information for early modern Kerala, drawing from both visual and textual evidence. This resource will enable historians to better understand political interactions, environmental changes, and socio-economic developments in the region whilst demonstrating methodologies applicable to similar archival collections worldwide.
+
+<Image
+  src={KeralaAnnotationExample}
+  alt="Historical map showing annotation examples from Dutch East India Company archives"
+  className="mt-10"
+/>
+<div className="caption">
+  Fig. 1: Historical VOC map featuring the detailed cartographic information
+  that forms the basis of our research
+</div>
+
+## Technical Innovation and Methodology
+
+The project employs three cutting-edge computational approaches that collectively enable automated analysis of historical documents:
+
+**Computer vision algorithms** identify and categorise visual elements on historical maps, including fortifications, settlements, waterways, and political boundaries. These techniques prove particularly valuable for processing hand-drawn cartographic elements that traditional digitisation methods struggle to interpret accurately.
+
+**Handwritten text recognition (HTR)** converts manuscript text into machine-readable formats, utilising the Loghi toolkit developed at the Huygens Institute. This technology enables systematic analysis of textual descriptions that historically required manual transcription, significantly expanding the scope of materials we can process effectively.
+
+**Georeferencing techniques** establish coordinate relationships between historical and contemporary maps, allowing precise location identification for places mentioned in both textual and cartographic sources. This spatial alignment proves essential for understanding how geographical features and political boundaries have evolved over time.
+
+My role focuses on interface design and user experience development for the re:Charted platform, ensuring that complex technical capabilities remain accessible to humanities researchers who may lack extensive digital tool experience.
+
+## Research Significance and Historical Context
+
+Early modern Kerala occupied a crucial position in Indian Ocean trade networks, serving as a key source of spices and other valuable commodities. The VOC's detailed documentation of this region provides unprecedented insight into how European commercial interests intersected with local political structures and environmental conditions.
+
+However, existing scholarship has not fully exploited these archival riches due to the practical challenges of working with historical manuscripts and maps. By developing computational tools that can process these materials systematically, we're enabling new forms of historical analysis that were previously impossible.
+
+The project directly supports the broader **GLOBALISE** initiative, which aims to make VOC archives more accessible to international researchers. Our gazetteer will integrate with GLOBALISE's existing transcription database, enriching contextual information about Kerala whilst demonstrating how place-based data can illuminate historical processes.
+
+<Image
+  src={KeralaMapsAnnotated}
+  alt="Automatically annotated map of Kerala coast showing AI-detected visual and textual elements"
+  className="mt-10"
+/>
+<div className="caption">
+  Fig. 2: Computational analysis revealing visual elements (red) and textual
+  segments (blue) automatically detected by our AI system
+</div>
+
+## Platform Development and Interface Design
+
+**re:Charted** serves as both a research tool and public interface for accessing our enhanced archival materials. The platform utilises IIIF (International Image Interoperability Framework) standards to ensure broad compatibility with digital library systems whilst providing specialised functionality for historical cartographic analysis.
+
+The interface design balances sophisticated analytical capabilities with intuitive navigation, recognising that our primary users include historians and cultural heritage professionals who prioritise content accessibility over technical complexity. I focused particularly on developing clear visual hierarchies that help users understand relationships between different types of archival evidence.
+
+Key features include interactive map viewing with overlay capabilities, synchronized display of related textual sources, and search functionality that operates across both visual and written materials. The platform also provides annotation tools that enable researchers to contribute their own insights whilst preserving the integrity of original archival materials.
+
+Working within the project timeline from March to December 2025, we needed to balance thoroughness with efficiency. The modular platform architecture allows for iterative development, ensuring that core functionality remains stable whilst enabling future enhancements based on user feedback and evolving research needs.
+
+## Collaborative Research Process
+
+This project exemplifies the productive potential of interdisciplinary collaboration in digital humanities. My background in archaeological communication proved valuable for understanding how visual information conveys historical meaning, whilst my colleagues brought essential expertise in historical research, data engineering, and computational linguistics.
+
+Regular consultation with advisory scholars—including Professor Jos Gommans at Leiden University and Dr. Rombert Stapel at the International Institute of Social History—ensured that our technical innovations remained grounded in sound historical methodology. These conversations frequently influenced interface design decisions, helping me understand how digital tools can support rather than complicate established research practices.
+
+The project also benefited from ongoing dialogue with the National Archives in The Hague, which holds the Leupe collection of VOC maps central to our research. These institutional partnerships prove essential for accessing high-quality digitised materials whilst ensuring that our work contributes to broader preservation and access initiatives.
+
+## Impact and Future Applications
+
+By successfully demonstrating these computational techniques on VOC materials related to Kerala, we're establishing methodologies that can extend to other historical and geographical contexts. The combination of visual analysis, text recognition, and spatial mapping offers particular promise for colonial archives worldwide, many of which feature similar separations between cartographic and textual sources.
+
+The project's emphasis on creating accessible digital tools reflects broader commitments within digital humanities to democratise historical research. By making complex archival materials searchable and navigable, we're removing barriers that previously limited this scholarship to specialists with extensive paleographic training.
+
+Our gazetteer will support multiple forms of historical analysis, from political history examining territorial boundaries and diplomatic relations, to environmental history tracking changes in coastlines and river systems, to economic history investigating the spatial distribution of trade activities. This versatility demonstrates how technological innovation can open new research questions rather than simply accelerating existing approaches.
+
+## Personal Contribution and Learning
+
+Working on **Necessary Reunions** deepened my understanding of how digital tools can enhance rather than replace traditional historical methods. The project required constant attention to the relationship between technological possibility and scholarly need, helping me develop more nuanced approaches to interface design that prioritise user experience alongside technical capability.
+
+The collaborative environment also expanded my appreciation for the complex relationship between visual and textual evidence in historical research. Understanding how maps and manuscripts functioned together in VOC administrative practice informed design decisions about how these materials should be presented in digital environments.
+
+This experience reinforced my commitment to projects that bridge academic research and public engagement, demonstrating how carefully designed digital platforms can make specialised scholarly work accessible to broader audiences whilst maintaining rigorous standards for historical accuracy and interpretive nuance.
+
+## Technical Specifications
+
+**Duration**: March–December 2025
+**Funding**: Netherlands Organisation for Scientific Research (NWO XS, €50,000)
+**Role**: Junior Researcher, Interface Design and User Experience
+**Technologies**: IIIF, computer vision, HTR (Loghi toolkit), georeferencing
+**Collaborators**: Dr. Manjusha Kuruppath (Huygens Institute), Leon van Wissen (University of Amsterdam)
+
+<Image
+  src={RechartedLogo}
+  alt="re:Charted platform logo representing the digital interface for historical map analysis"
+  className="mt-10"
+/>
+<div className="caption">
+  Fig. 3: The re:Charted platform logo, symbolising the intersection of
+  historical research and digital innovation
+</div>
