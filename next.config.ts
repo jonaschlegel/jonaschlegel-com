@@ -5,9 +5,10 @@ const nextConfig = {
 
   experimental: {
     typedRoutes: true,
-    turbo: {
-      loaders: {},
-    },
+  },
+
+  turbopack: {
+    rules: {},
   },
 
   typescript: {

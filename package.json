@@ -10,28 +10,28 @@
     "start": "next start"
   },
   "dependencies": {
-    "@glidejs/glide": "^3.6.2",
+    "@glidejs/glide": "^3.7.1",
     "@mdx-js/react": "^3.1.0",
-    "@next/mdx": "15.0.3",
-    "next": "15.0.3",
-    "react": "19.0.0-rc-66855b96-20241106",
-    "react-dom": "19.0.0-rc-66855b96-20241106",
-    "react-icons": "^5.3.0"
+    "@next/mdx": "15.4.5",
+    "next": "15.4.5",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "react-icons": "^5.5.0"
   },
   "devDependencies": {
-    "@types/glidejs__glide": "^3.6.5",
+    "@types/glidejs__glide": "^3.6.6",
     "@types/mdx": "^2.0.13",
-    "@types/node": "^22.0.0",
+    "@types/node": "^24.1.0",
     "@types/react": "npm:types-react@19.0.0-rc.1",
     "@types/react-dom": "npm:types-react-dom@19.0.0",
-    "eslint": "^9.13.0",
-    "eslint-config-upleveled": "^9.0.0",
-    "postcss": "^8.4.47",
-    "prettier": "^3.3.3",
-    "stylelint": "^16.10.0",
-    "stylelint-config-upleveled": "^1.1.5",
-    "tailwindcss": "^3.4.14",
-    "typescript": "^5.6.3"
+    "eslint": "^9.32.0",
+    "eslint-config-upleveled": "^9.2.6",
+    "postcss": "^8.5.6",
+    "prettier": "^3.6.2",
+    "stylelint": "^16.23.0",
+    "stylelint-config-upleveled": "^1.1.10",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.9.2"
   },
   "packageManager": "pnpm@9.13.0+sha512.beb9e2a803db336c10c9af682b58ad7181ca0fbd0d4119f2b33d5f2582e96d6c0d93c85b23869295b765170fbdaa92890c0da6ada457415039769edf3c959efe",
   "pnpm": {
