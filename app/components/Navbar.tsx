@@ -47,7 +47,7 @@ const Navbar = () => {
           mobileOpen ? 'left-0' : '-left-full'
         } lg:static lg:size-auto lg:bg-transparent`}
       >
-        <ul className="flex w-full flex-col items-center gap-6 lg:flex-row lg:gap-8">
+        <ul className="flex w-full flex-col items-center gap-6 lg:flex-row lg:items-center lg:gap-8">
           {navLinks.map((navItem) => (
             <li className="list-none" key={`nav-${navItem.name}`}>
               <Button href={navItem.href} onClick={handleToggleMenu}>
@@ -62,7 +62,7 @@ const Navbar = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleToggleMenu}
-                className="flex items-center text-primary-accent"
+                className="flex items-center text-primary-accent hover:text-primary-teal transition-colors duration-200"
               >
                 <span className="lg:hidden">{link.name}</span>
                 <span className="hidden lg:inline">{link.shortName}</span>
