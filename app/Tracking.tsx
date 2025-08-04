@@ -46,6 +46,9 @@ export default function Tracking() {
       <Script
         id="facebook-pixel"
         strategy="afterInteractive"
+        onError={() => {
+          console.warn('Facebook Pixel blocked by ad blocker - this is normal');
+        }}
         dangerouslySetInnerHTML={{
           __html: `
             !function(f,b,e,v,n,t,s) {
@@ -76,10 +79,16 @@ export default function Tracking() {
         src="https://scripts.simpleanalyticscdn.com/latest.js"
         strategy="afterInteractive"
         defer
+        onError={() => {
+          console.warn(
+            'Simple Analytics blocked by ad blocker - this is normal',
+          );
+        }}
       />
 
-      {/* Cookie Consent - Only load in production */}
-      {process.env.NODE_ENV === 'production' && (
+      {/* Cookie Consent - Load in production or when NEXT_PUBLIC_COOKIEYES_ENABLED is set */}
+      {(process.env.NODE_ENV === 'production' ||
+        process.env.NEXT_PUBLIC_COOKIEYES_ENABLED === 'true') && (
         <Script
           id="cookieyes"
           src="https://cdn-cookieyes.com/client_data/f49132772cc1d9f89dfe9534/script.js"
