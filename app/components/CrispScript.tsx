@@ -12,6 +12,7 @@ declare global {
 export default function CrispScript() {
   useEffect(() => {
     try {
+      console.log('Initializing Crisp chat...');
       window.$crisp = [];
       window.CRISP_WEBSITE_ID = '1f275037-ca55-460f-841b-a7c70d5d03b6';
 

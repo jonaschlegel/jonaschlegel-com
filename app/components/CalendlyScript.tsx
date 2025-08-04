@@ -12,6 +12,12 @@ export default function CalendlyScript() {
       <Script
         src="https://assets.calendly.com/assets/external/widget.js"
         strategy="lazyOnload"
+        onLoad={() => {
+          console.log('Calendly script loaded successfully');
+        }}
+        onError={() => {
+          console.error('Failed to load Calendly script');
+        }}
       />
     </>
   );

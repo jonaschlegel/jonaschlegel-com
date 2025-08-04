@@ -57,7 +57,7 @@ const nextConfig: NextConfig = {
           {
             key: 'Content-Security-Policy',
             value:
-              "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' assets.calendly.com client.crisp.chat settings.crisp.chat widget.crisp.chat storage.crisp.chat; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' client.crisp.chat settings.crisp.chat wss://client.crisp.chat; frame-src 'self' calendly.com;",
+              "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' assets.calendly.com client.crisp.chat settings.crisp.chat widget.crisp.chat storage.crisp.chat cdn-cookieyes.com www.googletagmanager.com connect.facebook.net scripts.simpleanalyticscdn.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com assets.calendly.com client.crisp.chat; font-src 'self' fonts.gstatic.com client.crisp.chat; img-src 'self' data: blob: www.google-analytics.com www.facebook.com client.crisp.chat; connect-src 'self' client.crisp.chat settings.crisp.chat wss://client.crisp.chat wss://client.relay.crisp.chat www.google-analytics.com api.crisp.chat client.relay.crisp.chat; frame-src 'self' calendly.com;",
           },
         ],
       },

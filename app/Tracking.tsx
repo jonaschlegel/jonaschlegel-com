@@ -78,12 +78,20 @@ export default function Tracking() {
         defer
       />
 
-      {/* Cookie Consent */}
-      <Script
-        id="cookieyes"
-        src="https://cdn-cookieyes.com/client_data/f49132772cc1d9f89dfe9534/script.js"
-        strategy="afterInteractive"
-      />
+      {/* Cookie Consent - Only load in production */}
+      {process.env.NODE_ENV === 'production' && (
+        <Script
+          id="cookieyes"
+          src="https://cdn-cookieyes.com/client_data/f49132772cc1d9f89dfe9534/script.js"
+          strategy="afterInteractive"
+          onLoad={() => {
+            console.log('CookieYes script loaded successfully');
+          }}
+          onError={() => {
+            console.error('Failed to load CookieYes script');
+          }}
+        />
+      )}
     </>
   );
 }

@@ -8,7 +8,11 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "verbatimModuleSyntax": true,
-    "lib": ["ES2024", "DOM", "DOM.Iterable"],
+    "lib": [
+      "ES2024",
+      "DOM",
+      "DOM.Iterable"
+    ],
     "target": "ES2022",
     "noEmit": true,
     "strict": true,
@@ -16,7 +20,6 @@
     "noUncheckedIndexedAccess": true,
     "skipLibCheck": true,
     "incremental": true,
-
     // Next.js specific configuration
     "plugins": [
       {
@@ -33,5 +36,8 @@
     "**/*.cjs",
     "**/*.mjs",
     ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }

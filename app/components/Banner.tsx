@@ -24,7 +24,13 @@ const Banner: FC = () => {
           </div>
           <div className="shrink-0">
             <div className="relative aspect-square size-32 overflow-hidden rounded-full lg:size-48">
-              <Image src={jonaImage} alt="jona" fill className="object-cover" />
+              <Image
+                src={jonaImage}
+                alt="jona"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 128px, 192px"
+              />
             </div>
           </div>
         </div>
