@@ -74,18 +74,6 @@ export default function Tracking() {
         }}
       />
 
-      {/* Simple Analytics */}
-      <Script
-        src="https://scripts.simpleanalyticscdn.com/latest.js"
-        strategy="afterInteractive"
-        defer
-        onError={() => {
-          console.warn(
-            'Simple Analytics blocked by ad blocker - this is normal',
-          );
-        }}
-      />
-
       {/* Cookie Consent - Load in production or when NEXT_PUBLIC_COOKIEYES_ENABLED is set */}
       {(process.env.NODE_ENV === 'production' ||
         process.env.NEXT_PUBLIC_COOKIEYES_ENABLED === 'true') && (
