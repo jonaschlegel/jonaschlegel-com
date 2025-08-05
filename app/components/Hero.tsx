@@ -10,10 +10,11 @@ const Hero = () => {
       <div className="relative mb-4 aspect-[4/1] w-full overflow-hidden rounded-[2.5rem]">
         <Image
           src={heroSectionData.bgImage}
-          alt="hero header"
+          alt="Archaeological illustration and scientific communication background showcasing Jona Schlegel's work"
           fill
           className="object-cover"
           sizes="100%"
+          priority
         />
       </div>
       <div className="flex flex-col justify-between gap-6 md:flex-row">
@@ -37,9 +38,10 @@ const Hero = () => {
       <div className="relative bottom-0 mb-0 aspect-square w-full overflow-hidden pt-8 md:absolute md:left-[40%] md:aspect-[4/6] md:h-3/4 md:w-auto md:pt-0 xl:h-full">
         <Image
           src={heroSectionData.heroImage}
-          alt="hero header"
+          alt="Jona Schlegel - Scientific Illustrator, Web Developer, and Archaeological Communicator"
           fill
           className="object-contain hover:opacity-60"
+          sizes="(max-width: 768px) 100vw, 60vw"
         />{' '}
       </div>
     </div>

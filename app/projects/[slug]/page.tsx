@@ -1,9 +1,10 @@
-import type { MDXComponents } from 'mdx/types';
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import type { JSX } from 'react';
+import React from 'react';
 import type { ProjectType } from '../../../types/global';
 import { projectsData } from '../../data/content';
+import { generateProjectOGImageUrl } from '../../lib/og-utils';
 
 interface ProjectPageProps {
   params: Promise<Params>;
@@ -13,10 +14,96 @@ interface Params {
   slug: string;
 }
 
-export function generateStaticParams(): Array<{ slug: string }> {
-  return projectsData.projectsList.map((project) => ({
-    slug: project.slug,
-  }));
+// Temporarily disable static generation to resolve build issues
+export const dynamic = 'force-dynamic';
+
+// Dynamic import function for MDX files
+async function importProjectMdx(
+  slug: string,
+): Promise<React.ComponentType | null> {
+  try {
+    const { default: mdxContent } = await import(
+      `../../data/projects/${slug}.mdx`
+    );
+    return mdxContent as React.ComponentType;
+  } catch (error) {
+    console.warn(`No MDX file found for project: ${slug}`, error);
+    return null;
+  }
+}
+
+// export function generateStaticParams(): Array<{ slug: string }> {
+//   return projectsData.projectsList.map((project) => ({
+//     slug: project.slug,
+//   }));
+// }
+
+export async function generateMetadata({
+  params,
+}: ProjectPageProps): Promise<Metadata> {
+  const slug = (await params).slug;
+  const project: ProjectType | undefined = projectsData.projectsList.find(
+    (proj) => proj.slug === slug,
+  );
+
+  if (!project) {
+    return {
+      title: 'Project Not Found',
+      description: 'The requested project could not be found.',
+    };
+  }
+
+  const projectTitle = `${project.name} - Project Portfolio`;
+  const projectDescription =
+    project.description ||
+    `Explore ${project.name}, a project by Jona Schlegel showcasing expertise in archaeological research, science communication, and knowledge management.`;
+
+  // Create OG image URL with project data
+  const ogImageUrl = generateProjectOGImageUrl({
+    title: project.name,
+    description: project.description,
+    services: project.services,
+  });
+
+  return {
+    title: projectTitle,
+    description: projectDescription,
+    keywords: [
+      'archaeology project',
+      'science communication',
+      project.name.toLowerCase(),
+      'archaeological research',
+      'portfolio project',
+      'knowledge management',
+      'public engagement',
+      'archaeological illustration',
+    ],
+    openGraph: {
+      title: projectTitle,
+      description: projectDescription,
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: `${project.name} - Archaeological Project by Jona Schlegel`,
+        },
+      ],
+      type: 'article',
+      authors: ['Jona Schlegel'],
+      section: 'Projects',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: projectTitle,
+      description: projectDescription,
+      images: [ogImageUrl],
+      creator: '@jonaschlegel',
+    },
+    alternates: {
+      canonical: `https://jonaschlegel.com/projects/${slug}`,
+    },
+  };
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
@@ -30,14 +117,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     return null;
   }
 
-  // Load MDX content dynamically
-  const MDXContent = (
-    (await import(`../../data/projects/${project.slug}.mdx`)) as {
-      default: (props: {
-        readonly components?: MDXComponents | undefined;
-      }) => JSX.Element;
-    }
-  ).default;
+  // Try to load the MDX content for this project
+  const mdxContent = await importProjectMdx(slug);
 
   return (
     <div className="container mx-auto py-16">
@@ -48,12 +129,29 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           width={2000}
           height={1000}
           className="object-cover"
+          priority
         />
       </div>
-      <div className="md:px-10 lg:px-[140px]">
-        <h1>{project.name}</h1>
-        <MDXContent />
-      </div>
+      <article className="prose prose-lg prose-invert max-w-none md:px-10 lg:px-[140px]">
+        {mdxContent ? (
+          React.createElement(mdxContent)
+        ) : (
+          // Fallback content if no MDX file exists
+          <>
+            <header>
+              <h1>{project.name}</h1>
+            </header>
+            <div>
+              <h2>About this project</h2>
+              <p>{project.description}</p>
+              <p>Services: {project.services.join(', ')}</p>
+              <p>
+                <em>Full project content coming soon...</em>
+              </p>
+            </div>
+          </>
+        )}
+      </article>
     </div>
   );
 }

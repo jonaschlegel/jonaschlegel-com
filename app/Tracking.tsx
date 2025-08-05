@@ -1,3 +1,5 @@
+'use client';
+
 import Script from 'next/script.js';
 
 const googleAnalyticsTrackingId = 'G-6S9J34MPR3';
@@ -5,8 +7,14 @@ const googleAnalyticsTrackingId = 'G-6S9J34MPR3';
 export default function Tracking() {
   return (
     <>
+      {/* Google Analytics */}
       <Script
-        id="_next-ga-init"
+        src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsTrackingId}`}
+        strategy="afterInteractive"
+      />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
               window.dataLayer = window.dataLayer || [];
@@ -26,17 +34,21 @@ export default function Tracking() {
               gtag('set', 'ads_data_redaction', true);
               gtag('set', 'url_passthrough', true);
               gtag('js', new Date());
-              gtag('config', '${googleAnalyticsTrackingId}');
+              gtag('config', '${googleAnalyticsTrackingId}', {
+                page_title: document.title,
+                page_location: window.location.href
+              });
             `,
         }}
       />
+
+      {/* Facebook Pixel */}
       <Script
-        id="_next-ga"
-        src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsTrackingId}`}
-      />
-      <Script
-        id="fb-pixel"
+        id="facebook-pixel"
         strategy="afterInteractive"
+        onError={() => {
+          console.warn('Facebook Pixel blocked by ad blocker - this is normal');
+        }}
         dangerouslySetInnerHTML={{
           __html: `
             !function(f,b,e,v,n,t,s) {
@@ -61,15 +73,22 @@ export default function Tracking() {
           `,
         }}
       />
-      <Script
-        src="https://scripts.simpleanalyticscdn.com/latest.js"
-        strategy="afterInteractive"
-        defer
-      />
-      <Script
-        id="cookieyes"
-        src="https://cdn-cookieyes.com/client_data/f49132772cc1d9f89dfe9534/script.js"
-      />
+
+      {/* Cookie Consent - Load in production or when NEXT_PUBLIC_COOKIEYES_ENABLED is set */}
+      {(process.env.NODE_ENV === 'production' ||
+        process.env.NEXT_PUBLIC_COOKIEYES_ENABLED === 'true') && (
+        <Script
+          id="cookieyes"
+          src="https://cdn-cookieyes.com/client_data/f49132772cc1d9f89dfe9534/script.js"
+          strategy="afterInteractive"
+          onLoad={() => {
+            console.log('CookieYes script loaded successfully');
+          }}
+          onError={() => {
+            console.error('Failed to load CookieYes script');
+          }}
+        />
+      )}
     </>
   );
 }

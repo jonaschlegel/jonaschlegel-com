@@ -1,3 +1,18 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy',
+  description:
+    'Privacy policy for jonaschlegel.com detailing how personal data is collected, used, and protected in compliance with GDPR.',
+  robots: {
+    index: true,
+    follow: false,
+  },
+  alternates: {
+    canonical: 'https://jonaschlegel.com/privacy-policy',
+  },
+};
+
 export default function PrivacyPolicy() {
   return (
     <div className="container mx-auto px-4 py-16">

@@ -1,7 +1,26 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "eslint-config-upleveled/tsconfig.base.json",
   "compilerOptions": {
+    // Base configuration from eslint-config-upleveled
+    "module": "Preserve",
+    "moduleDetection": "force",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "verbatimModuleSyntax": true,
+    "lib": [
+      "ES2024",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "target": "ES2022",
+    "noEmit": true,
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "skipLibCheck": true,
+    "incremental": true,
+    // Next.js specific configuration
     "plugins": [
       {
         "name": "next"
@@ -17,5 +36,8 @@
     "**/*.cjs",
     "**/*.mjs",
     ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
