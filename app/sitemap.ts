@@ -24,6 +24,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       'trowel-journal-blog',
       'archaeo-zine',
       'roman-burial',
+      'necessary-reunions',
+      'pastrace',
     ];
   }
 
