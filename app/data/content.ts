@@ -13,6 +13,7 @@ import overview from '../images/overview.webp';
 import adventuressCover from '../images/projects/adventuress-cover.jpg';
 import archaeoZine from '../images/projects/archaeo-zine.jpg';
 import exploringArchaeologicalDisciplines from '../images/projects/exploring-archaeological-disciplines.jpg';
+import geophysicalProspection from '../images/projects/geophysical-prospection.webp';
 import necessaryReunions from '../images/projects/necessary-reunions.png';
 import pastrace from '../images/projects/pastrace.jpg';
 import romanBurial from '../images/projects/roman-burial.jpg';
@@ -158,6 +159,16 @@ export const projectsData = {
     },
     {
       id: '8',
+      name: 'Müstair UNESCO Heritage Site Survey',
+      slug: 'geophysical-prospection-study',
+      image: geophysicalProspection,
+      description:
+        'Geophysical investigation of the medieval monastery revealing hidden monastic landscapes through magnetometry and GPR survey.',
+      services: ['archaeological research & communication'],
+      isFeatured: true,
+    },
+    {
+      id: '9',
       name: 'PasTrace',
       slug: 'pastrace',
       image: pastrace,

@@ -25,6 +25,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       'archaeo-zine',
       'roman-burial',
       'necessary-reunions',
+      'geophysical-prospection-study',
       'pastrace',
     ];
   }
