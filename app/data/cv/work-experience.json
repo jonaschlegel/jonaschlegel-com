@@ -5,9 +5,44 @@
     "startDate": "January 2024",
     "endDate": "Present",
     "description": "Providing services in scientific communication, including web development (consulting and execution), illustration, knowledge management, database structures (CIDOC CRM), and controlled vocabulary for archaeological data sharing.",
-    "location": "Vienna, Austria",
+    "location": "Amsterdam, Netherlands",
     "director": "Jonas Schlegel",
-    "url": "https://jonaschlegel.com"
+    "url": "https://jonaschlegel.com",
+    "connected project(s)": [
+      {
+        "title": "Necessary Reunions",
+        "startDate": "April 2025",
+        "endDate": "October 2025",
+        "location": "Amsterdam, Netherlands",
+        "role(s)": [
+          "CIDOC CRM data model",
+          "web development",
+          "III viewer",
+          "web design"
+        ],
+        "url": "https://necessaryreunions.com/"
+      },
+      {
+        "title": "PastForwardHub",
+        "startDate": "December 2024",
+        "endDate": "Present",
+        "location": "Vienna, Austria",
+        "role(s)": ["web development"],
+        "url": "https://pastforwardhub.com/"
+      },
+      {
+        "title": "Things We Threw Away",
+        "startDate": "December 2024",
+        "endDate": "Present",
+        "location": "Amsterdam, Netherlands",
+        "role(s)": [
+          "podcast episode scripting",
+          "podcast episode recording",
+          "podcast episode editing"
+        ],
+        "url": "https://thingswethrewaway.substack.com/"
+      }
+    ]
   },
   {
     "title": "Researcher",
