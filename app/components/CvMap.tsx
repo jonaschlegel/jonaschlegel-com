@@ -37,16 +37,6 @@ interface CvMapProps {
   className?: string;
 }
 
-interface MapComponentProps {
-  locations: Location[];
-  projectData: {
-    [locationName: string]: {
-      projects: WorkProject[];
-      workExperiences: WorkExperience[];
-    };
-  };
-}
-
 const CvMap: React.FC<CvMapProps> = ({ workExperience, className = '' }) => {
   const [locations, setLocations] = useState<Location[]>([]);
   const [projectData, setProjectData] = useState<{
@@ -83,7 +73,7 @@ const CvMap: React.FC<CvMapProps> = ({ workExperience, className = '' }) => {
 
           // Add connected projects
           if (work['connected project(s)']) {
-            work['connected project(s)']!.forEach((project) => {
+            work['connected project(s)'].forEach((project) => {
               if (!processedData[project.location]) {
                 processedData[project.location] = {
                   projects: [],

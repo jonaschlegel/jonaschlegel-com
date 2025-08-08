@@ -37,7 +37,7 @@ interface MapComponentProps {
   };
 }
 
-const MapComponent = dynamic(
+const mapComponent = dynamic(
   () =>
     import('./MapComponent') as Promise<{
       default: ComponentType<MapComponentProps>;
@@ -52,4 +52,4 @@ const MapComponent = dynamic(
   },
 );
 
-export default MapComponent;
+export default mapComponent;

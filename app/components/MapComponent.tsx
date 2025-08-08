@@ -1,10 +1,10 @@
 'use client';
 
 import L from 'leaflet';
-import { useEffect } from 'react';
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 
 // Fix for default markers in react-leaflet
+// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
 delete (L.Icon.Default.prototype as any)._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl:
@@ -127,7 +127,7 @@ const MapComponent: React.FC<MapComponentProps> = ({
 
         return (
           <Marker
-            key={location.name}
+            key={`marker-${location.name}`}
             position={location.coordinates}
             icon={createCustomIcon(markerType)}
           >
@@ -142,8 +142,11 @@ const MapComponent: React.FC<MapComponentProps> = ({
                     <h4 className="font-semibold text-xs text-primary-green mb-1">
                       Work Experience
                     </h4>
-                    {data.workExperiences.map((work, index) => (
-                      <div key={index} className="mb-2 text-xs">
+                    {data.workExperiences.map((work) => (
+                      <div
+                        key={`work-${work.title}-${work.startDate}`}
+                        className="mb-2 text-xs"
+                      >
                         <div className="font-medium">{work.title}</div>
                         <div className="text-gray-600">{work.organization}</div>
                         <div className="text-gray-500">
@@ -159,8 +162,11 @@ const MapComponent: React.FC<MapComponentProps> = ({
                     <h4 className="font-semibold text-xs text-primary-teal mb-1">
                       Projects
                     </h4>
-                    {data.projects.map((project, index) => (
-                      <div key={index} className="mb-2 text-xs">
+                    {data.projects.map((project) => (
+                      <div
+                        key={`project-${project.title}-${project.startDate || 'no-date'}`}
+                        className="mb-2 text-xs"
+                      >
                         <div className="font-medium">{project.title}</div>
                         {project.startDate && (
                           <div className="text-gray-500">
@@ -168,9 +174,9 @@ const MapComponent: React.FC<MapComponentProps> = ({
                           </div>
                         )}
                         {project['role(s)'] &&
-                          project['role(s)']!.length > 0 && (
+                          project['role(s)'].length > 0 && (
                             <div className="text-gray-600 text-xs">
-                              {project['role(s)']!.join(', ')}
+                              {project['role(s)'].join(', ')}
                             </div>
                           )}
                         {project.url && (
