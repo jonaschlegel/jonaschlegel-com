@@ -46,3 +46,12 @@ declare module '*.mdx' {
   let MDXComponent: (props: any) => JSX.Element;
   export default MDXComponent;
 }
+
+// Global window extensions for tracking scripts
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+    fbq?: (...args: any[]) => void;
+    dataLayer?: any[];
+  }
+}
