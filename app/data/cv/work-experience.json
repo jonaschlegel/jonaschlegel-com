@@ -100,6 +100,31 @@
           "terrestrial laser scanning",
           "excavation leader"
         ]
+      },
+      {
+        "title": "Magnetic survey",
+        "location": "Eggendorf am Walde, Austria",
+        "role(s)": ["magnetic survey"]
+      },
+      {
+        "title": "Magnetic and ground-penetrating radar survey",
+        "location": "Triesen, Liechtenstein",
+        "role(s)": [
+          "magnetic survey",
+          "ground-penetrating radar survey",
+          "report writing",
+          "GIS data interpretation"
+        ]
+      },
+      {
+        "title": "Terrestrial survey",
+        "location": "Piber, Austria",
+        "role(s)": ["terrestrial survey"]
+      },
+      {
+        "title": "Magnetic survey",
+        "location": "Oberiet, Switzerland",
+        "role(s)": ["magnetic survey"]
       }
     ],
     "url": "https://www.lbi-archpro.ac.at/en/"
@@ -250,7 +275,7 @@
     "connected project(s)": [
       {
         "title": "Rescue Excavations of a Roman villa",
-        "startDate": "October 2011",
+        "startDate": "March 2012",
         "endDate": "May 2012",
         "location": "Inden, Germany",
         "role(s)": [
@@ -260,11 +285,39 @@
         ]
       },
       {
-        "title": "Technical documentation of a barroque garden",
-        "startDate": "October 2011",
+        "title": "Technical documentation of a Roman gate situation",
+        "startDate": "May 2012",
         "endDate": "May 2012",
-        "location": "Cologne, Germany",
+        "location": "Langerwehe, Germany",
+        "role(s)": ["surveying with total station"]
+      },
+      {
+        "title": "Survey of medieval grinding stone quarries",
+        "startDate": "February 2012",
+        "endDate": "February 2012",
+        "location": "Nideggen, Germany",
+        "role(s)": ["surveying with total station"]
+      },
+      {
+        "title": "Technical documentation of a barroque garden",
+        "startDate": "January 2012",
+        "endDate": "January 2012",
+        "location": "Brühl, Germany",
         "role(s)": ["technical drawing", "surveying with total station"]
+      },
+      {
+        "title": "Part of a neolithic settlement rescue excavation",
+        "startDate": "November 2011",
+        "endDate": "December 2011",
+        "location": "Emden, Germany",
+        "role(s)": ["technical drawing", "written documentation", "excavation"]
+      },
+      {
+        "title": "Part of an iron age storage pit rescue excavation",
+        "startDate": "October 2011",
+        "endDate": "November 2011",
+        "location": "Weilerswist, Germany",
+        "role(s)": ["technical drawing", "written documentation", "excavation"]
       }
     ]
   }

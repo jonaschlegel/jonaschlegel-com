@@ -1,0 +1,272 @@
+[
+  {
+    "name": "Amsterdam",
+    "country": "Netherlands",
+    "fullName": "Amsterdam, Netherlands",
+    "coordinates": {
+      "lat": 52.3676,
+      "lng": 4.9041
+    }
+  },
+  {
+    "name": "Berlin",
+    "country": "Germany",
+    "fullName": "Berlin, Germany",
+    "coordinates": {
+      "lat": 52.52,
+      "lng": 13.405
+    }
+  },
+  {
+    "name": "Brühl",
+    "country": "Germany",
+    "fullName": "Brühl, Germany",
+    "coordinates": {
+      "lat": 50.8278,
+      "lng": 6.9056
+    }
+  },
+  {
+    "name": "Eggendorf am Walde",
+    "country": "Austria",
+    "fullName": "Eggendorf am Walde, Austria",
+    "coordinates": {
+      "lat": 48.6833,
+      "lng": 15.8
+    }
+  },
+  {
+    "name": "Ellwangen",
+    "country": "Germany",
+    "fullName": "Ellwangen, Germany",
+    "coordinates": {
+      "lat": 48.9611,
+      "lng": 10.1319
+    }
+  },
+  {
+    "name": "Emden",
+    "country": "Germany",
+    "fullName": "Emden, Germany",
+    "coordinates": {
+      "lat": 53.3594,
+      "lng": 7.2061
+    }
+  },
+  {
+    "name": "Fier",
+    "country": "Albania",
+    "fullName": "Fier, Albania",
+    "coordinates": {
+      "lat": 40.7239,
+      "lng": 19.5564
+    }
+  },
+  {
+    "name": "Germolles",
+    "country": "France",
+    "fullName": "Germolles, France",
+    "coordinates": {
+      "lat": 46.6833,
+      "lng": 4.7167
+    }
+  },
+  {
+    "name": "Glac",
+    "country": "Serbia",
+    "fullName": "Glac, Serbia",
+    "coordinates": {
+      "lat": 43.8833,
+      "lng": 19.8667
+    }
+  },
+  {
+    "name": "Granada",
+    "country": "Spain",
+    "fullName": "Granada, Spain",
+    "coordinates": {
+      "lat": 37.1773,
+      "lng": -3.5986
+    }
+  },
+  {
+    "name": "Hattersum",
+    "country": "Germany",
+    "fullName": "Hattersum, Germany",
+    "coordinates": {
+      "lat": 53.2833,
+      "lng": 7.3
+    }
+  },
+  {
+    "name": "Herforst",
+    "country": "Germany",
+    "fullName": "Herforst, Germany",
+    "coordinates": {
+      "lat": 49.8167,
+      "lng": 6.5833
+    }
+  },
+  {
+    "name": "Inden",
+    "country": "Germany",
+    "fullName": "Inden, Germany",
+    "coordinates": {
+      "lat": 50.8667,
+      "lng": 6.3167
+    }
+  },
+  {
+    "name": "Isparta",
+    "country": "Turkey",
+    "fullName": "Isparta, Turkey",
+    "coordinates": {
+      "lat": 37.7648,
+      "lng": 30.5566
+    }
+  },
+  {
+    "name": "Istanbul",
+    "country": "Turkey",
+    "fullName": "Istanbul, Turkey",
+    "coordinates": {
+      "lat": 41.0082,
+      "lng": 28.9784
+    }
+  },
+  {
+    "name": "Kleinhadersdorf",
+    "country": "Austria",
+    "fullName": "Kleinhadersdorf, Austria",
+    "coordinates": {
+      "lat": 48.5167,
+      "lng": 16.6333
+    }
+  },
+  {
+    "name": "Langerwehe",
+    "country": "Germany",
+    "fullName": "Langerwehe, Germany",
+    "coordinates": {
+      "lat": 50.8167,
+      "lng": 6.35
+    }
+  },
+  {
+    "name": "Montlingerberg",
+    "country": "Switzerland",
+    "fullName": "Montlingerberg, Switzerland",
+    "coordinates": {
+      "lat": 47.4167,
+      "lng": 9.5333
+    }
+  },
+  {
+    "name": "Nideggen",
+    "country": "Germany",
+    "fullName": "Nideggen, Germany",
+    "coordinates": {
+      "lat": 50.6906,
+      "lng": 6.4828
+    }
+  },
+  {
+    "name": "Nideggen-Wollersheim",
+    "country": "Germany",
+    "fullName": "Nideggen-Wollersheim, Germany",
+    "coordinates": {
+      "lat": 50.6833,
+      "lng": 6.4667
+    }
+  },
+  {
+    "name": "Oberiet",
+    "country": "Switzerland",
+    "fullName": "Oberiet, Switzerland",
+    "coordinates": {
+      "lat": 47.4167,
+      "lng": 9.4833
+    }
+  },
+  {
+    "name": "Piber",
+    "country": "Austria",
+    "fullName": "Piber, Austria",
+    "coordinates": {
+      "lat": 47.0833,
+      "lng": 15.1667
+    }
+  },
+  {
+    "name": "Pliska",
+    "country": "Bulgaria",
+    "fullName": "Pliska, Bulgaria",
+    "coordinates": {
+      "lat": 43.3833,
+      "lng": 27.1333
+    }
+  },
+  {
+    "name": "Rocher-des-Aures",
+    "country": "France",
+    "fullName": "Rocher-des-Aures, France",
+    "coordinates": {
+      "lat": 46.0833,
+      "lng": 6.1667
+    }
+  },
+  {
+    "name": "Selçuk",
+    "country": "Turkey",
+    "fullName": "Selçuk, Turkey",
+    "coordinates": {
+      "lat": 37.9519,
+      "lng": 27.3692
+    }
+  },
+  {
+    "name": "Tieschen",
+    "country": "Austria",
+    "fullName": "Tieschen, Austria",
+    "coordinates": {
+      "lat": 46.8,
+      "lng": 15.8
+    }
+  },
+  {
+    "name": "Triesen",
+    "country": "Liechtenstein",
+    "fullName": "Triesen, Liechtenstein",
+    "coordinates": {
+      "lat": 47.1069,
+      "lng": 9.5275
+    }
+  },
+  {
+    "name": "Vienna",
+    "country": "Austria",
+    "fullName": "Vienna, Austria",
+    "coordinates": {
+      "lat": 48.2082,
+      "lng": 16.3738
+    }
+  },
+  {
+    "name": "Vig",
+    "country": "Albania",
+    "fullName": "Vig, Albania",
+    "coordinates": {
+      "lat": 41.2833,
+      "lng": 19.5333
+    }
+  },
+  {
+    "name": "Weilerswist",
+    "country": "Germany",
+    "fullName": "Weilerswist, Germany",
+    "coordinates": {
+      "lat": 50.75,
+      "lng": 6.85
+    }
+  }
+]
