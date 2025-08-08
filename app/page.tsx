@@ -1,14 +1,17 @@
 import type { Metadata } from 'next';
 import Banner from './components/Banner';
+import FAQSection, { defaultFAQs } from './components/FAQSection';
 import FeaturedProjects from './components/FeaturedProjects';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import Testimonials from './components/Testimonials';
+import { generateSEOMetadata } from './lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = generateSEOMetadata({
   title: 'Home',
   description:
-    "Welcome to Jona Schlegel's professional portfolio. Specializing in archaeological science communication, knowledge management, and public engagement. Explore innovative approaches to sharing archaeological insights.",
+    "Welcome to Jona Schlegel's professional portfolio. Specializing in archaeological science communication, knowledge management, and public engagement. Explore innovative approaches to sharing archaeological insights with academic rigor and creative presentation.",
+  canonical: 'https://jonaschlegel.com',
   keywords: [
     'archaeology portfolio',
     'science communication specialist',
@@ -18,34 +21,56 @@ export const metadata: Metadata = {
     'archaeological illustration',
     'heritage studies',
     'digital archaeology',
+    'academic communication',
+    'research portfolio',
   ],
-  openGraph: {
-    title:
-      'Jona Schlegel – Archaeological Science Communication & Knowledge Management',
-    description:
-      "Welcome to Jona Schlegel's professional portfolio. Specializing in archaeological science communication, knowledge management, and public engagement.",
-    images: [
-      {
-        url: '/api/og?title=Welcome%20to%20my%20Portfolio&subtitle=Archaeological%20Science%20Communication%20%26%20Knowledge%20Management',
-        width: 1200,
-        height: 630,
-        alt: 'Jona Schlegel - Archaeology & Science Communication Portfolio',
-      },
-    ],
-  },
-  alternates: {
-    canonical: 'https://jonaschlegel.com',
-  },
-};
+  ogType: 'website',
+});
 
 export default function HomePage() {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Jona Schlegel - Archaeological Science Communication & Knowledge Management',
+    description:
+      'Professional portfolio showcasing expertise in archaeological research, science communication, and knowledge management',
+    url: 'https://jonaschlegel.com',
+    mainEntity: {
+      '@type': 'Person',
+      name: 'Jona Schlegel',
+      jobTitle: 'Archaeological Science Communication Specialist',
+      description:
+        'Expert in archaeological research, science communication, and knowledge management',
+      url: 'https://jonaschlegel.com',
+      knowsAbout: [
+        'Archaeology',
+        'Science Communication',
+        'Knowledge Management',
+        'Public Engagement',
+        'Digital Heritage',
+        'Academic Research',
+      ],
+    },
+  };
+
   return (
-    <div>
-      <Hero />
-      <Banner />
-      <FeaturedProjects />
-      <Services />
-      <Testimonials />
-    </div>
+    <>
+      <div>
+        <Hero />
+        <Banner />
+        <FeaturedProjects />
+        <Services />
+        <Testimonials />
+        <FAQSection faqs={defaultFAQs} />
+      </div>
+
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
+      />
+    </>
   );
 }

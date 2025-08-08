@@ -2,34 +2,28 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import type { Metadata } from 'next';
 import { Fragment } from 'react';
+import Breadcrumbs from '../components/Breadcrumbs';
 import CvMap from '../components/CvMap';
 import CvTabs from '../components/CvTabs';
+import { generateSEOMetadata } from '../lib/seo';
 
-export const metadata: Metadata = {
-  title: "Jona Schlegel's CV – Archaeology & Science Communication",
+export const metadata: Metadata = generateSEOMetadata({
+  title: 'Curriculum Vitae',
   description:
-    "Explore Jona Schlegel's detailed CV, showcasing a journey in archaeological research, science communication, and education.",
-  openGraph: {
-    title: "Jona Schlegel's CV – Archaeology & Science Communication",
-    description:
-      "Explore Jona Schlegel's detailed CV, showcasing a journey in archaeological research, science communication, and education.",
-    images: [
-      {
-        url: '/api/og/cv',
-        width: 1200,
-        height: 630,
-        alt: "Jona Schlegel's CV",
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: "Jona Schlegel's CV – Archaeology & Science Communication",
-    description:
-      "Explore Jona Schlegel's detailed CV, showcasing a journey in archaeological research, science communication, and education.",
-    images: ['/api/og/cv'],
-  },
-};
+    "Explore Jona Schlegel's comprehensive CV, showcasing expertise in archaeological research, science communication, and education. Detailed overview of professional experience, academic achievements, and key publications in archaeology.",
+  canonical: 'https://jonaschlegel.com/cv',
+  keywords: [
+    'archaeology CV',
+    'science communication resume',
+    'archaeological researcher',
+    'academic curriculum vitae',
+    'professional experience archaeology',
+    'education background',
+    'publications archaeology',
+    'research experience',
+  ],
+  ogType: 'profile',
+});
 
 interface Job {
   id: string;
@@ -218,7 +212,16 @@ const CvPage = async () => {
   return (
     <div className="min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="mb-8">Curriculum Vitae</h1>
+        <Breadcrumbs />
+        <header className="mb-8">
+          <h1 className="text-4xl font-bold mb-4">Curriculum Vitae</h1>
+          <p className="text-lg text-neutral-300 max-w-3xl">
+            Comprehensive overview of my professional journey in archaeological
+            research, science communication, and education. Explore my academic
+            background, professional experience, and key contributions to the
+            field of archaeology.
+          </p>
+        </header>
 
         {/* CV Map */}
         <div className="mb-8">

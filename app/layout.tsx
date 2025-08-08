@@ -75,9 +75,15 @@ export const metadata: Metadata = {
     canonical: 'https://jonaschlegel.com',
   },
   verification: {
-    google: 'your-google-verification-code', // Replace with actual verification code
+    google: 'your-google-verification-code', // TODO: Replace with actual verification code
     // yandex: 'your-yandex-verification-code',
     // yahoo: 'your-yahoo-verification-code',
+  },
+  other: {
+    // Additional SEO optimizations
+    'format-detection': 'telephone=no',
+    'apple-mobile-web-app-capable': 'yes',
+    'apple-mobile-web-app-status-bar-style': 'black-translucent',
   },
 };
 
