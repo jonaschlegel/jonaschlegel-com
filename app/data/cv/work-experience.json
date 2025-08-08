@@ -74,8 +74,32 @@
       },
       {
         "title": "Herforst",
-        "location": "Vienna, Austria",
+        "location": "Herforst, Germany",
         "role(s)": ["3D modelling", "GIS data interpretation"]
+      },
+      {
+        "title": "Roman city in Serbia",
+        "location": "Glac, Serbia",
+        "role(s)": ["GPR survey", "magnetic survey", "GIS data interpretation"]
+      },
+      {
+        "title": "Pliska",
+        "location": "Pliska, Bulgaria",
+        "role(s)": ["GPR survey", "magnetic survey", "GIS data interpretation"]
+      },
+      {
+        "title": "Excavating the Linear Pottery settlement in Kleinhadersdorf",
+        "location": "Kleinhadersdorf, Austria",
+        "role(s)": ["excavation", "terrestrial laser scanning"]
+      },
+      {
+        "title": "Excavating on the Königsberg",
+        "location": "Tieschen, Austria",
+        "role(s)": [
+          "excavation",
+          "terrestrial laser scanning",
+          "excavation leader"
+        ]
       }
     ],
     "url": "https://www.lbi-archpro.ac.at/en/"
@@ -222,6 +246,26 @@
     "startDate": "October 2011",
     "endDate": "May 2012",
     "description": "Worked on rescue excavations across various sites in Germany, including Bronze and Iron Age settlements, a medieval city gate, a Roman settlement, and a WWII bunker. Responsibilities included excavation, surveying with a total station, technical documentation (drawings, photography), and site management.",
-    "location": "Nideggen-Wollersheim, Germany"
+    "location": "Nideggen-Wollersheim, Germany",
+    "connected project(s)": [
+      {
+        "title": "Rescue Excavations of a Roman villa",
+        "startDate": "October 2011",
+        "endDate": "May 2012",
+        "location": "Inden, Germany",
+        "role(s)": [
+          "excavation",
+          "surveying with total station",
+          "technical documentation"
+        ]
+      },
+      {
+        "title": "Technical documentation of a barroque garden",
+        "startDate": "October 2011",
+        "endDate": "May 2012",
+        "location": "Cologne, Germany",
+        "role(s)": ["technical drawing", "surveying with total station"]
+      }
+    ]
   }
 ]

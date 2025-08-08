@@ -69,3 +69,22 @@ ol {
     padding-right: 4rem;
   }
 }
+
+/* CV Map Styles */
+.cv-map-popup .leaflet-popup-content-wrapper {
+  background-color: #f5f4f2;
+  color: #1c1f23;
+  border-radius: 8px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.cv-map-popup .leaflet-popup-tip {
+  background-color: #f5f4f2;
+}
+
+.custom-marker {
+  background: transparent;
+  border: none;
+}

@@ -730,5 +730,27 @@
     "type": "Presentation",
     "conference": "DigiKult 2019",
     "location": " Krems, Austria"
+  },
+  {
+    "id": 43,
+    "title": "Eggendorf am Walde and Niederleis – two newly discovered Middle Neolithic Kreisgrabenanlagen in Lower Austria",
+    "authors": [
+      "David Ruß",
+      "Jona Schlegel",
+      "Mario Wallner",
+      "Katharina Riederer",
+      "Matthias Kucera",
+      "Hannes Schiel",
+      "Julia Rechling",
+      "Alois Hinterleitner",
+      "Wolfgang Neubauer"
+    ],
+    "date": "April 2025",
+    "url": "",
+    "type": "Conference Contribution",
+    "conference": "Rondels Revisited: Recent Research on Neolithic Circular Enclosures in Central Europe 5000–4500 cal. BC",
+    "location": "Berlin, Germany",
+    "editor": "Wolfgang Schier",
+    "publication": "Berliner Archäologische Forschungen 21"
   }
 ]

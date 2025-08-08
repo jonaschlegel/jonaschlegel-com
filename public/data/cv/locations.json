@@ -1,0 +1,107 @@
+[
+  {
+    "name": "Amsterdam, Netherlands",
+    "coordinates": [52.3676, 4.9041],
+    "type": "city"
+  },
+  {
+    "name": "Vienna, Austria",
+    "coordinates": [48.2082, 16.3738],
+    "type": "city"
+  },
+  {
+    "name": "Berlin, Germany",
+    "coordinates": [52.52, 13.405],
+    "type": "city"
+  },
+  {
+    "name": "Granada, Spain",
+    "coordinates": [37.1773, -3.5986],
+    "type": "city"
+  },
+  {
+    "name": "Rocher-des-Aures, France",
+    "coordinates": [46.1667, 3.0],
+    "type": "archaeological_site"
+  },
+  {
+    "name": "Isparta, Turkey",
+    "coordinates": [37.7648, 30.5566],
+    "type": "city"
+  },
+  {
+    "name": "Istanbul, Turkey",
+    "coordinates": [41.0082, 28.9784],
+    "type": "city"
+  },
+  {
+    "name": "Vig, Albania",
+    "coordinates": [41.3275, 19.8187],
+    "type": "archaeological_site"
+  },
+  {
+    "name": "Selçuk, Turkey",
+    "coordinates": [37.9511, 27.3689],
+    "type": "archaeological_site"
+  },
+  {
+    "name": "Ellwangen, Germany",
+    "coordinates": [48.9616, 10.1321],
+    "type": "city"
+  },
+  {
+    "name": "Germolles, France",
+    "coordinates": [46.85, 4.7833],
+    "type": "archaeological_site"
+  },
+  {
+    "name": "Hattersum, Germany",
+    "coordinates": [53.4833, 7.2167],
+    "type": "archaeological_site"
+  },
+  {
+    "name": "Fier, Albania",
+    "coordinates": [40.7239, 19.5556],
+    "type": "archaeological_site"
+  },
+  {
+    "name": "Nideggen-Wollersheim, Germany",
+    "coordinates": [50.6833, 6.4833],
+    "type": "archaeological_site"
+  },
+  {
+    "name": "Montlingerberg, Switzerland",
+    "coordinates": [47.3833, 9.6333],
+    "type": "archaeological_site"
+  },
+  {
+    "name": "Herforst, Germany",
+    "coordinates": [49.7833, 6.55],
+    "type": "archaeological_site"
+  },
+  {
+    "name": "Glac, Serbia",
+    "coordinates": [44.2654, 21.0197],
+    "type": "archaeological_site"
+  },
+  {
+    "name": "Pliska, Bulgaria",
+    "coordinates": [43.3833, 27.15],
+    "type": "archaeological_site"
+  },
+  {
+    "name": "Kleinhadersdorf, Austria",
+    "coordinates": [48.5167, 16.5833],
+    "type": "archaeological_site"
+  },
+  {
+    "name": "Tieschen, Austria",
+    "coordinates": [46.7833, 15.8167],
+    "type": "archaeological_site"
+  },
+  {
+    "name": "Inden, Germany",
+    "coordinates": [50.8667, 6.35],
+    "type": "archaeological_site"
+  }
+]

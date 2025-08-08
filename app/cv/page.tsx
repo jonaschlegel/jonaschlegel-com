@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import type { Metadata } from 'next';
 import { Fragment } from 'react';
+import CvMap from '../components/CvMap';
 import CvTabs from '../components/CvTabs';
 
 export const metadata: Metadata = {
@@ -218,6 +219,11 @@ const CvPage = async () => {
     <div className="min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="mb-8">Curriculum Vitae</h1>
+
+        {/* CV Map */}
+        <div className="mb-8">
+          <CvMap workExperience={workExperience} />
+        </div>
 
         {/* Mobile Tabs */}
         <div className="block md:hidden">
