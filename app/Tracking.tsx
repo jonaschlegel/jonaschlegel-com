@@ -24,10 +24,25 @@ export default function Tracking() {
     const timeout = setTimeout(() => {
       // Update state for scripts that loaded
       if (typeof window !== 'undefined' && window.gtag) {
-        setScriptsLoaded((prev) => ({ ...prev, ga: true }));
+        setScriptsLoaded((prev) => ({ ...prev, gtag: true }));
       }
       if (typeof window !== 'undefined' && window.fbq) {
-        setScriptsLoaded((prev) => ({ ...prev, fb: true }));
+        setScriptsLoaded((prev) => ({ ...prev, fbpixel: true }));
+      }
+
+      // Check if CookieYes should be loaded but isn't available
+      const shouldLoadCookieYes =
+        process.env.NODE_ENV === 'production' ||
+        process.env.NEXT_PUBLIC_COOKIEYES_ENABLED === 'true';
+
+      if (
+        shouldLoadCookieYes &&
+        typeof window !== 'undefined' &&
+        !('cookieyes' in window) &&
+        !scriptsLoaded.cookieyes
+      ) {
+        // CookieYes failed to load, show fallback
+        setShowFallbackBanner(true);
       }
 
       // Silent fallback for blocked Facebook Pixel
@@ -52,7 +67,7 @@ export default function Tracking() {
     }, 3000);
 
     return () => clearTimeout(timeout);
-  }, []);
+  }, [scriptsLoaded.cookieyes]);
 
   return (
     <>
@@ -61,7 +76,7 @@ export default function Tracking() {
         src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsTrackingId}`}
         strategy="afterInteractive"
         onLoad={() => {
-          setScriptsLoaded((prev) => ({ ...prev, ga: true }));
+          setScriptsLoaded((prev) => ({ ...prev, gtag: true }));
         }}
       />
       <Script
@@ -108,7 +123,7 @@ export default function Tracking() {
         id="facebook-pixel"
         strategy="afterInteractive"
         onLoad={() => {
-          setScriptsLoaded((prev) => ({ ...prev, fb: true }));
+          setScriptsLoaded((prev) => ({ ...prev, fbpixel: true }));
         }}
         onError={() => {
           // Silent fallback when blocked
@@ -178,11 +193,32 @@ export default function Tracking() {
           onLoad={() => {
             setScriptsLoaded((prev) => ({ ...prev, cookieyes: true }));
           }}
-          onError={() => {
-            // Show fallback cookie banner using React state
+          onError={(error) => {
+            // CookieYes script failed to load (403, blocked, etc.)
+            console.warn('CookieYes script blocked or failed to load:', error);
+
+            // Show fallback cookie banner after a short delay
             setTimeout(() => {
               if (!scriptsLoaded.cookieyes) {
                 setShowFallbackBanner(true);
+
+                // Track the fallback usage
+                fetch('/api/analytics', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({
+                    event: 'cookieyes_fallback_shown',
+                    parameters: {
+                      page_location: window.location.href,
+                      page_title: document.title,
+                      blocked_reason: 'script_load_failed',
+                    },
+                    url: window.location.href,
+                    userAgent: navigator.userAgent,
+                  }),
+                }).catch(() => {
+                  // Silent fail
+                });
               }
             }, 1000);
           }}
