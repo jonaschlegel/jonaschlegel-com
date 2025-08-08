@@ -1,7 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 // Simple server-side analytics endpoint as a fallback
-export async function POST(request: NextRequest) {
+
+export async function POST(
+  request: NextRequest,
+): Promise<NextResponse<{ success: boolean } | { error: string }>> {
   try {
     const body = await request.json();
     const { event, parameters, url, userAgent } = body;

@@ -36,7 +36,7 @@ export default function Breadcrumbs({
       >
         {breadcrumbItems.map((item, index) => (
           <li
-            key={item.href || item.label}
+            key={`breadcrumb-${item.href || item.label.replace(/\s+/g, '-').toLowerCase()}`}
             className="flex items-center"
             itemProp="itemListElement"
             itemScope

@@ -64,8 +64,9 @@ export const trackPageView = async (url?: string) => {
 };
 
 export const isTrackingBlocked = () => {
-  if (typeof window === 'undefined')
+  if (typeof window === 'undefined') {
     return { googleAnalytics: true, facebookPixel: true };
+  }
 
   return {
     googleAnalytics: !window.gtag,

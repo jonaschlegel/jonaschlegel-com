@@ -52,7 +52,11 @@ export default function FAQSection({
         <div className="max-w-4xl mx-auto">
           {faqs.map((faq, index) => (
             <div
-              key={index}
+              key={`faq-${faq.question
+                .slice(0, 50)
+                .replace(/\s+/g, '-')
+                .toLowerCase()
+                .replace(/[^a-z0-9-]/g, '')}`}
               className="mb-4 border border-neutral-700 rounded-lg overflow-hidden"
             >
               <button

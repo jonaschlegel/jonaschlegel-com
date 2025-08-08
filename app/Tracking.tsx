@@ -1,16 +1,23 @@
 'use client';
 
-import Script from 'next/script.js';
+import Script from 'next/script';
 import { useEffect, useState } from 'react';
 
 const googleAnalyticsTrackingId = 'G-6S9J34MPR3';
 
+interface ScriptLoadState {
+  gtag: boolean;
+  fbpixel: boolean;
+  cookieyes: boolean;
+}
+
 export default function Tracking() {
-  const [scriptsLoaded, setScriptsLoaded] = useState({
-    ga: false,
-    fb: false,
+  const [scriptsLoaded, setScriptsLoaded] = useState<ScriptLoadState>({
+    gtag: false,
+    fbpixel: false,
     cookieyes: false,
   });
+  const [showFallbackBanner, setShowFallbackBanner] = useState(false);
 
   useEffect(() => {
     // Check after a delay to allow scripts to load, then activate fallbacks if needed
@@ -172,41 +179,51 @@ export default function Tracking() {
             setScriptsLoaded((prev) => ({ ...prev, cookieyes: true }));
           }}
           onError={() => {
-            // Fallback: Simple cookie consent banner
+            // Show fallback cookie banner using React state
             setTimeout(() => {
-              if (
-                !document.getElementById('fallback-cookie-banner') &&
-                !scriptsLoaded.cookieyes
-              ) {
-                const banner = document.createElement('div');
-                banner.id = 'fallback-cookie-banner';
-                banner.style.cssText = `
-                  position: fixed;
-                  bottom: 0;
-                  left: 0;
-                  right: 0;
-                  background: #333;
-                  color: white;
-                  padding: 15px;
-                  text-align: center;
-                  z-index: 9999;
-                  font-family: Arial, sans-serif;
-                  font-size: 14px;
-                `;
-                banner.innerHTML = `
-                  <p style="margin: 0 0 10px 0;">
-                    This website uses cookies to improve your experience.
-                    <button onclick="this.parentElement.parentElement.style.display='none'"
-                            style="background: #007cba; color: white; border: none; padding: 5px 10px; margin-left: 10px; cursor: pointer; border-radius: 3px;">
-                      Accept
-                    </button>
-                  </p>
-                `;
-                document.body.appendChild(banner);
+              if (!scriptsLoaded.cookieyes) {
+                setShowFallbackBanner(true);
               }
             }, 1000);
           }}
         />
+      )}
+
+      {/* Fallback Cookie Banner */}
+      {showFallbackBanner && (
+        <div
+          style={{
+            position: 'fixed',
+            bottom: 0,
+            left: 0,
+            right: 0,
+            background: '#333',
+            color: 'white',
+            padding: '15px',
+            textAlign: 'center',
+            zIndex: 9999,
+            fontFamily: 'Arial, sans-serif',
+            fontSize: '14px',
+          }}
+        >
+          <p style={{ margin: '0 0 10px 0' }}>
+            This website uses cookies to improve your experience.
+            <button
+              onClick={() => setShowFallbackBanner(false)}
+              style={{
+                background: '#007cba',
+                color: 'white',
+                border: 'none',
+                padding: '5px 10px',
+                marginLeft: '10px',
+                cursor: 'pointer',
+                borderRadius: '3px',
+              }}
+            >
+              Accept
+            </button>
+          </p>
+        </div>
       )}
     </>
   );

@@ -11,7 +11,6 @@ interface SEOPageProps {
   modifiedTime?: string;
   author?: string;
   section?: string;
-  structuredData?: Record<string, any>;
 }
 
 export function generateSEOMetadata({
@@ -25,7 +24,6 @@ export function generateSEOMetadata({
   modifiedTime,
   author = 'Jona Schlegel',
   section,
-  structuredData,
 }: SEOPageProps): Metadata {
   const baseUrl = 'https://jonaschlegel.com';
   const fullTitle =
