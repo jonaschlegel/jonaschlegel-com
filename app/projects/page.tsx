@@ -44,7 +44,7 @@ export default function ProjectsPage() {
         url: `https://jonaschlegel.com/projects/${project.slug}`,
         image:
           typeof project.image === 'object' && 'src' in project.image
-            ? `https://jonaschlegel.com${project.image.src}`
+            ? `https://jonaschlegel.com${(project.image as { src: string }).src}`
             : `https://jonaschlegel.com${String(project.image)}`,
       })),
     },
