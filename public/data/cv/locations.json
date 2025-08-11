@@ -9,11 +9,7 @@
     "coordinates": [48.2082, 16.3738],
     "type": "city"
   },
-  {
-    "name": "Berlin, Germany",
-    "coordinates": [52.52, 13.405],
-    "type": "city"
-  },
+  { "name": "Berlin, Germany", "coordinates": [52.52, 13.405], "type": "city" },
   {
     "name": "Granada, Spain",
     "coordinates": [37.1773, -3.5986],
@@ -21,7 +17,7 @@
   },
   {
     "name": "Rocher-des-Aures, France",
-    "coordinates": [46.1667, 3.0],
+    "coordinates": [45.1434277, -2.9994896],
     "type": "archaeological_site"
   },
   {
@@ -36,12 +32,12 @@
   },
   {
     "name": "Vig, Albania",
-    "coordinates": [41.3275, 19.8187],
+    "coordinates": [40.7167, 19.5667],
     "type": "archaeological_site"
   },
   {
     "name": "Selçuk, Turkey",
-    "coordinates": [37.9511, 27.3689],
+    "coordinates": [37.9519, 27.3692],
     "type": "archaeological_site"
   },
   {
@@ -51,57 +47,93 @@
   },
   {
     "name": "Germolles, France",
-    "coordinates": [46.85, 4.7833],
+    "coordinates": [46.6833, 4.7167],
     "type": "archaeological_site"
   },
   {
     "name": "Hattersum, Germany",
-    "coordinates": [53.4833, 7.2167],
+    "coordinates": [53.2833, 7.3],
     "type": "archaeological_site"
   },
   {
     "name": "Fier, Albania",
-    "coordinates": [40.7239, 19.5556],
-    "type": "archaeological_site"
+    "coordinates": [40.7239, 19.5564],
+    "type": "city"
   },
   {
     "name": "Nideggen-Wollersheim, Germany",
-    "coordinates": [50.6833, 6.4833],
+    "coordinates": [50.6833, 6.4667],
     "type": "archaeological_site"
   },
   {
+    "name": "Nideggen, Germany",
+    "coordinates": [50.6906, 6.4828],
+    "type": "city"
+  },
+  {
     "name": "Montlingerberg, Switzerland",
-    "coordinates": [47.3833, 9.6333],
+    "coordinates": [47.4167, 9.5333],
     "type": "archaeological_site"
   },
   {
     "name": "Herforst, Germany",
-    "coordinates": [49.7833, 6.55],
+    "coordinates": [49.8167, 6.5833],
     "type": "archaeological_site"
   },
   {
     "name": "Glac, Serbia",
-    "coordinates": [44.2654, 21.0197],
+    "coordinates": [45.2167, 20.0167],
     "type": "archaeological_site"
   },
   {
     "name": "Pliska, Bulgaria",
-    "coordinates": [43.3833, 27.15],
+    "coordinates": [43.3833, 27.1333],
     "type": "archaeological_site"
   },
   {
     "name": "Kleinhadersdorf, Austria",
-    "coordinates": [48.5167, 16.5833],
+    "coordinates": [48.5167, 16.6333],
     "type": "archaeological_site"
   },
   {
     "name": "Tieschen, Austria",
-    "coordinates": [46.7833, 15.8167],
+    "coordinates": [46.8, 15.9],
     "type": "archaeological_site"
   },
   {
     "name": "Inden, Germany",
-    "coordinates": [50.8667, 6.35],
+    "coordinates": [50.8667, 6.3167],
     "type": "archaeological_site"
-  }
+  },
+  {
+    "name": "Eggendorf am Walde, Austria",
+    "coordinates": [48.6833, 15.8],
+    "type": "archaeological_site"
+  },
+  {
+    "name": "Oberiet, Switzerland",
+    "coordinates": [47.3167, 9.5833],
+    "type": "city"
+  },
+  {
+    "name": "Piber, Austria",
+    "coordinates": [47.0833, 15.1667],
+    "type": "archaeological_site"
+  },
+  {
+    "name": "Triesen, Liechtenstein",
+    "coordinates": [47.1069, 9.5275],
+    "type": "city"
+  },
+  {
+    "name": "Weilerswist, Germany",
+    "coordinates": [50.75, 6.85],
+    "type": "city"
+  },
+  {
+    "name": "Euskirchen, Germany",
+    "coordinates": [50.6598623, 6.3756981],
+    "type": "city"
+  },
+  { "name": "Brühl, Germany", "coordinates": [50.8278, 6.9056], "type": "city" }
 ]
