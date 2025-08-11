@@ -30,9 +30,27 @@ interface WorkProject {
   url?: string;
 }
 
+interface EducationalProject {
+  title: string;
+  location: string;
+  startDate?: string;
+  endDate?: string;
+  'role(s)'?: string[];
+  url?: string;
+}
+
 interface WorkExperience {
   title: string;
   organization: string;
+  location: string;
+  startDate: string;
+  endDate?: string;
+  description: string;
+}
+
+interface EducationalExperience {
+  degree: string;
+  institution: string;
   location: string;
   startDate: string;
   endDate?: string;
@@ -43,21 +61,35 @@ interface MapComponentProps {
   locations: Location[];
   projectData: {
     [locationName: string]: {
-      projects: WorkProject[];
+      workProjects: WorkProject[];
+      educationProjects: EducationalProject[];
       workExperiences: WorkExperience[];
+      educationalExperiences: EducationalExperience[];
     };
   };
 }
 
 // Custom marker icons for different types
-const createCustomIcon = (type: 'work' | 'project' | 'both') => {
+const createCustomIcon = (
+  type: 'work' | 'education' | 'project' | 'multiple',
+) => {
   const colors = {
     work: '#009D6F', // primary-green
+    education: '#42CBB3', // primary-teal (same as project)
     project: '#42CBB3', // primary-teal
-    both: '#E6D67C', // primary-yellow
+    multiple: '#E6D67C', // primary-yellow
   };
 
   const color = colors[type];
+  const letter =
+    type === 'work'
+      ? 'W'
+      : type === 'education'
+        ? 'E'
+        : type === 'project'
+          ? 'P'
+          : 'M';
+
   const iconHtml = `
     <div style="
       width: 24px;
@@ -72,7 +104,7 @@ const createCustomIcon = (type: 'work' | 'project' | 'both') => {
       font-size: 10px;
       font-weight: bold;
       color: white;
-    ">${type === 'work' ? 'W' : type === 'project' ? 'P' : 'B'}</div>
+    ">${letter}</div>
   `;
 
   return L.divIcon({
@@ -115,16 +147,34 @@ const MapComponent: React.FC<MapComponentProps> = ({
         const data = projectData[location.name];
         if (
           !data ||
-          (data.projects.length === 0 && data.workExperiences.length === 0)
+          (data.workProjects.length === 0 &&
+            data.educationProjects.length === 0 &&
+            data.workExperiences.length === 0 &&
+            data.educationalExperiences.length === 0)
         ) {
           return null;
         }
 
         const hasWork = data.workExperiences.length > 0;
-        const hasProjects = data.projects.length > 0;
-        const markerType =
-          hasWork && hasProjects ? 'both' : hasWork ? 'work' : 'project';
+        const hasEducation = data.educationalExperiences.length > 0;
+        const hasWorkProjects = data.workProjects.length > 0;
+        const hasEducationProjects = data.educationProjects.length > 0;
 
+        // Determine marker type based on what's present
+        let markerType: 'work' | 'education' | 'project' | 'multiple';
+
+        const hasWorkActivity = hasWork || hasWorkProjects;
+        const hasEducationActivity = hasEducation || hasEducationProjects;
+
+        if (hasWorkActivity && hasEducationActivity) {
+          markerType = 'multiple';
+        } else if (hasWorkActivity) {
+          markerType = 'work';
+        } else if (hasEducationActivity) {
+          markerType = 'education';
+        } else {
+          markerType = 'project';
+        }
         return (
           <Marker
             key={`marker-${location.name}`}
@@ -157,14 +207,71 @@ const MapComponent: React.FC<MapComponentProps> = ({
                   </div>
                 )}
 
-                {data.projects.length > 0 && (
-                  <div>
-                    <h4 className="font-semibold text-xs text-primary-teal mb-1">
-                      Projects
+                {data.educationalExperiences.length > 0 && (
+                  <div className="mb-3">
+                    <h4 className="font-semibold text-xs text-primary-blue mb-1">
+                      Education
                     </h4>
-                    {data.projects.map((project) => (
+                    {data.educationalExperiences.map((edu) => (
                       <div
-                        key={`project-${project.title}-${project.startDate || 'no-date'}`}
+                        key={`edu-${edu.degree}-${edu.startDate}`}
+                        className="mb-2 text-xs"
+                      >
+                        <div className="font-medium">{edu.degree}</div>
+                        <div className="text-gray-600">{edu.institution}</div>
+                        <div className="text-gray-500">
+                          {edu.startDate} - {edu.endDate || 'Present'}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {data.workProjects.length > 0 && (
+                  <div className="mb-3">
+                    <h4 className="font-semibold text-xs text-primary-green mb-1">
+                      Work Projects
+                    </h4>
+                    {data.workProjects.map((project) => (
+                      <div
+                        key={`work-project-${project.title}-${project.startDate || 'no-date'}`}
+                        className="mb-2 text-xs"
+                      >
+                        <div className="font-medium">{project.title}</div>
+                        {project.startDate && (
+                          <div className="text-gray-500">
+                            {project.startDate} - {project.endDate || 'Present'}
+                          </div>
+                        )}
+                        {project['role(s)'] &&
+                          project['role(s)'].length > 0 && (
+                            <div className="text-gray-600 text-xs">
+                              {project['role(s)'].join(', ')}
+                            </div>
+                          )}
+                        {project.url && (
+                          <a
+                            href={project.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary-accent underline text-xs"
+                          >
+                            View Project
+                          </a>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {data.educationProjects.length > 0 && (
+                  <div>
+                    <h4 className="font-semibold text-xs text-primary-blue mb-1">
+                      Education Projects
+                    </h4>
+                    {data.educationProjects.map((project) => (
+                      <div
+                        key={`edu-project-${project.title}-${project.startDate || 'no-date'}`}
                         className="mb-2 text-xs"
                       >
                         <div className="font-medium">{project.title}</div>

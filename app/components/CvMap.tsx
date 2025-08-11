@@ -32,17 +32,44 @@ interface WorkExperience {
   'connected project(s)'?: WorkProject[];
 }
 
+interface EducationalProject {
+  title: string;
+  location: string;
+  startDate?: string;
+  endDate?: string;
+  'role(s)'?: string[];
+  url?: string;
+}
+
+interface EducationalExperience {
+  degree: string;
+  institution: string;
+  location: string;
+  startDate: string;
+  endDate?: string;
+  description: string;
+  url?: string;
+  'connected project(s)'?: EducationalProject[];
+}
+
 interface CvMapProps {
   workExperience: WorkExperience[];
+  educationalExperience?: EducationalExperience[];
   className?: string;
 }
 
-const CvMap: React.FC<CvMapProps> = ({ workExperience, className = '' }) => {
+const CvMap: React.FC<CvMapProps> = ({
+  workExperience,
+  educationalExperience = [],
+  className = '',
+}) => {
   const [locations, setLocations] = useState<Location[]>([]);
   const [projectData, setProjectData] = useState<{
     [locationName: string]: {
-      projects: WorkProject[];
+      workProjects: WorkProject[];
+      educationProjects: EducationalProject[];
       workExperiences: WorkExperience[];
+      educationalExperiences: EducationalExperience[];
     };
   }>({});
 
@@ -56,17 +83,22 @@ const CvMap: React.FC<CvMapProps> = ({ workExperience, className = '' }) => {
         // Process work experience and projects data
         const processedData: {
           [locationName: string]: {
-            projects: WorkProject[];
+            workProjects: WorkProject[];
+            educationProjects: EducationalProject[];
             workExperiences: WorkExperience[];
+            educationalExperiences: EducationalExperience[];
           };
         } = {};
 
+        // Process work experience
         workExperience.forEach((work) => {
           // Add main work location
           if (!processedData[work.location]) {
             processedData[work.location] = {
-              projects: [],
+              workProjects: [],
+              educationProjects: [],
               workExperiences: [],
+              educationalExperiences: [],
             };
           }
           processedData[work.location]!.workExperiences.push(work);
@@ -76,11 +108,42 @@ const CvMap: React.FC<CvMapProps> = ({ workExperience, className = '' }) => {
             work['connected project(s)'].forEach((project) => {
               if (!processedData[project.location]) {
                 processedData[project.location] = {
-                  projects: [],
+                  workProjects: [],
+                  educationProjects: [],
                   workExperiences: [],
+                  educationalExperiences: [],
                 };
               }
-              processedData[project.location]!.projects.push(project);
+              processedData[project.location]!.workProjects.push(project);
+            });
+          }
+        });
+
+        // Process educational experience
+        educationalExperience.forEach((edu) => {
+          // Add main education location
+          if (!processedData[edu.location]) {
+            processedData[edu.location] = {
+              workProjects: [],
+              educationProjects: [],
+              workExperiences: [],
+              educationalExperiences: [],
+            };
+          }
+          processedData[edu.location]!.educationalExperiences.push(edu);
+
+          // Add connected projects
+          if (edu['connected project(s)']) {
+            edu['connected project(s)'].forEach((project) => {
+              if (!processedData[project.location]) {
+                processedData[project.location] = {
+                  workProjects: [],
+                  educationProjects: [],
+                  workExperiences: [],
+                  educationalExperiences: [],
+                };
+              }
+              processedData[project.location]!.educationProjects.push(project);
             });
           }
         });
@@ -90,7 +153,7 @@ const CvMap: React.FC<CvMapProps> = ({ workExperience, className = '' }) => {
       .catch((error) => {
         console.error('Error loading locations:', error);
       });
-  }, [workExperience]);
+  }, [workExperience, educationalExperience]);
 
   return (
     <div className={`w-full ${className}`}>
@@ -105,15 +168,21 @@ const CvMap: React.FC<CvMapProps> = ({ workExperience, className = '' }) => {
           </div>
           <div className="flex items-center gap-2">
             <div className="w-4 h-4 bg-primary-teal rounded-full border-2 border-white shadow flex items-center justify-center text-white font-bold text-xs">
+              E
+            </div>
+            <span>Education</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-4 h-4 bg-primary-teal rounded-full border-2 border-white shadow flex items-center justify-center text-white font-bold text-xs">
               P
             </div>
             <span>Projects</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-4 h-4 bg-primary-yellow rounded-full border-2 border-white shadow flex items-center justify-center text-white font-bold text-xs">
-              B
+              M
             </div>
-            <span>Both</span>
+            <span>Multiple</span>
           </div>
         </div>
       </div>

@@ -135,5 +135,40 @@
     "coordinates": [50.6598623, 6.3756981],
     "type": "city"
   },
-  { "name": "Brühl, Germany", "coordinates": [50.8278, 6.9056], "type": "city" }
+  {
+    "name": "Brühl, Germany",
+    "coordinates": [50.8278, 6.9056],
+    "type": "city"
+  },
+  {
+    "name": "Emden, Germany",
+    "coordinates": [53.3594, 7.2061],
+    "type": "city"
+  },
+  {
+    "name": "Langerwehe, Germany",
+    "coordinates": [50.8167, 6.35],
+    "type": "city"
+  },
+  { "name": "Moldova", "coordinates": [45.9081, 28.6603], "type": "country" },
+  {
+    "name": "Kloster Lindow, Germany",
+    "coordinates": [52.9833, 12.9833],
+    "type": "archaeological_site"
+  },
+  {
+    "name": "Friedrichsruhe, Germany",
+    "coordinates": [52.4167, 10.25],
+    "type": "archaeological_site"
+  },
+  {
+    "name": "Freyenstein, Germany",
+    "coordinates": [53.2167, 12.6],
+    "type": "archaeological_site"
+  },
+  {
+    "name": "Schönerlinde, Germany",
+    "coordinates": [52.6167, 13.35],
+    "type": "archaeological_site"
+  }
 ]

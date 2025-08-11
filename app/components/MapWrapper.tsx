@@ -18,9 +18,27 @@ interface WorkProject {
   url?: string;
 }
 
+interface EducationalProject {
+  title: string;
+  location: string;
+  startDate?: string;
+  endDate?: string;
+  'role(s)'?: string[];
+  url?: string;
+}
+
 interface WorkExperience {
   title: string;
   organization: string;
+  location: string;
+  startDate: string;
+  endDate?: string;
+  description: string;
+}
+
+interface EducationalExperience {
+  degree: string;
+  institution: string;
   location: string;
   startDate: string;
   endDate?: string;
@@ -31,8 +49,10 @@ interface MapComponentProps {
   locations: Location[];
   projectData: {
     [locationName: string]: {
-      projects: WorkProject[];
+      workProjects: WorkProject[];
+      educationProjects: EducationalProject[];
       workExperiences: WorkExperience[];
+      educationalExperiences: EducationalExperience[];
     };
   };
 }

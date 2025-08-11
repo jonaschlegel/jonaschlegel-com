@@ -6,7 +6,23 @@
     "endDate": "September 2023",
     "description": "Doctoral studies focusing on prehistoric and historical archaeological research (not finished).",
     "location": "Vienna, Austria",
-    "url": "https://uha.univie.ac.at/en/"
+    "url": "https://uha.univie.ac.at/en/",
+    "connected project(s)": [
+      {
+        "title": "GIS, Harris Matrix and 3D landscape survey tutoring",
+        "startDate": "Spring 2021",
+        "endDate": "Spring 2021",
+        "location": "Tieschen, Austria",
+        "role(s)": [
+          "tutor",
+          "GIS instruction",
+          "Harris Matrix teaching",
+          "3D landscape survey",
+          "laser scanning",
+          "data interpretation"
+        ]
+      }
+    ]
   },
   {
     "degree": "M.Sc. in Landscape Archaeology",
@@ -15,7 +31,23 @@
     "endDate": "June 2018",
     "description": "Master thesis on ancient archaeological sites using modern field archaeology methods.",
     "location": "Berlin, Germany",
-    "url": "https://la.htw-berlin.de/"
+    "url": "https://la.htw-berlin.de/",
+    "connected project(s)": [
+      {
+        "title": "GNSS topography and geomagnetic survey",
+        "startDate": "June 2016",
+        "endDate": "June 2016",
+        "location": "Moldova",
+        "role(s)": ["GNSS topography", "geomagnetic survey"]
+      },
+      {
+        "title": "Kloster Lindow excavation and 3D documentation",
+        "startDate": "Summer 2017",
+        "endDate": "Summer 2017",
+        "location": "Kloster Lindow, Germany",
+        "role(s)": ["excavation leader", "3D documentation", "lecturing"]
+      }
+    ]
   },
   {
     "degree": "B.A. in Conservation & Restoration / Field Archaeology",
@@ -24,6 +56,34 @@
     "endDate": "March 2016",
     "description": "Focus on field archaeology and excavation techniques.",
     "location": "Berlin, Germany",
-    "url": "https://krg.htw-berlin.de/studium/studienschwerpunkte/grabungstechnik-feldarchaeologie-gfa/"
+    "url": "https://krg.htw-berlin.de/studium/studienschwerpunkte/grabungstechnik-feldarchaeologie-gfa/",
+    "connected project(s)": [
+      {
+        "title": "Training excavation Friedrichsruhe",
+        "startDate": "Summer 2012",
+        "endDate": "Summer 2012",
+        "location": "Friedrichsruhe, Germany",
+        "role(s)": ["training excavation"]
+      },
+      {
+        "title": "Training excavation Friedrichsruhe",
+        "startDate": "Summer 2013",
+        "endDate": "Summer 2013",
+        "location": "Friedrichsruhe, Germany",
+        "role(s)": ["training excavation"]
+      },
+      {
+        "title": "Excavation Freyenstein",
+        "startDate": "Summer 2014",
+        "endDate": "Summer 2014",
+        "location": "Freyenstein, Germany",
+        "role(s)": ["excavation"]
+      },
+      {
+        "title": "Hammer slag survey",
+        "location": "Schönerlinde, Germany",
+        "role(s)": ["hammer slag survey"]
+      }
+    ]
   }
 ]

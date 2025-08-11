@@ -225,7 +225,10 @@ const CvPage = async () => {
 
         {/* CV Map */}
         <div className="mb-8">
-          <CvMap workExperience={workExperience} />
+          <CvMap
+            workExperience={workExperience}
+            educationalExperience={educationalExperience}
+          />
         </div>
 
         {/* Mobile Tabs */}
