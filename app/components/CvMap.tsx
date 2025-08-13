@@ -1,6 +1,5 @@
 'use client';
 
-// Import Leaflet CSS
 import 'leaflet/dist/leaflet.css';
 import { useEffect, useState } from 'react';
 import MapWrapper from './MapWrapper';
@@ -72,15 +71,15 @@ const CvMap: React.FC<CvMapProps> = ({
       educationalExperiences: EducationalExperience[];
     };
   }>({});
+  const [showClusters, setShowClusters] = useState(true);
+  const [showHeatmap, setShowHeatmap] = useState(false);
 
   useEffect(() => {
-    // Load location coordinates
     fetch('/data/cv/locations.json')
       .then((response) => response.json())
       .then((locationData: Location[]) => {
         setLocations(locationData);
 
-        // Process work experience and projects data
         const processedData: {
           [locationName: string]: {
             workProjects: WorkProject[];
@@ -90,9 +89,7 @@ const CvMap: React.FC<CvMapProps> = ({
           };
         } = {};
 
-        // Process work experience
         workExperience.forEach((work) => {
-          // Add main work location
           if (!processedData[work.location]) {
             processedData[work.location] = {
               workProjects: [],
@@ -103,7 +100,6 @@ const CvMap: React.FC<CvMapProps> = ({
           }
           processedData[work.location]!.workExperiences.push(work);
 
-          // Add connected projects
           if (work['connected project(s)']) {
             work['connected project(s)'].forEach((project) => {
               if (!processedData[project.location]) {
@@ -119,9 +115,7 @@ const CvMap: React.FC<CvMapProps> = ({
           }
         });
 
-        // Process educational experience
         educationalExperience.forEach((edu) => {
-          // Add main education location
           if (!processedData[edu.location]) {
             processedData[edu.location] = {
               workProjects: [],
@@ -132,7 +126,6 @@ const CvMap: React.FC<CvMapProps> = ({
           }
           processedData[edu.location]!.educationalExperiences.push(edu);
 
-          // Add connected projects
           if (edu['connected project(s)']) {
             edu['connected project(s)'].forEach((project) => {
               if (!processedData[project.location]) {
@@ -158,36 +151,67 @@ const CvMap: React.FC<CvMapProps> = ({
   return (
     <div className={`w-full ${className}`}>
       <div className="mb-4">
-        {/* Legend */}
-        <div className="flex flex-wrap gap-4 text-xs text-gray-600">
-          <div className="flex items-center gap-2">
-            <div className="w-4 h-4 bg-primary-green rounded-full border-2 border-white shadow flex items-center justify-center text-white font-bold text-xs">
-              W
+        {/* Controls */}
+        <div className="flex flex-wrap gap-4 items-center justify-between mb-4">
+          <div className="flex flex-wrap gap-4 text-xs text-gray-600">
+            <div className="flex items-center gap-2">
+              <div className="w-4 h-4 bg-primary-green rounded-full border-2 border-white shadow flex items-center justify-center text-white font-bold text-xs">
+                W
+              </div>
+              <span>Work Experience</span>
             </div>
-            <span>Work Experience</span>
+            <div className="flex items-center gap-2">
+              <div className="w-4 h-4 bg-primary-teal rounded-full border-2 border-white shadow flex items-center justify-center text-white font-bold text-xs">
+                E
+              </div>
+              <span>Education</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-4 h-4 bg-primary-teal rounded-full border-2 border-white shadow flex items-center justify-center text-white font-bold text-xs">
+                P
+              </div>
+              <span>Projects</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-4 h-4 bg-primary-yellow rounded-full border-2 border-white shadow flex items-center justify-center text-white font-bold text-xs">
+                M
+              </div>
+              <span>Multiple</span>
+            </div>
           </div>
-          <div className="flex items-center gap-2">
-            <div className="w-4 h-4 bg-primary-teal rounded-full border-2 border-white shadow flex items-center justify-center text-white font-bold text-xs">
-              E
-            </div>
-            <span>Education</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="w-4 h-4 bg-primary-teal rounded-full border-2 border-white shadow flex items-center justify-center text-white font-bold text-xs">
-              P
-            </div>
-            <span>Projects</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="w-4 h-4 bg-primary-yellow rounded-full border-2 border-white shadow flex items-center justify-center text-white font-bold text-xs">
-              M
-            </div>
-            <span>Multiple</span>
+
+          {/* Toggle Controls */}
+          <div className="flex flex-wrap gap-3 text-xs">
+            <button
+              onClick={() => setShowClusters(!showClusters)}
+              className={`px-3 py-1 rounded-full border-2 font-medium transition-all duration-200 ${
+                showClusters
+                  ? 'bg-primary-green text-white border-primary-green'
+                  : 'bg-transparent text-primary-green border-primary-green hover:bg-primary-green hover:text-white'
+              }`}
+            >
+              Clusters: {showClusters ? 'ON' : 'OFF'}
+            </button>
+            <button
+              onClick={() => setShowHeatmap(!showHeatmap)}
+              className={`px-3 py-1 rounded-full border-2 font-medium transition-all duration-200 ${
+                showHeatmap
+                  ? 'bg-primary-teal text-white border-primary-teal'
+                  : 'bg-transparent text-primary-teal border-primary-teal hover:bg-primary-teal hover:text-white'
+              }`}
+            >
+              Heatmap: {showHeatmap ? 'ON' : 'OFF'}
+            </button>
           </div>
         </div>
       </div>
       <div className="w-full h-80 rounded-lg overflow-hidden shadow-lg border border-gray-200">
-        <MapWrapper locations={locations} projectData={projectData} />
+        <MapWrapper
+          locations={locations}
+          projectData={projectData}
+          showClusters={showClusters}
+          showHeatmap={showHeatmap}
+        />
       </div>
     </div>
   );

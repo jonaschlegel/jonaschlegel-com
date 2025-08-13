@@ -88,3 +88,30 @@ ol {
   background: transparent;
   border: none;
 }
+
+.custom-cluster-marker {
+  background: transparent;
+  border: none;
+}
+
+/* Cluster group styles */
+.marker-cluster-small {
+  background-color: rgba(66, 203, 179, 0.6);
+}
+.marker-cluster-small div {
+  background-color: rgba(66, 203, 179, 0.8);
+}
+
+.marker-cluster-medium {
+  background-color: rgba(0, 157, 111, 0.6);
+}
+.marker-cluster-medium div {
+  background-color: rgba(0, 157, 111, 0.8);
+}
+
+.marker-cluster-large {
+  background-color: rgba(230, 214, 124, 0.6);
+}
+.marker-cluster-large div {
+  background-color: rgba(230, 214, 124, 0.8);
+}
