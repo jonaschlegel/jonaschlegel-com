@@ -170,5 +170,10 @@
     "name": "Schönerlinde, Germany",
     "coordinates": [52.6167, 13.35],
     "type": "archaeological_site"
+  },
+  {
+    "name": "Chalcis, Greece",
+    "coordinates": [38.4637, 22.9525],
+    "type": "city"
   }
 ]

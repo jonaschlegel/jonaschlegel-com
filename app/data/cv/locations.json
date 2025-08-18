@@ -135,5 +135,14 @@
     "coordinates": [50.6598623, 6.3756981],
     "type": "city"
   },
-  { "name": "Brühl, Germany", "coordinates": [50.8278, 6.9056], "type": "city" }
+  {
+    "name": "Brühl, Germany",
+    "coordinates": [50.8278, 6.9056],
+    "type": "city"
+  },
+  {
+    "name": "Chalcis, Greece",
+    "coordinates": [38.4637, 22.9525],
+    "type": "city"
+  }
 ]
