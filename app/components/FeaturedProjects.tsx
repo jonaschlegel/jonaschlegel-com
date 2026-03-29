@@ -5,6 +5,7 @@ import ProjectCard from './ProjectCard';
 const FeaturedProjects = () => {
   const featuredProjects = projectsData.projectsList
     .filter((project) => project.isFeatured)
+    // eslint-disable-next-line react-hooks/purity -- Server component: intentional randomization per request
     .sort(() => 0.5 - Math.random())
     .slice(0, 4);
 

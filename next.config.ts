@@ -4,9 +4,7 @@ import type { NextConfig } from 'next';
 const nextConfig: NextConfig = {
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
 
-  experimental: {
-    typedRoutes: true,
-  },
+  typedRoutes: true,
 
   turbopack: {
     rules: {},
@@ -15,10 +13,6 @@ const nextConfig: NextConfig = {
   typescript: {
     // Types are already checked in CI
     ignoreBuildErrors: true,
-  },
-  eslint: {
-    // Linting is already checked in CI
-    ignoreDuringBuilds: true,
   },
 
   // SEO and performance optimizations
