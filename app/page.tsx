@@ -1,8 +1,12 @@
 import type { Metadata } from 'next';
 import Banner from './components/Banner';
+import CurrentRoleBanner from './components/CurrentRoleBanner';
 import FAQSection, { defaultFAQs } from './components/FAQSection';
 import FeaturedProjects from './components/FeaturedProjects';
 import Hero from './components/Hero';
+import InstagramGrid from './components/InstagramGrid';
+import MediaSection from './components/MediaSection';
+import RecentActivity from './components/RecentActivity';
 import Services from './components/Services';
 import Testimonials from './components/Testimonials';
 import { generateSEOMetadata } from './lib/seo';
@@ -57,8 +61,14 @@ export default function HomePage() {
     <>
       <div>
         <Hero />
+        <div className="container mx-auto px-4">
+          <CurrentRoleBanner />
+        </div>
+        <RecentActivity />
         <Banner />
         <FeaturedProjects />
+        <MediaSection />
+        <InstagramGrid />
         <Services />
         <Testimonials />
         <FAQSection faqs={defaultFAQs} />

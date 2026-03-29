@@ -34,9 +34,9 @@ export const heroSectionData = {
   heading: 'Visual communication for archaeological research',
   text: 'archaeoINK transforms research data into clear narratives through illustration, design, and structured knowledge representation.',
   statsData: [
-    { name: 'Scientific Articles Written', number: '15' },
-    { name: 'Illustrations Created', number: '253' },
-    { name: 'Digital Projects', number: '13' },
+    { name: 'Publications & Conferences', number: '18+' },
+    { name: 'Illustrations for Academia', number: '250+' },
+    { name: 'Research Platforms Built', number: '16' },
   ],
   bgImage: heroBg,
   heroImage: overview,
@@ -87,7 +87,7 @@ export const projectsData = {
       slug: 'urban-chameleon',
       image: urbanChameleon,
       description:
-        'An exploration of urban graffiti and its historical context.',
+        'Digital platform for INDIGO project (Austrian Academy of Sciences). 13km systematic graffiti documentation along Vienna\'s Danube Canal.',
       services: ['web development & design for archaeology'],
       isFeatured: true,
     },
@@ -96,10 +96,10 @@ export const projectsData = {
       name: 'Trowel Journal Blog',
       slug: 'trowel-journal-blog',
       image: trowelJournalBlog,
-      description: 'A blog platform for archaeological publications.',
+      description: 'Publishing platform for UCD School of Archaeology\'s peer-reviewed student journal. Next.js + headless CMS.',
       services: [
         'web development & design for archaeology',
-        'archaeological aesearch & communication',
+        'archaeological research & communication',
       ],
       isFeatured: true,
     },
@@ -108,7 +108,7 @@ export const projectsData = {
       name: 'archaeo Zine',
       slug: 'archaeo-zine',
       image: archaeoZine,
-      description: 'A zine promoting archaeological discoveries to the public.',
+      description: 'Illustrated zine translating peer-reviewed research for public audiences. Co-created with early-career researchers.',
       services: [
         'scientific & archaeological illustration',
         'archaeological research & communication',
@@ -121,7 +121,7 @@ export const projectsData = {
       slug: 'exploring-archaeological-disciplines',
       image: exploringArchaeologicalDisciplines,
       description:
-        'A comic-style illustration series showcasing various branches of archaeology.',
+        'Educational comic series for university outreach. Used by archaeology departments for student recruitment.',
       services: [
         'scientific & archaeological illustration',
         'archaeological research & communication',
@@ -133,7 +133,7 @@ export const projectsData = {
       name: 'Roman Burial',
       slug: 'roman-burial',
       image: romanBurial,
-      description: 'An archaeological illustration of a Roman burial.',
+      description: 'Publication-ready reconstruction for academic journal. Based on excavation data and material analysis.',
       services: ['scientific & archaeological illustration'],
       isFeatured: true,
     },
@@ -143,7 +143,7 @@ export const projectsData = {
       slug: 'adventuress-cover',
       image: adventuressCover,
       description:
-        'A cover illustration for the first issue of the Adventuress Archaeologist journal.',
+        'Cover art for inaugural issue of Adventuress Archaeologist, a publication celebrating women in archaeology.',
       services: ['scientific & archaeological illustration'],
       isFeatured: true,
     },
@@ -153,8 +153,8 @@ export const projectsData = {
       slug: 'necessary-reunions',
       image: necessaryReunions,
       description:
-        'Digital cartographic research platform reuniting Dutch VOC maps with textual archives.',
-      services: ['web development & design for archaeology'],
+        'NWO-funded research platform (Huygens Institute). Reuniting 17th-century VOC maps with archival sources for colonial Kerala. Published on Zenodo.',
+      services: ['web development & design for archaeology', 'archaeological research & communication'],
       isFeatured: true,
     },
     {
@@ -173,7 +173,7 @@ export const projectsData = {
       slug: 'pastrace',
       image: pastrace,
       description:
-        'Logo design and visual identity for digital heritage technology company.',
+        'Brand identity for German photogrammetry company specialising in 3D heritage documentation.',
       services: ['scientific & archaeological illustration'],
       isFeatured: true,
     },
