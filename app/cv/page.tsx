@@ -147,6 +147,22 @@ const CvPage = async () => {
 
   const allYears = Array.from(allYearsSet).sort((a, b) => b - a);
 
+  // Detect concurrent work entries and assign sub-columns (0 or 1)
+  const workSubColumns = new Map<string, number>();
+  const sortedByStart = [...sortedWorkEntries].sort(
+    (a, b) => a.startDate.getTime() - b.startDate.getTime(),
+  );
+  sortedByStart.forEach((entry) => {
+    const overlapsWithCol0 = sortedByStart.some(
+      (other) =>
+        other.id !== entry.id &&
+        workSubColumns.get(other.id) === 0 &&
+        other.years.some((y) => entry.years.includes(y)),
+    );
+    workSubColumns.set(entry.id, overlapsWithCol0 ? 1 : 0);
+  });
+  const hasWorkSubColumns = [...workSubColumns.values()].some((v) => v === 1);
+
   type TimelineEntry = {
     entry: Entry;
     layer: number;
@@ -164,7 +180,11 @@ const CvPage = async () => {
     educationTimeline[year] = [];
   });
 
-  const assignLayers = (entries: Entry[], timeline: ColumnTimeline) => {
+  const assignLayers = (
+    entries: Entry[],
+    timeline: ColumnTimeline,
+    subColumnMap?: Map<string, number>,
+  ) => {
     entries.forEach((entry) => {
       entry.years.forEach((year) => {
         const yearEntries = timeline[year];
@@ -173,7 +193,13 @@ const CvPage = async () => {
           checkLayer: number,
           entriesInYear: TimelineEntry[],
         ) => {
-          return entriesInYear.some((e) => e.layer === checkLayer);
+          return entriesInYear.some(
+            (e) =>
+              e.layer === checkLayer &&
+              (!subColumnMap ||
+                subColumnMap.get(e.entry.id) ===
+                  subColumnMap.get(entry.id)),
+          );
         };
 
         while (yearEntries && isLayerOccupied(layer, yearEntries)) {
@@ -186,15 +212,29 @@ const CvPage = async () => {
     });
   };
 
-  assignLayers(sortedWorkEntries, workTimeline);
+  assignLayers(sortedWorkEntries, workTimeline, workSubColumns);
   assignLayers(sortedEducationEntries, educationTimeline);
 
   const totalLayersPerYear: { [year: number]: number } = {};
   allYears.forEach((year) => {
-    const workLayers =
-      workTimeline[year] && workTimeline[year].length > 0
-        ? Math.max(...workTimeline[year].map((e) => e.layer)) + 1
-        : 0;
+    let workLayers = 0;
+    const workYearEntries = workTimeline[year] ?? [];
+    if (hasWorkSubColumns && workYearEntries.length > 0) {
+      const col0 = workYearEntries.filter(
+        (e) => workSubColumns.get(e.entry.id) === 0,
+      );
+      const col1 = workYearEntries.filter(
+        (e) => workSubColumns.get(e.entry.id) === 1,
+      );
+      const col0Max = col0.length > 0 ? Math.max(...col0.map((e) => e.layer)) + 1 : 0;
+      const col1Max = col1.length > 0 ? Math.max(...col1.map((e) => e.layer)) + 1 : 0;
+      workLayers = Math.max(col0Max, col1Max);
+    } else {
+      workLayers =
+        workYearEntries.length > 0
+          ? Math.max(...workYearEntries.map((e) => e.layer)) + 1
+          : 0;
+    }
     const educationLayers =
       (educationTimeline[year]?.length ?? 0) > 0
         ? Math.max(...(educationTimeline[year] ?? []).map((e) => e.layer)) + 1
@@ -250,13 +290,20 @@ const CvPage = async () => {
         <div
           className="hidden md:grid gap-1"
           style={{
-            gridTemplateColumns: '100px 1fr 1fr 1fr',
+            gridTemplateColumns: hasWorkSubColumns
+              ? '100px 1fr 1fr 1fr 1fr'
+              : '100px 1fr 1fr 1fr',
             gridTemplateRows: `repeat(${currentRow - 1}, auto)`,
           }}
         >
           {/* Column headers */}
           <div className="font-bold text-xl" />
-          <h2 className="font-bold text-xl">Work</h2>
+          <h2
+            className="font-bold text-xl"
+            style={hasWorkSubColumns ? { gridColumn: '2 / 4' } : undefined}
+          >
+            Work
+          </h2>
           <h2 className="font-bold text-xl">Education</h2>
           <h2 className="font-bold text-xl">Publications</h2>
 
@@ -288,11 +335,25 @@ const CvPage = async () => {
               (workTimeline[endYear]?.find((e) => e.entry.id === entry.id)
                 ?.layer ?? 0);
 
+            const subCol = workSubColumns.get(entry.id) ?? 0;
+            const isOverlapping = sortedWorkEntries.some(
+              (other) =>
+                other.id !== entry.id &&
+                other.years.some((y) => entry.years.includes(y)),
+            );
+            const workGridColumn = hasWorkSubColumns
+              ? isOverlapping
+                ? subCol === 0
+                  ? 2
+                  : 3
+                : '2 / 4'
+              : 2;
+
             return (
               <div
                 key={`work-${entry.id}`}
                 style={{
-                  gridColumn: 2,
+                  gridColumn: workGridColumn,
                   gridRow: `${rowStart} / ${rowEnd}`,
                 }}
                 className="p-2 rounded-lg shadow bg-gray-50"
@@ -347,7 +408,7 @@ const CvPage = async () => {
               <div
                 key={`education-${entry.id}`}
                 style={{
-                  gridColumn: 3,
+                  gridColumn: hasWorkSubColumns ? 4 : 3,
                   gridRow: `${rowStart} / ${rowEnd}`,
                 }}
                 className="p-2 rounded-lg shadow bg-gray-50"
@@ -396,7 +457,7 @@ const CvPage = async () => {
                 {/* Publications Column */}
                 <div
                   style={{
-                    gridColumn: 4,
+                    gridColumn: hasWorkSubColumns ? 5 : 4,
                     gridRow: `${yearRowStart[year]} / span ${totalLayersPerYear[year]}`,
                   }}
                   className="flex flex-col gap-2"

@@ -34,9 +34,9 @@ export const heroSectionData = {
   heading: 'Visual communication for archaeological research',
   text: 'archaeoINK transforms research data into clear narratives through illustration, design, and structured knowledge representation.',
   statsData: [
-    { name: 'Scientific Articles Written', number: '15' },
+    { name: 'Scientific Articles Written', number: '18' },
     { name: 'Illustrations Created', number: '253' },
-    { name: 'Digital Projects', number: '13' },
+    { name: 'Digital Projects', number: '16' },
   ],
   bgImage: heroBg,
   heroImage: overview,
@@ -153,8 +153,8 @@ export const projectsData = {
       slug: 'necessary-reunions',
       image: necessaryReunions,
       description:
-        'Digital cartographic research platform reuniting Dutch VOC maps with textual archives.',
-      services: ['web development & design for archaeology'],
+        'NWO-funded digital research platform reuniting Dutch VOC maps with textual archives for early modern Kerala. Software published on Zenodo.',
+      services: ['web development & design for archaeology', 'archaeological research & communication'],
       isFeatured: true,
     },
     {

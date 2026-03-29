@@ -752,5 +752,53 @@
     "location": "Berlin, Germany",
     "editor": "Wolfgang Schier",
     "publication": "Berliner Archäologische Forschungen 21"
+  },
+  {
+    "id": 44,
+    "title": "Necessary Reunions (Software)",
+    "authors": ["Jona Schlegel", "Leon van Wissen", "Manjusha Kuruppath"],
+    "date": "February 2026",
+    "url": "https://doi.org/10.5281/zenodo.18787727",
+    "type": "Software",
+    "publisher": "Zenodo",
+    "abstract": "Software developed for the Necessary Reunions project, reuniting Dutch East India Company maps with textual archives to reconceptualise histories of early modern Kerala. The application provides three main tools: Map Viewer (re:Charted), GAVOC Explorer, and a Gazetteer. Built with Next.js, React, Leaflet, OpenSeadragon, Allmaps, AnnoRepo, and Tailwind CSS."
+  },
+  {
+    "id": 45,
+    "title": "The Graffiti Palimpsest (Part 1)",
+    "authors": ["Jona Schlegel"],
+    "date": "2025",
+    "url": "https://www.archaeologypodcastnetwork.com/trowel/51",
+    "type": "Podcast appearance",
+    "journal": "And My Trowel – Archaeology Podcast Network",
+    "abstract": "Guest appearance discussing graffiti as cultural heritage, field archaeology career paths, and the research conducted along the Danube Canal in Vienna through Project INDIGO."
+  },
+  {
+    "id": 46,
+    "title": "The Graffiti Palimpsest (Part 2)",
+    "authors": ["Jona Schlegel"],
+    "date": "2025",
+    "url": "https://www.archaeologypodcastnetwork.com/trowel/52",
+    "type": "Podcast appearance",
+    "journal": "And My Trowel – Archaeology Podcast Network",
+    "abstract": "Continuation of the graffiti palimpsest discussion, exploring definitions of graffiti and practical approaches to documenting disappearing urban art."
+  },
+  {
+    "id": 47,
+    "title": "Podcast appearance",
+    "authors": ["Jona Schlegel"],
+    "date": "2025",
+    "url": "https://www.youtube.com/watch?v=8IgGBZhnHy8",
+    "type": "Podcast appearance",
+    "platform": "YouTube"
+  },
+  {
+    "id": 48,
+    "title": "Things We Threw Away",
+    "authors": ["Jona Schlegel", "Stefanie Ulrich"],
+    "date": "September 2025",
+    "url": "https://thingswethrewaway.substack.com/",
+    "type": "Podcast",
+    "abstract": "An archaeological themed podcast about objects from the past in the present, exploring topics from glass biographies to plaster cast collections."
   }
 ]

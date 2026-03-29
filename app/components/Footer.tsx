@@ -35,7 +35,7 @@ const Footer = () => {
           <Link href="/terms-and-conditions">Terms and Conditions</Link>
         </div>
         <div className="mt-6 flex justify-center text-[10px]">
-          © Jona Schlegel 2024. All rights reserved.
+          © Jona Schlegel 2024–2026. All rights reserved.
         </div>
       </div>
     </div>
