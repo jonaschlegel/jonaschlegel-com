@@ -204,12 +204,19 @@ const MapContent: React.FC<{
     const initializeMap = async () => {
       await loadLeafletPlugins();
 
+      // Remove existing marker layers (use duck typing since MarkerClusterGroup isn't a standard class)
       map.eachLayer((layer) => {
+        const layerAny = layer as any;
         if (
-          layer instanceof L.MarkerClusterGroup ||
-          layer instanceof L.Marker
+          (layerAny._group !== undefined && layerAny._markers !== undefined) || // MarkerClusterGroup
+          (layer instanceof L.Marker) ||
+          (layerAny.options?.gradient) // heatmap layer
         ) {
-          map.removeLayer(layer);
+          try {
+            map.removeLayer(layer);
+          } catch (e) {
+            // Layer may already be removed
+          }
         }
       });
 
@@ -406,14 +413,19 @@ const MapContent: React.FC<{
     initializeMap();
 
     return () => {
+      // Cleanup: remove marker layers using duck typing
       map.eachLayer((layer) => {
+        const layerAny = layer as any;
         if (
-          layer instanceof L.MarkerClusterGroup ||
-          layer instanceof L.Marker ||
-          // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-          (layer as any).options?.gradient // heatmap layer
+          (layerAny._group !== undefined && layerAny._markers !== undefined) || // MarkerClusterGroup
+          (layer instanceof L.Marker) ||
+          (layerAny.options?.gradient) // heatmap layer
         ) {
-          map.removeLayer(layer);
+          try {
+            map.removeLayer(layer);
+          } catch (e) {
+            // Layer may already be removed
+          }
         }
       });
     };
@@ -442,6 +454,7 @@ const MapComponent: React.FC<MapComponentProps> = ({
       bounds={bounds}
       className="w-full h-full"
       scrollWheelZoom={true}
+      maxZoom={19}
       style={{ height: '100%', width: '100%' }}
     >
       <TileLayer
