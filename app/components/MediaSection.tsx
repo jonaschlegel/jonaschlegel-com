@@ -1,5 +1,3 @@
-'use client';
-
 import { BsCalendarEvent, BsMicFill, BsPlayCircle } from 'react-icons/bs';
 
 interface MediaItem {
@@ -19,7 +17,7 @@ const mediaItems: MediaItem[] = [
     date: '2025',
     url: 'https://www.intarch.ac.uk/podcast/',
     description:
-      'Interview on archaeological illustration, science communication, and the archaeoINK studio.',
+      'Interview on graffiti archaeology and the visual science communication.',
   },
   {
     title: 'Mapathon: Kaarten als bron voor Surinaamse geschiedenis',
@@ -29,6 +27,14 @@ const mediaItems: MediaItem[] = [
     url: 'https://www.huygens.knaw.nl/evenementen/mapathon-kaarten-als-bron-voor-surinaamse-geschiedenis/',
     description:
       'Workshop on using historical maps as sources for Surinamese history, organised with the Huygens Institute.',
+  },
+  {
+    title: 'The Archaeology of the Digital Age',
+    type: 'guest',
+    role: 'Guest',
+    date: '2025',
+    url: 'https://www.youtube.com/watch?v=8IgGBZhnHy8',
+    description: 'Interview on visual science communication and archaeoINK.',
   },
 ];
 
