@@ -7,7 +7,7 @@ const ProjectCard: FC<ProjectType> = ({ slug, image, name }) => {
   return (
     <Link
       href={`/projects/${slug}` as any}
-      className="group relative col-span-12 aspect-[4/3] cursor-pointer overflow-hidden rounded-lg md:col-span-6"
+      className="group relative col-span-12 aspect-[4/3] cursor-pointer overflow-hidden md:col-span-6"
     >
       <Image
         src={image}

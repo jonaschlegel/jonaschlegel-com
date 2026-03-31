@@ -60,7 +60,7 @@ const ButtonPrimary: React.FC<ButtonPrimaryProps> = ({
 
   return (
     <Button
-      className={`rounded-full bg-primary-accent font-semibold text-black ${className}`}
+      className={`rounded-full bg-primary-accent font-semibold text-white ${className}`}
       {...args}
       onClick={handleClick}
     />

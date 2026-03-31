@@ -15,7 +15,7 @@ const ButtonSecondary: React.FC<ButtonSecondaryProps> = ({
 }) => {
   return (
     <Button
-      className={`rounded-full border font-semibold text-white ${className}`}
+      className={`rounded-full border font-semibold text-primary-dark ${className}`}
       {...args}
       onClick={() => {
         if (pdfUrl) {

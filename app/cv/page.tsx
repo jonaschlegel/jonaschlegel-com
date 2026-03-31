@@ -215,7 +215,7 @@ const CvPage = async () => {
         <Breadcrumbs />
         <header className="mb-8">
           <h1 className="text-4xl font-bold mb-4">Curriculum Vitae</h1>
-          <p className="text-lg text-neutral-300 max-w-3xl">
+          <p className="text-lg text-gray-600 max-w-3xl">
             Comprehensive overview of my professional journey in archaeological
             research, science communication, and education. Explore my academic
             background, professional experience, and key contributions to the
@@ -264,7 +264,7 @@ const CvPage = async () => {
           {allYears.map((year) => (
             <div
               key={`year-${year}`}
-              className="border-t py-2 text-white font-bold"
+              className="border-t border-gray-200 py-2 text-primary-dark font-bold"
               style={{
                 gridColumn: 1,
                 gridRow: `${yearRowStart[year]} / span ${totalLayersPerYear[year]}`,
@@ -387,9 +387,14 @@ const CvPage = async () => {
 
           {/* Render publications */}
           {allYears.map((year) => {
-            const yearPublications = publications.filter(
-              (pub) => parseDate(pub.date).getFullYear() === year,
-            );
+            const yearPublications = publications
+              .filter(
+                (pub) => parseDate(pub.date).getFullYear() === year,
+              )
+              .sort(
+                (a, b) =>
+                  parseDate(b.date).getTime() - parseDate(a.date).getTime(),
+              );
 
             return (
               <Fragment key={`pubs-${year}`}>

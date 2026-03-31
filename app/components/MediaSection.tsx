@@ -1,92 +1,89 @@
 'use client';
 
-import { BsMicFill, BsPlayCircle } from 'react-icons/bs';
+import { BsCalendarEvent, BsMicFill, BsPlayCircle } from 'react-icons/bs';
 
 interface MediaItem {
   title: string;
-  type: 'podcast' | 'appearance' | 'episode';
-  platform: string;
+  type: 'guest' | 'workshop' | 'talk';
+  role: string;
   date: string;
   url: string;
-  description?: string;
+  description: string;
 }
 
 const mediaItems: MediaItem[] = [
   {
-    title: 'Things We Threw Away',
-    type: 'podcast',
-    platform: 'Host & Producer',
-    date: 'Sept 2025 – Present',
-    url: 'https://thingswethrewaway.substack.com',
-    description:
-      'Archaeology podcast exploring material culture and discard practices across time and space.',
-  },
-  {
     title: 'And My Trowel, Ep. 51 & 52',
-    type: 'appearance',
-    platform: 'Guest',
+    type: 'guest',
+    role: 'Guest',
     date: '2025',
     url: 'https://www.intarch.ac.uk/podcast/',
     description:
-      'Interview on archaeological illustration and science communication.',
+      'Interview on archaeological illustration, science communication, and the archaeoINK studio.',
   },
   {
-    title: 'Necessary Reunions Software',
-    type: 'episode',
-    platform: 'Zenodo Publication',
-    date: '2026',
-    url: 'https://zenodo.org/records/14918468',
+    title: 'Mapathon: Kaarten als bron voor Surinaamse geschiedenis',
+    type: 'workshop',
+    role: 'Co-organiser',
+    date: 'March 2026',
+    url: 'https://www.huygens.knaw.nl/evenementen/mapathon-kaarten-als-bron-voor-surinaamse-geschiedenis/',
     description:
-      'Research software for VOC cartographic analysis. DOI: 10.5281/zenodo.14918468',
+      'Workshop on using historical maps as sources for Surinamese history, organised with the Huygens Institute.',
   },
 ];
 
+const typeIcons = {
+  guest: BsMicFill,
+  workshop: BsCalendarEvent,
+  talk: BsPlayCircle,
+};
+
 const MediaSection = () => {
   return (
-    <section className="container mx-auto py-16" id="media">
+    <section className="container mx-auto px-4 py-16" id="media">
       <div className="mb-8 text-center">
-        <h2 className="font-merriweather text-2xl font-semibold md:text-4xl mb-3">
-          Podcasts & Media
+        <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary-green">
+          Public engagement
+        </p>
+        <h2 className="mb-3 font-merriweather text-2xl font-semibold md:text-4xl">
+          Talks, Appearances & Workshops
         </h2>
-        <p className="text-neutral-400 max-w-2xl mx-auto">
-          Science communication through podcasts, interviews, and research
-          publications.
+        <p className="mx-auto max-w-2xl text-gray-700">
+          Guest appearances, invited talks, and workshops where I contributed to
+          conversations about archaeology, illustration, and heritage.
         </p>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
-        {mediaItems.map((item) => (
-          <a
-            key={`media-${item.title}`}
-            href={item.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group block rounded-lg border border-neutral-700 p-5 transition-all duration-300 hover:border-primary-teal hover:bg-primary-teal/5"
-          >
-            <div className="flex items-start gap-3 mb-3">
-              <div className="flex-shrink-0 rounded-full bg-primary-teal/20 p-2">
-                {item.type === 'podcast' ? (
-                  <BsMicFill className="h-4 w-4 text-primary-teal" />
-                ) : (
-                  <BsPlayCircle className="h-4 w-4 text-primary-teal" />
-                )}
+      <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
+        {mediaItems.map((item) => {
+          const Icon = typeIcons[item.type];
+          return (
+            <a
+              key={`media-${item.title}`}
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block border border-gray-200 bg-white p-5 transition-all duration-300 hover:border-primary-green hover:bg-primary-green/5"
+            >
+              <div className="mb-3 flex items-start gap-3">
+                <div className="shrink-0 bg-primary-green/15 p-2">
+                  <Icon className="size-4 text-primary-green" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 transition-colors group-hover:text-primary-green">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs text-gray-700">
+                    {item.role} · {item.date}
+                  </p>
+                </div>
               </div>
-              <div>
-                <h3 className="font-semibold text-white group-hover:text-primary-teal transition-colors">
-                  {item.title}
-                </h3>
-                <p className="text-xs text-neutral-400">
-                  {item.platform} · {item.date}
-                </p>
-              </div>
-            </div>
-            {item.description && (
-              <p className="text-sm text-neutral-300 leading-relaxed">
+              <p className="text-sm leading-relaxed text-gray-700">
                 {item.description}
               </p>
-            )}
-          </a>
-        ))}
+            </a>
+          );
+        })}
       </div>
     </section>
   );

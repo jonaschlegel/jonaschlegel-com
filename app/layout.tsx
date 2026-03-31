@@ -93,7 +93,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="bg-neutral-800 text-white">
+    <html lang="en" className="bg-primary-cream text-primary-dark">
       <head>
         {/* Favicon and Icons */}
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -180,8 +180,11 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         <Navbar />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
         <ScrollToTop />
         <Tracking />

@@ -40,14 +40,14 @@ const Testimonials = () => {
               type="button"
               aria-label="Previous testimonial"
               data-glide-dir="<"
-              className="glide__arrow glide__arrow--left rounded-full border border-primary-accent p-2 text-xl text-primary-accent hover:text-white md:text-4xl"
+              className="glide__arrow glide__arrow--left rounded-full border border-primary-dark p-2 text-xl text-primary-dark hover:text-primary-green md:text-4xl"
             >
               <BsArrowLeftShort />
             </button>
             <button
               type="button"
               aria-label="Next testimonial"
-              className="glide__arrow glide__arrow--right rounded-full border border-primary-accent p-2 text-xl text-primary-accent hover:text-white md:text-4xl"
+              className="glide__arrow glide__arrow--right rounded-full border border-primary-dark p-2 text-xl text-primary-dark hover:text-primary-green md:text-4xl"
               data-glide-dir=">"
             >
               <BsArrowRightShort />

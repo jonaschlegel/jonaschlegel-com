@@ -9,13 +9,13 @@ const Logo = () => {
       <span className="relative inline-block aspect-square h-8">
         <Image
           src={logo}
-          alt="logo"
+          alt="archaeoINK logo"
           fill
-          sizes="100%"
+          sizes="32px"
           className="object-cover"
         />
       </span>
-      <span className="text-xl font-medium">Jona</span>
+      <span className="text-xl font-medium">archaeoINK</span>
     </Link>
   );
 };

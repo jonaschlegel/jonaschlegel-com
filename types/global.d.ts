@@ -10,6 +10,16 @@ type ProjectType = {
   description: string;
   services: string[];
   isFeatured: boolean;
+  year: string;
+  location?: string;
+  institution?: string;
+  role: string;
+  duration?: string;
+  tools: string[];
+  objective: string;
+  targetGroup: string[];
+  challenges?: string[];
+  outcome: string;
 };
 
 type ServiceType = {

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import CalendlyButton from '../components/CalendlyButton';
-import { aboutStudioData, jonaImage } from '../data/content';
+import { aboutStudioData, jonaAboutImage } from '../data/content';
 
 export const metadata: Metadata = {
   title: 'About archaeoINK Studio',
@@ -48,9 +48,9 @@ export default function AboutPage() {
           </p>
         </div>
         <div className="relative">
-          <div className="aspect-square overflow-hidden rounded-2xl">
+          <div className="aspect-square overflow-hidden">
             <Image
-              src={jonaImage}
+              src={jonaAboutImage}
               alt="Jona Schlegel - Founder of archaeoINK Studio"
               width={500}
               height={500}

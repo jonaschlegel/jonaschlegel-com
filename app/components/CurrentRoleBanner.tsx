@@ -4,14 +4,14 @@ const CurrentRoleBanner = () => {
   return (
     <div className="bg-primary-teal/10 border border-primary-teal/30 rounded-lg px-4 py-3 mb-8">
       <p className="text-sm md:text-base text-center">
-        <span className="font-semibold text-primary-teal">Currently:</span>{' '}
-        <span className="text-neutral-200">
+        <span className="font-semibold text-primary-dark">Currently:</span>{' '}
+        <span className="text-gray-900">
           Researcher at{' '}
           <Link
             href="https://www.huygens.knaw.nl/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary-teal hover:underline"
+            className="text-primary-green hover:underline"
           >
             Huygens Institute
           </Link>{' '}
@@ -20,7 +20,7 @@ const CurrentRoleBanner = () => {
             href="https://necessaryreunions.org"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary-teal hover:underline"
+            className="text-primary-green hover:underline"
           >
             Necessary Reunions
           </Link>
@@ -29,7 +29,7 @@ const CurrentRoleBanner = () => {
             href="https://www.huygens.knaw.nl/projecten/suriname-time-machine/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary-teal hover:underline"
+            className="text-primary-green hover:underline"
           >
             Suriname Time Machine
           </Link>
@@ -38,10 +38,18 @@ const CurrentRoleBanner = () => {
             href="https://globalise.huygens.knaw.nl/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary-teal hover:underline"
+            className="text-primary-green hover:underline"
           >
             GLOBALISE
           </Link>
+          . Via archaeoINK: regular cover art for{' '}
+          <Link
+            href="/projects/adventuress-cover"
+            className="text-primary-green hover:underline"
+          >
+            Adventuress Magazine
+          </Link>{' '}
+          and developing archaeology journaling workshops.
         </span>
       </p>
     </div>
