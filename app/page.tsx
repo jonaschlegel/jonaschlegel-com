@@ -11,9 +11,7 @@ import MediaSection from './components/MediaSection';
 import PastForwardHubSection from './components/PastForwardHubSection';
 import PodcastSection from './components/PodcastSection';
 import RecentActivity from './components/RecentActivity';
-import Stats from './components/Stats';
 import Testimonials from './components/Testimonials';
-import { statsData } from './data/content';
 import { generateSEOMetadata } from './lib/seo';
 
 /** SEO metadata for the home page. */
