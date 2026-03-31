@@ -146,3 +146,27 @@ ol {
 .marker-cluster-large div {
   background-color: rgba(230, 214, 124, 0.8);
 }
+
+/* Illustration band marquee */
+@keyframes illustration-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.illustration-band__track {
+  animation: illustration-scroll 30s linear infinite;
+}
+
+.illustration-band:hover .illustration-band__track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .illustration-band__track {
+    animation: none;
+  }
+}

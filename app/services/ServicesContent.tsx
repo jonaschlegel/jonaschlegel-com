@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import ButtonPrimary from '../components/ButtonPrimary';
+import IllustrationBand from '../components/IllustrationBand';
 import adventuressCover from '../images/projects/adventuress-cover.jpg';
 import necessaryReunions from '../images/projects/necessary-reunions.png';
 import pastrace from '../images/projects/pastrace.jpg';
@@ -333,6 +334,8 @@ export default function ServicesContent() {
           </div>
         </div>
       </section>
+
+      <IllustrationBand seed={42} />
 
       {/* Contact form */}
       <section className="mx-auto max-w-2xl">

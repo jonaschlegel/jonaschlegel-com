@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { Fragment } from 'react';
 import CvMap from '../components/CvMap';
 import CvTabs from '../components/CvTabs';
+import IllustrationBand from '../components/IllustrationBand';
 import { generateSEOMetadata } from '../lib/seo';
 
 /** SEO metadata for the CV page. */
@@ -231,8 +232,10 @@ const CvPage = async () => {
           />
         </div>
 
+        <IllustrationBand seed={99} />
+
         {/* Mobile Tabs */}
-        <div className="block md:hidden">
+        <div className="block md:hidden mt-8">
           <CvTabs
             workEntries={workEntries.map((entry) => ({
               id: entry.id,
@@ -248,7 +251,7 @@ const CvPage = async () => {
 
         {/* Desktop version with grid */}
         <div
-          className="hidden md:grid gap-1"
+          className="hidden md:grid gap-1 mt-8"
           style={{
             gridTemplateColumns: '100px 1fr 1fr 1fr',
             gridTemplateRows: `repeat(${currentRow - 1}, auto)`,

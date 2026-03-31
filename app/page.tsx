@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Banner from './components/Banner';
 import CurrentRoleBanner from './components/CurrentRoleBanner';
 import Hero from './components/Hero';
+import IllustrationBand from './components/IllustrationBand';
 import InstagramGrid from './components/InstagramGrid';
 import MediaSection from './components/MediaSection';
 import PastForwardHubSection from './components/PastForwardHubSection';
@@ -65,6 +66,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <CurrentRoleBanner />
         </div>
+        <IllustrationBand seed={1} />
         <RecentActivity />
         <Banner />
         <PodcastSection />
