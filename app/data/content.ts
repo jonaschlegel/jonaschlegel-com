@@ -250,7 +250,7 @@ export const projectsData = {
       year: '2025',
       location: 'Netherlands / Kerala, India',
       institution: 'Huygens Institute / University of Amsterdam',
-      role: 'Junior Researcher, Interface Design and User Experience',
+      role: 'Researcher, Interface Design and User Experience',
       duration: 'March - December 2025',
       tools: ['IIIF', 'Computer vision', 'HTR (Loghi toolkit)', 'Georeferencing', 'Web development'],
       objective: 'Reconnect Dutch East India Company (VOC) maps with textual archives and create a comprehensive gazetteer of place information for early modern Kerala.',

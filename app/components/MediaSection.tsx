@@ -45,7 +45,7 @@ const MediaSection = () => {
         <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary-green">
           Public engagement
         </p>
-        <h2 className="mb-3 font-merriweather text-2xl font-semibold md:text-4xl">
+        <h2 className="mb-3 font-merriweather text-center text-2xl font-semibold md:text-4xl">
           Talks, Appearances & Workshops
         </h2>
         <p className="mx-auto max-w-2xl text-gray-700">

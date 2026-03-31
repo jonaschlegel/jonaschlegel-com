@@ -52,7 +52,6 @@ export default function ProjectsPage() {
 
   return (
     <div className="container mx-auto px-4">
-      <Breadcrumbs />
 
       <header className="mb-12 py-8">
         <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-primary-green">

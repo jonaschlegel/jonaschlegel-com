@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import Banner from './components/Banner';
 import CurrentRoleBanner from './components/CurrentRoleBanner';
-import FAQSection, { defaultFAQs } from './components/FAQSection';
 import Hero from './components/Hero';
 import InstagramGrid from './components/InstagramGrid';
 import MediaSection from './components/MediaSection';
+import PastForwardHubSection from './components/PastForwardHubSection';
 import PodcastSection from './components/PodcastSection';
 import RecentActivity from './components/RecentActivity';
 import Testimonials from './components/Testimonials';
@@ -69,7 +69,7 @@ export default function HomePage() {
         <MediaSection />
         <InstagramGrid />
         <Testimonials />
-        <FAQSection faqs={defaultFAQs} />
+        <PastForwardHubSection />
       </div>
 
       {/* Structured Data */}
