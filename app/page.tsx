@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import Banner from './components/Banner';
+import BlogPreview from './components/BlogPreview';
+import ClientLogos from './components/ClientLogos';
 import CurrentRoleBanner from './components/CurrentRoleBanner';
+import FAQSection, { defaultFAQs } from './components/FAQSection';
 import Hero from './components/Hero';
 import IllustrationBand from './components/IllustrationBand';
 import InstagramGrid from './components/InstagramGrid';
@@ -8,7 +11,9 @@ import MediaSection from './components/MediaSection';
 import PastForwardHubSection from './components/PastForwardHubSection';
 import PodcastSection from './components/PodcastSection';
 import RecentActivity from './components/RecentActivity';
+import Stats from './components/Stats';
 import Testimonials from './components/Testimonials';
+import { statsData } from './data/content';
 import { generateSEOMetadata } from './lib/seo';
 
 /** SEO metadata for the home page. */
@@ -67,11 +72,15 @@ export default function HomePage() {
           <CurrentRoleBanner />
         </div>
         <IllustrationBand seed={1} />
+        <ClientLogos />
+
         <RecentActivity />
+        <BlogPreview />
         <Banner />
         <PodcastSection />
         <MediaSection />
         <InstagramGrid />
+        <FAQSection faqs={defaultFAQs} />
         <Testimonials />
         <PastForwardHubSection />
       </div>

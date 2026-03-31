@@ -20,6 +20,8 @@ type ProjectType = {
   targetGroup: string[];
   challenges?: string[];
   outcome: string;
+  impact?: string[];
+  publications?: { title: string; venue: string; url?: string }[];
 };
 
 type ServiceType = {

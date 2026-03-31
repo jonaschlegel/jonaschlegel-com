@@ -131,6 +131,10 @@ export const projectsData = {
       ],
       outcome:
         'Public-facing digital platform for Project INDIGO documenting 13km of continuous graffiti along the Danube Canal.',
+      impact: [
+        'First interactive platform mapping graffiti as cultural heritage along the Danube Canal',
+        'Used by researchers at the Ludwig Boltzmann Institute for ongoing graffiti documentation',
+      ],
     },
     {
       id: '2',
@@ -162,6 +166,10 @@ export const projectsData = {
       ],
       outcome:
         'International readership, referenced in academic publications and university course materials.',
+      impact: [
+        'Referenced in university course materials internationally',
+        'Weekly publication since October 2023 with growing international readership',
+      ],
     },
     {
       id: '3',
@@ -244,6 +252,18 @@ export const projectsData = {
       ],
       outcome:
         'Published reconstruction in Journal of Archaeological Science: Reports (2024), illustrating the first genetic evidence of a mother-daughter relationship in Roman Austria.',
+      impact: [
+        'Published in peer-reviewed Journal of Archaeological Science: Reports',
+        'First visual reconstruction of a genetically confirmed Roman-era mother-daughter burial',
+      ],
+      publications: [
+        {
+          title:
+            'Reconstruction of a Roman-era mother-daughter burial from Ovilava (Wels), Austria',
+          venue: 'Journal of Archaeological Science: Reports',
+          url: 'https://doi.org/10.1016/j.jasrep.2024.104522',
+        },
+      ],
     },
     {
       id: '6',
@@ -305,6 +325,11 @@ export const projectsData = {
       ],
       outcome:
         're:Charted web platform with computer vision analysis, handwritten text recognition, and georeferencing. NWO XS funded. Published on Zenodo.',
+      impact: [
+        'NWO XS grant-funded research project',
+        'Platform and datasets published on Zenodo for open access',
+        'Connects 30 historical VOC maps with textual archives for Kerala research',
+      ],
     },
     {
       id: '8',
@@ -339,6 +364,17 @@ export const projectsData = {
       ],
       outcome:
         'Peer-reviewed publication in Remote Sensing (MDPI). Identified subsurface guest quarters, agricultural infrastructure, and craft production areas.',
+      impact: [
+        'Peer-reviewed publication contributing to UNESCO World Heritage Site management',
+        'Revealed previously unknown monastic infrastructure beneath the site',
+      ],
+      publications: [
+        {
+          title:
+            'Geophysical Prospection at the UNESCO World Heritage Site of Mustair (Switzerland)',
+          venue: 'Remote Sensing (MDPI)',
+        },
+      ],
     },
     {
       id: '9',
@@ -375,7 +411,7 @@ export const serviceData = {
       slug: 'archaeology',
       name: 'Archaeological Research & Communication',
       description:
-        'Comprehensive archaeological research and data interpretation services, focusing on accessible communication through digital tools and structured knowledge representation',
+        'Your research data tells a story \u2014 but reaching the right audience requires more than a publication. From geophysical surveys to public engagement strategies, I help researchers communicate findings clearly and make complex datasets accessible through digital tools and structured knowledge representation.',
       image: archaeologySciComm,
       alt: 'Archaeological research and scientific communication tools and methods by Jona Schlegel',
       tools:
@@ -392,7 +428,7 @@ export const serviceData = {
       slug: 'illustration',
       name: 'Scientific & Archaeological Illustration',
       description:
-        'Creating detailed, scientifically accurate illustrations for archaeological publications, site reconstructions, and educational materials, grounded in current research and methodological best practice',
+        'Complex findings need clear visuals to reach beyond your field. I create scientifically accurate illustrations for publications, site reconstructions, and educational materials \u2014 grounded in current research so your audience sees what you see.',
       image: illustrating,
       alt: 'Scientific and archaeological illustration examples and digital artwork by Jona Schlegel',
       tools: 'Procreate, Inkscape, ArcGIS, QGIS',
@@ -408,7 +444,7 @@ export const serviceData = {
       slug: 'web-development',
       name: 'Web Development & Design for Archaeology',
       description:
-        'Tailored web development and design solutions that enhance digital engagement for archaeological projects, including database-driven platforms and interactive visualisation tools',
+        'Your research deserves a platform as rigorous as your methodology. I build database-driven platforms and interactive visualisation tools that let your users explore, query, and engage with archaeological data on their terms.',
       image: webDevelopment,
       alt: 'Web development and design portfolio for archaeological projects by Jona Schlegel',
       tools: 'Next.js, TypeScript, Tailwind CSS, Three.js, CesiumJS, Leaflet',
@@ -438,6 +474,42 @@ export const testimonialsData = [
     image: profile02,
     comment:
       'After viewing Jona’s portfolio, I requested a logo design, and it was the best decision. She worked diligently, brought fresh ideas, and delivered an outstanding final concept. I’m very happy with my brand identity and grateful for her talent and dedication.',
+  },
+];
+
+/** Key statistics displayed on the home page. */
+export const statsData: import('../../types/global').StatType[] = [
+  { name: 'Years in Archaeological Research', number: '7+' },
+  { name: 'Countries Worked In', number: '6' },
+  { name: 'Peer-Reviewed Publications', number: '3' },
+  { name: 'Research Platforms Built', number: '4' },
+];
+
+/** Recent blog posts from Trowel Journal for homepage preview. */
+export const blogPostsData = [
+  {
+    title:
+      'Visual Storytelling in Archaeology: Designing a Cover to Connect Women in the Field Across Time',
+    date: '2024-10-08',
+    excerpt:
+      'Exploring the design of a magazine cover that honours the evolving roles of women in archaeology, drawing inspiration from pioneers like Ann Axtell Morris.',
+    url: 'https://www.archaeoink.com/blog/visual-storytelling-in-archaeology',
+  },
+  {
+    title:
+      'The Power of Conceptual Illustrations in Archaeological Communication during Inktober 2024',
+    date: '2024-09-24',
+    excerpt:
+      'How visual communication can democratize archaeology, making it more accessible and engaging for the public through strategic illustration.',
+    url: 'https://www.archaeoink.com/blog/conceptual-illustrations-in-inktober',
+  },
+  {
+    title:
+      'How Visual Communication Can Transform Public Archaeology into Engaging Conversations',
+    date: '2024-07-28',
+    excerpt:
+      'Using conceptual illustrations and visual metaphors to bridge the gap between specialists and the public, making archaeology more approachable.',
+    url: 'https://www.archaeoink.com/blog/public-archaeology',
   },
 ];
 
