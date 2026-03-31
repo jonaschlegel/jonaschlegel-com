@@ -15,7 +15,7 @@ const capabilities = [
   {
     title: 'Illustration & Visual Storytelling',
     description:
-      'Scientifically accurate illustrations for publications, outreach, and education. From reconstruction drawings and life-like scenes to conceptual illustrations, cover art, comics, and zines.',
+      'Research publications compete for attention \u2014 compelling visuals make yours stand out. Scientifically accurate illustrations for publications, outreach, and education: from reconstruction drawings and life-like scenes to conceptual illustrations, cover art, comics, and zines.',
     includes: [
       'Reconstruction drawings & life-like scenes',
       'Cover art & publication illustration',
@@ -31,7 +31,7 @@ const capabilities = [
   {
     title: '3D Modelling & Documentation',
     description:
-      'Digital 3D documentation and modelling of archaeological artefacts and features using image-based modelling (photogrammetry), Feather 3D, and Nomad Sculpt.',
+      'Flat photos rarely capture the full story of an artefact. Digital 3D documentation and modelling brings archaeological finds to life through image-based modelling (photogrammetry), Feather 3D, and Nomad Sculpt.',
     includes: [
       'Image-based modelling (photogrammetry)',
       'Digital sculpting (Nomad Sculpt, Feather 3D)',
@@ -52,7 +52,7 @@ const capabilities = [
   {
     title: 'Web Development & Digital Platforms',
     description:
-      'Fullstack web development for archaeological research projects. Database-driven platforms, interactive visualisation tools, and digital research infrastructure.',
+      'Research datasets locked in spreadsheets cannot serve the audiences they deserve. Fullstack web development for archaeological research projects: database-driven platforms, interactive visualisation tools, and digital research infrastructure.',
     includes: [
       'Research platforms & databases',
       'Interactive data visualisation & 3D tools',
@@ -68,7 +68,7 @@ const capabilities = [
   {
     title: 'Brand & Publication Design',
     description:
-      'Visual identity and publication design for heritage organisations, research projects, and academic publishers. Brand systems that communicate credibility and purpose.',
+      'First impressions shape how seriously your research is taken. Visual identity and publication design for heritage organisations, research projects, and academic publishers \u2014 brand systems that communicate credibility and purpose.',
     includes: [
       'Brand identity development',
       'Publication & journal design',

@@ -216,6 +216,57 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </h2>
         <p className="text-neutral-700 leading-relaxed">{project.outcome}</p>
       </section>
+
+      {/* Impact */}
+      {project.impact && project.impact.length > 0 && (
+        <section className="mb-12 max-w-3xl rounded-lg bg-primary-green/5 p-6">
+          <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-primary-green">
+            Impact
+          </h2>
+          <ul className="space-y-2">
+            {project.impact.map((item) => (
+              <li
+                key={`impact-${item.slice(0, 30).replace(/\s+/g, '-')}`}
+                className="flex gap-2 text-sm text-neutral-700"
+              >
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary-green" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {/* Publications */}
+      {project.publications && project.publications.length > 0 && (
+        <section className="mb-12 max-w-3xl">
+          <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-primary-green">
+            Publications
+          </h2>
+          <ul className="space-y-3">
+            {project.publications.map((pub) => (
+              <li
+                key={`pub-${pub.title.slice(0, 30).replace(/\s+/g, '-')}`}
+                className="text-sm text-neutral-700"
+              >
+                {pub.url ? (
+                  <a
+                    href={pub.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-primary-green underline-offset-2 hover:text-primary-green"
+                  >
+                    {pub.title}
+                  </a>
+                ) : (
+                  <span>{pub.title}</span>
+                )}
+                <span className="text-neutral-500"> — {pub.venue}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
     </div>
   );
 }

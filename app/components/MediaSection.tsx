@@ -29,7 +29,7 @@ const mediaItems: MediaItem[] = [
       'Workshop on using historical maps as sources for Surinamese history, organised with the Huygens Institute.',
   },
   {
-    title: 'The Archaeology of the Digital Age',
+    title: 'Archaeology after Dark EP. 86 "Visual Science Communication"',
     type: 'guest',
     role: 'Guest',
     date: '2025',

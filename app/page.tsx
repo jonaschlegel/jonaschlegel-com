@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import Banner from './components/Banner';
+import BlogPreview from './components/BlogPreview';
+import ClientLogos from './components/ClientLogos';
 import CurrentRoleBanner from './components/CurrentRoleBanner';
+import FAQSection, { defaultFAQs } from './components/FAQSection';
 import Hero from './components/Hero';
 import IllustrationBand from './components/IllustrationBand';
 import InstagramGrid from './components/InstagramGrid';
@@ -67,11 +70,15 @@ export default function HomePage() {
           <CurrentRoleBanner />
         </div>
         <IllustrationBand seed={1} />
+        <ClientLogos />
+
         <RecentActivity />
+        <BlogPreview />
         <Banner />
         <PodcastSection />
         <MediaSection />
         <InstagramGrid />
+        <FAQSection faqs={defaultFAQs} />
         <Testimonials />
         <PastForwardHubSection />
       </div>

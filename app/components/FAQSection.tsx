@@ -45,8 +45,8 @@ export default function FAQSection({
         <header className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">{title}</h2>
           <p className="text-gray-700 max-w-2xl mx-auto">
-            Common questions about archaeological science communication,
-            research methods, and professional services.
+            Answers to common questions about working together, timelines, and
+            what to expect from a collaboration.
           </p>
         </header>
 
@@ -99,36 +99,36 @@ export default function FAQSection({
 }
 
 // Default FAQs for the site
-/** Default set of frequently asked questions about archaeological science communication. */
+/** Default set of frequently asked questions addressing common client concerns. */
 export const defaultFAQs: FAQ[] = [
   {
-    question: 'What is archaeological science communication?',
+    question: 'What is the typical process for a project?',
     answer:
-      'Archaeological science communication involves translating complex archaeological research and findings into accessible content for diverse audiences. This includes creating educational materials, public presentations, digital content, and engaging with media to share archaeological discoveries and their significance with the broader community.',
+      'Every project follows four stages: Brief, Sketch & Concept, Iteration, and Delivery. We start with a conversation to understand your research context, audience, and goals. I then develop initial sketches or wireframes for your review, refine through structured feedback rounds, and deliver final files in all required formats. The process ensures you stay involved at every step without needing to manage the details.',
   },
   {
-    question: 'How do you approach knowledge management in archaeology?',
+    question: 'How long does a project usually take?',
     answer:
-      'Knowledge management in archaeology focuses on systematically organizing, preserving, and sharing archaeological data and insights. This involves creating digital archives, developing databases, establishing workflows for data collection and analysis, and ensuring that archaeological knowledge is accessible to researchers, institutions, and the public for future use.',
+      'Timelines vary by scope. A single scientific illustration typically takes 1\u20132 weeks. Brand identity projects run 3\u20134 weeks. Web platforms range from 4\u201312 weeks depending on complexity. During the initial brief, I provide a clear timeline estimate so you can plan accordingly. Urgent requests are possible \u2014 just let me know your deadline.',
   },
   {
-    question: 'What services do you offer for archaeological projects?',
+    question: 'Do you work remotely and internationally?',
     answer:
-      'I provide comprehensive support for archaeological projects including research design, data analysis, scientific illustration, public engagement strategies, educational content creation, and knowledge management systems. Each project is tailored to meet specific research goals and communication objectives.',
+      'Yes, most of my collaborations are remote. I currently work with institutions and researchers across the Netherlands, Austria, Switzerland, India, and the United States. Communication happens via email, video calls, and shared project boards \u2014 whatever works best for your team.',
   },
   {
-    question: 'How do you ensure accuracy in science communication?',
+    question: 'Are you a vendor or a collaborator?',
     answer:
-      'Accuracy is maintained through rigorous fact-checking, collaboration with subject matter experts, peer review processes, and staying current with the latest archaeological research. All communications are grounded in scientific evidence and reviewed for both accuracy and accessibility before publication.',
+      'A collaborator. As a trained landscape archaeologist, I understand research workflows, publication standards, and the importance of accuracy. I work as a partner embedded in your project, not an external service provider who needs everything spelled out. This means fewer misunderstandings and results that genuinely serve your research.',
   },
   {
-    question: 'Can you help with public engagement for archaeological sites?',
+    question: 'Can you work with our existing research data or systems?',
     answer:
-      'Yes, I specialize in developing public engagement strategies for archaeological sites, including creating interpretive materials, designing educational programs, developing digital experiences, and training staff in effective communication techniques to connect visitors with archaeological heritage.',
+      'Absolutely. I regularly work with GIS data, archaeological databases like OpenAtlas, archival systems, IIIF image servers, and various data formats. If you have existing datasets, CMS platforms, or institutional design guidelines, I integrate with what you already have rather than starting from scratch.',
   },
   {
-    question: 'What is your experience with digital archaeology tools?',
+    question: 'What if I am not sure which service I need?',
     answer:
-      'I have extensive experience with various digital archaeology tools including GIS systems, 3D modeling software, database management systems, and digital illustration platforms. This technical expertise enables effective integration of technology with traditional archaeological methods and communication strategies.',
+      'That is completely fine and quite common. Many projects cross service boundaries \u2014 a research platform might need illustrations, a publication might need web components. Book a free consultation and I will help you figure out the best approach for your goals and budget.',
   },
 ];
