@@ -16,10 +16,6 @@ const nextConfig: NextConfig = {
     // Types are already checked in CI
     ignoreBuildErrors: true,
   },
-  eslint: {
-    // Linting is already checked in CI
-    ignoreDuringBuilds: true,
-  },
 
   // SEO and performance optimizations
   poweredByHeader: false,
