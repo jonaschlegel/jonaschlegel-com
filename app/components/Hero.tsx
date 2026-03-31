@@ -4,6 +4,7 @@ import React from 'react';
 import { heroSectionData } from '../data/content';
 import ButtonPrimary from './ButtonPrimary';
 
+/** Landing hero section with heading, description, and showcase images. */
 const Hero = () => {
   return (
     <section className="container mx-auto px-4 pb-12 pt-8 md:pb-20 md:pt-12">

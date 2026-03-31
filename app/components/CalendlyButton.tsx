@@ -8,6 +8,7 @@ interface CalendlyButtonProps {
   className?: string;
 }
 
+/** Button that opens the Calendly scheduling widget for booking consultations. */
 export default function CalendlyButton({
   url = 'https://calendly.com/jonaschlegel/consultation',
   text = 'Schedule a Call',

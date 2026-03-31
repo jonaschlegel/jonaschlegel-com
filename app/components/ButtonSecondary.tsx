@@ -8,6 +8,7 @@ export interface ButtonSecondaryProps extends ButtonProps {
   pdfUrl?: string;
 }
 
+/** Secondary button variant with optional PDF download link. */
 const ButtonSecondary: React.FC<ButtonSecondaryProps> = ({
   className = '',
   pdfUrl,

@@ -24,6 +24,7 @@ const podcastLinks = [
   },
 ] as const;
 
+/** Section promoting the TechTrowels podcast with episode highlights. */
 const PodcastSection = () => {
   return (
     <section className="container mx-auto px-4 py-16">

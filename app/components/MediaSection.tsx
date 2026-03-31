@@ -38,6 +38,7 @@ const typeIcons = {
   talk: BsPlayCircle,
 };
 
+/** Section showcasing media appearances, talks, and publications. */
 const MediaSection = () => {
   return (
     <section className="container mx-auto px-4 py-16" id="media">

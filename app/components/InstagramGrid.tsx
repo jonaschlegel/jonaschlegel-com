@@ -11,6 +11,7 @@ const instagramPosts = [
   { shortcode: 'DQpt2StCHtu', type: 'post' },
 ] as const;
 
+/** Grid of embedded Instagram posts. */
 const InstagramGrid = () => {
   return (
     <section className="container mx-auto px-4 py-12">

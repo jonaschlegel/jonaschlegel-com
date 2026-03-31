@@ -43,6 +43,7 @@ const typeColors: Record<ActivityItem['type'], string> = {
   project: 'bg-primary-teal/20 text-primary-dark',
 };
 
+/** Timeline of recent professional activities and milestones. */
 const RecentActivity = () => {
   return (
     <section className="container mx-auto py-12 px-4">

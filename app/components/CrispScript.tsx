@@ -9,6 +9,7 @@ declare global {
   }
 }
 
+/** Initialises the Crisp live chat widget. */
 export default function CrispScript() {
   useEffect(() => {
     try {

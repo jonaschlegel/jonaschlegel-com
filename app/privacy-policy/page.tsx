@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 
+/** SEO metadata for the Privacy Policy page. */
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description:
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
   },
 };
 
+/** Privacy policy page detailing GDPR-compliant data handling practices. */
 export default function PrivacyPolicy() {
   return (
     <div className="container mx-auto px-4 py-16">

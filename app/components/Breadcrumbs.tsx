@@ -14,6 +14,7 @@ interface BreadcrumbsProps {
   className?: string;
 }
 
+/** Breadcrumb navigation displaying the current page hierarchy. */
 export default function Breadcrumbs({
   items,
   className = '',

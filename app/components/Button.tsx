@@ -18,6 +18,7 @@ export interface ButtonProps {
   children?: React.ReactNode;
 }
 
+/** Base button component with customisable styling, size, and behaviour. */
 const Button: FC<ButtonProps> = ({
   className = 'text-primary-dark disabled:cursor-not-allowed',
   translate = '',

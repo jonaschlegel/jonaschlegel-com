@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { generateSEOMetadata } from '../lib/seo';
 import ServicesContent from './ServicesContent';
 
+/** SEO metadata for the Services page. */
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Services',
   description:
@@ -20,6 +21,7 @@ export const metadata: Metadata = generateSEOMetadata({
   ogType: 'website',
 });
 
+/** Services page component. */
 export default function ServicesPage() {
   return <ServicesContent />;
 }

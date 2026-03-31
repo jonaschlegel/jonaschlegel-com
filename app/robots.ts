@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 
+/** Returns the robots.txt configuration for search engine crawlers. */
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {

@@ -21,6 +21,7 @@ const externalLinks = [
   },
 ];
 
+/** Responsive navigation bar with mobile hamburger menu. */
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 

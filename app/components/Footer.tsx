@@ -3,6 +3,7 @@ import { footerdata } from '../data/content';
 import ButtonPrimary from './ButtonPrimary';
 import SocialItem from './SocialItem';
 
+/** Site footer with navigation links, social icons, and contact call-to-action. */
 const Footer = () => {
   return (
     <div className="container mx-auto py-16">

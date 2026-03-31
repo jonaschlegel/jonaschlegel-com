@@ -3,6 +3,7 @@ import Image from 'next/image';
 import CalendlyButton from '../components/CalendlyButton';
 import { aboutStudioData, jonaAboutImage } from '../data/content';
 
+/** SEO metadata for the About page. */
 export const metadata: Metadata = {
   title: 'About archaeoINK Studio',
   description:
@@ -34,6 +35,7 @@ export const metadata: Metadata = {
   },
 };
 
+/** About page describing the archaeoINK studio and its approach. */
 export default function AboutPage() {
   return (
     <div className="container mx-auto py-16">

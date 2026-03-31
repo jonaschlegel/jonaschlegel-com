@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+/** Banner highlighting the current professional role and CV link. */
 const CurrentRoleBanner = () => {
   return (
     <div className="bg-primary-teal/10 border border-primary-teal/30 rounded-lg px-4 py-3 mb-8">

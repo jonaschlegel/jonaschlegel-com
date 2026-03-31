@@ -127,6 +127,7 @@ const timelines = [
   'Urgent (under 1 month)',
 ] as const;
 
+/** Interactive services page with service descriptions, process steps, and contact form. */
 export default function ServicesContent() {
   const [openStep, setOpenStep] = useState<number | null>(null);
   const [formData, setFormData] = useState({
@@ -298,9 +299,7 @@ export default function ServicesContent() {
 
                 <button
                   type="button"
-                  onClick={() =>
-                    setOpenStep(openStep === index ? null : index)
-                  }
+                  onClick={() => setOpenStep(openStep === index ? null : index)}
                   className="flex w-full items-center justify-between border border-gray-200 bg-white px-6 py-5 text-left transition-colors hover:border-gray-400"
                   aria-expanded={openStep === index}
                 >
@@ -474,9 +473,7 @@ export default function ServicesContent() {
             />
           </div>
 
-          <button
-            className="w-full bg-primary-dark px-8 py-4 text-sm font-semibold text-primary-cream transition-colors hover:bg-primary-green"
-          >
+          <button className="w-full bg-primary-dark px-8 py-4 text-sm font-semibold text-primary-cream transition-colors hover:bg-primary-green">
             Send Project Brief
           </button>
           <p className="text-center text-xs text-gray-500">

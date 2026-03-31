@@ -17,6 +17,7 @@ export interface ButtonPrimaryProps extends ButtonProps {
   calendlyEventSlug?: string;
 }
 
+/** Primary call-to-action button with email and Calendly booking support. */
 const ButtonPrimary: React.FC<ButtonPrimaryProps> = ({
   className = '',
   email,

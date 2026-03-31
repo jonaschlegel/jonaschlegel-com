@@ -2,6 +2,7 @@
 
 import dynamic from 'next/dynamic';
 
+/** Dynamically imported MapComponent with SSR disabled. */
 const mapComponent = dynamic(() => import('./MapComponent'), {
   ssr: false,
   loading: () => (

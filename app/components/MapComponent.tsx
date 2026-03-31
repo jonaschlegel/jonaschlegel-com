@@ -419,6 +419,7 @@ const MapContent: React.FC<{
   return null;
 };
 
+/** Leaflet map with marker clusters, heatmap layer, and location popups. */
 const MapComponent: React.FC<MapComponentProps> = ({
   locations,
   projectData,

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import type { FC } from 'react';
 import type { ProjectType } from '../../types/global';
 
+/** Card linking to an individual project with a cover image. */
 const ProjectCard: FC<ProjectType> = ({ slug, image, name }) => {
   return (
     <Link

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 
+/** SEO metadata for the Imprint page. */
 export const metadata: Metadata = {
   title: 'Imprint',
   description:
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
   },
 };
 
+/** Legal imprint page with business and contact information. */
 export default function Imprint() {
   return (
     <div className="container mx-auto px-4 py-16">

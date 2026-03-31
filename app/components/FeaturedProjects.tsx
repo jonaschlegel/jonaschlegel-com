@@ -1,6 +1,7 @@
 import { projectsData } from '../data/content';
 import ProjectCard from './ProjectCard';
 
+/** Grid of featured portfolio projects. */
 const FeaturedProjects = () => {
   const featuredProjects = projectsData.projectsList
     .filter((project) => project.isFeatured)

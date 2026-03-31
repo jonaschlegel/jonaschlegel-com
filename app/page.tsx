@@ -10,6 +10,7 @@ import RecentActivity from './components/RecentActivity';
 import Testimonials from './components/Testimonials';
 import { generateSEOMetadata } from './lib/seo';
 
+/** SEO metadata for the home page. */
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Home',
   description:
@@ -30,6 +31,7 @@ export const metadata: Metadata = generateSEOMetadata({
   ogType: 'website',
 });
 
+/** Home page component displaying hero, projects, testimonials, and media sections. */
 export default function HomePage() {
   const structuredData = {
     '@context': 'https://schema.org',

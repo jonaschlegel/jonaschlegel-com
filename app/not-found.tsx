@@ -1,3 +1,4 @@
+/** Custom 404 page displayed when a route is not found. */
 export default function NotFound() {
   return (
     <div className="container mx-auto py-16">

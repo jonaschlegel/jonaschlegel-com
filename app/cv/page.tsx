@@ -6,6 +6,7 @@ import CvMap from '../components/CvMap';
 import CvTabs from '../components/CvTabs';
 import { generateSEOMetadata } from '../lib/seo';
 
+/** SEO metadata for the CV page. */
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Curriculum Vitae',
   description:
@@ -56,6 +57,7 @@ interface Publication {
   location: string;
 }
 
+/** CV page displaying work experience, education, publications, and an interactive map. */
 const CvPage = async () => {
   const workPath = path.join(process.cwd(), 'app/data/cv/work-experience.json');
   const educationPath = path.join(
@@ -386,9 +388,7 @@ const CvPage = async () => {
           {/* Render publications */}
           {allYears.map((year) => {
             const yearPublications = publications
-              .filter(
-                (pub) => parseDate(pub.date).getFullYear() === year,
-              )
+              .filter((pub) => parseDate(pub.date).getFullYear() === year)
               .sort(
                 (a, b) =>
                   parseDate(b.date).getTime() - parseDate(a.date).getTime(),

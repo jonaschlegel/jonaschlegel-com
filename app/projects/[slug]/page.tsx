@@ -23,6 +23,7 @@ export const dynamic = 'force-dynamic';
 //   }));
 // }
 
+/** Generates dynamic SEO metadata for an individual project page. */
 export async function generateMetadata({
   params,
 }: ProjectPageProps): Promise<Metadata> {
@@ -91,6 +92,7 @@ export async function generateMetadata({
   };
 }
 
+/** Individual project page displaying details, images, and MDX content. */
 export default async function ProjectPage({ params }: ProjectPageProps) {
   const slug = (await params).slug;
   const project: ProjectType | undefined = projectsData.projectsList.find(
@@ -166,9 +168,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <h2 className="mb-2 text-sm font-semibold uppercase tracking-wider text-primary-green">
           Objective
         </h2>
-        <p className="text-neutral-700 leading-relaxed">
-          {project.objective}
-        </p>
+        <p className="text-neutral-700 leading-relaxed">{project.objective}</p>
       </section>
 
       {/* Challenges + Target Group */}

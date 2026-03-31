@@ -7,6 +7,7 @@ import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
 import { testimonialsData } from '../data/content';
 import ClientCard from './ClientCard';
 
+/** Carousel of client testimonials using Glide.js. */
 const Testimonials = () => {
   const glideRef = useRef<HTMLDivElement | null>(null);
 

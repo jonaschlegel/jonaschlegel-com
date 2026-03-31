@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 
+/** Floating button that scrolls the page back to the top when clicked. */
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 

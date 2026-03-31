@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { projectsData } from '../data/content';
 import { generateSEOMetadata } from '../lib/seo';
 
+/** SEO metadata for the Projects page. */
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Projects',
   description:
@@ -24,6 +25,7 @@ export const metadata: Metadata = generateSEOMetadata({
   ogType: 'website',
 });
 
+/** Projects listing page showing all portfolio items with structured data. */
 export default function ProjectsPage() {
   const structuredData = {
     '@context': 'https://schema.org',
@@ -51,7 +53,6 @@ export default function ProjectsPage() {
 
   return (
     <div className="container mx-auto px-4">
-
       <header className="mb-12 py-8">
         <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-primary-green">
           Portfolio

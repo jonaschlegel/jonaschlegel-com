@@ -57,6 +57,7 @@ interface CvMapProps {
   className?: string;
 }
 
+/** Interactive map displaying work and education locations with clustering and heatmap support. */
 const CvMap: React.FC<CvMapProps> = ({
   workExperience,
   educationalExperience = [],

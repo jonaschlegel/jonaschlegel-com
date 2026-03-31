@@ -25,6 +25,7 @@ import illustrating from '../images/services/archaeological-illustrating.jpg';
 import archaeologySciComm from '../images/services/archaeological-sci-comm.jpg';
 import webDevelopment from '../images/services/web-development.jpg';
 
+/** Navigation links used in the header and footer. */
 export const navLinks = [
   { name: 'About', href: '/about' },
   { name: 'Projects', href: '/projects' },
@@ -32,6 +33,7 @@ export const navLinks = [
   { name: 'CV', href: '/cv' },
 ] as const;
 
+/** Content and images for the home page hero section. */
 export const heroSectionData = {
   eyebrow: 'archaeoINK · Jona Schlegel',
   heading: 'Visual Science Communication for Archaeological Research',
@@ -44,10 +46,12 @@ export const heroSectionData = {
   },
 };
 
+/** Text paragraphs displayed in the promotional banner. */
 export const bannerData = [
   'Whether you are a researcher looking to visualise excavation data, an institution communicating heritage to the public, or an educator bringing archaeology into the classroom: archaeoINK helps you tell that story. Founded by landscape archaeologist Jona Schlegel, the studio works at the intersection of scientific rigour and visual storytelling, creating illustrations, publications, and digital tools that make archaeological knowledge accessible and engaging.',
 ];
 
+/** Content sections for the About page describing archaeoINK studio. */
 export const aboutStudioData = {
   heading: 'About archaeoINK',
   sections: [
@@ -78,10 +82,14 @@ This collaborative approach extends to understanding the specific needs of diffe
   ],
 };
 
+/** Profile image of Jona Schlegel. */
 export const jonaImage = jona;
+/** About page image of Jona during excavation work. */
 export const jonaAboutImage = jonaAbout;
+/** Banner image of Jona at a fieldwork event. */
 export const jonaBannerImage = jonaBanner;
 
+/** Portfolio projects data including metadata, images, and service tags. */
 export const projectsData = {
   heading: 'Featured Projects',
   projectsList: [
@@ -91,16 +99,27 @@ export const projectsData = {
       slug: 'urban-chameleon',
       image: urbanChameleon,
       description:
-        'Interactive platform for exploring and analysing graffiti as cultural heritage along Vienna\'s Danube Canal.',
+        "Interactive platform for exploring and analysing graffiti as cultural heritage along Vienna's Danube Canal.",
       services: ['web development & design for archaeology'],
       isFeatured: true,
       year: '2023',
       location: 'Vienna, Austria',
-      institution: 'Ludwig Boltzmann Institute for Archaeological Prospection and Virtual Archaeology',
+      institution:
+        'Ludwig Boltzmann Institute for Archaeological Prospection and Virtual Archaeology',
       role: 'Wireframing, Mockup, Prototyping, Web Development',
       duration: '2 months intensive work',
-      tools: ['Next.js 13+', 'React', 'SCSS', 'TypeScript', 'Figma', 'Miro', 'OpenAtlas', 'Resium/CesiumJS'],
-      objective: 'Create an interactive platform for exploring and analysing graffiti in spatial and temporal context, preserving graffiti as cultural heritage.',
+      tools: [
+        'Next.js 13+',
+        'React',
+        'SCSS',
+        'TypeScript',
+        'Figma',
+        'Miro',
+        'OpenAtlas',
+        'Resium/CesiumJS',
+      ],
+      objective:
+        'Create an interactive platform for exploring and analysing graffiti in spatial and temporal context, preserving graffiti as cultural heritage.',
       targetGroup: [
         'Researchers needing efficient graffiti metadata queries',
         'Graffitists wanting their work represented and preserved',
@@ -110,7 +129,8 @@ export const projectsData = {
         'Graffiti are inherently transient, requiring dynamic temporal display',
         'Managing and visualising large datasets with high-resolution 3D surface models in real-time',
       ],
-      outcome: 'Public-facing digital platform for Project INDIGO documenting 13km of continuous graffiti along the Danube Canal.',
+      outcome:
+        'Public-facing digital platform for Project INDIGO documenting 13km of continuous graffiti along the Danube Canal.',
     },
     {
       id: '2',
@@ -128,7 +148,8 @@ export const projectsData = {
       role: 'Content creation, Web development, Design',
       duration: 'Ongoing, weekly publication since October 2023',
       tools: ['Next.js', 'Markdown', 'Tailwind CSS'],
-      objective: 'Share practical techniques, digital tools, and personal reflections on archaeology, illustration, and science communication.',
+      objective:
+        'Share practical techniques, digital tools, and personal reflections on archaeology, illustration, and science communication.',
       targetGroup: [
         'Archaeologists seeking accessible content on techniques and digital tools',
         'Illustrators looking for tips on scientific and archaeological illustration',
@@ -139,7 +160,8 @@ export const projectsData = {
         'Maintaining consistent weekly publishing schedule alongside other work',
         'Keeping Markdown-based content structure scalable as volume grows',
       ],
-      outcome: 'International readership, referenced in academic publications and university course materials.',
+      outcome:
+        'International readership, referenced in academic publications and university course materials.',
     },
     {
       id: '3',
@@ -156,7 +178,8 @@ export const projectsData = {
       year: 'Ongoing',
       role: 'Illustration, Design, Content development',
       tools: ['Procreate', 'Digital printing', 'Photography'],
-      objective: 'Democratize archaeological knowledge by transforming complex research into accessible, engaging zine formats.',
+      objective:
+        'Democratize archaeological knowledge by transforming complex research into accessible, engaging zine formats.',
       targetGroup: [
         'Museum visitors and educators',
         'Teachers and students in schools',
@@ -166,7 +189,8 @@ export const projectsData = {
         'Translating complex academic research into visually engaging short formats',
         'Balancing scientific accuracy with accessibility for non-specialist audiences',
       ],
-      outcome: 'Zines on post-excavation processing, medieval cooking, and community archaeology, distributed at museums, schools, and conferences.',
+      outcome:
+        'Zines on post-excavation processing, medieval cooking, and community archaeology, distributed at museums, schools, and conferences.',
     },
     {
       id: '4',
@@ -183,7 +207,8 @@ export const projectsData = {
       year: 'Ongoing',
       role: 'Illustration, Research, Science communication',
       tools: ['Procreate'],
-      objective: 'Challenge stereotypes about archaeology and make career paths visible through engaging comic-style illustrations.',
+      objective:
+        'Challenge stereotypes about archaeology and make career paths visible through engaging comic-style illustrations.',
       targetGroup: [
         'Established archaeologists and students',
         'Parents with children interested in history',
@@ -193,7 +218,8 @@ export const projectsData = {
         'Depicting specialisms accurately whilst keeping visuals approachable',
         'Optimising illustrations for social media without losing scientific detail',
       ],
-      outcome: 'Series covering archaeobotany, forensic archaeology, kurgan archaeology, and Jomon archaeology, used for university outreach and social media.',
+      outcome:
+        'Series covering archaeobotany, forensic archaeology, kurgan archaeology, and Jomon archaeology, used for university outreach and social media.',
     },
     {
       id: '5',
@@ -209,13 +235,15 @@ export const projectsData = {
       institution: 'Journal of Archaeological Science: Reports',
       role: 'Scientific illustration',
       tools: ['Procreate', 'Scientific illustration techniques'],
-      objective: 'Accurately reconstruct a Roman-era double burial based on bioarchaeological and genetic findings for peer-reviewed publication.',
+      objective:
+        'Accurately reconstruct a Roman-era double burial based on bioarchaeological and genetic findings for peer-reviewed publication.',
       targetGroup: [
         'Archaeological scholars and bioarchaeologists',
         'Museums and heritage interpretation audiences',
         'General public interested in Roman history',
       ],
-      outcome: 'Published reconstruction in Journal of Archaeological Science: Reports (2024), illustrating the first genetic evidence of a mother-daughter relationship in Roman Austria.',
+      outcome:
+        'Published reconstruction in Journal of Archaeological Science: Reports (2024), illustrating the first genetic evidence of a mother-daughter relationship in Roman Austria.',
     },
     {
       id: '6',
@@ -230,13 +258,15 @@ export const projectsData = {
       role: 'Illustration, Concept development',
       duration: '1 week',
       tools: ['Procreate'],
-      objective: 'Explore women\'s contributions to archaeology through a cover design featuring three female archaeologists representing different time periods.',
+      objective:
+        "Explore women's contributions to archaeology through a cover design featuring three female archaeologists representing different time periods.",
       targetGroup: [
         'Archaeological professionals seeking representation',
         'Students and early-career researchers',
         'Public audiences interested in women in science',
       ],
-      outcome: 'Cover design concept featuring past, present, and future archaeologists with era-appropriate tools and methodologies.',
+      outcome:
+        'Cover design concept featuring past, present, and future archaeologists with era-appropriate tools and methodologies.',
     },
     {
       id: '7',
@@ -245,15 +275,25 @@ export const projectsData = {
       image: necessaryReunions,
       description:
         'Digital research platform reconnecting 17th-century VOC maps with archival sources for early modern Kerala.',
-      services: ['web development & design for archaeology', 'archaeological research & communication'],
+      services: [
+        'web development & design for archaeology',
+        'archaeological research & communication',
+      ],
       isFeatured: true,
       year: '2025',
       location: 'Netherlands / Kerala, India',
       institution: 'Huygens Institute / University of Amsterdam',
       role: 'Researcher, Interface Design and User Experience',
       duration: 'March - December 2025',
-      tools: ['IIIF', 'Computer vision', 'HTR (Loghi toolkit)', 'Georeferencing', 'Web development'],
-      objective: 'Reconnect Dutch East India Company (VOC) maps with textual archives and create a comprehensive gazetteer of place information for early modern Kerala.',
+      tools: [
+        'IIIF',
+        'Computer vision',
+        'HTR (Loghi toolkit)',
+        'Georeferencing',
+        'Web development',
+      ],
+      objective:
+        'Reconnect Dutch East India Company (VOC) maps with textual archives and create a comprehensive gazetteer of place information for early modern Kerala.',
       targetGroup: [
         'Historians and humanities researchers',
         'Cultural heritage professionals and archival specialists',
@@ -263,7 +303,8 @@ export const projectsData = {
         'Integrating historical handwriting recognition with cartographic analysis',
         'Building interfaces for complex archival research across multiple institutions',
       ],
-      outcome: 're:Charted web platform with computer vision analysis, handwritten text recognition, and georeferencing. NWO XS funded. Published on Zenodo.',
+      outcome:
+        're:Charted web platform with computer vision analysis, handwritten text recognition, and georeferencing. NWO XS funded. Published on Zenodo.',
     },
     {
       id: '8',
@@ -276,10 +317,17 @@ export const projectsData = {
       isFeatured: true,
       year: '2021 - 2022',
       location: 'Mustair, Switzerland',
-      institution: 'Ludwig Boltzmann Institute for Archaeological Prospection and Virtual Archaeology',
+      institution:
+        'Ludwig Boltzmann Institute for Archaeological Prospection and Virtual Archaeology',
       role: 'First author, Data processing, Interpretation, Cartographic visualisation',
-      tools: ['Caesium vapour magnetometry', 'GPR (400 MHz / 800 MHz)', 'Data processing software', 'Cartographic visualisation'],
-      objective: 'Map subsurface archaeological features and understand the spatial organisation of the medieval monastic complex beyond preserved architecture.',
+      tools: [
+        'Caesium vapour magnetometry',
+        'GPR (400 MHz / 800 MHz)',
+        'Data processing software',
+        'Cartographic visualisation',
+      ],
+      objective:
+        'Map subsurface archaeological features and understand the spatial organisation of the medieval monastic complex beyond preserved architecture.',
       targetGroup: [
         'Heritage professionals and UNESCO site management',
         'Geophysical prospection researchers',
@@ -289,7 +337,8 @@ export const projectsData = {
         'Surveying within a UNESCO World Heritage Site with strict access and conservation constraints',
         'Interpreting complex multi-phase subsurface remains across different geophysical methods',
       ],
-      outcome: 'Peer-reviewed publication in Remote Sensing (MDPI). Identified subsurface guest quarters, agricultural infrastructure, and craft production areas.',
+      outcome:
+        'Peer-reviewed publication in Remote Sensing (MDPI). Identified subsurface guest quarters, agricultural infrastructure, and craft production areas.',
     },
     {
       id: '9',
@@ -304,17 +353,20 @@ export const projectsData = {
       institution: 'PasTrace (client)',
       role: 'Logo design, Brand identity development',
       tools: ['Procreate', 'Vector design'],
-      objective: 'Create a visual identity communicating technical precision and cultural respect for a heritage technology company.',
+      objective:
+        'Create a visual identity communicating technical precision and cultural respect for a heritage technology company.',
       targetGroup: [
         'Museums and heritage institutions',
         'Researchers using 3D documentation',
         'Digital heritage professionals',
       ],
-      outcome: 'Complete brand identity including logo symbol, wordmark, colour palette, tagline, and application guidelines.',
+      outcome:
+        'Complete brand identity including logo symbol, wordmark, colour palette, tagline, and application guidelines.',
     },
   ],
 };
 
+/** Service offerings with descriptions, tools, and downloadable resources. */
 export const serviceData = {
   heading: 'Services',
   servicesList: [
@@ -370,6 +422,7 @@ export const serviceData = {
   ],
 };
 
+/** Client testimonials displayed in the carousel. */
 export const testimonialsData = [
   {
     name: 'Gabriella Campbell',
@@ -388,6 +441,7 @@ export const testimonialsData = [
   },
 ];
 
+/** Footer content including navigation, social links, and contact details. */
 export const footerdata = {
   heading: "Let's Collaborate",
   navLinks: [

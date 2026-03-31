@@ -14,6 +14,7 @@ interface FAQSectionProps {
   className?: string;
 }
 
+/** Accordion-style FAQ section with expandable questions and structured data support. */
 export default function FAQSection({
   faqs,
   title = 'Frequently Asked Questions',
@@ -78,9 +79,7 @@ export default function FAQSection({
                   id={`faq-answer-${index}`}
                   className="px-6 py-4 bg-gray-50 border-t border-gray-200"
                 >
-                  <p className="text-gray-700 leading-relaxed">
-                    {faq.answer}
-                  </p>
+                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
                 </div>
               )}
             </div>
@@ -100,6 +99,7 @@ export default function FAQSection({
 }
 
 // Default FAQs for the site
+/** Default set of frequently asked questions about archaeological science communication. */
 export const defaultFAQs: FAQ[] = [
   {
     question: 'What is archaeological science communication?',

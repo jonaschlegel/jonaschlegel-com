@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 import logo from '../images/logo.webp';
 
+/** Site logo linking to the home page. */
 const Logo = () => {
   return (
     <Link href="/" className="flex items-center gap-2">

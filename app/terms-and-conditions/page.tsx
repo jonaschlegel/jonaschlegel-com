@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 
+/** SEO metadata for the Terms and Conditions page. */
 export const metadata: Metadata = {
   title: 'Terms and Conditions',
   description:
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
   },
 };
 
+/** Terms and conditions page outlining user rights and responsibilities. */
 export default function TermsAndConditions() {
   return (
     <div className="container mx-auto px-4 py-16">

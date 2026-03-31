@@ -3,6 +3,7 @@ import type { FC } from 'react';
 import { BsQuote } from 'react-icons/bs';
 import type { ClientType } from '../../types/global';
 
+/** Testimonial card displaying a client quote, name, and role. */
 const ClientCard: FC<ClientType> = (props) => {
   return (
     <div className="">

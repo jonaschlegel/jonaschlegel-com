@@ -4,6 +4,7 @@ import { bannerData, jonaBannerImage } from '../data/content';
 import BannerText from './BannerText';
 import ButtonSecondary from './ButtonSecondary';
 
+/** Promotional banner section with text content and call-to-action button. */
 const Banner: FC = () => {
   return (
     <div className="mb-8 bg-yellow-100 py-3 text-neutral-950">

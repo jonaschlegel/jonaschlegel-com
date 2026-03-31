@@ -38,6 +38,7 @@ interface CvTabsProps {
   publications: Publication[];
 }
 
+/** Tabbed view for CV sections: work experience, education, and publications. */
 const CvTabs: React.FC<CvTabsProps> = ({
   workEntries,
   educationEntries,

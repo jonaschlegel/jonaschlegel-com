@@ -8,6 +8,7 @@ interface ServiceCardProps extends ServiceType {
   projects: ProjectType[];
 }
 
+/** Card displaying a service offering with image, description, and related projects. */
 const ServiceCard: FC<ServiceCardProps> = ({
   image,
   alt,
@@ -44,7 +45,9 @@ const ServiceCard: FC<ServiceCardProps> = ({
                     key={`project-${project.id}`}
                     href={`/projects/${project.slug}`}
                   >
-                    <p className="text-primary-green hover:underline">{project.name}</p>
+                    <p className="text-primary-green hover:underline">
+                      {project.name}
+                    </p>
                   </Link>
                 ))}
               </div>

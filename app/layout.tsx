@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollUpArrow';
 import Tracking from './Tracking';
 
+/** Site-wide metadata configuration for SEO, Open Graph, and Twitter cards. */
 export const metadata: Metadata = {
   metadataBase: new URL('https://jonaschlegel.com'),
   title: {
@@ -87,6 +88,7 @@ export const metadata: Metadata = {
   },
 };
 
+/** Root layout wrapping all pages with global styles, navigation, and scripts. */
 export default function RootLayout({
   children,
 }: {

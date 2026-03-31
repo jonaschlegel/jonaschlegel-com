@@ -19,6 +19,7 @@ const hubLinks = [
   },
 ] as const;
 
+/** Promotional section for the Past Forward Hub newsletter and community. */
 const PastForwardHubSection = () => {
   return (
     <section className="container mx-auto px-4 py-16">
