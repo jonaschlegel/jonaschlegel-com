@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import Breadcrumbs from '../components/Breadcrumbs';
 import { projectsData } from '../data/content';
 import { generateSEOMetadata } from '../lib/seo';
 

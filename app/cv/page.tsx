@@ -2,7 +2,6 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import type { Metadata } from 'next';
 import { Fragment } from 'react';
-import Breadcrumbs from '../components/Breadcrumbs';
 import CvMap from '../components/CvMap';
 import CvTabs from '../components/CvTabs';
 import { generateSEOMetadata } from '../lib/seo';

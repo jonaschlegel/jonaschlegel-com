@@ -188,7 +188,7 @@ export default function ServicesContent() {
                           title={model.title}
                           className="absolute inset-0 size-full"
                           src={`https://sketchfab.com/models/${model.id}/embed?ui_theme=dark`}
-                          sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-popups-to-escape-sandbox"
+                          sandbox="allow-same-origin allow-popups allow-forms allow-popups-to-escape-sandbox"
                           allow="autoplay; fullscreen; xr-spatial-tracking"
                           loading="lazy"
                         />

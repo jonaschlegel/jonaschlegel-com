@@ -1,11 +1,9 @@
-import React from 'react';
 import { projectsData } from '../data/content';
 import ProjectCard from './ProjectCard';
 
 const FeaturedProjects = () => {
   const featuredProjects = projectsData.projectsList
     .filter((project) => project.isFeatured)
-    .sort(() => 0.5 - Math.random())
     .slice(0, 4);
 
   return (

@@ -206,15 +206,15 @@ const MapContent: React.FC<{
 
       // Remove existing marker layers (use duck typing since MarkerClusterGroup isn't a standard class)
       map.eachLayer((layer) => {
-        const layerAny = layer as any;
+        const layerRecord = layer as unknown as Record<string, unknown>;
         if (
-          (layerAny._group !== undefined && layerAny._markers !== undefined) || // MarkerClusterGroup
+          (layerRecord._group !== undefined && layerRecord._markers !== undefined) || // MarkerClusterGroup
           (layer instanceof L.Marker) ||
-          (layerAny.options?.gradient) // heatmap layer
+          ((layer.options as Record<string, unknown>).gradient) // heatmap layer
         ) {
           try {
             map.removeLayer(layer);
-          } catch (e) {
+          } catch {
             // Layer may already be removed
           }
         }
@@ -415,15 +415,15 @@ const MapContent: React.FC<{
     return () => {
       // Cleanup: remove marker layers using duck typing
       map.eachLayer((layer) => {
-        const layerAny = layer as any;
+        const layerRecord = layer as unknown as Record<string, unknown>;
         if (
-          (layerAny._group !== undefined && layerAny._markers !== undefined) || // MarkerClusterGroup
+          (layerRecord._group !== undefined && layerRecord._markers !== undefined) || // MarkerClusterGroup
           (layer instanceof L.Marker) ||
-          (layerAny.options?.gradient) // heatmap layer
+          ((layer.options as Record<string, unknown>).gradient) // heatmap layer
         ) {
           try {
             map.removeLayer(layer);
-          } catch (e) {
+          } catch {
             // Layer may already be removed
           }
         }
