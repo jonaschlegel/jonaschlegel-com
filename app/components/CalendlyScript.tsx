@@ -2,6 +2,7 @@
 
 import Script from 'next/script';
 
+/** Loads the Calendly widget stylesheet and JavaScript assets. */
 export default function CalendlyScript() {
   return (
     <>

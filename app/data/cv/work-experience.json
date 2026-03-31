@@ -18,19 +18,6 @@
         "url": "https://hmc-project.squarespace.com/en/team"
       },
       {
-        "title": "Necessary Reunions",
-        "startDate": "April 2025",
-        "endDate": "October 2025",
-        "location": "Amsterdam, Netherlands",
-        "role(s)": [
-          "CIDOC CRM data model",
-          "web development",
-          "III viewer",
-          "web design"
-        ],
-        "url": "https://necessaryreunions.com/"
-      },
-      {
         "title": "PastForwardHub",
         "startDate": "December 2024",
         "endDate": "Present",
@@ -49,6 +36,43 @@
           "podcast episode editing"
         ],
         "url": "https://thingswethrewaway.substack.com/"
+      }
+    ]
+  },
+  {
+    "title": "Researcher",
+    "organization": "Huygens Institute",
+    "startDate": "April 2025",
+    "endDate": "Present",
+    "description": "Digital humanities research at the intersection of cartographic heritage and computational methods, focusing on interface design, user experience, and web development for historical research platforms.",
+    "location": "Amsterdam, Netherlands",
+    "director": "Manjusha Kuruppath",
+    "url": "https://www.huygens.knaw.nl/",
+    "connected project(s)": [
+      {
+        "title": "Necessary Reunions",
+        "startDate": "April 2025",
+        "endDate": "October 2025",
+        "location": "Amsterdam, Netherlands",
+        "role(s)": [
+          "CIDOC CRM data model",
+          "web development",
+          "IIIF viewer",
+          "web design"
+        ],
+        "url": "https://necessaryreunions.com/"
+      },
+      {
+        "title": "Suriname Time Machine",
+        "startDate": "December 2025",
+        "endDate": "Present",
+        "location": "Amsterdam, Netherlands",
+        "role(s)": [
+          "citizen science",
+          "web development",
+          "heritage data accessibility"
+        ],
+        "url": "https://www.huygens.knaw.nl/en/projecten/suriname-time-machine/"
       }
     ]
   },

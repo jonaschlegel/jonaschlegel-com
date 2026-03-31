@@ -201,17 +201,12 @@ const MapContent: React.FC<{
   const map = useMap();
 
   useEffect(() => {
+    const addedLayers: L.Layer[] = [];
+    let cancelled = false;
+
     const initializeMap = async () => {
       await loadLeafletPlugins();
-
-      map.eachLayer((layer) => {
-        if (
-          layer instanceof L.MarkerClusterGroup ||
-          layer instanceof L.Marker
-        ) {
-          map.removeLayer(layer);
-        }
-      });
+      if (cancelled) return;
 
       const markers: L.Marker[] = [];
       locations.forEach((location) => {
@@ -356,8 +351,13 @@ const MapContent: React.FC<{
 
         markers.forEach((marker) => markerClusterGroup.addLayer(marker));
         map.addLayer(markerClusterGroup);
+        addedLayers.push(markerClusterGroup as L.Layer);
       } else {
-        markers.forEach((marker) => map.addLayer(marker));
+        markers.forEach((marker) => {
+          if (cancelled) return;
+          map.addLayer(marker);
+          addedLayers.push(marker);
+        });
       }
 
       // Heatmap
@@ -398,6 +398,7 @@ const MapContent: React.FC<{
             },
           });
           map.addLayer(heatLayer);
+          addedLayers.push(heatLayer as L.Layer);
         }
       }
     };
@@ -406,13 +407,9 @@ const MapContent: React.FC<{
     initializeMap();
 
     return () => {
-      map.eachLayer((layer) => {
-        if (
-          layer instanceof L.MarkerClusterGroup ||
-          layer instanceof L.Marker ||
-          // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-          (layer as any).options?.gradient // heatmap layer
-        ) {
+      cancelled = true;
+      addedLayers.forEach((layer) => {
+        if (map.hasLayer(layer)) {
           map.removeLayer(layer);
         }
       });
@@ -422,6 +419,7 @@ const MapContent: React.FC<{
   return null;
 };
 
+/** Leaflet map with marker clusters, heatmap layer, and location popups. */
 const MapComponent: React.FC<MapComponentProps> = ({
   locations,
   projectData,
@@ -442,6 +440,7 @@ const MapComponent: React.FC<MapComponentProps> = ({
       bounds={bounds}
       className="w-full h-full"
       scrollWheelZoom={true}
+      maxZoom={19}
       style={{ height: '100%', width: '100%' }}
     >
       <TileLayer

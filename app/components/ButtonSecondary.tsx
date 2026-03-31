@@ -8,6 +8,7 @@ export interface ButtonSecondaryProps extends ButtonProps {
   pdfUrl?: string;
 }
 
+/** Secondary button variant with optional PDF download link. */
 const ButtonSecondary: React.FC<ButtonSecondaryProps> = ({
   className = '',
   pdfUrl,
@@ -15,7 +16,7 @@ const ButtonSecondary: React.FC<ButtonSecondaryProps> = ({
 }) => {
   return (
     <Button
-      className={`rounded-full border font-semibold text-white ${className}`}
+      className={`rounded-full border font-semibold text-primary-dark ${className}`}
       {...args}
       onClick={() => {
         if (pdfUrl) {

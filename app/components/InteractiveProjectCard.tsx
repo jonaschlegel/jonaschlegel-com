@@ -9,6 +9,7 @@ interface InteractiveProjectCardProps {
   name: string;
 }
 
+/** Project card with hover overlay revealing the project name. */
 const InteractiveProjectCard = ({
   image,
   name,

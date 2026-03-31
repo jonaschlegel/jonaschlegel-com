@@ -7,9 +7,11 @@ import {
 } from 'react-icons/bs';
 import profile01 from '../images/clients/profile01.jpg';
 import profile02 from '../images/clients/profile02.jpg';
-import heroBg from '../images/herobg.jpg';
+import jonaAbout from '../images/jona-images/jona-excavation-trowel.jpg';
+import jonaBanner from '../images/jona-images/jona-fieldwork-forschungsfest.jpg';
+import jonaPaleontology from '../images/jona-images/jona-paleontology-archaeology.jpeg';
 import jona from '../images/jona.webp';
-import overview from '../images/overview.webp';
+import typesOfIllustration from '../images/other-illustration/illustration-types-of-archaeological-illustration.jpg';
 import adventuressCover from '../images/projects/adventuress-cover.jpg';
 import archaeoZine from '../images/projects/archaeo-zine.jpg';
 import exploringArchaeologicalDisciplines from '../images/projects/exploring-archaeological-disciplines.jpg';
@@ -23,29 +25,33 @@ import illustrating from '../images/services/archaeological-illustrating.jpg';
 import archaeologySciComm from '../images/services/archaeological-sci-comm.jpg';
 import webDevelopment from '../images/services/web-development.jpg';
 
+/** Navigation links used in the header and footer. */
 export const navLinks = [
   { name: 'About', href: '/about' },
   { name: 'Projects', href: '/projects' },
-  { name: 'Services', href: '/#service' },
+  { name: 'Services', href: '/services' },
   { name: 'CV', href: '/cv' },
 ] as const;
 
+/** Content and images for the home page hero section. */
 export const heroSectionData = {
-  heading: 'Visual communication for archaeological research',
-  text: 'archaeoINK transforms research data into clear narratives through illustration, design, and structured knowledge representation.',
-  statsData: [
-    { name: 'Scientific Articles Written', number: '15' },
-    { name: 'Illustrations Created', number: '253' },
-    { name: 'Digital Projects', number: '13' },
-  ],
-  bgImage: heroBg,
-  heroImage: overview,
+  eyebrow: 'archaeoINK · Jona Schlegel',
+  heading: 'Visual Science Communication for Archaeological Research',
+  subheading:
+    'Turning archaeological research into clear visual narratives through scientific illustration, publication design, and digital knowledge platforms.',
+  jonaPhoto: jonaPaleontology,
+  showcaseImage: {
+    src: typesOfIllustration,
+    alt: 'Mind map showing the types of archaeological illustration: reconstruction drawings, section drawings, artifact illustrations, site plans, scientific illustrations, comics, children\u2019s books, and zines',
+  },
 };
 
+/** Text paragraphs displayed in the promotional banner. */
 export const bannerData = [
-  'archaeoINK specialises in visual science communication for archaeology, creating accurate illustrations and structured knowledge representations that bridge academic research and public understanding. Founded by landscape archaeologist Jona Schlegel, the studio combines disciplinary expertise with visual communication skills to support researchers, institutions, and educators in making archaeological knowledge more accessible.',
+  'Whether you are a researcher looking to visualise excavation data, an institution communicating heritage to the public, or an educator bringing archaeology into the classroom: archaeoINK helps you tell that story. Founded by landscape archaeologist Jona Schlegel, the studio works at the intersection of scientific rigour and visual storytelling, creating illustrations, publications, and digital tools that make archaeological knowledge accessible and engaging.',
 ];
 
+/** Content sections for the About page describing archaeoINK studio. */
 export const aboutStudioData = {
   heading: 'About archaeoINK',
   sections: [
@@ -76,8 +82,14 @@ This collaborative approach extends to understanding the specific needs of diffe
   ],
 };
 
+/** Profile image of Jona Schlegel. */
 export const jonaImage = jona;
+/** About page image of Jona during excavation work. */
+export const jonaAboutImage = jonaAbout;
+/** Banner image of Jona at a fieldwork event. */
+export const jonaBannerImage = jonaBanner;
 
+/** Portfolio projects data including metadata, images, and service tags. */
 export const projectsData = {
   heading: 'Featured Projects',
   projectsList: [
@@ -87,33 +99,98 @@ export const projectsData = {
       slug: 'urban-chameleon',
       image: urbanChameleon,
       description:
-        'An exploration of urban graffiti and its historical context.',
+        "Interactive platform for exploring and analysing graffiti as cultural heritage along Vienna's Danube Canal.",
       services: ['web development & design for archaeology'],
       isFeatured: true,
+      year: '2023',
+      location: 'Vienna, Austria',
+      institution:
+        'Ludwig Boltzmann Institute for Archaeological Prospection and Virtual Archaeology',
+      role: 'Wireframing, Mockup, Prototyping, Web Development',
+      duration: '2 months intensive work',
+      tools: [
+        'Next.js 13+',
+        'React',
+        'SCSS',
+        'TypeScript',
+        'Figma',
+        'Miro',
+        'OpenAtlas',
+        'Resium/CesiumJS',
+      ],
+      objective:
+        'Create an interactive platform for exploring and analysing graffiti in spatial and temporal context, preserving graffiti as cultural heritage.',
+      targetGroup: [
+        'Researchers needing efficient graffiti metadata queries',
+        'Graffitists wanting their work represented and preserved',
+        'General public exploring graffiti along the Danube Canal',
+      ],
+      challenges: [
+        'Graffiti are inherently transient, requiring dynamic temporal display',
+        'Managing and visualising large datasets with high-resolution 3D surface models in real-time',
+      ],
+      outcome:
+        'Public-facing digital platform for Project INDIGO documenting 13km of continuous graffiti along the Danube Canal.',
     },
     {
       id: '2',
       name: 'Trowel Journal Blog',
       slug: 'trowel-journal-blog',
       image: trowelJournalBlog,
-      description: 'A blog platform for archaeological publications.',
+      description:
+        'Personal blog sharing ideas on archaeology, illustration, and scientific communication.',
       services: [
         'web development & design for archaeology',
-        'archaeological aesearch & communication',
+        'archaeological research & communication',
       ],
       isFeatured: true,
+      year: '2023 - present',
+      role: 'Content creation, Web development, Design',
+      duration: 'Ongoing, weekly publication since October 2023',
+      tools: ['Next.js', 'Markdown', 'Tailwind CSS'],
+      objective:
+        'Share practical techniques, digital tools, and personal reflections on archaeology, illustration, and science communication.',
+      targetGroup: [
+        'Archaeologists seeking accessible content on techniques and digital tools',
+        'Illustrators looking for tips on scientific and archaeological illustration',
+        'Science communicators needing approachable methods for complex topics',
+      ],
+      challenges: [
+        'Balancing professionalism with personal expression across audiences',
+        'Maintaining consistent weekly publishing schedule alongside other work',
+        'Keeping Markdown-based content structure scalable as volume grows',
+      ],
+      outcome:
+        'International readership, referenced in academic publications and university course materials.',
     },
     {
       id: '3',
       name: 'archaeo Zine',
       slug: 'archaeo-zine',
       image: archaeoZine,
-      description: 'A zine promoting archaeological discoveries to the public.',
+      description:
+        'Illustrated zines translating peer-reviewed research into accessible formats for public audiences.',
       services: [
         'scientific & archaeological illustration',
         'archaeological research & communication',
       ],
       isFeatured: true,
+      year: 'Ongoing',
+      role: 'Illustration, Design, Content development',
+      tools: ['Procreate', 'Digital printing', 'Photography'],
+      objective:
+        'Democratize archaeological knowledge by transforming complex research into accessible, engaging zine formats.',
+      targetGroup: [
+        'Museum visitors and educators',
+        'Teachers and students in schools',
+        'Conference attendees and field archaeology audiences',
+      ],
+      challenges: [
+        'Translating complex academic research into visually engaging short formats',
+        'Balancing scientific accuracy with accessibility for non-specialist audiences',
+      ],
+      outcome:
+        'Zines on post-excavation processing, medieval cooking, and community archaeology, distributed at museums, schools, and conferences.',
     },
     {
       id: '4',
@@ -121,21 +198,52 @@ export const projectsData = {
       slug: 'exploring-archaeological-disciplines',
       image: exploringArchaeologicalDisciplines,
       description:
-        'A comic-style illustration series showcasing various branches of archaeology.',
+        'Comic-style illustration series revealing the interdisciplinary nature of archaeology.',
       services: [
         'scientific & archaeological illustration',
         'archaeological research & communication',
       ],
       isFeatured: true,
+      year: 'Ongoing',
+      role: 'Illustration, Research, Science communication',
+      tools: ['Procreate'],
+      objective:
+        'Challenge stereotypes about archaeology and make career paths visible through engaging comic-style illustrations.',
+      targetGroup: [
+        'Established archaeologists and students',
+        'Parents with children interested in history',
+        'Science communicators seeking accessible visual formats',
+      ],
+      challenges: [
+        'Depicting specialisms accurately whilst keeping visuals approachable',
+        'Optimising illustrations for social media without losing scientific detail',
+      ],
+      outcome:
+        'Series covering archaeobotany, forensic archaeology, kurgan archaeology, and Jomon archaeology, used for university outreach and social media.',
     },
     {
       id: '5',
-      name: 'Roman Burial',
+      name: 'Roman Burial Reconstruction',
       slug: 'roman-burial',
       image: romanBurial,
-      description: 'An archaeological illustration of a Roman burial.',
+      description:
+        'Scientific illustration of the first genetically documented mother-daughter burial from Roman Austria.',
       services: ['scientific & archaeological illustration'],
       isFeatured: true,
+      year: '2024',
+      location: 'Ovilava (Wels), Austria',
+      institution: 'Journal of Archaeological Science: Reports',
+      role: 'Scientific illustration',
+      tools: ['Procreate', 'Scientific illustration techniques'],
+      objective:
+        'Accurately reconstruct a Roman-era double burial based on bioarchaeological and genetic findings for peer-reviewed publication.',
+      targetGroup: [
+        'Archaeological scholars and bioarchaeologists',
+        'Museums and heritage interpretation audiences',
+        'General public interested in Roman history',
+      ],
+      outcome:
+        'Published reconstruction in Journal of Archaeological Science: Reports (2024), illustrating the first genetic evidence of a mother-daughter relationship in Roman Austria.',
     },
     {
       id: '6',
@@ -143,9 +251,22 @@ export const projectsData = {
       slug: 'adventuress-cover',
       image: adventuressCover,
       description:
-        'A cover illustration for the first issue of the Adventuress Archaeologist journal.',
+        'Cover design concept celebrating women in archaeology across past, present, and future.',
       services: ['scientific & archaeological illustration'],
       isFeatured: true,
+      year: '2024',
+      role: 'Illustration, Concept development',
+      duration: '1 week',
+      tools: ['Procreate'],
+      objective:
+        "Explore women's contributions to archaeology through a cover design featuring three female archaeologists representing different time periods.",
+      targetGroup: [
+        'Archaeological professionals seeking representation',
+        'Students and early-career researchers',
+        'Public audiences interested in women in science',
+      ],
+      outcome:
+        'Cover design concept featuring past, present, and future archaeologists with era-appropriate tools and methodologies.',
     },
     {
       id: '7',
@@ -153,19 +274,71 @@ export const projectsData = {
       slug: 'necessary-reunions',
       image: necessaryReunions,
       description:
-        'Digital cartographic research platform reuniting Dutch VOC maps with textual archives.',
-      services: ['web development & design for archaeology'],
+        'Digital research platform reconnecting 17th-century VOC maps with archival sources for early modern Kerala.',
+      services: [
+        'web development & design for archaeology',
+        'archaeological research & communication',
+      ],
       isFeatured: true,
+      year: '2025',
+      location: 'Netherlands / Kerala, India',
+      institution: 'Huygens Institute / University of Amsterdam',
+      role: 'Researcher, Interface Design and User Experience',
+      duration: 'March - December 2025',
+      tools: [
+        'IIIF',
+        'Computer vision',
+        'HTR (Loghi toolkit)',
+        'Georeferencing',
+        'Web development',
+      ],
+      objective:
+        'Reconnect Dutch East India Company (VOC) maps with textual archives and create a comprehensive gazetteer of place information for early modern Kerala.',
+      targetGroup: [
+        'Historians and humanities researchers',
+        'Cultural heritage professionals and archival specialists',
+        'Researchers working with colonial-era archives',
+      ],
+      challenges: [
+        'Integrating historical handwriting recognition with cartographic analysis',
+        'Building interfaces for complex archival research across multiple institutions',
+      ],
+      outcome:
+        're:Charted web platform with computer vision analysis, handwritten text recognition, and georeferencing. NWO XS funded. Published on Zenodo.',
     },
     {
       id: '8',
-      name: 'Müstair UNESCO Heritage Site Survey',
+      name: 'Mustair UNESCO Heritage Site Survey',
       slug: 'geophysical-prospection-study',
       image: geophysicalProspection,
       description:
-        'Geophysical investigation of the medieval monastery revealing hidden monastic landscapes through magnetometry and GPR survey.',
+        'Non-invasive geophysical investigation revealing hidden monastic landscapes at the UNESCO World Heritage Site.',
       services: ['archaeological research & communication'],
       isFeatured: true,
+      year: '2021 - 2022',
+      location: 'Mustair, Switzerland',
+      institution:
+        'Ludwig Boltzmann Institute for Archaeological Prospection and Virtual Archaeology',
+      role: 'First author, Data processing, Interpretation, Cartographic visualisation',
+      tools: [
+        'Caesium vapour magnetometry',
+        'GPR (400 MHz / 800 MHz)',
+        'Data processing software',
+        'Cartographic visualisation',
+      ],
+      objective:
+        'Map subsurface archaeological features and understand the spatial organisation of the medieval monastic complex beyond preserved architecture.',
+      targetGroup: [
+        'Heritage professionals and UNESCO site management',
+        'Geophysical prospection researchers',
+        'Archaeologists working with non-invasive survey methods',
+      ],
+      challenges: [
+        'Surveying within a UNESCO World Heritage Site with strict access and conservation constraints',
+        'Interpreting complex multi-phase subsurface remains across different geophysical methods',
+      ],
+      outcome:
+        'Peer-reviewed publication in Remote Sensing (MDPI). Identified subsurface guest quarters, agricultural infrastructure, and craft production areas.',
     },
     {
       id: '9',
@@ -173,13 +346,27 @@ export const projectsData = {
       slug: 'pastrace',
       image: pastrace,
       description:
-        'Logo design and visual identity for digital heritage technology company.',
+        'Brand identity for a German photogrammetry company specialising in 3D heritage documentation.',
       services: ['scientific & archaeological illustration'],
       isFeatured: true,
+      year: '2023',
+      institution: 'PasTrace (client)',
+      role: 'Logo design, Brand identity development',
+      tools: ['Procreate', 'Vector design'],
+      objective:
+        'Create a visual identity communicating technical precision and cultural respect for a heritage technology company.',
+      targetGroup: [
+        'Museums and heritage institutions',
+        'Researchers using 3D documentation',
+        'Digital heritage professionals',
+      ],
+      outcome:
+        'Complete brand identity including logo symbol, wordmark, colour palette, tagline, and application guidelines.',
     },
   ],
 };
 
+/** Service offerings with descriptions, tools, and downloadable resources. */
 export const serviceData = {
   heading: 'Services',
   servicesList: [
@@ -235,6 +422,7 @@ export const serviceData = {
   ],
 };
 
+/** Client testimonials displayed in the carousel. */
 export const testimonialsData = [
   {
     name: 'Gabriella Campbell',
@@ -253,12 +441,13 @@ export const testimonialsData = [
   },
 ];
 
+/** Footer content including navigation, social links, and contact details. */
 export const footerdata = {
   heading: "Let's Collaborate",
   navLinks: [
-    { name: 'About', href: '/#about' },
-    { name: 'Project', href: '/#project' },
-    { name: 'Service', href: '/#service' },
+    { name: 'About', href: '/about' },
+    { name: 'Projects', href: '/projects' },
+    { name: 'Services', href: '/services' },
   ],
   socialLinks: [
     { Icon: BsBehance, href: 'https://www.behance.net/jonaschlegel1' },

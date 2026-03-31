@@ -9,12 +9,39 @@ html {
   scroll-padding: 4rem;
 }
 
+/* Accessibility: visible focus indicators */
+a:focus-visible,
+button:focus-visible,
+[role='button']:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #009d6f;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Skip to main content link (screen readers) */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  padding: 0.5rem 1rem;
+  background: #009d6f;
+  color: #fff;
+  z-index: 100;
+  font-weight: 600;
+}
+.skip-link:focus {
+  top: 0;
+}
+
 body {
   font-family:
     ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol', 'Noto Color Emoji';
-  background-color: #1c1f23;
-  color: #f5f4f2;
+  background-color: #f5f4f2;
+  color: #1c1f23;
 }
 
 p,
@@ -27,22 +54,26 @@ div {
 
 h1 {
   @apply font-merriweather text-5xl font-bold leading-snug tracking-tight xl:text-[4.5rem];
-  color: #f5f4f2;
+
+  color: #1c1f23;
 }
 
 h2 {
   @apply text-left font-merriweather text-2xl font-semibold md:text-3xl;
-  color: #f5f4f2;
+
+  color: #1c1f23;
 }
 
 h3 {
   @apply text-left text-lg font-medium uppercase;
-  color: #42cbb3;
+
+  color: #009d6f;
 }
 
 p {
   @apply tracking-tight my-6;
-  color: #f5f4f2;
+
+  color: #3a3d42;
 }
 
 ul {

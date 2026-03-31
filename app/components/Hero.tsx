@@ -1,50 +1,68 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import { heroSectionData } from '../data/content';
 import ButtonPrimary from './ButtonPrimary';
-import Stats from './Stats';
 
+/** Landing hero section with heading, description, and showcase images. */
 const Hero = () => {
   return (
-    <div className="container relative mx-auto mb-0 pb-0 pt-4 lg:pb-36">
-      <div className="relative mb-4 aspect-[4/1] w-full overflow-hidden rounded-[2.5rem]">
-        <Image
-          src={heroSectionData.bgImage}
-          alt="Archaeological illustration and scientific communication background showcasing Jona Schlegel's work"
-          fill
-          className="object-cover"
-          sizes="100%"
-          priority
-        />
-      </div>
-      <div className="flex flex-col justify-between gap-6 md:flex-row">
-        <div className="space-y-6 md:basis-2/5 2xl:basis-[35%]">
+    <section className="container mx-auto px-4 pb-12 pt-8 md:pb-20 md:pt-12">
+      <div className="flex flex-col items-center gap-10 lg:flex-row lg:items-start lg:gap-16">
+        {/* Text column */}
+        <div className="space-y-6 lg:basis-5/12 lg:py-8">
+          <div className="flex items-center gap-3">
+            <div className="relative size-10 shrink-0 overflow-hidden rounded-full md:size-12">
+              <Image
+                src={heroSectionData.jonaPhoto}
+                alt="Jona Schlegel"
+                fill
+                className="object-cover object-top"
+                sizes="48px"
+              />
+            </div>
+            <p className="text-sm font-semibold uppercase tracking-widest text-primary-green">
+              {heroSectionData.eyebrow}
+            </p>
+          </div>
           <h1 className="leading-snug tracking-tight xl:text-[4.5rem]">
             {heroSectionData.heading}
           </h1>
-          <p className="tracking-tight text-neutral-300">
-            {heroSectionData.text}
+          <p className="max-w-lg tracking-tight text-gray-600">
+            {heroSectionData.subheading}
           </p>
-          <div>
-            <ButtonPrimary calendlyEventSlug="jonaschlegel" className="mb-5">
+          <div className="flex flex-wrap items-center gap-4">
+            <ButtonPrimary
+              calendlyEventSlug="jonaschlegel"
+              sizeClass="py-3 px-6"
+            >
               Let&apos;s Talk
             </ButtonPrimary>
+            <Link
+              href="/projects"
+              className="inline-flex items-center gap-1.5 rounded-full border border-primary-dark px-6 py-3 text-sm font-medium text-primary-dark transition-colors hover:bg-primary-dark hover:text-primary-cream"
+            >
+              View Projects
+              <span aria-hidden="true">&rarr;</span>
+            </Link>
           </div>
         </div>
-        <div>
-          <Stats stats={heroSectionData.statsData} />
+
+        {/* Showcase illustration */}
+        <div className="lg:basis-7/12">
+          <div className="relative aspect-[4/3] w-full overflow-hidden">
+            <Image
+              src={heroSectionData.showcaseImage.src}
+              alt={heroSectionData.showcaseImage.alt}
+              fill
+              className="object-contain"
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 58vw"
+              priority
+            />
+          </div>
         </div>
       </div>
-      <div className="relative bottom-0 mb-0 aspect-square w-full overflow-hidden pt-8 md:absolute md:left-[40%] md:aspect-[4/6] md:h-3/4 md:w-auto md:pt-0 xl:h-full">
-        <Image
-          src={heroSectionData.heroImage}
-          alt="Jona Schlegel - Scientific Illustrator, Web Developer, and Archaeological Communicator"
-          fill
-          className="object-contain hover:opacity-60"
-          sizes="(max-width: 768px) 100vw, 60vw"
-        />{' '}
-      </div>
-    </div>
+    </section>
   );
 };
 

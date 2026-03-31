@@ -21,6 +21,7 @@ const externalLinks = [
   },
 ];
 
+/** Responsive navigation bar with mobile hamburger menu. */
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -43,7 +44,7 @@ const Navbar = () => {
         </button>
       </div>
       <div
-        className={`fixed top-0 z-10 flex h-screen w-screen items-center bg-neutral-950 transition-all duration-500 ${
+        className={`fixed top-0 z-10 flex h-screen w-screen items-center bg-primary-cream transition-all duration-500 ${
           mobileOpen ? 'left-0' : '-left-full'
         } lg:static lg:size-auto lg:bg-transparent`}
       >
@@ -62,7 +63,7 @@ const Navbar = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleToggleMenu}
-                className="flex items-center text-primary-accent hover:text-primary-teal transition-colors duration-200"
+                className="flex items-center text-primary-dark hover:text-primary-green transition-colors duration-200"
               >
                 <span className="lg:hidden">{link.name}</span>
                 <span className="hidden lg:inline">{link.shortName}</span>

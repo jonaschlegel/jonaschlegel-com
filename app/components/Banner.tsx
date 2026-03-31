@@ -1,9 +1,10 @@
 import Image from 'next/image';
 import type { FC } from 'react';
-import { bannerData, jonaImage } from '../data/content';
+import { bannerData, jonaBannerImage } from '../data/content';
 import BannerText from './BannerText';
 import ButtonSecondary from './ButtonSecondary';
 
+/** Promotional banner section with text content and call-to-action button. */
 const Banner: FC = () => {
   return (
     <div className="mb-8 bg-yellow-100 py-3 text-neutral-950">
@@ -25,8 +26,8 @@ const Banner: FC = () => {
           <div className="shrink-0">
             <div className="relative aspect-square size-32 overflow-hidden rounded-full lg:size-48">
               <Image
-                src={jonaImage}
-                alt="jona"
+                src={jonaBannerImage}
+                alt="Jona Schlegel at archaeological fieldwork"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 128px, 192px"

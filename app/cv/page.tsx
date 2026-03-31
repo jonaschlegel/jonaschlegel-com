@@ -2,11 +2,11 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import type { Metadata } from 'next';
 import { Fragment } from 'react';
-import Breadcrumbs from '../components/Breadcrumbs';
 import CvMap from '../components/CvMap';
 import CvTabs from '../components/CvTabs';
 import { generateSEOMetadata } from '../lib/seo';
 
+/** SEO metadata for the CV page. */
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Curriculum Vitae',
   description:
@@ -57,6 +57,7 @@ interface Publication {
   location: string;
 }
 
+/** CV page displaying work experience, education, publications, and an interactive map. */
 const CvPage = async () => {
   const workPath = path.join(process.cwd(), 'app/data/cv/work-experience.json');
   const educationPath = path.join(
@@ -212,10 +213,9 @@ const CvPage = async () => {
   return (
     <div className="min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Breadcrumbs />
         <header className="mb-8">
           <h1 className="text-4xl font-bold mb-4">Curriculum Vitae</h1>
-          <p className="text-lg text-neutral-300 max-w-3xl">
+          <p className="text-lg text-gray-600 max-w-3xl">
             Comprehensive overview of my professional journey in archaeological
             research, science communication, and education. Explore my academic
             background, professional experience, and key contributions to the
@@ -264,7 +264,7 @@ const CvPage = async () => {
           {allYears.map((year) => (
             <div
               key={`year-${year}`}
-              className="border-t py-2 text-white font-bold"
+              className="border-t border-gray-200 py-2 text-primary-dark font-bold"
               style={{
                 gridColumn: 1,
                 gridRow: `${yearRowStart[year]} / span ${totalLayersPerYear[year]}`,
@@ -387,9 +387,12 @@ const CvPage = async () => {
 
           {/* Render publications */}
           {allYears.map((year) => {
-            const yearPublications = publications.filter(
-              (pub) => parseDate(pub.date).getFullYear() === year,
-            );
+            const yearPublications = publications
+              .filter((pub) => parseDate(pub.date).getFullYear() === year)
+              .sort(
+                (a, b) =>
+                  parseDate(b.date).getTime() - parseDate(a.date).getTime(),
+              );
 
             return (
               <Fragment key={`pubs-${year}`}>

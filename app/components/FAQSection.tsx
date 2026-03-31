@@ -14,6 +14,7 @@ interface FAQSectionProps {
   className?: string;
 }
 
+/** Accordion-style FAQ section with expandable questions and structured data support. */
 export default function FAQSection({
   faqs,
   title = 'Frequently Asked Questions',
@@ -43,7 +44,7 @@ export default function FAQSection({
       <div className="container mx-auto px-4">
         <header className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">{title}</h2>
-          <p className="text-neutral-400 max-w-2xl mx-auto">
+          <p className="text-gray-700 max-w-2xl mx-auto">
             Common questions about archaeological science communication,
             research methods, and professional services.
           </p>
@@ -57,30 +58,28 @@ export default function FAQSection({
                 .replace(/\s+/g, '-')
                 .toLowerCase()
                 .replace(/[^a-z0-9-]/g, '')}`}
-              className="mb-4 border border-neutral-700 rounded-lg overflow-hidden"
+              className="mb-4 border border-gray-200 rounded-lg overflow-hidden"
             >
               <button
-                className="w-full px-6 py-4 text-left bg-neutral-800 hover:bg-neutral-700 transition-colors flex justify-between items-center"
+                className="w-full px-6 py-4 text-left bg-white hover:bg-gray-50 transition-colors flex justify-between items-center"
                 onClick={() => toggleFAQ(index)}
                 aria-expanded={openIndex === index}
                 aria-controls={`faq-answer-${index}`}
               >
                 <h3 className="text-lg font-semibold pr-4">{faq.question}</h3>
                 {openIndex === index ? (
-                  <FaChevronUp className="text-primary-teal flex-shrink-0" />
+                  <FaChevronUp className="text-primary-green flex-shrink-0" />
                 ) : (
-                  <FaChevronDown className="text-primary-teal flex-shrink-0" />
+                  <FaChevronDown className="text-primary-green flex-shrink-0" />
                 )}
               </button>
 
               {openIndex === index && (
                 <div
                   id={`faq-answer-${index}`}
-                  className="px-6 py-4 bg-neutral-900 border-t border-neutral-700"
+                  className="px-6 py-4 bg-gray-50 border-t border-gray-200"
                 >
-                  <p className="text-neutral-300 leading-relaxed">
-                    {faq.answer}
-                  </p>
+                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
                 </div>
               )}
             </div>
@@ -100,6 +99,7 @@ export default function FAQSection({
 }
 
 // Default FAQs for the site
+/** Default set of frequently asked questions about archaeological science communication. */
 export const defaultFAQs: FAQ[] = [
   {
     question: 'What is archaeological science communication?',

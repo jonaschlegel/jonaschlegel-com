@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { FC } from 'react';
 import type { SocialType } from '../../types/global';
 
+/** Social media icon link for external profiles. */
 const SocialItem: FC<SocialType> = ({ Icon, href }) => {
   const isExternal = typeof href === 'string';
 

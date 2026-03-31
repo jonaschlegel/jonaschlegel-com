@@ -14,6 +14,7 @@ interface BreadcrumbsProps {
   className?: string;
 }
 
+/** Breadcrumb navigation displaying the current page hierarchy. */
 export default function Breadcrumbs({
   items,
   className = '',
@@ -30,7 +31,7 @@ export default function Breadcrumbs({
   return (
     <nav aria-label="Breadcrumb" className={`py-4 ${className}`}>
       <ol
-        className="flex items-center space-x-2 text-sm text-neutral-400"
+        className="flex items-center space-x-2 text-sm text-gray-700"
         itemScope
         itemType="https://schema.org/BreadcrumbList"
       >
@@ -49,14 +50,17 @@ export default function Breadcrumbs({
             {item.href ? (
               <Link
                 href={item.href as any}
-                className="hover:text-white transition-colors flex items-center"
+                className="hover:text-primary-dark transition-colors flex items-center"
                 itemProp="item"
               >
                 {index === 0 && <FaHome className="h-4 w-4 mr-1" />}
                 <span itemProp="name">{item.label}</span>
               </Link>
             ) : (
-              <span className="text-white flex items-center" itemProp="name">
+              <span
+                className="text-primary-dark flex items-center"
+                itemProp="name"
+              >
                 {index === 0 && <FaHome className="h-4 w-4 mr-1" />}
                 {item.label}
               </span>

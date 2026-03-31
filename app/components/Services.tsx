@@ -2,6 +2,7 @@ import React from 'react';
 import { projectsData, serviceData } from '../data/content';
 import ServiceCard from './ServiceCard';
 
+/** Services overview section listing all available service categories. */
 const Services = () => {
   return (
     <div className="container mx-auto py-16" id="service">

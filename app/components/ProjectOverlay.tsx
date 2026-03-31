@@ -6,6 +6,7 @@ interface ProjectOverlayProps {
   name: string;
 }
 
+/** Overlay displaying a project name on hover or click. */
 export default function ProjectOverlay({ name }: ProjectOverlayProps) {
   const [isVisible, setIsVisible] = useState(false);
 

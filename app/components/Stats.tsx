@@ -2,6 +2,7 @@ import type { FC } from 'react';
 import type { StatType } from '../../types/global';
 import StatCard from './StatCard';
 
+/** Row of statistic cards rendered from an array of stats. */
 const Stats: FC<{ stats: StatType[] }> = ({ stats }) => {
   return (
     <div className="flex items-center justify-around md:block md:space-y-8">

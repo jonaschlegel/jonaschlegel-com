@@ -1,5 +1,6 @@
 // Utility functions for tracking when client-side scripts are blocked
 
+/** Tracks a named analytics event via Google Analytics or server-side fallback. */
 export const trackEvent = async (
   eventName: string,
   parameters?: Record<string, any>,
@@ -33,6 +34,7 @@ export const trackEvent = async (
   }
 };
 
+/** Tracks a page view via Google Analytics, Facebook Pixel, or server-side fallback. */
 export const trackPageView = async (url?: string) => {
   try {
     let tracked = false;
@@ -63,6 +65,7 @@ export const trackPageView = async (url?: string) => {
   }
 };
 
+/** Checks whether Google Analytics and Facebook Pixel tracking scripts are loaded. */
 export const isTrackingBlocked = () => {
   if (typeof window === 'undefined') {
     return { googleAnalytics: true, facebookPixel: true };

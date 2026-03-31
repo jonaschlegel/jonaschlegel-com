@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollUpArrow';
 import Tracking from './Tracking';
 
+/** Site-wide metadata configuration for SEO, Open Graph, and Twitter cards. */
 export const metadata: Metadata = {
   metadataBase: new URL('https://jonaschlegel.com'),
   title: {
@@ -87,13 +88,14 @@ export const metadata: Metadata = {
   },
 };
 
+/** Root layout wrapping all pages with global styles, navigation, and scripts. */
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="bg-neutral-800 text-white">
+    <html lang="en" className="bg-primary-cream text-primary-dark">
       <head>
         {/* Favicon and Icons */}
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -180,8 +182,11 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         <Navbar />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
         <ScrollToTop />
         <Tracking />

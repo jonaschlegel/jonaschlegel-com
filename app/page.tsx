@@ -1,12 +1,16 @@
 import type { Metadata } from 'next';
 import Banner from './components/Banner';
-import FAQSection, { defaultFAQs } from './components/FAQSection';
-import FeaturedProjects from './components/FeaturedProjects';
+import CurrentRoleBanner from './components/CurrentRoleBanner';
 import Hero from './components/Hero';
-import Services from './components/Services';
+import InstagramGrid from './components/InstagramGrid';
+import MediaSection from './components/MediaSection';
+import PastForwardHubSection from './components/PastForwardHubSection';
+import PodcastSection from './components/PodcastSection';
+import RecentActivity from './components/RecentActivity';
 import Testimonials from './components/Testimonials';
 import { generateSEOMetadata } from './lib/seo';
 
+/** SEO metadata for the home page. */
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Home',
   description:
@@ -27,6 +31,7 @@ export const metadata: Metadata = generateSEOMetadata({
   ogType: 'website',
 });
 
+/** Home page component displaying hero, projects, testimonials, and media sections. */
 export default function HomePage() {
   const structuredData = {
     '@context': 'https://schema.org',
@@ -57,11 +62,16 @@ export default function HomePage() {
     <>
       <div>
         <Hero />
+        <div className="container mx-auto px-4">
+          <CurrentRoleBanner />
+        </div>
+        <RecentActivity />
         <Banner />
-        <FeaturedProjects />
-        <Services />
+        <PodcastSection />
+        <MediaSection />
+        <InstagramGrid />
         <Testimonials />
-        <FAQSection faqs={defaultFAQs} />
+        <PastForwardHubSection />
       </div>
 
       {/* Structured Data */}

@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import Breadcrumbs from '../components/Breadcrumbs';
 import { projectsData } from '../data/content';
 import { generateSEOMetadata } from '../lib/seo';
 
+/** SEO metadata for the Projects page. */
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Projects',
   description:
@@ -25,6 +25,7 @@ export const metadata: Metadata = generateSEOMetadata({
   ogType: 'website',
 });
 
+/** Projects listing page showing all portfolio items with structured data. */
 export default function ProjectsPage() {
   const structuredData = {
     '@context': 'https://schema.org',
@@ -52,76 +53,53 @@ export default function ProjectsPage() {
 
   return (
     <div className="container mx-auto px-4">
-      <Breadcrumbs />
-
-      <header className="mb-12 text-center py-8">
-        <h1 className="mb-6 text-4xl font-bold md:text-5xl">
-          Projects Portfolio
-        </h1>
-        <p className="mx-auto max-w-3xl text-lg text-neutral-300 leading-relaxed">
-          A comprehensive collection of archaeological research, science
-          communication, and digital heritage projects demonstrating expertise
-          across multiple disciplines. Each project showcases innovative
-          approaches to knowledge sharing and public engagement in archaeology.
+      <header className="mb-12 py-8">
+        <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-primary-green">
+          Portfolio
+        </p>
+        <h1 className="mb-4 text-4xl font-bold md:text-5xl">Projects</h1>
+        <p className="max-w-2xl text-lg text-neutral-600 leading-relaxed">
+          Archaeological research, science communication, and digital heritage
+          work.
         </p>
       </header>
 
-      <section className="mb-8">
-        <div className="mb-6">
-          <h2 className="text-2xl font-semibold mb-2">Featured Work</h2>
-          <p className="text-neutral-400">
-            Highlighting {projectsData.projectsList.length} projects spanning
-            archaeological research, science communication, and digital
-            innovation.
-          </p>
-        </div>
-
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <section className="mb-16">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {projectsData.projectsList.map((project) => (
-            <article
+            <Link
               key={`project-${project.id}`}
-              className="group block overflow-hidden rounded-lg transition-all duration-300 hover:scale-105 bg-primary-cream"
+              href={`/projects/${project.slug}` as any}
+              className="group block overflow-hidden bg-primary-cream transition-shadow duration-300 hover:shadow-lg"
             >
-              <Link href={`/projects/${project.slug}`}>
-                <div className="aspect-[4/3] overflow-hidden">
-                  <Image
-                    src={project.image}
-                    alt={`${project.name} - Archaeological project showcase`}
-                    width={600}
-                    height={450}
-                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold text-neutral-800 mb-2 group-hover:text-primary-teal transition-colors">
+              <div className="aspect-[3/2] overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.name}
+                  width={600}
+                  height={400}
+                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-4">
+                <div className="mb-1 flex items-center justify-between">
+                  <h2 className="text-base font-semibold text-neutral-800 group-hover:text-primary-green transition-colors">
                     {project.name}
-                  </h3>
-                  <p className="text-neutral-600 text-sm mb-3 line-clamp-2">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.services.map((service) => (
-                      <span
-                        key={`service-${project.id}-${service.replace(/\s+/g, '-').toLowerCase()}`}
-                        className="rounded-full px-3 py-1 text-xs transition-colors duration-200"
-                        style={{
-                          backgroundColor: '#009D6F',
-                          color: '#1C1F23',
-                        }}
-                      >
-                        {service}
-                      </span>
-                    ))}
-                  </div>
+                  </h2>
+                  <span className="shrink-0 text-xs text-neutral-500">
+                    {project.year}
+                  </span>
                 </div>
-              </Link>
-            </article>
+                <p className="text-sm text-neutral-500 line-clamp-1">
+                  {project.description}
+                </p>
+              </div>
+            </Link>
           ))}
         </div>
       </section>
 
-      {/* Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

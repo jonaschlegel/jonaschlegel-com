@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import type { MetadataRoute } from 'next';
 
+/** Generates the sitemap.xml entries for all public pages and projects. */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://jonaschlegel.com';
 

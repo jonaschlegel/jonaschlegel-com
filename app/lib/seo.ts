@@ -13,6 +13,7 @@ interface SEOPageProps {
   section?: string;
 }
 
+/** Generates a complete Next.js Metadata object with SEO, Open Graph, and Twitter card configuration. */
 export function generateSEOMetadata({
   title,
   description,
@@ -96,6 +97,7 @@ export function generateSEOMetadata({
   return metadata;
 }
 
+/** Creates JSON-LD structured data for an article page. */
 export function generateArticleStructuredData({
   title,
   description,
@@ -149,6 +151,7 @@ export function generateArticleStructuredData({
   };
 }
 
+/** Creates JSON-LD structured data for breadcrumb navigation. */
 export function generateBreadcrumbStructuredData(
   items: Array<{ name: string; url?: string }>,
 ) {
@@ -164,6 +167,7 @@ export function generateBreadcrumbStructuredData(
   };
 }
 
+/** Creates JSON-LD structured data for a FAQ page. */
 export function generateFAQStructuredData(
   faqs: Array<{ question: string; answer: string }>,
 ) {

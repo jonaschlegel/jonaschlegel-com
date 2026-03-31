@@ -3,11 +3,12 @@ import Link from 'next/link';
 import type { FC } from 'react';
 import type { ProjectType } from '../../types/global';
 
+/** Card linking to an individual project with a cover image. */
 const ProjectCard: FC<ProjectType> = ({ slug, image, name }) => {
   return (
     <Link
       href={`/projects/${slug}` as any}
-      className="group relative col-span-12 aspect-[4/3] cursor-pointer overflow-hidden rounded-lg md:col-span-6"
+      className="group relative col-span-12 aspect-[4/3] cursor-pointer overflow-hidden md:col-span-6"
     >
       <Image
         src={image}

@@ -2,6 +2,7 @@ import Script from 'next/script';
 
 const googleAnalyticsTrackingId = 'G-6S9J34MPR3';
 
+/** Renders Google Analytics and tracking scripts. */
 export default function Tracking() {
   return (
     <>

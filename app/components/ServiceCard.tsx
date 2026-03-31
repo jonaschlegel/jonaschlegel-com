@@ -8,6 +8,7 @@ interface ServiceCardProps extends ServiceType {
   projects: ProjectType[];
 }
 
+/** Card displaying a service offering with image, description, and related projects. */
 const ServiceCard: FC<ServiceCardProps> = ({
   image,
   alt,
@@ -27,10 +28,10 @@ const ServiceCard: FC<ServiceCardProps> = ({
       </h2>
       <div className="group relative flex flex-col justify-between py-8 md:flex-row">
         <div className="basis-1/2">
-          <p className="mt-2 text-sm text-neutral-400 md:text-base">
+          <p className="mt-2 text-sm text-gray-700 md:text-base">
             {description}
           </p>
-          <ul className="mt-2 list-disc pl-5 text-sm text-neutral-400">
+          <ul className="mt-2 list-disc pl-5 text-sm text-gray-700">
             {options.map((option) => (
               <li key={`option-${option}`}>{option}</li>
             ))}
@@ -44,7 +45,9 @@ const ServiceCard: FC<ServiceCardProps> = ({
                     key={`project-${project.id}`}
                     href={`/projects/${project.slug}`}
                   >
-                    <p className="text-white hover:underline">{project.name}</p>
+                    <p className="text-primary-green hover:underline">
+                      {project.name}
+                    </p>
                   </Link>
                 ))}
               </div>
@@ -57,18 +60,19 @@ const ServiceCard: FC<ServiceCardProps> = ({
               src={image}
               alt={alt}
               fill
-              className="relative left-0 top-5 mt-2 size-full rounded-lg object-cover"
+              className="relative left-0 top-5 mt-2 size-full object-cover"
               style={{ objectFit: 'cover' }}
+              sizes="(max-width: 768px) 100vw, 384px"
             />
           </div>
           <div className="mt-4 flex justify-center">
             <ButtonSecondary pdfUrl={pdfUrl}>
               {price ? (
-                <p className="text-sm text-neutral-300 md:text-base">
+                <p className="text-sm text-gray-700 md:text-base">
                   Starting at ${price}/Hour
                 </p>
               ) : (
-                <p className="my-0 text-sm text-neutral-300 md:text-base">
+                <p className="my-0 text-sm text-gray-700 md:text-base">
                   Download Project Examples
                 </p>
               )}

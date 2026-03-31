@@ -3,16 +3,17 @@ import type { FC } from 'react';
 import { BsQuote } from 'react-icons/bs';
 import type { ClientType } from '../../types/global';
 
+/** Testimonial card displaying a client quote, name, and role. */
 const ClientCard: FC<ClientType> = (props) => {
   return (
     <div className="">
       <div className="mb-8 flex justify-center">
         <span className="inline-block">
-          <BsQuote className="text-5xl text-primary-accent" />
+          <BsQuote className="text-5xl text-primary-green" />
         </span>
       </div>
       <div className="mb-8">
-        <p className="text-center text-sm text-neutral-300 md:text-base">
+        <p className="text-center text-sm text-gray-700 md:text-base">
           {props.comment}
         </p>
       </div>
@@ -28,7 +29,7 @@ const ClientCard: FC<ClientType> = (props) => {
         </div>
         <div>
           <p>{props.name}</p>
-          <p className="text-sm text-neutral-300">{props.role}</p>
+          <p className="text-sm text-gray-700">{props.role}</p>
         </div>
       </div>
     </div>

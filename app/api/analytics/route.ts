@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-// Simple server-side analytics endpoint as a fallback
-
+/** Handles POST requests for server-side analytics event tracking. */
 export async function POST(
   request: NextRequest,
 ): Promise<NextResponse<{ success: boolean } | { error: string }>> {

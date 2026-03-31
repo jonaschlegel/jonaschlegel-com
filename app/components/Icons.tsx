@@ -6,6 +6,7 @@ import {
   BsTwitter,
 } from 'react-icons/bs';
 
+/** Lookup map of available social media icon components. */
 const iconMap = {
   BsBehance,
   BsInstagram,

@@ -1,3 +1,4 @@
+/** Default metadata values used across the site for SEO and social sharing. */
 export const defaultMetadata = {
   title:
     'Jona Schlegel – Archaeological Science Communication & Knowledge Management',

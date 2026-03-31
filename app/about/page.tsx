@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import CalendlyButton from '../components/CalendlyButton';
-import { aboutStudioData, jonaImage } from '../data/content';
+import { aboutStudioData, jonaAboutImage } from '../data/content';
 
+/** SEO metadata for the About page. */
 export const metadata: Metadata = {
   title: 'About archaeoINK Studio',
   description:
@@ -34,6 +35,7 @@ export const metadata: Metadata = {
   },
 };
 
+/** About page describing the archaeoINK studio and its approach. */
 export default function AboutPage() {
   return (
     <div className="container mx-auto py-16">
@@ -48,9 +50,9 @@ export default function AboutPage() {
           </p>
         </div>
         <div className="relative">
-          <div className="aspect-square overflow-hidden rounded-2xl">
+          <div className="aspect-square overflow-hidden">
             <Image
-              src={jonaImage}
+              src={jonaAboutImage}
               alt="Jona Schlegel - Founder of archaeoINK Studio"
               width={500}
               height={500}
