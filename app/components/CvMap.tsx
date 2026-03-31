@@ -150,7 +150,7 @@ const CvMap: React.FC<CvMapProps> = ({
   }, [workExperience, educationalExperience]);
 
   return (
-    <div className={`w-full ${className}`}>
+    <div className={`isolate w-full ${className}`}>
       <div className="mb-4">
         {/* Controls */}
         <div className="flex flex-wrap gap-4 items-center justify-between mb-4">

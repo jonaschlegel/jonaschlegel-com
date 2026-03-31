@@ -123,7 +123,7 @@ export default function IllustrationBand({ seed = 1 }: IllustrationBandProps) {
 
   return (
     <div
-      className="illustration-band w-full overflow-hidden"
+      className="illustration-band isolate w-full overflow-hidden"
       aria-hidden="true"
     >
       <div className="illustration-band__track flex w-max">

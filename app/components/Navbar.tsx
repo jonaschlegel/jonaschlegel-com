@@ -1,8 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FiExternalLink } from 'react-icons/fi';
-import { MdDehaze } from 'react-icons/md';
+import { MdClose, MdDehaze } from 'react-icons/md';
 import { navLinks } from '../data/content';
 import Button from './Button';
 import ButtonSecondary from './ButtonSecondary';
@@ -25,26 +25,33 @@ const externalLinks = [
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileOpen]);
+
   const handleToggleMenu = () => {
     setMobileOpen((prev) => !prev);
   };
 
   return (
     <div className="container mx-auto mb-0 flex items-center justify-between pb-2 pt-4">
-      <div className="z-30">
+      <div className="z-[60]">
         <Logo />
       </div>
-      <div className="z-30 lg:hidden">
+      <div className="z-[60] lg:hidden">
         <button
           type="button"
-          aria-label="Toggle menu"
+          aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
           onClick={handleToggleMenu}
         >
-          <MdDehaze />
+          {mobileOpen ? <MdClose size={24} /> : <MdDehaze size={24} />}
         </button>
       </div>
       <div
-        className={`fixed top-0 z-10 flex h-screen w-screen items-center bg-primary-cream transition-all duration-500 ${
+        className={`fixed top-0 z-50 flex h-screen w-screen items-center bg-primary-cream transition-all duration-500 ${
           mobileOpen ? 'left-0' : '-left-full'
         } lg:static lg:size-auto lg:bg-transparent`}
       >
