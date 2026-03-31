@@ -201,24 +201,12 @@ const MapContent: React.FC<{
   const map = useMap();
 
   useEffect(() => {
+    const addedLayers: L.Layer[] = [];
+    let cancelled = false;
+
     const initializeMap = async () => {
       await loadLeafletPlugins();
-
-      // Remove existing marker layers (use duck typing since MarkerClusterGroup isn't a standard class)
-      map.eachLayer((layer) => {
-        const layerRecord = layer as unknown as Record<string, unknown>;
-        if (
-          (layerRecord._group !== undefined && layerRecord._markers !== undefined) || // MarkerClusterGroup
-          (layer instanceof L.Marker) ||
-          ((layer.options as Record<string, unknown>).gradient) // heatmap layer
-        ) {
-          try {
-            map.removeLayer(layer);
-          } catch {
-            // Layer may already be removed
-          }
-        }
-      });
+      if (cancelled) return;
 
       const markers: L.Marker[] = [];
       locations.forEach((location) => {
@@ -363,8 +351,13 @@ const MapContent: React.FC<{
 
         markers.forEach((marker) => markerClusterGroup.addLayer(marker));
         map.addLayer(markerClusterGroup);
+        addedLayers.push(markerClusterGroup as L.Layer);
       } else {
-        markers.forEach((marker) => map.addLayer(marker));
+        markers.forEach((marker) => {
+          if (cancelled) return;
+          map.addLayer(marker);
+          addedLayers.push(marker);
+        });
       }
 
       // Heatmap
@@ -405,6 +398,7 @@ const MapContent: React.FC<{
             },
           });
           map.addLayer(heatLayer);
+          addedLayers.push(heatLayer as L.Layer);
         }
       }
     };
@@ -413,19 +407,10 @@ const MapContent: React.FC<{
     initializeMap();
 
     return () => {
-      // Cleanup: remove marker layers using duck typing
-      map.eachLayer((layer) => {
-        const layerRecord = layer as unknown as Record<string, unknown>;
-        if (
-          (layerRecord._group !== undefined && layerRecord._markers !== undefined) || // MarkerClusterGroup
-          (layer instanceof L.Marker) ||
-          ((layer.options as Record<string, unknown>).gradient) // heatmap layer
-        ) {
-          try {
-            map.removeLayer(layer);
-          } catch {
-            // Layer may already be removed
-          }
+      cancelled = true;
+      addedLayers.forEach((layer) => {
+        if (map.hasLayer(layer)) {
+          map.removeLayer(layer);
         }
       });
     };

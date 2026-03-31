@@ -56,7 +56,10 @@ export default function Breadcrumbs({
                 <span itemProp="name">{item.label}</span>
               </Link>
             ) : (
-              <span className="text-primary-dark flex items-center" itemProp="name">
+              <span
+                className="text-primary-dark flex items-center"
+                itemProp="name"
+              >
                 {index === 0 && <FaHome className="h-4 w-4 mr-1" />}
                 {item.label}
               </span>

@@ -12,11 +12,11 @@ html {
 /* Accessibility: visible focus indicators */
 a:focus-visible,
 button:focus-visible,
-[role="button"]:focus-visible,
+[role='button']:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid #009D6F;
+  outline: 2px solid #009d6f;
   outline-offset: 2px;
   border-radius: 2px;
 }
@@ -27,7 +27,7 @@ textarea:focus-visible {
   top: -100%;
   left: 0;
   padding: 0.5rem 1rem;
-  background: #009D6F;
+  background: #009d6f;
   color: #fff;
   z-index: 100;
   font-weight: 600;
@@ -40,8 +40,8 @@ body {
   font-family:
     ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol', 'Noto Color Emoji';
-  background-color: #F5F4F2;
-  color: #1C1F23;
+  background-color: #f5f4f2;
+  color: #1c1f23;
 }
 
 p,
@@ -49,26 +49,30 @@ div {
   font-family:
     ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol', 'Noto Color Emoji';
-  color: #1C1F23;
+  color: #f5f4f2;
 }
 
 h1 {
   @apply font-merriweather text-5xl font-bold leading-snug tracking-tight xl:text-[4.5rem];
-  color: #1C1F23;
+
+  color: #1c1f23;
 }
 
 h2 {
   @apply text-left font-merriweather text-2xl font-semibold md:text-3xl;
-  color: #1C1F23;
+
+  color: #1c1f23;
 }
 
 h3 {
   @apply text-left text-lg font-medium uppercase;
-  color: #009D6F;
+
+  color: #009d6f;
 }
 
 p {
   @apply tracking-tight my-6;
+
   color: #3a3d42;
 }
 
