@@ -1,7 +1,13 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import CalendlyButton from '../components/CalendlyButton';
-import { aboutStudioData, jonaAboutImage } from '../data/content';
+import {
+  aboutGalleryImages,
+  aboutStudioData,
+  jonaAboutImage,
+  jonaDeskWorkingImage,
+  jonaLaptopImage,
+} from '../data/content';
 
 /** SEO metadata for the About page. */
 export const metadata: Metadata = {
@@ -113,6 +119,50 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Behind the Scenes Gallery */}
+      <section className="mb-16">
+        <div className="mb-12 text-center">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary-green">
+            Behind the scenes
+          </p>
+          <h2 className="text-3xl font-semibold">The Work in Action</h2>
+        </div>
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
+          {aboutGalleryImages.map((img, index) => (
+            <div
+              key={`gallery-${img.caption}`}
+              className={`group relative overflow-hidden ${
+                index === 0 || index === 5
+                  ? 'col-span-2 row-span-2'
+                  : 'col-span-1 row-span-1'
+              }`}
+            >
+              <div
+                className={`relative w-full ${
+                  index === 0 || index === 5 ? 'aspect-square' : 'aspect-[4/3]'
+                }`}
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes={
+                    index === 0 || index === 5
+                      ? '(max-width: 768px) 100vw, 50vw'
+                      : '(max-width: 768px) 50vw, 25vw'
+                  }
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100" />
+                <p className="absolute bottom-3 left-3 text-sm font-medium text-white transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100">
+                  {img.caption}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* About Jona Section */}
       <section className="mb-16">
         <div className="mx-auto max-w-4xl">
@@ -128,6 +178,16 @@ export default function AboutPage() {
                 support researchers, institutions, and educators in making
                 archaeological knowledge more accessible.
               </p>
+              <div className="mb-6 overflow-hidden">
+                <Image
+                  src={jonaDeskWorkingImage}
+                  alt="Jona working at the desk on illustrations"
+                  width={500}
+                  height={300}
+                  className="w-full object-cover"
+                  sizes="(max-width: 1024px) 100vw, 400px"
+                />
+              </div>
               <h3 className="mb-4 text-xl font-semibold">Approach</h3>
               <p className="leading-relaxed">
                 Rather than simplifying for the sake of accessibility, the focus
@@ -144,6 +204,16 @@ export default function AboutPage() {
                 authentic representation of archaeological work and its cultural
                 significance.
               </p>
+              <div className="mb-6 overflow-hidden">
+                <Image
+                  src={jonaLaptopImage}
+                  alt="Jona working on a laptop during a research project"
+                  width={500}
+                  height={300}
+                  className="w-full object-cover"
+                  sizes="(max-width: 1024px) 100vw, 400px"
+                />
+              </div>
               <div className="rounded-lg bg-primary-teal/10 p-6">
                 <h4 className="mb-3 font-semibold">Research Interests</h4>
                 <ul className="space-y-2 text-sm">

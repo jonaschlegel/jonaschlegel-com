@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
+import { KVK_NUMBER, KVK_URL } from '../lib/constants';
 
 /** SEO metadata for the Imprint page. */
 export const metadata: Metadata = {
   title: 'Imprint',
   description:
-    'Legal information and business details for Jona Schlegel, Archaeological Science Communication specialist based in Vienna, Austria.',
+    'Legal information and business details for Jona Schlegel, Archaeological Science Communication specialist based in Amsterdam, Netherlands.',
   robots: {
     index: true,
     follow: false,
@@ -32,10 +33,21 @@ export default function Imprint() {
           </a>
         </p>
         <p>
-          <strong>Headquarters:</strong> Vienna, Austria
+          <strong>Headquarters:</strong> Amsterdam, Netherlands
         </p>
         <p>
-          <strong>Type of Business:</strong> Neue Selbständige (Freelancer)
+          <strong>Type of Business:</strong> Eenmanszaak (Sole Proprietorship)
+        </p>
+        <p>
+          <strong>KVK Number:</strong>{' '}
+          <a
+            href={KVK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary-green hover:underline"
+          >
+            {KVK_NUMBER}
+          </a>
         </p>
         <p>
           <strong>Specialisations:</strong> Freelancing in Archaeology,
@@ -80,9 +92,9 @@ export default function Imprint() {
       <section className="mb-8">
         <h2 className="mb-4 text-2xl font-semibold">Legal Notice</h2>
         <p>
-          This imprint is subject to the laws of Austria. Any disputes arising
-          in connection with the use of this website will be handled by the
-          competent court in Vienna.
+          This imprint is subject to the laws of the Netherlands. Any disputes
+          arising in connection with the use of this website will be handled by
+          the competent court in Amsterdam.
         </p>
       </section>
     </div>
