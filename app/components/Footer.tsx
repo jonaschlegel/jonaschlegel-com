@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { footerdata } from '../data/content';
+import { KVK_NUMBER, KVK_URL } from '../lib/constants';
 import ButtonPrimary from './ButtonPrimary';
 import SocialItem from './SocialItem';
 
@@ -36,16 +37,19 @@ const Footer = () => {
           <Link href="/terms-and-conditions">Terms and Conditions</Link>
         </div>
         <div className="mt-6 flex flex-col items-center justify-center gap-1 text-[10px]">
-          <span>© Jona Schlegel, archaeoINK 2026. All rights reserved.</span>
+          <span>
+            © Jona Schlegel, archaeoINK {new Date().getFullYear()}. All rights
+            reserved.
+          </span>
           <span>
             KVK:{' '}
             <a
-              href="https://www.kvk.nl/bestellen/#/96576820000061893501?origin=search"
+              href={KVK_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline"
             >
-              96576820
+              {KVK_NUMBER}
             </a>
           </span>
         </div>

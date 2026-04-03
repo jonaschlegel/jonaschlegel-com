@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { KVK_NUMBER, KVK_URL } from '../lib/constants';
 
 /** SEO metadata for the Imprint page. */
 export const metadata: Metadata = {
@@ -40,12 +41,12 @@ export default function Imprint() {
         <p>
           <strong>KVK Number:</strong>{' '}
           <a
-            href="https://www.kvk.nl/bestellen/#/96576820000061893501?origin=search"
+            href={KVK_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary-green hover:underline"
           >
-            96576820
+            {KVK_NUMBER}
           </a>
         </p>
         <p>
