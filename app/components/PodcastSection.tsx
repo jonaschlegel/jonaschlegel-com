@@ -69,7 +69,7 @@ const PodcastSection = () => {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 border border-gray-200 px-4 py-2 text-sm text-gray-700 transition-colors hover:border-primary-green hover:text-primary-green"
+                    className="flex items-center gap-2 border border-gray-200 px-4 py-2 text-sm text-gray-700 transition-colors hover:border-primary-green hover:text-primary-green active:border-primary-green active:text-primary-green"
                   >
                     <Icon className="size-4" />
                     {link.label}

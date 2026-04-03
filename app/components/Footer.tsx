@@ -19,7 +19,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="space-y-3">
-        <div className="flex justify-center gap-6">
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-1">
           {footerdata.navLinks.map((navItem) => (
             <Link key={`nav-${navItem.name}`} href={navItem.href}>
               {navItem.name}

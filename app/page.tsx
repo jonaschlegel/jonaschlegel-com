@@ -18,10 +18,11 @@ import { generateSEOMetadata } from './lib/seo';
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Home',
   description:
-    "Welcome to Jona Schlegel's professional portfolio. Specializing in archaeological science communication, knowledge management, and public engagement. Explore innovative approaches to sharing archaeological insights with academic rigor and creative presentation.",
+    'Jona Schlegel – Freelance archaeological science communicator and illustrator based in Vienna. Portfolio showcasing archaeological illustration, 3D modelling, web development, and knowledge management for research and public engagement.',
   canonical: 'https://jonaschlegel.com',
   keywords: [
     'archaeology portfolio',
+    'freelance archaeological illustrator',
     'science communication specialist',
     'archaeological research',
     'public engagement archaeology',
@@ -29,8 +30,7 @@ export const metadata: Metadata = generateSEOMetadata({
     'archaeological illustration',
     'heritage studies',
     'digital archaeology',
-    'academic communication',
-    'research portfolio',
+    'Vienna archaeologist',
   ],
   ogType: 'website',
 });

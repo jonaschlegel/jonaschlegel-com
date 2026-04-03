@@ -5,6 +5,7 @@ import type { ProjectType } from '../../../types/global';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import { projectsData } from '../../data/content';
 import { generateProjectOGImageUrl } from '../../lib/og-utils';
+import { generateArticleStructuredData } from '../../lib/seo';
 
 interface ProjectPageProps {
   params: Promise<Params>;
@@ -14,14 +15,11 @@ interface Params {
   slug: string;
 }
 
-// Temporarily disable static generation to resolve build issues
-export const dynamic = 'force-dynamic';
-
-// export function generateStaticParams(): Array<{ slug: string }> {
-//   return projectsData.projectsList.map((project) => ({
-//     slug: project.slug,
-//   }));
-// }
+export function generateStaticParams(): Array<{ slug: string }> {
+  return projectsData.projectsList.map((project) => ({
+    slug: project.slug,
+  }));
+}
 
 /** Generates dynamic SEO metadata for an individual project page. */
 export async function generateMetadata({
@@ -267,6 +265,32 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </ul>
         </section>
       )}
+
+      {/* Article Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateArticleStructuredData({
+              title: project.name,
+              description:
+                project.description ||
+                `Project by Jona Schlegel showcasing expertise in archaeological research and science communication.`,
+              url: `https://jonaschlegel.com/projects/${slug}`,
+              imageUrl: generateProjectOGImageUrl({
+                title: project.name,
+                description: project.description,
+                services: project.services,
+              }),
+              keywords: [
+                ...project.services,
+                'archaeology',
+                'science communication',
+              ],
+            }),
+          ),
+        }}
+      />
     </div>
   );
 }

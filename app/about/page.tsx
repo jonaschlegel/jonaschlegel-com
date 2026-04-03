@@ -8,12 +8,14 @@ import {
   jonaDeskWorkingImage,
   jonaLaptopImage,
 } from '../data/content';
+import { generateSEOMetadata } from '../lib/seo';
 
 /** SEO metadata for the About page. */
-export const metadata: Metadata = {
+export const metadata: Metadata = generateSEOMetadata({
   title: 'About archaeoINK Studio',
   description:
     'Learn about archaeoINK, a visual science communication studio specialising in archaeology. Founded by landscape archaeologist Jona Schlegel, combining research expertise with visual communication.',
+  canonical: 'https://jonaschlegel.com/about',
   keywords: [
     'archaeoINK',
     'archaeological studio',
@@ -23,23 +25,8 @@ export const metadata: Metadata = {
     'landscape archaeology',
     'research visualisation',
   ],
-  openGraph: {
-    title: 'About archaeoINK Studio – Archaeological Visual Communication',
-    description:
-      'Learn about archaeoINK, a visual science communication studio specialising in archaeology, founded by landscape archaeologist Jona Schlegel.',
-    images: [
-      {
-        url: '/api/og?title=About%20archaeoINK&subtitle=Visual%20Science%20Communication%20for%20Archaeology',
-        width: 1200,
-        height: 630,
-        alt: 'About archaeoINK Studio - Archaeological Visual Communication',
-      },
-    ],
-  },
-  alternates: {
-    canonical: 'https://jonaschlegel.com/about',
-  },
-};
+  ogType: 'website',
+});
 
 /** About page describing the archaeoINK studio and its approach. */
 export default function AboutPage() {

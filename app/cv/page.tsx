@@ -13,7 +13,7 @@ import { generateSEOMetadata } from '../lib/seo';
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Curriculum Vitae',
   description:
-    "Explore Jona Schlegel's comprehensive CV, showcasing expertise in archaeological research, science communication, and education. Detailed overview of professional experience, academic achievements, and key publications in archaeology.",
+    'CV of Jona Schlegel – Archaeological scientist with expertise in science communication, illustration, and web development. Education at HTW Berlin, professional experience, and publications.',
   canonical: 'https://jonaschlegel.com/cv',
   keywords: [
     'archaeology CV',

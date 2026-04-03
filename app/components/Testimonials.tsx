@@ -24,7 +24,10 @@ const Testimonials = () => {
     <div className="container mx-auto py-16">
       <div className="mx-auto md:w-3/4">
         <div ref={glideRef} className="glide relative">
-          <div className="glide__track mx-auto w-[75%]" data-glide-el="track">
+          <div
+            className="glide__track mx-auto w-full sm:w-[85%] md:w-[75%]"
+            data-glide-el="track"
+          >
             <ul className="glide__slides">
               {testimonialsData.map((client) => (
                 <li className="glide__slide" key={`client-${client.name}`}>
@@ -41,14 +44,14 @@ const Testimonials = () => {
               type="button"
               aria-label="Previous testimonial"
               data-glide-dir="<"
-              className="glide__arrow glide__arrow--left rounded-full border border-primary-dark p-2 text-xl text-primary-dark hover:text-primary-green md:text-4xl"
+              className="glide__arrow glide__arrow--left rounded-full border border-primary-dark p-2 text-xl text-primary-dark hover:text-primary-green active:text-primary-green md:text-4xl min-w-[44px] min-h-[44px] flex items-center justify-center"
             >
               <BsArrowLeftShort />
             </button>
             <button
               type="button"
               aria-label="Next testimonial"
-              className="glide__arrow glide__arrow--right rounded-full border border-primary-dark p-2 text-xl text-primary-dark hover:text-primary-green md:text-4xl"
+              className="glide__arrow glide__arrow--right rounded-full border border-primary-dark p-2 text-xl text-primary-dark hover:text-primary-green active:text-primary-green md:text-4xl min-w-[44px] min-h-[44px] flex items-center justify-center"
               data-glide-dir=">"
             >
               <BsArrowRightShort />

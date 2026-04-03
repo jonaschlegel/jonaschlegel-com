@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { generateLegalOGImageUrl } from '../lib/og-utils';
 
 /** SEO metadata for the Privacy Policy page. */
 export const metadata: Metadata = {
@@ -8,6 +9,26 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: false,
+  },
+  openGraph: {
+    title: 'Privacy Policy | Jona Schlegel',
+    description:
+      'Privacy policy for jonaschlegel.com detailing how personal data is collected, used, and protected in compliance with GDPR.',
+    images: [
+      {
+        url: generateLegalOGImageUrl('Privacy Policy'),
+        width: 1200,
+        height: 630,
+        alt: 'Privacy Policy - Jona Schlegel',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Privacy Policy | Jona Schlegel',
+    description:
+      'Privacy policy for jonaschlegel.com detailing data handling in compliance with GDPR.',
+    images: [generateLegalOGImageUrl('Privacy Policy')],
   },
   alternates: {
     canonical: 'https://jonaschlegel.com/privacy-policy',

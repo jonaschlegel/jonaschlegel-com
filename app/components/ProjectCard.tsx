@@ -17,7 +17,7 @@ const ProjectCard: FC<ProjectType> = ({ slug, image, name }) => {
         className="object-cover"
         sizes="(max-width: 768px) 100vw, 50vw"
       />
-      <div className="absolute bottom-0 w-full bg-black/50 p-4 text-center text-white opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
+      <div className="absolute bottom-0 w-full bg-black/50 p-4 text-center text-white transition duration-300 ease-in-out opacity-100 [@media(hover:hover)]:opacity-0 [@media(hover:hover)]:group-hover:opacity-100">
         <p>{name}</p>
       </div>
     </Link>
