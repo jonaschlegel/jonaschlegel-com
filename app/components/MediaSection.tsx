@@ -1,4 +1,6 @@
+import Image from 'next/image';
 import { BsCalendarEvent, BsMicFill, BsPlayCircle } from 'react-icons/bs';
+import { jonaInterviewImage } from '../data/content';
 
 interface MediaItem {
   title: string;
@@ -59,6 +61,18 @@ const MediaSection = () => {
           Guest appearances, invited talks, and workshops where I contributed to
           conversations about archaeology, illustration, and heritage.
         </p>
+      </div>
+
+      <div className="mx-auto mb-8 max-w-4xl overflow-hidden">
+        <div className="relative aspect-[21/9] w-full">
+          <Image
+            src={jonaInterviewImage}
+            alt="Jona during an interview about archaeological documentation"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 896px"
+          />
+        </div>
       </div>
 
       <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">

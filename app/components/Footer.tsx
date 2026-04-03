@@ -35,8 +35,19 @@ const Footer = () => {
           <Link href="/privacy-policy">Privacy Policy</Link>
           <Link href="/terms-and-conditions">Terms and Conditions</Link>
         </div>
-        <div className="mt-6 flex justify-center text-[10px]">
-          © Jona Schlegel, archaeoINK 2026. All rights reserved.
+        <div className="mt-6 flex flex-col items-center justify-center gap-1 text-[10px]">
+          <span>© Jona Schlegel, archaeoINK 2026. All rights reserved.</span>
+          <span>
+            KVK:{' '}
+            <a
+              href="https://www.kvk.nl/bestellen/#/96576820000061893501?origin=search"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              96576820
+            </a>
+          </span>
         </div>
       </div>
     </div>

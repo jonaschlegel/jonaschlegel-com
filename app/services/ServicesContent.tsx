@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import ButtonPrimary from '../components/ButtonPrimary';
 import IllustrationBand from '../components/IllustrationBand';
+import { jonaScicommImage } from '../data/content';
 import adventuressCover from '../images/projects/adventuress-cover.jpg';
 import necessaryReunions from '../images/projects/necessary-reunions.png';
 import pastrace from '../images/projects/pastrace.jpg';
@@ -166,6 +167,28 @@ export default function ServicesContent() {
           archaeological knowledge visible, accessible, and engaging.
         </p>
       </header>
+
+      {/* Personal intro */}
+      <div className="mx-auto mb-20 flex max-w-4xl flex-col items-center gap-8 md:flex-row">
+        <div className="relative aspect-square w-32 shrink-0 overflow-hidden rounded-full md:w-40">
+          <Image
+            src={jonaScicommImage}
+            alt="Jona creating science communication illustrations"
+            fill
+            className="object-cover"
+            sizes="160px"
+          />
+        </div>
+        <blockquote className="text-center text-lg italic text-gray-600 md:text-left">
+          &ldquo;I believe archaeological research deserves visuals as rigorous
+          as the science behind them. Every project starts with understanding
+          your research context — then finding the right visual language to make
+          it accessible.&rdquo;
+          <footer className="mt-2 text-sm font-semibold not-italic text-primary-dark">
+            — Jona Schlegel
+          </footer>
+        </blockquote>
+      </div>
 
       {/* Capabilities */}
       <section className="mb-24">

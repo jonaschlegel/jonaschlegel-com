@@ -7,9 +7,19 @@ import {
 } from 'react-icons/bs';
 import profile01 from '../images/clients/profile01.jpg';
 import profile02 from '../images/clients/profile02.jpg';
+import jonaAcropolis from '../images/jona-images/jona-acropolis-greece.jpg';
+import jonaConference from '../images/jona-images/jona-conference-presentation.jpg';
+import jonaDeskMaps from '../images/jona-images/jona-desk-maps.jpg';
+import jonaDeskWorking from '../images/jona-images/jona-desk-working.jpg';
+import jonaExcavationEarly from '../images/jona-images/jona-excavation-early.webp';
 import jonaAbout from '../images/jona-images/jona-excavation-trowel.jpg';
 import jonaBanner from '../images/jona-images/jona-fieldwork-forschungsfest.jpg';
+import jonaGeophysics from '../images/jona-images/jona-geophysics-fieldwork.jpg';
+import jonaInterview from '../images/jona-images/jona-interview-scanner.jpg';
+import jonaLaptop from '../images/jona-images/jona-laptop-working.jpg';
 import jonaPaleontology from '../images/jona-images/jona-paleontology-archaeology.jpeg';
+import jonaRecording from '../images/jona-images/jona-recording-studio.jpg';
+import jonaScicomm from '../images/jona-images/jona-scicomm-illustration.jpg';
 import jona from '../images/jona.webp';
 import typesOfIllustration from '../images/other-illustration/illustration-types-of-archaeological-illustration.jpg';
 import adventuressCover from '../images/projects/adventuress-cover.jpg';
@@ -532,3 +542,56 @@ export const footerdata = {
     { Icon: BsGithub, href: 'https://github.com/jonaschlegel' },
   ],
 } as const;
+
+/** Gallery images for the About page "Behind the Scenes" section. */
+export const aboutGalleryImages = [
+  {
+    src: jonaAcropolis,
+    alt: 'Jona at the Acropolis in Greece during archaeological fieldwork',
+    caption: 'Fieldwork in Greece',
+  },
+  {
+    src: jonaConference,
+    alt: 'Jona presenting research at an academic conference',
+    caption: 'Conference presentation',
+  },
+  {
+    src: jonaDeskMaps,
+    alt: 'Jona working with archaeological maps at the desk',
+    caption: 'Working with maps',
+  },
+  {
+    src: jonaGeophysics,
+    alt: 'Jona conducting geophysical fieldwork survey',
+    caption: 'Geophysical survey',
+  },
+  {
+    src: jonaRecording,
+    alt: 'Jona in the recording studio for the archaeology podcast',
+    caption: 'Podcast recording',
+  },
+  {
+    src: jonaScicomm,
+    alt: 'Jona creating science communication illustrations',
+    caption: 'Science communication',
+  },
+  {
+    src: jonaInterview,
+    alt: 'Jona during an interview with a 3D scanner',
+    caption: 'Documentation & interviews',
+  },
+  {
+    src: jonaExcavationEarly,
+    alt: 'Jona during early excavation fieldwork',
+    caption: 'In the field',
+  },
+] as const;
+
+/** Personal images for contextual use across the site. */
+export const jonaConferenceImage = jonaConference;
+export const jonaRecordingImage = jonaRecording;
+export const jonaInterviewImage = jonaInterview;
+export const jonaDeskWorkingImage = jonaDeskWorking;
+export const jonaLaptopImage = jonaLaptop;
+export const jonaGeophysicsImage = jonaGeophysics;
+export const jonaScicommImage = jonaScicomm;

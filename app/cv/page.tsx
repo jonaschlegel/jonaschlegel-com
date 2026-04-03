@@ -1,10 +1,12 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { Fragment } from 'react';
 import CvMap from '../components/CvMap';
 import CvTabs from '../components/CvTabs';
 import IllustrationBand from '../components/IllustrationBand';
+import { jonaConferenceImage } from '../data/content';
 import { generateSEOMetadata } from '../lib/seo';
 
 /** SEO metadata for the CV page. */
@@ -215,13 +217,26 @@ const CvPage = async () => {
     <div className="min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <header className="mb-8">
-          <h1 className="text-4xl font-bold mb-4">Curriculum Vitae</h1>
-          <p className="text-lg text-gray-600 max-w-3xl">
-            Comprehensive overview of my professional journey in archaeological
-            research, science communication, and education. Explore my academic
-            background, professional experience, and key contributions to the
-            field of archaeology.
-          </p>
+          <div className="flex flex-col gap-6 md:flex-row md:items-center">
+            <div className="relative size-20 shrink-0 overflow-hidden rounded-full md:size-24">
+              <Image
+                src={jonaConferenceImage}
+                alt="Jona presenting at an academic conference"
+                fill
+                className="object-cover"
+                sizes="96px"
+              />
+            </div>
+            <div>
+              <h1 className="text-4xl font-bold mb-4">Curriculum Vitae</h1>
+              <p className="text-lg text-gray-600 max-w-3xl">
+                Comprehensive overview of my professional journey in
+                archaeological research, science communication, and education.
+                Explore my academic background, professional experience, and key
+                contributions to the field of archaeology.
+              </p>
+            </div>
+          </div>
         </header>
 
         {/* CV Map */}

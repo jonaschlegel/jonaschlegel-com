@@ -1,5 +1,7 @@
+import Image from 'next/image';
 import { BsMicFill } from 'react-icons/bs';
 import { FaApple, FaInstagram, FaSpotify } from 'react-icons/fa';
+import { jonaRecordingImage } from '../data/content';
 
 const podcastLinks = [
   {
@@ -30,9 +32,15 @@ const PodcastSection = () => {
     <section className="container mx-auto px-4 py-16">
       <div className="mx-auto max-w-4xl border border-gray-200 bg-white p-8 md:p-12">
         <div className="flex flex-col gap-8 md:flex-row md:items-center md:gap-12">
-          {/* Icon */}
-          <div className="flex size-20 shrink-0 items-center justify-center bg-primary-green/10 md:size-24">
-            <BsMicFill className="size-8 text-primary-green md:size-10" />
+          {/* Photo */}
+          <div className="relative aspect-square w-20 shrink-0 overflow-hidden rounded-lg md:w-24">
+            <Image
+              src={jonaRecordingImage}
+              alt="Jona in the recording studio for the archaeology podcast"
+              fill
+              className="object-cover"
+              sizes="96px"
+            />
           </div>
 
           {/* Text */}
