@@ -130,7 +130,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
           {aboutGalleryImages.map((img, index) => (
             <div
-              key={img.caption}
+              key={`gallery-${img.caption}`}
               className={`group relative overflow-hidden ${
                 index === 0 || index === 5
                   ? 'col-span-2 row-span-2'
