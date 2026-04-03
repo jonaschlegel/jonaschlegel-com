@@ -153,8 +153,8 @@ export default function AboutPage() {
                       : '(max-width: 768px) 50vw, 25vw'
                   }
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                <p className="absolute bottom-3 left-3 text-sm font-medium text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100" />
+                <p className="absolute bottom-3 left-3 text-sm font-medium text-white transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100">
                   {img.caption}
                 </p>
               </div>
