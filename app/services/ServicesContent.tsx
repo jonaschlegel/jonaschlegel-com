@@ -15,9 +15,9 @@ import romanBurial from '../images/projects/roman-burial.jpg';
 
 const capabilities = [
   {
-    title: 'Illustration & Visual Storytelling',
+    title: 'Archaeological Illustration & Visual Science Communication',
     description:
-      'Research publications compete for attention \u2014 compelling visuals make yours stand out. Scientifically accurate archaeological illustrations for publications, outreach, and education: from reconstruction drawings and digital painting to conceptual illustrations, cover art, comics, and zines.',
+      'Research publications compete for attention — compelling visuals make yours stand out. Freelance archaeological illustration for publications, outreach, and education: from reconstruction drawings and digital painting to conceptual illustrations, cover art, comics, and zines. Visual science communication that bridges research and public understanding.',
     includes: [
       'Archaeological drawing & reconstruction scenes',
       'Digital painting & colour illustrations',
@@ -54,9 +54,9 @@ const capabilities = [
     ],
   },
   {
-    title: 'Web Development & Digital Platforms',
+    title: 'Archaeology Web Development & Design',
     description:
-      'Research datasets locked in spreadsheets cannot serve the audiences they deserve. Archaeology web development for research projects: database-driven platforms, interactive visualisation tools, and digital research infrastructure built with modern frameworks.',
+      'Research datasets locked in spreadsheets cannot serve the audiences they deserve. Fullstack archaeology web development for research projects: database-driven platforms, interactive visualisation tools, and digital research infrastructure built with Next.js, TypeScript, and modern web technologies. Archaeology web design that makes complex data accessible.',
     includes: [
       'Research platforms & databases',
       'Interactive data visualisation & 3D tools',
@@ -170,13 +170,13 @@ export default function ServicesContent() {
           Services
         </p>
         <h1 className="mb-6 leading-snug tracking-tight">
-          Visual Science Communication
+          Archaeological Illustration &amp; Archaeology Web Development
         </h1>
         <p className="text-lg tracking-tight text-gray-600">
-          From archaeological drawing, digital painting, and conceptual
-          illustration to research platforms and brand identity: everything I do
-          serves one goal. Making archaeological knowledge visible, accessible,
-          and engaging.
+          From archaeological drawing, digital painting, and visual science
+          communication to fullstack web development for archaeology and brand
+          identity: everything I do serves one goal. Making archaeological
+          knowledge visible, accessible, and engaging.
         </p>
       </header>
 

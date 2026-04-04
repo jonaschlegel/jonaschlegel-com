@@ -6,21 +6,21 @@ import { generateSEOMetadata } from '../lib/seo';
 
 /** SEO metadata for the Projects page. */
 export const metadata: Metadata = generateSEOMetadata({
-  title: 'Projects',
+  title: 'Projects – Archaeological Illustration & Web Development Portfolio',
   description:
-    'Portfolio of archaeological illustration, drawing, digital painting, cover art, web development, and brand identity projects by Jona Schlegel. Case studies in science communication and heritage design.',
+    'Portfolio of archaeological illustration, archaeology web development & design, visual science communication, and heritage platform projects by Jona Schlegel. Case studies in fullstack archaeology web applications and archaeological drawing.',
   canonical: 'https://jonaschlegel.com/projects',
   keywords: [
     'archaeological illustration projects',
-    'archaeology drawing portfolio',
-    'archaeology painting',
-    'archaeology cover art',
-    'archaeology web development',
-    'archaeology brand identity',
-    'science communication portfolio',
-    'digital heritage projects',
-    'archaeological research',
-    'conceptual illustration archaeology',
+    'archaeology web development portfolio',
+    'archaeology web design portfolio',
+    'visual science communication portfolio',
+    'archaeological drawing portfolio',
+    'archaeology fullstack projects',
+    'heritage web development',
+    'digital archaeology platforms',
+    'archaeological research projects',
+    'archaeology website examples',
   ],
   ogType: 'website',
 });
@@ -32,9 +32,9 @@ export default function ProjectsPage() {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: 'Projects Portfolio - Jona Schlegel',
+    name: 'Archaeological Illustration & Web Development Portfolio - Jona Schlegel',
     description:
-      'Complete portfolio of archaeological and science communication projects',
+      'Portfolio of archaeological illustration, archaeology web development, and visual science communication projects',
     url: 'https://jonaschlegel.com/projects',
     mainEntity: {
       '@type': 'ItemList',

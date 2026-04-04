@@ -8,10 +8,10 @@ import ScrollToTop from './components/ScrollUpArrow';
 import Tracking from './Tracking';
 
 const BASE_DESCRIPTION =
-  'Jona Schlegel – Freelance archaeological science communicator, illustrator, and web developer based in Vienna. Specialising in visual storytelling, 3D modelling, and knowledge management for archaeology and heritage.';
+  'Jona Schlegel – Freelance archaeological illustrator, visual science communicator, and archaeology web developer. Specialising in archaeological illustration, archaeology web development & design, fullstack web applications for heritage research, and visual science communication for archaeology.';
 
 const SHORT_DESCRIPTION =
-  'Freelance archaeological science communicator, illustrator, and web developer based in Vienna. Specialising in visual storytelling and knowledge management.';
+  'Freelance archaeological illustrator and archaeology web developer. Specialising in visual science communication, archaeological drawing, and fullstack web development for heritage and archaeology.';
 
 /** Site-wide metadata configuration for SEO, Open Graph, and Twitter cards. */
 export const metadata: Metadata = {
@@ -19,20 +19,24 @@ export const metadata: Metadata = {
   title: {
     template: '%s | Jona Schlegel',
     default:
-      'Jona Schlegel – Archaeological Science Communication & Knowledge Management',
+      'Jona Schlegel \u2013 Archaeological Illustration, Archaeology Web Development & Visual Science Communication',
   },
   description: BASE_DESCRIPTION,
   keywords: [
-    'archaeology',
-    'science communication',
-    'knowledge management',
-    'archaeological research',
-    'public engagement',
-    'scientific writing',
     'archaeological illustration',
-    'digital humanities',
-    'heritage studies',
-    'academic research',
+    'archaeology web development',
+    'archaeology web design',
+    'visual science communication archaeology',
+    'archaeology website',
+    'freelance archaeological illustrator',
+    'archaeology fullstack developer',
+    'archaeological drawing',
+    'digital heritage',
+    'science communication archaeology',
+    'archaeology web developer',
+    'archaeological illustration freelance',
+    'archaeology painting',
+    'heritage web development',
   ],
   authors: [{ name: 'Jona Schlegel', url: 'https://jonaschlegel.com' }],
   creator: 'Jona Schlegel',
@@ -54,7 +58,7 @@ export const metadata: Metadata = {
     url: 'https://jonaschlegel.com',
     siteName: 'Jona Schlegel',
     title:
-      'Jona Schlegel – Archaeological Science Communication & Knowledge Management',
+      'Jona Schlegel – Archaeological Illustration, Archaeology Web Development & Visual Science Communication',
     description: BASE_DESCRIPTION,
     images: [
       {
@@ -131,10 +135,14 @@ export default function RootLayout({
               '@type': 'Person',
               name: 'Jona Schlegel',
               url: 'https://jonaschlegel.com',
-              jobTitle: 'Archaeological Science Communication Specialist',
+              jobTitle:
+                'Archaeological Illustrator & Archaeology Web Developer',
               worksFor: {
                 '@type': 'Organization',
-                name: 'Independent Consultant',
+                name: 'archaeoINK',
+                url: 'https://jonaschlegel.com',
+                description:
+                  'Visual science communication studio for archaeological illustration, archaeology web development, and heritage design.',
               },
               alumniOf: [
                 {
@@ -145,12 +153,15 @@ export default function RootLayout({
                 },
               ],
               knowsAbout: [
-                'Archaeology',
+                'Archaeological Illustration',
+                'Archaeology Web Development',
+                'Archaeology Web Design',
+                'Fullstack Web Development for Archaeology',
+                'Visual Science Communication',
+                'Archaeological Drawing',
+                'Digital Heritage Platforms',
                 'Science Communication',
-                'Knowledge Management',
-                'Archaeological Research',
-                'Public Engagement',
-                'Digital Humanities',
+                'Landscape Archaeology',
               ],
               sameAs: [
                 'https://www.linkedin.com/in/jona-schlegel/',
@@ -174,7 +185,7 @@ export default function RootLayout({
               name: 'Jona Schlegel',
               url: 'https://jonaschlegel.com',
               description:
-                'Archaeological Science Communication & Knowledge Management',
+                'Archaeological Illustration, Archaeology Web Development & Visual Science Communication',
               author: {
                 '@type': 'Person',
                 name: 'Jona Schlegel',
