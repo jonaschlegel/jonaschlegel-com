@@ -17,31 +17,38 @@ export default function BlogPreview() {
 
         <div className="grid gap-6 md:grid-cols-3">
           {blogPostsData.map((post) => (
-            <a
+            <article
               key={`blog-${post.title.slice(0, 30).replace(/\s+/g, '-').toLowerCase()}`}
-              href={post.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex flex-col border border-gray-200 p-6 transition-colors hover:border-primary-green"
+              className="flex flex-col border border-gray-200 p-6 transition-colors hover:border-primary-green group"
             >
-              <time className="mb-2 text-xs text-neutral-400">
-                {new Date(post.date).toLocaleDateString('en-GB', {
-                  day: 'numeric',
-                  month: 'long',
-                  year: 'numeric',
-                })}
-              </time>
-              <h3 className="mb-3 font-merriweather text-base font-semibold leading-snug group-hover:text-primary-green">
-                {post.title}
-              </h3>
-              <p className="mb-4 flex-1 text-sm text-gray-600">
-                {post.excerpt}
-              </p>
-              <span className="mt-auto flex items-center gap-1 text-sm text-primary-green">
-                Read on archaeoINK
-                <FaArrowRight className="size-3" />
-              </span>
-            </a>
+              <a
+                href={post.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-1 flex-col"
+              >
+                <time
+                  dateTime={post.date}
+                  className="mb-2 text-xs text-neutral-400"
+                >
+                  {new Date(post.date).toLocaleDateString('en-GB', {
+                    day: 'numeric',
+                    month: 'long',
+                    year: 'numeric',
+                  })}
+                </time>
+                <h3 className="mb-3 font-merriweather text-base font-semibold leading-snug group-hover:text-primary-green">
+                  {post.title}
+                </h3>
+                <p className="mb-4 flex-1 text-sm text-gray-600">
+                  {post.excerpt}
+                </p>
+                <span className="mt-auto flex items-center gap-1 text-sm text-primary-green">
+                  Read on archaeoINK
+                  <FaArrowRight className="size-3" />
+                </span>
+              </a>
+            </article>
           ))}
         </div>
       </div>

@@ -9,7 +9,9 @@ import IllustrationBand from './components/IllustrationBand';
 import InstagramGrid from './components/InstagramGrid';
 import MediaSection from './components/MediaSection';
 import PastForwardHubSection from './components/PastForwardHubSection';
-import PodcastSection from './components/PodcastSection';
+import PodcastSection, {
+  podcastStructuredData,
+} from './components/PodcastSection';
 import RecentActivity from './components/RecentActivity';
 import Testimonials from './components/Testimonials';
 import { generateSEOMetadata } from './lib/seo';
@@ -88,6 +90,12 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(structuredData),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(podcastStructuredData),
         }}
       />
     </>
