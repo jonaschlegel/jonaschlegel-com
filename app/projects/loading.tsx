@@ -5,9 +5,9 @@ export default function ProjectsLoading() {
       <div className="animate-pulse space-y-8">
         <div className="h-10 w-1/3 rounded bg-neutral-200" />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {["a", "b", "c", "d", "e", "f"].map((id) => (
+          {['a', 'b', 'c', 'd', 'e', 'f'].map((id) => (
             <div
-              key={id}
+              key={`skeleton-${id}`}
               className="aspect-[4/3] rounded bg-neutral-200"
             />
           ))}
