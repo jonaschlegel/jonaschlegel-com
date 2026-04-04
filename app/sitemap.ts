@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { projectsData } from './data/content';
 
 /** Generates the sitemap.xml entries for all public pages and projects. */
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://jonaschlegel.com';
 
   // Get visible projects from content data
