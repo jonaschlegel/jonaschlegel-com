@@ -99,6 +99,7 @@ export default function HomePage() {
         }}
       />
       <script
+        id="podcast-jsonld"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(podcastStructuredData),

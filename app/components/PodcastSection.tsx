@@ -26,7 +26,7 @@ const podcastLinks = [
   },
 ] as const;
 
-const podcastStructuredData = {
+export const podcastStructuredData = {
   '@context': 'https://schema.org',
   '@type': 'PodcastSeries',
   name: 'Things We Threw Away',
@@ -42,7 +42,7 @@ const podcastStructuredData = {
     },
     { '@type': 'Person', name: 'Stefanie Ulrich' },
   ],
-};
+} as const;
 
 /** Section promoting the Things We Threw Away podcast with platform links. */
 const PodcastSection = () => {
@@ -103,5 +103,4 @@ const PodcastSection = () => {
   );
 };
 
-export { podcastStructuredData };
 export default PodcastSection;

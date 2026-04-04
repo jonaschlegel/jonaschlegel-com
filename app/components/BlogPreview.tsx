@@ -19,7 +19,7 @@ export default function BlogPreview() {
           {blogPostsData.map((post) => (
             <article
               key={`blog-${post.title.slice(0, 30).replace(/\s+/g, '-').toLowerCase()}`}
-              className="flex flex-col border border-gray-200 p-6 transition-colors hover:border-primary-green group"
+              className="group flex flex-col border border-gray-200 p-6 transition-colors hover:border-primary-green focus-within:border-primary-green"
             >
               <a
                 href={post.url}
@@ -37,7 +37,7 @@ export default function BlogPreview() {
                     year: 'numeric',
                   })}
                 </time>
-                <h3 className="mb-3 font-merriweather text-base font-semibold leading-snug group-hover:text-primary-green">
+                <h3 className="mb-3 font-merriweather text-base font-semibold leading-snug group-hover:text-primary-green group-focus-within:text-primary-green">
                   {post.title}
                 </h3>
                 <p className="mb-4 flex-1 text-sm text-gray-600">
@@ -45,7 +45,8 @@ export default function BlogPreview() {
                 </p>
                 <span className="mt-auto flex items-center gap-1 text-sm text-primary-green">
                   Read on archaeoINK
-                  <FaArrowRight className="size-3" />
+                  <span className="sr-only"> (opens in new tab)</span>
+                  <FaArrowRight className="size-3" aria-hidden="true" />
                 </span>
               </a>
             </article>

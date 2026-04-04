@@ -288,7 +288,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 'science communication',
               ],
             }),
-          ),
+          ).replace(/</g, '\u003c'),
         }}
       />
     </div>

@@ -9,13 +9,13 @@ const SocialItem: FC<SocialType> = ({ Icon, href }) => {
   return isExternal ? (
     <a href={href} target="_blank" rel="noopener noreferrer">
       <span className="inline-block rounded-full border p-2 transition-colors hover:border-primary-green active:border-primary-green">
-        <Icon />
+        <Icon aria-hidden="true" />
       </span>
     </a>
   ) : (
     <Link href={href}>
       <span className="inline-block rounded-full border p-2 transition-colors hover:border-primary-green active:border-primary-green">
-        <Icon />
+        <Icon aria-hidden="true" />
       </span>
     </Link>
   );

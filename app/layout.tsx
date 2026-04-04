@@ -7,6 +7,12 @@ import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollUpArrow';
 import Tracking from './Tracking';
 
+const BASE_DESCRIPTION =
+  'Jona Schlegel – Freelance archaeological science communicator, illustrator, and web developer based in Vienna. Specialising in visual storytelling, 3D modelling, and knowledge management for archaeology and heritage.';
+
+const SHORT_DESCRIPTION =
+  'Freelance archaeological science communicator, illustrator, and web developer based in Vienna. Specialising in visual storytelling and knowledge management.';
+
 /** Site-wide metadata configuration for SEO, Open Graph, and Twitter cards. */
 export const metadata: Metadata = {
   metadataBase: new URL('https://jonaschlegel.com'),
@@ -15,8 +21,7 @@ export const metadata: Metadata = {
     default:
       'Jona Schlegel – Archaeological Science Communication & Knowledge Management',
   },
-  description:
-    'Jona Schlegel – Freelance archaeological science communicator, illustrator, and web developer based in Vienna. Specialising in visual storytelling, 3D modelling, and knowledge management for archaeology and heritage.',
+  description: BASE_DESCRIPTION,
   keywords: [
     'archaeology',
     'science communication',
@@ -50,8 +55,7 @@ export const metadata: Metadata = {
     siteName: 'Jona Schlegel',
     title:
       'Jona Schlegel – Archaeological Science Communication & Knowledge Management',
-    description:
-      'Jona Schlegel – Freelance archaeological science communicator, illustrator, and web developer. Visual storytelling, 3D modelling, and knowledge management for archaeology and heritage.',
+    description: BASE_DESCRIPTION,
     images: [
       {
         url: '/api/og?title=Jona%20Schlegel&subtitle=Archaeological%20Science%20Communication%20%26%20Knowledge%20Management',
@@ -65,8 +69,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title:
       'Jona Schlegel – Archaeological Science Communication & Knowledge Management',
-    description:
-      'Freelance archaeological science communicator, illustrator, and web developer based in Vienna. Specialising in visual storytelling and knowledge management.',
+    description: SHORT_DESCRIPTION,
     images: [
       '/api/og?title=Jona%20Schlegel&subtitle=Archaeological%20Science%20Communication%20%26%20Knowledge%20Management',
     ],
