@@ -13,239 +13,294 @@ import { generateSEOMetadata } from '../lib/seo';
 
 /** SEO metadata for the About page. */
 export const metadata: Metadata = generateSEOMetadata({
-  title: 'About archaeoINK Studio',
+  title:
+    'About archaeoINK Studio – Archaeological Illustration & Web Development',
   description:
-    'archaeoINK is a visual science communication studio specialising in archaeological illustration, drawing, painting, and sketching. Founded by landscape archaeologist Jona Schlegel.',
+    'archaeoINK is a visual science communication studio specialising in archaeological illustration, archaeology web development & design, and heritage platforms. Founded by landscape archaeologist and web developer Jona Schlegel.',
   canonical: 'https://jonaschlegel.com/about',
   keywords: [
     'archaeoINK',
     'archaeological illustration studio',
-    'archaeology drawing',
-    'archaeology painting',
-    'archaeology sketching',
-    'science communication',
-    'visual communication',
+    'archaeology web development',
+    'archaeology web design',
+    'visual science communication',
+    'freelance archaeological illustrator',
+    'archaeology web developer',
     'landscape archaeology',
-    'conceptual illustration archaeology',
+    'archaeological drawing',
+    'heritage web development',
   ],
   ogType: 'website',
 });
 
 /** About page describing the archaeoINK studio and its approach. */
 export default function AboutPage() {
+  const aboutStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfilePage',
+    name: 'About archaeoINK Studio – Jona Schlegel',
+    url: 'https://jonaschlegel.com/about',
+    mainEntity: {
+      '@type': 'Person',
+      name: 'Jona Schlegel',
+      jobTitle:
+        'Freelance Archaeological Illustrator & Archaeology Web Developer',
+      url: 'https://jonaschlegel.com',
+      description:
+        'Landscape archaeologist, visual science communicator, and fullstack web developer specialising in archaeological illustration, archaeology web development, and digital heritage platforms.',
+      knowsAbout: [
+        'Archaeological Illustration',
+        'Archaeology Web Development',
+        'Archaeology Web Design',
+        'Visual Science Communication',
+        'Fullstack Web Development for Archaeology',
+        'Digital Heritage Platforms',
+        'Science Communication',
+        'Landscape Archaeology',
+        'Archaeological Drawing',
+        'Digital Painting',
+      ],
+      worksFor: {
+        '@type': 'Organization',
+        name: 'archaeoINK',
+        url: 'https://jonaschlegel.com',
+        description:
+          'Visual science communication studio specialising in archaeological illustration, archaeology web development, and heritage design.',
+      },
+      sameAs: [
+        'https://www.linkedin.com/in/jona-schlegel/',
+        'https://orcid.org/0000-0002-4190-9566',
+        'https://www.instagram.com/archaeoink/',
+        'https://bsky.app/profile/jonaschlegel.com',
+        'https://github.com/jonaschlegel',
+        'https://mastodon.social/@archaeoINK',
+      ],
+    },
+  };
+
   return (
-    <div className="container mx-auto py-16">
-      {/* Hero Section */}
-      <div className="mb-16 grid items-center gap-12 lg:grid-cols-2">
-        <div>
-          <h1 className="mb-6">{aboutStudioData.heading}</h1>
-          <p className="text-xl leading-relaxed">
-            A visual science communication studio specialising in archaeology,
-            bridging academic research and public understanding through
-            thoughtful illustration and design.
-          </p>
-        </div>
-        <div className="relative">
-          <div className="aspect-square overflow-hidden">
-            <Image
-              src={jonaAboutImage}
-              alt="Jona Schlegel - Founder of archaeoINK Studio"
-              width={500}
-              height={500}
-              className="h-full w-full object-cover"
-              priority
-            />
+    <>
+      <div className="container mx-auto py-16">
+        {/* Hero Section */}
+        <div className="mb-16 grid items-center gap-12 lg:grid-cols-2">
+          <div>
+            <h1 className="mb-6">{aboutStudioData.heading}</h1>
+            <p className="text-xl leading-relaxed">
+              A visual science communication studio specialising in archaeology,
+              bridging academic research and public understanding through
+              thoughtful illustration and design.
+            </p>
+          </div>
+          <div className="relative">
+            <div className="aspect-square overflow-hidden">
+              <Image
+                src={jonaAboutImage}
+                alt="Jona Schlegel - Founder of archaeoINK Studio"
+                width={500}
+                height={500}
+                className="h-full w-full object-cover"
+                priority
+              />
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Studio Philosophy */}
-      <section className="mb-16">
-        <div className="mx-auto max-w-4xl text-center">
-          <h2 className="mb-8 text-3xl font-semibold">Studio Philosophy</h2>
-          <p className="text-lg leading-relaxed">
-            Every archaeological site, artefact, and dataset contains layers of
-            information that require thoughtful interpretation. Our approach
-            prioritises accuracy and contextual understanding, working directly
-            with researchers to translate complex archaeological concepts into
-            clear visual narratives.
-          </p>
-        </div>
-      </section>
+        {/* Studio Philosophy */}
+        <section className="mb-16">
+          <div className="mx-auto max-w-4xl text-center">
+            <h2 className="mb-8 text-3xl font-semibold">Studio Philosophy</h2>
+            <p className="text-lg leading-relaxed">
+              Every archaeological site, artefact, and dataset contains layers
+              of information that require thoughtful interpretation. Our
+              approach prioritises accuracy and contextual understanding,
+              working directly with researchers to translate complex
+              archaeological concepts into clear visual narratives.
+            </p>
+          </div>
+        </section>
 
-      {/* Expertise Grid */}
-      <section className="mb-16">
-        <h2 className="mb-12 text-center text-3xl font-semibold">
-          Areas of Expertise
-        </h2>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <Link
-            href="/services#illustration"
-            className="rounded-lg border-2 border-primary-teal p-6 transition-all duration-300 hover:bg-primary-teal/5"
-          >
-            <h3 className="mb-4 text-xl font-semibold">
-              Archaeological Illustration
-            </h3>
-            <p className="leading-relaxed">
-              Archaeological drawing, digital painting, sketching, and
-              conceptual illustration for site reconstructions, artefact
-              documentation, and cover art.
-            </p>
-          </Link>
-          <Link
-            href="/services#web-development"
-            className="rounded-lg border-2 border-primary-teal p-6 transition-all duration-300 hover:bg-primary-teal/5"
-          >
-            <h3 className="mb-4 text-xl font-semibold">
-              Web Development for Archaeology
-            </h3>
-            <p className="leading-relaxed">
-              Research platforms, interactive databases, and digital tools that
-              make archaeological data accessible to diverse audiences.
-            </p>
-          </Link>
-          <Link
-            href="/services#brand-design"
-            className="rounded-lg border-2 border-primary-teal p-6 transition-all duration-300 hover:bg-primary-teal/5"
-          >
-            <h3 className="mb-4 text-xl font-semibold">
-              Brand Identity & Publication Design
-            </h3>
-            <p className="leading-relaxed">
-              Archaeology brand identity, journal design, and visual systems for
-              heritage organisations and academic publishers.
-            </p>
-          </Link>
-        </div>
-      </section>
-
-      {/* Behind the Scenes Gallery */}
-      <section className="mb-16">
-        <div className="mb-12 text-center">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary-green">
-            Behind the scenes
-          </p>
-          <h2 className="text-3xl font-semibold">The Work in Action</h2>
-        </div>
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
-          {aboutGalleryImages.map((img, index) => (
-            <div
-              key={`gallery-${img.caption}`}
-              className={`group relative overflow-hidden ${
-                index === 0 || index === 5
-                  ? 'col-span-2 row-span-2'
-                  : 'col-span-1 row-span-1'
-              }`}
+        {/* Expertise Grid */}
+        <section className="mb-16">
+          <h2 className="mb-12 text-center text-3xl font-semibold">
+            Areas of Expertise
+          </h2>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <Link
+              href="/services#illustration"
+              className="rounded-lg border-2 border-primary-teal p-6 transition-all duration-300 hover:bg-primary-teal/5"
             >
+              <h3 className="mb-4 text-xl font-semibold">
+                Archaeological Illustration
+              </h3>
+              <p className="leading-relaxed">
+                Archaeological drawing, digital painting, sketching, and
+                conceptual illustration for site reconstructions, artefact
+                documentation, and cover art.
+              </p>
+            </Link>
+            <Link
+              href="/services#web-development"
+              className="rounded-lg border-2 border-primary-teal p-6 transition-all duration-300 hover:bg-primary-teal/5"
+            >
+              <h3 className="mb-4 text-xl font-semibold">
+                Web Development for Archaeology
+              </h3>
+              <p className="leading-relaxed">
+                Research platforms, interactive databases, and digital tools
+                that make archaeological data accessible to diverse audiences.
+              </p>
+            </Link>
+            <Link
+              href="/services#brand-design"
+              className="rounded-lg border-2 border-primary-teal p-6 transition-all duration-300 hover:bg-primary-teal/5"
+            >
+              <h3 className="mb-4 text-xl font-semibold">
+                Brand Identity & Publication Design
+              </h3>
+              <p className="leading-relaxed">
+                Archaeology brand identity, journal design, and visual systems
+                for heritage organisations and academic publishers.
+              </p>
+            </Link>
+          </div>
+        </section>
+
+        {/* Behind the Scenes Gallery */}
+        <section className="mb-16">
+          <div className="mb-12 text-center">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary-green">
+              Behind the scenes
+            </p>
+            <h2 className="text-3xl font-semibold">The Work in Action</h2>
+          </div>
+          <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
+            {aboutGalleryImages.map((img, index) => (
               <div
-                className={`relative w-full ${
-                  index === 0 || index === 5 ? 'aspect-square' : 'aspect-[4/3]'
+                key={`gallery-${img.caption}`}
+                className={`group relative overflow-hidden ${
+                  index === 0 || index === 5
+                    ? 'col-span-2 row-span-2'
+                    : 'col-span-1 row-span-1'
                 }`}
               >
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes={
+                <div
+                  className={`relative w-full ${
                     index === 0 || index === 5
-                      ? '(max-width: 768px) 100vw, 50vw'
-                      : '(max-width: 768px) 50vw, 25vw'
-                  }
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100" />
-                <p className="absolute bottom-3 left-3 text-sm font-medium text-white transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100">
-                  {img.caption}
+                      ? 'aspect-square'
+                      : 'aspect-[4/3]'
+                  }`}
+                >
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes={
+                      index === 0 || index === 5
+                        ? '(max-width: 768px) 100vw, 50vw'
+                        : '(max-width: 768px) 50vw, 25vw'
+                    }
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100" />
+                  <p className="absolute bottom-3 left-3 text-sm font-medium text-white transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100">
+                    {img.caption}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* About Jona Section */}
+        <section className="mb-16">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="mb-8 text-center text-3xl font-semibold">
+              About Jona Schlegel
+            </h2>
+            <div className="grid gap-12 lg:grid-cols-2">
+              <div>
+                <h3 className="mb-4 text-xl font-semibold">Background</h3>
+                <p className="mb-6 leading-relaxed">
+                  Landscape archaeologist and science communicator, combining
+                  disciplinary expertise with visual communication skills to
+                  support researchers, institutions, and educators in making
+                  archaeological knowledge more accessible.
+                </p>
+                <div className="mb-6 overflow-hidden">
+                  <Image
+                    src={jonaDeskWorkingImage}
+                    alt="Jona working at the desk on illustrations"
+                    width={500}
+                    height={300}
+                    className="w-full object-cover"
+                    sizes="(max-width: 1024px) 100vw, 400px"
+                  />
+                </div>
+                <h3 className="mb-4 text-xl font-semibold">Approach</h3>
+                <p className="leading-relaxed">
+                  Rather than simplifying for the sake of accessibility, the
+                  focus lies in finding visual languages that honour both
+                  scholarly rigour and public curiosity, maintaining connection
+                  to underlying research whilst serving broader understanding.
                 </p>
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* About Jona Section */}
-      <section className="mb-16">
-        <div className="mx-auto max-w-4xl">
-          <h2 className="mb-8 text-center text-3xl font-semibold">
-            About Jona Schlegel
-          </h2>
-          <div className="grid gap-12 lg:grid-cols-2">
-            <div>
-              <h3 className="mb-4 text-xl font-semibold">Background</h3>
-              <p className="mb-6 leading-relaxed">
-                Landscape archaeologist and science communicator, combining
-                disciplinary expertise with visual communication skills to
-                support researchers, institutions, and educators in making
-                archaeological knowledge more accessible.
-              </p>
-              <div className="mb-6 overflow-hidden">
-                <Image
-                  src={jonaDeskWorkingImage}
-                  alt="Jona working at the desk on illustrations"
-                  width={500}
-                  height={300}
-                  className="w-full object-cover"
-                  sizes="(max-width: 1024px) 100vw, 400px"
-                />
-              </div>
-              <h3 className="mb-4 text-xl font-semibold">Approach</h3>
-              <p className="leading-relaxed">
-                Rather than simplifying for the sake of accessibility, the focus
-                lies in finding visual languages that honour both scholarly
-                rigour and public curiosity, maintaining connection to
-                underlying research whilst serving broader understanding.
-              </p>
-            </div>
-            <div>
-              <h3 className="mb-4 text-xl font-semibold">Collaboration</h3>
-              <p className="mb-6 leading-relaxed">
-                Works as a partner in research projects, contributing visual
-                expertise whilst learning from domain specialists to ensure
-                authentic representation of archaeological work and its cultural
-                significance.
-              </p>
-              <div className="mb-6 overflow-hidden">
-                <Image
-                  src={jonaLaptopImage}
-                  alt="Jona working on a laptop during a research project"
-                  width={500}
-                  height={300}
-                  className="w-full object-cover"
-                  sizes="(max-width: 1024px) 100vw, 400px"
-                />
-              </div>
-              <div className="rounded-lg bg-primary-teal/10 p-6">
-                <h4 className="mb-3 font-semibold">Research Interests</h4>
-                <ul className="space-y-2 text-sm">
-                  <li>Landscape archaeology and spatial analysis</li>
-                  <li>Visual science communication methodologies</li>
-                  <li>Digital heritage and knowledge management</li>
-                  <li>Archaeological illustration and documentation</li>
-                </ul>
+              <div>
+                <h3 className="mb-4 text-xl font-semibold">Collaboration</h3>
+                <p className="mb-6 leading-relaxed">
+                  Works as a partner in research projects, contributing visual
+                  expertise whilst learning from domain specialists to ensure
+                  authentic representation of archaeological work and its
+                  cultural significance.
+                </p>
+                <div className="mb-6 overflow-hidden">
+                  <Image
+                    src={jonaLaptopImage}
+                    alt="Jona working on a laptop during a research project"
+                    width={500}
+                    height={300}
+                    className="w-full object-cover"
+                    sizes="(max-width: 1024px) 100vw, 400px"
+                  />
+                </div>
+                <div className="rounded-lg bg-primary-teal/10 p-6">
+                  <h4 className="mb-3 font-semibold">Research Interests</h4>
+                  <ul className="space-y-2 text-sm">
+                    <li>Landscape archaeology and spatial analysis</li>
+                    <li>Visual science communication methodologies</li>
+                    <li>Digital heritage and knowledge management</li>
+                    <li>Archaeological illustration and documentation</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Call to Action */}
-      <section className="mx-auto max-w-4xl rounded-2xl bg-primary-green/10 p-8 text-center">
-        <h2 className="mb-6 text-2xl font-semibold">Let's Collaborate</h2>
-        <p className="mb-8 text-lg leading-relaxed">
-          For collaboration enquiries or to discuss how archaeoINK can support
-          your research communication needs, please get in touch.
-        </p>
-        <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-          <CalendlyButton text="Schedule a Consultation" />
-          <span className="text-sm">or</span>
-          <a
-            href="mailto:archaeoink@jonaschlegel.com"
-            className="inline-flex items-center rounded-full border-2 border-primary-green px-8 py-3 font-semibold text-primary-green transition-all duration-300 hover:bg-primary-green hover:text-primary-dark"
-          >
-            Send an Email
-          </a>
-        </div>
-      </section>
-    </div>
+        {/* Call to Action */}
+        <section className="mx-auto max-w-4xl rounded-2xl bg-primary-green/10 p-8 text-center">
+          <h2 className="mb-6 text-2xl font-semibold">Let's Collaborate</h2>
+          <p className="mb-8 text-lg leading-relaxed">
+            For collaboration enquiries or to discuss how archaeoINK can support
+            your research communication needs, please get in touch.
+          </p>
+          <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <CalendlyButton text="Schedule a Consultation" />
+            <span className="text-sm">or</span>
+            <a
+              href="mailto:archaeoink@jonaschlegel.com"
+              className="inline-flex items-center rounded-full border-2 border-primary-green px-8 py-3 font-semibold text-primary-green transition-all duration-300 hover:bg-primary-green hover:text-primary-dark"
+            >
+              Send an Email
+            </a>
+          </div>
+        </section>
+      </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(aboutStructuredData),
+        }}
+      />
+    </>
   );
 }

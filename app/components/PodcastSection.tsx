@@ -54,7 +54,7 @@ const PodcastSection = () => {
           <div className="relative aspect-square w-20 shrink-0 overflow-hidden rounded-lg md:w-24">
             <Image
               src={jonaRecordingImage}
-              alt="Jona in the recording studio for the archaeology podcast"
+              alt="Jona Schlegel, co-host of the archaeology podcast"
               fill
               className="object-cover"
               sizes="96px"

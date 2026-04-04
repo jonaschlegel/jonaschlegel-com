@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import type { ProjectType } from '../../../types/global';
 import Breadcrumbs from '../../components/Breadcrumbs';
+import ImageGallery from '../../components/ImageGallery';
 import { projectsData } from '../../data/content';
 import { generateProjectOGImageUrl } from '../../lib/og-utils';
 import { generateArticleStructuredData } from '../../lib/seo';
@@ -54,13 +55,13 @@ export async function generateMetadata({
     description: projectDescription,
     keywords: [
       'archaeology project',
-      'science communication',
-      project.name.toLowerCase(),
-      'archaeological research',
-      'portfolio project',
-      'knowledge management',
-      'public engagement',
       'archaeological illustration',
+      'archaeology web development',
+      project.name.toLowerCase(),
+      'visual science communication',
+      'archaeological research',
+      'archaeology web design',
+      'freelance archaeological illustrator',
     ],
     openGraph: {
       title: projectTitle,
@@ -160,6 +161,16 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </dl>
         </div>
       </div>
+
+      {/* Gallery */}
+      {project.galleryImages && project.galleryImages.length > 0 && (
+        <section className="mb-12">
+          <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-primary-green">
+            Gallery
+          </h2>
+          <ImageGallery images={project.galleryImages} />
+        </section>
+      )}
 
       {/* Objective */}
       <section className="mb-10 max-w-3xl">
@@ -263,6 +274,21 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               </li>
             ))}
           </ul>
+        </section>
+      )}
+
+      {/* External Link */}
+      {project.externalUrl && (
+        <section className="mb-12 max-w-3xl">
+          <a
+            href={project.externalUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-md bg-primary-green px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-primary-green/90"
+          >
+            Visit Project
+            <span aria-hidden="true">↗</span>
+          </a>
         </section>
       )}
 

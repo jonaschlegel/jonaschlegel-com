@@ -13,15 +13,6 @@ interface MediaItem {
 
 const mediaItems: MediaItem[] = [
   {
-    title: 'And My Trowel, Ep. 51 & 52',
-    type: 'guest',
-    role: 'Guest',
-    date: '2025',
-    url: 'https://www.intarch.ac.uk/podcast/',
-    description:
-      'Interview on graffiti archaeology and the visual science communication.',
-  },
-  {
     title: 'Mapathon: Kaarten als bron voor Surinaamse geschiedenis',
     type: 'workshop',
     role: 'Co-organiser',
@@ -29,6 +20,24 @@ const mediaItems: MediaItem[] = [
     url: 'https://www.huygens.knaw.nl/evenementen/mapathon-kaarten-als-bron-voor-surinaamse-geschiedenis/',
     description:
       'Workshop on using historical maps as sources for Surinamese history, organised with the Huygens Institute.',
+  },
+  {
+    title: 'And My Trowel, Ep. 52, The Graffiti Palimpsest (Part 2)',
+    type: 'guest',
+    role: 'Guest',
+    date: '2025',
+    url: 'https://www.archaeologypodcastnetwork.com/trowel/52',
+    description:
+      'Invited as a guest to take on a new quest from the Karnithril Collegium of Wall Lore to document vanishing graffiti, while talking about archaeology, fantasy, graffiti documentation and visual science communication.',
+  },
+  {
+    title: 'And My Trowel, Ep. 51, The Graffiti Palimpsest (Part 1)',
+    type: 'guest',
+    role: 'Guest',
+    date: '2025',
+    url: 'https://www.archaeologypodcastnetwork.com/trowel/51',
+    description:
+      'Invited as a guest to take on a new quest from the Karnithril Collegium of Wall Lore to document vanishing graffiti, while talking about archaeology, fantasy, graffiti documentation and visual science communication.',
   },
   {
     title: 'Archaeology after Dark EP. 86 "Visual Science Communication"',
