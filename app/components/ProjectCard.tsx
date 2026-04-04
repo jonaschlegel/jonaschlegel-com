@@ -4,7 +4,7 @@ import type { FC } from 'react';
 import type { ProjectType } from '../../types/global';
 
 /** Card linking to an individual project with a cover image. */
-const ProjectCard: FC<ProjectType> = ({ slug, image, name }) => {
+const ProjectCard: FC<ProjectType> = ({ slug, image, name, description }) => {
   return (
     <Link
       href={`/projects/${slug}` as any}
@@ -12,7 +12,7 @@ const ProjectCard: FC<ProjectType> = ({ slug, image, name }) => {
     >
       <Image
         src={image}
-        alt={`${name} - Archaeological illustration and scientific communication project by Jona Schlegel`}
+        alt={`${name} \u2013 ${description}`}
         fill
         className="object-cover"
         sizes="(max-width: 768px) 100vw, 50vw"

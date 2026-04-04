@@ -6,15 +6,21 @@ import ServicesContent from './ServicesContent';
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Services',
   description:
-    'Visual science communication services: archaeological illustration, 3D modelling, web development, and brand design. From reconstruction drawings to research platforms.',
+    'Archaeological illustration, drawing, digital painting, sketching, conceptual illustration, and cover art. Plus archaeology web development, brand identity for heritage organisations, and 3D modelling.',
   canonical: 'https://jonaschlegel.com/services',
   keywords: [
     'archaeological illustration',
+    'archaeology drawing',
+    'archaeology painting',
+    'archaeology sketching',
+    'archaeology conceptual illustration',
+    'archaeology cover art',
+    'archaeology web development',
+    'archaeology brand identity',
+    'archaeology journaling',
     'science communication',
     '3D modelling archaeology',
     'photogrammetry',
-    'web development archaeology',
-    'brand design heritage',
     'visual storytelling',
     'reconstruction drawing',
   ],
@@ -27,7 +33,7 @@ const servicesStructuredData = {
   name: 'archaeoINK – Jona Schlegel',
   url: 'https://jonaschlegel.com/services',
   description:
-    'Visual science communication services specialising in archaeology: illustration, 3D modelling, web development, and brand design.',
+    'Archaeological illustration, drawing, digital painting, sketching, conceptual illustration, cover art, web development, and brand identity services for archaeology and heritage.',
   provider: {
     '@type': 'Person',
     name: 'Jona Schlegel',
@@ -36,15 +42,15 @@ const servicesStructuredData = {
   areaServed: 'Worldwide',
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
-    name: 'Science Communication Services',
+    name: 'Archaeological Science Communication Services',
     itemListElement: [
       {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Illustration & Visual Storytelling',
+          name: 'Archaeological Illustration & Visual Storytelling',
           description:
-            'Scientifically accurate illustrations for publications, outreach, and education. Reconstruction drawings, cover art, comics, and zines.',
+            'Archaeological drawing, digital painting, sketching, and conceptual illustration for publications, outreach, and education. Cover art, reconstruction scenes, comics, and zines.',
         },
       },
       {
@@ -60,18 +66,18 @@ const servicesStructuredData = {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Web Development & Digital Platforms',
+          name: 'Archaeology Web Development & Digital Platforms',
           description:
-            'Fullstack web development for archaeological research projects. Database-driven platforms, interactive visualisation tools, and digital research infrastructure.',
+            'Web development for archaeological research projects. Database-driven platforms, interactive visualisation tools, and digital research infrastructure.',
         },
       },
       {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Brand & Publication Design',
+          name: 'Archaeology Brand Identity & Publication Design',
           description:
-            'Visual identity and publication design for heritage organisations, research projects, and academic publishers.',
+            'Brand identity and publication design for heritage organisations, archaeological research projects, and academic publishers.',
         },
       },
     ],

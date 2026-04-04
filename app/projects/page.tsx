@@ -8,19 +8,19 @@ import { generateSEOMetadata } from '../lib/seo';
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Projects',
   description:
-    'Explore all projects by Jona Schlegel, showcasing expertise in archaeological research, science communication, and digital heritage work. View detailed portfolio of academic and professional work.',
+    'Portfolio of archaeological illustration, drawing, digital painting, cover art, web development, and brand identity projects by Jona Schlegel. Case studies in science communication and heritage design.',
   canonical: 'https://jonaschlegel.com/projects',
   keywords: [
-    'archaeology projects',
+    'archaeological illustration projects',
+    'archaeology drawing portfolio',
+    'archaeology painting',
+    'archaeology cover art',
+    'archaeology web development',
+    'archaeology brand identity',
     'science communication portfolio',
-    'archaeological research',
     'digital heritage projects',
-    'knowledge management',
-    'archaeological illustration',
-    'heritage studies',
-    'portfolio gallery',
-    'academic projects',
-    'professional portfolio',
+    'archaeological research',
+    'conceptual illustration archaeology',
   ],
   ogType: 'website',
 });

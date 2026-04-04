@@ -5,8 +5,9 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import ButtonPrimary from '../components/ButtonPrimary';
+import FAQSection from '../components/FAQSection';
 import IllustrationBand from '../components/IllustrationBand';
-import { jonaScicommImage } from '../data/content';
+import { jonaScicommImage, servicesFAQs } from '../data/content';
 import adventuressCover from '../images/projects/adventuress-cover.jpg';
 import necessaryReunions from '../images/projects/necessary-reunions.png';
 import pastrace from '../images/projects/pastrace.jpg';
@@ -16,16 +17,18 @@ const capabilities = [
   {
     title: 'Illustration & Visual Storytelling',
     description:
-      'Research publications compete for attention \u2014 compelling visuals make yours stand out. Scientifically accurate illustrations for publications, outreach, and education: from reconstruction drawings and life-like scenes to conceptual illustrations, cover art, comics, and zines.',
+      'Research publications compete for attention \u2014 compelling visuals make yours stand out. Scientifically accurate archaeological illustrations for publications, outreach, and education: from reconstruction drawings and digital painting to conceptual illustrations, cover art, comics, and zines.',
     includes: [
-      'Reconstruction drawings & life-like scenes',
-      'Cover art & publication illustration',
+      'Archaeological drawing & reconstruction scenes',
+      'Digital painting & colour illustrations',
+      'Sketching, concept art & visual development',
       'Conceptual and educational illustrations',
+      'Cover art & publication illustration',
       'Comics, zines & visual narratives',
     ],
     image: romanBurial,
     imageAlt:
-      'Roman burial reconstruction illustration for academic publication',
+      'Archaeological drawing and digital painting of a Roman burial reconstruction',
     projectSlug: 'roman-burial',
     projectName: 'Roman Burial Reconstruction',
   },
@@ -53,7 +56,7 @@ const capabilities = [
   {
     title: 'Web Development & Digital Platforms',
     description:
-      'Research datasets locked in spreadsheets cannot serve the audiences they deserve. Fullstack web development for archaeological research projects: database-driven platforms, interactive visualisation tools, and digital research infrastructure.',
+      'Research datasets locked in spreadsheets cannot serve the audiences they deserve. Archaeology web development for research projects: database-driven platforms, interactive visualisation tools, and digital research infrastructure built with modern frameworks.',
     includes: [
       'Research platforms & databases',
       'Interactive data visualisation & 3D tools',
@@ -62,14 +65,14 @@ const capabilities = [
     ],
     image: necessaryReunions,
     imageAlt:
-      'Necessary Reunions research platform for VOC cartographic analysis',
+      'Archaeology web development platform for VOC cartographic research',
     projectSlug: 'necessary-reunions',
     projectName: 'Necessary Reunions',
   },
   {
     title: 'Brand & Publication Design',
     description:
-      'First impressions shape how seriously your research is taken. Visual identity and publication design for heritage organisations, research projects, and academic publishers \u2014 brand systems that communicate credibility and purpose.',
+      'First impressions shape how seriously your research is taken. Archaeology brand identity and publication design for heritage organisations, research projects, and academic publishers \u2014 brand systems that communicate credibility and purpose.',
     includes: [
       'Brand identity development',
       'Publication & journal design',
@@ -77,7 +80,8 @@ const capabilities = [
       'Print & digital asset creation',
     ],
     image: pastrace,
-    imageAlt: 'PasTrace brand identity for heritage documentation company',
+    imageAlt:
+      'Archaeology brand identity design for PasTrace heritage documentation company',
     projectSlug: 'pastrace',
     projectName: 'PasTrace',
   },
@@ -129,6 +133,13 @@ const timelines = [
   'Urgent (under 1 month)',
 ] as const;
 
+const capabilityAnchors: Record<string, string> = {
+  'Illustration & Visual Storytelling': 'illustration',
+  '3D Modelling & Documentation': '3d-modelling',
+  'Web Development & Digital Platforms': 'web-development',
+  'Brand & Publication Design': 'brand-design',
+};
+
 /** Interactive services page with service descriptions, process steps, and contact form. */
 export default function ServicesContent() {
   const [openStep, setOpenStep] = useState<number | null>(null);
@@ -162,9 +173,10 @@ export default function ServicesContent() {
           Visual Science Communication
         </h1>
         <p className="text-lg tracking-tight text-gray-600">
-          From reconstruction illustrations and 3D artefact models to research
-          platforms and brand identity: everything I do serves one goal. Making
-          archaeological knowledge visible, accessible, and engaging.
+          From archaeological drawing, digital painting, and conceptual
+          illustration to research platforms and brand identity: everything I do
+          serves one goal. Making archaeological knowledge visible, accessible,
+          and engaging.
         </p>
       </header>
 
@@ -196,6 +208,7 @@ export default function ServicesContent() {
           {capabilities.map((cap, index) => (
             <div
               key={`capability-${cap.title}`}
+              id={capabilityAnchors[cap.title]}
               className={`flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-16 ${
                 index % 2 === 1 ? 'lg:flex-row-reverse' : ''
               }`}
@@ -268,7 +281,7 @@ export default function ServicesContent() {
           <div className="relative aspect-[3/4] w-48 shrink-0 overflow-hidden md:w-56">
             <Image
               src={adventuressCover}
-              alt="Adventuress Archaeologist journal cover art"
+              alt="Adventuress Archaeologist journal cover art illustration"
               fill
               className="object-cover"
               sizes="224px"
@@ -359,6 +372,12 @@ export default function ServicesContent() {
       </section>
 
       <IllustrationBand seed={42} />
+
+      {/* FAQ */}
+      <FAQSection
+        faqs={servicesFAQs}
+        title="Questions About Archaeological Illustration & Services"
+      />
 
       {/* Contact form */}
       <section className="mx-auto max-w-2xl">
