@@ -88,7 +88,10 @@ const MediaSection = () => {
             >
               <div className="mb-3 flex items-start gap-3">
                 <div className="shrink-0 bg-primary-green/15 p-2">
-                  <Icon className="size-4 text-primary-green" />
+                  <Icon
+                    className="size-4 text-primary-green"
+                    aria-hidden="true"
+                  />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 transition-colors group-hover:text-primary-green">

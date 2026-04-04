@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import CalendlyButton from '../components/CalendlyButton';
 import {
   aboutGalleryImages,
@@ -8,38 +9,27 @@ import {
   jonaDeskWorkingImage,
   jonaLaptopImage,
 } from '../data/content';
+import { generateSEOMetadata } from '../lib/seo';
 
 /** SEO metadata for the About page. */
-export const metadata: Metadata = {
+export const metadata: Metadata = generateSEOMetadata({
   title: 'About archaeoINK Studio',
   description:
-    'Learn about archaeoINK, a visual science communication studio specialising in archaeology. Founded by landscape archaeologist Jona Schlegel, combining research expertise with visual communication.',
+    'archaeoINK is a visual science communication studio specialising in archaeological illustration, drawing, painting, and sketching. Founded by landscape archaeologist Jona Schlegel.',
+  canonical: 'https://jonaschlegel.com/about',
   keywords: [
     'archaeoINK',
-    'archaeological studio',
+    'archaeological illustration studio',
+    'archaeology drawing',
+    'archaeology painting',
+    'archaeology sketching',
     'science communication',
-    'archaeological illustration',
     'visual communication',
     'landscape archaeology',
-    'research visualisation',
+    'conceptual illustration archaeology',
   ],
-  openGraph: {
-    title: 'About archaeoINK Studio – Archaeological Visual Communication',
-    description:
-      'Learn about archaeoINK, a visual science communication studio specialising in archaeology, founded by landscape archaeologist Jona Schlegel.',
-    images: [
-      {
-        url: '/api/og?title=About%20archaeoINK&subtitle=Visual%20Science%20Communication%20for%20Archaeology',
-        width: 1200,
-        height: 630,
-        alt: 'About archaeoINK Studio - Archaeological Visual Communication',
-      },
-    ],
-  },
-  alternates: {
-    canonical: 'https://jonaschlegel.com/about',
-  },
-};
+  ogType: 'website',
+});
 
 /** About page describing the archaeoINK studio and its approach. */
 export default function AboutPage() {
@@ -89,33 +79,43 @@ export default function AboutPage() {
           Areas of Expertise
         </h2>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <div className="rounded-lg border-2 border-primary-teal p-6 transition-all duration-300 hover:bg-primary-teal/5">
+          <Link
+            href="/services#illustration"
+            className="rounded-lg border-2 border-primary-teal p-6 transition-all duration-300 hover:bg-primary-teal/5"
+          >
             <h3 className="mb-4 text-xl font-semibold">
               Archaeological Illustration
             </h3>
             <p className="leading-relaxed">
-              Site reconstructions, artefact documentation, and technical
-              drawings grounded in current research and methodological best
-              practice.
+              Archaeological drawing, digital painting, sketching, and
+              conceptual illustration for site reconstructions, artefact
+              documentation, and cover art.
             </p>
-          </div>
-          <div className="rounded-lg border-2 border-primary-teal p-6 transition-all duration-300 hover:bg-primary-teal/5">
+          </Link>
+          <Link
+            href="/services#web-development"
+            className="rounded-lg border-2 border-primary-teal p-6 transition-all duration-300 hover:bg-primary-teal/5"
+          >
             <h3 className="mb-4 text-xl font-semibold">
-              Science Communication
+              Web Development for Archaeology
             </h3>
             <p className="leading-relaxed">
-              Visual narratives that honour scholarly rigour whilst serving
-              educational and public engagement purposes.
+              Research platforms, interactive databases, and digital tools that
+              make archaeological data accessible to diverse audiences.
             </p>
-          </div>
-          <div className="rounded-lg border-2 border-primary-teal p-6 transition-all duration-300 hover:bg-primary-teal/5">
-            <h3 className="mb-4 text-xl font-semibold">Digital Design</h3>
+          </Link>
+          <Link
+            href="/services#brand-design"
+            className="rounded-lg border-2 border-primary-teal p-6 transition-all duration-300 hover:bg-primary-teal/5"
+          >
+            <h3 className="mb-4 text-xl font-semibold">
+              Brand Identity & Publication Design
+            </h3>
             <p className="leading-relaxed">
-              Database-informed graphics and digital tools that make
-              archaeological research findings more accessible to diverse
-              audiences.
+              Archaeology brand identity, journal design, and visual systems for
+              heritage organisations and academic publishers.
             </p>
-          </div>
+          </Link>
         </div>
       </section>
 

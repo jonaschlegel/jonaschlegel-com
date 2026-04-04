@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { KVK_NUMBER, KVK_URL } from '../lib/constants';
+import { generateLegalOGImageUrl } from '../lib/og-utils';
 
 /** SEO metadata for the Imprint page. */
 export const metadata: Metadata = {
@@ -9,6 +10,25 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: false,
+  },
+  openGraph: {
+    title: 'Imprint | Jona Schlegel',
+    description:
+      'Legal information and business details for Jona Schlegel, Archaeological Science Communication specialist based in Amsterdam, Netherlands.',
+    images: [
+      {
+        url: generateLegalOGImageUrl('Imprint'),
+        width: 1200,
+        height: 630,
+        alt: 'Imprint - Jona Schlegel',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Imprint | Jona Schlegel',
+    description: 'Legal information and business details for Jona Schlegel.',
+    images: [generateLegalOGImageUrl('Imprint')],
   },
   alternates: {
     canonical: 'https://jonaschlegel.com/imprint',

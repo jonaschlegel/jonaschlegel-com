@@ -9,6 +9,18 @@ html {
   scroll-padding: 4rem;
 }
 
+/*
+ * Prevent third-party scripts (Crisp, Calendly, etc.) or the mobile-menu
+ * toggle from locking scroll on desktop viewports.  The mobile menu is
+ * only used below the lg breakpoint, so body never needs overflow:hidden
+ * at wider sizes.
+ */
+@media (min-width: 1024px) {
+  body {
+    overflow: visible !important;
+  }
+}
+
 /* Accessibility: visible focus indicators */
 a:focus-visible,
 button:focus-visible,

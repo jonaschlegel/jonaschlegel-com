@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { generateLegalOGImageUrl } from '../lib/og-utils';
 
 /** SEO metadata for the Terms and Conditions page. */
 export const metadata: Metadata = {
@@ -8,6 +9,25 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: false,
+  },
+  openGraph: {
+    title: 'Terms and Conditions | Jona Schlegel',
+    description:
+      'Terms and conditions for using jonaschlegel.com, outlining user rights and responsibilities.',
+    images: [
+      {
+        url: generateLegalOGImageUrl('Terms and Conditions'),
+        width: 1200,
+        height: 630,
+        alt: 'Terms and Conditions - Jona Schlegel',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Terms and Conditions | Jona Schlegel',
+    description: 'Terms and conditions for using jonaschlegel.com.',
+    images: [generateLegalOGImageUrl('Terms and Conditions')],
   },
   alternates: {
     canonical: 'https://jonaschlegel.com/terms-and-conditions',

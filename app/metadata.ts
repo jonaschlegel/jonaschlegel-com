@@ -1,9 +1,9 @@
 /** Default metadata values used across the site for SEO and social sharing. */
 export const defaultMetadata = {
   title:
-    'Jona Schlegel – Archaeological Science Communication & Knowledge Management',
+    'Jona Schlegel – Archaeological Illustration, Science Communication & Web Development',
   description:
-    "Explore archaeology, scientific communication, and knowledge management. Discover how archaeological insights are shared with public engagement and innovation at Jona Schlegel's site.",
+    'Freelance archaeological illustrator and science communicator offering archaeological drawing, digital painting, sketching, conceptual illustration, cover art, brand identity, and web development for archaeology.',
   url: 'https://jonaschlegel.com/',
   image: 'https://jonaschlegel.com/images/social-image.jpg',
 };

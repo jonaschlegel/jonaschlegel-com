@@ -7,6 +7,12 @@ import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollUpArrow';
 import Tracking from './Tracking';
 
+const BASE_DESCRIPTION =
+  'Jona Schlegel – Freelance archaeological science communicator, illustrator, and web developer based in Vienna. Specialising in visual storytelling, 3D modelling, and knowledge management for archaeology and heritage.';
+
+const SHORT_DESCRIPTION =
+  'Freelance archaeological science communicator, illustrator, and web developer based in Vienna. Specialising in visual storytelling and knowledge management.';
+
 /** Site-wide metadata configuration for SEO, Open Graph, and Twitter cards. */
 export const metadata: Metadata = {
   metadataBase: new URL('https://jonaschlegel.com'),
@@ -15,8 +21,7 @@ export const metadata: Metadata = {
     default:
       'Jona Schlegel – Archaeological Science Communication & Knowledge Management',
   },
-  description:
-    "Explore archaeology, scientific communication, and knowledge management. Discover how archaeological insights are shared with public engagement and innovation at Jona Schlegel's site.",
+  description: BASE_DESCRIPTION,
   keywords: [
     'archaeology',
     'science communication',
@@ -50,8 +55,7 @@ export const metadata: Metadata = {
     siteName: 'Jona Schlegel',
     title:
       'Jona Schlegel – Archaeological Science Communication & Knowledge Management',
-    description:
-      'Explore archaeology, scientific communication, and knowledge management. Discover how archaeological insights are shared with public engagement and innovation.',
+    description: BASE_DESCRIPTION,
     images: [
       {
         url: '/api/og?title=Jona%20Schlegel&subtitle=Archaeological%20Science%20Communication%20%26%20Knowledge%20Management',
@@ -65,8 +69,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title:
       'Jona Schlegel – Archaeological Science Communication & Knowledge Management',
-    description:
-      'Explore archaeology, scientific communication, and knowledge management. Discover how archaeological insights are shared with public engagement and innovation.',
+    description: SHORT_DESCRIPTION,
     images: [
       '/api/og?title=Jona%20Schlegel&subtitle=Archaeological%20Science%20Communication%20%26%20Knowledge%20Management',
     ],
@@ -76,7 +79,7 @@ export const metadata: Metadata = {
     canonical: 'https://jonaschlegel.com',
   },
   verification: {
-    google: 'your-google-verification-code', // TODO: Replace with actual verification code
+    google: 'z5xgbg6m64rk',
     // yandex: 'your-yandex-verification-code',
     // yahoo: 'your-yahoo-verification-code',
   },
@@ -136,7 +139,9 @@ export default function RootLayout({
               alumniOf: [
                 {
                   '@type': 'EducationalOrganization',
-                  name: 'University of Archaeology', // Update with actual university
+                  name: 'HTW Berlin – University of Applied Sciences',
+                  url: 'https://krg.htw-berlin.de/',
+                  description: 'Bachelor and Master studies',
                 },
               ],
               knowsAbout: [
@@ -148,9 +153,12 @@ export default function RootLayout({
                 'Digital Humanities',
               ],
               sameAs: [
-                'https://linkedin.com/in/jonaschlegel', // Update with actual profiles
-                'https://twitter.com/jonaschlegel',
-                'https://orcid.org/0000-0000-0000-0000', // Update with actual ORCID
+                'https://www.linkedin.com/in/jona-schlegel/',
+                'https://orcid.org/0000-0002-4190-9566',
+                'https://www.instagram.com/archaeoink/',
+                'https://bsky.app/profile/jonaschlegel.com',
+                'https://github.com/jonaschlegel',
+                'https://mastodon.social/@archaeoINK',
               ],
             }),
           }}
@@ -170,12 +178,6 @@ export default function RootLayout({
               author: {
                 '@type': 'Person',
                 name: 'Jona Schlegel',
-              },
-              potentialAction: {
-                '@type': 'SearchAction',
-                target:
-                  'https://jonaschlegel.com/search?q={search_term_string}',
-                'query-input': 'required name=search_term_string',
               },
             }),
           }}

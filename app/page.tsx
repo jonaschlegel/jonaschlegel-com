@@ -9,7 +9,9 @@ import IllustrationBand from './components/IllustrationBand';
 import InstagramGrid from './components/InstagramGrid';
 import MediaSection from './components/MediaSection';
 import PastForwardHubSection from './components/PastForwardHubSection';
-import PodcastSection from './components/PodcastSection';
+import PodcastSection, {
+  podcastStructuredData,
+} from './components/PodcastSection';
 import RecentActivity from './components/RecentActivity';
 import Testimonials from './components/Testimonials';
 import { generateSEOMetadata } from './lib/seo';
@@ -18,19 +20,21 @@ import { generateSEOMetadata } from './lib/seo';
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Home',
   description:
-    "Welcome to Jona Schlegel's professional portfolio. Specializing in archaeological science communication, knowledge management, and public engagement. Explore innovative approaches to sharing archaeological insights with academic rigor and creative presentation.",
+    'Jona Schlegel – Freelance archaeological illustrator and science communicator. Specialising in archaeological drawing, digital painting, sketching, conceptual illustration, cover art, web development for archaeology, and brand identity for heritage organisations.',
   canonical: 'https://jonaschlegel.com',
   keywords: [
-    'archaeology portfolio',
-    'science communication specialist',
-    'archaeological research',
-    'public engagement archaeology',
-    'knowledge management',
     'archaeological illustration',
-    'heritage studies',
+    'archaeology drawing',
+    'archaeology painting',
+    'archaeology sketching',
+    'archaeology conceptual illustration',
+    'archaeology cover art',
+    'archaeology web development',
+    'archaeology brand identity',
+    'archaeology journaling',
+    'freelance archaeological illustrator',
+    'science communication',
     'digital archaeology',
-    'academic communication',
-    'research portfolio',
   ],
   ogType: 'website',
 });
@@ -47,17 +51,21 @@ export default function HomePage() {
     mainEntity: {
       '@type': 'Person',
       name: 'Jona Schlegel',
-      jobTitle: 'Archaeological Science Communication Specialist',
+      jobTitle: 'Archaeological Illustrator & Science Communicator',
       description:
-        'Expert in archaeological research, science communication, and knowledge management',
+        'Freelance archaeological illustrator specialising in drawing, painting, sketching, conceptual illustration, cover art, web development, and brand identity for archaeology',
       url: 'https://jonaschlegel.com',
       knowsAbout: [
-        'Archaeology',
+        'Archaeological Illustration',
+        'Archaeology Drawing',
+        'Archaeology Painting',
+        'Archaeology Sketching',
+        'Conceptual Illustration',
+        'Archaeology Cover Art',
+        'Archaeology Web Development',
+        'Archaeology Brand Identity',
         'Science Communication',
-        'Knowledge Management',
-        'Public Engagement',
         'Digital Heritage',
-        'Academic Research',
       ],
     },
   };
@@ -88,6 +96,13 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(structuredData),
+        }}
+      />
+      <script
+        id="podcast-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(podcastStructuredData),
         }}
       />
     </>

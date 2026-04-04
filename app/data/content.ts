@@ -595,3 +595,48 @@ export const jonaDeskWorkingImage = jonaDeskWorking;
 export const jonaLaptopImage = jonaLaptop;
 export const jonaGeophysicsImage = jonaGeophysics;
 export const jonaScicommImage = jonaScicomm;
+
+/** FAQ content for the services page, targeting key search terms. */
+export const servicesFAQs = [
+  {
+    question: 'What is archaeological illustration?',
+    answer:
+      'Archaeological illustration is the practice of creating scientifically accurate visual representations of archaeological sites, artefacts, and contexts. It encompasses drawing, digital painting, sketching, and conceptual illustration \u2014 translating complex research into clear visuals for publications, exhibitions, and education.',
+  },
+  {
+    question: 'What types of archaeological drawing do you offer?',
+    answer:
+      'I offer reconstruction drawings, artefact illustrations, site plans, section drawings, and conceptual sketches. Each drawing is developed in close collaboration with researchers to ensure accuracy. Techniques range from detailed pencil sketching to fully rendered digital painting, depending on the publication context.',
+  },
+  {
+    question: 'Do you offer digital painting for archaeology?',
+    answer:
+      'Yes. I use tools like Procreate and Inkscape to create digital paintings for archaeological reconstructions, life-like scenes, and publication covers. Digital painting allows for flexible iteration and produces print-ready results suitable for journals, books, and exhibition panels.',
+  },
+  {
+    question: 'What is archaeology cover art?',
+    answer:
+      'Archaeology cover art refers to illustrated covers designed for archaeological journals, books, and magazines. I create cover art that visually communicates the theme of a publication while meeting academic design standards \u2014 for example, the ongoing cover illustration series for Adventuress Archaeologist magazine.',
+  },
+  {
+    question: 'How does web development for archaeology work?',
+    answer:
+      'Archaeology web development involves building digital platforms tailored to research needs: interactive databases, GIS-based mapping tools, 3D visualisation interfaces, and content management systems for heritage data. I use modern frameworks like Next.js, TypeScript, and Tailwind CSS alongside spatial tools such as CesiumJS and Leaflet.',
+  },
+  {
+    question:
+      'Can you create a brand identity for an archaeology organisation?',
+    answer:
+      'Absolutely. Archaeology brand identity includes logo design, visual systems, colour palettes, typography, and style guides tailored to heritage organisations, research projects, and academic publishers. The goal is a professional identity that communicates credibility and aligns with institutional values \u2014 like the PasTrace brand I developed for a heritage documentation company.',
+  },
+  {
+    question: 'What is conceptual illustration in archaeology?',
+    answer:
+      'Conceptual illustration in archaeology visualises ideas, processes, or hypotheses rather than depicting specific artefacts or sites. Examples include comic-style explanations of archaeological methods, educational infographics, and diagrammatic illustrations of research workflows \u2014 making abstract concepts tangible for diverse audiences.',
+  },
+  {
+    question: 'What is archaeology journaling?',
+    answer:
+      'Archaeology journaling combines reflective writing with visual documentation \u2014 sketching, note-taking, and illustrated observations from fieldwork and research. I share techniques and insights through the Trowel Journal blog and develop journaling workshops that help archaeologists integrate visual thinking into their practice.',
+  },
+];

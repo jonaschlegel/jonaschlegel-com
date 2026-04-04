@@ -26,7 +26,25 @@ const podcastLinks = [
   },
 ] as const;
 
-/** Section promoting the TechTrowels podcast with episode highlights. */
+export const podcastStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'PodcastSeries',
+  name: 'Things We Threw Away',
+  description:
+    'An archaeology podcast about objects from the past in the present, co-hosted by Jona Schlegel and Stefanie Ulrich.',
+  url: 'https://thingswethrewaway.substack.com',
+  webFeed: 'https://thingswethrewaway.substack.com/feed',
+  author: [
+    {
+      '@type': 'Person',
+      name: 'Jona Schlegel',
+      url: 'https://jonaschlegel.com',
+    },
+    { '@type': 'Person', name: 'Stefanie Ulrich' },
+  ],
+} as const;
+
+/** Section promoting the Things We Threw Away podcast with platform links. */
 const PodcastSection = () => {
   return (
     <section className="container mx-auto px-4 py-16">
@@ -69,9 +87,10 @@ const PodcastSection = () => {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 border border-gray-200 px-4 py-2 text-sm text-gray-700 transition-colors hover:border-primary-green hover:text-primary-green"
+                    aria-label={`Listen on ${link.label}`}
+                    className="flex items-center gap-2 border border-gray-200 px-4 py-2 text-sm text-gray-700 transition-colors hover:border-primary-green hover:text-primary-green active:border-primary-green active:text-primary-green"
                   >
-                    <Icon className="size-4" />
+                    <Icon className="size-4" aria-hidden="true" />
                     {link.label}
                   </a>
                 );

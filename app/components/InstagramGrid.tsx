@@ -41,7 +41,7 @@ const InstagramGrid = () => {
               <div
                 key={`ig-${post.shortcode}`}
                 className="relative w-full overflow-hidden bg-white"
-                style={{ minHeight: 480 }}
+                style={{ aspectRatio: '4 / 5', minHeight: 320 }}
               >
                 <iframe
                   src={url}

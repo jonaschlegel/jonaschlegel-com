@@ -26,9 +26,15 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    document.body.style.overflow = mobileOpen ? 'hidden' : '';
+    // Only lock scroll on mobile when menu is open
+    const mq = window.matchMedia('(min-width: 1024px)');
+    if (mobileOpen && !mq.matches) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.removeProperty('overflow');
+    }
     return () => {
-      document.body.style.overflow = '';
+      document.body.style.removeProperty('overflow');
     };
   }, [mobileOpen]);
 
@@ -38,7 +44,7 @@ const Navbar = () => {
 
   return (
     <div className="container mx-auto mb-0 flex items-center justify-between pb-2 pt-4">
-      <div className="z-[60]">
+      <div className="z-[60] lg:z-auto">
         <Logo />
       </div>
       <div className="z-[60] lg:hidden">
@@ -51,9 +57,11 @@ const Navbar = () => {
         </button>
       </div>
       <div
-        className={`fixed top-0 z-50 flex h-screen w-screen items-center bg-primary-cream transition-all duration-500 ${
-          mobileOpen ? 'left-0' : '-left-full'
-        } lg:static lg:size-auto lg:bg-transparent`}
+        className={`fixed top-0 z-50 flex h-screen w-screen items-center bg-primary-cream transition-[left] duration-500 ${
+          mobileOpen
+            ? 'left-0 pointer-events-auto'
+            : '-left-full pointer-events-none'
+        } lg:static lg:z-auto lg:flex lg:h-auto lg:w-auto lg:bg-transparent lg:pointer-events-auto`}
       >
         <ul className="flex w-full flex-col items-center gap-6 lg:flex-row lg:items-center lg:gap-8">
           {navLinks.map((navItem) => (
