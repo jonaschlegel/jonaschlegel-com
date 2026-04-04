@@ -185,7 +185,7 @@ export default function ServicesContent() {
         <div className="relative aspect-square w-32 shrink-0 overflow-hidden rounded-full md:w-40">
           <Image
             src={jonaScicommImage}
-            alt="Jona creating science communication illustrations"
+            alt="Jona working on digital illustrations at the desk"
             fill
             className="object-cover"
             sizes="160px"

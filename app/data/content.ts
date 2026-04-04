@@ -7,28 +7,43 @@ import {
 } from 'react-icons/bs';
 import profile01 from '../images/clients/profile01.jpg';
 import profile02 from '../images/clients/profile02.jpg';
-import jonaAcropolis from '../images/jona-images/jona-acropolis-greece.jpg';
-import jonaConference from '../images/jona-images/jona-conference-presentation.jpg';
-import jonaDeskMaps from '../images/jona-images/jona-desk-maps.jpg';
-import jonaDeskWorking from '../images/jona-images/jona-desk-working.jpg';
+import jonaDoodle from '../images/jona-images/jona-doodle-working-terms.jpg';
+import jonaWatercolor from '../images/jona-images/jona-early-watercolor-drawing.jpg';
 import jonaExcavationEarly from '../images/jona-images/jona-excavation-early.webp';
 import jonaAbout from '../images/jona-images/jona-excavation-trowel.jpg';
 import jonaBanner from '../images/jona-images/jona-fieldwork-forschungsfest.jpg';
 import jonaGeophysics from '../images/jona-images/jona-geophysics-fieldwork.jpg';
-import jonaInterview from '../images/jona-images/jona-interview-scanner.jpg';
 import jonaLaptop from '../images/jona-images/jona-laptop-working.jpg';
-import jonaPaleontology from '../images/jona-images/jona-paleontology-archaeology.jpeg';
-import jonaRecording from '../images/jona-images/jona-recording-studio.jpg';
-import jonaScicomm from '../images/jona-images/jona-scicomm-illustration.jpg';
+import jonaSpectrometry from '../images/jona-images/jona-measure-spectrometry.jpeg';
+import jonaAcropolis from '../images/jona-images/jona-museum-visit_acropolis-greece.jpg';
+import jonaLeiden from '../images/jona-images/jona-museum-visit_leiden-wereldmuseum.jpg';
+import jonaConference from '../images/jona-images/jona-oulu_conference-presentation.jpg';
+import jonaInterview from '../images/jona-images/jona-prospection-scanner.jpg';
+import jonaMotorised from '../images/jona-images/jona-prospection_motorised-magnetic.jpg';
+import jonaPaleontology from '../images/jona-images/jona-scicomm_paleontology-archaeology.jpeg';
+import jonaSorting from '../images/jona-images/jona-sorting-artifacts.jpg';
+import jonaGraffiti from '../images/jona-images/jona-spraying-wall-graffiti-legal.jpg';
+import jonaRecording from '../images/jona-images/jona-standing-globe.jpg';
+import jonaScicomm from '../images/jona-images/jona-working_desk-ipad.jpg';
+import jonaDeskMaps from '../images/jona-images/jona-working_desk-maps.jpg';
+import jonaDeskWorking from '../images/jona-images/jona-working_desk-writing.jpg';
 import jona from '../images/jona.webp';
 import typesOfIllustration from '../images/other-illustration/illustration-types-of-archaeological-illustration.jpg';
 import adventuressCover from '../images/projects/adventuress-cover.jpg';
 import archaeoZine from '../images/projects/archaeo-zine.jpg';
+import archaeologyJournaling from '../images/projects/archaeology-journaling.png';
+import archaeologyOfBias from '../images/projects/archaeology-of-bias.png';
+import archeomatch from '../images/projects/archeomatch.png';
+import archink2025 from '../images/projects/archink-2025.png';
+import dhBenelux from '../images/projects/dh-benelux.jpg';
+import dutchLearningPlatform from '../images/projects/dutch-learning-platform.png';
 import exploringArchaeologicalDisciplines from '../images/projects/exploring-archaeological-disciplines.jpg';
 import geophysicalProspection from '../images/projects/geophysical-prospection.webp';
 import necessaryReunions from '../images/projects/necessary-reunions.png';
-import pastrace from '../images/projects/pastrace.jpg';
+import pastforwardhub from '../images/projects/pastforwardhub.png';
+import pastrace from '../images/projects/pastrace-new.png';
 import romanBurial from '../images/projects/roman-burial.jpg';
+import surinameTijdmachine from '../images/projects/suriname-tijdmachine.jpg';
 import trowelJournalBlog from '../images/projects/trowel-journal-blog.jpg';
 import urbanChameleon from '../images/projects/urban-chameleon.jpg';
 import illustrating from '../images/services/archaeological-illustrating.jpg';
@@ -105,149 +120,290 @@ export const projectsData = {
   projectsList: [
     {
       id: '1',
-      name: 'Urban Chameleon',
-      slug: 'urban-chameleon',
-      image: urbanChameleon,
+      name: 'Suriname Tijdmachine',
+      slug: 'suriname-tijdmachine',
+      image: surinameTijdmachine,
       description:
-        "Interactive platform for exploring and analysing graffiti as cultural heritage along Vienna's Danube Canal.",
-      services: ['web development & design for archaeology'],
-      isFeatured: true,
-      year: '2023',
-      location: 'Vienna, Austria',
-      institution:
-        'Ludwig Boltzmann Institute for Archaeological Prospection and Virtual Archaeology',
-      role: 'Wireframing, Mockup, Prototyping, Web Development',
-      duration: '2 months intensive work',
-      tools: [
-        'Next.js 13+',
-        'React',
-        'SCSS',
-        'TypeScript',
-        'Figma',
-        'Miro',
-        'OpenAtlas',
-        'Resium/CesiumJS',
-      ],
-      objective:
-        'Create an interactive platform for exploring and analysing graffiti in spatial and temporal context, preserving graffiti as cultural heritage.',
-      targetGroup: [
-        'Researchers needing efficient graffiti metadata queries',
-        'Graffitists wanting their work represented and preserved',
-        'General public exploring graffiti along the Danube Canal',
-      ],
-      challenges: [
-        'Graffiti are inherently transient, requiring dynamic temporal display',
-        'Managing and visualising large datasets with high-resolution 3D surface models in real-time',
-      ],
-      outcome:
-        'Public-facing digital platform for Project INDIGO documenting 13km of continuous graffiti along the Danube Canal.',
-      impact: [
-        'First interactive platform mapping graffiti as cultural heritage along the Danube Canal',
-        'Used by researchers at the Ludwig Boltzmann Institute for ongoing graffiti documentation',
-      ],
-    },
-    {
-      id: '2',
-      name: 'Trowel Journal Blog',
-      slug: 'trowel-journal-blog',
-      image: trowelJournalBlog,
-      description:
-        'Personal blog sharing ideas on archaeology, illustration, and scientific communication.',
+        'Digital platform bringing scattered historical Surinamese sources together on interactive maps of Paramaribo and plantations.',
       services: [
         'web development & design for archaeology',
         'archaeological research & communication',
       ],
-      isFeatured: true,
-      year: '2023 - present',
-      role: 'Content creation, Web development, Design',
-      duration: 'Ongoing, weekly publication since October 2023',
-      tools: ['Next.js', 'Markdown', 'Tailwind CSS'],
+      isFeatured: false,
+      year: '2025 - 2026',
+      location: 'Netherlands / Suriname',
+      institution: 'Huygens Institute (KNAW) / Stichting Pica',
+      role: 'Web Developer, Interface Design',
+      duration: '2025–2026, with possible extension',
+      tools: [
+        'Next.js',
+        'TypeScript',
+        'Leaflet',
+        'Linked Open Data',
+        'IIIF',
+        'AnnoRepo',
+      ],
       objective:
-        'Share practical techniques, digital tools, and personal reflections on archaeology, illustration, and science communication.',
+        "Build a central digital platform integrating multiple historical databases from Suriname's past onto interactive maps, making dispersed archival sources searchable in one place.",
       targetGroup: [
-        'Archaeologists seeking accessible content on techniques and digital tools',
-        'Illustrators looking for tips on scientific and archaeological illustration',
-        'Science communicators needing approachable methods for complex topics',
+        'Researchers and genealogists studying Surinamese history',
+        'Heritage institutions such as Rijksmuseum and Nationaal Archief',
+        'Citizen scientists and community members exploring family histories',
       ],
       challenges: [
-        'Balancing professionalism with personal expression across audiences',
-        'Maintaining consistent weekly publishing schedule alongside other work',
-        'Keeping Markdown-based content structure scalable as volume grows',
+        'Integrating data from multiple institutions with different formats and standards',
+        'Presenting sensitive colonial and slavery-related history with appropriate context',
       ],
       outcome:
-        'International readership, referenced in academic publications and university course materials.',
+        'Launched platform with interactive maps, linked data infrastructure, and case studies on colonial Suriname history. Integrates Burgerlijke Stand, Wijkregister, Slavenregister, and Emancipatieregister.',
       impact: [
-        'Referenced in university course materials internationally',
-        'Weekly publication since October 2023 with growing international readership',
+        'Connected to UNESCO Memory of the World-registered slave registers',
+        'Cross-institutional collaboration between Dutch and Surinamese heritage organisations',
+        'Citizen science integration enabling community-driven historical research',
       ],
+      externalUrl: 'https://surinametijdmachine.org/',
+    },
+    {
+      id: '2',
+      name: 'PastForwardHub',
+      slug: 'pastforwardhub',
+      image: pastforwardhub,
+      description:
+        'Global career platform connecting archaeologists with jobs, colleagues, and resources across academic, commercial, and public sectors.',
+      services: ['web development & design for archaeology'],
+      isFeatured: false,
+      year: '2025 - present',
+      location: 'Amsterdam & Vienna',
+      institution: 'PastForwardHub',
+      role: 'Co-founder, Design & Web Development',
+      tools: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Figma'],
+      objective:
+        'Build a sustainable career platform for archaeologists offering a directory, job board, resources, and community features to address systemic job insecurity in the field.',
+      targetGroup: [
+        'Archaeological professionals seeking stable career paths',
+        'Students and early-career researchers exploring opportunities',
+        'Institutions and organisations looking to hire archaeologists',
+      ],
+      challenges: [
+        'Building a platform that addresses systemic career challenges rather than offering short-term fixes',
+        'Coordinating co-founder responsibilities across design, development, marketing, and fundraising',
+      ],
+      outcome:
+        'Live platform with directory, job board, resources, and community features. Endorsed by EAA/ECA, ANA, and Direcția Patrimoniu Digital. Kickstarter campaign with 29 backers.',
+      impact: [
+        'Endorsed by key archaeological organisations across Europe',
+        'Kickstarter-backed with growing community of supporting archaeologists',
+        'First dedicated global career platform for the archaeology sector',
+      ],
+      externalUrl: 'https://pastforwardhub.com/',
     },
     {
       id: '3',
-      name: 'archaeo Zine',
-      slug: 'archaeo-zine',
-      image: archaeoZine,
+      name: 'Necessary Reunions',
+      slug: 'necessary-reunions',
+      image: necessaryReunions,
       description:
-        'Illustrated zines translating peer-reviewed research into accessible formats for public audiences.',
+        'Digital research platform remarrying 17th-century VOC maps with textual archives to reconceptualise histories of early modern Kerala.',
       services: [
-        'scientific & archaeological illustration',
+        'web development & design for archaeology',
         'archaeological research & communication',
       ],
-      isFeatured: true,
-      year: 'Ongoing',
-      role: 'Illustration, Design, Content development',
-      tools: ['Procreate', 'Digital printing', 'Photography'],
+      isFeatured: false,
+      year: '2025',
+      location: 'Netherlands / Kerala, India',
+      institution: 'Huygens Institute / University of Amsterdam',
+      role: 'Researcher, Interface Design and User Experience',
+      duration: 'March - December 2025',
+      tools: [
+        'Next.js',
+        'React',
+        'IIIF',
+        'Computer vision (MapReader, Meta AI Segment Everything)',
+        'HTR (Loghi toolkit)',
+        'Georeferencing',
+        'AnnoRepo',
+      ],
       objective:
-        'Democratize archaeological knowledge by transforming complex research into accessible, engaging zine formats.',
+        'Reconnect Dutch East India Company (VOC) maps with textual archives, annotate 30 Kerala maps from the Leupe collection, and create a comprehensive gazetteer linking historical and modern place names.',
       targetGroup: [
-        'Museum visitors and educators',
-        'Teachers and students in schools',
-        'Conference attendees and field archaeology audiences',
+        'Historians and humanities researchers studying colonial-era South Asia',
+        'Cultural heritage professionals and archival specialists',
+        'Researchers working with the GLOBALISE project and colonial-era archives',
       ],
       challenges: [
-        'Translating complex academic research into visually engaging short formats',
-        'Balancing scientific accuracy with accessibility for non-specialist audiences',
+        'Integrating historical handwriting recognition with cartographic analysis across 30 maps',
+        'Building interfaces for complex archival research spanning multiple institutions and countries',
       ],
       outcome:
-        'Zines on post-excavation processing, medieval cooking, and community archaeology, distributed at museums, schools, and conferences.',
+        're:Charted viewer for 30 annotated and georeferenced VOC maps, GAVOC historical thesaurus with LOD URIs, and a searchable gazetteer of Kerala place names. NWO XS funded. Published on Zenodo.',
+      impact: [
+        'NWO XS grant-funded research project at the Huygens Institute',
+        'Platform, datasets, and code published on Zenodo and GitHub for open access',
+        'Connects 30 historical VOC maps with textual archives, feeding into the larger GLOBALISE project',
+      ],
+      externalUrl: 'https://necessaryreunions.org/',
     },
     {
       id: '4',
-      name: 'Exploring Archaeological Disciplines',
-      slug: 'exploring-archaeological-disciplines',
-      image: exploringArchaeologicalDisciplines,
+      name: 'DH BeNeLux',
+      slug: 'dh-benelux',
+      image: dhBenelux,
       description:
-        'Comic-style illustration series revealing the interdisciplinary nature of archaeology.',
-      services: [
-        'scientific & archaeological illustration',
-        'archaeological research & communication',
-      ],
-      isFeatured: true,
-      year: 'Ongoing',
-      role: 'Illustration, Research, Science communication',
-      tools: ['Procreate'],
+        'Redesigned website for the Digital Humanities BeNeLux community with interactive conference maps and journal integration.',
+      services: ['web development & design for archaeology'],
+      isFeatured: false,
+      year: '2025',
+      role: 'Design, Development',
+      tools: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Leaflet'],
       objective:
-        'Challenge stereotypes about archaeology and make career paths visible through engaging comic-style illustrations.',
+        'Redesign the DH BeNeLux website as a hub for the digital humanities community in Belgium, Netherlands, and Luxembourg, with interactive conference maps, journal browsing, and news.',
       targetGroup: [
-        'Established archaeologists and students',
-        'Parents with children interested in history',
-        'Science communicators seeking accessible visual formats',
-      ],
-      challenges: [
-        'Depicting specialisms accurately whilst keeping visuals approachable',
-        'Optimising illustrations for social media without losing scientific detail',
+        'Digital humanities researchers in the BeNeLux region',
+        'Conference organisers and attendees',
+        'Journal authors and readers',
       ],
       outcome:
-        'Series covering archaeobotany, forensic archaeology, kurgan archaeology, and Jomon archaeology, used for university outreach and social media.',
+        'Redesigned community hub with conference history on interactive maps, journal volume browsing, news section, and search functionality for the DH BeNeLux network.',
+      externalUrl: 'https://dhbenelux.vercel.app/',
     },
     {
       id: '5',
+      name: 'archInk 2025 — Stratigraphic Profile',
+      slug: 'archink-2025',
+      image: archink2025,
+      description:
+        'Interactive educational tool visualising archaeological stratigraphy with illustrated layers from bedrock to modern surface.',
+      services: [
+        'web development & design for archaeology',
+        'scientific & archaeological illustration',
+      ],
+      isFeatured: false,
+      year: '2025',
+      role: 'Illustration, Concept, Development',
+      tools: ['Next.js', 'TypeScript', 'Procreate'],
+      objective:
+        'Create an interactive visualisation of archaeological stratigraphy, illustrating 7 excavation layers from present day to natural bedrock with period-specific artifacts and soil descriptions.',
+      targetGroup: [
+        'Archaeology students learning stratigraphic principles',
+        'Educators teaching excavation methods',
+        'Public audiences curious about how archaeological excavation works',
+      ],
+      outcome:
+        'Interactive web tool showing 7 illustrated layers (A-Horizon to bedrock) spanning from present day to millions of years ago, each with detailed soil descriptions, period context, and artifact examples.',
+      externalUrl: 'https://arch-ink-transformation.vercel.app/',
+    },
+    {
+      id: '6',
+      name: 'ArcheoMatch',
+      slug: 'archeomatch',
+      image: archeomatch,
+      description:
+        'Tinder-style web app helping students discover archaeological disciplines matched to their personality and interests.',
+      services: ['web development & design for archaeology'],
+      isFeatured: false,
+      year: '2025 (in development)',
+      role: 'Concept, Design, Development',
+      tools: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+      objective:
+        'Help students and curious people discover their ideal archaeological discipline through a gamified personality quiz and swipe-based exploration of 47 disciplines.',
+      targetGroup: [
+        'Prospective archaeology students choosing a specialisation',
+        'Career explorers curious about archaeology',
+        'Educators looking for engaging outreach tools',
+      ],
+      challenges: [
+        'Designing a matching algorithm that balances personality science with archaeological discipline characteristics',
+        'Keeping 47 discipline profiles accurate, engaging, and visually distinct',
+      ],
+      outcome:
+        'Web application with personality quiz, swipe-based discipline exploration, compatibility scores, and university/career path recommendations covering 47 archaeological disciplines.',
+      externalUrl: 'https://v0-archaeology-discipline-tinder.vercel.app/',
+    },
+    {
+      id: '7',
+      name: 'The Archaeology of Bias',
+      slug: 'archaeology-of-bias',
+      image: archaeologyOfBias,
+      description:
+        'Educational platform exploring hidden biases in archaeological research through interactive flip cards and critical analysis.',
+      services: [
+        'web development & design for archaeology',
+        'archaeological research & communication',
+      ],
+      isFeatured: false,
+      year: '2025 (in progress)',
+      role: 'Concept, Research, Design, Development',
+      tools: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+      objective:
+        'Present and explain common biases in archaeology — sampling, survivorship, confirmation, presentism, cultural, and funding bias — through an interactive, educational web experience.',
+      targetGroup: [
+        'Archaeology students developing critical thinking skills',
+        'Researchers reflecting on methodological assumptions',
+        'Public audiences interested in how we interpret the past',
+      ],
+      challenges: [
+        'Presenting complex epistemological concepts in an accessible, engaging format',
+        'Balancing academic rigour with visual interactivity',
+      ],
+      outcome:
+        'Interactive web platform with flip-card explorations of 6 major archaeological biases, each with examples, illustrations, and links to further reading.',
+      externalUrl: 'https://v0-the-archaeology-of-bias.vercel.app/',
+    },
+    {
+      id: '8',
+      name: 'Archaeology Journaling',
+      slug: 'archaeology-journaling',
+      image: archaeologyJournaling,
+      description:
+        'Daily artifact drawing practice platform using open-access museum collections from The Met, Rijksmuseum, Smithsonian, and more.',
+      services: ['web development & design for archaeology'],
+      isFeatured: false,
+      year: '2025',
+      role: 'Concept, Design, Development',
+      tools: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+      objective:
+        'Combine archaeology journaling with daily drawing practices, letting users explore artifacts from major museum collections and build a personal sketchbook journal with progress tracking.',
+      targetGroup: [
+        'Archaeology students practising observational drawing',
+        'Illustrators looking for daily drawing challenges',
+        'Museum enthusiasts and drawing practice communities',
+      ],
+      outcome:
+        'Drawing practice platform integrating open-access collections from The Met, Cleveland Museum of Art, Rijksmuseum, Smithsonian, Harvard Art Museums, Sketchfab, and Europeana with daily challenges, streak tracking, and a personal sketchbook.',
+      externalUrl: 'https://v0-archaeology-journaling-website.vercel.app/',
+    },
+    {
+      id: '9',
+      name: 'Dutch Learning Platform',
+      slug: 'dutch-learning-platform',
+      image: dutchLearningPlatform,
+      description:
+        'Interactive web app for learning Dutch vocabulary, articles, verb tenses, and grammar through exercises and tests.',
+      services: ['web development & design for archaeology'],
+      isFeatured: false,
+      year: '2025',
+      role: 'Design, Development',
+      tools: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+      objective:
+        'Create an interactive learning tool for Dutch language learners covering vocabulary, articles (de/het), verb tenses, modal verbs, conjunctions, and test preparation.',
+      targetGroup: [
+        'Dutch language learners at A1/A2 level',
+        'Integration course students preparing for exams',
+        'Expats learning Dutch for daily life',
+      ],
+      outcome:
+        'Fully functional learning platform with vocabulary drills, article exercises, perfect tense and imperfectum practice, modal verbs, conjunctions, and comprehensive final tests.',
+      externalUrl: 'https://dutch-learning-platform.vercel.app/',
+    },
+    {
+      id: '10',
       name: 'Roman Burial Reconstruction',
       slug: 'roman-burial',
       image: romanBurial,
       description:
         'Scientific illustration of the first genetically documented mother-daughter burial from Roman Austria.',
       services: ['scientific & archaeological illustration'],
-      isFeatured: true,
+      isFeatured: false,
       year: '2024',
       location: 'Ovilava (Wels), Austria',
       institution: 'Journal of Archaeological Science: Reports',
@@ -276,14 +432,14 @@ export const projectsData = {
       ],
     },
     {
-      id: '6',
+      id: '11',
       name: 'Adventuress Journal Cover',
       slug: 'adventuress-cover',
       image: adventuressCover,
       description:
         'Cover design concept celebrating women in archaeology across past, present, and future.',
       services: ['scientific & archaeological illustration'],
-      isFeatured: true,
+      isFeatured: false,
       year: '2024',
       role: 'Illustration, Concept development',
       duration: '1 week',
@@ -299,57 +455,66 @@ export const projectsData = {
         'Cover design concept featuring past, present, and future archaeologists with era-appropriate tools and methodologies.',
     },
     {
-      id: '7',
-      name: 'Necessary Reunions',
-      slug: 'necessary-reunions',
-      image: necessaryReunions,
+      id: '12',
+      name: 'PasTrace',
+      slug: 'pastrace',
+      image: pastrace,
       description:
-        'Digital research platform reconnecting 17th-century VOC maps with archival sources for early modern Kerala.',
-      services: [
-        'web development & design for archaeology',
-        'archaeological research & communication',
-      ],
-      isFeatured: true,
-      year: '2025',
-      location: 'Netherlands / Kerala, India',
-      institution: 'Huygens Institute / University of Amsterdam',
-      role: 'Researcher, Interface Design and User Experience',
-      duration: 'March - December 2025',
-      tools: [
-        'IIIF',
-        'Computer vision',
-        'HTR (Loghi toolkit)',
-        'Georeferencing',
-        'Web development',
-      ],
+        'Brand identity for a German photogrammetry company specialising in 3D heritage documentation.',
+      services: ['scientific & archaeological illustration'],
+      isFeatured: false,
+      year: '2023',
+      institution: 'PasTrace (client)',
+      role: 'Logo design, Brand identity development',
+      tools: ['Procreate', 'Vector design'],
       objective:
-        'Reconnect Dutch East India Company (VOC) maps with textual archives and create a comprehensive gazetteer of place information for early modern Kerala.',
+        'Create a visual identity communicating technical precision and cultural respect for a heritage technology company.',
       targetGroup: [
-        'Historians and humanities researchers',
-        'Cultural heritage professionals and archival specialists',
-        'Researchers working with colonial-era archives',
-      ],
-      challenges: [
-        'Integrating historical handwriting recognition with cartographic analysis',
-        'Building interfaces for complex archival research across multiple institutions',
+        'Museums and heritage institutions',
+        'Researchers using 3D documentation',
+        'Digital heritage professionals',
       ],
       outcome:
-        're:Charted web platform with computer vision analysis, handwritten text recognition, and georeferencing. NWO XS funded. Published on Zenodo.',
-      impact: [
-        'NWO XS grant-funded research project',
-        'Platform and datasets published on Zenodo for open access',
-        'Connects 30 historical VOC maps with textual archives for Kerala research',
-      ],
+        'Complete brand identity including logo symbol, wordmark, colour palette, tagline, and application guidelines.',
     },
     {
-      id: '8',
+      id: '13',
+      name: 'Exploring Archaeological Disciplines',
+      slug: 'exploring-archaeological-disciplines',
+      image: exploringArchaeologicalDisciplines,
+      description:
+        'Comic-style illustration series revealing the interdisciplinary nature of archaeology.',
+      services: [
+        'scientific & archaeological illustration',
+        'archaeological research & communication',
+      ],
+      isFeatured: false,
+      year: 'Ongoing',
+      role: 'Illustration, Research, Science communication',
+      tools: ['Procreate'],
+      objective:
+        'Challenge stereotypes about archaeology and make career paths visible through engaging comic-style illustrations.',
+      targetGroup: [
+        'Established archaeologists and students',
+        'Parents with children interested in history',
+        'Science communicators seeking accessible visual formats',
+      ],
+      challenges: [
+        'Depicting specialisms accurately whilst keeping visuals approachable',
+        'Optimising illustrations for social media without losing scientific detail',
+      ],
+      outcome:
+        'Series covering archaeobotany, forensic archaeology, kurgan archaeology, and Jomon archaeology, used for university outreach and social media.',
+    },
+    {
+      id: '14',
       name: 'Mustair UNESCO Heritage Site Survey',
       slug: 'geophysical-prospection-study',
       image: geophysicalProspection,
       description:
         'Non-invasive geophysical investigation revealing hidden monastic landscapes at the UNESCO World Heritage Site.',
       services: ['archaeological research & communication'],
-      isFeatured: true,
+      isFeatured: false,
       year: '2021 - 2022',
       location: 'Mustair, Switzerland',
       institution:
@@ -387,27 +552,114 @@ export const projectsData = {
       ],
     },
     {
-      id: '9',
-      name: 'PasTrace',
-      slug: 'pastrace',
-      image: pastrace,
+      id: '15',
+      name: 'Urban Chameleon',
+      slug: 'urban-chameleon',
+      image: urbanChameleon,
       description:
-        'Brand identity for a German photogrammetry company specialising in 3D heritage documentation.',
-      services: ['scientific & archaeological illustration'],
-      isFeatured: true,
+        "Interactive platform for exploring and analysing graffiti as cultural heritage along Vienna's Danube Canal.",
+      services: ['web development & design for archaeology'],
+      isFeatured: false,
+      hidden: true,
       year: '2023',
-      institution: 'PasTrace (client)',
-      role: 'Logo design, Brand identity development',
-      tools: ['Procreate', 'Vector design'],
+      location: 'Vienna, Austria',
+      institution:
+        'Ludwig Boltzmann Institute for Archaeological Prospection and Virtual Archaeology',
+      role: 'Wireframing, Mockup, Prototyping, Web Development',
+      duration: '2 months intensive work',
+      tools: [
+        'Next.js 13+',
+        'React',
+        'SCSS',
+        'TypeScript',
+        'Figma',
+        'Miro',
+        'OpenAtlas',
+        'Resium/CesiumJS',
+      ],
       objective:
-        'Create a visual identity communicating technical precision and cultural respect for a heritage technology company.',
+        'Create an interactive platform for exploring and analysing graffiti in spatial and temporal context, preserving graffiti as cultural heritage.',
       targetGroup: [
-        'Museums and heritage institutions',
-        'Researchers using 3D documentation',
-        'Digital heritage professionals',
+        'Researchers needing efficient graffiti metadata queries',
+        'Graffitists wanting their work represented and preserved',
+        'General public exploring graffiti along the Danube Canal',
+      ],
+      challenges: [
+        'Graffiti are inherently transient, requiring dynamic temporal display',
+        'Managing and visualising large datasets with high-resolution 3D surface models in real-time',
       ],
       outcome:
-        'Complete brand identity including logo symbol, wordmark, colour palette, tagline, and application guidelines.',
+        'Public-facing digital platform for Project INDIGO documenting 13km of continuous graffiti along the Danube Canal.',
+      impact: [
+        'First interactive platform mapping graffiti as cultural heritage along the Danube Canal',
+        'Used by researchers at the Ludwig Boltzmann Institute for ongoing graffiti documentation',
+      ],
+    },
+    {
+      id: '16',
+      name: 'Trowel Journal Blog',
+      slug: 'trowel-journal-blog',
+      image: trowelJournalBlog,
+      description:
+        'Personal blog sharing ideas on archaeology, illustration, and scientific communication.',
+      services: [
+        'web development & design for archaeology',
+        'archaeological research & communication',
+      ],
+      isFeatured: false,
+      hidden: true,
+      year: '2023 - present',
+      role: 'Content creation, Web development, Design',
+      duration: 'Ongoing, weekly publication since October 2023',
+      tools: ['Next.js', 'Markdown', 'Tailwind CSS'],
+      objective:
+        'Share practical techniques, digital tools, and personal reflections on archaeology, illustration, and science communication.',
+      targetGroup: [
+        'Archaeologists seeking accessible content on techniques and digital tools',
+        'Illustrators looking for tips on scientific and archaeological illustration',
+        'Science communicators needing approachable methods for complex topics',
+      ],
+      challenges: [
+        'Balancing professionalism with personal expression across audiences',
+        'Maintaining consistent weekly publishing schedule alongside other work',
+        'Keeping Markdown-based content structure scalable as volume grows',
+      ],
+      outcome:
+        'International readership, referenced in academic publications and university course materials.',
+      impact: [
+        'Referenced in university course materials internationally',
+        'Weekly publication since October 2023 with growing international readership',
+      ],
+    },
+    {
+      id: '17',
+      name: 'archaeo Zine',
+      slug: 'archaeo-zine',
+      image: archaeoZine,
+      description:
+        'Illustrated zines translating peer-reviewed research into accessible formats for public audiences.',
+      services: [
+        'scientific & archaeological illustration',
+        'archaeological research & communication',
+      ],
+      isFeatured: false,
+      hidden: true,
+      year: 'Ongoing',
+      role: 'Illustration, Design, Content development',
+      tools: ['Procreate', 'Digital printing', 'Photography'],
+      objective:
+        'Democratize archaeological knowledge by transforming complex research into accessible, engaging zine formats.',
+      targetGroup: [
+        'Museum visitors and educators',
+        'Teachers and students in schools',
+        'Conference attendees and field archaeology audiences',
+      ],
+      challenges: [
+        'Translating complex academic research into visually engaging short formats',
+        'Balancing scientific accuracy with accessibility for non-specialist audiences',
+      ],
+      outcome:
+        'Zines on post-excavation processing, medieval cooking, and community archaeology, distributed at museums, schools, and conferences.',
     },
   ],
 };
@@ -492,10 +744,10 @@ export const statsData: import('../../types/global').StatType[] = [
   { name: 'Years in Archaeological Research', number: '7+' },
   { name: 'Countries Worked In', number: '6' },
   { name: 'Peer-Reviewed Publications', number: '3' },
-  { name: 'Research Platforms Built', number: '4' },
+  { name: 'Research Platforms Built', number: '10+' },
 ];
 
-/** Recent blog posts from Trowel Journal for homepage preview. */
+/** Recent blog posts from archaeoINK for homepage preview. */
 export const blogPostsData = [
   {
     title:
@@ -547,12 +799,12 @@ export const footerdata = {
 export const aboutGalleryImages = [
   {
     src: jonaAcropolis,
-    alt: 'Jona at the Acropolis in Greece during archaeological fieldwork',
-    caption: 'Fieldwork in Greece',
+    alt: 'Jona visiting the Acropolis museum in Greece',
+    caption: 'Museum visit, Greece',
   },
   {
     src: jonaConference,
-    alt: 'Jona presenting research at an academic conference',
+    alt: 'Jona presenting research at a conference in Oulu',
     caption: 'Conference presentation',
   },
   {
@@ -567,23 +819,58 @@ export const aboutGalleryImages = [
   },
   {
     src: jonaRecording,
-    alt: 'Jona in the recording studio for the archaeology podcast',
-    caption: 'Podcast recording',
+    alt: 'Jona standing next to a globe',
+    caption: 'Portrait',
   },
   {
     src: jonaScicomm,
-    alt: 'Jona creating science communication illustrations',
-    caption: 'Science communication',
+    alt: 'Jona working at desk with iPad for digital illustration',
+    caption: 'Digital illustration',
   },
   {
     src: jonaInterview,
-    alt: 'Jona during an interview with a 3D scanner',
-    caption: 'Documentation & interviews',
+    alt: 'Jona using prospection scanner during fieldwork',
+    caption: 'Prospection scanning',
   },
   {
     src: jonaExcavationEarly,
     alt: 'Jona during early excavation fieldwork',
     caption: 'In the field',
+  },
+  {
+    src: jonaSorting,
+    alt: 'Jona sorting archaeological finds in the lab',
+    caption: 'Sorting finds',
+  },
+  {
+    src: jonaWatercolor,
+    alt: 'Early watercolor drawing by Jona',
+    caption: 'Watercolor illustration',
+  },
+  {
+    src: jonaDoodle,
+    alt: 'Jona doodling and sketching archaeological terms',
+    caption: 'Sketching',
+  },
+  {
+    src: jonaSpectrometry,
+    alt: 'Jona measuring artefacts with spectrometry equipment',
+    caption: 'Spectrometry analysis',
+  },
+  {
+    src: jonaLeiden,
+    alt: 'Jona visiting the Wereldmuseum in Leiden',
+    caption: 'Museum visit, Leiden',
+  },
+  {
+    src: jonaMotorised,
+    alt: 'Motorised magnetic prospection survey in the field',
+    caption: 'Magnetic prospection',
+  },
+  {
+    src: jonaGraffiti,
+    alt: 'Jona spraying on a legal graffiti wall',
+    caption: 'Street art',
   },
 ] as const;
 

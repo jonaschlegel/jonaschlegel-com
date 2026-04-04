@@ -10,6 +10,7 @@ type ProjectType = {
   description: string;
   services: string[];
   isFeatured: boolean;
+  hidden?: boolean;
   year: string;
   location?: string;
   institution?: string;
@@ -22,6 +23,7 @@ type ProjectType = {
   outcome: string;
   impact?: string[];
   publications?: { title: string; venue: string; url?: string }[];
+  externalUrl?: string;
 };
 
 type ServiceType = {

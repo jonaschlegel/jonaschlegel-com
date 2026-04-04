@@ -27,6 +27,8 @@ export const metadata: Metadata = generateSEOMetadata({
 
 /** Projects listing page showing all portfolio items with structured data. */
 export default function ProjectsPage() {
+  const visibleProjects = projectsData.projectsList.filter((p) => !p.hidden);
+
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
@@ -36,8 +38,8 @@ export default function ProjectsPage() {
     url: 'https://jonaschlegel.com/projects',
     mainEntity: {
       '@type': 'ItemList',
-      numberOfItems: projectsData.projectsList.length,
-      itemListElement: projectsData.projectsList.map((project, index) => ({
+      numberOfItems: visibleProjects.length,
+      itemListElement: visibleProjects.map((project, index) => ({
         '@type': 'CreativeWork',
         position: index + 1,
         name: project.name,
@@ -66,7 +68,7 @@ export default function ProjectsPage() {
 
       <section className="mb-16">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {projectsData.projectsList.map((project) => (
+          {visibleProjects.map((project) => (
             <Link
               key={`project-${project.id}`}
               href={`/projects/${project.slug}` as any}

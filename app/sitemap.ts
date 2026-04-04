@@ -1,35 +1,12 @@
-import fs from 'node:fs/promises';
-import path from 'node:path';
 import type { MetadataRoute } from 'next';
+import { projectsData } from './data/content';
 
 /** Generates the sitemap.xml entries for all public pages and projects. */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://jonaschlegel.com';
 
-  // Get all project files dynamically
-  const projectsDir = path.join(process.cwd(), 'app/data/projects');
-  let projectFiles: string[] = [];
-
-  try {
-    const files = await fs.readdir(projectsDir);
-    projectFiles = files
-      .filter((file) => file.endsWith('.mdx'))
-      .map((file) => file.replace('.mdx', ''));
-  } catch (error) {
-    console.warn('Could not read projects directory:', error);
-    // Fallback to known projects
-    projectFiles = [
-      'exploring-archaeological-disciplines',
-      'urban-chameleon',
-      'adventuress-cover',
-      'trowel-journal-blog',
-      'archaeo-zine',
-      'roman-burial',
-      'necessary-reunions',
-      'geophysical-prospection-study',
-      'pastrace',
-    ];
-  }
+  // Get visible projects from content data
+  const visibleProjects = projectsData.projectsList.filter((p) => !p.hidden);
 
   const staticRoutes: MetadataRoute.Sitemap = [
     {
@@ -76,12 +53,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  const projectRoutes: MetadataRoute.Sitemap = projectFiles.map((project) => ({
-    url: `${baseUrl}/projects/${project}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.8,
-  }));
+  const projectRoutes: MetadataRoute.Sitemap = visibleProjects.map(
+    (project) => ({
+      url: `${baseUrl}/projects/${project.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    }),
+  );
 
   return [...staticRoutes, ...projectRoutes];
 }

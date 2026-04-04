@@ -266,6 +266,21 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </section>
       )}
 
+      {/* External Link */}
+      {project.externalUrl && (
+        <section className="mb-12 max-w-3xl">
+          <a
+            href={project.externalUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-md bg-primary-green px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-primary-green/90"
+          >
+            Visit Project
+            <span aria-hidden="true">↗</span>
+          </a>
+        </section>
+      )}
+
       {/* Article Structured Data */}
       <script
         type="application/ld+json"
