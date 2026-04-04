@@ -24,6 +24,7 @@ type ProjectType = {
   impact?: string[];
   publications?: { title: string; venue: string; url?: string }[];
   externalUrl?: string;
+  galleryImages?: { src: StaticImageData; caption?: string }[];
 };
 
 type ServiceType = {

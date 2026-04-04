@@ -49,6 +49,11 @@ import urbanChameleon from '../images/projects/urban-chameleon.jpg';
 import illustrating from '../images/services/archaeological-illustrating.jpg';
 import archaeologySciComm from '../images/services/archaeological-sci-comm.jpg';
 import webDevelopment from '../images/services/web-development.jpg';
+import { archink2021Gallery } from './galleries/archink-2021';
+import { archink2022Gallery } from './galleries/archink-2022';
+import { archink2023Gallery } from './galleries/archink-2023';
+import { archink2024Gallery } from './galleries/archink-2024';
+import { archink2025Gallery } from './galleries/archink-2025';
 
 /** Navigation links used in the header and footer. */
 export const navLinks = [
@@ -267,9 +272,63 @@ export const projectsData = {
       externalUrl: 'https://dhbenelux.vercel.app/',
     },
     {
-      id: '5',
-      name: 'archInk 2025 — Stratigraphic Profile',
+      id: 'archink-challenge-2025',
+      name: 'archInk Drawing Challenge 2025',
       slug: 'archink-2025',
+      image: archink2025Gallery[0]!.src,
+      description:
+        'Yearly archaeological drawing challenge combining Inktober with archaeological themes. Each illustration explores archaeological concepts through conceptual visual storytelling.',
+      services: ['scientific & archaeological illustration'],
+      isFeatured: false,
+      year: '2025',
+      role: 'Illustration, Concept',
+      tools: ['Procreate', 'iPad', 'Pen & Ink'],
+      objective:
+        'Create daily ink drawings responding to archaeological prompts during October, using visual metaphors and conceptual illustration to communicate complex archaeological ideas to broad audiences.',
+      targetGroup: [
+        'Archaeological illustration enthusiasts and fellow #archInk participants',
+        'Science communication audiences on social media',
+        'Students and educators exploring archaeology through art',
+      ],
+      outcome:
+        '13 conceptual illustrations exploring archaeological themes through the Inktober drawing challenge format, shared across social media as part of the #archInk community.',
+      impact: [
+        'Contributed to public archaeology outreach through visual science communication',
+        'Engaged with the global Inktober community while maintaining archaeological focus',
+      ],
+      publications: [
+        {
+          title: '#archInk: Inktober and Archaeology',
+          venue: 'archaeoINK Blog',
+          url: 'https://www.archaeoink.com/blog/archInk-Inktober-and-archaeology',
+        },
+        {
+          title:
+            'Switching Gears from archInk to Inktober for Fresh Inspiration',
+          venue: 'archaeoINK Blog',
+          url: 'https://www.archaeoink.com/blog/switching-gears-from-archink-to-inktober',
+        },
+        {
+          title:
+            'How Visual Communication Can Transform Public Archaeology into Engaging Conversations',
+          venue: 'archaeoINK Blog',
+          url: 'https://www.archaeoink.com/blog/public-archaeology',
+        },
+        {
+          title:
+            'The Power of Conceptual Illustrations in Archaeological Communication during Inktober 2024',
+          venue: 'archaeoINK Blog',
+          url: 'https://www.archaeoink.com/blog/conceptual-illustrations-in-inktober',
+        },
+      ],
+      galleryImages: archink2025Gallery,
+      externalUrl:
+        'https://www.archaeoink.com/blog/archInk-Inktober-and-archaeology',
+    },
+    {
+      id: '5',
+      name: 'archInk — Interactive Stratigraphic Profile',
+      slug: 'archink-stratigraphic-profile',
       image: archink2025,
       description:
         'Interactive educational tool visualising archaeological stratigraphy with illustrated layers from bedrock to modern surface.',
@@ -432,6 +491,60 @@ export const projectsData = {
       ],
     },
     {
+      id: 'archink-challenge-2024',
+      name: 'archInk Drawing Challenge 2024',
+      slug: 'archink-2024',
+      image: archink2024Gallery[0]!.src,
+      description:
+        'Conceptual illustrations reinterpreting Inktober 2024 prompts through archaeological lenses — exploring cultural baggage, media sensationalism, empathy in practice, and the future of heritage.',
+      services: ['scientific & archaeological illustration'],
+      isFeatured: false,
+      year: '2024',
+      role: 'Illustration, Concept',
+      tools: ['Procreate', 'iPad', 'Pen & Ink'],
+      objective:
+        'Reinterpret Inktober 2024 prompts through archaeological conceptual illustration, using visual metaphors to critique biases, celebrate fieldwork, and spark dialogue about archaeological communication.',
+      targetGroup: [
+        'Archaeological illustration enthusiasts and Inktober participants',
+        'Science communication audiences on social media',
+        'Students and educators exploring archaeology through art',
+      ],
+      outcome:
+        '28 conceptual illustrations addressing themes like cultural baggage, media representation, empathy in archaeology, and the future of heritage — shared as part of the Inktober 2024 challenge.',
+      impact: [
+        'Bridged archaeology and the global Inktober art community for wider public engagement',
+        'Published accompanying blog post analysing the power of conceptual illustration in archaeological communication',
+      ],
+      publications: [
+        {
+          title: '#archInk: Inktober and Archaeology',
+          venue: 'archaeoINK Blog',
+          url: 'https://www.archaeoink.com/blog/archInk-Inktober-and-archaeology',
+        },
+        {
+          title:
+            'Switching Gears from archInk to Inktober for Fresh Inspiration',
+          venue: 'archaeoINK Blog',
+          url: 'https://www.archaeoink.com/blog/switching-gears-from-archink-to-inktober',
+        },
+        {
+          title:
+            'How Visual Communication Can Transform Public Archaeology into Engaging Conversations',
+          venue: 'archaeoINK Blog',
+          url: 'https://www.archaeoink.com/blog/public-archaeology',
+        },
+        {
+          title:
+            'The Power of Conceptual Illustrations in Archaeological Communication during Inktober 2024',
+          venue: 'archaeoINK Blog',
+          url: 'https://www.archaeoink.com/blog/conceptual-illustrations-in-inktober',
+        },
+      ],
+      galleryImages: archink2024Gallery,
+      externalUrl:
+        'https://www.archaeoink.com/blog/conceptual-illustrations-in-inktober',
+    },
+    {
       id: '11',
       name: 'Adventuress Journal Cover',
       slug: 'adventuress-cover',
@@ -477,6 +590,61 @@ export const projectsData = {
       outcome:
         'Complete brand identity including logo symbol, wordmark, colour palette, tagline, and application guidelines.',
     },
+
+    {
+      id: 'archink-challenge-2023',
+      name: 'archInk Drawing Challenge 2023',
+      slug: 'archink-2023',
+      image: archink2023Gallery[0]!.src,
+      description:
+        'Archaeological ink drawings created for the #archInk challenge in October 2023, exploring prompts from acoustics and craft to solidarity and revolution through an archaeological lens.',
+      services: ['scientific & archaeological illustration'],
+      isFeatured: false,
+      year: '2023',
+      role: 'Illustration, Concept',
+      tools: ['Procreate', 'iPad', 'Pen & Ink'],
+      objective:
+        'Respond to daily #archInk drawing prompts during October 2023, combining artistic skill development with archaeological science communication on social media.',
+      targetGroup: [
+        'Archaeological illustration community and #archInk participants',
+        'Science communication audiences on social media',
+        'Students exploring archaeology through creative expression',
+      ],
+      outcome:
+        '19 ink drawings interpreting archaeological themes through the #archInk prompt list, shared on social media to engage the archaeology and art communities.',
+      impact: [
+        'Sustained the #archInk community through continued annual participation',
+        'Explored new digital illustration techniques while maintaining archaeological accuracy',
+      ],
+      publications: [
+        {
+          title: '#archInk: Inktober and Archaeology',
+          venue: 'archaeoINK Blog',
+          url: 'https://www.archaeoink.com/blog/archInk-Inktober-and-archaeology',
+        },
+        {
+          title:
+            'Switching Gears from archInk to Inktober for Fresh Inspiration',
+          venue: 'archaeoINK Blog',
+          url: 'https://www.archaeoink.com/blog/switching-gears-from-archink-to-inktober',
+        },
+        {
+          title:
+            'How Visual Communication Can Transform Public Archaeology into Engaging Conversations',
+          venue: 'archaeoINK Blog',
+          url: 'https://www.archaeoink.com/blog/public-archaeology',
+        },
+        {
+          title:
+            'The Power of Conceptual Illustrations in Archaeological Communication during Inktober 2024',
+          venue: 'archaeoINK Blog',
+          url: 'https://www.archaeoink.com/blog/conceptual-illustrations-in-inktober',
+        },
+      ],
+      galleryImages: archink2023Gallery,
+      externalUrl:
+        'https://www.archaeoink.com/blog/archInk-Inktober-and-archaeology',
+    },
     {
       id: '13',
       name: 'Exploring Archaeological Disciplines',
@@ -505,6 +673,61 @@ export const projectsData = {
       ],
       outcome:
         'Series covering archaeobotany, forensic archaeology, kurgan archaeology, and Jomon archaeology, used for university outreach and social media.',
+    },
+
+    {
+      id: 'archink-challenge-2022',
+      name: 'archInk Drawing Challenge 2022',
+      slug: 'archink-2022',
+      image: archink2022Gallery[0]!.src,
+      description:
+        'Archaeological ink drawings for the #archInk 2022 challenge, responding to prompts like bone, classify, exchange, and posthole with a blend of digital and traditional techniques.',
+      services: ['scientific & archaeological illustration'],
+      isFeatured: false,
+      year: '2022',
+      role: 'Illustration, Concept',
+      tools: ['Procreate', 'iPad', 'Pen & Ink'],
+      objective:
+        'Create daily archaeological illustrations in response to the #archInk prompt list, advancing digital drawing skills while communicating archaeological concepts visually.',
+      targetGroup: [
+        'Archaeological illustration community and #archInk participants',
+        'Science communication audiences on Twitter/X and Instagram',
+        'Students and professionals interested in archaeological visual communication',
+      ],
+      outcome:
+        '22 ink drawings exploring archaeological themes such as bones, buildings, fragility, and objectivity through the lens of the #archInk drawing challenge.',
+      impact: [
+        'Contributed to growing the #archInk hashtag community on social media',
+        'Combined traditional ink techniques with digital illustration on iPad',
+      ],
+      publications: [
+        {
+          title: '#archInk: Inktober and Archaeology',
+          venue: 'archaeoINK Blog',
+          url: 'https://www.archaeoink.com/blog/archInk-Inktober-and-archaeology',
+        },
+        {
+          title:
+            'Switching Gears from archInk to Inktober for Fresh Inspiration',
+          venue: 'archaeoINK Blog',
+          url: 'https://www.archaeoink.com/blog/switching-gears-from-archink-to-inktober',
+        },
+        {
+          title:
+            'How Visual Communication Can Transform Public Archaeology into Engaging Conversations',
+          venue: 'archaeoINK Blog',
+          url: 'https://www.archaeoink.com/blog/public-archaeology',
+        },
+        {
+          title:
+            'The Power of Conceptual Illustrations in Archaeological Communication during Inktober 2024',
+          venue: 'archaeoINK Blog',
+          url: 'https://www.archaeoink.com/blog/conceptual-illustrations-in-inktober',
+        },
+      ],
+      galleryImages: archink2022Gallery,
+      externalUrl:
+        'https://www.archaeoink.com/blog/archInk-Inktober-and-archaeology',
     },
     {
       id: '14',
@@ -550,6 +773,60 @@ export const projectsData = {
           venue: 'Remote Sensing (MDPI)',
         },
       ],
+    },
+    {
+      id: 'archink-challenge-2021',
+      name: 'archInk Drawing Challenge 2021',
+      slug: 'archink-2021',
+      image: archink2021Gallery[0]!.src,
+      description:
+        'First digital #archInk challenge — archaeological ink drawings on iPad responding to prompts inspired by archaeological book titles and concepts, from "In Small Things Forgotten" to "Uncommon Ground".',
+      services: ['scientific & archaeological illustration'],
+      isFeatured: false,
+      year: '2021',
+      role: 'Illustration, Concept',
+      tools: ['Procreate', 'iPad'],
+      objective:
+        'Participate in the #archInk drawing challenge for the second time, transitioning from traditional pen and paper to digital illustration on iPad while exploring archaeological themes.',
+      targetGroup: [
+        'Archaeological illustration community and #archInk participants',
+        'Science communication audiences on Twitter/X',
+        'Fellow archaeologists exploring creative expression',
+      ],
+      outcome:
+        '19 digital ink drawings exploring concepts from archaeological literature and practice, marking the transition from traditional to digital illustration techniques.',
+      impact: [
+        'Shifted from traditional to digital archaeological illustration, opening new creative possibilities',
+        'Engaged with the #archInk community during peak participation years',
+      ],
+      publications: [
+        {
+          title: '#archInk: Inktober and Archaeology',
+          venue: 'archaeoINK Blog',
+          url: 'https://www.archaeoink.com/blog/archInk-Inktober-and-archaeology',
+        },
+        {
+          title:
+            'Switching Gears from archInk to Inktober for Fresh Inspiration',
+          venue: 'archaeoINK Blog',
+          url: 'https://www.archaeoink.com/blog/switching-gears-from-archink-to-inktober',
+        },
+        {
+          title:
+            'How Visual Communication Can Transform Public Archaeology into Engaging Conversations',
+          venue: 'archaeoINK Blog',
+          url: 'https://www.archaeoink.com/blog/public-archaeology',
+        },
+        {
+          title:
+            'The Power of Conceptual Illustrations in Archaeological Communication during Inktober 2024',
+          venue: 'archaeoINK Blog',
+          url: 'https://www.archaeoink.com/blog/conceptual-illustrations-in-inktober',
+        },
+      ],
+      galleryImages: archink2021Gallery,
+      externalUrl:
+        'https://www.archaeoink.com/blog/archInk-Inktober-and-archaeology',
     },
     {
       id: '15',

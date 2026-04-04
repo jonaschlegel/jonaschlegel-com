@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import type { ProjectType } from '../../../types/global';
 import Breadcrumbs from '../../components/Breadcrumbs';
+import ImageGallery from '../../components/ImageGallery';
 import { projectsData } from '../../data/content';
 import { generateProjectOGImageUrl } from '../../lib/og-utils';
 import { generateArticleStructuredData } from '../../lib/seo';
@@ -160,6 +161,16 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </dl>
         </div>
       </div>
+
+      {/* Gallery */}
+      {project.galleryImages && project.galleryImages.length > 0 && (
+        <section className="mb-12">
+          <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-primary-green">
+            Gallery
+          </h2>
+          <ImageGallery images={project.galleryImages} />
+        </section>
+      )}
 
       {/* Objective */}
       <section className="mb-10 max-w-3xl">
