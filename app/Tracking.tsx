@@ -6,14 +6,17 @@ const googleAnalyticsTrackingId = 'G-6S9J34MPR3';
 export default function Tracking() {
   return (
     <>
-      {/* Google Analytics */}
+      {/* Cookie Consent – must load before analytics to manage consent state */}
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsTrackingId}`}
-        strategy="afterInteractive"
+        id="cookieyes"
+        src="https://cdn-cookieyes.com/client_data/f49132772cc1d9f89dfe9534/script.js"
+        strategy="beforeInteractive"
       />
+
+      {/* Consent defaults – must run before gtag.js processes the dataLayer */}
       <Script
-        id="google-analytics"
-        strategy="afterInteractive"
+        id="gtag-consent-defaults"
+        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{
           __html: `
               window.dataLayer = window.dataLayer || [];
@@ -32,10 +35,38 @@ export default function Tracking() {
               });
               gtag('set', 'ads_data_redaction', true);
               gtag('set', 'url_passthrough', true);
+            `,
+        }}
+      />
+
+      {/* Google Analytics */}
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsTrackingId}`}
+        strategy="afterInteractive"
+      />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
               gtag('js', new Date());
               gtag('config', '${googleAnalyticsTrackingId}', {
                 page_title: document.title,
                 page_location: window.location.href
+              });
+
+              // Update Google consent state when user interacts with CookieYes banner
+              document.addEventListener('cookieyes_consent_update', function(e) {
+                var detail = e.detail || {};
+                var accepted = detail.accepted || [];
+                gtag('consent', 'update', {
+                  analytics_storage: accepted.indexOf('analytics') > -1 ? 'granted' : 'denied',
+                  ad_storage: accepted.indexOf('advertisement') > -1 ? 'granted' : 'denied',
+                  ad_user_data: accepted.indexOf('advertisement') > -1 ? 'granted' : 'denied',
+                  ad_personalization: accepted.indexOf('advertisement') > -1 ? 'granted' : 'denied',
+                  functionality_storage: accepted.indexOf('functional') > -1 ? 'granted' : 'denied',
+                  personalization_storage: accepted.indexOf('functional') > -1 ? 'granted' : 'denied',
+                });
               });
             `,
         }}
@@ -68,13 +99,6 @@ export default function Tracking() {
             fbq('track', 'PageView');
           `,
         }}
-      />
-
-      {/* Cookie Consent */}
-      <Script
-        id="cookieyes"
-        src="https://cdn-cookieyes.com/client_data/f49132772cc1d9f89dfe9534/script.js"
-        strategy="afterInteractive"
       />
     </>
   );
