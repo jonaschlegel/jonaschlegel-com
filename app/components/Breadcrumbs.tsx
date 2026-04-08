@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { FaChevronRight, FaHome } from 'react-icons/fa';
+import { FaChevronRight } from 'react-icons/fa';
 
 interface BreadcrumbItem {
   label: string;
@@ -53,7 +53,6 @@ export default function Breadcrumbs({
                 className="hover:text-primary-dark transition-colors flex items-center"
                 itemProp="item"
               >
-                {index === 0 && <FaHome className="h-4 w-4 mr-1" />}
                 <span itemProp="name">{item.label}</span>
               </Link>
             ) : (
@@ -61,7 +60,6 @@ export default function Breadcrumbs({
                 className="text-primary-dark flex items-center"
                 itemProp="name"
               >
-                {index === 0 && <FaHome className="h-4 w-4 mr-1" />}
                 {item.label}
               </span>
             )}
