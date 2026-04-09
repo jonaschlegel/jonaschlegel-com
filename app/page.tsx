@@ -13,6 +13,7 @@ import PodcastSection, {
   podcastStructuredData,
 } from './components/PodcastSection';
 import RecentActivity from './components/RecentActivity';
+import Services from './components/Services';
 import Testimonials from './components/Testimonials';
 import { generateSEOMetadata } from './lib/seo';
 
@@ -57,15 +58,15 @@ export default function HomePage() {
       url: 'https://jonaschlegel.com',
       knowsAbout: [
         'Archaeological Illustration',
-        'Archaeology Web Development',
-        'Archaeology Web Design',
-        'Fullstack Web Development for Archaeology',
         'Visual Science Communication',
-        'Archaeological Drawing',
-        'Archaeology Painting',
-        'Archaeology Cover Art',
+        'Data Modelling',
+        'CIDOC CRM',
+        'Archaeology Web Development',
+        'Fullstack Web Design for Heritage',
         'Digital Heritage Platforms',
-        'Science Communication',
+        'Scientific Illustration',
+        'React & Next.js',
+        'QGIS & GIS Data Visualization',
       ],
     },
   };
@@ -79,6 +80,7 @@ export default function HomePage() {
         </div>
         <IllustrationBand seed={1} />
         <ClientLogos />
+        <Services />
 
         <RecentActivity />
         <BlogPreview />
