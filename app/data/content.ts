@@ -65,10 +65,11 @@ export const navLinks = [
 
 /** Content and images for the home page hero section. */
 export const heroSectionData = {
-  eyebrow: 'archaeoINK · Jona Schlegel',
-  heading: 'Visual Science Communication for Archaeological Research',
+  eyebrow: 'archaeoINK',
+  heading:
+    'Jona Schlegel — Landscape Archaeologist, Illustrator & Fullstack Web Developer',
   subheading:
-    'Turning archaeological research into clear visual narratives through scientific illustration, publication design, and digital knowledge platforms.',
+    'Translating complex archaeological research, data modelling, and CIDOC CRM into clear visual narratives through scientific illustration, publication design, and fullstack digital knowledge platforms for heritage.',
   jonaPhoto: jonaPaleontology,
   showcaseImage: {
     src: typesOfIllustration,
@@ -78,7 +79,7 @@ export const heroSectionData = {
 
 /** Text paragraphs displayed in the promotional banner. */
 export const bannerData = [
-  'Whether you are a researcher looking to visualise excavation data, an institution communicating heritage to the public, or an educator bringing archaeology into the classroom: archaeoINK helps you tell that story. Founded by landscape archaeologist Jona Schlegel, the studio works at the intersection of scientific rigour and visual storytelling, creating illustrations, publications, and digital tools that make archaeological knowledge accessible and engaging.',
+  'Whether you are a researcher looking to visualise excavation data, an institution communicating heritage to the public, or an educator bringing archaeology into the classroom: archaeoINK helps you tell that story. From archaeological drawing, sketching, and journaling to fullstack heritage web development \u2014 the studio works at the intersection of scientific rigour and visual science communication while utilising storytelling, creating illustrations, publications, and digital tools that make archaeological knowledge accessible and engaging, founded by landscape archaeologist Jona Schlegel.',
 ];
 
 /** Content sections for the About page describing archaeoINK studio. */
@@ -89,7 +90,7 @@ export const aboutStudioData = {
       title: 'The Studio',
       content: `archaeoINK is a visual science communication studio specialising in archaeology, where illustration, design, and structured knowledge representation serve to advance research understanding and public engagement. Founded by landscape archaeologist and science communicator Jona Schlegel, the studio bridges the space between rigorous academic research and accessible visual communication.
 
-The work centres on creating accurate, concept-driven visuals that respect the complexity and context inherent in archaeological data. Each project begins with careful collaboration between researcher and illustrator, ensuring that visual interpretations maintain scientific integrity whilst becoming more approachable for diverse audiences.`,
+Serving the DACH region and Netherlands while operating as a 100% remote collaborator globally, the work centres on creating accurate, concept-driven visuals that respect the complexity and context inherent in archaeological data. Each project begins with careful collaboration between researcher and illustrator, ensuring that visual interpretations maintain scientific integrity whilst becoming more approachable for diverse audiences.`,
     },
     {
       title: 'Approach',
@@ -129,7 +130,7 @@ export const projectsData = {
       slug: 'suriname-tijdmachine',
       image: surinameTijdmachine,
       description:
-        'Digital platform bringing scattered historical Surinamese sources together on interactive maps of Paramaribo and plantations.',
+        'Interactive heritage web platform reconnecting scattered historical Surinamese archives on georeferenced maps of Paramaribo and colonial plantation landscapes.',
       services: [
         'web development & design for archaeology',
         'archaeological research & communication',
@@ -174,7 +175,7 @@ export const projectsData = {
       slug: 'pastforwardhub',
       image: pastforwardhub,
       description:
-        'Global career platform connecting archaeologists with jobs, colleagues, and resources across academic, commercial, and public sectors.',
+        'Fullstack Next.js platform connecting archaeologists worldwide with career opportunities, heritage network, and digital resources across academic and commercial sectors.',
       services: ['web development & design for archaeology'],
       isFeatured: false,
       year: '2025 - present',
@@ -208,7 +209,7 @@ export const projectsData = {
       slug: 'necessary-reunions',
       image: necessaryReunions,
       description:
-        'Digital research platform remarrying 17th-century VOC maps with textual archives to reconceptualise histories of early modern Kerala.',
+        'Digital humanities platform using IIIF, georeferencing, and HTR to reconnect 17th-century Dutch East India Company archival maps with textual records for early modern Kerala.',
       services: [
         'web development & design for archaeology',
         'archaeological research & communication',
@@ -254,7 +255,7 @@ export const projectsData = {
       slug: 'dh-benelux',
       image: dhBenelux,
       description:
-        'Redesigned website for the Digital Humanities BeNeLux community with interactive conference maps and journal integration.',
+        'Custom Next.js website redesign for the Digital Humanities BeNeLux community — interactive conference maps, dynamic schedules, and open-access journal archive integration.',
       services: ['web development & design for archaeology'],
       isFeatured: false,
       year: '2025',
@@ -277,7 +278,7 @@ export const projectsData = {
       slug: 'archink-2025',
       image: archink2025Gallery[0]!.src,
       description:
-        'Yearly archaeological drawing challenge combining Inktober with archaeological themes. Each illustration explores archaeological concepts through conceptual visual storytelling.',
+        'Annual archaeological ink drawing challenge combining Inktober prompts with visual science communication and landscape archaeology conceptual storytelling.',
       services: ['scientific & archaeological illustration'],
       isFeatured: false,
       year: '2025',
@@ -331,7 +332,7 @@ export const projectsData = {
       slug: 'archink-stratigraphic-profile',
       image: archink2025,
       description:
-        'Interactive educational tool visualising archaeological stratigraphy with illustrated layers from bedrock to modern surface.',
+        'Interactive educational web tool visualising archaeological stratigraphy from modern surface to bedrock through illustrated layers with CIDOC CRM-informed data design.',
       services: [
         'web development & design for archaeology',
         'scientific & archaeological illustration',
@@ -357,7 +358,7 @@ export const projectsData = {
       slug: 'archeomatch',
       image: archeomatch,
       description:
-        'Tinder-style web app helping students discover archaeological disciplines matched to their personality and interests.',
+        'Interactive web app matching archaeology students to their ideal specialisms — from landscape archaeology to bioarchaeology — based on research interests and personality.',
       services: ['web development & design for archaeology'],
       isFeatured: false,
       year: '2025 (in development)',
@@ -384,7 +385,7 @@ export const projectsData = {
       slug: 'archaeology-of-bias',
       image: archaeologyOfBias,
       description:
-        'Educational platform exploring hidden biases in archaeological research through interactive flip cards and critical analysis.',
+        'Interactive web platform exploring cognitive and confirmation biases in archaeological interpretation through flip cards, critical analysis, and visual data storytelling.',
       services: [
         'web development & design for archaeology',
         'archaeological research & communication',
@@ -414,7 +415,7 @@ export const projectsData = {
       slug: 'archaeology-journaling',
       image: archaeologyJournaling,
       description:
-        'Daily artifact drawing practice platform using open-access museum collections from The Met, Rijksmuseum, Smithsonian, and more.',
+        'Daily archaeological illustration practice app providing timed drawing sessions with open-access artefacts from The Met, Rijksmuseum, Smithsonian, and global heritage collections.',
       services: ['web development & design for archaeology'],
       isFeatured: false,
       year: '2025',
@@ -437,7 +438,7 @@ export const projectsData = {
       slug: 'dutch-learning-platform',
       image: dutchLearningPlatform,
       description:
-        'Interactive web app for learning Dutch vocabulary, articles, verb tenses, and grammar through exercises and tests.',
+        'Interactive React web app for self-directed Dutch language learning — vocabulary drills, article training, verb conjugation exercises, and grammar tests with spaced repetition.',
       services: ['web development & design for archaeology'],
       isFeatured: false,
       year: '2025',
@@ -460,7 +461,7 @@ export const projectsData = {
       slug: 'roman-burial',
       image: romanBurial,
       description:
-        'Scientific illustration of the first genetically documented mother-daughter burial from Roman Austria.',
+        'Scientific reconstruction illustration for peer-reviewed publication on the first genetically confirmed Roman mother-daughter burial from Ovilava (Wels, Austria) — Journal of Archaeological Science.',
       services: ['scientific & archaeological illustration'],
       isFeatured: false,
       year: '2024',
@@ -496,7 +497,7 @@ export const projectsData = {
       slug: 'archink-2024',
       image: archink2024Gallery[0]!.src,
       description:
-        'Conceptual illustrations reinterpreting Inktober 2024 prompts through archaeological lenses — exploring cultural baggage, media sensationalism, empathy in practice, and the future of heritage.',
+        'Conceptual archaeological ink drawings for the 2024 Inktober challenge — exploring cultural baggage, media sensationalism, empathy in field practice, and the future of heritage.',
       services: ['scientific & archaeological illustration'],
       isFeatured: false,
       year: '2024',
@@ -550,7 +551,7 @@ export const projectsData = {
       slug: 'adventuress-cover',
       image: adventuressCover,
       description:
-        'Cover design concept celebrating women in archaeology across past, present, and future.',
+        'Cover illustration concept for Adventuress Archaeology Journal celebrating women in archaeology across past, present, and future through scientific illustration and character design.',
       services: ['scientific & archaeological illustration'],
       isFeatured: false,
       year: '2024',
@@ -573,7 +574,7 @@ export const projectsData = {
       slug: 'pastrace',
       image: pastrace,
       description:
-        'Brand identity for a German photogrammetry company specialising in 3D heritage documentation.',
+        'Visual identity and logo design for PasTrace — German photogrammetry company specialising in high-fidelity 3D documentation of cultural heritage sites and archaeological monuments.',
       services: ['scientific & archaeological illustration'],
       isFeatured: false,
       year: '2023',
@@ -597,7 +598,7 @@ export const projectsData = {
       slug: 'archink-2023',
       image: archink2023Gallery[0]!.src,
       description:
-        'Archaeological ink drawings created for the #archInk challenge in October 2023, exploring prompts from acoustics and craft to solidarity and revolution through an archaeological lens.',
+        'Archaeological ink drawings for the #archInk 2023 challenge — exploring prompts from acoustics and craft to solidarity and revolution through the lens of landscape archaeology.',
       services: ['scientific & archaeological illustration'],
       isFeatured: false,
       year: '2023',
@@ -651,7 +652,7 @@ export const projectsData = {
       slug: 'exploring-archaeological-disciplines',
       image: exploringArchaeologicalDisciplines,
       description:
-        'Comic-style illustration series revealing the interdisciplinary nature of archaeology.',
+        'Comic-style scientific illustration series debunking archaeology stereotypes by showcasing the true interdisciplinary breadth — from bioarchaeology and forensics to landscape survey and GIS.',
       services: [
         'scientific & archaeological illustration',
         'archaeological research & communication',
@@ -681,7 +682,7 @@ export const projectsData = {
       slug: 'archink-2022',
       image: archink2022Gallery[0]!.src,
       description:
-        'Archaeological ink drawings for the #archInk 2022 challenge, responding to prompts like bone, classify, exchange, and posthole with a blend of digital and traditional techniques.',
+        'Archaeological ink drawings for the #archInk 2022 Inktober challenge — responding to prompts like bone, classify, exchange, and posthole with digital and traditional illustration.',
       services: ['scientific & archaeological illustration'],
       isFeatured: false,
       year: '2022',
@@ -735,7 +736,7 @@ export const projectsData = {
       slug: 'geophysical-prospection-study',
       image: geophysicalProspection,
       description:
-        'Non-invasive geophysical investigation revealing hidden monastic landscapes at the UNESCO World Heritage Site.',
+        'First-authored Remote Sensing (MDPI) study: GPR and magnetometry geophysical prospection revealing hidden monastic structures at the Müstair Carolingian UNESCO World Heritage Site.',
       services: ['archaeological research & communication'],
       isFeatured: false,
       year: '2021 - 2022',
@@ -780,7 +781,7 @@ export const projectsData = {
       slug: 'archink-2021',
       image: archink2021Gallery[0]!.src,
       description:
-        'First digital #archInk challenge — archaeological ink drawings on iPad responding to prompts inspired by archaeological book titles and concepts, from "In Small Things Forgotten" to "Uncommon Ground".',
+        'Inaugural `#archInk` challenge — daily archaeological ink drawings on iPad responding to prompts from archaeology book titles such as "In Small Things Forgotten" and "Uncommon Ground".',
       services: ['scientific & archaeological illustration'],
       isFeatured: false,
       year: '2021',
@@ -943,14 +944,14 @@ export const projectsData = {
 
 /** Service offerings with descriptions, tools, and downloadable resources. */
 export const serviceData = {
-  heading: 'Services',
+  heading: 'Archaeological Illustration, Drawing & Web Development Services',
   servicesList: [
     {
       id: 'archaeology',
       slug: 'archaeology',
       name: 'Archaeological Research & Communication',
       description:
-        'Your research data tells a story \u2014 but reaching the right audience requires more than a publication. From geophysical surveys to public engagement strategies, I help researchers communicate findings clearly and make complex datasets accessible through digital tools and structured knowledge representation.',
+        'Your research data tells a story \u2014 but reaching the right audience requires more than a publication. From geophysical surveys and CIDOC CRM data modelling to public engagement and visual science communication, I help researchers communicate complex landscape archaeology findings clearly and accessibly.',
       image: archaeologySciComm,
       alt: 'Archaeological research and scientific communication tools and methods by Jona Schlegel',
       tools:
@@ -967,14 +968,16 @@ export const serviceData = {
       slug: 'illustration',
       name: 'Scientific & Archaeological Illustration',
       description:
-        'Complex findings need clear visuals to reach beyond your field. I create scientifically accurate illustrations for publications, site reconstructions, and educational materials \u2014 grounded in current research so your audience sees what you see.',
+        'Complex findings need clear visuals to reach beyond your field. I create scientifically accurate archaeological illustrations \u2014 from site reconstruction drawings and artefact sketching to digital painting, conceptual art, and visual science communication materials \u2014 grounded in current research so your audience sees what you see.',
       image: illustrating,
-      alt: 'Scientific and archaeological illustration examples and digital artwork by Jona Schlegel',
+      alt: 'Scientific and archaeological illustration, drawing, and sketching examples by Jona Schlegel',
       tools: 'Procreate, Inkscape, ArcGIS, QGIS',
       options: [
-        'Reconstruction Illustrations: Accurate depictions of historical scenes for academic use',
-        'Educational Illustrations: Visual content for teaching materials and public outreach',
-        'GIS-based Map Illustrations: Integrating archaeological data with geospatial visualisation',
+        'Reconstruction Illustrations: Accurate depictions of historical scenes for academic and public use',
+        'Archaeological Drawing & Sketching: Artefact documentation, field sketches, and detailed observational drawing',
+        'Archaeology Journaling & Zines: Visual narratives and accessible publications for public audiences',
+        'Educational Illustrations: Visual content for teaching materials and science communication outreach',
+        'GIS-based Map Illustrations: Integrating landscape archaeology data with geospatial visualisation',
       ],
       pdfUrl: '/data/Illustration_JonaSchlegel.pdf',
     },
@@ -983,7 +986,7 @@ export const serviceData = {
       slug: 'web-development',
       name: 'Web Development & Design for Archaeology',
       description:
-        'Your research deserves a platform as rigorous as your methodology. I build database-driven platforms and interactive visualisation tools that let your users explore, query, and engage with archaeological data on their terms.',
+        'Your research deserves a platform as rigorous as your methodology. I build fullstack database-driven platforms and interactive data visualisation tools \u2014 from CIDOC CRM knowledge graphs and IIIF viewers to archaeology journaling apps and interactive maps \u2014 that let users explore and engage with heritage data directly.',
       image: webDevelopment,
       alt: 'Web development and design portfolio for archaeological projects by Jona Schlegel',
       tools: 'Next.js, TypeScript, Tailwind CSS, Three.js, CesiumJS, Leaflet',

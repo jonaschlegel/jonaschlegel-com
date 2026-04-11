@@ -29,19 +29,26 @@ export function generateSEOMetadata({
   const baseUrl = 'https://jonaschlegel.com';
   const fullTitle =
     title === 'Home'
-      ? 'Jona Schlegel – Archaeological Science Communication & Knowledge Management'
+      ? 'Jona Schlegel \u2013 Landscape Archaeologist, Knowledge Management, Visual Science Communicator, Illustrator & Web Developer'
       : `${title} | Jona Schlegel`;
 
   const canonicalUrl = canonical || baseUrl;
   const imageUrl =
     ogImage ||
-    `/api/og?title=${encodeURIComponent(title)}&subtitle=${encodeURIComponent('Archaeological Science Communication')}`;
+    `/api/og?title=${encodeURIComponent(title)}&subtitle=${encodeURIComponent('Archaeological Illustration, Drawing & Visual Science Communication')}`;
 
   const metadata: Metadata = {
     title: fullTitle,
     description,
     keywords: [
       'archaeology',
+      'archaeological illustration',
+      'archaeological drawing',
+      'archaeological sketching',
+      'visual science communication',
+      'landscape archaeology',
+      'archaeology web development',
+      'archaeology journaling',
       'science communication',
       'knowledge management',
       'archaeological research',

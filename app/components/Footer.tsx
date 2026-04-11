@@ -9,9 +9,9 @@ const Footer = () => {
   return (
     <div className="container mx-auto py-16">
       <div className="mb-12 text-center">
-        <h1 className="mb-3 font-merriweather text-3xl font-bold md:text-5xl">
+        <h2 className="mb-3 font-merriweather text-3xl font-bold md:text-5xl">
           {footerdata.heading}
-        </h1>
+        </h2>
         <div>
           <ButtonPrimary calendlyEventSlug="jonaschlegel">
             Work With Me

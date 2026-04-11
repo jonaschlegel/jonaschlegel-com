@@ -20,15 +20,20 @@ export const metadata: Metadata = generateSEOMetadata({
   canonical: 'https://jonaschlegel.com/about',
   keywords: [
     'archaeoINK',
+    'Jona Schlegel',
+    'landscape archaeologist',
     'archaeological illustration studio',
-    'archaeology web development',
-    'archaeology web design',
-    'visual science communication',
-    'freelance archaeological illustrator',
-    'archaeology web developer',
-    'landscape archaeology',
     'archaeological drawing',
-    'heritage web development',
+    'archaeological sketching',
+    'archaeology journaling',
+    'archaeology ink drawing',
+    'visual science communication',
+    'visual science communication archaeology',
+    'archaeology web development',
+    'CIDOC CRM data modelling',
+    'QGIS spatial analysis',
+    'digital heritage platforms',
+    'freelance archaeological illustrator Netherlands',
   ],
   ogType: 'website',
 });
@@ -261,6 +266,19 @@ export default function AboutPage() {
                     className="w-full object-cover"
                     sizes="(max-width: 1024px) 100vw, 400px"
                   />
+                </div>
+                <div className="rounded-lg bg-primary-green/10 p-6">
+                  <h4 className="mb-3 font-semibold">Specialised Expertise</h4>
+                  <ul className="space-y-2 text-sm">
+                    <li>Visual Science Communication</li>
+                    <li>Scientific Data Modelling & CIDOC CRM</li>
+                    <li>Digital Heritage Web Development</li>
+                    <li>Landscape Archaeology Spatial Data</li>
+                    <li>Detailed Archaeological Illustration</li>
+                    <li>QGIS & Geographic Visualisation</li>
+                    <li>Fullstack Web Frameworks (React, Next.js)</li>
+                    <li>Interactive Information Architecture</li>
+                  </ul>
                 </div>
                 <div className="rounded-lg bg-primary-teal/10 p-6">
                   <h4 className="mb-3 font-semibold">Research Interests</h4>

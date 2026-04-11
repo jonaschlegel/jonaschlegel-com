@@ -38,7 +38,7 @@ export async function generateMetadata({
     };
   }
 
-  const projectTitle = `${project.name} - Project Portfolio`;
+  const projectTitle = `${project.name} | Jona Schlegel`;
   const projectDescription =
     project.description ||
     `Explore ${project.name}, a project by Jona Schlegel showcasing expertise in archaeological research, science communication, and knowledge management.`;
@@ -51,7 +51,7 @@ export async function generateMetadata({
   });
 
   return {
-    title: projectTitle,
+    title: { absolute: projectTitle },
     description: projectDescription,
     keywords: [
       'archaeology project',
@@ -62,6 +62,9 @@ export async function generateMetadata({
       'archaeological research',
       'archaeology web design',
       'freelance archaeological illustrator',
+      ...project.services.map((s) => s.toLowerCase()),
+      ...project.tools.map((t) => t.toLowerCase()),
+      ...(project.location ? [project.location.toLowerCase()] : []),
     ],
     openGraph: {
       title: projectTitle,
@@ -138,7 +141,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <div className="overflow-hidden">
           <Image
             src={project.image}
-            alt={project.name}
+            alt={`${project.name} – ${project.description}`}
             width={800}
             height={500}
             className="h-auto w-full object-cover"

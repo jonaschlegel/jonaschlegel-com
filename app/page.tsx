@@ -13,6 +13,7 @@ import PodcastSection, {
   podcastStructuredData,
 } from './components/PodcastSection';
 import RecentActivity from './components/RecentActivity';
+import Services from './components/Services';
 import Testimonials from './components/Testimonials';
 import { generateSEOMetadata } from './lib/seo';
 
@@ -20,10 +21,17 @@ import { generateSEOMetadata } from './lib/seo';
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Home',
   description:
-    'Jona Schlegel – Freelance archaeological illustrator and archaeology web developer. Specialising in archaeological drawing, visual science communication, archaeology web development & design, fullstack heritage platforms, and brand identity for archaeology.',
+    'Jona Schlegel – Freelance landscape archaeologist specialising in visual science communication, archaeological illustration, drawing & sketching, visual science communication,archaeology web development, digital heritage platforms, and brand identity for archaeology.',
   canonical: 'https://jonaschlegel.com',
   keywords: [
     'archaeological illustration',
+    'archaeological drawing',
+    'archaeological sketching',
+    'archaeology journaling',
+    'archaeology ink drawing',
+    'visual science communication',
+    'visual science communication archaeology',
+    'landscape archaeology',
     'archaeology web development',
     'archaeology web design',
     'archaeology website development',
@@ -35,6 +43,7 @@ export const metadata: Metadata = generateSEOMetadata({
     'archaeology cover art',
     'archaeology brand identity',
     'digital heritage web development',
+    'CIDOC CRM data modelling',
   ],
   ogType: 'website',
 });
@@ -57,15 +66,15 @@ export default function HomePage() {
       url: 'https://jonaschlegel.com',
       knowsAbout: [
         'Archaeological Illustration',
-        'Archaeology Web Development',
-        'Archaeology Web Design',
-        'Fullstack Web Development for Archaeology',
         'Visual Science Communication',
-        'Archaeological Drawing',
-        'Archaeology Painting',
-        'Archaeology Cover Art',
+        'Data Modelling',
+        'CIDOC CRM',
+        'Archaeology Web Development',
+        'Fullstack Web Design for Heritage',
         'Digital Heritage Platforms',
-        'Science Communication',
+        'Scientific Illustration',
+        'React & Next.js',
+        'QGIS & GIS Data Visualization',
       ],
     },
   };
@@ -79,6 +88,7 @@ export default function HomePage() {
         </div>
         <IllustrationBand seed={1} />
         <ClientLogos />
+        <Services />
 
         <RecentActivity />
         <BlogPreview />
