@@ -62,6 +62,9 @@ export async function generateMetadata({
       'archaeological research',
       'archaeology web design',
       'freelance archaeological illustrator',
+      ...project.services.map((s) => s.toLowerCase()),
+      ...project.tools.map((t) => t.toLowerCase()),
+      ...(project.location ? [project.location.toLowerCase()] : []),
     ],
     openGraph: {
       title: projectTitle,

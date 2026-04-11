@@ -277,7 +277,7 @@ export default function AboutPage() {
                     <li>Detailed Archaeological Illustration</li>
                     <li>QGIS & Geographic Visualisation</li>
                     <li>Fullstack Web Frameworks (React, Next.js)</li>
-                    <li>Interactive Information Architucture</li>
+                    <li>Interactive Information Architecture</li>
                   </ul>
                 </div>
                 <div className="rounded-lg bg-primary-teal/10 p-6">

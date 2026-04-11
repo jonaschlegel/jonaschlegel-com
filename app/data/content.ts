@@ -278,7 +278,7 @@ export const projectsData = {
       slug: 'archink-2025',
       image: archink2025Gallery[0]!.src,
       description:
-        'Annual 31-day archaeological ink drawing challenge combining Inktober prompts with visual science communication and landscape archaeology conceptual storytelling.',
+        'Annual archaeological ink drawing challenge combining Inktober prompts with visual science communication and landscape archaeology conceptual storytelling.',
       services: ['scientific & archaeological illustration'],
       isFeatured: false,
       year: '2025',
@@ -781,7 +781,7 @@ export const projectsData = {
       slug: 'archink-2021',
       image: archink2021Gallery[0]!.src,
       description:
-        'Inaugural #archInk challenge — 31 daily archaeological ink drawings on iPad responding to prompts from archaeology book titles: "In Small Things Forgotten", "Uncommon Ground", and more.',
+        'Inaugural `#archInk` challenge — daily archaeological ink drawings on iPad responding to prompts from archaeology book titles such as "In Small Things Forgotten" and "Uncommon Ground".',
       services: ['scientific & archaeological illustration'],
       isFeatured: false,
       year: '2021',
