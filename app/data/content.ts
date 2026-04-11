@@ -79,7 +79,7 @@ export const heroSectionData = {
 
 /** Text paragraphs displayed in the promotional banner. */
 export const bannerData = [
-  'Whether you are a researcher looking to visualise excavation data, an institution communicating heritage to the public, or an educator bringing archaeology into the classroom: archaeoINK helps you tell that story. Founded by landscape archaeologist Jona Schlegel, the studio works at the intersection of scientific rigour and visual storytelling, creating illustrations, publications, and digital tools that make archaeological knowledge accessible and engaging.',
+  'Whether you are a researcher looking to visualise excavation data, an institution communicating heritage to the public, or an educator bringing archaeology into the classroom: archaeoINK helps you tell that story. From archaeological drawing, sketching, and journaling to fullstack heritage web development \u2014 the studio works at the intersection of scientific rigour and visual science communication while utilising storytelling, creating illustrations, publications, and digital tools that make archaeological knowledge accessible and engaging, founded by landscape archaeologist Jona Schlegel.',
 ];
 
 /** Content sections for the About page describing archaeoINK studio. */
@@ -944,14 +944,14 @@ export const projectsData = {
 
 /** Service offerings with descriptions, tools, and downloadable resources. */
 export const serviceData = {
-  heading: 'Services',
+  heading: 'Archaeological Illustration, Drawing & Web Development Services',
   servicesList: [
     {
       id: 'archaeology',
       slug: 'archaeology',
       name: 'Archaeological Research & Communication',
       description:
-        'Your research data tells a story \u2014 but reaching the right audience requires more than a publication. From geophysical surveys to public engagement strategies, I help researchers communicate findings clearly and make complex datasets accessible through digital tools and structured knowledge representation.',
+        'Your research data tells a story \u2014 but reaching the right audience requires more than a publication. From geophysical surveys and CIDOC CRM data modelling to public engagement and visual science communication, I help researchers communicate complex landscape archaeology findings clearly and accessibly.',
       image: archaeologySciComm,
       alt: 'Archaeological research and scientific communication tools and methods by Jona Schlegel',
       tools:
@@ -968,14 +968,16 @@ export const serviceData = {
       slug: 'illustration',
       name: 'Scientific & Archaeological Illustration',
       description:
-        'Complex findings need clear visuals to reach beyond your field. I create scientifically accurate illustrations for publications, site reconstructions, and educational materials \u2014 grounded in current research so your audience sees what you see.',
+        'Complex findings need clear visuals to reach beyond your field. I create scientifically accurate archaeological illustrations \u2014 from site reconstruction drawings and artefact sketching to digital painting, conceptual art, and visual science communication materials \u2014 grounded in current research so your audience sees what you see.',
       image: illustrating,
-      alt: 'Scientific and archaeological illustration examples and digital artwork by Jona Schlegel',
+      alt: 'Scientific and archaeological illustration, drawing, and sketching examples by Jona Schlegel',
       tools: 'Procreate, Inkscape, ArcGIS, QGIS',
       options: [
-        'Reconstruction Illustrations: Accurate depictions of historical scenes for academic use',
-        'Educational Illustrations: Visual content for teaching materials and public outreach',
-        'GIS-based Map Illustrations: Integrating archaeological data with geospatial visualisation',
+        'Reconstruction Illustrations: Accurate depictions of historical scenes for academic and public use',
+        'Archaeological Drawing & Sketching: Artefact documentation, field sketches, and detailed observational drawing',
+        'Archaeology Journaling & Zines: Visual narratives and accessible publications for public audiences',
+        'Educational Illustrations: Visual content for teaching materials and science communication outreach',
+        'GIS-based Map Illustrations: Integrating landscape archaeology data with geospatial visualisation',
       ],
       pdfUrl: '/data/Illustration_JonaSchlegel.pdf',
     },
@@ -984,7 +986,7 @@ export const serviceData = {
       slug: 'web-development',
       name: 'Web Development & Design for Archaeology',
       description:
-        'Your research deserves a platform as rigorous as your methodology. I build database-driven platforms and interactive visualisation tools that let your users explore, query, and engage with archaeological data on their terms.',
+        'Your research deserves a platform as rigorous as your methodology. I build fullstack database-driven platforms and interactive data visualisation tools \u2014 from CIDOC CRM knowledge graphs and IIIF viewers to archaeology journaling apps and interactive maps \u2014 that let users explore and engage with heritage data directly.',
       image: webDevelopment,
       alt: 'Web development and design portfolio for archaeological projects by Jona Schlegel',
       tools: 'Next.js, TypeScript, Tailwind CSS, Three.js, CesiumJS, Leaflet',
