@@ -51,7 +51,7 @@ export async function generateMetadata({
   });
 
   return {
-    title: projectTitle,
+    title: { absolute: projectTitle },
     description: projectDescription,
     keywords: [
       'archaeology project',
