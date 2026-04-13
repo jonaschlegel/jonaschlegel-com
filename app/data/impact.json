@@ -1,0 +1,597 @@
+{
+  "lastUpdated": "2026-04-11",
+  "platforms": [
+    {
+      "id": "instagram-archaeoink",
+      "name": "Instagram",
+      "handle": "@archaeoink",
+      "url": "https://www.instagram.com/archaeoink/",
+      "icon": "FaInstagram",
+      "category": "social",
+      "brand": "archaeoINK",
+      "purpose": "Visual portfolio and behind-the-scenes of archaeological illustration work, drawing challenges, and studio life.",
+      "contentTypes": [
+        "illustrations",
+        "process videos",
+        "reels",
+        "stories",
+        "drawing challenges"
+      ],
+      "active": true,
+      "joinedDate": "2019-01-01"
+    },
+    {
+      "id": "bluesky",
+      "name": "Bluesky",
+      "handle": "@jonaschlegel.com",
+      "url": "https://bsky.app/profile/jonaschlegel.com",
+      "icon": "SiBluesky",
+      "category": "social",
+      "purpose": "Academic and professional discourse, science communication, sharing research and archaeology content.",
+      "contentTypes": [
+        "threads",
+        "links",
+        "discussions",
+        "science communication"
+      ],
+      "active": true,
+      "joinedDate": "2024-01-01"
+    },
+    {
+      "id": "twitter",
+      "name": "Twitter / X",
+      "handle": "@JonaSchlegel",
+      "url": "https://twitter.com/JonaSchlegel",
+      "icon": "BsTwitter",
+      "category": "social",
+      "purpose": "Academic networking and archaeology community engagement (less active since Bluesky migration).",
+      "contentTypes": ["threads", "links", "discussions"],
+      "active": false,
+      "joinedDate": "2018-01-01"
+    },
+    {
+      "id": "linkedin",
+      "name": "LinkedIn",
+      "handle": "jona-schlegel",
+      "url": "https://www.linkedin.com/in/jona-schlegel-942879153/",
+      "icon": "BsLinkedin",
+      "category": "social",
+      "purpose": "Professional networking, freelance visibility, PastForwardHub promotion, and career development content.",
+      "contentTypes": [
+        "articles",
+        "posts",
+        "professional updates",
+        "project showcases"
+      ],
+      "active": true,
+      "joinedDate": "2017-01-01"
+    },
+    {
+      "id": "mastodon",
+      "name": "Mastodon",
+      "handle": "@archaeoINK@mastodon.social",
+      "url": "https://mastodon.social/@archaeoINK",
+      "icon": "FaMastodon",
+      "category": "social",
+      "brand": "archaeoINK",
+      "purpose": "Decentralised academic networking and open science discussions.",
+      "contentTypes": ["threads", "links", "discussions"],
+      "active": true,
+      "joinedDate": "2023-01-01"
+    },
+    {
+      "id": "behance",
+      "name": "Behance",
+      "handle": "jonaschlegel1",
+      "url": "https://www.behance.net/jonaschlegel1",
+      "icon": "BsBehance",
+      "category": "social",
+      "purpose": "Design and illustration portfolio showcasing finished project work.",
+      "contentTypes": ["project showcases", "design portfolios"],
+      "active": true,
+      "joinedDate": "2019-01-01"
+    },
+    {
+      "id": "google-scholar",
+      "name": "Google Scholar",
+      "handle": "Jona Schlegel",
+      "url": "https://scholar.google.com/citations?user=SoRPj4cAAAAJ&hl=en",
+      "icon": "SiGooglescholar",
+      "category": "academic",
+      "purpose": "Primary citation tracking and publication discovery. Broadest coverage including conference papers and preprints.",
+      "contentTypes": ["publications", "citations"],
+      "citations": 58,
+      "h-index": 4,
+      "i10-index": 3,
+      "publications": 20,
+      "active": true
+    },
+    {
+      "id": "researchgate",
+      "name": "ResearchGate",
+      "handle": "Jona Schlegel",
+      "url": "https://www.researchgate.net/profile/Jona-Schlegel",
+      "icon": "SiResearchgate",
+      "category": "academic",
+      "purpose": "Academic social network for paper sharing, Q&A, and collaboration discovery.",
+      "contentTypes": ["publications", "questions", "answers"],
+      "active": true
+    },
+    {
+      "id": "orcid",
+      "name": "ORCID",
+      "handle": "0000-0002-4190-9566",
+      "url": "https://orcid.org/0000-0002-4190-9566",
+      "icon": "SiOrcid",
+      "category": "academic",
+      "purpose": "Persistent researcher identifier linking all publications and affiliations across platforms.",
+      "contentTypes": ["researcher profile", "publication record"],
+      "works": 24,
+      "active": true
+    },
+    {
+      "id": "scopus",
+      "name": "Scopus",
+      "handle": "Jona Schlegel",
+      "url": "https://www.scopus.com/authid/detail.uri?authorId=57225169500",
+      "icon": "SiScopus",
+      "category": "academic",
+      "purpose": "Elsevier's citation database. Authoritative coverage of peer-reviewed literature.",
+      "contentTypes": ["publications", "citations"],
+      "citations": 20,
+      "documents": 3,
+      "h-index": 2,
+      "active": true
+    },
+    {
+      "id": "web-of-science",
+      "name": "Web of Science",
+      "handle": "Jona Schlegel",
+      "url": "https://www.webofscience.com/wos/author/record/1985120",
+      "icon": "SiClarivate",
+      "category": "academic",
+      "purpose": "Clarivate citation index. Selective but prestigious coverage of academic journals.",
+      "contentTypes": ["publications", "citations"],
+      "total documents": 3,
+      "h-index": 2,
+      "sum of times cited": 13,
+      "active": true
+    },
+    {
+      "id": "academia-edu",
+      "name": "Academia.edu",
+      "handle": "Jona Schlegel",
+      "url": "https://htw-berlin.academia.edu/JonaSchlegel",
+      "icon": "SiAcademia",
+      "category": "academic",
+      "purpose": "Paper sharing platform reaching a broad academic audience, particularly in humanities.",
+      "contentTypes": ["publications", "drafts"],
+      "Followers": 75,
+      "Following": 142,
+      "Co-authors": 24,
+      "Mentions": 31,
+      "Public Views": 2082,
+      "active": true
+    },
+    {
+      "id": "semantic-scholar",
+      "name": "Semantic Scholar",
+      "handle": "Jona Schlegel",
+      "url": "https://www.semanticscholar.org/author/Jona-Schlegel/120200801",
+      "icon": "SiSemanticscholar",
+      "category": "academic",
+      "purpose": "AI-powered academic search engine by Allen AI. Tracks citations and influential citations.",
+      "contentTypes": ["publications", "citations"],
+      "publications": 4,
+      "h-index": 3,
+      "citations": 17,
+      "Highly Influential Citations": 1,
+      "active": true
+    },
+    {
+      "id": "sciprofiles",
+      "name": "SciProfiles",
+      "handle": "Jona Schlegel",
+      "url": "https://sciprofiles.com/profile/1661012",
+      "icon": "FaFlask",
+      "category": "academic",
+      "purpose": "MDPI researcher profile aggregating publications and editorial roles.",
+      "contentTypes": ["publications", "editorial roles"],
+      "co-authors": 16,
+      "followers": 0,
+      "following": 11,
+      "publications": 7,
+      "active": true
+    },
+    {
+      "id": "researcher-id",
+      "name": "ResearcherID",
+      "handle": "Jona Schlegel",
+      "url": "https://researchid.co/jonaschlegel",
+      "icon": "SiClarivate",
+      "category": "academic",
+      "purpose": "Clarivate researcher identifier linked to Web of Science publications.",
+      "contentTypes": ["publications"],
+      "scopus publications": 3,
+      "scholar citations": 58,
+      "scholar h-index": 4,
+      "scholar i10-index": 3,
+      "active": true
+    },
+    {
+      "id": "impactstory",
+      "name": "ImpactStory",
+      "handle": "Jona Schlegel",
+      "url": "https://profiles.impactstory.org/u/0000-0002-4190-9566",
+      "icon": "FaChartLine",
+      "category": "academic",
+      "purpose": "Open-access altmetrics tracker. Shows where research is mentioned beyond traditional citations.",
+      "contentTypes": ["altmetrics", "open access tracking"],
+      "open access (percentage)": 73,
+      "publications": 24,
+      "active": true
+    },
+    {
+      "id": "scite",
+      "name": "scite",
+      "handle": "Jona Schlegel",
+      "url": "https://scite.ai/users/jona-schlegel-wX3y",
+      "icon": "FaQuoteLeft",
+      "category": "academic",
+      "purpose": "Smart citation analysis showing how papers are cited (supporting, contrasting, mentioning).",
+      "contentTypes": ["smart citations"],
+      "publications": 17,
+      "Citation statement received": 25,
+      "Citation statement given": 47,
+
+      "active": true
+    },
+    {
+      "id": "loop",
+      "name": "Loop",
+      "handle": "Jona Schlegel",
+      "url": "https://loop.frontiersin.org/people/1128578/overview",
+      "icon": "FaSync",
+      "category": "academic",
+      "purpose": "Frontiers researcher profile for publications in Frontiers journals.",
+      "contentTypes": ["publications", "reviews"],
+      "total views": 43,
+      "total publications": 3,
+      "followers": 13,
+      "following": 17,
+      "active": true
+    },
+    {
+      "id": "blog-archaeoink",
+      "name": "archaeoINK Blog",
+      "handle": "archaeoink.com",
+      "url": "https://www.archaeoink.com/",
+      "icon": "FaBlog",
+      "category": "content",
+      "brand": "archaeoINK",
+      "purpose": "Long-form writing about archaeological illustration, science communication, and studio practice.",
+      "contentTypes": ["blog posts", "tutorials", "reflections"],
+      "active": true,
+      "total clicks (last 12 months)": 366,
+      "Total impressions (last 12 months)": 31600,
+      "joinedDate": "2020-01-01"
+    },
+    {
+      "id": "personal-website",
+      "name": "Jona Schlegel",
+      "handle": "jonaschlegel.com",
+      "url": "https://www.jonaschlegel.com/",
+      "icon": "",
+      "category": "content",
+      "brand": "archaeoINK",
+      "purpose": "Presenting my own cv and my studio practices.",
+      "contentTypes": ["services", "projects"],
+      "active": true,
+      "total clicks (last 12 months)": 96,
+      "Total impressions (last 12 months)": 2330,
+      "joinedDate": "2020-01-01"
+    },
+    {
+      "id": "newsletter-kit",
+      "name": "Newsletter (Kit)",
+      "handle": "archaeoink",
+      "url": "https://archaeoink.ck.page/",
+      "icon": "FaEnvelope",
+      "category": "content",
+      "brand": "archaeoINK",
+      "purpose": "Monthly newsletter with illustration tips, project updates, and archaeology news.",
+      "contentTypes": ["newsletter issues"],
+      "active": true,
+      "subscriber": 21,
+      "newsletter": 13,
+      "joinedDate": "2021-01-01"
+    },
+    {
+      "id": "substack-twta",
+      "name": "Substack (TWTA Podcast)",
+      "handle": "thingswethrewaway",
+      "url": "https://thingswethrewaway.substack.com",
+      "icon": "SiSubstack",
+      "category": "content",
+      "purpose": "Podcast companion content, show notes, and supplementary articles for Things We Threw Away.",
+      "contentTypes": ["podcast episodes", "show notes", "articles"],
+      "active": true,
+      "joinedDate": "2025-01-01"
+    },
+    {
+      "id": "ko-fi",
+      "name": "Ko-fi",
+      "handle": "archaeoink",
+      "url": "https://ko-fi.com/archaeoink",
+      "icon": "SiKofi",
+      "category": "commerce",
+      "brand": "archaeoINK",
+      "purpose": "Community support platform for tips, commissions, and exclusive content.",
+      "contentTypes": ["tips", "commissions", "exclusive posts"],
+      "active": true,
+      "coffees received": 104,
+      "posts": 27,
+      "joinedDate": "2021-01-01"
+    },
+    {
+      "id": "redbubble",
+      "name": "Redbubble",
+      "handle": "archaeoink",
+      "url": "https://www.redbubble.com/people/archaeoink/shop?asc=u",
+      "icon": "SiRedbubble",
+      "category": "commerce",
+      "brand": "archaeoINK",
+      "purpose": "Print-on-demand shop for archaeology-themed illustration merchandise.",
+      "contentTypes": ["merchandise", "prints", "stickers"],
+      "active": true,
+      "joinedDate": "2020-01-01"
+    },
+    {
+      "id": "etsy",
+      "name": "Etsy",
+      "handle": "archaeoink",
+      "url": "https://www.etsy.com/shop/ArchaeoinkDrawings?ref=seller-platform-mcnav",
+      "icon": "SiEtsy",
+      "category": "commerce",
+      "brand": "archaeoINK",
+      "purpose": "Handmade and digital product shop for illustration prints, zines, and stationery.",
+      "contentTypes": ["prints", "zines", "digital downloads", "stationery"],
+      "active": true,
+      "joinedDate": "2021-01-01"
+    },
+    {
+      "id": "pastforwardhub",
+      "name": "PastForwardHub",
+      "handle": "pastforwardhub",
+      "url": "https://pastforwardhub.com",
+      "icon": "HiOutlineGlobeAlt",
+      "category": "community",
+      "purpose": "Co-founded global career platform connecting archaeologists with jobs, colleagues, and resources.",
+      "contentTypes": ["job listings", "resources", "community posts"],
+      "active": true,
+      "total clicks (last 12 months)": 95,
+      "Total impressions (last 12 months)": 2180,
+      "joinedDate": "2025-01-01"
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "handle": "jonaschlegel",
+      "url": "https://github.com/jonaschlegel",
+      "icon": "BsGithub",
+      "repositories_public": 11,
+      "repositories_private": 34,
+      "followers": 19,
+      "following": 79,
+      "code review (percent)": 1,
+      "pull request (percent)": 4,
+      "commits": 93,
+      "issues": 2,
+      "category": "code",
+      "purpose": "Open source projects, archaeology web tools, and portfolio code.",
+      "contentTypes": ["repositories", "contributions", "issues"],
+      "active": true,
+      "joinedDate": "2020-01-01"
+    }
+  ],
+  "guestAppearances": [
+    {
+      "id": "guest-1",
+      "title": "Archaeology after Dark EP. 86 'Visual Science Communication'",
+      "show": "Alabama Archaeological Society",
+      "date": "2025-06-19",
+      "likes": 4,
+      "views": 51,
+      "url": "https://www.youtube.com/watch?v=8IgGBZhnHy8",
+      "type": "podcast",
+      "description": "Hello, hello! In this episode, I chat with Jona Schlegel, who specializes in Visual Science Communication, and we discuss artifact sketching, GIS, and a range of other topics. For more information and to learn about ways you can get involved, please visit the links below."
+    },
+    {
+      "id": "guest-2",
+      "title": "The Graffiti Palimpsest (Part 1) - Ep 51",
+      "show": "And My Trowel",
+      "date": "2025-08-23",
+      "likes": 1,
+      "views": 21,
+      "url": "https://www.archaeologypodcastnetwork.com/trowel/51",
+      "type": "podcast",
+      "description": "This episode, Ash and Tilly have a new quest from the Karnithril Collegium of Wall Lore to document vanishing graffiti. They are joined in their quest by archaeologist and visual science communicator Jona Schlegel, who shares her insight based on her previous research into graffiti along the Danube canal in Vienna. Together the three discuss those most pressing of questions: What actually is graffiti? How can you become a field archaeologist in different countries? And will Ash finally make Tilly that cup of tea?"
+    },
+    {
+      "id": "guest-3",
+      "title": "The Graffiti Palimpsest (Part 2) - Ep 52",
+      "show": "And My Trowel",
+      "date": "2025-09-05",
+      "likes": 2,
+      "views": 20,
+      "url": "https://www.archaeologypodcastnetwork.com/trowel/52",
+      "type": "podcast",
+      "description": "In part two, Ash and Tilly continue their quest to help The Karnithril Collegium of Wall Lore record the disappearing graffiti of Thar-Vael! With expert help from archaeological illustrator and visual science communicator, Jona Schlegal, the team define the meaning of graffiti and figure out the question: are dragon’s wings the mystical equivalent of on-site sun-blocking jackets?"
+    }
+  ],
+  "current": {
+    "date": "2026-04-11",
+    "academic": {
+      "hIndex": 4,
+      "i10Index": 3,
+      "totalCitations": 58,
+      "totalPublications": 20,
+      "conferencesPresentations": 2,
+      "collaborators": 24,
+      "hIndexSource": "Google Scholar"
+    },
+    "sciComm": {
+      "podcastEpisodes": 11,
+      "podcastDownloads": 0,
+      "podcastSubscribers": 0,
+      "blogPosts": 13,
+      "blogViews": 366,
+      "newsletterSubscribers": 21,
+      "newsletterOpenRate": 0,
+      "guestAppearances": 3
+    },
+    "digitalPresence": {
+      "totalFollowers": 7374,
+      "totalPlatforms": 6,
+      "platformMetrics": [
+        {
+          "platformId": "instagram-archaeoink",
+          "followers": 2641,
+          "posts": 498,
+          "likes": 0
+        },
+        { "platformId": "bluesky", "followers": 3672, "posts": 186 },
+        { "platformId": "twitter", "followers": 322, "posts": 528 },
+        { "platformId": "linkedin", "followers": 713, "posts": 12 },
+        { "platformId": "mastodon", "followers": 24, "posts": 40 },
+        {
+          "platformId": "behance",
+          "followers": 2,
+          "views": 77
+        }
+      ]
+    },
+    "community": {
+      "eventsOrganized": 0,
+      "communityMembers": 0,
+      "mapathonParticipants": 0,
+      "kickstarterBackers": 0,
+      "kickstarterFunded": 0
+    },
+    "creative": {
+      "productsListed": 27,
+      "supporters": 104,
+      "projects": 0
+    },
+    "openSource": {
+      "publicRepos": 11,
+      "stars": 0,
+      "contributions": 93,
+      "forks": 0
+    }
+  },
+  "history": [
+    {
+      "date": "2026-01-01",
+      "academic": {
+        "hIndex": 0,
+        "i10Index": 0,
+        "totalCitations": 0,
+        "totalPublications": 2,
+        "conferencesPresentations": 1,
+        "collaborators": 0,
+        "hIndexSource": "Google Scholar"
+      },
+      "sciComm": {
+        "podcastEpisodes": 7,
+        "podcastDownloads": 0,
+        "podcastSubscribers": 0,
+        "blogPosts": 0,
+        "blogViews": 0,
+        "newsletterSubscribers": 0,
+        "newsletterOpenRate": 0,
+        "guestAppearances": 0
+      },
+      "digitalPresence": {
+        "totalFollowers": 0,
+        "totalPlatforms": 6,
+        "platformMetrics": [
+          {
+            "platformId": "instagram-archaeoink",
+            "followers": 0,
+            "posts": 0,
+            "likes": 0
+          },
+          { "platformId": "bluesky", "followers": 0, "posts": 0 },
+          { "platformId": "twitter", "followers": 0, "posts": 0 },
+          { "platformId": "linkedin", "followers": 0, "posts": 0 },
+          { "platformId": "mastodon", "followers": 0, "posts": 0 },
+          { "platformId": "behance", "followers": 0, "views": 0 }
+        ]
+      },
+      "community": {
+        "eventsOrganized": 0,
+        "communityMembers": 0,
+        "mapathonParticipants": 0,
+        "kickstarterBackers": 0,
+        "kickstarterFunded": 0
+      },
+      "creative": {
+        "productsListed": 0,
+        "supporters": 0,
+        "projects": 0
+      },
+      "openSource": {
+        "publicRepos": 0,
+        "stars": 0,
+        "contributions": 0,
+        "forks": 0
+      }
+    }
+  ],
+  "scoringThresholds": {
+    "academic": [
+      { "metric": "hIndex", "min": 0, "max": 15, "weight": 0.25 },
+      { "metric": "totalCitations", "min": 0, "max": 200, "weight": 0.2 },
+      { "metric": "totalPublications", "min": 0, "max": 20, "weight": 0.2 },
+      {
+        "metric": "conferencesPresentations",
+        "min": 0,
+        "max": 15,
+        "weight": 0.15
+      },
+      { "metric": "collaborators", "min": 0, "max": 30, "weight": 0.2 }
+    ],
+    "sciComm": [
+      { "metric": "podcastEpisodes", "min": 0, "max": 50, "weight": 0.25 },
+      { "metric": "podcastSubscribers", "min": 0, "max": 500, "weight": 0.2 },
+      { "metric": "blogPosts", "min": 0, "max": 50, "weight": 0.15 },
+      {
+        "metric": "newsletterSubscribers",
+        "min": 0,
+        "max": 1000,
+        "weight": 0.2
+      },
+      { "metric": "guestAppearances", "min": 0, "max": 10, "weight": 0.2 }
+    ],
+    "digitalPresence": [
+      { "metric": "totalFollowers", "min": 0, "max": 5000, "weight": 0.5 },
+      { "metric": "totalPlatforms", "min": 0, "max": 10, "weight": 0.5 }
+    ],
+    "community": [
+      { "metric": "eventsOrganized", "min": 0, "max": 10, "weight": 0.4 },
+      { "metric": "communityMembers", "min": 0, "max": 500, "weight": 0.6 }
+    ],
+    "creative": [
+      { "metric": "productsListed", "min": 0, "max": 50, "weight": 0.4 },
+      { "metric": "supporters", "min": 0, "max": 100, "weight": 0.3 },
+      { "metric": "projects", "min": 0, "max": 20, "weight": 0.3 }
+    ],
+    "openSource": [
+      { "metric": "publicRepos", "min": 0, "max": 30, "weight": 0.3 },
+      { "metric": "stars", "min": 0, "max": 100, "weight": 0.3 },
+      { "metric": "contributions", "min": 0, "max": 500, "weight": 0.25 },
+      { "metric": "forks", "min": 0, "max": 50, "weight": 0.15 }
+    ]
+  }
+}
