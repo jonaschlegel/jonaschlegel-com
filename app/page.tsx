@@ -88,8 +88,6 @@ export default function HomePage() {
         </div>
         <IllustrationBand seed={1} />
         <ClientLogos />
-        <Services />
-
         <RecentActivity />
         <BlogPreview />
         <Banner />
