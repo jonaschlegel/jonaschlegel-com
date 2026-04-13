@@ -110,6 +110,7 @@ const MethodologySection: FC<MethodologySectionProps> = ({
                 day: 'numeric',
                 month: 'long',
                 year: 'numeric',
+                timeZone: 'UTC',
               })}
             </time>
             .

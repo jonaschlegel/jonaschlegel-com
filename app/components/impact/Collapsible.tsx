@@ -1,6 +1,6 @@
 'use client';
 
-import { type FC, type ReactNode, useState } from 'react';
+import { type FC, type ReactNode, useId, useState } from 'react';
 
 interface CollapsibleProps {
   title: string;
@@ -17,12 +17,15 @@ const Collapsible: FC<CollapsibleProps> = ({
   children,
 }) => {
   const [open, setOpen] = useState(defaultOpen);
+  const panelId = useId();
 
   return (
     <div className="rounded-lg border border-gray-200">
       <button
         type="button"
         onClick={() => setOpen(!open)}
+        aria-expanded={open}
+        aria-controls={panelId}
         className="flex w-full items-center justify-between px-5 py-4 text-left transition-colors hover:bg-gray-50"
       >
         <span className="text-sm font-semibold text-gray-700">
@@ -47,9 +50,14 @@ const Collapsible: FC<CollapsibleProps> = ({
           />
         </svg>
       </button>
-      {open && (
-        <div className="border-t border-gray-100 px-5 py-4">{children}</div>
-      )}
+      <div
+        id={panelId}
+        role="region"
+        hidden={!open}
+        className="border-t border-gray-100 px-5 py-4"
+      >
+        {children}
+      </div>
     </div>
   );
 };
