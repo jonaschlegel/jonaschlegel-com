@@ -159,35 +159,256 @@ export function getGrowthRate(
   return Math.round(((current - previous) / previous) * 100);
 }
 
+// ---------------------------------------------------------------------------
+// Cross-platform academic comparison
+// ---------------------------------------------------------------------------
+
+/** Per-platform citation/h-index data extracted from the raw platform objects. */
+export interface AcademicPlatformMetric {
+  platformId: string;
+  platformName: string;
+  url: string;
+  hIndex?: number;
+  citations?: number;
+  publications?: number;
+  extraMetrics: { label: string; value: number | string }[];
+}
+
+/** Helper to safely read a numeric field from a platform object. */
+function numField(
+  platform: SocialPlatformData,
+  ...keys: string[]
+): number | undefined {
+  for (const key of keys) {
+    const v = platform[key];
+    if (typeof v === 'number') return v;
+  }
+  return undefined;
+}
+
+/** Extract comparable academic metrics from every academic platform. */
+export function getAcademicPlatformComparison(
+  platforms: SocialPlatformData[],
+): AcademicPlatformMetric[] {
+  return platforms
+    .filter((p) => p.category === 'academic')
+    .map((p) => {
+      const extra: { label: string; value: number | string }[] = [];
+
+      const views = numField(p, 'Public Views', 'total views');
+      if (views != null) extra.push({ label: 'Views', value: views });
+
+      const coAuthors = numField(p, 'Co-authors', 'co-authors');
+      if (coAuthors != null)
+        extra.push({ label: 'Co-authors', value: coAuthors });
+
+      const mentions = numField(p, 'Mentions');
+      if (mentions != null) extra.push({ label: 'Mentions', value: mentions });
+
+      const followers = numField(p, 'Followers', 'followers');
+      if (followers != null)
+        extra.push({ label: 'Followers', value: followers });
+
+      const oa = numField(p, 'open access (percentage)');
+      if (oa != null) extra.push({ label: 'Open Access', value: `${oa}%` });
+
+      const hic = numField(p, 'Highly Influential Citations');
+      if (hic != null) extra.push({ label: 'Highly Influential', value: hic });
+
+      const citRecv = numField(p, 'Citation statement received');
+      const citGiven = numField(p, 'Citation statement given');
+      if (citRecv != null)
+        extra.push({ label: 'Citations Received', value: citRecv });
+      if (citGiven != null)
+        extra.push({ label: 'Citations Given', value: citGiven });
+
+      const works = numField(p, 'works');
+      if (works != null) extra.push({ label: 'Works', value: works });
+
+      return {
+        platformId: p.id,
+        platformName: p.name,
+        url: p.url,
+        hIndex: numField(p, 'h-index', 'scholar h-index'),
+        citations: numField(
+          p,
+          'citations',
+          'sum of times cited',
+          'scholar citations',
+        ),
+        publications: numField(
+          p,
+          'publications',
+          'documents',
+          'total documents',
+          'total publications',
+          'works',
+          'scopus publications',
+        ),
+        extraMetrics: extra,
+      };
+    })
+    .filter(
+      (m) =>
+        m.hIndex != null ||
+        m.citations != null ||
+        m.publications != null ||
+        m.extraMetrics.length > 0,
+    );
+}
+
+// ---------------------------------------------------------------------------
+// Derived / aggregate statistics
+// ---------------------------------------------------------------------------
+
+export interface DerivedStats {
+  /** Average citations per publication (Google Scholar). */
+  citationsPerPublication: number;
+  /** Total academic profile views (Academia.edu + Loop + ...). */
+  totalAcademicViews: number;
+  /** Open access percentage (from ImpactStory). */
+  openAccessPercent: number | null;
+  /** Total social media posts across all platforms. */
+  totalPosts: number;
+  /** Total web impressions across all websites (last 12 months). */
+  totalWebImpressions: number;
+  /** Total web clicks across all websites (last 12 months). */
+  totalWebClicks: number;
+  /** Largest co-author count across platforms. */
+  coAuthorNetworkSize: number;
+  /** Total guest appearance views. */
+  guestAppearanceViews: number;
+  /** Total guest appearance likes. */
+  guestAppearanceLikes: number;
+  /** Number of academic databases with a profile. */
+  academicProfileCount: number;
+  /** Number of platforms where h-index is tracked. */
+  hIndexSourceCount: number;
+  /** Citations per publication ratio. */
+  contentToFollowerRatio: number;
+}
+
+/** Compute aggregate derived statistics from the full impact data. */
+export function computeDerivedStats(data: ImpactData): DerivedStats {
+  const { platforms, current, guestAppearances } = data;
+
+  const citPerPub =
+    current.academic.totalPublications > 0
+      ? Math.round(
+          (current.academic.totalCitations /
+            current.academic.totalPublications) *
+            10,
+        ) / 10
+      : 0;
+
+  let academicViews = 0;
+  for (const p of platforms) {
+    if (p.category === 'academic') {
+      academicViews += numField(p, 'Public Views', 'total views') ?? 0;
+    }
+  }
+
+  const impactstory = platforms.find((p) => p.id === 'impactstory');
+  const oaPercent = impactstory
+    ? (numField(impactstory, 'open access (percentage)') ?? null)
+    : null;
+
+  let totalPosts = 0;
+  for (const pm of current.digitalPresence.platformMetrics) {
+    totalPosts += pm.posts ?? 0;
+  }
+
+  let totalImpressions = 0;
+  let totalClicks = 0;
+  for (const p of platforms) {
+    totalImpressions += numField(p, 'Total impressions (last 12 months)') ?? 0;
+    totalClicks += numField(p, 'total clicks (last 12 months)') ?? 0;
+  }
+
+  let maxCoAuthors = 0;
+  for (const p of platforms) {
+    const ca = numField(p, 'Co-authors', 'co-authors') ?? 0;
+    if (ca > maxCoAuthors) maxCoAuthors = ca;
+  }
+
+  let gaViews = 0;
+  let gaLikes = 0;
+  for (const ga of guestAppearances) {
+    gaViews += ga.views ?? 0;
+    gaLikes += ga.likes ?? 0;
+  }
+
+  const academicPlatforms = platforms.filter((p) => p.category === 'academic');
+  let hIndexSources = 0;
+  for (const p of academicPlatforms) {
+    if (numField(p, 'h-index', 'scholar h-index') != null) hIndexSources++;
+  }
+
+  const contentRatio =
+    current.digitalPresence.totalFollowers > 0
+      ? Math.round(
+          (totalPosts / current.digitalPresence.totalFollowers) * 100,
+        ) / 100
+      : 0;
+
+  return {
+    citationsPerPublication: citPerPub,
+    totalAcademicViews: academicViews,
+    openAccessPercent: oaPercent,
+    totalPosts,
+    totalWebImpressions: totalImpressions,
+    totalWebClicks: totalClicks,
+    coAuthorNetworkSize: maxCoAuthors,
+    guestAppearanceViews: gaViews,
+    guestAppearanceLikes: gaLikes,
+    academicProfileCount: academicPlatforms.length,
+    hIndexSourceCount: hIndexSources,
+    contentToFollowerRatio: contentRatio,
+  };
+}
+
+// ---------------------------------------------------------------------------
+// Headline stats
+// ---------------------------------------------------------------------------
+
 /** Get headline stats for the summary banner. */
 export function getHeadlineStats(
   snapshot: ImpactSnapshot,
+  derived: DerivedStats,
   platformCount: number,
-): { name: string; number: string }[] {
+): { name: string; number: string; detail?: string }[] {
   return [
     {
       name: 'Publications',
       number: String(snapshot.academic.totalPublications),
+      detail: `${derived.citationsPerPublication} citations per paper`,
     },
     {
       name: 'Citations',
       number: String(snapshot.academic.totalCitations),
+      detail: `h-index ${snapshot.academic.hIndex} across ${derived.hIndexSourceCount} databases`,
     },
     {
-      name: 'h-index',
-      number: String(snapshot.academic.hIndex),
+      name: 'Total Followers',
+      number: snapshot.digitalPresence.totalFollowers.toLocaleString(),
+      detail: `${derived.totalPosts.toLocaleString()} posts published`,
     },
     {
-      name: 'Podcast Episodes',
-      number: String(snapshot.sciComm.podcastEpisodes),
+      name: 'Web Impressions',
+      number: derived.totalWebImpressions.toLocaleString(),
+      detail: `${derived.totalWebClicks.toLocaleString()} clicks (last 12 months)`,
     },
     {
-      name: 'Total Reach',
-      number: getTotalReach(snapshot).toLocaleString(),
+      name: 'Academic Views',
+      number: derived.totalAcademicViews.toLocaleString(),
+      detail: derived.openAccessPercent
+        ? `${derived.openAccessPercent}% open access`
+        : undefined,
     },
     {
       name: 'Platforms',
       number: String(platformCount),
+      detail: `${derived.academicProfileCount} academic databases`,
     },
   ];
 }

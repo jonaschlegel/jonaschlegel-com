@@ -1,9 +1,11 @@
 import type { FC } from 'react';
+import type { DerivedStats } from '../../data/impact-utils';
 
 interface SciCommSectionProps {
   sciComm: SciCommMetricsSnapshot;
   guestAppearances: GuestAppearance[];
   platforms: SocialPlatformData[];
+  derived: DerivedStats;
 }
 
 /** Science communication metrics — podcast, blog, newsletter, guest appearances. */
@@ -11,6 +13,7 @@ const SciCommSection: FC<SciCommSectionProps> = ({
   sciComm,
   guestAppearances,
   platforms,
+  derived,
 }) => {
   const contentPlatforms = platforms.filter((p) => p.category === 'content');
 
@@ -91,6 +94,29 @@ const SciCommSection: FC<SciCommSectionProps> = ({
 
       {/* Content platforms */}
       <h3 className="mb-4 text-lg font-semibold">Content Platforms</h3>
+
+      {/* Web presence aggregate */}
+      {(derived.totalWebImpressions > 0 || derived.totalWebClicks > 0) && (
+        <div className="mb-4 grid gap-4 sm:grid-cols-2">
+          <div className="flex items-center justify-between rounded-lg border border-primary-teal/20 bg-primary-teal/5 p-4">
+            <span className="text-sm text-gray-700">
+              Total Web Impressions (12 mo)
+            </span>
+            <span className="font-merriweather text-xl font-bold text-primary-teal">
+              {derived.totalWebImpressions.toLocaleString()}
+            </span>
+          </div>
+          <div className="flex items-center justify-between rounded-lg border border-primary-teal/20 bg-primary-teal/5 p-4">
+            <span className="text-sm text-gray-700">
+              Total Web Clicks (12 mo)
+            </span>
+            <span className="font-merriweather text-xl font-bold text-primary-teal">
+              {derived.totalWebClicks.toLocaleString()}
+            </span>
+          </div>
+        </div>
+      )}
+
       <div className="mb-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {contentPlatforms.map((platform) => (
           <a
@@ -124,6 +150,8 @@ const SciCommSection: FC<SciCommSectionProps> = ({
       <p className="mb-4 text-sm text-gray-600">
         Invitations to speak on other podcasts, panels, and events — a signal of
         external recognition and expertise.
+        {derived.guestAppearanceViews > 0 &&
+          ` Combined reach: ${derived.guestAppearanceViews.toLocaleString()} views, ${derived.guestAppearanceLikes} likes.`}
       </p>
       {guestAppearances.length > 0 && (
         <div className="space-y-3">
@@ -132,13 +160,23 @@ const SciCommSection: FC<SciCommSectionProps> = ({
               key={ga.id}
               className="flex items-start justify-between rounded-lg border border-gray-200 p-4"
             >
-              <div>
+              <div className="flex-1">
                 <h4 className="font-semibold">{ga.title}</h4>
                 <p className="text-sm text-gray-500">
                   {ga.show} • <span className="capitalize">{ga.type}</span>
                 </p>
                 {ga.description && (
                   <p className="mt-1 text-xs text-gray-500">{ga.description}</p>
+                )}
+                {(ga.views != null || ga.likes != null) && (
+                  <p className="mt-1 text-xs text-primary-teal">
+                    {ga.views != null && (
+                      <span className="mr-3">
+                        {ga.views.toLocaleString()} views
+                      </span>
+                    )}
+                    {ga.likes != null && <span>{ga.likes} likes</span>}
+                  </p>
                 )}
               </div>
               <div className="flex items-center gap-2">

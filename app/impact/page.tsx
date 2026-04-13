@@ -12,6 +12,8 @@ import SciCommSection from '../components/impact/SciCommSection';
 import SocialGrid from '../components/impact/SocialGrid';
 import {
   calculateDimensionScores,
+  computeDerivedStats,
+  getAcademicPlatformComparison,
   getHeadlineStats,
 } from '../data/impact-utils';
 import { generateImpactOGImageUrl } from '../lib/og-utils';
@@ -55,7 +57,9 @@ const ImpactPage = async () => {
     ? calculateDimensionScores(previousSnapshot, scoringThresholds)
     : undefined;
 
-  const headlineStats = getHeadlineStats(current, platforms.length);
+  const derived = computeDerivedStats(impactData);
+  const platformComparison = getAcademicPlatformComparison(platforms);
+  const headlineStats = getHeadlineStats(current, derived, platforms.length);
   const githubPlatform = platforms.find((p) => p.id === 'github');
 
   const structuredData = {
@@ -134,13 +138,19 @@ const ImpactPage = async () => {
         <ImpactRadar scores={scores} previousScores={previousScores} />
 
         {/* Academic research */}
-        <AcademicSection academic={current.academic} platforms={platforms} />
+        <AcademicSection
+          academic={current.academic}
+          platforms={platforms}
+          platformComparison={platformComparison}
+          derived={derived}
+        />
 
         {/* Science communication */}
         <SciCommSection
           sciComm={current.sciComm}
           guestAppearances={guestAppearances}
           platforms={platforms}
+          derived={derived}
         />
 
         {/* Social media */}

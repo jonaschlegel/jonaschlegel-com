@@ -17,6 +17,8 @@ type SocialPlatformData = {
   contentTypes: string[];
   active: boolean;
   joinedDate?: string;
+  /** Arbitrary platform-specific metrics (citations, h-index, views, etc.). */
+  [key: string]: unknown;
 };
 
 /** Time-varying metrics for a single platform. */
@@ -52,6 +54,8 @@ type GuestAppearance = {
   url?: string;
   type: 'podcast' | 'conference' | 'interview' | 'webinar' | 'panel';
   description?: string;
+  likes?: number;
+  views?: number;
 };
 
 /** Academic metrics aggregated across platforms. */

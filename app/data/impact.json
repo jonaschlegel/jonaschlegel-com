@@ -418,7 +418,7 @@
       "description": "This episode, Ash and Tilly have a new quest from the Karnithril Collegium of Wall Lore to document vanishing graffiti. They are joined in their quest by archaeologist and visual science communicator Jona Schlegel, who shares her insight based on her previous research into graffiti along the Danube canal in Vienna. Together the three discuss those most pressing of questions: What actually is graffiti? How can you become a field archaeologist in different countries? And will Ash finally make Tilly that cup of tea?"
     },
     {
-      "id": "guest-2",
+      "id": "guest-3",
       "title": "The Graffiti Palimpsest (Part 2) - Ep 52",
       "show": "And My Trowel",
       "date": "2025-09-05",
@@ -432,10 +432,10 @@
   "current": {
     "date": "2026-04-11",
     "academic": {
-      "hIndex": 0,
-      "i10Index": 0,
-      "totalCitations": 0,
-      "totalPublications": 3,
+      "hIndex": 4,
+      "i10Index": 3,
+      "totalCitations": 58,
+      "totalPublications": 20,
       "conferencesPresentations": 2,
       "hIndexSource": "Google Scholar"
     },
@@ -444,13 +444,13 @@
       "podcastDownloads": 0,
       "podcastSubscribers": 0,
       "blogPosts": 0,
-      "blogViews": 0,
-      "newsletterSubscribers": 0,
+      "blogViews": 366,
+      "newsletterSubscribers": 21,
       "newsletterOpenRate": 0,
-      "guestAppearances": 1
+      "guestAppearances": 3
     },
     "digitalPresence": {
-      "totalFollowers": 0,
+      "totalFollowers": 7374,
       "totalPlatforms": 6,
       "platformMetrics": [
         {
@@ -466,29 +466,27 @@
         {
           "platformId": "behance",
           "followers": 2,
-          "following": 7,
-          "views": 77,
-          "appreciations": 6
+          "views": 77
         }
       ]
     },
     "community": {
       "eventsOrganized": 0,
       "communityMembers": 0,
-      "collaborators": 0,
+      "collaborators": 24,
       "mapathonParticipants": 0,
       "kickstarterBackers": 0,
       "kickstarterFunded": 0
     },
     "creative": {
-      "productsListed": 0,
-      "supporters": 0,
+      "productsListed": 27,
+      "supporters": 104,
       "projects": 0
     },
     "openSource": {
-      "publicRepos": 0,
+      "publicRepos": 11,
       "stars": 0,
-      "contributions": 0,
+      "contributions": 93,
       "forks": 0
     }
   },
