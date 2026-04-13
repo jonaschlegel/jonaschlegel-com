@@ -70,3 +70,10 @@ export function generateLegalOGImageUrl(pageTitle: string): string {
     type: 'legal',
   });
 }
+
+/**
+ * Generate OG image URL for the Impact dashboard page
+ */
+export function generateImpactOGImageUrl(): string {
+  return '/api/og/impact';
+}
