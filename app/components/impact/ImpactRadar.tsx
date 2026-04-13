@@ -93,11 +93,11 @@ const ImpactRadar: FC<RadarProps> = ({ scores }) => {
           ))}
 
           {/* Axis lines */}
-          {[...Array(total).keys()].map((i) => {
+          {scores.map((s, i) => {
             const { x, y } = polarToCartesian(10, i, total);
             return (
               <line
-                key={`axis-${scores[i].dimension}`}
+                key={`axis-${s.dimension}`}
                 x1={CENTER_X}
                 y1={CENTER_Y}
                 x2={x}
