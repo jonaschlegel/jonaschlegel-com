@@ -54,6 +54,12 @@ const AcademicSection: FC<AcademicSectionProps> = ({
       value: academic.conferencesPresentations,
       explanation: 'Talks, posters, and panels at academic conferences.',
     },
+    {
+      label: 'Co-authors',
+      value: academic.collaborators,
+      explanation:
+        'Co-author network size across academic platforms (Academia.edu).',
+    },
   ].filter((m) => m.value > 0);
 
   // Derived insights — only show non-zero
@@ -65,10 +71,6 @@ const AcademicSection: FC<AcademicSectionProps> = ({
     derived.totalAcademicViews > 0 && {
       label: 'Profile Views',
       value: derived.totalAcademicViews.toLocaleString(),
-    },
-    derived.coAuthorNetworkSize > 0 && {
-      label: 'Co-author Network',
-      value: String(derived.coAuthorNetworkSize),
     },
   ].filter(Boolean) as { label: string; value: string }[];
 

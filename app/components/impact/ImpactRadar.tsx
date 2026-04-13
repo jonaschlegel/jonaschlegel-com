@@ -4,11 +4,11 @@ import { type FC, useState } from 'react';
 
 interface RadarProps {
   scores: DimensionScore[];
-  previousScores?: DimensionScore[];
 }
 
 const RADIUS = 120;
-const CENTER = 150;
+const CENTER_X = 200;
+const CENTER_Y = 180;
 
 /** Convert a score (0-10) and axis index to SVG coordinates. */
 function polarToCartesian(
@@ -19,8 +19,8 @@ function polarToCartesian(
   const angle = (Math.PI * 2 * index) / total - Math.PI / 2;
   const r = (score / 10) * RADIUS;
   return {
-    x: CENTER + r * Math.cos(angle),
-    y: CENTER + r * Math.sin(angle),
+    x: CENTER_X + r * Math.cos(angle),
+    y: CENTER_Y + r * Math.sin(angle),
   };
 }
 
@@ -34,8 +34,20 @@ function buildPolygon(scores: DimensionScore[], total: number): string {
     .join(' ');
 }
 
+/** Get text-anchor for a label based on its position around the radar. */
+function getLabelAnchor(
+  index: number,
+  total: number,
+): 'start' | 'middle' | 'end' {
+  const angle = (360 * index) / total - 90; // degrees, -90 = top
+  const norm = ((angle % 360) + 360) % 360;
+  if (norm > 30 && norm < 150) return 'start'; // right side
+  if (norm > 210 && norm < 330) return 'end'; // left side
+  return 'middle'; // top / bottom
+}
+
 /** SVG radar/spider chart showing 6 impact dimensions. */
-const ImpactRadar: FC<RadarProps> = ({ scores, previousScores }) => {
+const ImpactRadar: FC<RadarProps> = ({ scores }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const total = scores.length;
 
@@ -59,7 +71,7 @@ const ImpactRadar: FC<RadarProps> = ({ scores, previousScores }) => {
 
       <div className="mx-auto max-w-lg">
         <svg
-          viewBox="0 0 300 300"
+          viewBox="0 0 400 370"
           className="w-full"
           role="img"
           aria-label="Radar chart showing impact scores across 6 dimensions"
@@ -84,8 +96,8 @@ const ImpactRadar: FC<RadarProps> = ({ scores, previousScores }) => {
             return (
               <line
                 key={`axis-${scores[i].dimension}`}
-                x1={CENTER}
-                y1={CENTER}
+                x1={CENTER_X}
+                y1={CENTER_Y}
                 x2={x}
                 y2={y}
                 stroke="#d1d5db"
@@ -93,17 +105,6 @@ const ImpactRadar: FC<RadarProps> = ({ scores, previousScores }) => {
               />
             );
           })}
-
-          {/* Previous period polygon */}
-          {previousScores && (
-            <polygon
-              points={buildPolygon(previousScores, total)}
-              fill="rgba(66, 203, 179, 0.1)"
-              stroke="#42CBB3"
-              strokeWidth="1"
-              strokeDasharray="4 2"
-            />
-          )}
 
           {/* Current polygon */}
           <polygon
@@ -116,8 +117,9 @@ const ImpactRadar: FC<RadarProps> = ({ scores, previousScores }) => {
           {/* Data points and labels */}
           {scores.map((s, i) => {
             const { x, y } = polarToCartesian(s.score, i, total);
-            const labelPos = polarToCartesian(11.5, i, total);
+            const labelPos = polarToCartesian(11.8, i, total);
             const isHovered = hoveredIndex === i;
+            const anchor = getLabelAnchor(i, total);
 
             return (
               <g
@@ -138,9 +140,9 @@ const ImpactRadar: FC<RadarProps> = ({ scores, previousScores }) => {
                 <text
                   x={labelPos.x}
                   y={labelPos.y}
-                  textAnchor="middle"
+                  textAnchor={anchor}
                   dominantBaseline="middle"
-                  className="fill-gray-700 text-[8px] font-medium"
+                  className="fill-gray-700 text-[9px] font-medium"
                 >
                   {s.label}
                 </text>
@@ -158,43 +160,6 @@ const ImpactRadar: FC<RadarProps> = ({ scores, previousScores }) => {
             );
           })}
         </svg>
-
-        {/* Legend */}
-        <div className="mt-4 flex items-center justify-center gap-6 text-xs text-gray-500">
-          <span className="flex items-center gap-1.5">
-            <span className="inline-block h-0.5 w-4 bg-primary-green" />
-            Current
-          </span>
-          {previousScores && (
-            <span className="flex items-center gap-1.5">
-              <span className="inline-block h-0.5 w-4 border-t border-dashed border-primary-teal" />
-              Previous
-            </span>
-          )}
-        </div>
-      </div>
-
-      {/* Dimension breakdown — compact list instead of cards */}
-      <div className="mx-auto mt-6 max-w-2xl space-y-2">
-        {scores.map((s) => (
-          <div
-            key={s.dimension}
-            className="flex items-center gap-3 rounded px-3 py-2"
-          >
-            <span className="w-36 shrink-0 text-sm font-medium text-gray-700">
-              {s.label}
-            </span>
-            <div className="h-1.5 flex-1 rounded-full bg-gray-100">
-              <div
-                className="h-1.5 rounded-full bg-primary-green transition-all duration-500"
-                style={{ width: `${(s.score / 10) * 100}%` }}
-              />
-            </div>
-            <span className="w-10 text-right font-merriweather text-sm font-bold text-primary-green">
-              {s.score}
-            </span>
-          </div>
-        ))}
       </div>
     </section>
   );

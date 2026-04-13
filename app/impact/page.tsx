@@ -4,15 +4,16 @@ import type { Metadata } from 'next';
 import AcademicSection from '../components/impact/AcademicSection';
 import CommunitySection from '../components/impact/CommunitySection';
 import CreativeSection from '../components/impact/CreativeSection';
-import GrowthTimeline from '../components/impact/GrowthTimeline';
 import ImpactRadar from '../components/impact/ImpactRadar';
 import ImpactSummary from '../components/impact/ImpactSummary';
+import MethodologySection from '../components/impact/MethodologySection';
 import OpenSourceSection from '../components/impact/OpenSourceSection';
 import SciCommSection from '../components/impact/SciCommSection';
 import SocialGrid from '../components/impact/SocialGrid';
 import {
   calculateDimensionScores,
   computeDerivedStats,
+  derivePublicationCounts,
   getAcademicPlatformComparison,
   getHeadlineStats,
 } from '../data/impact-utils';
@@ -42,24 +43,32 @@ export const metadata: Metadata = generateSEOMetadata({
 /** Impact dashboard page showing multi-dimensional academic and professional impact. */
 const ImpactPage = async () => {
   const dataPath = path.join(process.cwd(), 'app/data/impact.json');
-  const impactData: ImpactData = JSON.parse(
-    await fs.readFile(dataPath, 'utf8'),
-  );
+  const pubsPath = path.join(process.cwd(), 'app/data/cv/publications.json');
+  const [impactRaw, pubsRaw] = await Promise.all([
+    fs.readFile(dataPath, 'utf8'),
+    fs.readFile(pubsPath, 'utf8'),
+  ]);
+  const impactData: ImpactData = JSON.parse(impactRaw);
+  const publications: { type: string }[] = JSON.parse(pubsRaw);
 
   const { current, history, platforms, guestAppearances, scoringThresholds } =
     impactData;
 
-  const scores = calculateDimensionScores(current, scoringThresholds);
+  // Derive counts from publications.json and override snapshot values
+  const pubCounts = derivePublicationCounts(publications);
+  current.sciComm.podcastEpisodes = pubCounts.podcastEpisodes;
+  current.academic.conferencesPresentations = pubCounts.conferencePresentations;
 
-  const previousSnapshot =
-    history.length > 0 ? history[history.length - 1] : undefined;
-  const previousScores = previousSnapshot
-    ? calculateDimensionScores(previousSnapshot, scoringThresholds)
-    : undefined;
+  const scores = calculateDimensionScores(current, scoringThresholds);
 
   const derived = computeDerivedStats(impactData);
   const platformComparison = getAcademicPlatformComparison(platforms);
-  const headlineStats = getHeadlineStats(current, derived, platforms.length);
+  const headlineStats = getHeadlineStats(
+    current,
+    derived,
+    platforms.length,
+    pubCounts,
+  );
   const githubPlatform = platforms.find((p) => p.id === 'github');
 
   const structuredData = {
@@ -135,7 +144,7 @@ const ImpactPage = async () => {
         <ImpactSummary stats={headlineStats} />
 
         {/* Radar chart */}
-        <ImpactRadar scores={scores} previousScores={previousScores} />
+        <ImpactRadar scores={scores} />
 
         {/* Academic research */}
         <AcademicSection
@@ -171,43 +180,11 @@ const ImpactPage = async () => {
           platform={githubPlatform}
         />
 
-        {/* Growth timeline */}
-        <GrowthTimeline history={history} current={current} />
-
-        {/* Methodology note */}
-        <section className="mx-auto max-w-2xl rounded-lg border border-gray-200 p-6">
-          <h2 className="mb-3 font-merriweather text-lg font-semibold">
-            Methodology & Transparency
-          </h2>
-          <div className="space-y-2 text-sm leading-relaxed text-gray-600">
-            <p>
-              All metrics are manually collected quarterly from each platform.
-              The radar chart normalises each dimension to a 0–10 scale using
-              configurable thresholds appropriate for early-to-mid career
-              researchers in archaeology and digital humanities.
-            </p>
-            <p>
-              Citation metrics are field-dependent — archaeology and humanities
-              typically have significantly lower counts than STEM fields. An
-              h-index of 5 in archaeology represents a different level of impact
-              than an h-index of 5 in physics or medicine.
-            </p>
-            <p>
-              This dashboard follows the spirit of the{' '}
-              <a
-                href="https://sfdora.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary-green hover:underline"
-              >
-                San Francisco Declaration on Research Assessment (DORA)
-              </a>
-              , which recommends against relying on journal-level metrics and
-              advocates for considering the value and impact of all research
-              outputs.
-            </p>
-          </div>
-        </section>
+        {/* Methodology & transparency */}
+        <MethodologySection
+          thresholds={scoringThresholds}
+          lastUpdated={impactData.lastUpdated}
+        />
       </div>
     </>
   );

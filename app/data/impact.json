@@ -215,7 +215,7 @@
       "scopus publications": 3,
       "scholar citations": 58,
       "scholar h-index": 4,
-      "scholar i10-index": 13,
+      "scholar i10-index": 3,
       "active": true
     },
     {
@@ -437,13 +437,14 @@
       "totalCitations": 58,
       "totalPublications": 20,
       "conferencesPresentations": 2,
+      "collaborators": 24,
       "hIndexSource": "Google Scholar"
     },
     "sciComm": {
       "podcastEpisodes": 11,
       "podcastDownloads": 0,
       "podcastSubscribers": 0,
-      "blogPosts": 0,
+      "blogPosts": 13,
       "blogViews": 366,
       "newsletterSubscribers": 21,
       "newsletterOpenRate": 0,
@@ -473,7 +474,6 @@
     "community": {
       "eventsOrganized": 0,
       "communityMembers": 0,
-      "collaborators": 24,
       "mapathonParticipants": 0,
       "kickstarterBackers": 0,
       "kickstarterFunded": 0
@@ -499,6 +499,7 @@
         "totalCitations": 0,
         "totalPublications": 2,
         "conferencesPresentations": 1,
+        "collaborators": 0,
         "hIndexSource": "Google Scholar"
       },
       "sciComm": {
@@ -531,7 +532,6 @@
       "community": {
         "eventsOrganized": 0,
         "communityMembers": 0,
-        "collaborators": 0,
         "mapathonParticipants": 0,
         "kickstarterBackers": 0,
         "kickstarterFunded": 0
@@ -551,15 +551,16 @@
   ],
   "scoringThresholds": {
     "academic": [
-      { "metric": "hIndex", "min": 0, "max": 15, "weight": 0.3 },
-      { "metric": "totalCitations", "min": 0, "max": 200, "weight": 0.25 },
-      { "metric": "totalPublications", "min": 0, "max": 20, "weight": 0.25 },
+      { "metric": "hIndex", "min": 0, "max": 15, "weight": 0.25 },
+      { "metric": "totalCitations", "min": 0, "max": 200, "weight": 0.2 },
+      { "metric": "totalPublications", "min": 0, "max": 20, "weight": 0.2 },
       {
         "metric": "conferencesPresentations",
         "min": 0,
         "max": 15,
-        "weight": 0.2
-      }
+        "weight": 0.15
+      },
+      { "metric": "collaborators", "min": 0, "max": 30, "weight": 0.2 }
     ],
     "sciComm": [
       { "metric": "podcastEpisodes", "min": 0, "max": 50, "weight": 0.25 },
@@ -578,9 +579,8 @@
       { "metric": "totalPlatforms", "min": 0, "max": 10, "weight": 0.5 }
     ],
     "community": [
-      { "metric": "eventsOrganized", "min": 0, "max": 10, "weight": 0.3 },
-      { "metric": "communityMembers", "min": 0, "max": 500, "weight": 0.4 },
-      { "metric": "collaborators", "min": 0, "max": 20, "weight": 0.3 }
+      { "metric": "eventsOrganized", "min": 0, "max": 10, "weight": 0.4 },
+      { "metric": "communityMembers", "min": 0, "max": 500, "weight": 0.6 }
     ],
     "creative": [
       { "metric": "productsListed", "min": 0, "max": 50, "weight": 0.4 },

@@ -65,6 +65,7 @@ type AcademicMetricsSnapshot = {
   totalCitations: number;
   totalPublications: number;
   conferencesPresentations: number;
+  collaborators: number;
   /** Source platform for each metric where applicable. */
   hIndexSource: string;
 };
@@ -85,7 +86,6 @@ type SciCommMetricsSnapshot = {
 type CommunityMetricsSnapshot = {
   eventsOrganized: number;
   communityMembers: number;
-  collaborators: number;
   mapathonParticipants?: number;
   kickstarterBackers?: number;
   kickstarterFunded?: number;

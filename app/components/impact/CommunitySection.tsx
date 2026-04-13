@@ -23,10 +23,6 @@ const CommunitySection: FC<CommunitySectionProps> = ({
       label: 'Community Members',
       value: community.communityMembers,
     },
-    community.collaborators > 0 && {
-      label: 'Collaborators',
-      value: community.collaborators,
-    },
     (community.mapathonParticipants ?? 0) > 0 && {
       label: 'Mapathon Participants',
       value: community.mapathonParticipants,

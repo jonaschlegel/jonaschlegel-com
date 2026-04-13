@@ -34,10 +34,11 @@
  *
  * | Dimension | Metric | Max for 10 | Weight | Rationale |
  * |-----------|--------|-----------|--------|-----------|
- * | Academic | h-index | 15 | 0.30 | ~15 is strong for mid-career archaeology |
- * | Academic | citations | 200 | 0.25 | Humanities citation rates are lower than STEM |
- * | Academic | publications | 20 | 0.25 | ~20 papers = solid early-mid career |
- * | Academic | conferences | 15 | 0.20 | Active conference participation |
+ * | Academic | h-index | 15 | 0.25 | ~15 is strong for mid-career archaeology |
+ * | Academic | citations | 200 | 0.20 | Humanities citation rates are lower than STEM |
+ * | Academic | publications | 20 | 0.20 | ~20 papers = solid early-mid career |
+ * | Academic | conferences | 15 | 0.15 | Active conference participation |
+ * | Academic | collaborators | 30 | 0.20 | Co-author network size across platforms |
  * | SciComm | podcast episodes | 50 | 0.25 | ~1 year of weekly episodes |
  * | SciComm | podcast subs | 500 | 0.20 | Niche archaeology audience |
  * | SciComm | blog posts | 50 | 0.15 | Consistent long-form writing |
@@ -45,9 +46,8 @@
  * | SciComm | guest appearances | 10 | 0.20 | Shows external recognition |
  * | Digital | total followers | 5000 | 0.50 | Combined across all platforms |
  * | Digital | platforms active | 10 | 0.50 | Breadth of presence |
- * | Community | events | 10 | 0.30 | Mapathons, workshops, etc. |
- * | Community | members | 500 | 0.40 | PastForwardHub + community size |
- * | Community | collaborators | 20 | 0.30 | Active project collaborators |
+ * | Community | events | 10 | 0.40 | Mapathons, workshops, etc. |
+ * | Community | members | 500 | 0.60 | PastForwardHub + community size |
  * | Creative | products | 50 | 0.40 | Across Ko-fi, Redbubble, Etsy |
  * | Creative | supporters | 100 | 0.30 | Paying supporters/customers |
  * | Creative | projects | 20 | 0.30 | Behance + portfolio projects |
@@ -61,7 +61,7 @@ const DIMENSION_META: Record<string, { label: string; description: string }> = {
   academic: {
     label: 'Academic Research',
     description:
-      'Publications, citations, h-index, and conference presentations across Google Scholar, Scopus, and other databases.',
+      'Publications, citations, h-index, conference presentations, and co-author network across Google Scholar, Scopus, and other databases.',
   },
   sciComm: {
     label: 'Science Communication',
@@ -76,7 +76,7 @@ const DIMENSION_META: Record<string, { label: string; description: string }> = {
   community: {
     label: 'Community Building',
     description:
-      'Events organised, community platforms co-founded, collaborators engaged, and participatory projects like Mapathons.',
+      'Events organised, community platforms co-founded, and participatory projects like Mapathons.',
   },
   creative: {
     label: 'Creative & Commercial',
@@ -284,7 +284,7 @@ export interface DerivedStats {
   academicProfileCount: number;
   /** Number of platforms where h-index is tracked. */
   hIndexSourceCount: number;
-  /** Citations per publication ratio. */
+  /** Ratio of total social media posts to total followers. */
   contentToFollowerRatio: number;
 }
 
@@ -371,11 +371,74 @@ export function computeDerivedStats(data: ImpactData): DerivedStats {
 // Headline stats
 // ---------------------------------------------------------------------------
 
+/** Counts derived from publications.json at build time. */
+export interface PublicationCounts {
+  /** Peer-reviewed / published academic outputs (journal articles, conference papers, books, editorials). */
+  academicPublications: number;
+  /** Conference presentations, posters, panels, abstracts. */
+  conferencePresentations: number;
+  /** Podcast episodes. */
+  podcastEpisodes: number;
+  /** All other outputs (theses, booklets, news blogs, videos). */
+  otherOutputs: number;
+  /** Grand total of all research outputs. */
+  totalResearchOutputs: number;
+}
+
+/** Publication types that count as peer-reviewed / published academic outputs. */
+const ACADEMIC_PUB_TYPES = new Set([
+  'Journal article',
+  'Conference paper',
+  'Book',
+  'Editorial',
+  'Conference Contribution',
+]);
+
+/** Publication types that count as conference presentations / talks. */
+const PRESENTATION_TYPES = new Set([
+  'Presentation',
+  'Conference presentation',
+  'Panel discussion',
+  'Conference poster',
+  'Conference abstract',
+]);
+
+/** Derive publication counts from the raw publications.json array. */
+export function derivePublicationCounts(
+  publications: { type: string }[],
+): PublicationCounts {
+  let academicPublications = 0;
+  let conferencePresentations = 0;
+  let podcastEpisodes = 0;
+  let otherOutputs = 0;
+
+  for (const pub of publications) {
+    if (ACADEMIC_PUB_TYPES.has(pub.type)) {
+      academicPublications++;
+    } else if (PRESENTATION_TYPES.has(pub.type)) {
+      conferencePresentations++;
+    } else if (pub.type === 'Podcast episode') {
+      podcastEpisodes++;
+    } else {
+      otherOutputs++;
+    }
+  }
+
+  return {
+    academicPublications,
+    conferencePresentations,
+    podcastEpisodes,
+    otherOutputs,
+    totalResearchOutputs: publications.length,
+  };
+}
+
 /** Get headline stats for the summary banner — deduplicated top-level numbers only. */
 export function getHeadlineStats(
   snapshot: ImpactSnapshot,
   derived: DerivedStats,
   platformCount: number,
+  pubCounts?: PublicationCounts,
 ): { name: string; number: string; detail?: string }[] {
   const stats: { name: string; number: string; detail?: string }[] = [
     {
@@ -413,11 +476,19 @@ export function getHeadlineStats(
     });
   }
 
-  stats.push({
-    name: 'Platforms',
-    number: String(platformCount),
-    detail: `${derived.academicProfileCount} academic databases`,
-  });
+  if (pubCounts) {
+    stats.push({
+      name: 'Research Outputs',
+      number: String(pubCounts.totalResearchOutputs),
+      detail: `${pubCounts.academicPublications} publications, ${pubCounts.conferencePresentations} talks`,
+    });
+  } else {
+    stats.push({
+      name: 'Platforms',
+      number: String(platformCount),
+      detail: `${derived.academicProfileCount} academic databases`,
+    });
+  }
 
   return stats;
 }

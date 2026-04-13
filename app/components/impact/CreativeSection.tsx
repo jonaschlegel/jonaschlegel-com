@@ -11,7 +11,7 @@ const CreativeSection: FC<CreativeSectionProps> = ({ creative, platforms }) => {
 
   const stats = [
     creative.productsListed > 0 && {
-      label: 'Products Listed',
+      label: 'Ko-fi Posts',
       value: creative.productsListed,
     },
     creative.supporters > 0 && {
