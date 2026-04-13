@@ -371,22 +371,22 @@ export function computeDerivedStats(data: ImpactData): DerivedStats {
 // Headline stats
 // ---------------------------------------------------------------------------
 
-/** Get headline stats for the summary banner. */
+/** Get headline stats for the summary banner — deduplicated top-level numbers only. */
 export function getHeadlineStats(
   snapshot: ImpactSnapshot,
   derived: DerivedStats,
   platformCount: number,
 ): { name: string; number: string; detail?: string }[] {
-  return [
+  const stats: { name: string; number: string; detail?: string }[] = [
     {
-      name: 'Publications',
-      number: String(snapshot.academic.totalPublications),
-      detail: `${derived.citationsPerPublication} citations per paper`,
+      name: 'h-index',
+      number: String(snapshot.academic.hIndex),
+      detail: `across ${derived.hIndexSourceCount} databases`,
     },
     {
-      name: 'Citations',
-      number: String(snapshot.academic.totalCitations),
-      detail: `h-index ${snapshot.academic.hIndex} across ${derived.hIndexSourceCount} databases`,
+      name: 'Citations / Paper',
+      number: String(derived.citationsPerPublication),
+      detail: `${snapshot.academic.totalCitations} total citations`,
     },
     {
       name: 'Total Followers',
@@ -396,19 +396,28 @@ export function getHeadlineStats(
     {
       name: 'Web Impressions',
       number: derived.totalWebImpressions.toLocaleString(),
-      detail: `${derived.totalWebClicks.toLocaleString()} clicks (last 12 months)`,
-    },
-    {
-      name: 'Academic Views',
-      number: derived.totalAcademicViews.toLocaleString(),
-      detail: derived.openAccessPercent
-        ? `${derived.openAccessPercent}% open access`
-        : undefined,
-    },
-    {
-      name: 'Platforms',
-      number: String(platformCount),
-      detail: `${derived.academicProfileCount} academic databases`,
+      detail: `${derived.totalWebClicks.toLocaleString()} clicks (12 mo)`,
     },
   ];
+
+  if (derived.openAccessPercent != null) {
+    stats.push({
+      name: 'Open Access',
+      number: `${derived.openAccessPercent}%`,
+      detail: `${snapshot.academic.totalPublications} publications`,
+    });
+  } else {
+    stats.push({
+      name: 'Publications',
+      number: String(snapshot.academic.totalPublications),
+    });
+  }
+
+  stats.push({
+    name: 'Platforms',
+    number: String(platformCount),
+    detail: `${derived.academicProfileCount} academic databases`,
+  });
+
+  return stats;
 }

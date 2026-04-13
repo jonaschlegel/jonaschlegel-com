@@ -5,33 +5,31 @@ interface OpenSourceSectionProps {
   platform: SocialPlatformData | undefined;
 }
 
-/** Open source and GitHub metrics. */
+/** Open source and GitHub metrics — hides zero-value stats. */
 const OpenSourceSection: FC<OpenSourceSectionProps> = ({
   openSource,
   platform,
 }) => {
   const stats = [
-    {
-      label: 'Public Repositories',
+    openSource.publicRepos > 0 && {
+      label: 'Public Repos',
       value: openSource.publicRepos,
-      description: 'Open source projects and tools.',
     },
-    {
+    openSource.stars > 0 && {
       label: 'Stars',
       value: openSource.stars,
-      description: 'Community appreciation and bookmarks.',
     },
-    {
+    openSource.contributions > 0 && {
       label: 'Contributions',
       value: openSource.contributions,
-      description: 'Commits, PRs, issues, and reviews.',
     },
-    {
+    openSource.forks > 0 && {
       label: 'Forks',
       value: openSource.forks,
-      description: 'Times others have copied repos to build on your work.',
     },
-  ];
+  ].filter(Boolean) as { label: string; value: number }[];
+
+  if (stats.length === 0 && !platform) return null;
 
   return (
     <section className="mb-16">
@@ -41,35 +39,35 @@ const OpenSourceSection: FC<OpenSourceSectionProps> = ({
       <h2 className="mb-3 font-merriweather text-2xl font-semibold md:text-3xl">
         GitHub & Code
       </h2>
-      <p className="mb-8 max-w-2xl text-gray-600">
+      <p className="mb-6 max-w-2xl text-gray-600">
         Building tools, platforms, and open source projects for archaeology and
-        heritage research. Code contributions as a form of academic impact.
+        heritage research.
       </p>
 
-      <div className="mb-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="flex flex-wrap items-center gap-4">
         {stats.map((s) => (
-          <div key={s.label} className="rounded-lg border border-gray-200 p-5">
-            <div className="mb-1 flex items-baseline justify-between">
-              <span className="text-sm text-gray-700">{s.label}</span>
-              <span className="font-merriweather text-2xl font-bold text-primary-green">
-                {s.value}
-              </span>
-            </div>
-            <p className="text-xs text-gray-500">{s.description}</p>
+          <div
+            key={s.label}
+            className="flex items-center gap-2 rounded-full border border-gray-200 px-4 py-2"
+          >
+            <span className="text-xs text-gray-600">{s.label}</span>
+            <span className="font-merriweather text-sm font-bold text-primary-green">
+              {s.value}
+            </span>
           </div>
         ))}
-      </div>
 
-      {platform && (
-        <a
-          href={platform.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-lg border border-gray-200 px-5 py-3 text-sm font-semibold transition-colors hover:border-primary-green hover:text-primary-green"
-        >
-          View on GitHub →
-        </a>
-      )}
+        {platform && (
+          <a
+            href={platform.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-gray-200 px-4 py-2 text-xs font-medium text-primary-green transition-colors hover:border-primary-green"
+          >
+            View on GitHub →
+          </a>
+        )}
+      </div>
     </section>
   );
 };

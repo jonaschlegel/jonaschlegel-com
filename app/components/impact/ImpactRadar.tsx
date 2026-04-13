@@ -174,29 +174,25 @@ const ImpactRadar: FC<RadarProps> = ({ scores, previousScores }) => {
         </div>
       </div>
 
-      {/* Dimension breakdown */}
-      <div className="mx-auto mt-8 grid max-w-4xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {/* Dimension breakdown — compact list instead of cards */}
+      <div className="mx-auto mt-6 max-w-2xl space-y-2">
         {scores.map((s) => (
           <div
             key={s.dimension}
-            className="rounded-lg border border-gray-200 p-4"
+            className="flex items-center gap-3 rounded px-3 py-2"
           >
-            <div className="mb-2 flex items-center justify-between">
-              <h3 className="text-sm font-semibold">{s.label}</h3>
-              <span className="font-merriweather text-lg font-bold text-primary-green">
-                {s.score}
-              </span>
-            </div>
-            {/* Score bar */}
-            <div className="mb-2 h-1.5 w-full rounded-full bg-gray-100">
+            <span className="w-36 shrink-0 text-sm font-medium text-gray-700">
+              {s.label}
+            </span>
+            <div className="h-1.5 flex-1 rounded-full bg-gray-100">
               <div
                 className="h-1.5 rounded-full bg-primary-green transition-all duration-500"
                 style={{ width: `${(s.score / 10) * 100}%` }}
               />
             </div>
-            <p className="text-xs leading-relaxed text-gray-500">
-              {s.description}
-            </p>
+            <span className="w-10 text-right font-merriweather text-sm font-bold text-primary-green">
+              {s.score}
+            </span>
           </div>
         ))}
       </div>
