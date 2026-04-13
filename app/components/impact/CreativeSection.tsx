@@ -43,7 +43,7 @@ const CreativeSection: FC<CreativeSectionProps> = ({ creative, platforms }) => {
         <div className="mb-6 flex flex-wrap gap-3">
           {stats.map((s) => (
             <div
-              key={s.label}
+              key={`creat-${s.label}`}
               className="flex items-center gap-2 rounded-full border border-gray-200 px-4 py-2"
             >
               <span className="text-xs text-gray-600">{s.label}</span>
@@ -58,7 +58,7 @@ const CreativeSection: FC<CreativeSectionProps> = ({ creative, platforms }) => {
       <div className="space-y-2">
         {commercePlatforms.map((platform) => (
           <a
-            key={platform.id}
+            key={`shop-${platform.id}`}
             href={platform.url || undefined}
             target="_blank"
             rel="noopener noreferrer"

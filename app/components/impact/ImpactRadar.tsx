@@ -79,11 +79,13 @@ const ImpactRadar: FC<RadarProps> = ({ scores }) => {
           {/* Grid lines */}
           {gridLevels.map((level) => (
             <polygon
-              key={level}
-              points={Array.from({ length: total }, (_, i) => {
-                const { x, y } = polarToCartesian(level, i, total);
-                return `${x},${y}`;
-              }).join(' ')}
+              key={`grid-${level}`}
+              points={[...Array(total).keys()]
+                .map((i) => {
+                  const { x, y } = polarToCartesian(level, i, total);
+                  return `${x},${y}`;
+                })
+                .join(' ')}
               fill="none"
               stroke="#e5e7eb"
               strokeWidth="0.5"
@@ -91,7 +93,7 @@ const ImpactRadar: FC<RadarProps> = ({ scores }) => {
           ))}
 
           {/* Axis lines */}
-          {scores.map((_, i) => {
+          {[...Array(total).keys()].map((i) => {
             const { x, y } = polarToCartesian(10, i, total);
             return (
               <line
@@ -123,7 +125,7 @@ const ImpactRadar: FC<RadarProps> = ({ scores }) => {
 
             return (
               <g
-                key={s.dimension}
+                key={`dim-${s.dimension}`}
                 onMouseEnter={() => setHoveredIndex(i)}
                 onMouseLeave={() => setHoveredIndex(null)}
                 className="cursor-pointer"

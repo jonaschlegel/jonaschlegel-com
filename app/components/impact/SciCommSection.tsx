@@ -72,7 +72,7 @@ const SciCommSection: FC<SciCommSectionProps> = ({
           </p>
           <div className="flex flex-wrap gap-6">
             {podcastStats.map((s) => (
-              <div key={s.label}>
+              <div key={`pod-${s.label}`}>
                 <span className="font-merriweather text-lg font-bold text-primary-green">
                   {s.value}
                 </span>
@@ -88,7 +88,7 @@ const SciCommSection: FC<SciCommSectionProps> = ({
         <div className="mb-6 flex flex-wrap gap-3">
           {writingStats.map((s) => (
             <div
-              key={s.label}
+              key={`writing-${s.label}`}
               className="flex items-center gap-2 rounded-full border border-gray-200 px-4 py-2"
             >
               <span className="text-xs text-gray-600">{s.label}</span>
@@ -105,7 +105,7 @@ const SciCommSection: FC<SciCommSectionProps> = ({
         <div className="space-y-2">
           {contentPlatforms.map((platform) => (
             <a
-              key={platform.id}
+              key={`content-${platform.id}`}
               href={platform.url || undefined}
               target="_blank"
               rel="noopener noreferrer"
@@ -144,7 +144,7 @@ const SciCommSection: FC<SciCommSectionProps> = ({
             <div className="space-y-3">
               {guestAppearances.map((ga) => (
                 <div
-                  key={ga.id}
+                  key={`guest-${ga.id}`}
                   className="flex items-start justify-between gap-4"
                 >
                   <div className="flex-1">

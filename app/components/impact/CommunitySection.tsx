@@ -53,7 +53,7 @@ const CommunitySection: FC<CommunitySectionProps> = ({
         <div className="mb-6 flex flex-wrap gap-3">
           {stats.map((s) => (
             <div
-              key={s.label}
+              key={`comm-${s.label}`}
               className="flex items-center gap-2 rounded-full border border-gray-200 px-4 py-2"
             >
               <span className="text-xs text-gray-600">{s.label}</span>
@@ -69,7 +69,7 @@ const CommunitySection: FC<CommunitySectionProps> = ({
         <div className="space-y-2">
           {communityPlatforms.map((platform) => (
             <a
-              key={platform.id}
+              key={`compl-${platform.id}`}
               href={platform.url || undefined}
               target="_blank"
               rel="noopener noreferrer"

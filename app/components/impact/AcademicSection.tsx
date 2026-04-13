@@ -97,7 +97,7 @@ const AcademicSection: FC<AcademicSectionProps> = ({
       <div className="mb-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {metrics.map((m) => (
           <div
-            key={m.label}
+            key={`metric-${m.label}`}
             className="flex items-baseline justify-between rounded-lg border border-gray-200 px-4 py-3"
           >
             <div>
@@ -120,7 +120,7 @@ const AcademicSection: FC<AcademicSectionProps> = ({
         <div className="mb-8 flex flex-wrap gap-3">
           {insights.map((ins) => (
             <div
-              key={ins.label}
+              key={`insight-${ins.label}`}
               className="flex items-center gap-2 rounded-full border border-primary-teal/20 bg-primary-teal/5 px-4 py-2"
             >
               <span className="text-xs text-gray-600">{ins.label}</span>
@@ -167,7 +167,10 @@ const AcademicSection: FC<AcademicSectionProps> = ({
                 </thead>
                 <tbody>
                   {comparablePlatforms.map((p) => (
-                    <tr key={p.platformId} className="border-b border-gray-100">
+                    <tr
+                      key={`cmp-${p.platformId}`}
+                      className="border-b border-gray-100"
+                    >
                       <td className="py-2 pr-4">
                         <a
                           href={p.url}
@@ -211,7 +214,7 @@ const AcademicSection: FC<AcademicSectionProps> = ({
             );
             return (
               <a
-                key={platform.id}
+                key={`acad-${platform.id}`}
                 href={platform.url || undefined}
                 target="_blank"
                 rel="noopener noreferrer"

@@ -47,7 +47,7 @@ const OpenSourceSection: FC<OpenSourceSectionProps> = ({
       <div className="flex flex-wrap items-center gap-4">
         {stats.map((s) => (
           <div
-            key={s.label}
+            key={`oss-${s.label}`}
             className="flex items-center gap-2 rounded-full border border-gray-200 px-4 py-2"
           >
             <span className="text-xs text-gray-600">{s.label}</span>

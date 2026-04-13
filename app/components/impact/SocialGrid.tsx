@@ -48,7 +48,7 @@ const SocialGrid: FC<SocialGridProps> = ({ platforms, metrics }) => {
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {platformsWithData.map(({ platform, metrics: m }) => (
           <a
-            key={platform.id}
+            key={`social-${platform.id}`}
             href={platform.url || undefined}
             target="_blank"
             rel="noopener noreferrer"
@@ -107,7 +107,7 @@ const SocialGrid: FC<SocialGridProps> = ({ platforms, metrics }) => {
         <div className="mt-4 flex flex-wrap gap-2">
           {platformsWithoutData.map((p) => (
             <a
-              key={p.id}
+              key={`other-${p.id}`}
               href={p.url || undefined}
               target="_blank"
               rel="noopener noreferrer"

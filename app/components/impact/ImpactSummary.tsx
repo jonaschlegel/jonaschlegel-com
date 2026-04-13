@@ -9,7 +9,7 @@ const ImpactSummary: FC<{
       <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6">
         {stats.map((stat) => (
           <div
-            key={stat.name}
+            key={`headline-${stat.name}`}
             className="flex flex-col items-center rounded-lg border border-gray-200 bg-white p-6 text-center"
           >
             <span className="font-merriweather text-3xl font-bold tracking-tight text-primary-green lg:text-4xl">

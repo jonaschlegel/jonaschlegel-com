@@ -57,6 +57,7 @@
  * | OpenSource | forks | 50 | 0.15 | Code reuse by others |
  */
 
+// eslint-disable-next-line @typescript-eslint/naming-convention -- constant lookup table
 const DIMENSION_META: Record<string, { label: string; description: string }> = {
   academic: {
     label: 'Academic Research',
@@ -123,7 +124,7 @@ export function calculateDimensionScores(
   return dimensions.map((dim) => {
     const dimThresholds = thresholds[dim] || [];
     const dimData = snapshot[dim] as Record<string, unknown>;
-    const meta = DIMENSION_META[dim];
+    const meta = DIMENSION_META[dim] ?? { label: dim, description: '' };
 
     let score = 0;
     for (const t of dimThresholds) {
@@ -199,15 +200,17 @@ export function getAcademicPlatformComparison(
       if (views != null) extra.push({ label: 'Views', value: views });
 
       const coAuthors = numField(p, 'Co-authors', 'co-authors');
-      if (coAuthors != null)
+      if (coAuthors != null) {
         extra.push({ label: 'Co-authors', value: coAuthors });
+      }
 
       const mentions = numField(p, 'Mentions');
       if (mentions != null) extra.push({ label: 'Mentions', value: mentions });
 
       const followers = numField(p, 'Followers', 'followers');
-      if (followers != null)
+      if (followers != null) {
         extra.push({ label: 'Followers', value: followers });
+      }
 
       const oa = numField(p, 'open access (percentage)');
       if (oa != null) extra.push({ label: 'Open Access', value: `${oa}%` });
@@ -217,10 +220,12 @@ export function getAcademicPlatformComparison(
 
       const citRecv = numField(p, 'Citation statement received');
       const citGiven = numField(p, 'Citation statement given');
-      if (citRecv != null)
+      if (citRecv != null) {
         extra.push({ label: 'Citations Received', value: citRecv });
-      if (citGiven != null)
+      }
+      if (citGiven != null) {
         extra.push({ label: 'Citations Given', value: citGiven });
+      }
 
       const works = numField(p, 'works');
       if (works != null) extra.push({ label: 'Works', value: works });
@@ -386,7 +391,7 @@ export interface PublicationCounts {
 }
 
 /** Publication types that count as peer-reviewed / published academic outputs. */
-const ACADEMIC_PUB_TYPES = new Set([
+const academicPubTypes = new Set([
   'Journal article',
   'Conference paper',
   'Book',
@@ -395,7 +400,7 @@ const ACADEMIC_PUB_TYPES = new Set([
 ]);
 
 /** Publication types that count as conference presentations / talks. */
-const PRESENTATION_TYPES = new Set([
+const presentationTypes = new Set([
   'Presentation',
   'Conference presentation',
   'Panel discussion',
@@ -413,9 +418,9 @@ export function derivePublicationCounts(
   let otherOutputs = 0;
 
   for (const pub of publications) {
-    if (ACADEMIC_PUB_TYPES.has(pub.type)) {
+    if (academicPubTypes.has(pub.type)) {
       academicPublications++;
-    } else if (PRESENTATION_TYPES.has(pub.type)) {
+    } else if (presentationTypes.has(pub.type)) {
       conferencePresentations++;
     } else if (pub.type === 'Podcast episode') {
       podcastEpisodes++;

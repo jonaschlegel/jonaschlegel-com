@@ -51,7 +51,7 @@ const ImpactPage = async () => {
   const impactData: ImpactData = JSON.parse(impactRaw);
   const publications: { type: string }[] = JSON.parse(pubsRaw);
 
-  const { current, history, platforms, guestAppearances, scoringThresholds } =
+  const { current, platforms, guestAppearances, scoringThresholds } =
     impactData;
 
   // Derive counts from publications.json and override snapshot values

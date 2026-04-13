@@ -24,7 +24,7 @@ interface MethodologySectionProps {
   lastUpdated: string;
 }
 
-const DIMENSION_LABELS: Record<string, string> = {
+const dimensionLabels: Record<string, string> = {
   academic: 'Academic Research',
   sciComm: 'Science Communication',
   digitalPresence: 'Digital Presence',
@@ -77,7 +77,7 @@ const MethodologySection: FC<MethodologySectionProps> = ({
   for (const [dim, metrics] of Object.entries(thresholds)) {
     for (const m of metrics) {
       thresholdRows.push({
-        dimension: DIMENSION_LABELS[dim] || dim,
+        dimension: dimensionLabels[dim] || dim,
         metric: m.metric,
         max: m.max,
         weight: m.weight,
@@ -142,7 +142,10 @@ const MethodologySection: FC<MethodologySectionProps> = ({
               </thead>
               <tbody>
                 {HEADLINE_STATS.map((s) => (
-                  <tr key={s.name} className="border-b border-gray-100">
+                  <tr
+                    key={`stat-${s.name}`}
+                    className="border-b border-gray-100"
+                  >
                     <td className="py-2 pr-4 font-medium text-gray-700">
                       {s.name}
                     </td>
