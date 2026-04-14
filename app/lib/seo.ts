@@ -104,8 +104,8 @@ export function generateSEOMetadata({
   return metadata;
 }
 
-/** Creates JSON-LD structured data for an article page. */
-export function generateArticleStructuredData({
+/** Creates JSON-LD structured data for a creative work / portfolio project page. */
+export function generateCreativeWorkStructuredData({
   title,
   description,
   author = 'Jona Schlegel',
@@ -126,15 +126,10 @@ export function generateArticleStructuredData({
 }) {
   return {
     '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: title,
+    '@type': 'CreativeWork',
+    name: title,
     description,
     author: {
-      '@type': 'Person',
-      name: author,
-      url: 'https://jonaschlegel.com',
-    },
-    publisher: {
       '@type': 'Person',
       name: author,
       url: 'https://jonaschlegel.com',
