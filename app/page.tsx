@@ -4,7 +4,6 @@ import BlogPreview from './components/BlogPreview';
 import ClientLogos from './components/ClientLogos';
 import CurrentRoleBanner from './components/CurrentRoleBanner';
 import FAQSection from './components/FAQSection';
-import { defaultFAQs } from './data/faqs';
 import Hero from './components/Hero';
 import IllustrationBand from './components/IllustrationBand';
 import InstagramGrid from './components/InstagramGrid';
@@ -14,8 +13,8 @@ import PodcastSection, {
   podcastStructuredData,
 } from './components/PodcastSection';
 import RecentActivity from './components/RecentActivity';
-import Services from './components/Services';
 import Testimonials from './components/Testimonials';
+import { defaultFAQs } from './data/faqs';
 import { generateSEOMetadata } from './lib/seo';
 
 /** SEO metadata for the home page. */

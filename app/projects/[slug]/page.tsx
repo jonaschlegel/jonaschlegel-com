@@ -6,7 +6,10 @@ import Breadcrumbs from '../../components/Breadcrumbs';
 import ImageGallery from '../../components/ImageGallery';
 import { projectsData } from '../../data/content';
 import { generateProjectOGImageUrl } from '../../lib/og-utils';
-import { generateBreadcrumbStructuredData, generateCreativeWorkStructuredData } from '../../lib/seo';
+import {
+  generateBreadcrumbStructuredData,
+  generateCreativeWorkStructuredData,
+} from '../../lib/seo';
 
 interface ProjectPageProps {
   params: Promise<Params>;
@@ -304,10 +307,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 description: project.description,
                 services: project.services,
               }),
-              keywords: [
-                ...project.services,
-                ...project.tools,
-              ],
+              keywords: [...project.services, ...project.tools],
             }),
           ).replace(/</g, '\u003c'),
         }}
