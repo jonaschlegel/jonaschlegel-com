@@ -6,7 +6,7 @@ import Breadcrumbs from '../../components/Breadcrumbs';
 import ImageGallery from '../../components/ImageGallery';
 import { projectsData } from '../../data/content';
 import { generateProjectOGImageUrl } from '../../lib/og-utils';
-import { generateArticleStructuredData } from '../../lib/seo';
+import { generateBreadcrumbStructuredData, generateCreativeWorkStructuredData } from '../../lib/seo';
 
 interface ProjectPageProps {
   params: Promise<Params>;
@@ -54,14 +54,7 @@ export async function generateMetadata({
     title: { absolute: projectTitle },
     description: projectDescription,
     keywords: [
-      'archaeology project',
-      'archaeological illustration',
-      'archaeology web development',
       project.name.toLowerCase(),
-      'visual science communication',
-      'archaeological research',
-      'archaeology web design',
-      'freelance archaeological illustrator',
       ...project.services.map((s) => s.toLowerCase()),
       ...project.tools.map((t) => t.toLowerCase()),
       ...(project.location ? [project.location.toLowerCase()] : []),
@@ -295,12 +288,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </section>
       )}
 
-      {/* Article Structured Data */}
+      {/* CreativeWork Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
-            generateArticleStructuredData({
+            generateCreativeWorkStructuredData({
               title: project.name,
               description:
                 project.description ||
@@ -313,10 +306,21 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               }),
               keywords: [
                 ...project.services,
-                'archaeology',
-                'science communication',
+                ...project.tools,
               ],
             }),
+          ).replace(/</g, '\u003c'),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateBreadcrumbStructuredData([
+              { name: 'Home', url: 'https://jonaschlegel.com' },
+              { name: 'Projects', url: 'https://jonaschlegel.com/projects' },
+              { name: project.name },
+            ]),
           ).replace(/</g, '\u003c'),
         }}
       />

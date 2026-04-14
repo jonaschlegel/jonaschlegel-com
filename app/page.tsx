@@ -3,7 +3,8 @@ import Banner from './components/Banner';
 import BlogPreview from './components/BlogPreview';
 import ClientLogos from './components/ClientLogos';
 import CurrentRoleBanner from './components/CurrentRoleBanner';
-import FAQSection, { defaultFAQs } from './components/FAQSection';
+import FAQSection from './components/FAQSection';
+import { defaultFAQs } from './data/faqs';
 import Hero from './components/Hero';
 import IllustrationBand from './components/IllustrationBand';
 import InstagramGrid from './components/InstagramGrid';
@@ -111,6 +112,24 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(podcastStructuredData),
+        }}
+      />
+      <script
+        id="faq-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: defaultFAQs.map((faq) => ({
+              '@type': 'Question',
+              name: faq.question,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: faq.answer,
+              },
+            })),
+          }),
         }}
       />
     </>
