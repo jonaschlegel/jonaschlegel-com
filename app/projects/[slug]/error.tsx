@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useEffect } from 'react';
 
+/** Error boundary for individual project pages, with a link back to the projects overview. */
 export default function ProjectError({
   error,
   reset,

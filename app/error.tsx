@@ -2,7 +2,8 @@
 
 import { useEffect } from 'react';
 
-export default function GlobalError({
+/** Root-level error boundary that catches unhandled errors in any route segment. */
+export default function RootError({
   error,
   reset,
 }: {

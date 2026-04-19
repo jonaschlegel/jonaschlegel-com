@@ -21,7 +21,7 @@ import { generateSEOMetadata } from './lib/seo';
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Home',
   description:
-    'Jona Schlegel – Freelance landscape archaeologist specialising in visual science communication, archaeological illustration, drawing & sketching, visual science communication, archaeology web development, digital heritage platforms, and brand identity for archaeology.',
+    'Jona Schlegel – Freelance landscape archaeologist specialising in archaeological illustration, drawing & sketching, visual science communication, archaeology web development, digital heritage platforms, and brand identity for archaeology.',
   canonical: 'https://jonaschlegel.com',
   keywords: [
     'archaeological illustration',
@@ -35,10 +35,8 @@ export const metadata: Metadata = generateSEOMetadata({
     'archaeology web development',
     'archaeology web design',
     'archaeology website development',
-    'visual science communication archaeology',
     'freelance archaeological illustrator',
     'archaeology fullstack developer',
-    'archaeological drawing',
     'archaeology painting',
     'archaeology cover art',
     'archaeology brand identity',
