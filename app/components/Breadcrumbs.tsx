@@ -1,5 +1,6 @@
 'use client';
 
+import type { Route } from 'next';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FaChevronRight } from 'react-icons/fa';
@@ -49,7 +50,7 @@ export default function Breadcrumbs({
 
             {item.href ? (
               <Link
-                href={item.href as any}
+                href={item.href as Route}
                 className="hover:text-primary-dark transition-colors flex items-center"
                 itemProp="item"
               >

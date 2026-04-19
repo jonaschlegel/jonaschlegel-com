@@ -59,6 +59,7 @@ export default function FAQSection({
               <button
                 className="w-full px-6 py-4 text-left bg-white hover:bg-gray-50 transition-colors flex justify-between items-center"
                 onClick={() => toggleFAQ(index)}
+                id={`faq-question-${index}`}
                 aria-expanded={openIndex === index}
                 aria-controls={`faq-answer-${index}`}
               >
@@ -70,14 +71,18 @@ export default function FAQSection({
                 )}
               </button>
 
-              {openIndex === index && (
-                <div
-                  id={`faq-answer-${index}`}
-                  className="px-6 py-4 bg-gray-50 border-t border-gray-200"
-                >
-                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
-                </div>
-              )}
+              <div
+                id={`faq-answer-${index}`}
+                role="region"
+                aria-labelledby={`faq-question-${index}`}
+                className={`overflow-hidden transition-all duration-200 ${
+                  openIndex === index
+                    ? 'max-h-96 px-6 py-4 bg-gray-50 border-t border-gray-200'
+                    : 'max-h-0'
+                }`}
+              >
+                <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+              </div>
             </div>
           ))}
         </div>

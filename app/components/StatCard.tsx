@@ -5,10 +5,10 @@ import type { StatType } from '../../types/global';
 const StatCard: FC<StatType> = ({ name, number }) => {
   return (
     <div className="flex w-24 flex-col items-center font-merriweather leading-snug md:w-auto">
-      <h3 className="text-2xl font-bold tracking-tighter lg:text-4xl">
+      <p className="text-2xl font-bold tracking-tighter lg:text-4xl">
         {number}
-      </h3>
-      <h4 className="text-center text-xs text-gray-700 lg:text-sm">{name}</h4>
+      </p>
+      <p className="text-center text-xs text-gray-700 lg:text-sm">{name}</p>
     </div>
   );
 };

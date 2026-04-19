@@ -55,6 +55,7 @@ type StatType = {
 type SocialType = {
   Icon: React.ComponentType;
   href: string | UrlObject;
+  name: string;
 };
 
 declare module '*.mdx' {

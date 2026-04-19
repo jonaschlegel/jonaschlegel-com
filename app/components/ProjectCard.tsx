@@ -1,3 +1,4 @@
+import type { Route } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { FC } from 'react';
@@ -7,7 +8,7 @@ import type { ProjectType } from '../../types/global';
 const ProjectCard: FC<ProjectType> = ({ slug, image, name, description }) => {
   return (
     <Link
-      href={`/projects/${slug}` as any}
+      href={`/projects/${slug}` as Route}
       className="group relative col-span-12 aspect-[4/3] cursor-pointer overflow-hidden md:col-span-6"
     >
       <Image

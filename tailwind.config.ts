@@ -21,7 +21,7 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        merriweather: ['Merriweather', 'sans-serif'],
+        merriweather: ['var(--font-merriweather)', 'serif'],
       },
       colors: {
         primary: {

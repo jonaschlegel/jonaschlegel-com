@@ -1064,14 +1064,27 @@ export const footerdata = {
     { name: 'Services', href: '/services' },
   ],
   socialLinks: [
-    { Icon: BsBehance, href: 'https://www.behance.net/jonaschlegel1' },
-    { Icon: BsInstagram, href: 'https://www.instagram.com/archaeoink/' },
-    { Icon: BsTwitter, href: 'https://twitter.com/JonaSchlegel' },
+    {
+      Icon: BsBehance,
+      href: 'https://www.behance.net/jonaschlegel1',
+      name: 'Behance',
+    },
+    {
+      Icon: BsInstagram,
+      href: 'https://www.instagram.com/archaeoink/',
+      name: 'Instagram',
+    },
+    {
+      Icon: BsTwitter,
+      href: 'https://twitter.com/JonaSchlegel',
+      name: 'Twitter',
+    },
     {
       Icon: BsLinkedin,
       href: 'https://www.linkedin.com/in/jona-schlegel/',
+      name: 'LinkedIn',
     },
-    { Icon: BsGithub, href: 'https://github.com/jonaschlegel' },
+    { Icon: BsGithub, href: 'https://github.com/jonaschlegel', name: 'GitHub' },
   ],
 } as const;
 
