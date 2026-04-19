@@ -134,9 +134,9 @@ const timelines = [
 ] as const;
 
 const capabilityAnchors: Record<string, string> = {
-  'Illustration & Visual Storytelling': 'illustration',
+  'Archaeological Illustration & Visual Science Communication': 'illustration',
   '3D Modelling & Documentation': '3d-modelling',
-  'Web Development & Digital Platforms': 'web-development',
+  'Archaeology Web Development & Design': 'web-development',
   'Brand & Publication Design': 'brand-design',
 };
 

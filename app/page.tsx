@@ -21,7 +21,7 @@ import { generateSEOMetadata } from './lib/seo';
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Home',
   description:
-    'Jona Schlegel – Freelance landscape archaeologist specialising in visual science communication, archaeological illustration, drawing & sketching, visual science communication,archaeology web development, digital heritage platforms, and brand identity for archaeology.',
+    'Jona Schlegel – Freelance landscape archaeologist specialising in visual science communication, archaeological illustration, drawing & sketching, visual science communication, archaeology web development, digital heritage platforms, and brand identity for archaeology.',
   canonical: 'https://jonaschlegel.com',
   keywords: [
     'archaeological illustration',
@@ -111,24 +111,6 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(podcastStructuredData),
-        }}
-      />
-      <script
-        id="faq-jsonld"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: defaultFAQs.map((faq) => ({
-              '@type': 'Question',
-              name: faq.question,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: faq.answer,
-              },
-            })),
-          }),
         }}
       />
     </>
