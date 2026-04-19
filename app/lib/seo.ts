@@ -168,21 +168,3 @@ export function generateBreadcrumbStructuredData(
     })),
   };
 }
-
-/** Creates JSON-LD structured data for a FAQ page. */
-export function generateFAQStructuredData(
-  faqs: Array<{ question: string; answer: string }>,
-) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map((faq) => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.answer,
-      },
-    })),
-  };
-}

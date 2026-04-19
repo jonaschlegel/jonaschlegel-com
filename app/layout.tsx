@@ -1,11 +1,19 @@
 import './globals.css';
 import type { Metadata } from 'next';
+import { Merriweather } from 'next/font/google';
 import CalendlyScript from './components/CalendlyScript';
 import CrispScript from './components/CrispScript';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollUpArrow';
 import Tracking from './Tracking';
+
+const merriweather = Merriweather({
+  subsets: ['latin'],
+  weight: ['300', '400', '700', '900'],
+  variable: '--font-merriweather',
+  display: 'swap',
+});
 
 const BASE_DESCRIPTION =
   'Jona Schlegel – Freelance archaeological illustrator, visual science communicator, and archaeology web developer. Specialising in archaeological illustration, archaeology web development & design, fullstack web applications for heritage research, and visual science communication for archaeology.';
@@ -57,7 +65,6 @@ export const metadata: Metadata = {
     'freelance archaeological illustrator',
     'archaeology fullstack developer',
     'digital heritage web development',
-    'science communication archaeology',
     'archaeology painting',
     'heritage web development',
     'archaeological drawing',
@@ -128,7 +135,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="bg-primary-cream text-primary-dark">
+    <html
+      lang="en"
+      className={`bg-primary-cream text-primary-dark ${merriweather.variable}`}
+    >
       <head>
         {/* Favicon and Icons */}
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -149,8 +159,8 @@ export default function RootLayout({
 
         {/* Additional SEO meta tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#009a73" />
-        <meta name="msapplication-TileColor" content="#009a73" />
+        <meta name="theme-color" content="#009D6F" />
+        <meta name="msapplication-TileColor" content="#009D6F" />
 
         {/* Structured Data for Person/Professional */}
         <script
