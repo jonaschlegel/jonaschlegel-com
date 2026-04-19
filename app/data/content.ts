@@ -1069,7 +1069,7 @@ export const footerdata = {
     { Icon: BsTwitter, href: 'https://twitter.com/JonaSchlegel' },
     {
       Icon: BsLinkedin,
-      href: 'https://www.linkedin.com/in/jona-schlegel-942879153/',
+      href: 'https://www.linkedin.com/in/jona-schlegel/',
     },
     { Icon: BsGithub, href: 'https://github.com/jonaschlegel' },
   ],
