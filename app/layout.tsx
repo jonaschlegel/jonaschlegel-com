@@ -137,6 +137,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`bg-primary-cream text-primary-dark ${merriweather.variable}`}
     >
       <head>
