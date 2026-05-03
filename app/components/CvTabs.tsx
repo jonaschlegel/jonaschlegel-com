@@ -24,7 +24,6 @@ interface Education {
 }
 
 interface Publication {
-  id: string;
   title: string;
   type: string;
   date: string; // Ensure this is in 'YYYY-MM-DD' or 'YYYY' format
@@ -48,9 +47,34 @@ const CvTabs: React.FC<CvTabsProps> = ({
     'work' | 'education' | 'publications'
   >('work');
 
-  // Sort publications by date in descending order
-  const sortedPublications = publications.sort((a, b) => {
-    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  const getPublicationKey = (publication: Publication): string => {
+    return [
+      publication.date,
+      publication.title,
+      publication.url ?? '',
+      publication.authors.join(','),
+    ].join('::');
+  };
+
+  const publicationOrder = new Map(
+    publications.map((publication, index) => [
+      getPublicationKey(publication),
+      index,
+    ]),
+  );
+
+  const sortedPublications = [...publications].sort((a, b) => {
+    const dateDifference =
+      new Date(b.date).getTime() - new Date(a.date).getTime();
+
+    if (dateDifference !== 0) {
+      return dateDifference;
+    }
+
+    return (
+      (publicationOrder.get(getPublicationKey(b)) ?? -1) -
+      (publicationOrder.get(getPublicationKey(a)) ?? -1)
+    );
   });
 
   return (
@@ -143,7 +167,7 @@ const CvTabs: React.FC<CvTabsProps> = ({
         <div>
           {sortedPublications.map((pub) => (
             <div
-              key={`mobile-publication-${pub.id}`}
+              key={`mobile-publication-${getPublicationKey(pub)}`}
               className="mb-4 p-4 rounded-lg shadow bg-gray-50"
             >
               <h3 className="font-semibold text-gray-900 text-sm">

@@ -51,7 +51,6 @@ interface Education {
 }
 
 interface Publication {
-  id: string;
   title: string;
   type: string;
   date: string;
@@ -85,6 +84,36 @@ const CvPage = async () => {
       return new Date();
     }
     return new Date(dateStr);
+  };
+
+  const getPublicationKey = (publication: Publication): string => {
+    return [
+      publication.date,
+      publication.title,
+      publication.url,
+      publication.authors.join(','),
+    ].join('::');
+  };
+
+  const publicationOrder = new Map(
+    publications.map((publication, index) => [
+      getPublicationKey(publication),
+      index,
+    ]),
+  );
+
+  const comparePublications = (a: Publication, b: Publication): number => {
+    const dateDifference =
+      parseDate(b.date).getTime() - parseDate(a.date).getTime();
+
+    if (dateDifference !== 0) {
+      return dateDifference;
+    }
+
+    return (
+      (publicationOrder.get(getPublicationKey(b)) ?? -1) -
+      (publicationOrder.get(getPublicationKey(a)) ?? -1)
+    );
   };
 
   const allYearsSet = new Set<number>();
@@ -457,10 +486,7 @@ const CvPage = async () => {
             {allYears.map((year) => {
               const yearPublications = publications
                 .filter((pub) => parseDate(pub.date).getFullYear() === year)
-                .sort(
-                  (a, b) =>
-                    parseDate(b.date).getTime() - parseDate(a.date).getTime(),
-                );
+                .sort(comparePublications);
 
               return (
                 <Fragment key={`pubs-${year}`}>
@@ -474,7 +500,7 @@ const CvPage = async () => {
                   >
                     {yearPublications.map((pub) => (
                       <div
-                        key={`publication-${pub.id}`}
+                        key={`publication-${getPublicationKey(pub)}`}
                         className="p-2 rounded-lg shadow bg-gray-50"
                       >
                         <h3 className="font-semibold text-gray-900 text-sm">
