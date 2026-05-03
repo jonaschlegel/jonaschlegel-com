@@ -63,6 +63,8 @@ declare module '*.mdx' {
   export default MDXComponent;
 }
 
+declare module '*.css';
+
 // Global window extensions for tracking scripts
 declare global {
   interface Window {

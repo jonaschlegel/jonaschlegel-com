@@ -8,7 +8,6 @@ let pluginsLoaded = false;
 
 const loadLeafletPlugins = async () => {
   if (typeof window !== 'undefined' && !pluginsLoaded) {
-    await import('leaflet.heat');
     await import('leaflet.markercluster');
     pluginsLoaded = true;
   }
@@ -28,13 +27,30 @@ L.Icon.Default.mergeOptions({
 
 declare global {
   namespace L {
-    function heatLayer(
-      latlngs: Array<[number, number] | [number, number, number]>,
-      options?: any,
-    ): any;
-    function markerClusterGroup(options?: any): any;
+    function markerClusterGroup(
+      options?: L.MarkerClusterGroupOptions,
+    ): L.MarkerClusterGroup;
   }
 }
+
+type ProjectData = {
+  [locationName: string]: {
+    workProjects: WorkProject[];
+    educationProjects: EducationalProject[];
+    workExperiences: WorkExperience[];
+    educationalExperiences: EducationalExperience[];
+  };
+};
+
+type ActiveLocation = {
+  location: Location;
+  intensity: number;
+};
+
+type HexCell = {
+  center: L.Point;
+  intensity: number;
+};
 
 interface Location {
   name: string;
@@ -80,17 +96,150 @@ interface EducationalExperience {
 
 interface MapComponentProps {
   locations: Location[];
-  projectData: {
-    [locationName: string]: {
-      workProjects: WorkProject[];
-      educationProjects: EducationalProject[];
-      workExperiences: WorkExperience[];
-      educationalExperiences: EducationalExperience[];
-    };
-  };
+  projectData: ProjectData;
   showClusters?: boolean;
-  showHeatmap?: boolean;
+  showDensity?: boolean;
 }
+
+const hexRadius = 38;
+const hexWidth = Math.sqrt(3) * hexRadius;
+const hexRowHeight = hexRadius * 1.5;
+const hexVertexIndexes = [0, 1, 2, 3, 4, 5];
+
+const getLocationIntensity = (
+  locationName: string,
+  projectData: ProjectData,
+) => {
+  const data = projectData[locationName];
+  if (!data) {
+    return 0;
+  }
+
+  return (
+    data.workProjects.length +
+    data.educationProjects.length +
+    data.workExperiences.length +
+    data.educationalExperiences.length
+  );
+};
+
+const getActiveLocations = (
+  locations: Location[],
+  projectData: ProjectData,
+): ActiveLocation[] => {
+  return locations
+    .map((location) => ({
+      location,
+      intensity: getLocationIntensity(location.name, projectData),
+    }))
+    .filter(({ intensity }) => intensity > 0);
+};
+
+const getHexColor = (normalizedIntensity: number) => {
+  if (normalizedIntensity >= 0.78) {
+    return '#532700';
+  }
+
+  if (normalizedIntensity >= 0.52) {
+    return '#E6D67C';
+  }
+
+  if (normalizedIntensity >= 0.28) {
+    return '#009D6F';
+  }
+
+  return '#42CBB3';
+};
+
+const getHexOpacity = (normalizedIntensity: number) => {
+  return 0.24 + normalizedIntensity * 0.48;
+};
+
+const getHexVertex = (center: L.Point, index: number) => {
+  const angle = (Math.PI / 180) * (60 * index + 30);
+
+  return L.point(
+    center.x + hexRadius * Math.cos(angle),
+    center.y + hexRadius * Math.sin(angle),
+  );
+};
+
+const createHexCells = (
+  activeLocations: ActiveLocation[],
+  map: L.Map,
+): HexCell[] => {
+  const cells = new Map<string, HexCell>();
+
+  activeLocations.forEach(({ location, intensity }) => {
+    const point = map.latLngToLayerPoint(location.coordinates);
+    const row = Math.round(point.y / hexRowHeight);
+    const rowOffset = Math.abs(row % 2) * (hexWidth / 2);
+    const column = Math.round((point.x - rowOffset) / hexWidth);
+    const center = L.point(column * hexWidth + rowOffset, row * hexRowHeight);
+    const id = `${column}:${row}`;
+    const cell = cells.get(id);
+
+    if (cell) {
+      cell.intensity += intensity;
+      return;
+    }
+
+    cells.set(id, {
+      center,
+      intensity,
+    });
+  });
+
+  return Array.from(cells.values());
+};
+
+const createHoneycombLayer = (
+  activeLocations: ActiveLocation[],
+  map: L.Map,
+) => {
+  const honeycombLayer = L.layerGroup().addTo(map);
+
+  const renderHoneycomb = () => {
+    honeycombLayer.clearLayers();
+
+    const hexCells = createHexCells(activeLocations, map);
+    const maxIntensity = Math.max(
+      ...hexCells.map((hexCell) => hexCell.intensity),
+      1,
+    );
+
+    hexCells.forEach((hexCell) => {
+      const normalizedIntensity = hexCell.intensity / maxIntensity;
+      const polygon = L.polygon(
+        hexVertexIndexes.map((index) =>
+          map.layerPointToLatLng(getHexVertex(hexCell.center, index)),
+        ),
+        {
+          interactive: false,
+          fillColor: getHexColor(normalizedIntensity),
+          fillOpacity: getHexOpacity(normalizedIntensity),
+          color: '#ffffff',
+          opacity: 0.75,
+          weight: 1.5,
+          lineJoin: 'round',
+        },
+      );
+
+      polygon.addTo(honeycombLayer).bringToBack();
+    });
+  };
+
+  renderHoneycomb();
+  map.on('zoomend moveend', renderHoneycomb);
+
+  return {
+    layer: honeycombLayer,
+    remove: () => {
+      map.off('zoomend moveend', renderHoneycomb);
+      honeycombLayer.remove();
+    },
+  };
+};
 
 // Custom marker icons for different types
 const createCustomIcon = (
@@ -187,21 +336,15 @@ const createClusterIcon = (count: number) => {
 // Map component that handles markers and clustering
 const MapContent: React.FC<{
   locations: Location[];
-  projectData: {
-    [locationName: string]: {
-      workProjects: WorkProject[];
-      educationProjects: EducationalProject[];
-      workExperiences: WorkExperience[];
-      educationalExperiences: EducationalExperience[];
-    };
-  };
+  projectData: ProjectData;
   showClusters: boolean;
-  showHeatmap: boolean;
-}> = ({ locations, projectData, showClusters, showHeatmap }) => {
+  showDensity: boolean;
+}> = ({ locations, projectData, showClusters, showDensity }) => {
   const map = useMap();
 
   useEffect(() => {
     const addedLayers: L.Layer[] = [];
+    const cleanupCallbacks: Array<() => void> = [];
     let cancelled = false;
 
     const initializeMap = async () => {
@@ -360,45 +503,14 @@ const MapContent: React.FC<{
         });
       }
 
-      // Heatmap
-      if (showHeatmap) {
-        const heatmapData: [number, number, number][] = locations
-          .map((location) => {
-            const data = projectData[location.name];
-            if (!data) return null;
+      // Honeycomb density layer
+      if (showDensity) {
+        const activeLocations = getActiveLocations(locations, projectData);
 
-            const intensity =
-              data.workProjects.length +
-              data.educationProjects.length +
-              data.workExperiences.length +
-              data.educationalExperiences.length;
-
-            if (intensity === 0) return null;
-
-            return [
-              location.coordinates[0],
-              location.coordinates[1],
-              Math.min(intensity * 0.3, 1),
-            ] as [number, number, number];
-          })
-          .filter((point): point is [number, number, number] => point !== null);
-
-        if (heatmapData.length > 0) {
-          const heatLayer = L.heatLayer(heatmapData, {
-            radius: 60,
-            blur: 30,
-            maxZoom: 17,
-            gradient: {
-              0.0: 'rgba(66, 203, 179, 0.4)',
-              0.2: 'rgba(66, 203, 179, 0.6)',
-              0.4: 'rgba(0, 157, 111, 0.7)',
-              0.6: 'rgba(0, 157, 111, 0.8)',
-              0.8: 'rgba(230, 214, 124, 0.9)',
-              1.0: 'rgba(83, 39, 0, 0.9)',
-            },
-          });
-          map.addLayer(heatLayer);
-          addedLayers.push(heatLayer as L.Layer);
+        if (activeLocations.length > 0) {
+          const honeycombLayer = createHoneycombLayer(activeLocations, map);
+          addedLayers.push(honeycombLayer.layer);
+          cleanupCallbacks.push(honeycombLayer.remove);
         }
       }
     };
@@ -408,23 +520,24 @@ const MapContent: React.FC<{
 
     return () => {
       cancelled = true;
+      cleanupCallbacks.forEach((cleanupCallback) => cleanupCallback());
       addedLayers.forEach((layer) => {
         if (map.hasLayer(layer)) {
           map.removeLayer(layer);
         }
       });
     };
-  }, [map, locations, projectData, showClusters, showHeatmap]);
+  }, [map, locations, projectData, showClusters, showDensity]);
 
   return null;
 };
 
-/** Leaflet map with marker clusters, heatmap layer, and location popups. */
+/** Leaflet map with marker clusters, density layer, and location popups. */
 const MapComponent: React.FC<MapComponentProps> = ({
   locations,
   projectData,
   showClusters = true,
-  showHeatmap = false,
+  showDensity = false,
 }) => {
   // Calculate bounds to fit all markers with some padding
   const bounds: [number, number][] =
@@ -454,7 +567,7 @@ const MapComponent: React.FC<MapComponentProps> = ({
         locations={locations}
         projectData={projectData}
         showClusters={showClusters}
-        showHeatmap={showHeatmap}
+        showDensity={showDensity}
       />
     </MapContainer>
   );

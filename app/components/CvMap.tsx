@@ -57,7 +57,7 @@ interface CvMapProps {
   className?: string;
 }
 
-/** Interactive map displaying work and education locations with clustering and heatmap support. */
+/** Interactive map displaying work and education locations with clustering and density support. */
 const CvMap: React.FC<CvMapProps> = ({
   workExperience,
   educationalExperience = [],
@@ -73,7 +73,7 @@ const CvMap: React.FC<CvMapProps> = ({
     };
   }>({});
   const [showClusters, setShowClusters] = useState(true);
-  const [showHeatmap, setShowHeatmap] = useState(false);
+  const [showDensity, setShowDensity] = useState(false);
 
   useEffect(() => {
     fetch('/data/cv/locations.json')
@@ -194,14 +194,14 @@ const CvMap: React.FC<CvMapProps> = ({
               Clusters: {showClusters ? 'ON' : 'OFF'}
             </button>
             <button
-              onClick={() => setShowHeatmap(!showHeatmap)}
+              onClick={() => setShowDensity(!showDensity)}
               className={`px-3 py-1 rounded-full border-2 font-medium transition-all duration-200 ${
-                showHeatmap
+                showDensity
                   ? 'bg-primary-teal text-white border-primary-teal'
                   : 'bg-transparent text-primary-teal border-primary-teal hover:bg-primary-teal hover:text-white'
               }`}
             >
-              Heatmap: {showHeatmap ? 'ON' : 'OFF'}
+              Density: {showDensity ? 'ON' : 'OFF'}
             </button>
           </div>
         </div>
@@ -211,7 +211,7 @@ const CvMap: React.FC<CvMapProps> = ({
           locations={locations}
           projectData={projectData}
           showClusters={showClusters}
-          showHeatmap={showHeatmap}
+          showDensity={showDensity}
         />
       </div>
     </div>
