@@ -1,4 +1,4 @@
-import type { StaticImageData } from 'next/image';
+import type { StaticImageData } from 'next/dist/shared/lib/image-external';
 import day1 from '../../images/archInk2024/archInk-2024-1.jpg';
 import day10 from '../../images/archInk2024/archInk-2024-10.jpg';
 import day11 from '../../images/archInk2024/archInk-2024-11.jpg';
@@ -22,7 +22,7 @@ import day3 from '../../images/archInk2024/archInk-2024-3.jpg';
 import day30 from '../../images/archInk2024/archInk-2024-30.jpg';
 import day31 from '../../images/archInk2024/archInk-2024-31.jpg';
 import day4 from '../../images/archInk2024/archInk-2024-4.jpg';
-import day5 from '../../images/archInk2024/archInk-2024-5.png';
+import day5 from '../../images/archInk2024/archInk-2024-5.jpg';
 import day6 from '../../images/archInk2024/archInk-2024-6.jpg';
 import day7 from '../../images/archInk2024/archInk-2024-7.jpg';
 import day8 from '../../images/archInk2024/archInk-2024-8.jpg';

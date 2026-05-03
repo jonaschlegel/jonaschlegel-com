@@ -1,5 +1,5 @@
 import { UrlObject } from 'node:url';
-import type { StaticImageData } from 'next/image';
+import type { StaticImageData } from 'next/dist/shared/lib/image-external';
 import type { JSX } from 'react';
 
 type ProjectType = {

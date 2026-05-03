@@ -1,9 +1,10 @@
 'use client';
 
-import Image, { type StaticImageData } from 'next/image';
+import type { StaticImageData } from 'next/dist/shared/lib/image-external';
+import Image from 'next/image';
 import { useMemo } from 'react';
-import illustrationAnimals from '../images/other-illustration/illustration-animals-inked.png';
-import illustrationAnthropology from '../images/other-illustration/illustration-anthropology-letters.png';
+import illustrationAnimals from '../images/other-illustration/illustration-animals-inked.jpg';
+import illustrationAnthropology from '../images/other-illustration/illustration-anthropology-letters.jpg';
 import illustrationStratigraphy from '../images/other-illustration/illustration-archaeological-stratigraphy.png';
 import illustrationArtefact from '../images/other-illustration/illustration-artefact-female-sign.jpg';
 import illustrationAugnetizier from '../images/other-illustration/illustration-augnetizier-cluster.jpg';
@@ -15,12 +16,12 @@ import illustrationEurocentrism from '../images/other-illustration/illustration-
 import illustrationBronzeAge from '../images/other-illustration/illustration-bronze-age-cluster.jpg';
 import illustrationBronzeHoard from '../images/other-illustration/illustration-bronze-hoard.jpg';
 import illustrationBrush from '../images/other-illustration/illustration-brush-stratigraphy.jpg';
-import illustrationBurial from '../images/other-illustration/illustration-burial-dog-human.png';
-import illustrationCalcyladen from '../images/other-illustration/illustration-calcyladen.png';
-import illustrationPosthole from '../images/other-illustration/illustration-circle-posthole.png';
+import illustrationBurial from '../images/other-illustration/illustration-burial-dog-human.jpg';
+import illustrationCalcyladen from '../images/other-illustration/illustration-calcyladen.jpg';
+import illustrationPosthole from '../images/other-illustration/illustration-circle-posthole.jpg';
 import illustrationFeeding from '../images/other-illustration/illustration-feeding-reconstruction.jpg';
 import illustrationFemalBurial from '../images/other-illustration/illustration-femal-burial-necklace.jpg';
-import illustrationCoffee from '../images/other-illustration/illustration-fueled-by-coffee.png';
+import illustrationCoffee from '../images/other-illustration/illustration-fueled-by-coffee.jpg';
 import illustrationFunnelBeaker from '../images/other-illustration/illustration-funnel-beaker-cluster.jpg';
 import illustrationGenderBias from '../images/other-illustration/illustration-gender-bias.jpg';
 import illustrationGoatVessel from '../images/other-illustration/illustration-goat-vessel.jpg';

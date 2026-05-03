@@ -1,10 +1,10 @@
-import type { StaticImageData } from 'next/image';
+import type { StaticImageData } from 'next/dist/shared/lib/image-external';
 import between from '../../images/archInk2022/archInk-2022-between.jpg';
 import bone from '../../images/archInk2022/archInk-2022-bone.jpg';
 import bones from '../../images/archInk2022/archInk-2022-bones.jpg';
 import building from '../../images/archInk2022/archInk-2022-building.jpg';
 import classify from '../../images/archInk2022/archInk-2022-classify.jpg';
-import exchange from '../../images/archInk2022/archInk-2022-exchange.png';
+import exchange from '../../images/archInk2022/archInk-2022-exchange.jpg';
 import fragile from '../../images/archInk2022/archInk-2022-fragile.jpg';
 import goat from '../../images/archInk2022/archInk-2022-goat.jpg';
 import gargoyleDecoration from '../../images/archInk2022/archInk-2022-gragoyle-decoration.jpg';

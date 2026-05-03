@@ -1,6 +1,7 @@
 'use client';
 
-import Image, { type StaticImageData } from 'next/image';
+import type { StaticImageData } from 'next/dist/shared/lib/image-external';
+import Image from 'next/image';
 
 interface GalleryImage {
   src: StaticImageData;

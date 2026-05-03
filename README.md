@@ -82,6 +82,21 @@ The project uses the [UpLeveled ESLint config](https://github.com/upleveled/esli
 pnpm lint
 ```
 
+## Image Assets
+
+Content and UI images live in `app/images` and are imported from TypeScript or TSX files so Next.js can read their dimensions and optimize them through `next/image`. The `public` folder is reserved for assets that must keep a stable public URL, such as favicons, manifests, and downloadable files.
+
+Next.js is configured in `next.config.ts` to serve modern `avif` and `webp` image responses to browsers that support them, with normal fallbacks handled by the image optimizer. Do not commit separate AVIF/WebP copies for every source image unless the deployment target changes to a static export without Next image optimization.
+
+Use the image scripts before adding or replacing larger assets:
+
+```bash
+pnpm image:audit
+pnpm image:optimize -- --write
+```
+
+The optimizer keeps filenames and extensions stable, strips metadata, caps very large images to a web-sized maximum dimension, and writes files only when the optimized result is smaller.
+
 ## Deployment
 
 The website is deployed using [Vercel](https://vercel.com/). You can find the production site at [jonaschlegel.com](https://jonaschlegel.com).

@@ -1,4 +1,5 @@
-import Image, { type StaticImageData } from 'next/image';
+import type { StaticImageData } from 'next/dist/shared/lib/image-external';
+import Image from 'next/image';
 import type { FC } from 'react';
 import adventuressLogo from '../images/collaborations/adventuress-archaeology.png';
 import dhBeneluxLogo from '../images/collaborations/dh-benelux.png';
