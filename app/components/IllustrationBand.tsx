@@ -128,23 +128,29 @@ export default function IllustrationBand({ seed = 1 }: IllustrationBandProps) {
       aria-hidden="true"
     >
       <div className="illustration-band__track flex w-max">
-        {doubled.map((img, i) => (
-          <div
-            key={`illust-${img.alt}-${i < images.length ? 'a' : 'b'}`}
-            className="relative shrink-0"
-            style={{ height: BAND_HEIGHT }}
-          >
-            <Image
-              src={img.src}
-              alt={img.alt}
-              height={BAND_HEIGHT}
-              width={Math.round(BAND_HEIGHT * (img.src.width / img.src.height))}
-              className="block h-full w-auto object-cover"
-              sizes={`${Math.round(BAND_HEIGHT * (img.src.width / img.src.height))}px`}
-              quality={75}
-            />
-          </div>
-        ))}
+        {doubled.map((img, i) => {
+          const imageWidth = Math.round(
+            BAND_HEIGHT * (img.src.width / img.src.height),
+          );
+
+          return (
+            <div
+              key={`illust-${img.alt}-${i < images.length ? 'a' : 'b'}`}
+              className="relative shrink-0"
+              style={{ height: BAND_HEIGHT, width: imageWidth }}
+            >
+              <Image
+                src={img.src}
+                alt={img.alt}
+                height={BAND_HEIGHT}
+                width={imageWidth}
+                className="block"
+                sizes={`${imageWidth}px`}
+                quality={75}
+              />
+            </div>
+          );
+        })}
       </div>
     </div>
   );
