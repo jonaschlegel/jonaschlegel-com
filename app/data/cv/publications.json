@@ -1,5 +1,42 @@
 [
   {
+    "title": "Introducing Spatial Anchors for Annotating and Georeferencing Historical Maps",
+    "authors": ["Jona Schlegel", "Leon van Wissen", "Manjusha Kuruppath"],
+    "date": "June 2026",
+    "url": "https://doi.org/10.5281/zenodo.20346108",
+    "type": "Conference poster",
+    "conference": "IIIF 2026 Annual Conference and Showcase (IIIF2026)",
+    "location": "Amsterdam, Leiden & The Hague, The Netherlands"
+  },
+  {
+    "title": "Linking Surinamese Heritage Data: Building a Community-Focused Platform",
+    "authors": ["Jona Schlegel", "Thunnis van Oort"],
+    "date": "May 2026",
+    "url": "https://doi.org/10.5281/zenodo.20139428",
+    "type": "Conference poster",
+    "conference": "DH Benelux 2026",
+    "location": "Maastricht, Netherlands"
+  },
+  {
+    "title": "Episode 13: An Object Fluffle",
+    "authors": ["Jona Schlegel", "Stefanie Ulrich"],
+    "date": "May 2026",
+    "url": "https://thingswethrewaway.substack.com/p/episode-13-an-object-fluffle",
+    "type": "Podcast episode",
+    "podcast": "Things We Threw Away",
+    "location": "Online"
+  },
+  {
+    "title": "The Suriname Time Machine: Mapping Visual Heritage",
+    "authors": ["Thunnis van Oort", "Jona Schlegel"],
+    "date": "May 2026",
+    "url": "https://www.rijksmuseum.nl/en/whats-on/lectures-symposiums/2and3d-photography",
+    "type": "Conference presentation",
+    "conference": "2and3D Photography 2026",
+    "session": "Session 1: P03",
+    "location": "Amsterdam, Netherlands"
+  },
+  {
     "title": "Episode 12: Rabbit Holes and Hare Tales",
     "authors": ["Jona Schlegel", "Stefanie Ulrich"],
     "date": "April 2026",
