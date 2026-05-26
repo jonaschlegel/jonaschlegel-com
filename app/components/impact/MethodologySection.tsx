@@ -43,7 +43,7 @@ const HEADLINE_STATS: HeadlineStat[] = [
   {
     name: 'Citations / Paper',
     formula: 'totalCitations ÷ totalPublications',
-    source: 'Google Scholar total citations and publication count',
+    source: 'Google Scholar total citations and indexed publication count',
   },
   {
     name: 'Total Followers',
@@ -101,10 +101,10 @@ const MethodologySection: FC<MethodologySectionProps> = ({
             Platform metrics (followers, citations, views) are manually
             collected quarterly and recorded in a JSON file. No APIs or
             automated scrapers are used — every number is verified by hand.
-            Publication counts (podcast episodes, conference presentations,
-            total research outputs) are derived automatically from the CV
-            publications list at build time, so they stay in sync whenever a new
-            publication is added. Last updated{' '}
+            Publication counts, exact output types, and the yearly timeline are
+            derived automatically from the CV publications list at build time,
+            so they stay in sync whenever a new publication is added. Platform
+            metrics were last manually verified{' '}
             <time dateTime={lastUpdated} className="font-medium">
               {new Date(lastUpdated).toLocaleDateString('en-GB', {
                 day: 'numeric',

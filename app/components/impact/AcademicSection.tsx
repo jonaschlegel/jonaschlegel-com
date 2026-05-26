@@ -45,9 +45,10 @@ const AcademicSection: FC<AcademicSectionProps> = ({
       explanation: 'Average citations per publication.',
     },
     {
-      label: 'Publications',
+      label: 'Indexed Publications',
       value: academic.totalPublications,
-      explanation: 'Peer-reviewed articles, conference papers, book chapters.',
+      explanation:
+        'Publication count currently reflected in academic databases such as Google Scholar.',
     },
     {
       label: 'Conference Presentations',
@@ -89,8 +90,10 @@ const AcademicSection: FC<AcademicSectionProps> = ({
       </h2>
       <p className="mb-8 max-w-2xl text-gray-600">
         Bibliometric indicators tracked across {academicPlatforms.length}{' '}
-        academic databases. Citation metrics are field-dependent — archaeology
-        and digital humanities typically have lower counts than STEM fields.
+        academic databases. Indexed publication totals come from those
+        databases, while talks, posters, and the yearly output timeline sync
+        from the CV list. Citation metrics are field-dependent — archaeology and
+        digital humanities typically have lower counts than STEM fields.
       </p>
 
       {/* Key metrics — compact two-column layout */}

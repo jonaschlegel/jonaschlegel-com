@@ -293,6 +293,37 @@ export interface DerivedStats {
   contentToFollowerRatio: number;
 }
 
+/** Minimal publication shape used by impact-page derivations. */
+export interface PublicationRecord {
+  title: string;
+  date: string;
+  type: string;
+}
+
+export interface PublicationTimelineLegendItem {
+  type: string;
+  color: string;
+  total: number;
+}
+
+export interface PublicationTimelineYearSegment {
+  type: string;
+  color: string;
+  count: number;
+}
+
+export interface PublicationTimelineYear {
+  year: number;
+  total: number;
+  segments: PublicationTimelineYearSegment[];
+}
+
+export interface PublicationTimelineData {
+  years: PublicationTimelineYear[];
+  legend: PublicationTimelineLegendItem[];
+  maxTotal: number;
+}
+
 /** Compute aggregate derived statistics from the full impact data. */
 export function computeDerivedStats(data: ImpactData): DerivedStats {
   const { platforms, current, guestAppearances } = data;
@@ -390,6 +421,54 @@ export interface PublicationCounts {
   totalResearchOutputs: number;
 }
 
+const publicationTypeColors: Record<string, string> = {
+  'Journal article': '#009D6F',
+  'Conference paper': '#42CBB3',
+  Book: '#9A6100',
+  Editorial: '#C3AE56',
+  'Conference Contribution': '#5FAF9D',
+  Presentation: '#72BFAE',
+  'Conference presentation': '#C6A05A',
+  'Panel discussion': '#B98C56',
+  'Conference poster': '#8FB8AE',
+  'Conference abstract': '#8DA39A',
+  'Podcast episode': '#7EA35D',
+  Booklet: '#8F9B98',
+  'News blog': '#7C9D78',
+  'Master thesis': '#6F8F86',
+  'Bachelor thesis': '#8D7A60',
+  Video: '#7D705D',
+};
+
+const publicationTypeOrder = Object.keys(publicationTypeColors);
+
+function getPublicationYear(date: string): number | null {
+  const match = date.match(/(\d{4})(?!.*\d{4})/);
+
+  if (!match) {
+    return null;
+  }
+
+  const year = Number(match[1]);
+  return Number.isFinite(year) ? year : null;
+}
+
+function getPublicationTypeColor(type: string): string {
+  return publicationTypeColors[type] ?? '#A5AEAC';
+}
+
+function getOrderedPublicationTypes(types: Iterable<string>): string[] {
+  const availableTypes = new Set(types);
+  const knownTypes = publicationTypeOrder.filter((type) =>
+    availableTypes.has(type),
+  );
+  const extraTypes = [...availableTypes]
+    .filter((type) => !publicationTypeColors[type])
+    .sort((a, b) => a.localeCompare(b));
+
+  return [...knownTypes, ...extraTypes];
+}
+
 /** Publication types that count as peer-reviewed / published academic outputs. */
 const academicPubTypes = new Set([
   'Journal article',
@@ -410,7 +489,7 @@ const presentationTypes = new Set([
 
 /** Derive publication counts from the raw publications.json array. */
 export function derivePublicationCounts(
-  publications: { type: string }[],
+  publications: Pick<PublicationRecord, 'type'>[],
 ): PublicationCounts {
   let academicPublications = 0;
   let conferencePresentations = 0;
@@ -435,6 +514,72 @@ export function derivePublicationCounts(
     podcastEpisodes,
     otherOutputs,
     totalResearchOutputs: publications.length,
+  };
+}
+
+/** Build a yearly stacked timeline from the CV publications list. */
+export function buildPublicationTimeline(
+  publications: PublicationRecord[],
+): PublicationTimelineData {
+  const yearlyTypeCounts = new Map<number, Map<string, number>>();
+  const typeTotals = new Map<string, number>();
+
+  for (const publication of publications) {
+    const year = getPublicationYear(publication.date);
+
+    if (year == null) {
+      continue;
+    }
+
+    const yearCounts = yearlyTypeCounts.get(year) ?? new Map<string, number>();
+    yearCounts.set(
+      publication.type,
+      (yearCounts.get(publication.type) ?? 0) + 1,
+    );
+    yearlyTypeCounts.set(year, yearCounts);
+
+    typeTotals.set(
+      publication.type,
+      (typeTotals.get(publication.type) ?? 0) + 1,
+    );
+  }
+
+  const orderedTypes = getOrderedPublicationTypes(typeTotals.keys());
+
+  const years = [...yearlyTypeCounts.entries()]
+    .sort(([yearA], [yearB]) => yearA - yearB)
+    .map(([year, counts]) => {
+      const segments = orderedTypes
+        .map((type) => ({
+          type,
+          color: getPublicationTypeColor(type),
+          count: counts.get(type) ?? 0,
+        }))
+        .filter((segment) => segment.count > 0);
+
+      const total = segments.reduce((sum, segment) => sum + segment.count, 0);
+
+      return {
+        year,
+        total,
+        segments,
+      };
+    });
+
+  const legend = orderedTypes
+    .map((type) => ({
+      type,
+      color: getPublicationTypeColor(type),
+      total: typeTotals.get(type) ?? 0,
+    }))
+    .filter((item) => item.total > 0);
+
+  const maxTotal = Math.max(1, ...years.map((year) => year.total));
+
+  return {
+    years,
+    legend,
+    maxTotal,
   };
 }
 
@@ -485,7 +630,7 @@ export function getHeadlineStats(
     stats.push({
       name: 'Research Outputs',
       number: String(pubCounts.totalResearchOutputs),
-      detail: `${pubCounts.academicPublications} publications, ${pubCounts.conferencePresentations} talks`,
+      detail: `${pubCounts.academicPublications} academic, ${pubCounts.conferencePresentations} talks, ${pubCounts.podcastEpisodes} podcast episodes`,
     });
   } else {
     stats.push({

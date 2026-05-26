@@ -8,14 +8,17 @@ import ImpactRadar from '../components/impact/ImpactRadar';
 import ImpactSummary from '../components/impact/ImpactSummary';
 import MethodologySection from '../components/impact/MethodologySection';
 import OpenSourceSection from '../components/impact/OpenSourceSection';
+import PublicationsTimeline from '../components/impact/PublicationsTimeline';
 import SciCommSection from '../components/impact/SciCommSection';
 import SocialGrid from '../components/impact/SocialGrid';
 import {
+  buildPublicationTimeline,
   calculateDimensionScores,
   computeDerivedStats,
   derivePublicationCounts,
   getAcademicPlatformComparison,
   getHeadlineStats,
+  type PublicationRecord,
 } from '../data/impact-utils';
 import { generateImpactOGImageUrl } from '../lib/og-utils';
 import { generateSEOMetadata } from '../lib/seo';
@@ -49,13 +52,14 @@ const ImpactPage = async () => {
     fs.readFile(pubsPath, 'utf8'),
   ]);
   const impactData: ImpactData = JSON.parse(impactRaw);
-  const publications: { type: string }[] = JSON.parse(pubsRaw);
+  const publications: PublicationRecord[] = JSON.parse(pubsRaw);
 
   const { current, platforms, guestAppearances, scoringThresholds } =
     impactData;
 
   // Derive counts from publications.json and override snapshot values
   const pubCounts = derivePublicationCounts(publications);
+  const publicationTimeline = buildPublicationTimeline(publications);
   current.sciComm.podcastEpisodes = pubCounts.podcastEpisodes;
   current.academic.conferencesPresentations = pubCounts.conferencePresentations;
 
@@ -107,7 +111,7 @@ const ImpactPage = async () => {
           <p className="max-w-2xl text-lg leading-relaxed text-gray-600">
             A transparent, multi-dimensional view of research output, science
             communication, digital presence, community building, and technical
-            contributions. Last updated{' '}
+            contributions. Platform metrics last verified{' '}
             <time dateTime={impactData.lastUpdated}>
               {new Date(impactData.lastUpdated).toLocaleDateString('en-GB', {
                 day: 'numeric',
@@ -115,7 +119,8 @@ const ImpactPage = async () => {
                 year: 'numeric',
               })}
             </time>
-            .
+            ; publication counts and the timeline below auto-sync from the CV
+            list.
           </p>
 
           <div className="mt-6 rounded-lg border border-primary-teal/30 bg-primary-teal/5 p-4">
@@ -142,6 +147,9 @@ const ImpactPage = async () => {
 
         {/* Headline stats */}
         <ImpactSummary stats={headlineStats} />
+
+        {/* Publications timeline */}
+        <PublicationsTimeline timeline={publicationTimeline} />
 
         {/* Radar chart */}
         <ImpactRadar scores={scores} />
