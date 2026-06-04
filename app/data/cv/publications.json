@@ -1,12 +1,20 @@
 [
   {
-    "title": "Introducing Spatial Anchors for Annotating and Georeferencing Historical Maps",
-    "authors": ["Jona Schlegel", "Leon van Wissen", "Manjusha Kuruppath"],
-    "date": "June 2026",
-    "url": "https://doi.org/10.5281/zenodo.20346108",
-    "type": "Conference poster",
-    "conference": "IIIF 2026 Annual Conference and Showcase (IIIF2026)",
-    "location": "Amsterdam, Leiden & The Hague, The Netherlands"
+    "title": "Gazetteer of Early Modern Kerala",
+    "authors": [
+      "Thuy Dung Pham",
+      "Meenu Rabecca Mathai",
+      "Manjusha Kuruppath",
+      "Brecht Nijman",
+      "Jona Schlegel",
+      "Leon Van Wissen"
+    ],
+    "date": "2026-06-03",
+    "url": "https://doi.org/10.34894/fn1dbl",
+    "type": "Dataset",
+    "publisher": "DataverseNL",
+    "location": "Online",
+    "abstract": "This gazetteer is created as part of the Necessary Reunions Project from March to December 2025 funded by an NWO XS grant (File Number: 406.XS.24.02.046). It is a structured directory of place information for early modern Kerala for those places listed in a set of fifteen maps created in the seventeenth and eighteenth centuries by the Dutch East India Company (VOC) that are presently part of the Leupe collection and the collection of the Ministry of Colonies (MIKO) at the National Archives in The Hague. This gazetteer maps historical toponyms in VOC maps to their modern equivalents and other names used in the textual archives of the VOC; identifies the location of places indicated on the maps; identifies visual and textual elements indicating the geographical features and place functions and links them with the associated places; and associates places to geographical regions or polities that the maps indicate they were part of."
   },
   {
     "title": "Linking Surinamese Heritage Data: Building a Community-Focused Platform",
@@ -16,6 +24,38 @@
     "type": "Conference poster",
     "conference": "DH Benelux 2026",
     "location": "Maastricht, Netherlands"
+  },
+  {
+    "title": "Storytellers by Design: Critical Approaches to Curating Research-Driven Digital Experiences Using Design Methods",
+    "authors": [
+      "Kelly Gillikin Schoueri",
+      "Jona Schlegel",
+      "Federica Di Biase"
+    ],
+    "date": "June 2026",
+    "url": "https://doi.org/10.5281/zenodo.19248660",
+    "type": "Conference Contribution",
+    "conference": "DH BeNeLux 2026",
+    "location": "Maastricht, Netherlands"
+  },
+  {
+    "title": "Introducing Spatial Anchors for Annotating and Georeferencing Historical Maps",
+    "authors": ["Jona Schlegel", "Leon van Wissen", "Manjusha Kuruppath"],
+    "date": "June 2026",
+    "url": "https://doi.org/10.5281/zenodo.20346108",
+    "type": "Conference poster",
+    "conference": "IIIF 2026 Annual Conference and Showcase (IIIF2026)",
+    "location": "Amsterdam, Leiden & The Hague, The Netherlands"
+  },
+  {
+    "title": "A Reparative Digital Infrastructure for Suriname's Past: Adapting the Time Machine Paradigm for a Postcolonial Context",
+    "authors": ["Thunnis van Oort", "Jona Schlegel"],
+    "date": "2026-05-28",
+    "url": "https://associationofcaribbeanhistorians.org/2025-papers-2/",
+    "type": "Conference presentation",
+    "conference": "57th Annual Conference of the Association of Caribbean Historians",
+    "session": "Panel 14: Digital Humanities, Archives, and Public History in the Caribbean",
+    "location": "Kingston, Jamaica"
   },
   {
     "title": "Episode 13: An Object Fluffle",
@@ -29,11 +69,11 @@
   {
     "title": "The Suriname Time Machine: Mapping Visual Heritage",
     "authors": ["Thunnis van Oort", "Jona Schlegel"],
-    "date": "May 2026",
+    "date": "2026-05-20",
     "url": "https://www.rijksmuseum.nl/en/whats-on/lectures-symposiums/2and3d-photography",
     "type": "Conference presentation",
     "conference": "2and3D Photography 2026",
-    "session": "Session 1: P03",
+    "session": "Session 1, P03",
     "location": "Amsterdam, Netherlands"
   },
   {
@@ -44,19 +84,6 @@
     "type": "Podcast episode",
     "podcast": "Things We Threw Away",
     "location": "Online"
-  },
-  {
-    "title": "Storytellers by Design: Critical Approaches to Curating Research-Driven Digital Experiences Using Design Methods",
-    "authors": [
-      "Kelly Gillikin Schoueri",
-      "Jona Schlegel",
-      "Federica Di Biase"
-    ],
-    "date": "March 2026",
-    "url": "https://doi.org/10.5281/zenodo.19248660",
-    "type": "Conference Contribution",
-    "conference": "DH BeNeLux 2026",
-    "location": "Maastricht, Netherlands"
   },
   {
     "title": "Episode 11: Glass Biographies: Making, Using, Breaking, Dumping and Reusing",
