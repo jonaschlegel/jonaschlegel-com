@@ -77,22 +77,73 @@ const CvTabs: React.FC<CvTabsProps> = ({
     );
   });
 
+  const handleTabKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) {
+      return;
+    }
+
+    const tabs = Array.from(
+      event.currentTarget.querySelectorAll<HTMLButtonElement>('[role="tab"]'),
+    );
+    const currentIndex = tabs.indexOf(
+      document.activeElement as HTMLButtonElement,
+    );
+    if (currentIndex === -1) return;
+
+    const nextIndex =
+      event.key === 'Home'
+        ? 0
+        : event.key === 'End'
+          ? tabs.length - 1
+          : event.key === 'ArrowRight'
+            ? (currentIndex + 1) % tabs.length
+            : (currentIndex - 1 + tabs.length) % tabs.length;
+
+    event.preventDefault();
+    tabs[nextIndex]?.focus();
+    tabs[nextIndex]?.click();
+  };
+
   return (
     <div>
-      <div className="flex justify-around mb-4">
+      <div
+        className="mb-4 flex justify-around"
+        role="tablist"
+        aria-label="Curriculum vitae sections"
+        onKeyDown={handleTabKeyDown}
+        tabIndex={-1}
+      >
         <button
+          type="button"
+          id="cv-tab-work"
+          role="tab"
+          aria-selected={activeTab === 'work'}
+          aria-controls="cv-panel-work"
+          tabIndex={activeTab === 'work' ? 0 : -1}
           className={`px-4 py-2 ${activeTab === 'work' ? 'border-b-2 border-primary-accent font-bold' : ''}`}
           onClick={() => setActiveTab('work')}
         >
           Work
         </button>
         <button
+          type="button"
+          id="cv-tab-education"
+          role="tab"
+          aria-selected={activeTab === 'education'}
+          aria-controls="cv-panel-education"
+          tabIndex={activeTab === 'education' ? 0 : -1}
           className={`px-4 py-2 ${activeTab === 'education' ? 'border-b-2 border-primary-accent font-bold' : ''}`}
           onClick={() => setActiveTab('education')}
         >
           Education
         </button>
         <button
+          type="button"
+          id="cv-tab-publications"
+          role="tab"
+          aria-selected={activeTab === 'publications'}
+          aria-controls="cv-panel-publications"
+          tabIndex={activeTab === 'publications' ? 0 : -1}
           className={`px-4 py-2 ${activeTab === 'publications' ? 'border-b-2 border-primary-accent font-bold' : ''}`}
           onClick={() => setActiveTab('publications')}
         >
@@ -102,7 +153,12 @@ const CvTabs: React.FC<CvTabsProps> = ({
 
       {/* Work Tab */}
       {activeTab === 'work' && (
-        <div>
+        <div
+          id="cv-panel-work"
+          role="tabpanel"
+          aria-labelledby="cv-tab-work"
+          tabIndex={0}
+        >
           {workEntries.map((entry) => (
             <div
               key={`mobile-work-${entry.id}`}
@@ -133,7 +189,12 @@ const CvTabs: React.FC<CvTabsProps> = ({
 
       {/* Education Tab */}
       {activeTab === 'education' && (
-        <div>
+        <div
+          id="cv-panel-education"
+          role="tabpanel"
+          aria-labelledby="cv-tab-education"
+          tabIndex={0}
+        >
           {educationEntries.map((entry) => (
             <div
               key={`mobile-education-${entry.id}`}
@@ -164,7 +225,12 @@ const CvTabs: React.FC<CvTabsProps> = ({
 
       {/* Publications Tab */}
       {activeTab === 'publications' && (
-        <div>
+        <div
+          id="cv-panel-publications"
+          role="tabpanel"
+          aria-labelledby="cv-tab-publications"
+          tabIndex={0}
+        >
           {sortedPublications.map((pub) => (
             <div
               key={`mobile-publication-${getPublicationKey(pub)}`}

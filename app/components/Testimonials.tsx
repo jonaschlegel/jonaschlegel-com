@@ -1,65 +1,30 @@
-'use client';
-
-import '@glidejs/glide/dist/css/glide.core.css';
-import Glide, { Controls } from '@glidejs/glide/dist/glide.modular.esm.js';
-import { useEffect, useRef } from 'react';
-import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
 import { testimonialsData } from '../data/content';
 import ClientCard from './ClientCard';
 
-/** Carousel of client testimonials using Glide.js. */
+/** Static client testimonials that remain readable without carousel controls. */
 const Testimonials = () => {
-  const glideRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    if (!glideRef.current) return;
-    new Glide(glideRef.current, {
-      type: 'carousel',
-      startAt: 0,
-      perView: 1,
-    }).mount({ Controls });
-  }, []);
-
   return (
-    <div className="container mx-auto py-16">
-      <div className="mx-auto md:w-3/4">
-        <div ref={glideRef} className="glide relative">
-          <div
-            className="glide__track mx-auto w-full sm:w-[85%] md:w-[75%]"
-            data-glide-el="track"
-          >
-            <ul className="glide__slides">
-              {testimonialsData.map((client) => (
-                <li className="glide__slide" key={`client-${client.name}`}>
-                  <ClientCard {...client} />
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div
-            className="glide__arrows absolute top-1/2 z-40 mb-6 flex w-full -translate-y-1/2 justify-between"
-            data-glide-el="controls"
-          >
-            <button
-              type="button"
-              aria-label="Previous testimonial"
-              data-glide-dir="<"
-              className="glide__arrow glide__arrow--left rounded-full border border-primary-dark p-2 text-xl text-primary-dark hover:text-primary-green active:text-primary-green md:text-4xl min-w-[44px] min-h-[44px] flex items-center justify-center"
-            >
-              <BsArrowLeftShort />
-            </button>
-            <button
-              type="button"
-              aria-label="Next testimonial"
-              className="glide__arrow glide__arrow--right rounded-full border border-primary-dark p-2 text-xl text-primary-dark hover:text-primary-green active:text-primary-green md:text-4xl min-w-[44px] min-h-[44px] flex items-center justify-center"
-              data-glide-dir=">"
-            >
-              <BsArrowRightShort />
-            </button>
-          </div>
-        </div>
+    <section
+      className="container mx-auto py-16 md:py-24"
+      aria-labelledby="testimonials-heading"
+    >
+      <div className="mb-10 max-w-2xl">
+        <p className="eyebrow">Client perspective</p>
+        <h2 id="testimonials-heading" className="mt-3 text-3xl md:text-5xl">
+          Thoughtful work is collaborative work.
+        </h2>
       </div>
-    </div>
+      <div className="grid gap-6 md:grid-cols-2">
+        {testimonialsData.map((client) => (
+          <div
+            key={`client-${client.name}`}
+            className="border border-primary-dark/15 bg-white p-6 md:p-8"
+          >
+            <ClientCard {...client} />
+          </div>
+        ))}
+      </div>
+    </section>
   );
 };
 

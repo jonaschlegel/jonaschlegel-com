@@ -1,59 +1,38 @@
 import Link from 'next/link';
 
-/** Banner highlighting the current professional role and CV link. */
+/** Compact summary connecting Jona's research role and independent practice. */
 const CurrentRoleBanner = () => {
   return (
-    <div className="bg-primary-teal/10 border border-primary-teal/30 rounded-lg px-4 py-3 mb-8">
-      <p className="text-sm md:text-base text-center">
-        <span className="font-semibold text-primary-dark">Currently:</span>{' '}
-        <span className="text-gray-900">
-          Researcher at{' '}
-          <Link
+    <aside
+      className="border-y border-primary-dark/15 py-6"
+      aria-label="Current work"
+    >
+      <div className="grid gap-2 md:grid-cols-[auto_1fr] md:gap-8">
+        <p className="eyebrow">Current practice</p>
+        <p className="my-0 max-w-4xl leading-relaxed text-gray-700">
+          Alongside archaeoINK, I work as a researcher at the{' '}
+          <a
             href="https://www.huygens.knaw.nl/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary-green hover:underline"
+            className="font-semibold text-primary-green underline-offset-4 hover:underline"
           >
             Huygens Institute
-          </Link>{' '}
-          (KNAW) working on NWO-funded digital humanities projects including{' '}
+            <span className="sr-only"> (opens in a new tab)</span>
+          </a>{' '}
+          on digital humanities and cultural heritage projects. This research
+          work continually informs how I approach evidence, interfaces, and
+          public communication.{' '}
           <Link
-            href="https://necessaryreunions.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary-green hover:underline"
+            href="/cv"
+            className="font-semibold text-primary-green underline-offset-4 hover:underline"
           >
-            Necessary Reunions
+            View my CV
           </Link>
-          ,{' '}
-          <Link
-            href="https://www.huygens.knaw.nl/projecten/suriname-time-machine/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary-green hover:underline"
-          >
-            Suriname Time Machine
-          </Link>
-          , and{' '}
-          <Link
-            href="https://globalise.huygens.knaw.nl/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary-green hover:underline"
-          >
-            GLOBALISE
-          </Link>
-          . Via archaeoINK: regular cover art for{' '}
-          <Link
-            href="/projects/adventuress-cover"
-            className="text-primary-green hover:underline"
-          >
-            Adventuress Magazine
-          </Link>{' '}
-          and developing archaeology journaling workshops.
-        </span>
-      </p>
-    </div>
+          .
+        </p>
+      </div>
+    </aside>
   );
 };
 

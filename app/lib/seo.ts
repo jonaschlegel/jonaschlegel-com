@@ -18,7 +18,6 @@ export function generateSEOMetadata({
   title,
   description,
   canonical,
-  keywords = [],
   ogImage,
   ogType = 'website',
   publishedTime,
@@ -29,7 +28,7 @@ export function generateSEOMetadata({
   const baseUrl = 'https://jonaschlegel.com';
   const fullTitle =
     title === 'Home'
-      ? 'Jona Schlegel \u2013 Landscape Archaeologist, Knowledge Management, Visual Science Communicator, Illustrator & Web Developer'
+      ? 'Jona Schlegel | Archaeology, Illustration & Digital Heritage'
       : `${title} | Jona Schlegel`;
 
   const canonicalUrl = canonical || baseUrl;
@@ -40,21 +39,6 @@ export function generateSEOMetadata({
   const metadata: Metadata = {
     title: fullTitle,
     description,
-    keywords: [
-      'archaeology',
-      'archaeological illustration',
-      'archaeological drawing',
-      'archaeological sketching',
-      'visual science communication',
-      'landscape archaeology',
-      'archaeology web development',
-      'archaeology journaling',
-      'science communication',
-      'knowledge management',
-      'archaeological research',
-      'public engagement',
-      ...keywords,
-    ],
     authors: [{ name: author, url: baseUrl }],
     creator: author,
     publisher: author,

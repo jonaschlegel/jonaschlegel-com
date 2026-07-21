@@ -74,7 +74,7 @@ const ClientLogos: FC = () => {
             Collaborations
           </p>
           <h2 className="font-merriweather text-2xl font-semibold md:text-3xl">
-            Who I Work With
+            Selected organisations and collaborators
           </h2>
         </header>
 
@@ -98,6 +98,9 @@ const ClientLogos: FC = () => {
                   height={48}
                   className="h-12 w-auto object-contain"
                 />
+                <span className="max-w-40 text-center text-xs text-gray-600">
+                  {client.description}
+                </span>
               </a>
             ))}
           </div>

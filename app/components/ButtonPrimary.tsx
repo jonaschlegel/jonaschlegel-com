@@ -1,70 +1,51 @@
-'use client';
-
-import React from 'react';
 import type { ButtonProps } from './Button';
 import Button from './Button';
-
-declare global {
-  interface Window {
-    Calendly?: {
-      initPopupWidget: (options: { url: string }) => void;
-    };
-  }
-}
 
 export interface ButtonPrimaryProps extends ButtonProps {
   email?: string;
   calendlyEventSlug?: string;
 }
 
-/** Primary call-to-action button with email and Calendly booking support. */
-const ButtonPrimary: React.FC<ButtonPrimaryProps> = ({
+const classes =
+  'inline-flex min-h-12 items-center justify-center rounded-full bg-primary-green px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary-dark';
+
+/** Primary call to action with direct, script-free email and scheduling links. */
+const ButtonPrimary = ({
   className = '',
   email,
   calendlyEventSlug,
-  ...args
-}) => {
-  const handleClick = () => {
-    if (email) {
-      window.location.href = `mailto:${email}`;
-    } else if (calendlyEventSlug) {
-      const openCalendlyPopup = () => {
-        if (
-          window.Calendly &&
-          typeof window.Calendly.initPopupWidget === 'function'
-        ) {
-          try {
-            window.Calendly.initPopupWidget({
-              url: `https://calendly.com/${calendlyEventSlug}?primary_color=ff3367`,
-            });
-            return true;
-          } catch (error) {
-            console.error('Error opening Calendly popup:', error);
-            return false;
-          }
-        }
-        return false;
-      };
+  children,
+  ...buttonProps
+}: ButtonPrimaryProps) => {
+  if (email) {
+    return (
+      <a href={`mailto:${email}`} className={`${classes} ${className}`}>
+        {children}
+      </a>
+    );
+  }
 
-      if (openCalendlyPopup()) {
-        return;
-      }
-
-      setTimeout(() => {
-        if (!openCalendlyPopup()) {
-          console.warn('Calendly is not loaded yet, opening in new tab');
-          window.open(`https://calendly.com/${calendlyEventSlug}`, '_blank');
-        }
-      }, 1000);
-    }
-  };
+  if (calendlyEventSlug) {
+    return (
+      <a
+        href={`https://calendly.com/${calendlyEventSlug}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`${classes} ${className}`}
+      >
+        {children}
+        <span className="sr-only"> (opens in a new tab)</span>
+      </a>
+    );
+  }
 
   return (
     <Button
-      className={`rounded-full bg-primary-accent font-semibold text-white ${className}`}
-      {...args}
-      onClick={handleClick}
-    />
+      className={`bg-primary-green font-semibold text-white hover:bg-primary-dark ${className}`}
+      {...buttonProps}
+    >
+      {children}
+    </Button>
   );
 };
 

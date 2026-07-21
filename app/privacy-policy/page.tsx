@@ -5,7 +5,7 @@ import { generateLegalOGImageUrl } from '../lib/og-utils';
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description:
-    'Privacy policy for jonaschlegel.com detailing how personal data is collected, used, and protected in compliance with GDPR.',
+    'Privacy information for jonaschlegel.com explaining what data is collected and which services are used.',
   robots: {
     index: true,
     follow: false,
@@ -35,18 +35,23 @@ export const metadata: Metadata = {
   },
 };
 
-/** Privacy policy page detailing GDPR-compliant data handling practices. */
+/** Privacy information matching the services currently used by the website. */
 export default function PrivacyPolicy() {
   return (
     <div className="container mx-auto px-4 py-16">
       <h1>Privacy Policy</h1>
+      <p className="text-sm text-gray-600">Last updated: 20 July 2026</p>
 
       <section className="mb-8">
         <h2 className="text-left">1. Introduction</h2>
         <p>
-          Protecting your privacy is important to us. This privacy policy
-          outlines how we collect, use, and protect your personal data when you
-          visit this website.
+          Jona Schlegel, trading as archaeoINK, is responsible for the personal
+          data described on this page. Questions and privacy requests can be
+          sent to{' '}
+          <a href="mailto:archaeoink@jonaschlegel.com">
+            archaeoink@jonaschlegel.com
+          </a>
+          .
         </p>
       </section>
 
@@ -55,12 +60,11 @@ export default function PrivacyPolicy() {
         <p>We collect the following personal data when you use our website:</p>
         <ul className="ml-6 list-inside list-disc">
           <li>
-            Contact information (such as your email address if provided
-            voluntarily).
+            Information submitted through the project enquiry form, including
+            your name, email address, project type, timeline, and message.
           </li>
           <li>
-            Usage data (including cookies, IP addresses, and browser
-            information).
+            Limited usage and device information when you consent to analytics.
           </li>
         </ul>
       </section>
@@ -78,29 +82,43 @@ export default function PrivacyPolicy() {
       <section className="mb-8">
         <h2 className="mb-4 text-2xl font-semibold">4. Cookies</h2>
         <p>
-          Our website uses cookies to improve user experience and analyze
-          website traffic. You can control the use of cookies through your
-          browser settings.
+          CookieYes stores and communicates your consent preferences. Optional
+          analytics storage is denied by default and can be changed through the
+          cookie settings shown on the website.
         </p>
       </section>
 
       <section className="mb-8">
         <h2 className="mb-4 text-2xl font-semibold">5. Sharing Your Data</h2>
-        <p>We do not share your personal data with third parties except:</p>
+        <p>The website uses the following service providers:</p>
         <ul className="ml-6 list-inside list-disc">
-          <li>When required by law or government authorities.</li>
+          <li>Vercel for website hosting and delivery.</li>
+          <li>CookieYes for consent management.</li>
+          <li>Google Analytics when analytics consent is granted.</li>
           <li>
-            To trusted third-party service providers who assist in operating the
-            website.
+            Resend to deliver information submitted through the enquiry form.
+          </li>
+          <li>
+            OpenStreetMap and CARTO when the interactive CV map is displayed.
+          </li>
+          <li>
+            Sketchfab only after you choose to load an interactive 3D model.
           </li>
         </ul>
+        <p>
+          Links to external services such as Calendly, social networks, and the
+          archaeoINK blog open those services directly. Their own privacy terms
+          apply after you follow a link.
+        </p>
       </section>
 
       <section className="mb-8">
         <h2 className="mb-4 text-2xl font-semibold">6. Data Retention</h2>
         <p>
-          We retain your personal data only for as long as necessary to fulfill
-          the purposes outlined in this privacy policy or as required by law.
+          Enquiry details are kept only as long as needed to respond, manage a
+          potential or active project, and meet applicable administrative
+          obligations. Analytics retention is controlled through the configured
+          analytics and consent settings.
         </p>
       </section>
 
@@ -111,6 +129,7 @@ export default function PrivacyPolicy() {
           <li>Request access to your personal data.</li>
           <li>Request the correction or deletion of your data.</li>
           <li>Object to the processing of your data or withdraw consent.</li>
+          <li>Request a portable copy where applicable.</li>
         </ul>
       </section>
 
@@ -128,9 +147,8 @@ export default function PrivacyPolicy() {
           9. Changes to This Policy
         </h2>
         <p>
-          We may update this privacy policy from time to time. Any changes will
-          be posted on this page with an updated date. Continued use of the
-          website after changes indicates your acceptance of the revised policy.
+          This page is updated when the website or its service providers change.
+          The date at the top shows the latest revision.
         </p>
       </section>
     </div>

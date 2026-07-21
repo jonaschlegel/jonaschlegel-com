@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
+import { MdArrowUpward } from 'react-icons/md';
 
 /** Floating button that scrolls the page back to the top when clicked. */
 const ScrollToTop = () => {
@@ -31,11 +32,12 @@ const ScrollToTop = () => {
     <div>
       {isVisible && (
         <button
+          type="button"
           onClick={scrollToTop}
           aria-label="Scroll to top"
-          className="fixed bottom-[max(6rem,calc(1.5rem+env(safe-area-inset-bottom)))] right-4 md:right-10 text-primary-dark rounded-full border border-gray-400 hover:text-gray-500 active:text-gray-500 transition-all text-base z-10 w-11 h-11 flex items-center justify-center hover:border-gray-500 active:border-gray-500"
+          className="fixed bottom-[max(1.5rem,env(safe-area-inset-bottom))] right-4 z-40 flex size-11 items-center justify-center rounded-full bg-primary-dark text-white shadow-md transition-colors hover:bg-primary-green md:right-8"
         >
-          ^
+          <MdArrowUpward size={20} aria-hidden="true" />
         </button>
       )}
     </div>

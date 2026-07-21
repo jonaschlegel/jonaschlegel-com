@@ -10,11 +10,6 @@ const nextConfig: NextConfig = {
     rules: {},
   },
 
-  typescript: {
-    // Types are already checked in CI
-    ignoreBuildErrors: true,
-  },
-
   // SEO and performance optimizations
   poweredByHeader: false,
 
@@ -51,7 +46,7 @@ const nextConfig: NextConfig = {
           {
             key: 'Content-Security-Policy',
             value:
-              "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' assets.calendly.com client.crisp.chat settings.crisp.chat widget.crisp.chat storage.crisp.chat cdn-cookieyes.com www.googletagmanager.com connect.facebook.net; style-src 'self' 'unsafe-inline' fonts.googleapis.com assets.calendly.com client.crisp.chat; font-src 'self' data: fonts.gstatic.com client.crisp.chat; img-src 'self' data: blob: *.google-analytics.com www.facebook.com client.crisp.chat image.crisp.chat cdn-cookieyes.com *.basemaps.cartocdn.com *.tile.openstreetmap.org cdnjs.cloudflare.com; connect-src 'self' client.crisp.chat settings.crisp.chat wss://client.crisp.chat wss://client.relay.crisp.chat *.google-analytics.com *.analytics.google.com api.crisp.chat client.relay.crisp.chat cdn-cookieyes.com log.cookieyes.com connect.facebook.net www.facebook.com calendly.com; frame-src 'self' calendly.com sketchfab.com www.instagram.com;",
+              "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' cdn-cookieyes.com www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data: blob: *.google-analytics.com cdn-cookieyes.com *.basemaps.cartocdn.com *.tile.openstreetmap.org cdnjs.cloudflare.com; connect-src 'self' *.google-analytics.com *.analytics.google.com cdn-cookieyes.com log.cookieyes.com api.resend.com; frame-src 'self' sketchfab.com;",
           },
         ],
       },

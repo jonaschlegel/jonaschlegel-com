@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @config "../tailwind.config.ts";
 
 html {
@@ -25,7 +25,7 @@ button:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid #009d6f;
+  outline: 3px solid #007a57;
   outline-offset: 2px;
   border-radius: 2px;
 }
@@ -36,7 +36,7 @@ textarea:focus-visible {
   top: -100%;
   left: 0;
   padding: 0.5rem 1rem;
-  background: #009d6f;
+  background: #007a57;
   color: #fff;
   z-index: 100;
   font-weight: 600;
@@ -45,52 +45,79 @@ textarea:focus-visible {
   top: 0;
 }
 
-body {
-  font-family:
-    ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol', 'Noto Color Emoji';
-  background-color: #f5f4f2;
-  color: #1c1f23;
+@layer base {
+  body {
+    font-family:
+      var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
+      'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+      'Noto Color Emoji';
+    background-color: #f5f4f2;
+    color: #1c1f23;
+  }
+
+  p,
+  div {
+    font-family:
+      var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
+      'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+      'Noto Color Emoji';
+    color: #1c1f23;
+  }
+
+  h1 {
+    @apply font-merriweather font-bold tracking-tight;
+
+    color: #1c1f23;
+    font-size: clamp(2.75rem, 6vw, 4.75rem);
+    line-height: 1.06;
+  }
+
+  h2 {
+    @apply font-merriweather text-2xl font-semibold md:text-3xl;
+
+    color: #1c1f23;
+  }
+
+  h3 {
+    @apply text-lg font-medium;
+
+    color: #1c1f23;
+  }
+
+  p {
+    @apply tracking-tight;
+
+    color: #3a3d42;
+    line-height: 1.65;
+    margin-block: 1rem;
+  }
 }
 
-p,
-div {
-  font-family:
-    ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol', 'Noto Color Emoji';
-  color: #1c1f23;
+.eyebrow {
+  color: #007a57;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+  margin-block: 0;
+  text-transform: uppercase;
 }
 
-h1 {
-  @apply font-merriweather text-5xl font-bold leading-snug tracking-tight xl:text-[4.5rem];
-
-  color: #1c1f23;
+.navigation-list,
+.plain-list {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-h2 {
-  @apply text-left font-merriweather text-2xl font-semibold md:text-3xl;
+@layer base {
+  ul {
+    @apply my-6 list-disc list-outside space-y-2 ml-6;
+  }
 
-  color: #1c1f23;
-}
-
-h3 {
-  @apply text-left text-lg font-medium uppercase;
-
-  color: #009d6f;
-}
-
-p {
-  @apply tracking-tight my-6;
-
-  color: #3a3d42;
-}
-
-ul {
-  @apply my-6 list-disc list-outside space-y-2 ml-6;
-}
-
-ol {
-  @apply my-6 list-decimal list-outside space-y-2 ml-6;
+  ol {
+    @apply my-6 list-decimal list-outside space-y-2 ml-6;
+  }
 }
 
 .caption {
@@ -175,6 +202,10 @@ ol {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   .illustration-band__track {
     animation: none;
   }

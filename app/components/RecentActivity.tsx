@@ -49,7 +49,7 @@ const RecentActivity = () => {
     <section className="container mx-auto py-12 px-4">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-xl font-semibold mb-6 flex items-center gap-2">
-          <span className="inline-block w-2 h-2 rounded-full bg-primary-teal animate-pulse" />
+          <span className="inline-block size-2 rounded-full bg-primary-teal motion-safe:animate-pulse" />
           Recent Activity
         </h2>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">

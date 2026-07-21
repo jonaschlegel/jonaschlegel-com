@@ -8,10 +8,10 @@ export default function BlogPreview() {
       <div className="mx-auto max-w-5xl">
         <header className="mb-10 text-center">
           <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary-green">
-            archaeoINK
+            Selected writing
           </p>
           <h2 className="font-merriweather text-2xl font-semibold md:text-3xl">
-            Latest from the Blog
+            Ideas behind the practice
           </h2>
         </header>
 

@@ -7,21 +7,30 @@ import SocialItem from './SocialItem';
 /** Site footer with navigation links, social icons, and contact call-to-action. */
 const Footer = () => {
   return (
-    <div className="container mx-auto py-16">
+    <footer className="container mx-auto border-t border-primary-dark/15 py-16">
       <div className="mb-12 text-center">
         <h2 className="mb-3 font-merriweather text-3xl font-bold md:text-5xl">
           {footerdata.heading}
         </h2>
         <div>
-          <ButtonPrimary calendlyEventSlug="jonaschlegel">
-            Work With Me
+          <ButtonPrimary href="/services#contact">
+            Start a Project
           </ButtonPrimary>
         </div>
       </div>
       <div className="space-y-3">
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-1">
           {footerdata.navLinks.map((navItem) => (
-            <Link key={`nav-${navItem.name}`} href={navItem.href}>
+            <Link
+              key={`nav-${navItem.name}`}
+              href={navItem.href}
+              target={navItem.href.startsWith('http') ? '_blank' : undefined}
+              rel={
+                navItem.href.startsWith('http')
+                  ? 'noopener noreferrer'
+                  : undefined
+              }
+            >
               {navItem.name}
             </Link>
           ))}
@@ -36,7 +45,7 @@ const Footer = () => {
           <Link href="/privacy-policy">Privacy Policy</Link>
           <Link href="/terms-and-conditions">Terms and Conditions</Link>
         </div>
-        <div className="mt-6 flex flex-col items-center justify-center gap-1 text-[10px]">
+        <div className="mt-6 flex flex-col items-center justify-center gap-1 text-xs text-gray-700">
           <span>
             © Jona Schlegel, archaeoINK {new Date().getFullYear()}. All rights
             reserved.
@@ -54,7 +63,7 @@ const Footer = () => {
           </span>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

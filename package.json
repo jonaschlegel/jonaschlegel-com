@@ -9,6 +9,9 @@
     "image:audit": "node scripts/image-audit.mjs",
     "image:optimize": "node scripts/optimize-images.mjs",
     "lint": "eslint .",
+    "stylelint": "stylelint 'app/**/*.css'",
+    "typecheck": "tsc --noEmit",
+    "check": "pnpm lint && pnpm typecheck && pnpm stylelint",
     "start": "next start"
   },
   "dependencies": {

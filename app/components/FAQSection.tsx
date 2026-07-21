@@ -57,6 +57,7 @@ export default function FAQSection({
               className="mb-4 border border-gray-200 rounded-lg overflow-hidden"
             >
               <button
+                type="button"
                 className="w-full px-6 py-4 text-left bg-white hover:bg-gray-50 transition-colors flex justify-between items-center"
                 onClick={() => toggleFAQ(index)}
                 id={`faq-question-${index}`}
@@ -65,24 +66,30 @@ export default function FAQSection({
               >
                 <h3 className="text-lg font-semibold pr-4">{faq.question}</h3>
                 {openIndex === index ? (
-                  <FaChevronUp className="text-primary-green flex-shrink-0" />
+                  <FaChevronUp
+                    className="text-primary-green flex-shrink-0"
+                    aria-hidden="true"
+                  />
                 ) : (
-                  <FaChevronDown className="text-primary-green flex-shrink-0" />
+                  <FaChevronDown
+                    className="text-primary-green flex-shrink-0"
+                    aria-hidden="true"
+                  />
                 )}
               </button>
 
-              <div
-                id={`faq-answer-${index}`}
-                role="region"
-                aria-labelledby={`faq-question-${index}`}
-                className={`overflow-hidden transition-all duration-200 ${
-                  openIndex === index
-                    ? 'max-h-96 px-6 py-4 bg-gray-50 border-t border-gray-200'
-                    : 'max-h-0'
-                }`}
-              >
-                <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
-              </div>
+              {openIndex === index && (
+                <div
+                  id={`faq-answer-${index}`}
+                  role="region"
+                  aria-labelledby={`faq-question-${index}`}
+                  className="border-t border-gray-200 bg-gray-50 px-6 py-4"
+                >
+                  <p className="my-0 leading-relaxed text-gray-700">
+                    {faq.answer}
+                  </p>
+                </div>
+              )}
             </div>
           ))}
         </div>

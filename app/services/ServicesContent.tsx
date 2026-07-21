@@ -1,128 +1,105 @@
 'use client';
 
-import Image from 'next/image';
+import Image, { type StaticImageData } from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import ButtonPrimary from '../components/ButtonPrimary';
-import FAQSection from '../components/FAQSection';
-import IllustrationBand from '../components/IllustrationBand';
-import { jonaScicommImage, servicesFAQs } from '../data/content';
 import adventuressCover from '../images/projects/adventuress-cover.jpg';
 import necessaryReunions from '../images/projects/necessary-reunions.png';
-import pastrace from '../images/projects/pastrace.jpg';
 import romanBurial from '../images/projects/roman-burial.jpg';
+import surinameTijdmachine from '../images/projects/suriname-tijdmachine.jpg';
 
-const capabilities = [
+type ProjectExample = {
+  name: string;
+  note: string;
+  slug: string;
+  image: StaticImageData;
+};
+
+const services = [
   {
-    title: 'Archaeological Illustration & Visual Science Communication',
+    number: '01',
+    eyebrow: 'Visual communication',
+    title: 'Give complex research a form people can understand.',
     description:
-      'Research publications compete for attention — compelling visuals make yours stand out. Freelance archaeological illustration for publications, outreach, and education: from reconstruction drawings and digital painting to conceptual illustrations, cover art, comics, and zines. Visual science communication that bridges research and public understanding.',
-    includes: [
-      'Archaeological drawing & reconstruction scenes',
-      'Digital painting & colour illustrations',
-      'Sketching, concept art & visual development',
-      'Conceptual and educational illustrations',
-      'Cover art & publication illustration',
-      'Comics, zines & visual narratives',
+      'For researchers, publishers, and heritage teams who need visuals that are both inviting and faithful to the evidence. I work from the research outward—finding the image, sequence, or visual language that makes the subject clear.',
+    deliverables: [
+      'Reconstruction and scientific illustration',
+      'Editorial and publication artwork',
+      'Conceptual visuals and visual narratives',
+      'Supporting identity, layout, and 3D work',
     ],
-    image: romanBurial,
-    imageAlt:
-      'Archaeological drawing and digital painting of a Roman burial reconstruction',
-    projectSlug: 'roman-burial',
-    projectName: 'Roman Burial Reconstruction',
-  },
-  {
-    title: '3D Modelling & Documentation',
-    description:
-      'Flat photos rarely capture the full story of an artefact. Digital 3D documentation and modelling brings archaeological finds to life through image-based modelling (photogrammetry), Feather 3D, and Nomad Sculpt.',
-    includes: [
-      'Image-based modelling (photogrammetry)',
-      'Digital sculpting (Nomad Sculpt, Feather 3D)',
-      'Artefact documentation & visualisation',
-      '3D models for research and outreach',
-    ],
-    sketchfabModels: [
+    examples: [
       {
-        id: '76bee1f4a8394dc78d3c5be74f8491ce',
-        title: 'Lengyel culture pottery',
+        name: 'Roman Burial Reconstruction',
+        note: 'Peer-reviewed scientific illustration',
+        slug: 'roman-burial',
+        image: romanBurial,
       },
-      // {
-      //   id: 'c9db9791d7f8470da5c6bc40d6903529',
-      //   title: 'Gravestone from Rheinsberg (Germany)',
-      // },
-    ],
+      {
+        name: 'Adventuress Journal',
+        note: 'Editorial cover illustration',
+        slug: 'adventuress-cover',
+        image: adventuressCover,
+      },
+    ] satisfies ProjectExample[],
   },
   {
-    title: 'Archaeology Web Development & Design',
+    number: '02',
+    eyebrow: 'Digital heritage products',
+    title: 'Turn scattered knowledge into something people can explore.',
     description:
-      'Research datasets locked in spreadsheets cannot serve the audiences they deserve. Fullstack archaeology web development for research projects: database-driven platforms, interactive visualisation tools, and digital research infrastructure built with Next.js, TypeScript, and modern web technologies. Archaeology web design that makes complex data accessible.',
-    includes: [
-      'Research platforms & databases',
-      'Interactive data visualisation & 3D tools',
-      'Next.js, TypeScript, Tailwind CSS',
-      'CesiumJS, Leaflet, Three.js',
+      'For research projects and heritage organisations with complex collections, maps, or data. I combine product thinking, interface design, and development to create useful public platforms—not just websites around a database.',
+    deliverables: [
+      'Research platforms and digital collections',
+      'Interactive maps and visualisations',
+      'Linked data and knowledge interfaces',
+      'Interface design and full-stack development',
     ],
-    image: necessaryReunions,
-    imageAlt:
-      'Archaeology web development platform for VOC cartographic research',
-    projectSlug: 'necessary-reunions',
-    projectName: 'Necessary Reunions',
-  },
-  {
-    title: 'Brand & Publication Design',
-    description:
-      'First impressions shape how seriously your research is taken. Archaeology brand identity and publication design for heritage organisations, research projects, and academic publishers \u2014 brand systems that communicate credibility and purpose.',
-    includes: [
-      'Brand identity development',
-      'Publication & journal design',
-      'Visual systems & style guides',
-      'Print & digital asset creation',
-    ],
-    image: pastrace,
-    imageAlt:
-      'Archaeology brand identity design for PasTrace heritage documentation company',
-    projectSlug: 'pastrace',
-    projectName: 'PasTrace',
+    examples: [
+      {
+        name: 'Suriname Tijdmachine',
+        note: 'Archives, linked data, and historical maps',
+        slug: 'suriname-tijdmachine',
+        image: surinameTijdmachine,
+      },
+      {
+        name: 'Necessary Reunions',
+        note: 'A research interface for maps and records',
+        slug: 'necessary-reunions',
+        image: necessaryReunions,
+      },
+    ] satisfies ProjectExample[],
   },
 ] as const;
 
 const processSteps = [
   {
-    step: '01',
-    title: 'Brief',
-    summary: 'We define your project together.',
-    details:
-      'Every project starts with a conversation. You share your research context, target audience, and goals. I ask questions to understand the archaeological content, the level of accuracy required, and any constraints around format, timeline, or budget. By the end, we have a shared brief that guides the entire project.',
+    number: '01',
+    title: 'Understand',
+    text: 'We clarify the research, audience, constraints, and the real job the work needs to do.',
   },
   {
-    step: '02',
-    title: 'Sketch & Concept',
-    summary: 'First visual directions based on the brief.',
-    details:
-      'Based on the brief, I develop initial sketches or wireframes depending on the project type. For illustrations, this means rough compositions and style explorations. For web projects, wireframes and content architecture. For brand work, initial logo concepts and colour directions. You review these before any detailed work begins.',
+    number: '02',
+    title: 'Find a direction',
+    text: 'I turn that understanding into sketches, concepts, or an interface structure before detailing it.',
   },
   {
-    step: '03',
-    title: 'Iteration',
-    summary: 'Refining through feedback rounds.',
-    details:
-      'This is where the work takes shape. We go through structured feedback rounds where you review, comment, and I refine. For illustrations, I typically work through 2 to 3 rounds: rough sketch, refined drawing, and final colour/detail pass. For web projects, this means development sprints with regular check-ins. Each round brings us closer to the final result.',
+    number: '03',
+    title: 'Make together',
+    text: 'We review at clear moments, combining your subject knowledge with my visual and technical work.',
   },
   {
-    step: '04',
-    title: 'Delivery',
-    summary: 'Final files, formats, and handover.',
-    details:
-      'You receive the final deliverables in all required formats. Illustrations come in print-ready and web-optimised versions. Web projects include full deployment and documentation. Brand packages include all logo variants, colour specifications, and usage guidelines. I also provide a short handover session to walk you through everything.',
+    number: '04',
+    title: 'Deliver well',
+    text: 'You receive usable final files or a deployed product, with a straightforward handover.',
   },
-];
+] as const;
 
 const projectTypes = [
-  'Illustration',
-  '3D Modelling',
-  'Web Development',
-  'Brand / Publication Design',
+  'Visual communication / illustration',
+  'Digital heritage product',
+  'A combination of both',
   'Not sure yet',
 ] as const;
 
@@ -133,273 +110,220 @@ const timelines = [
   'Urgent (under 1 month)',
 ] as const;
 
-const capabilityAnchors: Record<string, string> = {
-  'Archaeological Illustration & Visual Science Communication': 'illustration',
-  '3D Modelling & Documentation': '3d-modelling',
-  'Archaeology Web Development & Design': 'web-development',
-  'Brand & Publication Design': 'brand-design',
-};
+function ProjectPair({ examples }: { examples: readonly ProjectExample[] }) {
+  return (
+    <div className="grid grid-cols-12 items-start gap-4 md:gap-6">
+      {examples.map((example, index) => (
+        <Link
+          key={`service-example-${example.slug}`}
+          href={`/projects/${example.slug}`}
+          className={`group block ${
+            index === 0 ? 'col-span-8' : 'col-span-4 mt-16 md:mt-28'
+          }`}
+        >
+          <div
+            className={`relative overflow-hidden bg-gray-100 ${
+              index === 0 ? 'aspect-[4/3]' : 'aspect-[3/4]'
+            }`}
+          >
+            <Image
+              src={example.image}
+              alt=""
+              fill
+              className="object-cover transition-transform duration-700 motion-reduce:transition-none group-hover:scale-[1.02] motion-reduce:group-hover:scale-100"
+              sizes={index === 0 ? '60vw' : '30vw'}
+            />
+          </div>
+          <p className="mb-0 mt-3 text-xs font-semibold uppercase tracking-wider text-primary-green">
+            {example.name}
+          </p>
+          <p className="my-1 hidden text-sm text-gray-600 sm:block">
+            {example.note}
+          </p>
+        </Link>
+      ))}
+    </div>
+  );
+}
 
-/** Interactive services page with service descriptions, process steps, and contact form. */
+/** Focused services page organised around client needs rather than techniques. */
 export default function ServicesContent() {
-  const [openStep, setOpenStep] = useState<number | null>(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     projectType: '',
     timeline: '',
     description: '',
+    website: '',
   });
+  const [submissionStatus, setSubmissionStatus] = useState<
+    'idle' | 'sending' | 'success' | 'error'
+  >('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const subject = encodeURIComponent(
-      `Project Inquiry: ${formData.projectType || 'New Project'}`,
-    );
-    const body = encodeURIComponent(
-      `Hi Jona,\n\nName: ${formData.name}\nEmail: ${formData.email}\nProject type: ${formData.projectType}\nTimeline: ${formData.timeline}\n\nProject description:\n${formData.description}\n`,
-    );
-    window.location.href = `mailto:archaeoink@jonaschlegel.com?subject=${subject}&body=${body}`;
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
+    setSubmissionStatus('sending');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) throw new Error('Delivery failed');
+
+      setSubmissionStatus('success');
+      setFormData({
+        name: '',
+        email: '',
+        projectType: '',
+        timeline: '',
+        description: '',
+        website: '',
+      });
+    } catch {
+      setSubmissionStatus('error');
+    }
   };
 
   return (
-    <div className="container mx-auto px-4 py-12 md:py-20">
-      {/* Intro */}
-      <header className="mx-auto mb-20 max-w-3xl text-center">
-        <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary-green">
-          Services
-        </p>
-        <h1 className="mb-6 leading-snug tracking-tight">
-          Archaeological Illustration &amp; Archaeology Web Development
-        </h1>
-        <p className="text-lg tracking-tight text-gray-600">
-          From archaeological drawing, digital painting, and visual science
-          communication to fullstack web development for archaeology and brand
-          identity: everything I do serves one goal. Making archaeological
-          knowledge visible, accessible, and engaging.
-        </p>
+    <div>
+      <header className="container mx-auto grid gap-10 pb-20 pt-12 md:pb-32 md:pt-20 lg:grid-cols-12 lg:items-end">
+        <div className="lg:col-span-8">
+          <p className="eyebrow">Work with me</p>
+          <h1 className="mt-4">The right form for the story your research holds.</h1>
+        </div>
+        <div className="lg:col-span-4 lg:pb-2">
+          <p className="my-0 text-lg leading-relaxed text-gray-700">
+            I work where archaeology, visual communication, and digital
+            technology meet—usually in one of two ways.
+          </p>
+          <a
+            href="#contact"
+            className="mt-6 inline-block border-b border-primary-dark pb-1 text-sm font-semibold text-primary-dark transition-colors hover:border-primary-green hover:text-primary-green"
+          >
+            Tell me what you are working on&nbsp; ↓
+          </a>
+        </div>
       </header>
 
-      {/* Personal intro */}
-      <div className="mx-auto mb-20 flex max-w-4xl flex-col items-center gap-8 md:flex-row">
-        <div className="relative aspect-square w-32 shrink-0 overflow-hidden rounded-full md:w-40">
-          <Image
-            src={jonaScicommImage}
-            alt="Jona working on digital illustrations at the desk"
-            fill
-            className="object-cover"
-            sizes="160px"
-          />
-        </div>
-        <blockquote className="text-center text-lg italic text-gray-600 md:text-left">
-          &ldquo;I believe archaeological research deserves visuals as rigorous
-          as the science behind them. Every project starts with understanding
-          your research context — then finding the right visual language to make
-          it accessible.&rdquo;
-          <footer className="mt-2 text-sm font-semibold not-italic text-primary-dark">
-            — Jona Schlegel
-          </footer>
-        </blockquote>
-      </div>
-
-      {/* Capabilities */}
-      <section className="mb-24">
-        <div className="space-y-20">
-          {capabilities.map((cap, index) => (
+      <div className="container mx-auto">
+        {services.map((service, index) => (
+          <section
+            key={`service-${service.number}`}
+            className="grid gap-12 border-t border-primary-dark/30 py-20 md:py-28 lg:grid-cols-12 lg:gap-16"
+            aria-labelledby={`service-${service.number}`}
+          >
             <div
-              key={`capability-${cap.title}`}
-              id={capabilityAnchors[cap.title]}
-              className={`flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-16 ${
-                index % 2 === 1 ? 'lg:flex-row-reverse' : ''
+              className={`lg:col-span-7 ${index === 1 ? 'lg:order-2' : ''}`}
+            >
+              <ProjectPair examples={service.examples} />
+            </div>
+            <div
+              className={`self-center lg:col-span-5 ${
+                index === 1 ? 'lg:order-1' : ''
               }`}
             >
-              {/* Visual */}
-              <div className="lg:basis-1/2">
-                {'sketchfabModels' in cap ? (
-                  <div className="grid gap-4">
-                    {cap.sketchfabModels.map((model) => (
-                      <div
-                        key={`model-${model.id}`}
-                        className="relative aspect-[4/3] w-full overflow-hidden"
-                      >
-                        <iframe
-                          title={model.title}
-                          className="absolute inset-0 size-full"
-                          src={`https://sketchfab.com/models/${model.id}/embed?ui_theme=dark`}
-                          sandbox="allow-same-origin allow-popups allow-forms allow-popups-to-escape-sandbox"
-                          allow="autoplay; fullscreen; xr-spatial-tracking"
-                          loading="lazy"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                ) : 'image' in cap ? (
-                  <Link
-                    href={`/projects/${cap.projectSlug}`}
-                    className="group block"
+              <p className="eyebrow">
+                {service.number} · {service.eyebrow}
+              </p>
+              <h2
+                id={`service-${service.number}`}
+                className="mt-4 text-3xl leading-tight md:text-5xl"
+              >
+                {service.title}
+              </h2>
+              <p className="mt-6 text-lg leading-relaxed text-gray-700">
+                {service.description}
+              </p>
+              <ul className="plain-list mt-8 grid gap-x-5 gap-y-0 border-t border-primary-dark/20 sm:grid-cols-2">
+                {service.deliverables.map((deliverable) => (
+                  <li
+                    key={`deliverable-${deliverable}`}
+                    className="border-b border-primary-dark/20 py-3 text-sm leading-snug text-primary-dark"
                   >
-                    <div className="relative aspect-[4/3] w-full overflow-hidden">
-                      <Image
-                        src={cap.image}
-                        alt={cap.imageAlt}
-                        fill
-                        className="object-cover transition-opacity group-hover:opacity-80"
-                        sizes="(max-width: 1024px) 100vw, 50vw"
-                      />
-                    </div>
-                    <p className="mt-2 text-sm text-primary-green">
-                      {cap.projectName} &rarr;
-                    </p>
-                  </Link>
-                ) : null}
-              </div>
-
-              {/* Text */}
-              <div className="lg:basis-1/2">
-                <h2 className="mb-4 font-merriweather text-xl font-semibold md:text-3xl">
-                  {cap.title}
-                </h2>
-                <p className="mb-6 text-gray-600">{cap.description}</p>
-                <ul className="space-y-2">
-                  {cap.includes.map((item) => (
-                    <li
-                      key={`include-${item}`}
-                      className="flex items-start gap-2 text-sm text-gray-700"
-                    >
-                      <span className="mt-1.5 block size-1.5 shrink-0 bg-primary-green" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                    {deliverable}
+                  </li>
+                ))}
+              </ul>
             </div>
-          ))}
-        </div>
+          </section>
+        ))}
+      </div>
 
-        {/* Adventuress callout */}
-        <div className="mt-16 flex flex-col items-center gap-6 border-t border-gray-200 pt-12 md:flex-row md:gap-12">
-          <div className="relative aspect-[3/4] w-48 shrink-0 overflow-hidden md:w-56">
-            <Image
-              src={adventuressCover}
-              alt="Adventuress Archaeologist journal cover art illustration"
-              fill
-              className="object-cover"
-              sizes="224px"
-            />
-          </div>
-          <div>
-            <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary-green">
-              Ongoing collaboration
+      <section className="border-y border-primary-dark/15 bg-[#e3ebe6] py-20 md:py-28">
+        <div className="container mx-auto">
+          <div className="mb-12 max-w-2xl">
+            <p className="text-xs font-bold uppercase tracking-[0.12em] text-primary-green">
+              A shared process
             </p>
-            <h3 className="mb-3 font-merriweather text-lg font-semibold md:text-2xl">
-              Adventuress Magazine
-            </h3>
-            <p className="text-gray-600">
-              Regular cover art for Adventuress Archaeologist, a publication
-              celebrating women in archaeology. Each issue features a new
-              illustration developed in close collaboration with the editorial
-              team.
-            </p>
-            <Link
-              href="/projects/adventuress-cover"
-              className="mt-3 inline-block text-sm text-primary-green hover:underline"
-            >
-              View project &rarr;
-            </Link>
+            <h2 className="mt-3 text-3xl text-primary-dark md:text-5xl">
+              Rigorous without becoming heavy.
+            </h2>
           </div>
-        </div>
-      </section>
-
-      {/* Process */}
-      <section className="mx-auto mb-24 max-w-4xl">
-        <div className="mb-12 text-center">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary-green">
-            How it works
-          </p>
-          <h2 className="font-merriweather text-2xl font-semibold md:text-4xl">
-            From Brief to Delivery
-          </h2>
-        </div>
-
-        {/* Timeline */}
-        <div className="relative">
-          {/* Vertical line */}
-          <div className="absolute left-6 top-0 hidden h-full w-px bg-gray-200 md:block" />
-
-          <div className="space-y-6">
-            {processSteps.map((step, index) => (
-              <div key={`step-${step.step}`} className="relative md:pl-16">
-                {/* Step number */}
-                <div className="absolute left-0 top-0 hidden size-12 items-center justify-center bg-primary-green text-sm font-bold text-white md:flex">
-                  {step.step}
-                </div>
-
-                <button
-                  type="button"
-                  onClick={() => setOpenStep(openStep === index ? null : index)}
-                  className="flex w-full items-center justify-between border border-gray-200 bg-white px-6 py-5 text-left transition-colors hover:border-gray-400"
-                  aria-expanded={openStep === index}
-                >
-                  <div>
-                    <span className="mr-2 text-sm font-bold text-primary-green md:hidden">
-                      {step.step}
-                    </span>
-                    <span className="font-merriweather text-lg font-semibold">
-                      {step.title}
-                    </span>
-                    <span className="ml-3 hidden text-gray-600 sm:inline">
-                      {step.summary}
-                    </span>
-                  </div>
-                  {openStep === index ? (
-                    <FaChevronUp className="shrink-0 text-primary-green" />
-                  ) : (
-                    <FaChevronDown className="shrink-0 text-primary-green" />
-                  )}
-                </button>
-
-                {openStep === index && (
-                  <div className="border border-t-0 border-gray-200 bg-gray-50 px-6 py-5">
-                    <p className="leading-relaxed text-gray-700">
-                      {step.details}
-                    </p>
-                  </div>
-                )}
-              </div>
+          <ol className="plain-list grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+            {processSteps.map((step) => (
+              <li
+                key={`process-step-${step.number}`}
+                className="border-t border-primary-dark/30 pt-5"
+              >
+                <p className="my-0 text-xs font-bold tracking-widest text-primary-green">
+                  {step.number}
+                </p>
+                <h3 className="mt-3 font-merriweather text-xl font-semibold text-primary-dark">
+                  {step.title}
+                </h3>
+                <p className="mb-0 mt-3 text-sm leading-relaxed text-gray-700">
+                  {step.text}
+                </p>
+              </li>
             ))}
-          </div>
+          </ol>
         </div>
       </section>
 
-      <IllustrationBand seed={42} />
-
-      {/* FAQ */}
-      <FAQSection
-        faqs={servicesFAQs}
-        title="Questions About Archaeological Illustration & Services"
-      />
-
-      {/* Contact form */}
-      <section className="mx-auto max-w-2xl">
-        <div className="mb-10 text-center">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary-green">
-            Get in touch
-          </p>
-          <h2 className="mb-4 font-merriweather text-2xl font-semibold md:text-4xl">
-            Start a Project
+      <section
+        id="contact"
+        className="container mx-auto grid scroll-mt-24 gap-12 py-20 md:py-32 lg:grid-cols-12 lg:gap-20"
+      >
+        <div className="lg:col-span-5">
+          <p className="eyebrow">Start a conversation</p>
+          <h2 className="mt-4 text-3xl md:text-5xl">
+            What are you trying to make clear?
           </h2>
-          <p className="text-gray-600">
-            Fill out the form below and I will get back to you within a few
-            working days. Or if you prefer a live conversation:
+          <p className="mt-6 text-lg leading-relaxed text-gray-700">
+            A rough idea is enough. Tell me about the research, the audience,
+            and where you are stuck. I will reply within a few working days.
           </p>
-          <div className="mt-4">
+          <div className="mt-7">
             <ButtonPrimary calendlyEventSlug="jonaschlegel">
-              Book a Call
+              Or book a short call
             </ButtonPrimary>
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form
+          onSubmit={handleSubmit}
+          className="space-y-6 border-t border-primary-dark pt-7 lg:col-span-7"
+        >
+          <div className="sr-only" aria-hidden="true">
+            <label htmlFor="website">Website</label>
+            <input
+              id="website"
+              name="website"
+              tabIndex={-1}
+              autoComplete="off"
+              value={formData.website}
+              onChange={(event) =>
+                setFormData((previous) => ({
+                  ...previous,
+                  website: event.target.value,
+                }))
+              }
+            />
+          </div>
+
           <div className="grid gap-6 sm:grid-cols-2">
             <div>
               <label
@@ -411,9 +335,13 @@ export default function ServicesContent() {
               <input
                 id="name"
                 required
+                autoComplete="name"
                 value={formData.name}
-                onChange={(e) =>
-                  setFormData((prev) => ({ ...prev, name: e.target.value }))
+                onChange={(event) =>
+                  setFormData((previous) => ({
+                    ...previous,
+                    name: event.target.value,
+                  }))
                 }
                 className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-primary-dark transition-colors focus:border-primary-green focus:outline-none"
               />
@@ -429,9 +357,13 @@ export default function ServicesContent() {
                 type="email"
                 id="email"
                 required
+                autoComplete="email"
                 value={formData.email}
-                onChange={(e) =>
-                  setFormData((prev) => ({ ...prev, email: e.target.value }))
+                onChange={(event) =>
+                  setFormData((previous) => ({
+                    ...previous,
+                    email: event.target.value,
+                  }))
                 }
                 className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-primary-dark transition-colors focus:border-primary-green focus:outline-none"
               />
@@ -444,23 +376,23 @@ export default function ServicesContent() {
                 htmlFor="projectType"
                 className="mb-1.5 block text-sm font-medium text-primary-dark"
               >
-                Project type
+                What kind of project?
               </label>
               <select
                 id="projectType"
                 required
                 value={formData.projectType}
-                onChange={(e) =>
-                  setFormData((prev) => ({
-                    ...prev,
-                    projectType: e.target.value,
+                onChange={(event) =>
+                  setFormData((previous) => ({
+                    ...previous,
+                    projectType: event.target.value,
                   }))
                 }
                 className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-primary-dark transition-colors focus:border-primary-green focus:outline-none"
               >
-                <option value="">Select a type</option>
+                <option value="">Select one</option>
                 {projectTypes.map((type) => (
-                  <option key={`type-${type}`} value={type}>
+                  <option key={`project-type-${type}`} value={type}>
                     {type}
                   </option>
                 ))}
@@ -477,18 +409,18 @@ export default function ServicesContent() {
                 id="timeline"
                 required
                 value={formData.timeline}
-                onChange={(e) =>
-                  setFormData((prev) => ({
-                    ...prev,
-                    timeline: e.target.value,
+                onChange={(event) =>
+                  setFormData((previous) => ({
+                    ...previous,
+                    timeline: event.target.value,
                   }))
                 }
                 className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-primary-dark transition-colors focus:border-primary-green focus:outline-none"
               >
-                <option value="">Select a timeline</option>
-                {timelines.map((t) => (
-                  <option key={`timeline-${t}`} value={t}>
-                    {t}
+                <option value="">Select one</option>
+                {timelines.map((timeline) => (
+                  <option key={`timeline-${timeline}`} value={timeline}>
+                    {timeline}
                   </option>
                 ))}
               </select>
@@ -500,30 +432,49 @@ export default function ServicesContent() {
               htmlFor="description"
               className="mb-1.5 block text-sm font-medium text-primary-dark"
             >
-              Tell me about your project
+              Tell me about it
             </label>
             <textarea
               id="description"
               required
-              rows={5}
+              rows={6}
               value={formData.description}
-              onChange={(e) =>
-                setFormData((prev) => ({
-                  ...prev,
-                  description: e.target.value,
+              onChange={(event) =>
+                setFormData((previous) => ({
+                  ...previous,
+                  description: event.target.value,
                 }))
               }
-              placeholder="What do you need? What is the research context? Who is the audience?"
+              placeholder="What is the research about? Who should it reach? What do you need help with?"
               className="w-full resize-y border border-gray-300 bg-white px-4 py-3 text-sm text-primary-dark transition-colors focus:border-primary-green focus:outline-none"
             />
           </div>
 
-          <button className="w-full bg-primary-dark px-8 py-4 text-sm font-semibold text-primary-cream transition-colors hover:bg-primary-green">
-            Send Project Brief
+          <button
+            disabled={submissionStatus === 'sending'}
+            className="bg-primary-dark px-8 py-4 text-sm font-semibold text-primary-cream transition-colors hover:bg-primary-green disabled:cursor-wait disabled:opacity-60"
+          >
+            {submissionStatus === 'sending' ? 'Sending…' : 'Send project note'}
           </button>
-          <p className="text-center text-xs text-gray-500">
-            This opens your email client with the form details pre-filled.
-          </p>
+          <div className="text-sm" aria-live="polite">
+            {submissionStatus === 'success' && (
+              <p className="my-0 font-semibold text-primary-green">
+                Thank you. Your message has been sent.
+              </p>
+            )}
+            {submissionStatus === 'error' && (
+              <p className="my-0 text-gray-700">
+                The form could not send your message. Please email{' '}
+                <a
+                  href="mailto:archaeoink@jonaschlegel.com"
+                  className="font-semibold text-primary-green underline"
+                >
+                  archaeoink@jonaschlegel.com
+                </a>
+                .
+              </p>
+            )}
+          </div>
         </form>
       </section>
     </div>

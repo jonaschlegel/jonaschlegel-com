@@ -1,9 +1,9 @@
 import {
   BsBehance,
+  BsBluesky,
   BsGithub,
   BsInstagram,
   BsLinkedin,
-  BsTwitter,
 } from 'react-icons/bs';
 import profile01 from '../images/clients/profile01.jpg';
 import profile02 from '../images/clients/profile02.jpg';
@@ -65,11 +65,10 @@ export const navLinks = [
 
 /** Content and images for the home page hero section. */
 export const heroSectionData = {
-  eyebrow: 'archaeoINK',
-  heading:
-    'Jona Schlegel — Landscape Archaeologist, Illustrator & Fullstack Web Developer',
+  eyebrow: 'Jona Schlegel · founder of archaeoINK',
+  heading: 'Making archaeological knowledge clear, visual & useful.',
   subheading:
-    'Translating complex archaeological research, data modelling, and CIDOC CRM into clear visual narratives through scientific illustration, publication design, and fullstack digital knowledge platforms for heritage.',
+    'I help researchers and heritage organisations turn complex evidence into rigorous illustrations, publications, and accessible digital platforms.',
   jonaPhoto: jonaPaleontology,
   showcaseImage: {
     src: typesOfIllustration,
@@ -79,7 +78,7 @@ export const heroSectionData = {
 
 /** Text paragraphs displayed in the promotional banner. */
 export const bannerData = [
-  'Whether you are a researcher looking to visualise excavation data, an institution communicating heritage to the public, or an educator bringing archaeology into the classroom: archaeoINK helps you tell that story. From archaeological drawing, sketching, and journaling to fullstack heritage web development \u2014 the studio works at the intersection of scientific rigour and visual science communication while utilising storytelling, creating illustrations, publications, and digital tools that make archaeological knowledge accessible and engaging, founded by landscape archaeologist Jona Schlegel.',
+  'I combine archaeological training with illustration and digital product development. That means less time translating between specialists and a clearer, more coherent result for your research team and its audiences.',
 ];
 
 /** Content sections for the About page describing archaeoINK studio. */
@@ -135,7 +134,7 @@ export const projectsData = {
         'web development & design for archaeology',
         'archaeological research & communication',
       ],
-      isFeatured: false,
+      isFeatured: true,
       year: '2025 - 2026',
       location: 'Netherlands / Suriname',
       institution: 'Huygens Institute (KNAW) / Stichting Pica',
@@ -175,7 +174,7 @@ export const projectsData = {
       slug: 'pastforwardhub',
       image: pastforwardhub,
       description:
-        'Fullstack Next.js platform connecting archaeologists worldwide with career opportunities, heritage network, and digital resources across academic and commercial sectors.',
+        'Full-stack Next.js platform connecting archaeologists worldwide with career opportunities, heritage network, and digital resources across academic and commercial sectors.',
       services: ['web development & design for archaeology'],
       isFeatured: false,
       year: '2025 - present',
@@ -463,7 +462,7 @@ export const projectsData = {
       description:
         'Scientific reconstruction illustration for peer-reviewed publication on the first genetically confirmed Roman mother-daughter burial from Ovilava (Wels, Austria) — Journal of Archaeological Science.',
       services: ['scientific & archaeological illustration'],
-      isFeatured: false,
+      isFeatured: true,
       year: '2024',
       location: 'Ovilava (Wels), Austria',
       institution: 'Journal of Archaeological Science: Reports',
@@ -553,7 +552,7 @@ export const projectsData = {
       description:
         'Cover illustration concept for Adventuress Archaeology Journal celebrating women in archaeology across past, present, and future through scientific illustration and character design.',
       services: ['scientific & archaeological illustration'],
-      isFeatured: false,
+      isFeatured: true,
       year: '2024',
       role: 'Illustration, Concept development',
       duration: '1 week',
@@ -576,7 +575,7 @@ export const projectsData = {
       description:
         'Visual identity and logo design for PasTrace — German photogrammetry company specialising in high-fidelity 3D documentation of cultural heritage sites and archaeological monuments.',
       services: ['scientific & archaeological illustration'],
-      isFeatured: false,
+      isFeatured: true,
       year: '2023',
       institution: 'PasTrace (client)',
       role: 'Logo design, Brand identity development',
@@ -986,7 +985,7 @@ export const serviceData = {
       slug: 'web-development',
       name: 'Web Development & Design for Archaeology',
       description:
-        'Your research deserves a platform as rigorous as your methodology. I build fullstack database-driven platforms and interactive data visualisation tools \u2014 from CIDOC CRM knowledge graphs and IIIF viewers to archaeology journaling apps and interactive maps \u2014 that let users explore and engage with heritage data directly.',
+        'Your research deserves a platform as rigorous as your methodology. I build full-stack database-driven platforms and interactive data visualisation tools \u2014 from CIDOC CRM knowledge graphs and IIIF viewers to archaeology journaling apps and interactive maps \u2014 that let users explore and engage with heritage data directly.',
       image: webDevelopment,
       alt: 'Web development and design portfolio for archaeological projects by Jona Schlegel',
       tools: 'Next.js, TypeScript, Tailwind CSS, Three.js, CesiumJS, Leaflet',
@@ -1007,7 +1006,7 @@ export const testimonialsData = [
     role: 'That Anthro Podcast',
     image: profile01,
     comment:
-      'I am so glad that I was able to work with Jona. Her art is incredible and I know this is only the beginning of big things for her. And thanks for the extras! I know how much work and creativity Jona is put into this, so thanks.',
+      'I am so glad that I was able to work with Jona. Her art is incredible, and I know this is only the beginning of big things for her. I appreciate how much work and creativity Jona put into this.',
   },
 
   {
@@ -1027,7 +1026,7 @@ export const statsData: import('../../types/global').StatType[] = [
   { name: 'Research Platforms Built', number: '10+' },
 ];
 
-/** Recent blog posts from archaeoINK for homepage preview. */
+/** Selected evergreen writing from the archaeoINK blog. */
 export const blogPostsData = [
   {
     title:
@@ -1062,6 +1061,9 @@ export const footerdata = {
     { name: 'About', href: '/about' },
     { name: 'Projects', href: '/projects' },
     { name: 'Services', href: '/services' },
+    { name: 'CV', href: '/cv' },
+    { name: 'Blog', href: 'https://www.archaeoink.com/' },
+    { name: 'Newsletter', href: 'https://archaeoink.ck.page/' },
   ],
   socialLinks: [
     {
@@ -1075,9 +1077,9 @@ export const footerdata = {
       name: 'Instagram',
     },
     {
-      Icon: BsTwitter,
-      href: 'https://twitter.com/JonaSchlegel',
-      name: 'Twitter',
+      Icon: BsBluesky,
+      href: 'https://bsky.app/profile/jonaschlegel.com',
+      name: 'Bluesky',
     },
     {
       Icon: BsLinkedin,
