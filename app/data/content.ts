@@ -34,16 +34,19 @@ import archaeoZine from '../images/projects/archaeo-zine.jpg';
 import archaeologyJournaling from '../images/projects/archaeology-journaling.png';
 import archaeologyOfBias from '../images/projects/archaeology-of-bias.png';
 import archeomatch from '../images/projects/archeomatch.png';
+import archink2024Overview from '../images/projects/archink-2024-overview.webp';
 import archink2025 from '../images/projects/archink-2025.png';
 import dhBenelux from '../images/projects/dh-benelux.jpg';
 import dutchLearningPlatform from '../images/projects/dutch-learning-platform.png';
-import exploringArchaeologicalDisciplines from '../images/projects/exploring-archaeological-disciplines.jpg';
+import exploringArchaeologicalDisciplines from '../images/projects/exploring-archaeological-disciplines.webp';
 import geophysicalProspection from '../images/projects/geophysical-prospection.webp';
 import necessaryReunions from '../images/projects/necessary-reunions.png';
-import pastforwardhub from '../images/projects/pastforwardhub.png';
-import pastrace from '../images/projects/pastrace-new.png';
+import pastforwardhub from '../images/projects/pastforwardhub-1.webp';
+import pastforwardhubDetail from '../images/projects/pastforwardhub-2.webp';
+import pastrace from '../images/projects/pastrace-brand-identity.webp';
 import romanBurial from '../images/projects/roman-burial.jpg';
-import surinameTijdmachine from '../images/projects/suriname-tijdmachine.jpg';
+import surinameTijdmachine from '../images/projects/suriname-tijdmachine-1.webp';
+import surinameTijdmachineDetail from '../images/projects/suriname-tijdmachine-2.webp';
 import trowelJournalBlog from '../images/projects/trowel-journal-blog.jpg';
 import urbanChameleon from '../images/projects/urban-chameleon.jpg';
 import illustrating from '../images/services/archaeological-illustrating.jpg';
@@ -166,6 +169,13 @@ export const projectsData = {
         'Cross-institutional collaboration between Dutch and Surinamese heritage organisations',
         'Citizen science integration enabling community-driven historical research',
       ],
+      galleryImages: [
+        {
+          src: surinameTijdmachineDetail,
+          caption:
+            'Suriname Tijdmachine interface connecting stories, historical imagery, maps, and linked archival data',
+        },
+      ],
       externalUrl: 'https://surinametijdmachine.org/',
     },
     {
@@ -199,6 +209,13 @@ export const projectsData = {
         'Endorsed by key archaeological organisations across Europe',
         'Kickstarter-backed with growing community of supporting archaeologists',
         'First dedicated global career platform for the archaeology sector',
+      ],
+      galleryImages: [
+        {
+          src: pastforwardhubDetail,
+          caption:
+            'PastForwardHub platform overview with career pathways, research snapshots, resources, and community support',
+        },
       ],
       externalUrl: 'https://pastforwardhub.com/',
     },
@@ -494,7 +511,7 @@ export const projectsData = {
       id: 'archink-challenge-2024',
       name: 'archInk Drawing Challenge 2024',
       slug: 'archink-2024',
-      image: archink2024Gallery[0]!.src,
+      image: archink2024Overview,
       description:
         'Conceptual archaeological ink drawings for the 2024 Inktober challenge — exploring cultural baggage, media sensationalism, empathy in field practice, and the future of heritage.',
       services: ['scientific & archaeological illustration'],
