@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import CalendlyButton from '../components/CalendlyButton';
+import CurrentRoleBanner from '../components/CurrentRoleBanner';
 import {
   aboutGalleryImages,
   aboutStudioData,
@@ -13,8 +14,7 @@ import { generateSEOMetadata } from '../lib/seo';
 
 /** SEO metadata for the About page. */
 export const metadata: Metadata = generateSEOMetadata({
-  title:
-    'About archaeoINK Studio – Archaeological Illustration & Web Development',
+  title: 'About Jona Schlegel & archaeoINK',
   description:
     'archaeoINK is a visual science communication studio specialising in archaeological illustration, archaeology web development & design, and heritage platforms. Founded by landscape archaeologist and web developer Jona Schlegel.',
   canonical: 'https://jonaschlegel.com/about',
@@ -47,18 +47,19 @@ export default function AboutPage() {
     url: 'https://jonaschlegel.com/about',
     mainEntity: {
       '@type': 'Person',
+      '@id': 'https://jonaschlegel.com/#jona',
       name: 'Jona Schlegel',
       jobTitle:
         'Freelance Archaeological Illustrator & Archaeology Web Developer',
       url: 'https://jonaschlegel.com',
       description:
-        'Landscape archaeologist, visual science communicator, and fullstack web developer specialising in archaeological illustration, archaeology web development, and digital heritage platforms.',
+        'Landscape archaeologist, visual science communicator, and full-stack web developer specialising in archaeological illustration, archaeology web development, and digital heritage platforms.',
       knowsAbout: [
         'Archaeological Illustration',
         'Archaeology Web Development',
         'Archaeology Web Design',
         'Visual Science Communication',
-        'Fullstack Web Development for Archaeology',
+        'Full-stack Web Development for Archaeology',
         'Digital Heritage Platforms',
         'Science Communication',
         'Landscape Archaeology',
@@ -67,6 +68,7 @@ export default function AboutPage() {
       ],
       worksFor: {
         '@type': 'Organization',
+        '@id': 'https://jonaschlegel.com/#archaeoink',
         name: 'archaeoINK',
         url: 'https://jonaschlegel.com',
         description:
@@ -110,16 +112,20 @@ export default function AboutPage() {
           </div>
         </div>
 
+        <div className="mb-20">
+          <CurrentRoleBanner />
+        </div>
+
         {/* Studio Philosophy */}
         <section className="mb-16">
           <div className="mx-auto max-w-4xl text-center">
             <h2 className="mb-8 text-3xl font-semibold">Studio Philosophy</h2>
             <p className="text-lg leading-relaxed">
               Every archaeological site, artefact, and dataset contains layers
-              of information that require thoughtful interpretation. Our
-              approach prioritises accuracy and contextual understanding,
-              working directly with researchers to translate complex
-              archaeological concepts into clear visual narratives.
+              of information that require thoughtful interpretation. My approach
+              prioritises accuracy and contextual understanding, working
+              directly with researchers to translate complex archaeological
+              concepts into clear visual narratives.
             </p>
           </div>
         </section>
@@ -199,7 +205,7 @@ export default function AboutPage() {
                     src={img.src}
                     alt={img.alt}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover transition-transform duration-500 motion-reduce:transition-none group-hover:scale-105 motion-reduce:group-hover:scale-100"
                     sizes={
                       index === 0 || index === 5
                         ? '(max-width: 768px) 100vw, 50vw'
@@ -252,7 +258,7 @@ export default function AboutPage() {
               <div>
                 <h3 className="mb-4 text-xl font-semibold">Collaboration</h3>
                 <p className="mb-6 leading-relaxed">
-                  Works as a partner in research projects, contributing visual
+                  I work as a partner in research projects, contributing visual
                   expertise whilst learning from domain specialists to ensure
                   authentic representation of archaeological work and its
                   cultural significance.
@@ -276,7 +282,7 @@ export default function AboutPage() {
                     <li>Landscape Archaeology Spatial Data</li>
                     <li>Detailed Archaeological Illustration</li>
                     <li>QGIS & Geographic Visualisation</li>
-                    <li>Fullstack Web Frameworks (React, Next.js)</li>
+                    <li>Full-stack Web Frameworks (React, Next.js)</li>
                     <li>Interactive Information Architecture</li>
                   </ul>
                 </div>

@@ -4,7 +4,7 @@ This repository contains the code for the business portfolio website [jonaschleg
 
 ## Technologies Used
 
-- **Framework**: [Next.js 13+](https://nextjs.org/)
+- **Framework**: [Next.js 16](https://nextjs.org/)
 - **Package Manager**: [pnpm](https://pnpm.io/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **TypeScript**: For type safety and improved developer experience.
@@ -81,6 +81,18 @@ The project uses the [UpLeveled ESLint config](https://github.com/upleveled/esli
 ```bash
 pnpm lint
 ```
+
+Run linting, TypeScript, and stylesheet validation together with:
+
+```bash
+pnpm check
+```
+
+## Contact Form
+
+The project enquiry form sends email through Resend. Copy `.env.example` to
+`.env.local`, add a Resend API key, and use a sender address from a verified
+domain. `CONTACT_TO_EMAIL` controls where enquiries are delivered.
 
 ## Image Assets
 

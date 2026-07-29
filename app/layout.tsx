@@ -1,76 +1,31 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Merriweather } from 'next/font/google';
-import CalendlyScript from './components/CalendlyScript';
-import CrispScript from './components/CrispScript';
+import localFont from 'next/font/local';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollUpArrow';
 import Tracking from './Tracking';
 
-const merriweather = Merriweather({
-  subsets: ['latin'],
-  weight: ['300', '400', '700', '900'],
-  variable: '--font-merriweather',
+const geistSans = localFont({
+  src: './fonts/GeistVF.woff',
+  variable: '--font-geist-sans',
   display: 'swap',
 });
 
 const BASE_DESCRIPTION =
-  'Jona Schlegel – Freelance archaeological illustrator, visual science communicator, and archaeology web developer. Specialising in archaeological illustration, archaeology web development & design, fullstack web applications for heritage research, and visual science communication for archaeology.';
+  'Jona Schlegel helps researchers and heritage organisations turn complex evidence into rigorous illustrations, publications, and accessible digital platforms.';
 
 const SHORT_DESCRIPTION =
-  'Freelance archaeological illustrator and archaeology web developer. Specialising in visual science communication, archaeological drawing, and fullstack web development for heritage and archaeology.';
+  'Archaeological illustration, visual science communication, and full-stack digital heritage platforms by Jona Schlegel.';
 
 /** Site-wide metadata configuration for SEO, Open Graph, and Twitter cards. */
 export const metadata: Metadata = {
   metadataBase: new URL('https://jonaschlegel.com'),
   title: {
     template: '%s | Jona Schlegel',
-    default:
-      'Jona Schlegel \u2013 Archaeological Illustration, Drawing, Sketching, Archaeology Web Development & Visual Science Communication',
+    default: 'Jona Schlegel | Archaeology, Illustration & Digital Heritage',
   },
   description: BASE_DESCRIPTION,
-  keywords: [
-    'archaeological illustration',
-    'archaeological drawing',
-    'archaeological sketching',
-    'archaeology journaling',
-    'archaeology journaling workshop',
-    'archaeology ink drawing',
-    'archaeology illustration',
-    'science illustration',
-    'scientific illustration',
-    'conceptual illustration',
-    'brand identity',
-    'brand identity archaeology',
-    'archaeology web development',
-    'archaeology web design',
-    'archaeology website',
-    'visual science communication',
-    'science communication',
-    'science communication archaeology',
-    'visual science communication archaeology',
-    'landscape archaeology',
-    'digital archaeology',
-    '3D archaeology',
-    'design thinking',
-    'design thinking archaeology',
-    'freelance archaeology',
-    'CIDOC CRM',
-    'controlled vocabulary',
-    'knowledge graph',
-    'data modelling',
-    'data modelling archaeology',
-    'data schema',
-    'freelance archaeological illustrator',
-    'archaeology fullstack developer',
-    'digital heritage web development',
-    'archaeology painting',
-    'heritage web development',
-    'archaeological drawing',
-    'archaeology web developer',
-    'archaeological illustration freelance',
-  ],
   authors: [{ name: 'Jona Schlegel', url: 'https://jonaschlegel.com' }],
   creator: 'Jona Schlegel',
   publisher: 'Jona Schlegel',
@@ -90,8 +45,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://jonaschlegel.com',
     siteName: 'Jona Schlegel',
-    title:
-      'Jona Schlegel – Archaeological Illustration, Archaeology Web Development & Visual Science Communication',
+    title: 'Jona Schlegel | Archaeology, Illustration & Digital Heritage',
     description: BASE_DESCRIPTION,
     images: [
       {
@@ -104,8 +58,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title:
-      'Jona Schlegel – Archaeological Science Communication & Knowledge Management',
+    title: 'Jona Schlegel | Archaeology, Illustration & Digital Heritage',
     description: SHORT_DESCRIPTION,
     images: [
       '/api/og?title=Jona%20Schlegel&subtitle=Archaeological%20Science%20Communication%20%26%20Knowledge%20Management',
@@ -138,7 +91,7 @@ export default function RootLayout({
     <html
       lang="en"
       data-scroll-behavior="smooth"
-      className={`bg-primary-cream text-primary-dark ${merriweather.variable}`}
+      className={`bg-primary-cream text-primary-dark ${geistSans.variable}`}
     >
       <head>
         {/* Favicon and Icons */}
@@ -170,12 +123,14 @@ export default function RootLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Person',
+              '@id': 'https://jonaschlegel.com/#jona',
               name: 'Jona Schlegel',
               url: 'https://jonaschlegel.com',
               jobTitle:
                 'Archaeological Illustrator & Archaeology Web Developer',
               worksFor: {
                 '@type': 'Organization',
+                '@id': 'https://jonaschlegel.com/#archaeoink',
                 name: 'archaeoINK',
                 url: 'https://jonaschlegel.com',
                 description:
@@ -225,6 +180,7 @@ export default function RootLayout({
                 'Archaeological Illustration, Archaeology Web Development & Visual Science Communication',
               author: {
                 '@type': 'Person',
+                '@id': 'https://jonaschlegel.com/#jona',
                 name: 'Jona Schlegel',
               },
             }),
@@ -240,8 +196,6 @@ export default function RootLayout({
         <Footer />
         <ScrollToTop />
         <Tracking />
-        <CalendlyScript />
-        <CrispScript />
       </body>
     </html>
   );

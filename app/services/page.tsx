@@ -4,9 +4,9 @@ import ServicesContent from './ServicesContent';
 
 /** SEO metadata for the Services page. */
 export const metadata: Metadata = generateSEOMetadata({
-  title: 'Archaeological Illustration & Archaeology Web Development Services',
+  title: 'Services for Archaeology & Digital Heritage',
   description:
-    'Freelance archaeological illustration, archaeology web development & design, and visual science communication services. Fullstack web applications, archaeological drawing, digital painting, brand identity, and heritage platforms by Jona Schlegel.',
+    'Archaeological illustration, visual communication, and full-stack digital heritage services for researchers, publishers, and heritage organisations.',
   canonical: 'https://jonaschlegel.com/services',
   keywords: [
     'archaeological illustration',
@@ -41,7 +41,7 @@ const servicesStructuredData = {
   name: 'archaeoINK – Archaeological Illustration & Archaeology Web Development',
   url: 'https://jonaschlegel.com/services',
   description:
-    'Freelance archaeological illustration, archaeology web development & design, visual science communication, and fullstack heritage platforms. Archaeological drawing, digital painting, and brand identity for archaeology.',
+    'Archaeological illustration, visual science communication, and full-stack digital heritage platforms by Jona Schlegel.',
   provider: {
     '@type': 'Person',
     name: 'Jona Schlegel',
@@ -50,50 +50,29 @@ const servicesStructuredData = {
   },
   areaServed: 'Worldwide',
   serviceType: [
-    'Archaeological Illustration',
-    'Archaeology Web Development',
-    'Archaeology Web Design',
-    'Visual Science Communication',
-    'Fullstack Web Development for Archaeology',
+    'Visual Communication for Archaeology',
+    'Digital Heritage Product Design and Development',
   ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
-    name: 'Archaeological Illustration & Web Development Services',
+    name: 'Visual Communication & Digital Heritage Services',
     itemListElement: [
       {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Archaeological Illustration & Visual Science Communication',
+          name: 'Visual Communication',
           description:
-            'Freelance archaeological illustration: archaeological drawing, digital painting, reconstruction scenes, conceptual illustrations, cover art, comics, and zines. Visual science communication for archaeology publications, outreach, and education.',
+            'Research-led reconstruction, scientific and editorial illustration, publication artwork, and visual narratives for archaeology.',
         },
       },
       {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: '3D Modelling & Archaeological Documentation',
+          name: 'Digital Heritage Products',
           description:
-            'Digital 3D documentation and modelling of archaeological artefacts using photogrammetry, Feather 3D, and Nomad Sculpt for research and public engagement.',
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Archaeology Web Development & Design',
-          description:
-            'Fullstack archaeology web development and web design: research platforms, interactive databases, data visualisation tools, and digital heritage infrastructure. Built with Next.js, TypeScript, and modern web technologies.',
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Archaeology Brand Identity & Publication Design',
-          description:
-            'Brand identity, publication design, and visual systems for heritage organisations, archaeological research projects, and academic publishers.',
+            'Research platforms, digital collections, interactive maps, linked-data interfaces, and full-stack development for heritage organisations.',
         },
       },
     ],

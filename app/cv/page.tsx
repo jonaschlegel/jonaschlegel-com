@@ -11,9 +11,9 @@ import { generateSEOMetadata } from '../lib/seo';
 
 /** SEO metadata for the CV page. */
 export const metadata: Metadata = generateSEOMetadata({
-  title: 'CV – Archaeological Illustrator & Archaeology Web Developer',
+  title: 'CV',
   description:
-    'CV of Jona Schlegel – Freelance archaeological illustrator, visual science communicator, and archaeology web developer. Experience in archaeological drawing, fullstack web development for heritage research, and digital archaeology platforms.',
+    'CV of Jona Schlegel – archaeological illustrator, visual science communicator, and web developer. Experience in archaeological drawing, full-stack development, and digital heritage platforms.',
   canonical: 'https://jonaschlegel.com/cv',
   keywords: [
     'archaeological illustrator CV',
@@ -264,7 +264,7 @@ const CvPage = async () => {
         'Archaeological Illustration',
         'Archaeology Web Development',
         'Visual Science Communication',
-        'Fullstack Web Development',
+        'Full-stack Web Development',
         'Digital Heritage',
         'Landscape Archaeology',
         'Geophysical Prospection',

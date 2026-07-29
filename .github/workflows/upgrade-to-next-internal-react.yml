@@ -9,14 +9,14 @@ jobs:
     # Skip workflow run if last committer was not Renovate Bot
     if: github.event.head_commit.author.name == 'renovate[bot]'
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           persist-credentials: false
 
       - uses: pnpm/action-setup@v6
 
       - name: Use Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: 'lts/*'
           cache: 'pnpm'

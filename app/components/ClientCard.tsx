@@ -6,33 +6,32 @@ import type { ClientType } from '../../types/global';
 /** Testimonial card displaying a client quote, name, and role. */
 const ClientCard: FC<ClientType> = (props) => {
   return (
-    <div className="">
-      <div className="mb-8 flex justify-center">
-        <span className="inline-block">
-          <BsQuote className="text-5xl text-primary-green" />
-        </span>
-      </div>
-      <div className="mb-8">
-        <p className="text-center text-sm text-gray-700 md:text-base">
+    <figure className="flex h-full flex-col">
+      <BsQuote
+        className="mb-5 text-4xl text-primary-green"
+        aria-hidden="true"
+      />
+      <blockquote className="flex-1">
+        <p className="my-0 text-base leading-relaxed text-gray-700 md:text-lg">
           {props.comment}
         </p>
-      </div>
-      <div className="flex justify-center gap-2">
+      </blockquote>
+      <figcaption className="mt-8 flex items-center gap-3">
         <div className="relative aspect-square h-12 overflow-hidden rounded-full">
           <Image
             src={props.image}
-            alt="client profile"
+            alt={`Portrait of ${props.name}`}
             fill
             className="object-cover"
             sizes="100%"
           />
         </div>
         <div>
-          <p>{props.name}</p>
-          <p className="text-sm text-gray-700">{props.role}</p>
+          <p className="my-0 font-semibold text-primary-dark">{props.name}</p>
+          <p className="my-0 text-sm text-gray-700">{props.role}</p>
         </div>
-      </div>
-    </div>
+      </figcaption>
+    </figure>
   );
 };
 

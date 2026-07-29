@@ -32,35 +32,35 @@ export default function Breadcrumbs({
   return (
     <nav aria-label="Breadcrumb" className={`py-4 ${className}`}>
       <ol
-        className="flex items-center space-x-2 text-sm text-gray-700"
+        className="plain-list flex items-baseline gap-6 text-sm leading-5 text-gray-700"
         itemScope
         itemType="https://schema.org/BreadcrumbList"
       >
         {breadcrumbItems.map((item, index) => (
           <li
             key={`breadcrumb-${item.href || item.label.replace(/\s+/g, '-').toLowerCase()}`}
-            className="flex items-center"
+            className="relative"
             itemProp="itemListElement"
             itemScope
             itemType="https://schema.org/ListItem"
           >
             {index > 0 && (
-              <FaChevronRight className="h-3 w-3 mx-2 text-neutral-600" />
+              <FaChevronRight
+                className="absolute -left-4 top-1/2 size-3 -translate-y-1/2 text-neutral-600"
+                aria-hidden="true"
+              />
             )}
 
             {item.href ? (
               <Link
                 href={item.href as Route}
-                className="hover:text-primary-dark transition-colors flex items-center"
+                className="inline-block leading-5 transition-colors hover:text-primary-dark"
                 itemProp="item"
               >
                 <span itemProp="name">{item.label}</span>
               </Link>
             ) : (
-              <span
-                className="text-primary-dark flex items-center"
-                itemProp="name"
-              >
+              <span className="inline-block leading-5 text-primary-dark" itemProp="name">
                 {item.label}
               </span>
             )}

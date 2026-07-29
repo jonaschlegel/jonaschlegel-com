@@ -106,9 +106,10 @@ export default function TermsAndConditions() {
       <section className="mb-8">
         <h2 className="mb-4 text-2xl font-semibold">7. Governing Law</h2>
         <p>
-          These terms are governed by and construed in accordance with the laws
-          of Austria. Any disputes relating to these terms shall be subject to
-          the exclusive jurisdiction of the courts of Vienna, Austria.
+          These terms are governed by the laws of the Netherlands. Disputes are
+          handled by the competent courts in the Netherlands, subject to any
+          mandatory rules that apply. Individual client agreements may contain
+          more specific terms.
         </p>
       </section>
 

@@ -2,17 +2,11 @@ import type { Metadata } from 'next';
 import Banner from './components/Banner';
 import BlogPreview from './components/BlogPreview';
 import ClientLogos from './components/ClientLogos';
-import CurrentRoleBanner from './components/CurrentRoleBanner';
 import FAQSection from './components/FAQSection';
+import FeaturedProjects from './components/FeaturedProjects';
 import Hero from './components/Hero';
 import IllustrationBand from './components/IllustrationBand';
-import InstagramGrid from './components/InstagramGrid';
-import MediaSection from './components/MediaSection';
-import PastForwardHubSection from './components/PastForwardHubSection';
-import PodcastSection, {
-  podcastStructuredData,
-} from './components/PodcastSection';
-import RecentActivity from './components/RecentActivity';
+import ServicePillars from './components/ServicePillars';
 import Testimonials from './components/Testimonials';
 import { defaultFAQs } from './data/faqs';
 import { generateSEOMetadata } from './lib/seo';
@@ -53,14 +47,15 @@ export default function HomePage() {
     '@type': 'WebPage',
     name: 'Jona Schlegel - Archaeological Illustration, Archaeology Web Development & Visual Science Communication',
     description:
-      'Professional portfolio: archaeological illustration, archaeology web development & design, visual science communication, and fullstack heritage platforms',
+      'Selected work in archaeological illustration, visual science communication, and full-stack digital heritage platforms',
     url: 'https://jonaschlegel.com',
     mainEntity: {
       '@type': 'Person',
+      '@id': 'https://jonaschlegel.com/#jona',
       name: 'Jona Schlegel',
       jobTitle: 'Archaeological Illustrator & Archaeology Web Developer',
       description:
-        'Freelance archaeological illustrator and archaeology web developer specialising in archaeological drawing, visual science communication, fullstack web development for heritage research, and archaeology web design',
+        'Archaeologist, illustrator, and web developer creating clear visual communication and full-stack digital products for heritage research',
       url: 'https://jonaschlegel.com',
       knowsAbout: [
         'Archaeological Illustration',
@@ -68,7 +63,7 @@ export default function HomePage() {
         'Data Modelling',
         'CIDOC CRM',
         'Archaeology Web Development',
-        'Fullstack Web Design for Heritage',
+        'Full-stack Web Design for Heritage',
         'Digital Heritage Platforms',
         'Scientific Illustration',
         'React & Next.js',
@@ -81,20 +76,14 @@ export default function HomePage() {
     <>
       <div>
         <Hero />
-        <div className="container mx-auto px-4">
-          <CurrentRoleBanner />
-        </div>
-        <IllustrationBand seed={1} />
         <ClientLogos />
-        <RecentActivity />
-        <BlogPreview />
+        <ServicePillars />
+        <FeaturedProjects />
+        <IllustrationBand seed={1} />
         <Banner />
-        <PodcastSection />
-        <MediaSection />
-        <InstagramGrid />
-        <FAQSection faqs={defaultFAQs} />
         <Testimonials />
-        <PastForwardHubSection />
+        <BlogPreview />
+        <FAQSection faqs={defaultFAQs} />
       </div>
 
       {/* Structured Data */}
@@ -102,13 +91,6 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(structuredData),
-        }}
-      />
-      <script
-        id="podcast-jsonld"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(podcastStructuredData),
         }}
       />
     </>

@@ -1,14 +1,13 @@
-import type { Metadata, Route } from 'next';
-import Image from 'next/image';
-import Link from 'next/link';
+import type { Metadata } from 'next';
+import ProjectsGrid, { type ProjectOverview } from '../components/ProjectsGrid';
 import { projectsData } from '../data/content';
 import { generateSEOMetadata } from '../lib/seo';
 
 /** SEO metadata for the Projects page. */
 export const metadata: Metadata = generateSEOMetadata({
-  title: 'Projects – Archaeological Illustration & Web Development Portfolio',
+  title: 'Selected Projects',
   description:
-    'Portfolio of archaeological illustration, archaeology web development & design, visual science communication, and heritage platform projects by Jona Schlegel. Case studies in fullstack archaeology web applications and archaeological drawing.',
+    'Selected case studies in archaeological illustration, digital heritage platforms, visual science communication, and research-led design by Jona Schlegel.',
   canonical: 'https://jonaschlegel.com/projects',
   keywords: [
     'archaeological illustration portfolio',
@@ -36,6 +35,25 @@ export const metadata: Metadata = generateSEOMetadata({
 /** Projects listing page showing all portfolio items with structured data. */
 export default function ProjectsPage() {
   const visibleProjects = projectsData.projectsList.filter((p) => !p.hidden);
+  const projectOverviews: ProjectOverview[] = visibleProjects.map((project) => {
+    const services = project.services.join(' ').toLowerCase();
+    const category = services.includes('web development')
+      ? 'Digital'
+      : services.includes('illustration')
+        ? 'Visual'
+        : 'Research';
+
+    return {
+      id: project.id,
+      name: project.name,
+      slug: project.slug,
+      image: project.image,
+      description: project.description,
+      role: project.role,
+      year: project.year,
+      category,
+    };
+  });
 
   const structuredData = {
     '@context': 'https://schema.org',
@@ -63,52 +81,16 @@ export default function ProjectsPage() {
 
   return (
     <div className="container mx-auto px-4">
-      <header className="mb-12 py-8">
-        <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-primary-green">
-          Portfolio
-        </p>
-        <h1 className="mb-4 text-4xl font-bold md:text-5xl">Projects</h1>
-        <p className="max-w-2xl text-lg text-neutral-600 leading-relaxed">
-          Archaeological research, science communication, and digital heritage
-          work.
+      <header className="max-w-4xl pb-16 pt-12 md:pb-24 md:pt-20">
+        <p className="eyebrow">Selected work &amp; experiments</p>
+        <h1 className="mt-4">Making research visible.</h1>
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-gray-700 md:text-xl">
+          Digital platforms, scientific illustrations, and self-initiated
+          experiments—all shaped by archaeological questions.
         </p>
       </header>
 
-      <section className="mb-16">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {visibleProjects.map((project) => (
-            <Link
-              key={`project-${project.id}`}
-              href={`/projects/${project.slug}` as Route}
-              className="group block overflow-hidden bg-primary-cream transition-shadow duration-300 hover:shadow-lg"
-            >
-              <div className="aspect-[3/2] overflow-hidden">
-                <Image
-                  src={project.image}
-                  alt={project.name}
-                  width={600}
-                  height={400}
-                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  loading="lazy"
-                />
-              </div>
-              <div className="p-4">
-                <div className="mb-1 flex items-center justify-between">
-                  <h2 className="text-base font-semibold text-neutral-800 group-hover:text-primary-green transition-colors">
-                    {project.name}
-                  </h2>
-                  <span className="shrink-0 text-xs text-neutral-500">
-                    {project.year}
-                  </span>
-                </div>
-                <p className="text-sm text-neutral-500 line-clamp-1">
-                  {project.description}
-                </p>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
+      <ProjectsGrid projects={projectOverviews} />
 
       <script
         type="application/ld+json"
