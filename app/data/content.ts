@@ -39,7 +39,9 @@ import archink2025 from '../images/projects/archink-2025.png';
 import dhBenelux from '../images/projects/dh-benelux.jpg';
 import dutchLearningPlatform from '../images/projects/dutch-learning-platform.png';
 import exploringArchaeologicalDisciplines from '../images/projects/exploring-archaeological-disciplines.webp';
-import geophysicalProspection from '../images/projects/geophysical-prospection.webp';
+import muestairFindings from '../images/projects/muestair-findings.png';
+import geophysicalProspection from '../images/projects/muestair-hero.png';
+import muestairMethods from '../images/projects/muestair-methods.png';
 import necessaryReunions from '../images/projects/necessary-reunions.png';
 import pastforwardhub from '../images/projects/pastforwardhub-1.webp';
 import pastforwardhubDetail from '../images/projects/pastforwardhub-2.webp';
@@ -782,6 +784,16 @@ export const projectsData = {
       impact: [
         'Peer-reviewed publication contributing to UNESCO World Heritage Site management',
         'Revealed previously unknown monastic infrastructure beneath the site',
+      ],
+      galleryImages: [
+        {
+          src: muestairMethods,
+          caption: 'A multi-method geophysical prospection workflow',
+        },
+        {
+          src: muestairFindings,
+          caption: 'Interpretive findings from the Müstair survey',
+        },
       ],
       publications: [
         {
