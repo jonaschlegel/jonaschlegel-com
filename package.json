@@ -17,12 +17,12 @@
   "dependencies": {
     "@glidejs/glide": "^3.7.1",
     "@mdx-js/react": "^3.1.1",
-    "@next/mdx": "16.2.11",
+    "@next/mdx": "16.2.12",
     "@types/leaflet": "^1.9.21",
     "@types/leaflet.markercluster": "^1.5.6",
     "leaflet": "^1.9.4",
     "leaflet.markercluster": "^1.5.3",
-    "next": "16.2.11",
+    "next": "16.2.12",
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "react-icons": "^5.6.0",
@@ -32,7 +32,7 @@
     "@tailwindcss/postcss": "^4.3.1",
     "@types/glidejs__glide": "^3.6.6",
     "@types/mdx": "^2.0.14",
-    "@types/node": "26.1.1",
+    "@types/node": "26.1.2",
     "@types/react": "19.2.17",
     "@types/react-dom": "19.2.3",
     "eslint": "^10.5.0",
@@ -45,5 +45,5 @@
     "tailwindcss": "^4.3.1",
     "typescript": "^6.0.3"
   },
-  "packageManager": "pnpm@11.17.0+sha512.cca3cea332ad254bb84145f966d19f4879615210346fc92c79a047f23a0d7b3cca3c3792f0076ba1f1831d277efbcf0a9119b31a9a60eca7fb3d6231f331ef72"
+  "packageManager": "pnpm@11.18.0+sha512.33d83c77da82f49fba836925c6f1b841181ec3132b670639bd012f7075f5c7cf634c5f870147c19aae7478fac01df09d8892e880454896edd23ee9b33757563c"
 }
