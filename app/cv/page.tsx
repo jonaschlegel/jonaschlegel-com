@@ -177,6 +177,14 @@ const CvPage = async () => {
 
   const sortedWorkEntries = workEntries.sort(sortEntriesByDate);
   const sortedEducationEntries = educationEntries.sort(sortEntriesByDate);
+  const currentWorkEntries = sortedWorkEntries.filter(
+    (entry) =>
+      ((entry.data as Job).endDate || 'Present').toLowerCase() === 'present',
+  );
+  const completedWorkEntries = sortedWorkEntries.filter(
+    (entry) =>
+      ((entry.data as Job).endDate || 'Present').toLowerCase() !== 'present',
+  );
 
   const allYears = Array.from(allYearsSet).sort((a, b) => b - a);
 
@@ -371,7 +379,65 @@ const CvPage = async () => {
             ))}
 
             {/* Render work entries */}
-            {sortedWorkEntries.map((entry) => {
+            {currentWorkEntries.length > 0 &&
+              (() => {
+                const newestEndYear = Math.max(
+                  ...currentWorkEntries.map((entry) =>
+                    entry.endDate.getFullYear(),
+                  ),
+                );
+                const earliestStartYear = Math.min(
+                  ...currentWorkEntries.map((entry) =>
+                    entry.startDate.getFullYear(),
+                  ),
+                );
+                const rowStart = yearRowStart[newestEndYear] ?? 0;
+                const rowEnd =
+                  (yearRowStart[earliestStartYear] ?? 0) +
+                  (totalLayersPerYear[earliestStartYear] ?? 1);
+
+                return (
+                  <div
+                    className="flex flex-col gap-2"
+                    style={{
+                      gridColumn: 2,
+                      gridRow: `${rowStart} / ${rowEnd}`,
+                    }}
+                  >
+                    {currentWorkEntries.map((entry) => {
+                      const job = entry.data as Job;
+
+                      return (
+                        <div
+                          key={`current-work-${entry.id}`}
+                          className="rounded-lg bg-gray-50 p-2 shadow"
+                        >
+                          <h3 className="text-sm font-semibold text-gray-900">
+                            {job.title} at {job.organization}
+                          </h3>
+                          <p className="text-xs text-gray-700">
+                            {job.startDate} - {job.endDate || 'Present'} |{' '}
+                            {job.location}
+                          </p>
+                          <p className="text-gray-700">{job.description}</p>
+                          {job.url && (
+                            <a
+                              href={job.url}
+                              className="text-xs text-primary-accent underline"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              View Project or Institution
+                            </a>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                );
+              })()}
+
+            {completedWorkEntries.map((entry) => {
               const startYear = entry.startDate.getFullYear();
               const endYear = entry.endDate.getFullYear();
               const rowStart =
