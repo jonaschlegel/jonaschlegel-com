@@ -398,41 +398,46 @@ const CvPage = async () => {
 
                 return (
                   <div
-                    className="flex flex-col gap-6 rounded-lg bg-gray-50 p-2 shadow"
+                    className="rounded-lg bg-gray-50 p-2 shadow"
                     style={{
                       gridColumn: 2,
                       gridRow: `${rowStart} / ${rowEnd}`,
                     }}
                   >
-                    {currentWorkEntries.map((entry) => {
-                      const job = entry.data as Job;
+                    <div
+                      className="flex flex-col gap-6"
+                      style={{ position: 'sticky', top: '10px' }}
+                    >
+                      {currentWorkEntries.map((entry) => {
+                        const job = entry.data as Job;
 
-                      return (
-                        <div
-                          key={`current-work-${entry.id}`}
-                          className="bg-transparent"
-                        >
-                          <h3 className="text-sm font-semibold text-gray-900">
-                            {job.title} at {job.organization}
-                          </h3>
-                          <p className="text-xs text-gray-700">
-                            {job.startDate} - {job.endDate || 'Present'} |{' '}
-                            {job.location}
-                          </p>
-                          <p className="text-gray-700">{job.description}</p>
-                          {job.url && (
-                            <a
-                              href={job.url}
-                              className="text-xs text-primary-accent underline"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              View Project or Institution
-                            </a>
-                          )}
-                        </div>
-                      );
-                    })}
+                        return (
+                          <div
+                            key={`current-work-${entry.id}`}
+                            className="bg-transparent"
+                          >
+                            <h3 className="text-sm font-semibold text-gray-900">
+                              {job.title} at {job.organization}
+                            </h3>
+                            <p className="text-xs text-gray-700">
+                              {job.startDate} - {job.endDate || 'Present'} |{' '}
+                              {job.location}
+                            </p>
+                            <p className="text-gray-700">{job.description}</p>
+                            {job.url && (
+                              <a
+                                href={job.url}
+                                className="text-xs text-primary-accent underline"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                View Project or Institution
+                              </a>
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
                 );
               })()}
