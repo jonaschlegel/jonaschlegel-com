@@ -113,8 +113,8 @@ export default function RootLayout({
 
         {/* Additional SEO meta tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#009D6F" />
-        <meta name="msapplication-TileColor" content="#009D6F" />
+        <meta name="theme-color" content="#F4EFE6" />
+        <meta name="msapplication-TileColor" content="#F4EFE6" />
 
         {/* Structured Data for Person/Professional */}
         <script

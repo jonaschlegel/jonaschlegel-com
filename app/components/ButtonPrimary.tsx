@@ -7,7 +7,7 @@ export interface ButtonPrimaryProps extends ButtonProps {
 }
 
 const classes =
-  'inline-flex min-h-12 items-center justify-center rounded-full bg-primary-green px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary-dark';
+  'inline-flex min-h-12 items-center justify-center rounded-[0.4rem_1rem_0.4rem_0.8rem] bg-primary-green px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary-dark';
 
 /** Primary call to action with direct, script-free email and scheduling links. */
 const ButtonPrimary = ({

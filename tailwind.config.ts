@@ -25,13 +25,13 @@ const config: Config = {
       },
       colors: {
         primary: {
-          dark: '#1C1F23', // Main dark background
-          green: '#007A57', // Accessible green for text and controls
-          teal: '#23786B', // Accessible secondary teal
-          cream: '#F5F4F2', // Light cream/off-white
-          yellow: '#E6D67C', // Accent yellow
-          brown: '#9A6100', // Medium brown
-          'brown-dark': '#532700', // Dark brown
+          dark: '#2D2925', // Ink brown
+          green: '#536B45', // Moss green
+          teal: '#6D8B7B', // Muted field blue-green
+          cream: '#F4EFE6', // Paper
+          yellow: '#D9B86C', // Ochre
+          brown: '#9B6344', // Clay
+          'brown-dark': '#58352C', // Dark umber
         },
         gray: {
           50: '#F8F7F5',
@@ -56,7 +56,7 @@ const config: Config = {
           800: '#2c5282',
           900: '#2a4365',
         },
-        'primary-accent': '#007A57',
+        'primary-accent': '#536B45',
       },
     },
   },

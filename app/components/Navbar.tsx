@@ -83,10 +83,10 @@ const Navbar = () => {
       </nav>
 
       <Link
-        href="/services#contact"
-        className="hidden min-h-11 items-center rounded-full bg-primary-dark px-5 py-2 text-sm font-semibold text-primary-cream transition-colors hover:bg-primary-green lg:inline-flex"
+        href="mailto:archaeoink@jonaschlegel.com"
+        className="hidden min-h-11 items-center rounded-[0.4rem_1rem_0.4rem_0.8rem] border border-primary-dark/30 px-5 py-2 text-sm font-semibold text-primary-dark transition-colors hover:bg-primary-dark hover:text-primary-cream lg:inline-flex"
       >
-        Start a project
+        Get in touch
       </Link>
 
       <button
@@ -128,11 +128,11 @@ const Navbar = () => {
               ))}
             </ul>
             <Link
-              href="/services#contact"
+              href="/projects"
               onClick={() => closeMenu()}
               className="mt-auto inline-flex min-h-12 items-center justify-center rounded-full bg-primary-green px-6 py-3 font-semibold text-white"
             >
-              Start a project
+              See the work
             </Link>
           </nav>
         </div>
