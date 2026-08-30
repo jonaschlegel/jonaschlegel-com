@@ -398,7 +398,7 @@ const CvPage = async () => {
 
                 return (
                   <div
-                    className="flex flex-col gap-2"
+                    className="flex flex-col gap-6 rounded-lg bg-gray-50 p-2 shadow"
                     style={{
                       gridColumn: 2,
                       gridRow: `${rowStart} / ${rowEnd}`,
@@ -410,7 +410,7 @@ const CvPage = async () => {
                       return (
                         <div
                           key={`current-work-${entry.id}`}
-                          className="rounded-lg bg-gray-50 p-2 shadow"
+                          className="bg-transparent"
                         >
                           <h3 className="text-sm font-semibold text-gray-900">
                             {job.title} at {job.organization}
