@@ -1055,29 +1055,28 @@ export const statsData: import('../../types/global').StatType[] = [
   { name: 'Research Platforms Built', number: '10+' },
 ];
 
-/** Selected evergreen writing, now published on Substack. */
+/** Latest writing from the archaeoINK Substack publication. */
 export const blogPostsData = [
   {
-    title:
-      'How Visual Communication Can Transform Public Archaeology into Engaging Conversations',
-    date: '2024-09-01',
+    title: 'Archaeology Finds a New Space on Bluesky?!',
+    date: '2024-11-11',
     excerpt:
-      'Using conceptual illustrations and visual metaphors to bridge the gap between specialists and the public, making archaeology more approachable.',
-    url: '/blog/public-archaeology',
+      'A reflection on Bluesky’s growing archaeology community and its potential for more meaningful, inclusive professional exchange.',
+    url: 'https://archaeoink.substack.com/p/archaeology-finds-a-new-space-on',
   },
   {
-    title: 'The Art and Science of Stippling in Archaeological Illustrations',
-    date: '2024-07-28',
+    title: 'Inktober 2024',
+    date: '2024-09-24',
     excerpt:
-      'How a centuries-old drawing technique supports precise artefact documentation, scholarly interpretation, and visual archaeology.',
-    url: '/blog/stippling',
+      'Combining the Inktober 2024 prompts with #archInk to turn daily drawings into conversations about archaeological concepts.',
+    url: 'https://archaeoink.substack.com/p/inktober-2024',
   },
   {
-    title: 'The #100DaysOfDrawing Challenge in Archaeology',
-    date: '2024-06-17',
+    title: 'Public archaeology',
+    date: '2024-09-10',
     excerpt:
-      'How daily drawing develops illustration skills and creates a deeper engagement with archaeological materials and ancient craftsmanship.',
-    url: '/blog/100-days-of-drawing',
+      'Exploring how illustration and visual communication can make archaeology clearer, more approachable, and easier to discuss.',
+    url: 'https://archaeoink.substack.com/p/public-archaeology',
   },
 ];
 
