@@ -293,9 +293,9 @@
     },
     {
       "id": "newsletter-kit",
-      "name": "Newsletter (Kit)",
+      "name": "Newsletter (Substack)",
       "handle": "archaeoink",
-      "url": "https://archaeoink.ck.page/",
+      "url": "https://archaeoink.substack.com/subscribe",
       "icon": "FaEnvelope",
       "category": "content",
       "brand": "archaeoINK",

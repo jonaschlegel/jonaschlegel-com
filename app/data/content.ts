@@ -325,13 +325,13 @@ export const projectsData = {
           title:
             'Switching Gears from archInk to Inktober for Fresh Inspiration',
           venue: 'archaeoINK Blog',
-          url: 'https://www.archaeoink.com/blog/switching-gears-from-archink-to-inktober',
+          url: '/blog/switching-gears-from-archink-to-inktober',
         },
         {
           title:
             'How Visual Communication Can Transform Public Archaeology into Engaging Conversations',
           venue: 'archaeoINK Blog',
-          url: 'https://www.archaeoink.com/blog/public-archaeology',
+          url: '/blog/public-archaeology',
         },
         {
           title:
@@ -544,13 +544,13 @@ export const projectsData = {
           title:
             'Switching Gears from archInk to Inktober for Fresh Inspiration',
           venue: 'archaeoINK Blog',
-          url: 'https://www.archaeoink.com/blog/switching-gears-from-archink-to-inktober',
+          url: '/blog/switching-gears-from-archink-to-inktober',
         },
         {
           title:
             'How Visual Communication Can Transform Public Archaeology into Engaging Conversations',
           venue: 'archaeoINK Blog',
-          url: 'https://www.archaeoink.com/blog/public-archaeology',
+          url: '/blog/public-archaeology',
         },
         {
           title:
@@ -645,13 +645,13 @@ export const projectsData = {
           title:
             'Switching Gears from archInk to Inktober for Fresh Inspiration',
           venue: 'archaeoINK Blog',
-          url: 'https://www.archaeoink.com/blog/switching-gears-from-archink-to-inktober',
+          url: '/blog/switching-gears-from-archink-to-inktober',
         },
         {
           title:
             'How Visual Communication Can Transform Public Archaeology into Engaging Conversations',
           venue: 'archaeoINK Blog',
-          url: 'https://www.archaeoink.com/blog/public-archaeology',
+          url: '/blog/public-archaeology',
         },
         {
           title:
@@ -729,13 +729,13 @@ export const projectsData = {
           title:
             'Switching Gears from archInk to Inktober for Fresh Inspiration',
           venue: 'archaeoINK Blog',
-          url: 'https://www.archaeoink.com/blog/switching-gears-from-archink-to-inktober',
+          url: '/blog/switching-gears-from-archink-to-inktober',
         },
         {
           title:
             'How Visual Communication Can Transform Public Archaeology into Engaging Conversations',
           venue: 'archaeoINK Blog',
-          url: 'https://www.archaeoink.com/blog/public-archaeology',
+          url: '/blog/public-archaeology',
         },
         {
           title:
@@ -838,13 +838,13 @@ export const projectsData = {
           title:
             'Switching Gears from archInk to Inktober for Fresh Inspiration',
           venue: 'archaeoINK Blog',
-          url: 'https://www.archaeoink.com/blog/switching-gears-from-archink-to-inktober',
+          url: '/blog/switching-gears-from-archink-to-inktober',
         },
         {
           title:
             'How Visual Communication Can Transform Public Archaeology into Engaging Conversations',
           venue: 'archaeoINK Blog',
-          url: 'https://www.archaeoink.com/blog/public-archaeology',
+          url: '/blog/public-archaeology',
         },
         {
           title:
@@ -1055,31 +1055,29 @@ export const statsData: import('../../types/global').StatType[] = [
   { name: 'Research Platforms Built', number: '10+' },
 ];
 
-/** Selected evergreen writing from the archaeoINK blog. */
+/** Selected evergreen writing, now published on Substack. */
 export const blogPostsData = [
   {
     title:
-      'Visual Storytelling in Archaeology: Designing a Cover to Connect Women in the Field Across Time',
-    date: '2024-10-08',
-    excerpt:
-      'Exploring the design of a magazine cover that honours the evolving roles of women in archaeology, drawing inspiration from pioneers like Ann Axtell Morris.',
-    url: 'https://www.archaeoink.com/blog/visual-storytelling-in-archaeology',
-  },
-  {
-    title:
-      'The Power of Conceptual Illustrations in Archaeological Communication during Inktober 2024',
-    date: '2024-09-24',
-    excerpt:
-      'How visual communication can democratize archaeology, making it more accessible and engaging for the public through strategic illustration.',
-    url: 'https://www.archaeoink.com/blog/conceptual-illustrations-in-inktober',
-  },
-  {
-    title:
       'How Visual Communication Can Transform Public Archaeology into Engaging Conversations',
-    date: '2024-07-28',
+    date: '2024-09-01',
     excerpt:
       'Using conceptual illustrations and visual metaphors to bridge the gap between specialists and the public, making archaeology more approachable.',
-    url: 'https://www.archaeoink.com/blog/public-archaeology',
+    url: '/blog/public-archaeology',
+  },
+  {
+    title: 'The Art and Science of Stippling in Archaeological Illustrations',
+    date: '2024-07-28',
+    excerpt:
+      'How a centuries-old drawing technique supports precise artefact documentation, scholarly interpretation, and visual archaeology.',
+    url: '/blog/stippling',
+  },
+  {
+    title: 'The #100DaysOfDrawing Challenge in Archaeology',
+    date: '2024-06-17',
+    excerpt:
+      'How daily drawing develops illustration skills and creates a deeper engagement with archaeological materials and ancient craftsmanship.',
+    url: '/blog/100-days-of-drawing',
   },
 ];
 
@@ -1091,8 +1089,8 @@ export const footerdata = {
     { name: 'Projects', href: '/projects' },
     { name: 'Services', href: '/services' },
     { name: 'CV', href: '/cv' },
-    { name: 'Blog', href: 'https://www.archaeoink.com/' },
-    { name: 'Newsletter', href: 'https://archaeoink.ck.page/' },
+    { name: 'Blog', href: 'https://archaeoink.substack.com/archive' },
+    { name: 'Newsletter', href: 'https://archaeoink.substack.com/subscribe' },
   ],
   socialLinks: [
     {

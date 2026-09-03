@@ -1,6 +1,25 @@
 import createMDX from '@next/mdx';
 import type { NextConfig } from 'next';
 
+const SUBSTACK_URL = 'https://archaeoink.substack.com';
+
+// Preserve stable jonaschlegel.com URLs for writing that has moved to Substack.
+const migratedPostRedirects = [
+  ['100-days-of-drawing', '100-days-of-drawing'],
+  [
+    'history-of-archaeological-illustration',
+    'history-of-archaeological-illustration',
+  ],
+  ['learn-in-public', 'learn-in-public'],
+  ['public-archaeology', 'public-archaeology'],
+  [
+    'reevaluating-skin-colour-representation-in-archaeological-illustrations',
+    'reevaluating-skin-colour-representation-in-archaeological-illustrations',
+  ],
+  ['stippling', 'stippling'],
+  ['switching-gears-from-archink-to-inktober', 'inktober-2024'],
+] as const;
+
 const nextConfig: NextConfig = {
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
 
@@ -56,6 +75,21 @@ const nextConfig: NextConfig = {
   // Redirects for SEO
   redirects() {
     return Promise.resolve([
+      ...migratedPostRedirects.map(([oldSlug, substackSlug]) => ({
+        source: `/blog/${oldSlug}`,
+        destination: `${SUBSTACK_URL}/p/${substackSlug}`,
+        permanent: true,
+      })),
+      {
+        source: '/blog',
+        destination: `${SUBSTACK_URL}/archive`,
+        permanent: true,
+      },
+      {
+        source: '/newsletter',
+        destination: `${SUBSTACK_URL}/subscribe`,
+        permanent: true,
+      },
       {
         source: '/home',
         destination: '/',

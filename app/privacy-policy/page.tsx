@@ -107,8 +107,8 @@ export default function PrivacyPolicy() {
         </ul>
         <p>
           Links to external services such as Calendly, social networks, and the
-          archaeoINK blog open those services directly. Their own privacy terms
-          apply after you follow a link.
+          archaeoINK publication on Substack open those services directly. Their
+          own privacy terms apply after you follow a link.
         </p>
       </section>
 

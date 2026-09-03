@@ -1,7 +1,7 @@
 import { FaArrowRight } from 'react-icons/fa';
 import { blogPostsData } from '../data/content';
 
-/** Preview of recent archaeoINK blog posts for the homepage. */
+/** Preview of selected Substack posts for the homepage. */
 export default function BlogPreview() {
   return (
     <section className="container mx-auto px-4 py-16">
@@ -21,12 +21,7 @@ export default function BlogPreview() {
               key={`blog-${post.title.slice(0, 30).replace(/\s+/g, '-').toLowerCase()}`}
               className="group flex flex-col border border-gray-200 p-6 transition-colors hover:border-primary-green focus-within:border-primary-green"
             >
-              <a
-                href={post.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-1 flex-col"
-              >
+              <a href={post.url} className="flex flex-1 flex-col">
                 <time
                   dateTime={post.date}
                   className="mb-2 text-xs text-neutral-400"
@@ -44,8 +39,7 @@ export default function BlogPreview() {
                   {post.excerpt}
                 </p>
                 <span className="mt-auto flex items-center gap-1 text-sm text-primary-green">
-                  Read on archaeoINK
-                  <span className="sr-only"> (opens in new tab)</span>
+                  Read on Substack
                   <FaArrowRight className="size-3" aria-hidden="true" />
                 </span>
               </a>
