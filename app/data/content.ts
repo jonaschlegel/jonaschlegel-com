@@ -61,12 +61,7 @@ import { archink2024Gallery } from './galleries/archink-2024';
 import { archink2025Gallery } from './galleries/archink-2025';
 
 /** Navigation links used in the header and footer. */
-export const navLinks = [
-  { name: 'About', href: '/about' },
-  { name: 'Projects', href: '/projects' },
-  { name: 'Services', href: '/services' },
-  { name: 'CV', href: '/cv' },
-] as const;
+export const navLinks = [{ name: 'Work', href: '/projects' }] as const;
 
 /** Content and images for the home page hero section. */
 export const heroSectionData = {
@@ -1082,7 +1077,7 @@ export const blogPostsData = [
 
 /** Footer content including navigation, social links, and contact details. */
 export const footerdata = {
-  heading: "Let's Collaborate",
+  heading: 'Have something to make visible?',
   navLinks: [
     { name: 'About', href: '/about' },
     { name: 'Projects', href: '/projects' },

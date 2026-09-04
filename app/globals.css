@@ -25,7 +25,7 @@ button:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 3px solid #007a57;
+  outline: 3px solid #536b45;
   outline-offset: 2px;
   border-radius: 2px;
 }
@@ -36,7 +36,7 @@ textarea:focus-visible {
   top: -100%;
   left: 0;
   padding: 0.5rem 1rem;
-  background: #007a57;
+  background: #536b45;
   color: #fff;
   z-index: 100;
   font-weight: 600;
@@ -51,8 +51,19 @@ textarea:focus-visible {
       var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
       'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
       'Noto Color Emoji';
-    background-color: #f5f4f2;
-    color: #1c1f23;
+    background-color: #f4efe6;
+    background-image:
+      radial-gradient(
+        circle at 15% 8%,
+        rgb(155 99 68 / 0.045),
+        transparent 20rem
+      ),
+      radial-gradient(
+        circle at 82% 68%,
+        rgb(83 107 69 / 0.035),
+        transparent 24rem
+      );
+    color: #2d2925;
   }
 
   p,
@@ -61,13 +72,13 @@ textarea:focus-visible {
       var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
       'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
       'Noto Color Emoji';
-    color: #1c1f23;
+    color: #2d2925;
   }
 
   h1 {
     @apply font-merriweather font-bold tracking-tight;
 
-    color: #1c1f23;
+    color: #2d2925;
     font-size: clamp(2.75rem, 6vw, 4.75rem);
     line-height: 1.06;
   }
@@ -75,7 +86,7 @@ textarea:focus-visible {
   h2 {
     @apply font-merriweather text-2xl font-semibold md:text-3xl;
 
-    color: #1c1f23;
+    color: #2d2925;
   }
 
   h3 {
@@ -87,7 +98,7 @@ textarea:focus-visible {
   p {
     @apply tracking-tight;
 
-    color: #3a3d42;
+    color: #514b45;
     line-height: 1.65;
     margin-block: 1rem;
   }
@@ -101,6 +112,297 @@ textarea:focus-visible {
   line-height: 1.4;
   margin-block: 0;
   text-transform: uppercase;
+}
+
+/* A quiet field-notebook texture for the portfolio landing page. */
+.field-notebook {
+  position: relative;
+  isolation: isolate;
+}
+
+.field-notebook::before {
+  position: absolute;
+  z-index: -1;
+  inset: -1rem -100vw;
+  background-image:
+    radial-gradient(
+      circle at 10% 12%,
+      rgb(139 80 49 / 0.08),
+      transparent 18rem
+    ),
+    radial-gradient(
+      circle at 86% 32%,
+      rgb(35 120 107 / 0.06),
+      transparent 22rem
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0,
+      transparent 2.4rem,
+      rgb(117 73 45 / 0.035) 2.45rem,
+      transparent 2.5rem
+    );
+  content: '';
+  pointer-events: none;
+}
+
+.watercolour-swatch {
+  border: 1px solid rgb(117 73 45 / 0.24);
+}
+
+/* Image-first portfolio landing page. */
+.portfolio-wall {
+  align-items: stretch;
+}
+
+.work-tile {
+  border: 1px solid rgb(88 53 44 / 0.25);
+}
+
+.work-tile__caption {
+  background: linear-gradient(
+    to top,
+    rgb(244 239 230 / 0.98),
+    rgb(244 239 230 / 0.78),
+    transparent
+  );
+  opacity: 0;
+  transform: translateY(0.75rem);
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease;
+}
+
+.work-tile:hover .work-tile__caption,
+.work-tile:focus-visible .work-tile__caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (hover: none) {
+  .work-tile__caption {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Cabinet of curiosities landing-page furniture. */
+.cabinet-room {
+  position: relative;
+}
+
+.cabinet-case {
+  position: relative;
+  overflow: hidden;
+  border: 0.8rem solid #4b2d21;
+  background: #3c241b;
+  box-shadow:
+    0 0 0 0.2rem #8b5c3e,
+    0 0 0 0.45rem rgb(88 53 44 / 0.18),
+    0.8rem 1rem 0 rgb(88 53 44 / 0.18);
+}
+
+.cabinet-case::before {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  opacity: 0.28;
+  background-image: repeating-linear-gradient(
+    8deg,
+    transparent 0,
+    transparent 0.5rem,
+    rgb(246 222 179 / 0.16) 0.55rem,
+    transparent 0.64rem
+  );
+  content: '';
+  pointer-events: none;
+}
+
+.cabinet-case__top,
+.cabinet-case__bottom {
+  position: relative;
+  z-index: 1;
+  background:
+    linear-gradient(
+      90deg,
+      rgb(77 45 32 / 0.18),
+      transparent 18%,
+      rgb(77 45 32 / 0.1)
+    ),
+    #d6b178;
+  border-bottom: 1px solid rgb(47 28 22 / 0.7);
+  color: #3c241b;
+}
+
+.cabinet-case__bottom {
+  border-bottom: 0;
+  border-top: 1px solid rgb(88 53 44 / 0.25);
+}
+
+.cabinet-shelves {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background-color: #3c241b;
+  background-image:
+    linear-gradient(
+      to bottom,
+      transparent calc(100% - 0.68rem),
+      #24150f calc(100% - 0.68rem),
+      #a17049 calc(100% - 0.58rem),
+      #6a412d calc(100% - 0.32rem),
+      transparent calc(100% - 0.25rem)
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgb(245 208 145 / 0.045) 0,
+      transparent 0.3rem,
+      rgb(0 0 0 / 0.07) 0.6rem,
+      transparent 1.1rem
+    );
+  background-size:
+    100% 50%,
+    auto;
+  background-repeat: repeat-y, repeat;
+}
+
+.cabinet-object {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+  transition: transform 240ms ease;
+}
+
+.cabinet-object:hover {
+  transform: translateY(-0.35rem) rotate(0deg);
+}
+
+.cabinet-object__paper {
+  border: 1px solid #2f1c16;
+  background: #f5ead4;
+  box-shadow:
+    0.25rem 0.45rem 0 rgb(25 13 9 / 0.55),
+    0 0 0 0.15rem rgb(213 177 120 / 0.4);
+}
+
+.cabinet-object__label {
+  position: relative;
+  z-index: 2;
+  margin: -0.15rem 0.65rem 0;
+  border: 1px solid rgb(65 38 27 / 0.7);
+  background: #f4ead8;
+  box-shadow: 0.18rem 0.28rem 0 rgb(25 13 9 / 0.5);
+  padding: 0.6rem 0.7rem 0.65rem;
+}
+
+.cabinet-object__pin {
+  position: absolute;
+  right: 0.7rem;
+  top: 0.7rem;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 999px;
+  background: #c79a4e;
+  box-shadow:
+    inset 0.08rem 0.08rem 0 rgb(255 255 255 / 0.5),
+    0.08rem 0.1rem 0 rgb(88 53 44 / 0.25);
+}
+
+.cabinet-curio {
+  position: absolute;
+  z-index: 1;
+  color: rgb(238 202 141 / 0.7);
+  font-family: Georgia, serif;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.cabinet-curio--one {
+  right: 3%;
+  top: 3%;
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.cabinet-curio--two {
+  bottom: 4%;
+  left: 3%;
+  font-size: clamp(3rem, 8vw, 6rem);
+}
+
+.catalogue-page {
+  position: relative;
+}
+
+.cabinet-image-frame {
+  border: 1px solid rgb(88 53 44 / 0.24);
+  background: #f8f3e8;
+  box-shadow: 0.35rem 0.45rem 0 rgb(88 53 44 / 0.12);
+}
+
+.catalogue-page .cabinet-featured .eyebrow,
+.catalogue-page .cabinet-featured h3 {
+  color: #58352c;
+}
+
+.catalogue-page .cabinet-featured a:nth-child(2) .cabinet-image-frame {
+  transform: rotate(-1deg);
+}
+
+.catalogue-page .cabinet-featured a:nth-child(3) .cabinet-image-frame {
+  transform: rotate(1.5deg);
+}
+
+.catalogue-page section:last-child {
+  border-top: 1px solid rgb(88 53 44 / 0.3);
+  padding-top: 1rem;
+}
+
+.catalogue-page section:last-child > div:first-child {
+  border-bottom-color: rgb(88 53 44 / 0.3);
+}
+
+.catalogue-page section:last-child a.group {
+  border-bottom-color: rgb(88 53 44 / 0.22);
+}
+
+.catalogue-page section:last-child a.group > div:first-child {
+  border: 1px solid rgb(88 53 44 / 0.2);
+  box-shadow: 0.18rem 0.25rem 0 rgb(88 53 44 / 0.1);
+}
+
+.catalogue-card:nth-child(3n + 2) .cabinet-image-frame {
+  transform: rotate(-0.8deg);
+}
+
+.catalogue-card:nth-child(3n) .cabinet-image-frame {
+  transform: rotate(0.8deg);
+}
+
+.catalogue-card:hover .cabinet-image-frame {
+  transform: translateY(-0.25rem) rotate(0deg);
+}
+
+.project-drawer__image {
+  border: 0.55rem solid #f8f3e8;
+  outline: 1px solid rgb(88 53 44 / 0.3);
+  box-shadow: 0.5rem 0.6rem 0 rgb(88 53 44 / 0.14);
+}
+
+.project-drawer header h1 {
+  max-width: 56rem;
+}
+
+.project-drawer article,
+.project-drawer section {
+  scroll-margin-top: 6rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cabinet-object,
+  .cabinet-object:hover {
+    transition: none;
+    transform: none;
+  }
 }
 
 .navigation-list,

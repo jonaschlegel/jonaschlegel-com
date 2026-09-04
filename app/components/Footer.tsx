@@ -13,8 +13,8 @@ const Footer = () => {
           {footerdata.heading}
         </h2>
         <div>
-          <ButtonPrimary href="/services#contact">
-            Start a Project
+          <ButtonPrimary email="archaeoink@jonaschlegel.com">
+            Get in touch
           </ButtonPrimary>
         </div>
       </div>

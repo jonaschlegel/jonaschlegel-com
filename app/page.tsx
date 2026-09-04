@@ -1,21 +1,12 @@
 import type { Metadata } from 'next';
-import Banner from './components/Banner';
-import BlogPreview from './components/BlogPreview';
-import ClientLogos from './components/ClientLogos';
-import FAQSection from './components/FAQSection';
-import FeaturedProjects from './components/FeaturedProjects';
-import Hero from './components/Hero';
-import IllustrationBand from './components/IllustrationBand';
-import ServicePillars from './components/ServicePillars';
-import Testimonials from './components/Testimonials';
-import { defaultFAQs } from './data/faqs';
+import PortfolioEntrance from './components/PortfolioEntrance';
 import { generateSEOMetadata } from './lib/seo';
 
 /** SEO metadata for the home page. */
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Home',
   description:
-    'Jona Schlegel – Freelance landscape archaeologist specialising in archaeological illustration, drawing & sketching, visual science communication, archaeology web development, digital heritage platforms, and brand identity for archaeology.',
+    'A visual portfolio by Jona Schlegel: archaeological illustration, educational art, interfaces, identity, maps, and data modelling.',
   canonical: 'https://jonaschlegel.com',
   keywords: [
     'archaeological illustration',
@@ -74,17 +65,7 @@ export default function HomePage() {
 
   return (
     <>
-      <div>
-        <Hero />
-        <ClientLogos />
-        <ServicePillars />
-        <FeaturedProjects />
-        <IllustrationBand seed={1} />
-        <Banner />
-        <Testimonials />
-        <BlogPreview />
-        <FAQSection faqs={defaultFAQs} />
-      </div>
+      <PortfolioEntrance />
 
       {/* Structured Data */}
       <script

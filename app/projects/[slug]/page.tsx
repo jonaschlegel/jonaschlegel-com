@@ -118,7 +118,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="project-drawer container mx-auto px-4 py-12">
       <Breadcrumbs />
 
       {/* Header */}
@@ -134,7 +134,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
       {/* Image + Info table */}
       <div className="mb-12 grid gap-8 lg:grid-cols-2">
-        <div className="overflow-hidden">
+        <div className="project-drawer__image overflow-hidden">
           <Image
             src={project.image}
             alt={`${project.name} – ${project.description}`}
@@ -163,7 +163,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
       {/* Gallery */}
       {project.galleryImages && project.galleryImages.length > 0 && (
-        <section className="mb-12">
+        <section id="gallery" className="mb-12">
           <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-primary-green">
             Gallery
           </h2>

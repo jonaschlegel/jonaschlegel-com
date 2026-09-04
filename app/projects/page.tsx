@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
-import ProjectsGrid, { type ProjectOverview } from '../components/ProjectsGrid';
+import ProjectsGrid, {
+  type ProjectCollection,
+  type ProjectOverview,
+} from '../components/ProjectsGrid';
 import { projectsData } from '../data/content';
 import { generateSEOMetadata } from '../lib/seo';
 
@@ -35,14 +38,31 @@ export const metadata: Metadata = generateSEOMetadata({
 /** Projects listing page showing all portfolio items with structured data. */
 export default function ProjectsPage() {
   const visibleProjects = projectsData.projectsList.filter((p) => !p.hidden);
+  const collectionBySlug: Record<string, ProjectCollection> = {
+    'archink-2025': 'illustrated-archaeology',
+    'roman-burial': 'illustrated-archaeology',
+    'archink-2024': 'illustrated-archaeology',
+    'archink-2023': 'illustrated-archaeology',
+    'exploring-archaeological-disciplines': 'illustrated-archaeology',
+    'archink-2022': 'illustrated-archaeology',
+    'archink-2021': 'illustrated-archaeology',
+    'adventuress-cover': 'editorial-identity',
+    pastrace: 'editorial-identity',
+    'archaeo-zine': 'editorial-identity',
+    'suriname-tijdmachine': 'digital-heritage',
+    pastforwardhub: 'digital-heritage',
+    'necessary-reunions': 'digital-heritage',
+    'dh-benelux': 'digital-heritage',
+    archeomatch: 'digital-heritage',
+    'archaeology-of-bias': 'digital-heritage',
+    'archaeology-journaling': 'digital-heritage',
+    'dutch-learning-platform': 'digital-heritage',
+    'urban-chameleon': 'digital-heritage',
+    'trowel-journal-blog': 'digital-heritage',
+    'archink-stratigraphic-profile': 'maps-research',
+    'geophysical-prospection-study': 'maps-research',
+  };
   const projectOverviews: ProjectOverview[] = visibleProjects.map((project) => {
-    const services = project.services.join(' ').toLowerCase();
-    const category = services.includes('web development')
-      ? 'Digital'
-      : services.includes('illustration')
-        ? 'Visual'
-        : 'Research';
-
     return {
       id: project.id,
       name: project.name,
@@ -51,7 +71,7 @@ export default function ProjectsPage() {
       description: project.description,
       role: project.role,
       year: project.year,
-      category,
+      collection: collectionBySlug[project.slug] ?? 'maps-research',
     };
   });
 
@@ -80,13 +100,13 @@ export default function ProjectsPage() {
   };
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="catalogue-page container mx-auto px-4">
       <header className="max-w-4xl pb-16 pt-12 md:pb-24 md:pt-20">
-        <p className="eyebrow">Selected work &amp; experiments</p>
-        <h1 className="mt-4">Making research visible.</h1>
+        <p className="eyebrow">Cabinet catalogue · collection 01</p>
+        <h1 className="mt-4">The collected work.</h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-gray-700 md:text-xl">
-          Digital platforms, scientific illustrations, and self-initiated
-          experiments—all shaped by archaeological questions.
+          Illustrated evidence, digital heritage, maps, and experiments — all
+          shaped by archaeological questions.
         </p>
       </header>
 
