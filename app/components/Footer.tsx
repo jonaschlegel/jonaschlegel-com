@@ -1,70 +1,40 @@
 import Link from 'next/link';
 import { footerdata } from '../data/content';
 import { KVK_NUMBER, KVK_URL } from '../lib/constants';
-import ButtonPrimary from './ButtonPrimary';
-import SocialItem from './SocialItem';
 
-/** Site footer with navigation links, social icons, and contact call-to-action. */
-const Footer = () => {
+/** Compact footer for navigation, contact and legal information. */
+export default function Footer() {
   return (
-    <footer className="container mx-auto border-t border-primary-dark/15 py-16">
-      <div className="mb-12 text-center">
-        <h2 className="mb-3 font-merriweather text-3xl font-bold md:text-5xl">
-          {footerdata.heading}
-        </h2>
-        <div>
-          <ButtonPrimary href="/services#contact">
-            Start a Project
-          </ButtonPrimary>
-        </div>
+    <footer className="archive-footer">
+      <div className="archive-footer__primary">
+        <p>Jona Schlegel / archaeoINK</p>
+        <a href="mailto:archaeoink@jonaschlegel.com">
+          archaeoink@jonaschlegel.com
+        </a>
       </div>
-      <div className="space-y-3">
-        <div className="flex flex-wrap justify-center gap-x-6 gap-y-1">
-          {footerdata.navLinks.map((navItem) => (
-            <Link
-              key={`nav-${navItem.name}`}
-              href={navItem.href}
-              target={navItem.href.startsWith('http') ? '_blank' : undefined}
-              rel={
-                navItem.href.startsWith('http')
-                  ? 'noopener noreferrer'
-                  : undefined
-              }
-            >
-              {navItem.name}
-            </Link>
+      <nav aria-label="Footer">
+        <ul className="archive-footer__links">
+          {footerdata.navLinks.map((item) => (
+            <li key={`footer-${item.name}`}>
+              {item.href.startsWith('http') ? (
+                <a href={item.href} target="_blank" rel="noreferrer">
+                  {item.name}
+                </a>
+              ) : (
+                <Link href={item.href}>{item.name}</Link>
+              )}
+            </li>
           ))}
-        </div>
-        <div className="flex justify-center gap-4">
-          {footerdata.socialLinks.map((socialItem) => (
-            <SocialItem key={`social-${socialItem.href}`} {...socialItem} />
-          ))}
-        </div>
-        <div className="mt-6 flex flex-col justify-center gap-1 text-center text-sm md:flex-row md:gap-4">
-          <Link href="/imprint">Imprint</Link>
-          <Link href="/privacy-policy">Privacy Policy</Link>
-          <Link href="/terms-and-conditions">Terms and Conditions</Link>
-        </div>
-        <div className="mt-6 flex flex-col items-center justify-center gap-1 text-xs text-gray-700">
-          <span>
-            © Jona Schlegel, archaeoINK {new Date().getFullYear()}. All rights
-            reserved.
-          </span>
-          <span>
-            KVK:{' '}
-            <a
-              href={KVK_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline"
-            >
-              {KVK_NUMBER}
-            </a>
-          </span>
-        </div>
+        </ul>
+      </nav>
+      <div className="archive-footer__secondary">
+        <span>© {new Date().getFullYear()} Jona Schlegel</span>
+        <a href={KVK_URL} target="_blank" rel="noreferrer">
+          KVK {KVK_NUMBER}
+        </a>
+        <Link href="/imprint">Imprint</Link>
+        <Link href="/privacy-policy">Privacy</Link>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

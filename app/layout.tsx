@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
-import ScrollToTop from './components/ScrollUpArrow';
 import Tracking from './Tracking';
 
 const geistSans = localFont({
@@ -13,17 +12,17 @@ const geistSans = localFont({
 });
 
 const BASE_DESCRIPTION =
-  'Jona Schlegel helps researchers and heritage organisations turn complex evidence into rigorous illustrations, publications, and accessible digital platforms.';
+  'Illustration, visual research, reconstruction and digital heritage work by archaeologist Jona Schlegel.';
 
 const SHORT_DESCRIPTION =
-  'Archaeological illustration, visual science communication, and full-stack digital heritage platforms by Jona Schlegel.';
+  'Archaeology in images, objects and interfaces by Jona Schlegel.';
 
 /** Site-wide metadata configuration for SEO, Open Graph, and Twitter cards. */
 export const metadata: Metadata = {
   metadataBase: new URL('https://jonaschlegel.com'),
   title: {
     template: '%s | Jona Schlegel',
-    default: 'Jona Schlegel | Archaeology, Illustration & Digital Heritage',
+    default: 'Jona Schlegel | Archaeology in images and interfaces',
   },
   description: BASE_DESCRIPTION,
   authors: [{ name: 'Jona Schlegel', url: 'https://jonaschlegel.com' }],
@@ -45,7 +44,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://jonaschlegel.com',
     siteName: 'Jona Schlegel',
-    title: 'Jona Schlegel | Archaeology, Illustration & Digital Heritage',
+    title: 'Jona Schlegel | Archaeology in images and interfaces',
     description: BASE_DESCRIPTION,
     images: [
       {
@@ -58,7 +57,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Jona Schlegel | Archaeology, Illustration & Digital Heritage',
+    title: 'Jona Schlegel | Archaeology in images and interfaces',
     description: SHORT_DESCRIPTION,
     images: [
       '/api/og?title=Jona%20Schlegel&subtitle=Archaeological%20Science%20Communication%20%26%20Knowledge%20Management',
@@ -113,8 +112,8 @@ export default function RootLayout({
 
         {/* Additional SEO meta tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#009D6F" />
-        <meta name="msapplication-TileColor" content="#009D6F" />
+        <meta name="theme-color" content="#F1EFE8" />
+        <meta name="msapplication-TileColor" content="#F1EFE8" />
 
         {/* Structured Data for Person/Professional */}
         <script
@@ -194,7 +193,6 @@ export default function RootLayout({
         <Navbar />
         <main id="main-content">{children}</main>
         <Footer />
-        <ScrollToTop />
         <Tracking />
       </body>
     </html>

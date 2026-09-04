@@ -62,10 +62,14 @@ import { archink2025Gallery } from './galleries/archink-2025';
 
 /** Navigation links used in the header and footer. */
 export const navLinks = [
-  { name: 'About', href: '/about' },
-  { name: 'Projects', href: '/projects' },
-  { name: 'Services', href: '/services' },
-  { name: 'CV', href: '/cv' },
+  { name: 'Selected', href: '/' },
+  { name: 'All work', href: '/work' },
+  { name: 'About / CV', href: '/about' },
+  {
+    name: 'Writing ↗',
+    href: 'https://archaeoink.substack.com/',
+    external: true,
+  },
 ] as const;
 
 /** Content and images for the home page hero section. */
@@ -1082,14 +1086,12 @@ export const blogPostsData = [
 
 /** Footer content including navigation, social links, and contact details. */
 export const footerdata = {
-  heading: "Let's Collaborate",
+  heading: 'Jona Schlegel',
   navLinks: [
-    { name: 'About', href: '/about' },
-    { name: 'Projects', href: '/projects' },
-    { name: 'Services', href: '/services' },
-    { name: 'CV', href: '/cv' },
-    { name: 'Blog', href: 'https://archaeoink.substack.com/archive' },
-    { name: 'Newsletter', href: 'https://archaeoink.substack.com/subscribe' },
+    { name: 'Selected', href: '/' },
+    { name: 'All work', href: '/work' },
+    { name: 'About / CV', href: '/about' },
+    { name: 'Writing', href: 'https://archaeoink.substack.com/' },
   ],
   socialLinks: [
     {
