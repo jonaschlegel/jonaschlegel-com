@@ -7,10 +7,11 @@ import landingPageillustrationBellBeaker3 from '../images/landing-page/illustrat
 import landingPageillustrationBiasEurocentismCopy4 from '../images/landing-page/illustration-bias-eurocentism copy.jpg';
 import landingPageillustrationBurialDogHuman5 from '../images/landing-page/illustration-burial-dog-human.jpg';
 import landingPageillustrationFueledByCoffee6 from '../images/landing-page/illustration-fueled-by-coffee.jpg';
-import landingPageillustrationGenderBias7 from '../images/landing-page/illustration-gender-bias.jpg';
-import landingPageillustrationKoreReconstruction8 from '../images/landing-page/illustration-kore-reconstruction.jpg';
-import landingPageillustrationOchre9 from '../images/landing-page/illustration-ochre.jpg';
-import landingPageillustrationTorsoStatue10 from '../images/landing-page/illustration-torso-statue.jpg';
+import landingPageillustrationFunnelBeakerCluster7 from '../images/landing-page/illustration-funnel-beaker-cluster.jpg';
+import landingPageillustrationGenderBias8 from '../images/landing-page/illustration-gender-bias.jpg';
+import landingPageillustrationKoreReconstruction9 from '../images/landing-page/illustration-kore-reconstruction.jpg';
+import landingPageillustrationOchre10 from '../images/landing-page/illustration-ochre.jpg';
+import landingPageillustrationTorsoStatue11 from '../images/landing-page/illustration-torso-statue.jpg';
 import allWorkadventuressCoverDesign0 from '../images/all-work/adventuress-cover-design.jpg';
 import allWorkarchink2021AllTheBestRubbish1 from '../images/all-work/archInk-2021-AllTheBestRubbish.webp';
 import allWorkarchink2021ArchaeologicalIllustration2 from '../images/all-work/archInk-2021-ArchaeologicalIllustration.jpg';
@@ -87,7 +88,114 @@ import allWorkillustrationTorsoStatue72 from '../images/all-work/illustration-to
 import allWorkillustrationVenusOfWillendorfNeon73 from '../images/all-work/illustration-venus-of-willendorf-neon.jpg';
 import allWorkillustrationVenusWillendorf74 from '../images/all-work/illustration-venus-willendorf.jpg';
 import allWorkillustrationWallInterpretation75 from '../images/all-work/illustration-wall-interpretation.jpg';
-import allWorkpastraceBrandIdentity76 from '../images/all-work/pastrace-brand-identity.webp';
+import allWorkimg2022120417082076 from '../images/all-work/Img_2022_12_04_17_08_20.jpeg';
+import allWorkimg2022120417084377 from '../images/all-work/Img_2022_12_04_17_08_43.jpeg';
+import allWorkimg2022122418004478 from '../images/all-work/Img_2022_12_24_18_00_44.jpeg';
+import allWorkimg2022122418010579 from '../images/all-work/Img_2022_12_24_18_01_05.jpeg';
+import allWorkimg2022122418103980 from '../images/all-work/Img_2022_12_24_18_10_39.jpeg';
+import allWorkimg2022122418135981 from '../images/all-work/Img_2022_12_24_18_13_59.jpeg';
+import allWorkimg535582 from '../images/all-work/IMG_5355.png';
+import allWorkimg536483 from '../images/all-work/IMG_5364.png';
+import allWorkimg537484 from '../images/all-work/IMG_5374.png';
+import allWorkimg537985 from '../images/all-work/IMG_5379.png';
+import allWorkimg539386 from '../images/all-work/IMG_5393.png';
+import allWorkimg540887 from '../images/all-work/IMG_5408.png';
+import allWorkimg554288 from '../images/all-work/IMG_5542.png';
+import allWorkimg557389 from '../images/all-work/IMG_5573.png';
+import allWorkimg558290 from '../images/all-work/IMG_5582.png';
+import allWorkimg558691 from '../images/all-work/IMG_5586.png';
+import allWorkimg560892 from '../images/all-work/IMG_5608.png';
+import allWorkimg567493 from '../images/all-work/IMG_5674.jpg';
+import allWorkimg570194 from '../images/all-work/IMG_5701.jpg';
+import allWorkimg577395 from '../images/all-work/IMG_5773.png';
+import allWorkimg578296 from '../images/all-work/IMG_5782.jpg';
+import allWorkimg581697 from '../images/all-work/IMG_5816.jpg';
+import allWorkimg589598 from '../images/all-work/IMG_5895.jpg';
+import allWorkimg593699 from '../images/all-work/IMG_5936.jpg';
+import allWorkimg5937100 from '../images/all-work/IMG_5937.jpg';
+import allWorkimg5974101 from '../images/all-work/IMG_5974.jpg';
+import allWorkimg5979102 from '../images/all-work/IMG_5979.jpg';
+import allWorkimg6003103 from '../images/all-work/IMG_6003.jpg';
+import allWorkimg6011104 from '../images/all-work/IMG_6011.jpg';
+import allWorkimg6012105 from '../images/all-work/IMG_6012.jpg';
+import allWorkimg6015106 from '../images/all-work/IMG_6015.jpg';
+import allWorkimg6016107 from '../images/all-work/IMG_6016.jpg';
+import allWorkimg6033108 from '../images/all-work/IMG_6033.jpg';
+import allWorkimg6042109 from '../images/all-work/IMG_6042.jpg';
+import allWorkimg6079110 from '../images/all-work/IMG_6079.jpg';
+import allWorkimg6103111 from '../images/all-work/IMG_6103.jpg';
+import allWorkimg6501112 from '../images/all-work/IMG_6501.jpg';
+import allWorkimg6523113 from '../images/all-work/IMG_6523.jpg';
+import allWorkimg6528114 from '../images/all-work/IMG_6528.jpg';
+import allWorkimg6538115 from '../images/all-work/IMG_6538.jpg';
+import allWorkimg6553116 from '../images/all-work/IMG_6553.jpg';
+import allWorkimg6564117 from '../images/all-work/IMG_6564.jpg';
+import allWorkimg6575118 from '../images/all-work/IMG_6575.jpg';
+import allWorkimg6629119 from '../images/all-work/IMG_6629.jpg';
+import allWorkimg6813120 from '../images/all-work/IMG_6813.png';
+import allWorkimg6829121 from '../images/all-work/IMG_6829.png';
+import allWorkimg6979122 from '../images/all-work/IMG_6979.png';
+import allWorkimg7023123 from '../images/all-work/IMG_7023.png';
+import allWorkimg7043124 from '../images/all-work/IMG_7043.png';
+import allWorkimg7185125 from '../images/all-work/IMG_7185.png';
+import allWorkimg7201126 from '../images/all-work/IMG_7201.png';
+import allWorkimg72302127 from '../images/all-work/IMG_7230~2.png';
+import allWorkimg7239128 from '../images/all-work/IMG_7239.png';
+import allWorkimg7245129 from '../images/all-work/IMG_7245.png';
+import allWorkimg7266130 from '../images/all-work/IMG_7266.png';
+import allWorkimg7267131 from '../images/all-work/IMG_7267.png';
+import allWorkimg7291132 from '../images/all-work/IMG_7291.png';
+import allWorkimg7340133 from '../images/all-work/IMG_7340.png';
+import allWorkimg7388134 from '../images/all-work/IMG_7388.png';
+import allWorkimg7421135 from '../images/all-work/IMG_7421.png';
+import allWorkimg7531136 from '../images/all-work/IMG_7531.jpg';
+import allWorkimg7548137 from '../images/all-work/IMG_7548.png';
+import allWorkimg7577138 from '../images/all-work/IMG_7577.png';
+import allWorkimg7624139 from '../images/all-work/IMG_7624.png';
+import allWorkimg7684140 from '../images/all-work/IMG_7684.png';
+import allWorkimg7765141 from '../images/all-work/IMG_7765.png';
+import allWorkimg7868142 from '../images/all-work/IMG_7868.png';
+import allWorkimg7899143 from '../images/all-work/IMG_7899.png';
+import allWorkimg7988144 from '../images/all-work/IMG_7988.png';
+import allWorkimg8010145 from '../images/all-work/IMG_8010.png';
+import allWorkimg8053146 from '../images/all-work/IMG_8053.png';
+import allWorkimg8054147 from '../images/all-work/IMG_8054.png';
+import allWorkimg8074148 from '../images/all-work/IMG_8074.png';
+import allWorkimg8199149 from '../images/all-work/IMG_8199.jpg';
+import allWorkimg8260150 from '../images/all-work/IMG_8260.png';
+import allWorkimg8395151 from '../images/all-work/IMG_8395.png';
+import allWorkimg8411152 from '../images/all-work/IMG_8411.png';
+import allWorkimg8421153 from '../images/all-work/IMG_8421.png';
+import allWorkimg8422154 from '../images/all-work/IMG_8422.png';
+import allWorkimg8436155 from '../images/all-work/IMG_8436.png';
+import allWorkimg8655156 from '../images/all-work/IMG_8655.jpg';
+import allWorkimg8675157 from '../images/all-work/IMG_8675.jpg';
+import allWorkimg8681158 from '../images/all-work/IMG_8681.jpg';
+import allWorkimg8683159 from '../images/all-work/IMG_8683.jpg';
+import allWorkimg8685160 from '../images/all-work/IMG_8685.jpg';
+import allWorkimg8688161 from '../images/all-work/IMG_8688.jpg';
+import allWorkimg8690162 from '../images/all-work/IMG_8690.jpg';
+import allWorkimg8693163 from '../images/all-work/IMG_8693.jpg';
+import allWorkimg8695164 from '../images/all-work/IMG_8695.jpg';
+import allWorkimg87742165 from '../images/all-work/IMG_8774~2.jpg';
+import allWorkimg8891166 from '../images/all-work/IMG_8891.jpg';
+import allWorkimg8897167 from '../images/all-work/IMG_8897.png';
+import allWorkimg8974168 from '../images/all-work/IMG_8974.jpg';
+import allWorkimg8975169 from '../images/all-work/IMG_8975.png';
+import allWorkimg8997170 from '../images/all-work/IMG_8997.png';
+import allWorkimg9017171 from '../images/all-work/IMG_9017.png';
+import allWorkimg9051172 from '../images/all-work/IMG_9051.png';
+import allWorkimg20220219112644003173 from '../images/all-work/IMG_20220219_112644_003.jpg';
+import allWorkimg20220727174100991174 from '../images/all-work/IMG_20220727_174100_991.jpg';
+import allWorkimg20230317194704586175 from '../images/all-work/IMG_20230317_194704_586.jpg';
+import allWorkimg20230512234322554176 from '../images/all-work/IMG_20230512_234322_554.jpg';
+import allWorkimg20230701165450492177 from '../images/all-work/IMG_20230701_165450_492.jpg';
+import allWorkimg20231126221732572178 from '../images/all-work/IMG_20231126_221732_572.jpg';
+import allWorkimg20240208223808458179 from '../images/all-work/IMG_20240208_223808_458.jpg';
+import allWorkimg20240214171242026180 from '../images/all-work/IMG_20240214_171242_026.jpg';
+import allWorkimg20240219233207074181 from '../images/all-work/IMG_20240219_233207_074.jpg';
+import allWorkpastraceBrandIdentity182 from '../images/all-work/pastrace-brand-identity.webp';
+import allWorkpxl20230617121211708183 from '../images/all-work/PXL_20230617_121211708.jpg';
 import archiveadventuressArchaeology0 from '../images/archive/adventuress-archaeology.png';
 import archiveadventuressCoverConcept1 from '../images/archive/adventuress-cover-concept.jpg';
 import archiveadventuressCover2 from '../images/archive/adventuress-cover.jpg';
@@ -225,10 +333,11 @@ export const landingPageAssets: ArchiveAsset[] = [
   { filename: "illustration-bias-eurocentism copy.jpg", src: landingPageillustrationBiasEurocentismCopy4, width: 2400, height: 1004, alt: "Illustration Bias Eurocentism Copy" },
   { filename: "illustration-burial-dog-human.jpg", src: landingPageillustrationBurialDogHuman5, width: 2400, height: 2400, alt: "Illustration Burial Dog Human" },
   { filename: "illustration-fueled-by-coffee.jpg", src: landingPageillustrationFueledByCoffee6, width: 2400, height: 1799, alt: "Illustration Fueled By Coffee" },
-  { filename: "illustration-gender-bias.jpg", src: landingPageillustrationGenderBias7, width: 2000, height: 2000, alt: "Illustration Gender Bias" },
-  { filename: "illustration-kore-reconstruction.jpg", src: landingPageillustrationKoreReconstruction8, width: 2400, height: 2400, alt: "Illustration Kore Reconstruction" },
-  { filename: "illustration-ochre.jpg", src: landingPageillustrationOchre9, width: 1800, height: 2400, alt: "Illustration Ochre" },
-  { filename: "illustration-torso-statue.jpg", src: landingPageillustrationTorsoStatue10, width: 2000, height: 2000, alt: "Illustration Torso Statue" },
+  { filename: "illustration-funnel-beaker-cluster.jpg", src: landingPageillustrationFunnelBeakerCluster7, width: 2400, height: 2400, alt: "Illustration Funnel Beaker Cluster" },
+  { filename: "illustration-gender-bias.jpg", src: landingPageillustrationGenderBias8, width: 2000, height: 2000, alt: "Illustration Gender Bias" },
+  { filename: "illustration-kore-reconstruction.jpg", src: landingPageillustrationKoreReconstruction9, width: 2400, height: 2400, alt: "Illustration Kore Reconstruction" },
+  { filename: "illustration-ochre.jpg", src: landingPageillustrationOchre10, width: 1800, height: 2400, alt: "Illustration Ochre" },
+  { filename: "illustration-torso-statue.jpg", src: landingPageillustrationTorsoStatue11, width: 2000, height: 2000, alt: "Illustration Torso Statue" },
 ];
 export const allWorkAssets: ArchiveAsset[] = [
   { filename: "adventuress-cover-design.jpg", src: allWorkadventuressCoverDesign0, width: 1200, height: 1698, alt: "Adventuress Cover Design" },
@@ -307,7 +416,114 @@ export const allWorkAssets: ArchiveAsset[] = [
   { filename: "illustration-venus-of-willendorf-neon.jpg", src: allWorkillustrationVenusOfWillendorfNeon73, width: 2730, height: 2730, alt: "Illustration Venus Of Willendorf Neon" },
   { filename: "illustration-venus-willendorf.jpg", src: allWorkillustrationVenusWillendorf74, width: 2400, height: 2400, alt: "Illustration Venus Willendorf" },
   { filename: "illustration-wall-interpretation.jpg", src: allWorkillustrationWallInterpretation75, width: 2400, height: 2400, alt: "Illustration Wall Interpretation" },
-  { filename: "pastrace-brand-identity.webp", src: allWorkpastraceBrandIdentity76, width: 1672, height: 941, alt: "Pastrace Brand Identity" },
+  { filename: "Img_2022_12_04_17_08_20.jpeg", src: allWorkimg2022120417082076, width: 1152, height: 1149, alt: "Img 2022 12 04 17 08 20" },
+  { filename: "Img_2022_12_04_17_08_43.jpeg", src: allWorkimg2022120417084377, width: 1152, height: 1153, alt: "Img 2022 12 04 17 08 43" },
+  { filename: "Img_2022_12_24_18_00_44.jpeg", src: allWorkimg2022122418004478, width: 1152, height: 1152, alt: "Img 2022 12 24 18 00 44" },
+  { filename: "Img_2022_12_24_18_01_05.jpeg", src: allWorkimg2022122418010579, width: 1152, height: 1150, alt: "Img 2022 12 24 18 01 05" },
+  { filename: "Img_2022_12_24_18_10_39.jpeg", src: allWorkimg2022122418103980, width: 1152, height: 1153, alt: "Img 2022 12 24 18 10 39" },
+  { filename: "Img_2022_12_24_18_13_59.jpeg", src: allWorkimg2022122418135981, width: 1152, height: 1153, alt: "Img 2022 12 24 18 13 59" },
+  { filename: "IMG_5355.png", src: allWorkimg535582, width: 3000, height: 3000, alt: "IMG 5355" },
+  { filename: "IMG_5364.png", src: allWorkimg536483, width: 3000, height: 3000, alt: "IMG 5364" },
+  { filename: "IMG_5374.png", src: allWorkimg537484, width: 3000, height: 3000, alt: "IMG 5374" },
+  { filename: "IMG_5379.png", src: allWorkimg537985, width: 3000, height: 3000, alt: "IMG 5379" },
+  { filename: "IMG_5393.png", src: allWorkimg539386, width: 3000, height: 3000, alt: "IMG 5393" },
+  { filename: "IMG_5408.png", src: allWorkimg540887, width: 3000, height: 3000, alt: "IMG 5408" },
+  { filename: "IMG_5542.png", src: allWorkimg554288, width: 3000, height: 3000, alt: "IMG 5542" },
+  { filename: "IMG_5573.png", src: allWorkimg557389, width: 3000, height: 3000, alt: "IMG 5573" },
+  { filename: "IMG_5582.png", src: allWorkimg558290, width: 3000, height: 3000, alt: "IMG 5582" },
+  { filename: "IMG_5586.png", src: allWorkimg558691, width: 4098, height: 3072, alt: "IMG 5586" },
+  { filename: "IMG_5608.png", src: allWorkimg560892, width: 3000, height: 3000, alt: "IMG 5608" },
+  { filename: "IMG_5674.jpg", src: allWorkimg567493, width: 4098, height: 3072, alt: "IMG 5674" },
+  { filename: "IMG_5701.jpg", src: allWorkimg570194, width: 3072, height: 4098, alt: "IMG 5701" },
+  { filename: "IMG_5773.png", src: allWorkimg577395, width: 3000, height: 3000, alt: "IMG 5773" },
+  { filename: "IMG_5782.jpg", src: allWorkimg578296, width: 3072, height: 4098, alt: "IMG 5782" },
+  { filename: "IMG_5816.jpg", src: allWorkimg581697, width: 3000, height: 3000, alt: "IMG 5816" },
+  { filename: "IMG_5895.jpg", src: allWorkimg589598, width: 3000, height: 3000, alt: "IMG 5895" },
+  { filename: "IMG_5936.jpg", src: allWorkimg593699, width: 3000, height: 3000, alt: "IMG 5936" },
+  { filename: "IMG_5937.jpg", src: allWorkimg5937100, width: 3000, height: 3000, alt: "IMG 5937" },
+  { filename: "IMG_5974.jpg", src: allWorkimg5974101, width: 1080, height: 1920, alt: "IMG 5974" },
+  { filename: "IMG_5979.jpg", src: allWorkimg5979102, width: 1080, height: 1920, alt: "IMG 5979" },
+  { filename: "IMG_6003.jpg", src: allWorkimg6003103, width: 3000, height: 3000, alt: "IMG 6003" },
+  { filename: "IMG_6011.jpg", src: allWorkimg6011104, width: 893, height: 995, alt: "IMG 6011" },
+  { filename: "IMG_6012.jpg", src: allWorkimg6012105, width: 839, height: 1056, alt: "IMG 6012" },
+  { filename: "IMG_6015.jpg", src: allWorkimg6015106, width: 701, height: 1024, alt: "IMG 6015" },
+  { filename: "IMG_6016.jpg", src: allWorkimg6016107, width: 866, height: 1046, alt: "IMG 6016" },
+  { filename: "IMG_6033.jpg", src: allWorkimg6033108, width: 4000, height: 4000, alt: "IMG 6033" },
+  { filename: "IMG_6042.jpg", src: allWorkimg6042109, width: 3000, height: 3000, alt: "IMG 6042" },
+  { filename: "IMG_6079.jpg", src: allWorkimg6079110, width: 4000, height: 4000, alt: "IMG 6079" },
+  { filename: "IMG_6103.jpg", src: allWorkimg6103111, width: 3000, height: 3000, alt: "IMG 6103" },
+  { filename: "IMG_6501.jpg", src: allWorkimg6501112, width: 2000, height: 2027, alt: "IMG 6501" },
+  { filename: "IMG_6523.jpg", src: allWorkimg6523113, width: 3000, height: 3000, alt: "IMG 6523" },
+  { filename: "IMG_6528.jpg", src: allWorkimg6528114, width: 3000, height: 3000, alt: "IMG 6528" },
+  { filename: "IMG_6538.jpg", src: allWorkimg6538115, width: 3000, height: 3000, alt: "IMG 6538" },
+  { filename: "IMG_6553.jpg", src: allWorkimg6553116, width: 3000, height: 3000, alt: "IMG 6553" },
+  { filename: "IMG_6564.jpg", src: allWorkimg6564117, width: 1435, height: 2550, alt: "IMG 6564" },
+  { filename: "IMG_6575.jpg", src: allWorkimg6575118, width: 1435, height: 2550, alt: "IMG 6575" },
+  { filename: "IMG_6629.jpg", src: allWorkimg6629119, width: 3000, height: 3000, alt: "IMG 6629" },
+  { filename: "IMG_6813.png", src: allWorkimg6813120, width: 2700, height: 4800, alt: "IMG 6813" },
+  { filename: "IMG_6829.png", src: allWorkimg6829121, width: 2700, height: 4800, alt: "IMG 6829" },
+  { filename: "IMG_6979.png", src: allWorkimg6979122, width: 2700, height: 4800, alt: "IMG 6979" },
+  { filename: "IMG_7023.png", src: allWorkimg7023123, width: 3000, height: 3000, alt: "IMG 7023" },
+  { filename: "IMG_7043.png", src: allWorkimg7043124, width: 3000, height: 3000, alt: "IMG 7043" },
+  { filename: "IMG_7185.png", src: allWorkimg7185125, width: 2700, height: 4800, alt: "IMG 7185" },
+  { filename: "IMG_7201.png", src: allWorkimg7201126, width: 2700, height: 4800, alt: "IMG 7201" },
+  { filename: "IMG_7230~2.png", src: allWorkimg72302127, width: 2856, height: 2731, alt: "IMG 7230~2" },
+  { filename: "IMG_7239.png", src: allWorkimg7239128, width: 4000, height: 4000, alt: "IMG 7239" },
+  { filename: "IMG_7245.png", src: allWorkimg7245129, width: 3000, height: 3000, alt: "IMG 7245" },
+  { filename: "IMG_7266.png", src: allWorkimg7266130, width: 2000, height: 3556, alt: "IMG 7266" },
+  { filename: "IMG_7267.png", src: allWorkimg7267131, width: 4098, height: 3072, alt: "IMG 7267" },
+  { filename: "IMG_7291.png", src: allWorkimg7291132, width: 4892, height: 3271, alt: "IMG 7291" },
+  { filename: "IMG_7340.png", src: allWorkimg7340133, width: 4000, height: 4000, alt: "IMG 7340" },
+  { filename: "IMG_7388.png", src: allWorkimg7388134, width: 6047, height: 2646, alt: "IMG 7388" },
+  { filename: "IMG_7421.png", src: allWorkimg7421135, width: 4000, height: 4000, alt: "IMG 7421" },
+  { filename: "IMG_7531.jpg", src: allWorkimg7531136, width: 3000, height: 3000, alt: "IMG 7531" },
+  { filename: "IMG_7548.png", src: allWorkimg7548137, width: 4098, height: 3072, alt: "IMG 7548" },
+  { filename: "IMG_7577.png", src: allWorkimg7577138, width: 2700, height: 4800, alt: "IMG 7577" },
+  { filename: "IMG_7624.png", src: allWorkimg7624139, width: 3508, height: 2480, alt: "IMG 7624" },
+  { filename: "IMG_7684.png", src: allWorkimg7684140, width: 4000, height: 4000, alt: "IMG 7684" },
+  { filename: "IMG_7765.png", src: allWorkimg7765141, width: 4000, height: 4000, alt: "IMG 7765" },
+  { filename: "IMG_7868.png", src: allWorkimg7868142, width: 4098, height: 3072, alt: "IMG 7868" },
+  { filename: "IMG_7899.png", src: allWorkimg7899143, width: 4098, height: 3072, alt: "IMG 7899" },
+  { filename: "IMG_7988.png", src: allWorkimg7988144, width: 4000, height: 4000, alt: "IMG 7988" },
+  { filename: "IMG_8010.png", src: allWorkimg8010145, width: 4000, height: 4000, alt: "IMG 8010" },
+  { filename: "IMG_8053.png", src: allWorkimg8053146, width: 1080, height: 1920, alt: "IMG 8053" },
+  { filename: "IMG_8054.png", src: allWorkimg8054147, width: 1080, height: 1920, alt: "IMG 8054" },
+  { filename: "IMG_8074.png", src: allWorkimg8074148, width: 6000, height: 2000, alt: "IMG 8074" },
+  { filename: "IMG_8199.jpg", src: allWorkimg8199149, width: 3000, height: 3000, alt: "IMG 8199" },
+  { filename: "IMG_8260.png", src: allWorkimg8260150, width: 3000, height: 3000, alt: "IMG 8260" },
+  { filename: "IMG_8395.png", src: allWorkimg8395151, width: 2700, height: 4800, alt: "IMG 8395" },
+  { filename: "IMG_8411.png", src: allWorkimg8411152, width: 2700, height: 4800, alt: "IMG 8411" },
+  { filename: "IMG_8421.png", src: allWorkimg8421153, width: 2700, height: 4800, alt: "IMG 8421" },
+  { filename: "IMG_8422.png", src: allWorkimg8422154, width: 2700, height: 4800, alt: "IMG 8422" },
+  { filename: "IMG_8436.png", src: allWorkimg8436155, width: 2700, height: 4800, alt: "IMG 8436" },
+  { filename: "IMG_8655.jpg", src: allWorkimg8655156, width: 4000, height: 4000, alt: "IMG 8655" },
+  { filename: "IMG_8675.jpg", src: allWorkimg8675157, width: 3000, height: 3000, alt: "IMG 8675" },
+  { filename: "IMG_8681.jpg", src: allWorkimg8681158, width: 4000, height: 4000, alt: "IMG 8681" },
+  { filename: "IMG_8683.jpg", src: allWorkimg8683159, width: 4000, height: 4000, alt: "IMG 8683" },
+  { filename: "IMG_8685.jpg", src: allWorkimg8685160, width: 4000, height: 4000, alt: "IMG 8685" },
+  { filename: "IMG_8688.jpg", src: allWorkimg8688161, width: 3000, height: 3000, alt: "IMG 8688" },
+  { filename: "IMG_8690.jpg", src: allWorkimg8690162, width: 3000, height: 3000, alt: "IMG 8690" },
+  { filename: "IMG_8693.jpg", src: allWorkimg8693163, width: 3000, height: 3000, alt: "IMG 8693" },
+  { filename: "IMG_8695.jpg", src: allWorkimg8695164, width: 3000, height: 3000, alt: "IMG 8695" },
+  { filename: "IMG_8774~2.jpg", src: allWorkimg87742165, width: 2065, height: 2923, alt: "IMG 8774~2" },
+  { filename: "IMG_8891.jpg", src: allWorkimg8891166, width: 4000, height: 4000, alt: "IMG 8891" },
+  { filename: "IMG_8897.png", src: allWorkimg8897167, width: 4000, height: 4000, alt: "IMG 8897" },
+  { filename: "IMG_8974.jpg", src: allWorkimg8974168, width: 4000, height: 4000, alt: "IMG 8974" },
+  { filename: "IMG_8975.png", src: allWorkimg8975169, width: 4000, height: 4000, alt: "IMG 8975" },
+  { filename: "IMG_8997.png", src: allWorkimg8997170, width: 4000, height: 4000, alt: "IMG 8997" },
+  { filename: "IMG_9017.png", src: allWorkimg9017171, width: 4000, height: 4000, alt: "IMG 9017" },
+  { filename: "IMG_9051.png", src: allWorkimg9051172, width: 2268, height: 1276, alt: "IMG 9051" },
+  { filename: "IMG_20220219_112644_003.jpg", src: allWorkimg20220219112644003173, width: 3000, height: 3000, alt: "IMG 20220219 112644 003" },
+  { filename: "IMG_20220727_174100_991.jpg", src: allWorkimg20220727174100991174, width: 1440, height: 1440, alt: "IMG 20220727 174100 991" },
+  { filename: "IMG_20230317_194704_586.jpg", src: allWorkimg20230317194704586175, width: 1918, height: 1918, alt: "IMG 20230317 194704 586" },
+  { filename: "IMG_20230512_234322_554.jpg", src: allWorkimg20230512234322554176, width: 3508, height: 3508, alt: "IMG 20230512 234322 554" },
+  { filename: "IMG_20230701_165450_492.jpg", src: allWorkimg20230701165450492177, width: 1915, height: 1915, alt: "IMG 20230701 165450 492" },
+  { filename: "IMG_20231126_221732_572.jpg", src: allWorkimg20231126221732572178, width: 1440, height: 1440, alt: "IMG 20231126 221732 572" },
+  { filename: "IMG_20240208_223808_458.jpg", src: allWorkimg20240208223808458179, width: 2000, height: 2000, alt: "IMG 20240208 223808 458" },
+  { filename: "IMG_20240214_171242_026.jpg", src: allWorkimg20240214171242026180, width: 1440, height: 1440, alt: "IMG 20240214 171242 026" },
+  { filename: "IMG_20240219_233207_074.jpg", src: allWorkimg20240219233207074181, width: 2000, height: 2000, alt: "IMG 20240219 233207 074" },
+  { filename: "pastrace-brand-identity.webp", src: allWorkpastraceBrandIdentity182, width: 1672, height: 941, alt: "Pastrace Brand Identity" },
+  { filename: "PXL_20230617_121211708.jpg", src: allWorkpxl20230617121211708183, width: 2268, height: 4032, alt: "PXL 20230617 121211708" },
 ];
 export const archiveAssets: ArchiveAsset[] = [
   { filename: "adventuress-archaeology.png", src: archiveadventuressArchaeology0, width: 500, height: 500, alt: "Adventuress Archaeology" },
