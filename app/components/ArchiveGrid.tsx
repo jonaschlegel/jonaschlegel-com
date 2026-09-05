@@ -28,10 +28,7 @@ export default function ArchiveGrid({
         const label = showLabels ? (
           <span className="archive-tile__label">
             <span>{item.title}</span>
-            <small>
-              {String(index + 1).padStart(2, '0')} ·{' '}
-              {item.primaryPractice ?? 'Visual work'}
-            </small>
+            {item.primaryPractice && <small>{item.primaryPractice}</small>}
           </span>
         ) : null;
         const tileProps = {
