@@ -408,6 +408,7 @@ textarea:focus-visible {
 
 .work-detail__figure {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin: 0;
   background: #e5e1d7;
@@ -418,6 +419,40 @@ textarea:focus-visible {
   height: auto;
   max-height: 52rem;
   object-fit: contain;
+}
+
+.work-detail__figure figcaption {
+  padding: 0.65rem 0.75rem;
+  color: #6c6a61;
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
+
+.work-detail__figure figcaption > *,
+.work-gallery__figure figcaption > * {
+  display: block;
+}
+
+.work-detail__figure figcaption a,
+.work-gallery__figure figcaption a {
+  display: inline;
+  color: inherit;
+  text-underline-offset: 0.15rem;
+}
+
+.work-detail__figure figcaption details,
+.work-gallery__figure figcaption details {
+  margin-top: 0.4rem;
+}
+
+.work-detail__figure figcaption summary,
+.work-gallery__figure figcaption summary {
+  cursor: pointer;
+}
+
+.work-detail__figure figcaption p,
+.work-gallery__figure figcaption p {
+  margin: 0.4rem 0 0;
 }
 
 .archive-eyebrow {
@@ -438,6 +473,13 @@ textarea:focus-visible {
   font-size: clamp(1.15rem, 2vw, 1.35rem);
   line-height: 1.45;
   letter-spacing: -0.01em;
+}
+
+.work-detail__subtitle {
+  margin: 0.65rem 0 0;
+  color: #6c6a61;
+  font-size: 1rem;
+  line-height: 1.45;
 }
 
 .work-facts {
@@ -478,13 +520,64 @@ textarea:focus-visible {
   border-top: 0;
 }
 
-.work-more > a,
+.work-links {
+  display: grid;
+  gap: 0.45rem;
+  margin-top: 1rem;
+}
+
+.work-links h2 {
+  margin: 0;
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.work-links a,
 .about-writing a {
   display: inline-block;
-  margin-top: 1rem;
   color: #181814;
   text-decoration-color: #9b351e;
   text-underline-offset: 0.2rem;
+}
+
+.work-gallery {
+  margin-top: clamp(3rem, 7vw, 6rem);
+}
+
+.work-gallery > h2 {
+  margin-bottom: 1.25rem;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+
+.work-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.work-gallery__figure {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background: #e5e1d7;
+}
+
+.work-gallery__figure img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.work-gallery__figure figcaption {
+  padding: 0.65rem 0.75rem;
+  color: #6c6a61;
+  font-size: 0.75rem;
+  line-height: 1.45;
 }
 
 .about-archive {
@@ -637,6 +730,10 @@ textarea:focus-visible {
 
   .work-detail__copy {
     max-width: 40rem;
+  }
+
+  .work-gallery__grid {
+    grid-template-columns: 1fr;
   }
 
   .about-archive__introduction figure {

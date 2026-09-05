@@ -1,4 +1,3 @@
-import { UrlObject } from 'node:url';
 import type { StaticImageData } from 'next/dist/shared/lib/image-external';
 import type { JSX } from 'react';
 
@@ -25,37 +24,6 @@ type ProjectType = {
   publications?: { title: string; venue: string; url?: string }[];
   externalUrl?: string;
   galleryImages?: { src: StaticImageData; caption?: string }[];
-};
-
-type ServiceType = {
-  id: string;
-  slug: string;
-  name: string;
-  description: string;
-  alt: string;
-  price?: number;
-  image: StaticImageData | string;
-  tools: string;
-  options: string[];
-  pdfUrl?: string;
-};
-
-type ClientType = {
-  name: string;
-  role: string;
-  image: StaticImageData | string;
-  comment: string;
-};
-
-type StatType = {
-  name: string;
-  number: string;
-};
-
-type SocialType = {
-  Icon: React.ComponentType;
-  href: string | UrlObject;
-  name: string;
 };
 
 declare module '*.mdx' {

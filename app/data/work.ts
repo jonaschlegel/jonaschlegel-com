@@ -17,305 +17,622 @@ import suriname from '../images/projects/suriname-tijdmachine-1.webp';
 
 export type WorkShape = 'feature' | 'wide' | 'square' | 'tall';
 
+export type WorkCopyStatus = 'draft' | 'in-review' | 'ready';
+
+export type WorkImageRole =
+  'primary' | 'detail' | 'process' | 'context' | 'comparison';
+
+export interface WorkImageRights {
+  creator?: string;
+  copyrightHolder?: string;
+  copyrightYear?: string;
+  license?: string;
+  licenseUrl?: string;
+  sourceUrl?: string;
+}
+
+export interface WorkImage {
+  src: StaticImageData;
+  alt: string;
+  role: WorkImageRole;
+  title?: string;
+  caption?: string;
+  longDescription?: string;
+  creditLine?: string;
+  rights?: WorkImageRights;
+  presentation?: {
+    objectPosition?: string;
+    backgroundColor?: string;
+  };
+}
+
+export interface WorkClassification {
+  primaryPractice: string;
+  form: string;
+  subjects?: string[];
+  archaeologicalPeriods?: string[];
+  cultures?: string[];
+  places?: string[];
+  objectTypes?: string[];
+  themes?: string[];
+  keywords?: string[];
+}
+
+export interface WorkCreation {
+  dateLabel?: string;
+  startYear?: number;
+  endYear?: number;
+  completedOn?: string;
+  materials?: string[];
+  techniques?: string[];
+  tools?: string[];
+  dimensions?: {
+    width?: number;
+    height?: number;
+    depth?: number;
+    unit: 'mm' | 'cm' | 'm' | 'px';
+  };
+  duration?: string;
+}
+
+export interface WorkEditorial {
+  status: WorkCopyStatus;
+  summary?: string;
+  description?: string;
+  researchQuestion?: string;
+  approach?: string;
+  process?: string;
+  interpretation?: string;
+  notes?: string;
+}
+
+export interface WorkCredits {
+  roles?: string[];
+  client?: string;
+  institution?: string;
+  project?: string;
+  collaborators?: string[];
+  acknowledgements?: string[];
+  context?: string;
+}
+
+export interface WorkSource {
+  label: string;
+  citation?: string;
+  url?: string;
+  accessedOn?: string;
+}
+
+export interface WorkLink {
+  label: string;
+  url: string;
+  type: 'case-study' | 'publication' | 'project' | 'process' | 'external';
+}
+
 export interface VisualWork {
   slug: string;
   title: string;
-  image: StaticImageData;
-  alt: string;
-  practice: string;
-  form: string;
-  summary: string;
-  featured: boolean;
-  shape: WorkShape;
-  year?: string;
-  tools?: string[];
-  subject?: string;
-  approach?: string;
-  role?: string;
-  context?: string;
-  externalUrl?: string;
-  externalLabel?: string;
+  subtitle?: string;
+  display: {
+    featured: boolean;
+    shape: WorkShape;
+    order?: number;
+  };
+  images: {
+    primary: WorkImage;
+    gallery?: WorkImage[];
+  };
+  classification: WorkClassification;
+  creation?: WorkCreation;
+  editorial: WorkEditorial;
+  credits?: WorkCredits;
+  sources?: WorkSource[];
+  links?: WorkLink[];
+  seo?: {
+    title?: string;
+    description?: string;
+    keywords?: string[];
+    image?: WorkImage;
+  };
 }
 
 export const visualWorks: VisualWork[] = [
   {
     slug: 'adventuress',
     title: 'Adventuress',
-    image: adventuress,
-    alt: 'Cover illustration and preparatory drawings for Adventuress Archaeology',
-    practice: 'Illustration',
-    form: 'Commissioned cover illustration',
-    summary:
-      'A cover about women in archaeology, moving between field notes, excavation and public storytelling.',
-    featured: true,
-    shape: 'feature',
-    year: '2024',
-    tools: ['Procreate'],
-    subject: 'Women in archaeology',
-    approach: 'Sketch studies developed into a layered editorial composition.',
-    role: 'Concept and illustration',
-    context: 'Adventuress Archaeology',
-    externalUrl: '/projects/adventuress-cover',
-    externalLabel: 'Read the existing case study',
+    display: { featured: true, shape: 'feature', order: 1 },
+    images: {
+      primary: {
+        src: adventuress,
+        alt: 'Cover illustration and preparatory drawings for Adventuress Archaeology',
+        role: 'primary',
+      },
+    },
+    classification: {
+      primaryPractice: 'Illustration',
+      form: 'Commissioned cover illustration',
+      subjects: ['Women in archaeology'],
+    },
+    creation: {
+      dateLabel: '2024',
+      startYear: 2024,
+      endYear: 2024,
+      tools: ['Procreate'],
+    },
+    editorial: {
+      status: 'draft',
+      summary:
+        'A cover about women in archaeology, moving between field notes, excavation and public storytelling.',
+      approach:
+        'Sketch studies developed into a layered editorial composition.',
+    },
+    credits: {
+      roles: ['Concept and illustration'],
+      client: 'Adventuress Archaeology',
+    },
+    links: [
+      {
+        label: 'Read the existing case study',
+        url: '/projects/adventuress-cover',
+        type: 'case-study',
+      },
+    ],
   },
   {
     slug: 'ochre',
     title: 'Ochre',
-    image: ochre,
-    alt: 'Illustrated study of ochre pigments, hand stencils and painting tools',
-    practice: 'Visual archaeology',
-    form: 'Standalone visual study',
-    summary: 'Pigment, hands and painting tools gathered into one visual note.',
-    featured: true,
-    shape: 'square',
-    tools: ['Digital illustration'],
-    subject: 'Ochre pigments and hand stencils',
-    approach: 'Object studies combined with a reconstructed scene.',
-    role: 'Research and illustration',
-    context: 'Independent work',
+    display: { featured: true, shape: 'square', order: 2 },
+    images: {
+      primary: {
+        src: ochre,
+        alt: 'Illustrated study of ochre pigments, hand stencils and painting tools',
+        role: 'primary',
+      },
+    },
+    classification: {
+      primaryPractice: 'Visual archaeology',
+      form: 'Standalone visual study',
+      subjects: ['Ochre pigments', 'Hand stencils', 'Painting tools'],
+    },
+    creation: { tools: ['Digital illustration'] },
+    editorial: {
+      status: 'draft',
+      summary:
+        'Pigment, hands and painting tools gathered into one visual note.',
+      approach: 'Object studies combined with a reconstructed scene.',
+    },
+    credits: {
+      roles: ['Research and illustration'],
+      context: 'Independent work',
+    },
   },
   {
     slug: 'kore-in-colour',
     title: 'Kore in colour',
-    image: kore,
-    alt: 'Three-stage reconstruction of a Kore sculpture with colour',
-    practice: 'Reconstruction',
-    form: 'Comparative illustration',
-    summary:
-      'A surviving sculpture is placed beside a possible reconstruction in colour.',
-    featured: true,
-    shape: 'square',
-    tools: ['Digital illustration'],
-    subject: 'Archaic Greek sculpture and polychromy',
-    approach:
-      'Three states make the interpretive step visible rather than hiding it.',
-    role: 'Research and reconstruction',
-    context: 'Independent work',
+    display: { featured: true, shape: 'square', order: 3 },
+    images: {
+      primary: {
+        src: kore,
+        alt: 'Three-stage reconstruction of a Kore sculpture with colour',
+        role: 'primary',
+      },
+    },
+    classification: {
+      primaryPractice: 'Reconstruction',
+      form: 'Comparative illustration',
+      subjects: ['Archaic Greek sculpture', 'Polychromy'],
+      archaeologicalPeriods: ['Archaic Greece'],
+    },
+    creation: { tools: ['Digital illustration'] },
+    editorial: {
+      status: 'draft',
+      summary:
+        'A surviving sculpture is placed beside a possible reconstruction in colour.',
+      approach:
+        'Three states make the interpretive step visible rather than hiding it.',
+    },
+    credits: {
+      roles: ['Research and reconstruction'],
+      context: 'Independent work',
+    },
   },
   {
     slug: 'world-from-babylon',
     title: 'The world from Babylon',
-    image: babylonMap,
-    alt: 'Illustrated explanation of the Babylonian Map of the World',
-    practice: 'Visual explanation',
-    form: 'Annotated object study',
-    summary:
-      'A visual reading of the Babylonian Map of the World and the ideas held inside it.',
-    featured: true,
-    shape: 'square',
-    tools: ['Illustration', 'Information design'],
-    subject: 'The Babylonian Map of the World',
-    approach:
-      'The source object stays central while lines, labels and colour guide the reading.',
-    role: 'Research, illustration and design',
-    context: 'Independent work',
+    display: { featured: true, shape: 'square', order: 4 },
+    images: {
+      primary: {
+        src: babylonMap,
+        alt: 'Illustrated explanation of the Babylonian Map of the World',
+        role: 'primary',
+      },
+    },
+    classification: {
+      primaryPractice: 'Visual explanation',
+      form: 'Annotated object study',
+      subjects: ['Babylonian Map of the World'],
+    },
+    creation: { tools: ['Illustration', 'Information design'] },
+    editorial: {
+      status: 'draft',
+      summary:
+        'A visual reading of the Babylonian Map of the World and the ideas held inside it.',
+      approach:
+        'The source object stays central while lines, labels and colour guide the reading.',
+    },
+    credits: {
+      roles: ['Research, illustration and design'],
+      context: 'Independent work',
+    },
   },
   {
     slug: 'suriname-time-machine',
     title: 'Suriname Time Machine',
-    image: suriname,
-    alt: 'Suriname Time Machine website shown across several screens',
-    practice: 'Web design & development',
-    form: 'Research interface',
-    summary:
-      'A website for exploring connected historical maps, images and records.',
-    featured: true,
-    shape: 'wide',
-    year: '2025–2026',
-    tools: ['Figma', 'TypeScript', 'React', 'Linked data'],
-    subject: 'Connected cultural heritage collections',
-    approach:
-      'The interface turns relationships between records into paths a visitor can follow.',
-    role: 'Interface design and front-end development',
-    context: 'Huygens Institute and project partners',
-    externalUrl: '/projects/suriname-tijdmachine',
-    externalLabel: 'Read the existing case study',
+    display: { featured: true, shape: 'wide', order: 5 },
+    images: {
+      primary: {
+        src: suriname,
+        alt: 'Suriname Time Machine website shown across several screens',
+        role: 'primary',
+      },
+    },
+    classification: {
+      primaryPractice: 'Web design & development',
+      form: 'Research interface',
+      subjects: ['Connected cultural heritage collections'],
+    },
+    creation: {
+      dateLabel: '2025–2026',
+      startYear: 2025,
+      endYear: 2026,
+      tools: ['Figma', 'TypeScript', 'React', 'Linked data'],
+    },
+    editorial: {
+      status: 'draft',
+      summary:
+        'A website for exploring connected historical maps, images and records.',
+      approach:
+        'The interface turns relationships between records into paths a visitor can follow.',
+    },
+    credits: {
+      roles: ['Interface design and front-end development'],
+      institution: 'Huygens Institute',
+      context: 'Huygens Institute and project partners',
+    },
+    links: [
+      {
+        label: 'Read the existing case study',
+        url: '/projects/suriname-tijdmachine',
+        type: 'case-study',
+      },
+    ],
   },
   {
     slug: 'gender-bias',
     title: 'Gender bias',
-    image: genderBias,
-    alt: 'Illustration about gender bias in archaeological interpretation',
-    practice: 'Visual explanation',
-    form: 'Editorial illustration',
-    summary:
-      'A visual argument about how categories and assumptions can shape archaeological interpretation.',
-    featured: true,
-    shape: 'square',
-    tools: ['Illustration', 'Information design'],
-    subject: 'Gender and archaeological interpretation',
-    approach:
-      'Symbols and artefacts are arranged as an argument rather than a decorative scene.',
-    role: 'Research and illustration',
-    context: 'Independent work',
+    display: { featured: true, shape: 'square', order: 6 },
+    images: {
+      primary: {
+        src: genderBias,
+        alt: 'Illustration about gender bias in archaeological interpretation',
+        role: 'primary',
+      },
+    },
+    classification: {
+      primaryPractice: 'Visual explanation',
+      form: 'Editorial illustration',
+      subjects: ['Gender', 'Archaeological interpretation'],
+    },
+    creation: { tools: ['Illustration', 'Information design'] },
+    editorial: {
+      status: 'draft',
+      summary:
+        'A visual argument about how categories and assumptions can shape archaeological interpretation.',
+      approach:
+        'Symbols and artefacts are arranged as an argument rather than a decorative scene.',
+    },
+    credits: {
+      roles: ['Research and illustration'],
+      context: 'Independent work',
+    },
   },
   {
     slug: 'venus',
     title: 'Venus',
-    image: venus,
-    alt: 'Tonal illustration of a sculpted torso',
-    practice: 'Illustration',
-    form: 'Figure study',
-    summary:
-      'A restrained study of a classical figure, treated more as material presence than icon.',
-    featured: true,
-    shape: 'tall',
-    year: '2023',
-    tools: ['Digital watercolour'],
-    subject: 'Classical sculpture',
-    approach: 'Soft tonal drawing with an intentionally unfinished edge.',
-    role: 'Illustration',
-    context: 'Independent work',
+    display: { featured: true, shape: 'tall', order: 7 },
+    images: {
+      primary: {
+        src: venus,
+        alt: 'Tonal illustration of a sculpted torso',
+        role: 'primary',
+      },
+    },
+    classification: {
+      primaryPractice: 'Illustration',
+      form: 'Figure study',
+      subjects: ['Classical sculpture'],
+    },
+    creation: {
+      dateLabel: '2023',
+      startYear: 2023,
+      endYear: 2023,
+      tools: ['Digital watercolour'],
+    },
+    editorial: {
+      status: 'draft',
+      summary:
+        'A restrained study of a classical figure, treated more as material presence than icon.',
+      approach: 'Soft tonal drawing with an intentionally unfinished edge.',
+    },
+    credits: { roles: ['Illustration'], context: 'Independent work' },
   },
   {
     slug: 'roman-burial',
     title: 'Roman burial',
-    image: romanBurial,
-    alt: 'Excavation photograph and drawn reconstruction of a Roman burial',
-    practice: 'Reconstruction',
-    form: 'Excavation-to-image study',
-    summary:
-      'An excavated burial and its drawn reconstruction shown as parts of the same research process.',
-    featured: true,
-    shape: 'wide',
-    tools: ['Digital drawing'],
-    subject: 'Roman-period burial context',
-    approach:
-      'Documentation and reconstruction remain visible beside one another.',
-    role: 'Research and illustration',
-    context: 'Scientific publication',
-    externalUrl: '/projects/roman-burial',
-    externalLabel: 'Read the existing case study',
+    display: { featured: true, shape: 'wide', order: 8 },
+    images: {
+      primary: {
+        src: romanBurial,
+        alt: 'Excavation photograph and drawn reconstruction of a Roman burial',
+        role: 'primary',
+      },
+    },
+    classification: {
+      primaryPractice: 'Reconstruction',
+      form: 'Excavation-to-image study',
+      subjects: ['Roman-period burial context'],
+      archaeologicalPeriods: ['Roman period'],
+    },
+    creation: { tools: ['Digital drawing'] },
+    editorial: {
+      status: 'draft',
+      summary:
+        'An excavated burial and its drawn reconstruction shown as parts of the same research process.',
+      approach:
+        'Documentation and reconstruction remain visible beside one another.',
+    },
+    credits: {
+      roles: ['Research and illustration'],
+      context: 'Scientific publication',
+    },
+    links: [
+      {
+        label: 'Read the existing case study',
+        url: '/projects/roman-burial',
+        type: 'case-study',
+      },
+    ],
   },
   {
     slug: 'friends',
     title: 'Friends',
-    image: burial,
-    alt: 'Ink drawing of a human and dog burial',
-    practice: 'archInk',
-    form: 'Prompt drawing',
-    summary: 'A small drawing about care, companionship and burial.',
-    featured: true,
-    shape: 'square',
-    year: '2023',
-    tools: ['Ink', 'Digital drawing'],
-    subject: 'Human-animal burial',
-    approach: 'A quick visual response to the archInk prompt “Friends”.',
-    role: 'Concept and illustration',
-    context: 'Self-initiated',
+    display: { featured: true, shape: 'square', order: 9 },
+    images: {
+      primary: {
+        src: burial,
+        alt: 'Ink drawing of a human and dog burial',
+        role: 'primary',
+      },
+    },
+    classification: {
+      primaryPractice: 'archInk',
+      form: 'Prompt drawing',
+      subjects: ['Human-animal burial'],
+    },
+    creation: {
+      dateLabel: '2023',
+      startYear: 2023,
+      endYear: 2023,
+      tools: ['Ink', 'Digital drawing'],
+    },
+    editorial: {
+      status: 'draft',
+      summary: 'A small drawing about care, companionship and burial.',
+      approach: 'A quick visual response to the archInk prompt “Friends”.',
+    },
+    credits: { roles: ['Concept and illustration'], context: 'Self-initiated' },
   },
   {
     slug: 'what-illustration-can-do',
     title: 'What illustration can do',
-    image: illustrationTypes,
-    alt: 'Mind map of different forms of archaeological illustration',
-    practice: 'Visual science communication',
-    form: 'Explanatory map',
-    summary:
-      'A map of how archaeological illustration can explain objects, bodies, buildings and landscapes.',
-    featured: true,
-    shape: 'wide',
-    tools: ['Drawing', 'Information design'],
-    subject: 'Archaeological illustration methods',
-    approach:
-      'Examples are organised spatially so the field can be understood at a glance.',
-    role: 'Research, illustration and information design',
-    context: 'Independent work',
+    display: { featured: true, shape: 'wide', order: 10 },
+    images: {
+      primary: {
+        src: illustrationTypes,
+        alt: 'Mind map of different forms of archaeological illustration',
+        role: 'primary',
+      },
+    },
+    classification: {
+      primaryPractice: 'Visual science communication',
+      form: 'Explanatory map',
+      subjects: ['Archaeological illustration methods'],
+    },
+    creation: { tools: ['Drawing', 'Information design'] },
+    editorial: {
+      status: 'draft',
+      summary:
+        'A map of how archaeological illustration can explain objects, bodies, buildings and landscapes.',
+      approach:
+        'Examples are organised spatially so the field can be understood at a glance.',
+    },
+    credits: {
+      roles: ['Research, illustration and information design'],
+      context: 'Independent work',
+    },
   },
   {
     slug: 'bell-beaker',
     title: 'Bell Beaker',
-    image: bellBeaker,
-    alt: 'Black-and-white archaeological drawing of a Bell Beaker vessel',
-    practice: 'Archaeological drawing',
-    form: 'Object study',
-    summary:
-      'A quiet object drawing where profile, decoration and material traces carry the information.',
-    featured: true,
-    shape: 'square',
-    tools: ['Black-and-white line drawing'],
-    subject: 'Bell Beaker ceramic vessel',
-    approach: 'The vessel is isolated so form and surface can be read clearly.',
-    role: 'Illustration',
-    context: 'Independent work',
+    display: { featured: true, shape: 'square', order: 11 },
+    images: {
+      primary: {
+        src: bellBeaker,
+        alt: 'Black-and-white archaeological drawing of a Bell Beaker vessel',
+        role: 'primary',
+      },
+    },
+    classification: {
+      primaryPractice: 'Archaeological drawing',
+      form: 'Object study',
+      subjects: ['Bell Beaker ceramic vessel'],
+      archaeologicalPeriods: ['Bell Beaker period'],
+      objectTypes: ['Ceramic vessel'],
+    },
+    creation: { techniques: ['Black-and-white line drawing'] },
+    editorial: {
+      status: 'draft',
+      summary:
+        'A quiet object drawing where profile, decoration and material traces carry the information.',
+      approach:
+        'The vessel is isolated so form and surface can be read clearly.',
+    },
+    credits: { roles: ['Illustration'], context: 'Independent work' },
   },
   {
     slug: 'pigment',
     title: 'Pigment',
-    image: pigment,
-    alt: 'archInk page about prehistoric pigments and grinding stones',
-    practice: 'archInk',
-    form: 'Research sketch',
-    summary: 'A one-page note on mineral colour, grinding and marks on stone.',
-    featured: true,
-    shape: 'tall',
-    year: '2025',
-    tools: ['Ink', 'Digital colour'],
-    subject: 'Prehistoric pigments',
-    approach: 'A daily prompt became a compact visual explanation.',
-    role: 'Research and illustration',
-    context: 'Self-initiated',
+    display: { featured: true, shape: 'tall', order: 12 },
+    images: {
+      primary: {
+        src: pigment,
+        alt: 'archInk page about prehistoric pigments and grinding stones',
+        role: 'primary',
+      },
+    },
+    classification: {
+      primaryPractice: 'archInk',
+      form: 'Research sketch',
+      subjects: ['Prehistoric pigments'],
+    },
+    creation: {
+      dateLabel: '2025',
+      startYear: 2025,
+      endYear: 2025,
+      materials: ['Ink'],
+      techniques: ['Digital colour'],
+    },
+    editorial: {
+      status: 'draft',
+      summary:
+        'A one-page note on mineral colour, grinding and marks on stone.',
+      approach: 'A daily prompt became a compact visual explanation.',
+    },
+    credits: {
+      roles: ['Research and illustration'],
+      context: 'Self-initiated',
+    },
   },
   {
     slug: 'shell',
     title: 'Shell',
-    image: shell,
-    alt: 'archInk object study with a coloured shell at its centre',
-    practice: 'archInk',
-    form: 'Object constellation',
-    summary:
-      'One shell at the centre of several ways archaeologists encounter and interpret it.',
-    featured: false,
-    shape: 'square',
-    year: '2025',
-    tools: ['Ink', 'Digital colour'],
-    subject: 'Shell artefacts and remains',
-    approach:
-      'A daily prompt explored variation through a loose radial composition.',
-    role: 'Research and illustration',
-    context: 'Self-initiated',
+    display: { featured: false, shape: 'square', order: 13 },
+    images: {
+      primary: {
+        src: shell,
+        alt: 'archInk object study with a coloured shell at its centre',
+        role: 'primary',
+      },
+    },
+    classification: {
+      primaryPractice: 'archInk',
+      form: 'Object constellation',
+      subjects: ['Shell artefacts and remains'],
+    },
+    creation: {
+      dateLabel: '2025',
+      startYear: 2025,
+      endYear: 2025,
+      materials: ['Ink'],
+      techniques: ['Digital colour'],
+    },
+    editorial: {
+      status: 'draft',
+      summary:
+        'One shell at the centre of several ways archaeologists encounter and interpret it.',
+      approach:
+        'A daily prompt explored variation through a loose radial composition.',
+    },
+    credits: {
+      roles: ['Research and illustration'],
+      context: 'Self-initiated',
+    },
   },
   {
     slug: 'residue',
     title: 'Residue',
-    image: residue,
-    alt: 'Four-panel archInk drawing about archaeological residue analysis',
-    practice: 'archInk',
-    form: 'Four-panel sketch',
-    summary:
-      'A short visual sequence about what remains on and inside an object.',
-    featured: false,
-    shape: 'square',
-    year: '2025',
-    tools: ['Ink', 'Digital colour'],
-    subject: 'Archaeological residue analysis',
-    approach:
-      'A method is compressed into four scenes without becoming an infographic.',
-    role: 'Research and illustration',
-    context: 'Self-initiated',
+    display: { featured: false, shape: 'square', order: 14 },
+    images: {
+      primary: {
+        src: residue,
+        alt: 'Four-panel archInk drawing about archaeological residue analysis',
+        role: 'primary',
+      },
+    },
+    classification: {
+      primaryPractice: 'archInk',
+      form: 'Four-panel sketch',
+      subjects: ['Archaeological residue analysis'],
+    },
+    creation: {
+      dateLabel: '2025',
+      startYear: 2025,
+      endYear: 2025,
+      materials: ['Ink'],
+      techniques: ['Digital colour'],
+    },
+    editorial: {
+      status: 'draft',
+      summary:
+        'A short visual sequence about what remains on and inside an object.',
+      approach:
+        'A method is compressed into four scenes without becoming an infographic.',
+    },
+    credits: {
+      roles: ['Research and illustration'],
+      context: 'Self-initiated',
+    },
   },
   {
     slug: 'bronze',
     title: 'Bronze',
-    image: bronze,
-    alt: 'archInk illustration of bronze artefacts and hands',
-    practice: 'archInk',
-    form: 'Material study',
-    summary:
-      'Bronze forms, fragments and hands arranged as an archaeological encounter.',
-    featured: false,
-    shape: 'square',
-    year: '2025',
-    tools: ['Ink', 'Digital colour'],
-    subject: 'Bronze artefacts',
-    approach:
-      'A warm, limited palette connects objects from different contexts.',
-    role: 'Research and illustration',
-    context: 'Self-initiated',
+    display: { featured: false, shape: 'square', order: 15 },
+    images: {
+      primary: {
+        src: bronze,
+        alt: 'archInk illustration of bronze artefacts and hands',
+        role: 'primary',
+      },
+    },
+    classification: {
+      primaryPractice: 'archInk',
+      form: 'Material study',
+      subjects: ['Bronze artefacts'],
+    },
+    creation: {
+      dateLabel: '2025',
+      startYear: 2025,
+      endYear: 2025,
+      materials: ['Ink'],
+      techniques: ['Digital colour'],
+    },
+    editorial: {
+      status: 'draft',
+      summary:
+        'Bronze forms, fragments and hands arranged as an archaeological encounter.',
+      approach:
+        'A warm, limited palette connects objects from different contexts.',
+    },
+    credits: {
+      roles: ['Research and illustration'],
+      context: 'Self-initiated',
+    },
   },
 ];
 
-export const featuredWorks = visualWorks.filter((work) => work.featured);
+export const featuredWorks = visualWorks.filter(
+  (work) => work.display.featured,
+);
 
 export function getVisualWork(slug: string) {
   return visualWorks.find((work) => work.slug === slug);
