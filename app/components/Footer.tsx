@@ -8,9 +8,7 @@ export default function Footer() {
     <footer className="archive-footer">
       <div className="archive-footer__primary">
         <p>Jona Schlegel / archaeoINK</p>
-        <a href="mailto:archaeoink@jonaschlegel.com">
-          archaeoink@jonaschlegel.com
-        </a>
+        <a href="mailto:jonaschlegel@gmail.com">jonaschlegel@gmail.com</a>
       </div>
       <nav aria-label="Footer">
         <ul className="archive-footer__links">

@@ -48,10 +48,7 @@ export default function PrivacyPolicy() {
           Jona Schlegel, trading as archaeoINK, is responsible for the personal
           data described on this page. Questions and privacy requests can be
           sent to{' '}
-          <a href="mailto:archaeoink@jonaschlegel.com">
-            archaeoink@jonaschlegel.com
-          </a>
-          .
+          <a href="mailto:jonaschlegel@gmail.com">jonaschlegel@gmail.com</a>.
         </p>
       </section>
 

@@ -464,10 +464,10 @@ export default function ServicesContent() {
               <p className="my-0 text-gray-700">
                 The form could not send your message. Please email{' '}
                 <a
-                  href="mailto:archaeoink@jonaschlegel.com"
+                  href="mailto:jonaschlegel@gmail.com"
                   className="font-semibold text-primary-green underline"
                 >
-                  archaeoink@jonaschlegel.com
+                  jonaschlegel@gmail.com
                 </a>
                 .
               </p>
