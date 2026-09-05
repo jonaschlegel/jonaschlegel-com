@@ -342,6 +342,10 @@ textarea:focus-visible {
   color: #fffdf7;
 }
 
+.archive-tile[href] {
+  cursor: pointer;
+}
+
 .archive-tile__image {
   display: block;
   width: 100%;

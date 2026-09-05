@@ -147,29 +147,6 @@ export default async function VisualWorkPage({ params }: WorkPageProps) {
         .filter((value) => value !== undefined)
         .join(' × ')} ${dimensions.unit}`
     : undefined;
-  const researchDetails = [
-    work.classification.subjects?.length,
-    work.classification.archaeologicalPeriods?.length,
-    work.classification.cultures?.length,
-    work.classification.places?.length,
-    work.classification.objectTypes?.length,
-    work.classification.themes?.length,
-    work.classification.keywords?.length,
-    publishedEditorial?.description,
-    publishedEditorial?.researchQuestion,
-    publishedEditorial?.approach,
-    publishedEditorial?.process,
-    publishedEditorial?.interpretation,
-    work.credits?.roles?.length,
-    work.credits?.client,
-    work.credits?.institution,
-    work.credits?.project,
-    work.credits?.collaborators?.length,
-    work.credits?.acknowledgements?.length,
-    work.credits?.context,
-    work.sources?.length,
-    work.links?.length,
-  ].some(Boolean);
   const primaryAsset = [...allWorkAssets, ...archiveAssets].find(
     (asset) => sourceFilename(work.images.primary.src) === asset.filename,
   );
@@ -228,119 +205,8 @@ export default async function VisualWorkPage({ params }: WorkPageProps) {
             <Fact label="Dimensions" value={dimensionsLabel} />
             <Fact label="Duration" value={work.creation?.duration} />
           </dl>
-          {researchDetails ? (
-            <details className="work-more">
-              <summary>Research, process &amp; credits</summary>
-              <dl className="work-facts">
-                <Fact
-                  label="Subjects"
-                  value={work.classification.subjects?.join(', ')}
-                />
-                <Fact
-                  label="Period"
-                  value={work.classification.archaeologicalPeriods?.join(', ')}
-                />
-                <Fact
-                  label="Cultures"
-                  value={work.classification.cultures?.join(', ')}
-                />
-                <Fact
-                  label="Places"
-                  value={work.classification.places?.join(', ')}
-                />
-                <Fact
-                  label="Object types"
-                  value={work.classification.objectTypes?.join(', ')}
-                />
-                <Fact
-                  label="Themes"
-                  value={work.classification.themes?.join(', ')}
-                />
-                <Fact
-                  label="Keywords"
-                  value={work.classification.keywords?.join(', ')}
-                />
-                <Fact
-                  label="Description"
-                  value={publishedEditorial?.description}
-                />
-                <Fact
-                  label="Research question"
-                  value={publishedEditorial?.researchQuestion}
-                />
-                <Fact label="Approach" value={publishedEditorial?.approach} />
-                <Fact label="Process" value={publishedEditorial?.process} />
-                <Fact
-                  label="Interpretation"
-                  value={publishedEditorial?.interpretation}
-                />
-                <Fact label="Role" value={work.credits?.roles?.join(', ')} />
-                <Fact label="Client" value={work.credits?.client} />
-                <Fact label="Institution" value={work.credits?.institution} />
-                <Fact label="Project" value={work.credits?.project} />
-                <Fact
-                  label="Collaborators"
-                  value={work.credits?.collaborators?.join(', ')}
-                />
-                <Fact
-                  label="Acknowledgements"
-                  value={work.credits?.acknowledgements?.join(', ')}
-                />
-                <Fact label="Context" value={work.credits?.context} />
-              </dl>
-              {work.sources?.length ? (
-                <div className="work-links">
-                  <h2>Sources</h2>
-                  {work.sources.map((source) =>
-                    source.url ? (
-                      <a key={`source-${source.label}`} href={source.url}>
-                        {source.citation ?? source.label} →
-                      </a>
-                    ) : (
-                      <span key={`source-${source.label}`}>
-                        {source.citation ?? source.label}
-                      </span>
-                    ),
-                  )}
-                </div>
-              ) : null}
-              {work.links?.length ? (
-                <div className="work-links">
-                  {work.links.map((link) => (
-                    <a key={`link-${link.url}`} href={link.url}>
-                      {link.label} →
-                    </a>
-                  ))}
-                </div>
-              ) : null}
-            </details>
-          ) : null}
         </div>
       </div>
-      {work.images.gallery?.length ? (
-        <section className="work-gallery" aria-labelledby="work-gallery-title">
-          <h2 id="work-gallery-title">Details &amp; process</h2>
-          <div className="work-gallery__grid">
-            {work.images.gallery.map((image) => (
-              <figure
-                className="work-gallery__figure"
-                key={`gallery-${work.slug}-${image.src}`}
-              >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  sizes="(max-width: 800px) 100vw, 50vw"
-                  style={{
-                    objectPosition: image.presentation?.objectPosition,
-                    backgroundColor: image.presentation?.backgroundColor,
-                  }}
-                />
-                <ImageCaption image={image} />
-              </figure>
-            ))}
-          </div>
-        </section>
-      ) : null}
     </article>
   );
 }
