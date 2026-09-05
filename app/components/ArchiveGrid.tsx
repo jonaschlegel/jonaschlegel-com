@@ -1,5 +1,8 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import type { Route } from 'next';
 import type {
   ArchiveGridItem,
@@ -11,6 +14,11 @@ interface ArchiveGridProps {
   items: ArchiveGridItem[];
   sketchfabItems?: SketchfabGridItem[];
   showLabels?: boolean;
+  randomize?: boolean;
+}
+
+function shuffled<T>(values: T[]) {
+  return [...values].sort(() => Math.random() - 0.5);
 }
 
 /** Dense, image-led index of visual work. */
@@ -18,10 +26,26 @@ export default function ArchiveGrid({
   items,
   sketchfabItems = [],
   showLabels = true,
+  randomize = false,
 }: ArchiveGridProps) {
+  const [orderedItems, setOrderedItems] = useState(items);
+  const [orderedSketchfabItems, setOrderedSketchfabItems] =
+    useState(sketchfabItems);
+
+  useEffect(() => {
+    if (!randomize) return;
+
+    const shuffleTimer = window.setTimeout(() => {
+      setOrderedItems(shuffled(items));
+      setOrderedSketchfabItems(shuffled(sketchfabItems));
+    }, 0);
+
+    return () => window.clearTimeout(shuffleTimer);
+  }, [items, randomize, sketchfabItems]);
+
   return (
     <div className="archive-grid">
-      {items.map((item, index) => {
+      {orderedItems.map((item, index) => {
         const content = (
           <Image
             src={item.src}
@@ -62,7 +86,7 @@ export default function ArchiveGrid({
           </div>
         );
       })}
-      {sketchfabItems.map((item) => (
+      {orderedSketchfabItems.map((item) => (
         <SketchfabTile key={`sketchfab-${item.id}`} item={item} />
       ))}
     </div>

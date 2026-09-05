@@ -44,6 +44,11 @@ export const navLinks = [
     href: 'https://archaeoink.substack.com/',
     external: true,
   },
+  {
+    name: 'Podcast ↗',
+    href: 'https://thingswethrewaway.substack.com/',
+    external: true,
+  },
 ] as const;
 
 /** Portfolio projects data including metadata, images, and service tags. */

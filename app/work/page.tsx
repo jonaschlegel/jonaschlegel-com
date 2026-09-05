@@ -30,6 +30,7 @@ export default function WorkPage() {
       <ArchiveGrid
         items={toArchiveGridItems(allWorkAssets, visualWorks)}
         sketchfabItems={sketchfabItems}
+        randomize
       />
     </div>
   );
