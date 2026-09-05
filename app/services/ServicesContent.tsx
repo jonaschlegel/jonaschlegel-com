@@ -4,9 +4,9 @@ import Image, { type StaticImageData } from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import CalendlyButton from '../components/CalendlyButton';
-import adventuressCover from '../images/projects/adventuress-cover.jpg';
+import adventuressCover from '../images/archive/all-work/adventuress-cover.jpg';
 import necessaryReunions from '../images/projects/necessary-reunions.png';
-import romanBurial from '../images/projects/roman-burial.jpg';
+import romanBurial from '../images/archive/all-work/roman-burial.jpg';
 import surinameTijdmachine from '../images/projects/suriname-tijdmachine.jpg';
 
 type ProjectExample = {

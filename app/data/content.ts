@@ -6,7 +6,7 @@ import {
   BsLinkedin,
 } from 'react-icons/bs';
 import jonaConference from '../images/jona-images/jona-oulu_conference-presentation.jpg';
-import adventuressCover from '../images/projects/adventuress-cover.jpg';
+import adventuressCover from '../images/archive/all-work/adventuress-cover.jpg';
 import archaeoZine from '../images/projects/archaeo-zine.jpg';
 import archaeologyJournaling from '../images/projects/archaeology-journaling.png';
 import archaeologyOfBias from '../images/projects/archaeology-of-bias.png';
@@ -23,8 +23,8 @@ import necessaryReunions from '../images/projects/necessary-reunions.png';
 import pastforwardhub from '../images/projects/pastforwardhub-1.webp';
 import pastforwardhubDetail from '../images/projects/pastforwardhub-2.webp';
 import pastrace from '../images/projects/pastrace-brand-identity.webp';
-import romanBurial from '../images/projects/roman-burial.jpg';
-import surinameTijdmachine from '../images/projects/suriname-tijdmachine-1.webp';
+import romanBurial from '../images/archive/all-work/roman-burial.jpg';
+import surinameTijdmachine from '../images/archive/all-work/suriname-tijdmachine-1.webp';
 import surinameTijdmachineDetail from '../images/projects/suriname-tijdmachine-2.webp';
 import trowelJournalBlog from '../images/projects/trowel-journal-blog.jpg';
 import urbanChameleon from '../images/projects/urban-chameleon.jpg';

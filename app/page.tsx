@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import ArchiveGrid from './components/ArchiveGrid';
 import ArchiveIntroduction from './components/ArchiveIntroduction';
-import { featuredWorks } from './data/work';
+import { selectedWorks } from './data/work';
 
 export const metadata: Metadata = {
   title: 'archaeoINK — archaeology in images and interfaces',
@@ -31,7 +31,7 @@ export default function HomePage() {
         Where illustration, reconstruction, visual science communication, and
         web design and development meet archaeology.
       </ArchiveIntroduction>
-      <ArchiveGrid works={featuredWorks} showLabels={false} />
+      <ArchiveGrid works={selectedWorks} showLabels={false} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

@@ -7,17 +7,35 @@ and archive layout decisions.
 
 ## Authoring workflow
 
-1. Add the primary image and write accurate alt text.
-2. Add factual catalogue information: title, date, form, subjects, materials,
+1. Add the primary image to `app/images/archive/all-work` and write accurate
+   alt text.
+2. To feature it on the landing page, place a copy with the same filename in
+   `app/images/archive/landing-selection` and register that selection image in
+   `app/data/work.ts`.
+3. Add factual catalogue information: title, date, form, subjects, materials,
    techniques, tools, dimensions, and credits.
-3. Write the short summary and longer interpretive text.
-4. Add sources, rights, and external links.
-5. Review SEO title, description, keywords, and share image.
-6. Change `editorial.status` from `draft` to `in-review`, then to `ready`.
+4. Write the short summary and longer interpretive text.
+5. Add sources, rights, and external links.
+6. Review SEO title, description, keywords, and share image.
+7. Change `editorial.status` from `draft` to `in-review`, then to `ready`.
 
 Draft editorial prose is intentionally not shown on the public detail page and
 is not used as the SEO description. This lets records be completed gradually
 without presenting placeholder writing as finished work.
+
+## Image folders
+
+The two archive locations have deliberate, separate asset boundaries:
+
+- `app/images/archive/landing-selection` supplies only the image-led gallery on
+  the homepage.
+- `app/images/archive/all-work` supplies the complete `/work` archive and is the
+  canonical home of every work's primary image.
+
+The `app/images/jona-images` folder remains separate and supplies personal
+photographs such as the image on the About/CV page. Other image folders continue
+to support legacy project pages, annual archInk galleries, services, and site
+branding; they are not read by either visual-archive grid.
 
 ## Top-level identity
 
@@ -33,15 +51,24 @@ without presenting placeholder writing as finished work.
 primary image's intrinsic dimensions determine its archive-tile proportions, so
 the image remains uncropped.
 
-| Field      | Required | Purpose                                                     |
-| ---------- | -------- | ----------------------------------------------------------- |
-| `featured` | yes      | Includes the work on the selected-work homepage.            |
-| `order`    | no       | Editorial order in the archive. Lower numbers appear first. |
+| Field   | Required | Purpose                                                     |
+| ------- | -------- | ----------------------------------------------------------- |
+| `order` | no       | Editorial order in the archive. Lower numbers appear first. |
 
 ## Images
 
-`images.primary` is required. Add supporting images to `images.gallery` using
-the same `WorkImage` structure.
+`images.primary` is required and must come from `archive/all-work`. A work is
+included on the homepage when `images.selection` points to its matching copy in
+`archive/landing-selection`. Add supporting images to `images.gallery` using the
+same `WorkImage` structure.
+
+| Images field | Required | Purpose                                                                                    |
+| ------------ | -------- | ------------------------------------------------------------------------------------------ |
+| `primary`    | yes      | Canonical `WorkImage`, whose source lives in `archive/all-work`.                           |
+| `selection`  | no       | Matching static image from `archive/landing-selection`; its presence selects the work.     |
+| `gallery`    | no       | Supporting detail, process, context, or comparison images using the `WorkImage` structure. |
+
+Each `WorkImage` uses the following fields:
 
 | Field                          | Required | Purpose                                                                                             |
 | ------------------------------ | -------- | --------------------------------------------------------------------------------------------------- |
@@ -162,10 +189,10 @@ the title and form and uses the primary image for Open Graph and Twitter cards.
   title: 'Official work title',
   subtitle: 'Optional clarifying subtitle',
   display: {
-    featured: false,
     order: 20,
   },
   images: {
+    selection: selectedImage,
     primary: {
       src: importedImage,
       alt: 'Concise description of the visible content',
