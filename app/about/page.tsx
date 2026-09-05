@@ -272,11 +272,13 @@ export default function AboutPage() {
           <p className="archive-eyebrow">About / CV</p>
           <h1>Archaeology, made visible.</h1>
           <p className="about-archive__lead">
-            I am an archaeologist who draws, designs and builds websites. Most
-            of my work begins with something difficult to see: an excavated
-            feature, a scattered archive, an uncertain reconstruction or a
-            complicated research method. I look for the image or interface that
-            makes it possible to enter.
+            I am originally trained as a landscape archaeologist. I studied
+            field as well as landscape archaeology in Berlin, and then moved to
+            Vienna to work at the Ludwig Boltzmann Institute for Archaeological
+            Prospection and Virtual Archaeology. Now I work at the Huygens
+            institute to work with projects on Dutch and colonial history. Over
+            the years I have been drawing, illustrating, 3D modelling adn web
+            developing.
           </p>
         </div>
         <figure>

@@ -24,8 +24,8 @@ export default function WorkPage() {
         title="All work"
         count={allWorkAssets.length + sketchfabItems.length}
       >
-        Finished commissions, research graphics, web work and quick visual
-        studies, kept together as one growing archive.
+        One archive of all and some of my works, from sketches to visual studies
+        and 3D models.
       </ArchiveIntroduction>
       <ArchiveGrid
         items={toArchiveGridItems(allWorkAssets, visualWorks)}
