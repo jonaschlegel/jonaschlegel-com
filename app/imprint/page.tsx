@@ -48,9 +48,7 @@ export default function Imprint() {
         </p>
         <p>
           <strong>Email:</strong>{' '}
-          <a href="mailto:archaeoink@jonaschlegel.com">
-            archaeoink@jonaschlegel.com
-          </a>
+          <a href="mailto:jonaschlegel@gmail.com">jonaschlegel@gmail.com</a>
         </p>
         <p>
           <strong>Headquarters:</strong> Amsterdam, Netherlands

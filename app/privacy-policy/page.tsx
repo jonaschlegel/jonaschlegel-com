@@ -48,10 +48,7 @@ export default function PrivacyPolicy() {
           Jona Schlegel, trading as archaeoINK, is responsible for the personal
           data described on this page. Questions and privacy requests can be
           sent to{' '}
-          <a href="mailto:archaeoink@jonaschlegel.com">
-            archaeoink@jonaschlegel.com
-          </a>
-          .
+          <a href="mailto:jonaschlegel@gmail.com">jonaschlegel@gmail.com</a>.
         </p>
       </section>
 
@@ -63,6 +60,7 @@ export default function PrivacyPolicy() {
             Information submitted through the project enquiry form, including
             your name, email address, project type, timeline, and message.
           </li>
+          <li>Information you choose to submit through the Crisp live chat.</li>
           <li>
             Limited usage and device information when you consent to analytics.
           </li>
@@ -95,6 +93,7 @@ export default function PrivacyPolicy() {
           <li>Vercel for website hosting and delivery.</li>
           <li>CookieYes for consent management.</li>
           <li>Google Analytics when analytics consent is granted.</li>
+          <li>Crisp for the live-chat service.</li>
           <li>
             Resend to deliver information submitted through the enquiry form.
           </li>

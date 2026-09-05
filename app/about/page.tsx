@@ -1,330 +1,376 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import CalendlyButton from '../components/CalendlyButton';
-import CurrentRoleBanner from '../components/CurrentRoleBanner';
-import {
-  aboutGalleryImages,
-  aboutStudioData,
-  jonaAboutImage,
-  jonaDeskWorkingImage,
-  jonaLaptopImage,
-} from '../data/content';
-import { generateSEOMetadata } from '../lib/seo';
+import educationData from '../data/cv/educational-experience.json';
+import publicationsData from '../data/cv/publications.json';
+import workExperienceData from '../data/cv/work-experience.json';
+import jonaFieldwork from '../images/jona-images/jona-fieldwork-forschungsfest.jpg';
 
-/** SEO metadata for the About page. */
-export const metadata: Metadata = generateSEOMetadata({
-  title: 'About Jona Schlegel & archaeoINK',
+export const metadata: Metadata = {
+  title: 'About / CV',
   description:
-    'archaeoINK is a visual science communication studio specialising in archaeological illustration, archaeology web development & design, and heritage platforms. Founded by landscape archaeologist and web developer Jona Schlegel.',
-  canonical: 'https://jonaschlegel.com/about',
-  keywords: [
-    'archaeoINK',
-    'Jona Schlegel',
-    'landscape archaeologist',
-    'archaeological illustration studio',
-    'archaeological drawing',
-    'archaeological sketching',
-    'archaeology journaling',
-    'archaeology ink drawing',
-    'visual science communication',
-    'visual science communication archaeology',
-    'archaeology web development',
-    'CIDOC CRM data modelling',
-    'QGIS spatial analysis',
-    'digital heritage platforms',
-    'freelance archaeological illustrator Netherlands',
-  ],
-  ogType: 'website',
-});
+    'About Jona Schlegel: archaeologist, illustrator, visual science communicator and web developer.',
+  alternates: { canonical: 'https://jonaschlegel.com/about' },
+};
 
-/** About page describing the archaeoINK studio and its approach. */
-export default function AboutPage() {
-  const aboutStructuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'ProfilePage',
-    name: 'About archaeoINK Studio – Jona Schlegel',
-    url: 'https://jonaschlegel.com/about',
-    mainEntity: {
-      '@type': 'Person',
-      '@id': 'https://jonaschlegel.com/#jona',
-      name: 'Jona Schlegel',
-      jobTitle:
-        'Freelance Archaeological Illustrator & Archaeology Web Developer',
-      url: 'https://jonaschlegel.com',
-      description:
-        'Landscape archaeologist, visual science communicator, and full-stack web developer specialising in archaeological illustration, archaeology web development, and digital heritage platforms.',
-      knowsAbout: [
-        'Archaeological Illustration',
-        'Archaeology Web Development',
-        'Archaeology Web Design',
-        'Visual Science Communication',
-        'Full-stack Web Development for Archaeology',
-        'Digital Heritage Platforms',
-        'Science Communication',
-        'Landscape Archaeology',
-        'Archaeological Drawing',
-        'Digital Painting',
-      ],
-      worksFor: {
-        '@type': 'Organization',
-        '@id': 'https://jonaschlegel.com/#archaeoink',
-        name: 'archaeoINK',
-        url: 'https://jonaschlegel.com',
-        description:
-          'Visual science communication studio specialising in archaeological illustration, archaeology web development, and heritage design.',
-      },
-      sameAs: [
-        'https://www.linkedin.com/in/jona-schlegel/',
-        'https://orcid.org/0000-0002-4190-9566',
-        'https://www.instagram.com/archaeoink/',
-        'https://bsky.app/profile/jonaschlegel.com',
-        'https://github.com/jonaschlegel',
-        'https://mastodon.social/@archaeoINK',
-      ],
-    },
-  };
+interface CvEntry {
+  period: string;
+  place: string;
+  role: string;
+  description?: string;
+}
 
-  return (
-    <>
-      <div className="container mx-auto py-16">
-        {/* Hero Section */}
-        <div className="mb-16 grid items-center gap-12 lg:grid-cols-2">
-          <div>
-            <h1 className="mb-6">{aboutStudioData.heading}</h1>
-            <p className="text-xl leading-relaxed">
-              A visual science communication studio specialising in archaeology,
-              bridging academic research and public understanding through
-              thoughtful illustration and design.
-            </p>
-          </div>
-          <div className="relative">
-            <div className="aspect-square overflow-hidden">
-              <Image
-                src={jonaAboutImage}
-                alt="Jona Schlegel - Founder of archaeoINK Studio"
-                width={500}
-                height={500}
-                className="h-full w-full object-cover"
-                priority
-              />
-            </div>
-          </div>
-        </div>
+interface WorkExperience {
+  title: string;
+  organization: string;
+  startDate: string;
+  endDate?: string;
+  location: string;
+  description: string;
+}
 
-        <div className="mb-20">
-          <CurrentRoleBanner />
-        </div>
+interface Publication {
+  title: string;
+  type: string;
+  date: string;
+  authors: string[];
+  url?: string;
+}
 
-        {/* Studio Philosophy */}
-        <section className="mb-16">
-          <div className="mx-auto max-w-4xl text-center">
-            <h2 className="mb-8 text-3xl font-semibold">Studio Philosophy</h2>
-            <p className="text-lg leading-relaxed">
-              Every archaeological site, artefact, and dataset contains layers
-              of information that require thoughtful interpretation. My approach
-              prioritises accuracy and contextual understanding, working
-              directly with researchers to translate complex archaeological
-              concepts into clear visual narratives.
-            </p>
-          </div>
-        </section>
+const workExperience = workExperienceData as WorkExperience[];
+const publications = publicationsData as Publication[];
 
-        {/* Expertise Grid */}
-        <section className="mb-16">
-          <h2 className="mb-12 text-center text-3xl font-semibold">
-            Areas of Expertise
-          </h2>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <Link
-              href="/services#illustration"
-              className="rounded-lg border-2 border-primary-teal p-6 transition-all duration-300 hover:bg-primary-teal/5"
-            >
-              <h3 className="mb-4 text-xl font-semibold">
-                Archaeological Illustration
-              </h3>
-              <p className="leading-relaxed">
-                Archaeological drawing, digital painting, sketching, and
-                conceptual illustration for site reconstructions, artefact
-                documentation, and cover art.
-              </p>
-            </Link>
-            <Link
-              href="/services#web-development"
-              className="rounded-lg border-2 border-primary-teal p-6 transition-all duration-300 hover:bg-primary-teal/5"
-            >
-              <h3 className="mb-4 text-xl font-semibold">
-                Web Development for Archaeology
-              </h3>
-              <p className="leading-relaxed">
-                Research platforms, interactive databases, and digital tools
-                that make archaeological data accessible to diverse audiences.
-              </p>
-            </Link>
-            <Link
-              href="/services#brand-design"
-              className="rounded-lg border-2 border-primary-teal p-6 transition-all duration-300 hover:bg-primary-teal/5"
-            >
-              <h3 className="mb-4 text-xl font-semibold">
-                Brand Identity & Publication Design
-              </h3>
-              <p className="leading-relaxed">
-                Archaeology brand identity, journal design, and visual systems
-                for heritage organisations and academic publishers.
-              </p>
-            </Link>
-          </div>
-        </section>
+function yearFrom(date: string) {
+  return date.match(/\d{4}/)?.[0] ?? date;
+}
 
-        {/* Behind the Scenes Gallery */}
-        <section className="mb-16">
-          <div className="mb-12 text-center">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary-green">
-              Behind the scenes
-            </p>
-            <h2 className="text-3xl font-semibold">The Work in Action</h2>
-          </div>
-          <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
-            {aboutGalleryImages.map((img, index) => (
-              <div
-                key={`gallery-${img.caption}`}
-                className={`group relative overflow-hidden ${
-                  index === 0 || index === 5
-                    ? 'col-span-2 row-span-2'
-                    : 'col-span-1 row-span-1'
-                }`}
-              >
-                <div
-                  className={`relative w-full ${
-                    index === 0 || index === 5
-                      ? 'aspect-square'
-                      : 'aspect-[4/3]'
-                  }`}
-                >
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    fill
-                    className="object-cover transition-transform duration-500 motion-reduce:transition-none group-hover:scale-105 motion-reduce:group-hover:scale-100"
-                    sizes={
-                      index === 0 || index === 5
-                        ? '(max-width: 768px) 100vw, 50vw'
-                        : '(max-width: 768px) 50vw, 25vw'
-                    }
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100" />
-                  <p className="absolute bottom-3 left-3 text-sm font-medium text-white transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100">
-                    {img.caption}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
+function periodFrom(startDate: string, endDate = 'Present') {
+  const start = yearFrom(startDate);
+  const end =
+    endDate.toLowerCase() === 'present' ? 'present' : yearFrom(endDate);
+  return start === end ? start : `${start}–${end}`;
+}
 
-        {/* About Jona Section */}
-        <section className="mb-16">
-          <div className="mx-auto max-w-4xl">
-            <h2 className="mb-8 text-center text-3xl font-semibold">
-              About Jona Schlegel
-            </h2>
-            <div className="grid gap-12 lg:grid-cols-2">
-              <div>
-                <h3 className="mb-4 text-xl font-semibold">Background</h3>
-                <p className="mb-6 leading-relaxed">
-                  Landscape archaeologist and science communicator, combining
-                  disciplinary expertise with visual communication skills to
-                  support researchers, institutions, and educators in making
-                  archaeological knowledge more accessible.
-                </p>
-                <div className="mb-6 overflow-hidden">
-                  <Image
-                    src={jonaDeskWorkingImage}
-                    alt="Jona working at the desk on illustrations"
-                    width={500}
-                    height={300}
-                    className="w-full object-cover"
-                    sizes="(max-width: 1024px) 100vw, 400px"
-                  />
-                </div>
-                <h3 className="mb-4 text-xl font-semibold">Approach</h3>
-                <p className="leading-relaxed">
-                  Rather than simplifying for the sake of accessibility, the
-                  focus lies in finding visual languages that honour both
-                  scholarly rigour and public curiosity, maintaining connection
-                  to underlying research whilst serving broader understanding.
-                </p>
-              </div>
-              <div>
-                <h3 className="mb-4 text-xl font-semibold">Collaboration</h3>
-                <p className="mb-6 leading-relaxed">
-                  I work as a partner in research projects, contributing visual
-                  expertise whilst learning from domain specialists to ensure
-                  authentic representation of archaeological work and its
-                  cultural significance.
-                </p>
-                <div className="mb-6 overflow-hidden">
-                  <Image
-                    src={jonaLaptopImage}
-                    alt="Jona working on a laptop during a research project"
-                    width={500}
-                    height={300}
-                    className="w-full object-cover"
-                    sizes="(max-width: 1024px) 100vw, 400px"
-                  />
-                </div>
-                <div className="rounded-lg bg-primary-green/10 p-6">
-                  <h4 className="mb-3 font-semibold">Specialised Expertise</h4>
-                  <ul className="space-y-2 text-sm">
-                    <li>Visual Science Communication</li>
-                    <li>Scientific Data Modelling & CIDOC CRM</li>
-                    <li>Digital Heritage Web Development</li>
-                    <li>Landscape Archaeology Spatial Data</li>
-                    <li>Detailed Archaeological Illustration</li>
-                    <li>QGIS & Geographic Visualisation</li>
-                    <li>Full-stack Web Frameworks (React, Next.js)</li>
-                    <li>Interactive Information Architecture</li>
-                  </ul>
-                </div>
-                <div className="rounded-lg bg-primary-teal/10 p-6">
-                  <h4 className="mb-3 font-semibold">Research Interests</h4>
-                  <ul className="space-y-2 text-sm">
-                    <li>Landscape archaeology and spatial analysis</li>
-                    <li>Visual science communication methodologies</li>
-                    <li>Digital heritage and knowledge management</li>
-                    <li>Archaeological illustration and documentation</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+function findExperience(organization: string, title: string) {
+  return workExperience.find(
+    (entry) => entry.organization === organization && entry.title === title,
+  );
+}
 
-        {/* Call to Action */}
-        <section className="mx-auto max-w-4xl rounded-2xl bg-primary-green/10 p-8 text-center">
-          <h2 className="mb-6 text-2xl font-semibold">Let's Collaborate</h2>
-          <p className="mb-8 text-lg leading-relaxed">
-            For collaboration enquiries or to discuss how archaeoINK can support
-            your research communication needs, please get in touch.
-          </p>
-          <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <CalendlyButton text="Schedule a Consultation" />
-            <span className="text-sm">or</span>
-            <a
-              href="mailto:archaeoink@jonaschlegel.com"
-              className="inline-flex items-center rounded-full border-2 border-primary-green px-8 py-3 font-semibold text-primary-green transition-all duration-300 hover:bg-primary-green hover:text-primary-dark"
-            >
-              Send an Email
-            </a>
-          </div>
-        </section>
+const primaryExperienceRecords = [
+  findExperience('Huygens Institute', 'Researcher'),
+  findExperience('archaeoINK', 'Freelancer'),
+  findExperience(
+    'Ludwig Boltzmann Institute for Archaeological Prospection and Virtual Archaeology',
+    'Researcher',
+  ),
+  findExperience('University of Vienna', 'Student Assistant'),
+].filter((entry): entry is WorkExperience => Boolean(entry));
+
+const primaryExperience = primaryExperienceRecords.map((entry) => ({
+  period: periodFrom(entry.startDate, entry.endDate),
+  place: entry.organization,
+  role: `${entry.title} · ${entry.location}`,
+  description: entry.description,
+}));
+
+const primaryExperienceSet = new Set(primaryExperienceRecords);
+const earlierExperience = workExperience
+  .filter((entry) => !primaryExperienceSet.has(entry))
+  .sort(
+    (first, second) =>
+      Number(yearFrom(second.startDate)) - Number(yearFrom(first.startDate)),
+  )
+  .map((entry) => ({
+    period: periodFrom(entry.startDate, entry.endDate),
+    place: entry.organization,
+    role: `${entry.title} · ${entry.location}`,
+  }));
+
+const education = educationData.map((entry) => ({
+  period: periodFrom(entry.startDate, entry.endDate),
+  place: entry.institution,
+  role: entry.degree,
+  description: entry.description,
+}));
+
+const programmingKnowledge = [
+  {
+    title: 'Web languages',
+    content: 'HTML, CSS, JavaScript, TypeScript',
+  },
+  {
+    title: 'Frameworks & runtime',
+    content: 'React, Next.js, Node.js',
+  },
+  {
+    title: 'Spatial web',
+    content: 'CesiumJS, Resium, Leaflet',
+  },
+  { title: 'Additional', content: 'SQL, R and NetLogo' },
+];
+
+const softwareKnowledge = [
+  {
+    title: 'Design & illustration',
+    content:
+      'Figma, Procreate, Photoshop, InDesign, Lightroom, Inkscape, GIMP, RawTherapee, Vectornator and Miro',
+  },
+  {
+    title: 'GIS & mapping',
+    content:
+      'QGIS, ArcGIS Pro, survey2gis, SAGA GIS, GRASS GIS and Google Earth Pro',
+  },
+  {
+    title: 'Databases & knowledge systems',
+    content:
+      'PostgreSQL, SQLite, Microsoft Access, OpenAtlas, CIDOC CRM, SKOS and dbdiagram.io',
+  },
+  {
+    title: '3D & photogrammetry',
+    content:
+      'Blender, 3ds Max, Agisoft Metashape, Meshroom, MeshLab, CloudCompare, Kubit PhoToPlan and TachyCAD',
+  },
+  {
+    title: 'Prospection data',
+    content:
+      'Golden Software Surfer, RiScan, RiProcess, RiSolve, RiPano, ApSoft and LoggerVis',
+  },
+  {
+    title: 'Writing & office',
+    content: 'Microsoft Office, LibreOffice, OpenOffice, LaTeX and Markdown',
+  },
+];
+
+const voluntaryWork: CvEntry[] = [
+  {
+    period: '2008–2009',
+    place: 'Voluntary Social Year in Culture',
+    role: 'Research, publications, symposia, archives and web work · Berlin',
+  },
+  {
+    period: '2001–2015',
+    place: 'Deutscher Pfadfinderbund',
+    role: 'German Scout Association',
+  },
+];
+
+const certificates: CvEntry[] = [
+  {
+    period: '2023',
+    place: 'Save Cultural Heritage Group',
+    role: 'Introduction to Archaeological Illustration',
+  },
+  {
+    period: '2022',
+    place: 'ARIADNEplus Summer School · Prato',
+    role: 'Mapping Existing Datasets to CIDOC CRM',
+  },
+  {
+    period: '2021',
+    place: 'Esri Training',
+    role: 'Imagery in Action · ArcGIS Pro MOOC',
+  },
+  {
+    period: '2021',
+    place: 'Esri Training',
+    role: 'Do-It-Yourself Geo Apps · ArcGIS Pro MOOC',
+  },
+  {
+    period: '2021',
+    place: 'University of Vienna',
+    role: 'Basic Training in Being a Tutor',
+  },
+  {
+    period: '2021',
+    place: 'Ludwig Boltzmann Gesellschaft Career Center',
+    role: 'REVISE & REVITALIZE · writing and communication winter school',
+  },
+  {
+    period: '2019',
+    place: 'Codecademy Pro Intensive',
+    role: 'Build Front-End Web Apps from Scratch',
+  },
+  {
+    period: '2016',
+    place: 'LBI ArchPro Summer School',
+    role: 'Advanced archaeological prospection, documentation and interpretation',
+  },
+  {
+    period: 'Current',
+    place: 'Driving licence',
+    role: 'Category B',
+  },
+];
+
+const languages: CvEntry[] = [
+  { period: 'Native', place: 'German', role: 'Native proficiency' },
+  { period: 'Fluent', place: 'English', role: 'Fluent proficiency' },
+  { period: 'Basic', place: 'Dutch', role: 'Basic proficiency' },
+  { period: 'Basic', place: 'French', role: 'Basic proficiency' },
+  { period: 'Basic', place: 'Italian', role: 'Basic proficiency' },
+];
+
+const selectedPublicationTitles = [
+  'Gazetteer of Early Modern Kerala',
+  'Linking Surinamese Heritage Data: Building a Community-Focused Platform',
+  'Storytellers by Design: Critical Approaches to Curating Research-Driven Digital Experiences Using Design Methods',
+  'Introducing Spatial Anchors for Annotating and Georeferencing Historical Maps',
+  'Disseminate | Analyse | Understand Graffiti-Scapes. Proceedings of the GoINDIGO2023 International Graffiti Symposium',
+  'Getting Hold of the Urban Chameleon',
+  'Each Graffito Deserves Its Polygon',
+  'AUTOGRAF—AUTomated Orthorectification of GRAFfiti Photos',
+  'Prospecting the UNESCO World Heritage Site of Müstair (Switzerland)',
+  'CrowdSlide - a Mobile Web Application for Building a Database of Gravitational Mass Movements Using Volunteer Field Reports',
+];
+
+const selectedPublications = selectedPublicationTitles
+  .map((title) =>
+    publications.find((publication) => publication.title === title),
+  )
+  .filter((publication): publication is Publication => Boolean(publication));
+
+function CvRows({ entries }: { entries: CvEntry[] }) {
+  return entries.map((entry) => (
+    <div
+      className="cv-row"
+      key={`${entry.period}-${entry.place}-${entry.role}`}
+    >
+      <span>{entry.period}</span>
+      <div>
+        <strong>{entry.place}</strong>
+        <p>{entry.role}</p>
+        {entry.description ? (
+          <p className="cv-row__description">{entry.description}</p>
+        ) : null}
       </div>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(aboutStructuredData),
-        }}
-      />
-    </>
+    </div>
+  ));
+}
+
+function KnowledgeGroups({
+  groups,
+}: {
+  groups: { title: string; content: string }[];
+}) {
+  return (
+    <div className="tool-groups">
+      {groups.map((group) => (
+        <p key={`knowledge-${group.title}`}>
+          <strong>{group.title}</strong> {group.content}
+        </p>
+      ))}
+    </div>
+  );
+}
+
+export default function AboutPage() {
+  return (
+    <div className="about-archive">
+      <section className="about-archive__introduction">
+        <div>
+          <p className="archive-eyebrow">About / CV</p>
+          <h1>Archaeology, made visible.</h1>
+          <p className="about-archive__lead">
+            I am originally trained as a landscape archaeologist. I studied
+            field as well as landscape archaeology in Berlin, and then moved to
+            Vienna to work at the Ludwig Boltzmann Institute for Archaeological
+            Prospection and Virtual Archaeology. Now I work at the Huygens
+            institute to work with projects on Dutch and colonial history. Over
+            the years I have been drawing, illustrating, 3D modelling adn web
+            developing.
+          </p>
+        </div>
+        <figure>
+          <Image
+            src={jonaFieldwork}
+            alt="Jona Schlegel holding a trowel during an archaeology event"
+            priority
+            sizes="(max-width: 800px) 100vw, 38vw"
+          />
+        </figure>
+      </section>
+
+      <div className="about-archive__cv">
+        <section className="cv-section">
+          <h2>Professional experience</h2>
+          <CvRows entries={primaryExperience} />
+          <details className="cv-disclosure">
+            <summary>Earlier archaeological and research positions</summary>
+            <CvRows entries={earlierExperience} />
+          </details>
+        </section>
+
+        <section className="cv-section">
+          <h2>Education</h2>
+          <CvRows entries={education} />
+        </section>
+
+        <section className="cv-section">
+          <h2>Programming knowledge</h2>
+          <KnowledgeGroups groups={programmingKnowledge} />
+        </section>
+
+        <section className="cv-section">
+          <h2>Software knowledge</h2>
+          <KnowledgeGroups groups={softwareKnowledge} />
+        </section>
+
+        <section className="cv-section">
+          <h2>Voluntary work</h2>
+          <CvRows entries={voluntaryWork} />
+        </section>
+
+        <section className="cv-section">
+          <h2>Certificates</h2>
+          <CvRows entries={certificates} />
+        </section>
+
+        <section className="cv-section">
+          <h2>Languages</h2>
+          <CvRows entries={languages} />
+        </section>
+
+        <section className="cv-section">
+          <h2>Selected publications &amp; research outputs</h2>
+          {selectedPublications.map((publication) => (
+            <div
+              className="cv-row cv-row--publication"
+              key={`publication-${publication.date}-${publication.title}`}
+            >
+              <span>{publication.date}</span>
+              <div>
+                <strong>
+                  {publication.url ? (
+                    <a href={publication.url}>{publication.title} ↗</a>
+                  ) : (
+                    publication.title
+                  )}
+                </strong>
+                <p>
+                  {publication.type} · {publication.authors.join(', ')}
+                </p>
+              </div>
+            </div>
+          ))}
+        </section>
+
+        <p className="about-writing">
+          <Link href="/cv">
+            Open the complete CV, map and publication list →
+          </Link>
+        </p>
+        <p className="about-writing">
+          Essays, field notes and unfinished thoughts live on{' '}
+          <a
+            href="https://archaeoink.substack.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Substack ↗
+          </a>
+        </p>
+      </div>
+    </div>
   );
 }

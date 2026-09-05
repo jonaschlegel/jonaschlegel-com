@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "build": "next build",
+    "prebuild": "node scripts/generate-archive-assets.mjs",
     "dev": "next dev",
+    "predev": "node scripts/generate-archive-assets.mjs",
     "image:audit": "node scripts/image-audit.mjs",
     "image:optimize": "node scripts/optimize-images.mjs",
     "lint": "eslint .",

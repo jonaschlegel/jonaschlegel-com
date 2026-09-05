@@ -5,124 +5,51 @@ import {
   BsInstagram,
   BsLinkedin,
 } from 'react-icons/bs';
-import profile01 from '../images/clients/profile01.jpg';
-import profile02 from '../images/clients/profile02.jpg';
-import jonaDoodle from '../images/jona-images/jona-doodle-working-terms.jpg';
-import jonaWatercolor from '../images/jona-images/jona-early-watercolor-drawing.jpg';
-import jonaExcavationEarly from '../images/jona-images/jona-excavation-early.webp';
-import jonaAbout from '../images/jona-images/jona-excavation-trowel.jpg';
-import jonaBanner from '../images/jona-images/jona-fieldwork-forschungsfest.jpg';
-import jonaGeophysics from '../images/jona-images/jona-geophysics-fieldwork.jpg';
-import jonaLaptop from '../images/jona-images/jona-laptop-working.jpg';
-import jonaSpectrometry from '../images/jona-images/jona-measure-spectrometry.jpeg';
-import jonaAcropolis from '../images/jona-images/jona-museum-visit_acropolis-greece.jpg';
-import jonaLeiden from '../images/jona-images/jona-museum-visit_leiden-wereldmuseum.jpg';
 import jonaConference from '../images/jona-images/jona-oulu_conference-presentation.jpg';
-import jonaInterview from '../images/jona-images/jona-prospection-scanner.jpg';
-import jonaMotorised from '../images/jona-images/jona-prospection_motorised-magnetic.jpg';
-import jonaPaleontology from '../images/jona-images/jona-scicomm_paleontology-archaeology.jpeg';
-import jonaSorting from '../images/jona-images/jona-sorting-artifacts.jpg';
-import jonaGraffiti from '../images/jona-images/jona-spraying-wall-graffiti-legal.jpg';
-import jonaRecording from '../images/jona-images/jona-standing-globe.jpg';
-import jonaScicomm from '../images/jona-images/jona-working_desk-ipad.jpg';
-import jonaDeskMaps from '../images/jona-images/jona-working_desk-maps.jpg';
-import jonaDeskWorking from '../images/jona-images/jona-working_desk-writing.jpg';
-import jona from '../images/jona.webp';
-import typesOfIllustration from '../images/other-illustration/illustration-types-of-archaeological-illustration.jpg';
-import adventuressCover from '../images/projects/adventuress-cover.jpg';
-import archaeoZine from '../images/projects/archaeo-zine.jpg';
-import archaeologyJournaling from '../images/projects/archaeology-journaling.png';
-import archaeologyOfBias from '../images/projects/archaeology-of-bias.png';
-import archeomatch from '../images/projects/archeomatch.png';
-import archink2024Overview from '../images/projects/archink-2024-overview.webp';
-import archink2025 from '../images/projects/archink-2025.png';
-import dhBenelux from '../images/projects/dh-benelux.jpg';
-import dutchLearningPlatform from '../images/projects/dutch-learning-platform.png';
-import exploringArchaeologicalDisciplines from '../images/projects/exploring-archaeological-disciplines.webp';
-import muestairFindings from '../images/projects/muestair-findings.png';
-import geophysicalProspection from '../images/projects/muestair-hero.png';
-import muestairMethods from '../images/projects/muestair-methods.png';
-import necessaryReunions from '../images/projects/necessary-reunions.png';
-import pastforwardhub from '../images/projects/pastforwardhub-1.webp';
-import pastforwardhubDetail from '../images/projects/pastforwardhub-2.webp';
-import pastrace from '../images/projects/pastrace-brand-identity.webp';
-import romanBurial from '../images/projects/roman-burial.jpg';
-import surinameTijdmachine from '../images/projects/suriname-tijdmachine-1.webp';
-import surinameTijdmachineDetail from '../images/projects/suriname-tijdmachine-2.webp';
-import trowelJournalBlog from '../images/projects/trowel-journal-blog.jpg';
-import urbanChameleon from '../images/projects/urban-chameleon.jpg';
-import illustrating from '../images/services/archaeological-illustrating.jpg';
-import archaeologySciComm from '../images/services/archaeological-sci-comm.jpg';
-import webDevelopment from '../images/services/web-development.jpg';
-import { archink2021Gallery } from './galleries/archink-2021';
-import { archink2022Gallery } from './galleries/archink-2022';
-import { archink2023Gallery } from './galleries/archink-2023';
-import { archink2024Gallery } from './galleries/archink-2024';
-import { archink2025Gallery } from './galleries/archink-2025';
+import adventuressCover from '../images/archive/adventuress-cover.jpg';
+import archaeoZine from '../images/archive/archaeo-zine.jpg';
+import archaeologyJournaling from '../images/archive/archaeology-journaling.png';
+import archaeologyOfBias from '../images/archive/archaeology-of-bias.png';
+import archeomatch from '../images/archive/archeomatch.png';
+import archink2024Overview from '../images/archive/archink-2024-overview.webp';
+import archink2025 from '../images/archive/archink-2025.png';
+import dhBenelux from '../images/archive/dh-benelux.jpg';
+import dutchLearningPlatform from '../images/archive/dutch-learning-platform.png';
+import exploringArchaeologicalDisciplines from '../images/archive/exploring-archaeological-disciplines.webp';
+import muestairFindings from '../images/archive/muestair-findings.png';
+import geophysicalProspection from '../images/archive/muestair-hero.png';
+import muestairMethods from '../images/archive/muestair-methods.png';
+import necessaryReunions from '../images/archive/necessary-reunions.png';
+import pastforwardhub from '../images/archive/pastforwardhub-1.webp';
+import pastforwardhubDetail from '../images/archive/pastforwardhub-2.webp';
+import pastrace from '../images/all-work/pastrace-brand-identity.webp';
+import romanBurial from '../images/archive/roman-burial.jpg';
+import surinameTijdmachine from '../images/archive/suriname-tijdmachine-1.webp';
+import surinameTijdmachineDetail from '../images/archive/suriname-tijdmachine-2.webp';
+import trowelJournalBlog from '../images/archive/trowel-journal-blog.jpg';
+import urbanChameleon from '../images/archive/urban-chameleon.jpg';
+import { archink2021Gallery } from '../content/galleries/archink-2021';
+import { archink2022Gallery } from '../content/galleries/archink-2022';
+import { archink2023Gallery } from '../content/galleries/archink-2023';
+import { archink2024Gallery } from '../content/galleries/archink-2024';
+import { archink2025Gallery } from '../content/galleries/archink-2025';
 
 /** Navigation links used in the header and footer. */
 export const navLinks = [
-  { name: 'About', href: '/about' },
-  { name: 'Projects', href: '/projects' },
-  { name: 'Services', href: '/services' },
-  { name: 'CV', href: '/cv' },
-] as const;
-
-/** Content and images for the home page hero section. */
-export const heroSectionData = {
-  eyebrow: 'Jona Schlegel · founder of archaeoINK',
-  heading: 'Making archaeological knowledge clear, visual & useful.',
-  subheading:
-    'I help researchers and heritage organisations turn complex evidence into rigorous illustrations, publications, and accessible digital platforms.',
-  jonaPhoto: jonaPaleontology,
-  showcaseImage: {
-    src: typesOfIllustration,
-    alt: 'Mind map showing the types of archaeological illustration: reconstruction drawings, section drawings, artifact illustrations, site plans, scientific illustrations, comics, children\u2019s books, and zines',
+  { name: 'Selected', href: '/' },
+  { name: 'All work', href: '/work' },
+  { name: 'About / CV', href: '/about' },
+  {
+    name: 'Writing ↗',
+    href: 'https://archaeoink.substack.com/',
+    external: true,
   },
-};
-
-/** Text paragraphs displayed in the promotional banner. */
-export const bannerData = [
-  'I combine archaeological training with illustration and digital product development. That means less time translating between specialists and a clearer, more coherent result for your research team and its audiences.',
-];
-
-/** Content sections for the About page describing archaeoINK studio. */
-export const aboutStudioData = {
-  heading: 'About archaeoINK',
-  sections: [
-    {
-      title: 'The Studio',
-      content: `archaeoINK is a visual science communication studio specialising in archaeology, where illustration, design, and structured knowledge representation serve to advance research understanding and public engagement. Founded by landscape archaeologist and science communicator Jona Schlegel, the studio bridges the space between rigorous academic research and accessible visual communication.
-
-Serving the DACH region and Netherlands while operating as a 100% remote collaborator globally, the work centres on creating accurate, concept-driven visuals that respect the complexity and context inherent in archaeological data. Each project begins with careful collaboration between researcher and illustrator, ensuring that visual interpretations maintain scientific integrity whilst becoming more approachable for diverse audiences.`,
-    },
-    {
-      title: 'Approach',
-      content: `Every archaeological site, artefact, and dataset contains layers of information that require thoughtful interpretation. The studio's approach prioritises accuracy and contextual understanding, working directly with researchers to translate complex archaeological concepts into clear visual narratives.
-
-Rather than simplifying for the sake of accessibility, the focus lies in finding visual languages that honour both scholarly rigour and public curiosity. This includes developing database-informed graphics that maintain connection to underlying research whilst serving educational and engagement purposes.`,
-    },
-    {
-      title: 'Expertise',
-      content: `The studio specialises in archaeological illustration, from site reconstructions to artefact documentation, always grounded in current research and methodological best practice. Additional expertise encompasses concept-driven visual design for academic publications, educational materials, and digital platforms that support knowledge sharing within and beyond academic communities.
-
-Communication strategies developed here aim to bridge gaps between specialist knowledge and broader understanding, recognising that effective science communication requires both technical accuracy and thoughtful presentation. This includes designing digital tools and interfaces that make archaeological databases and research findings more accessible to various user groups.`,
-    },
-    {
-      title: 'Collaboration',
-      content: `Successful visual communication in archaeology depends on close collaboration between researchers, institutions, and communication specialists. The studio works as a partner in research projects, contributing visual expertise whilst learning from domain specialists to ensure authentic representation of archaeological work.
-
-This collaborative approach extends to understanding the specific needs of different audiences, from academic peers to students, heritage professionals, and members of the public with varying levels of archaeological knowledge. The goal is always to create visuals that serve their intended purpose whilst maintaining respect for the discipline's complexity and cultural significance.`,
-    },
-  ],
-};
-
-/** Profile image of Jona Schlegel. */
-export const jonaImage = jona;
-/** About page image of Jona during excavation work. */
-export const jonaAboutImage = jonaAbout;
-/** Banner image of Jona at a fieldwork event. */
-export const jonaBannerImage = jonaBanner;
+  {
+    name: 'Podcast ↗',
+    href: 'https://thingswethrewaway.substack.com/',
+    external: true,
+  },
+] as const;
 
 /** Portfolio projects data including metadata, images, and service tags. */
 export const projectsData = {
@@ -970,126 +897,14 @@ export const projectsData = {
   ],
 };
 
-/** Service offerings with descriptions, tools, and downloadable resources. */
-export const serviceData = {
-  heading: 'Archaeological Illustration, Drawing & Web Development Services',
-  servicesList: [
-    {
-      id: 'archaeology',
-      slug: 'archaeology',
-      name: 'Archaeological Research & Communication',
-      description:
-        'Your research data tells a story \u2014 but reaching the right audience requires more than a publication. From geophysical surveys and CIDOC CRM data modelling to public engagement and visual science communication, I help researchers communicate complex landscape archaeology findings clearly and accessibly.',
-      image: archaeologySciComm,
-      alt: 'Archaeological research and scientific communication tools and methods by Jona Schlegel',
-      tools:
-        'ArcGIS, QGIS, Ground-penetrating radar, Geophysical surveys, CIDOC CRM',
-      options: [
-        'Geophysical Prospection: Non-invasive surveys to uncover archaeological structures',
-        'Data Interpretation: Analysis and mapping of archaeological findings',
-        'Public Engagement: Making archaeological data accessible through interactive platforms and scientific communication',
-      ],
-      pdfUrl: '/data/Archaeology_JonaSchlegel.pdf',
-    },
-    {
-      id: 'illustration',
-      slug: 'illustration',
-      name: 'Scientific & Archaeological Illustration',
-      description:
-        'Complex findings need clear visuals to reach beyond your field. I create scientifically accurate archaeological illustrations \u2014 from site reconstruction drawings and artefact sketching to digital painting, conceptual art, and visual science communication materials \u2014 grounded in current research so your audience sees what you see.',
-      image: illustrating,
-      alt: 'Scientific and archaeological illustration, drawing, and sketching examples by Jona Schlegel',
-      tools: 'Procreate, Inkscape, ArcGIS, QGIS',
-      options: [
-        'Reconstruction Illustrations: Accurate depictions of historical scenes for academic and public use',
-        'Archaeological Drawing & Sketching: Artefact documentation, field sketches, and detailed observational drawing',
-        'Archaeology Journaling & Zines: Visual narratives and accessible publications for public audiences',
-        'Educational Illustrations: Visual content for teaching materials and science communication outreach',
-        'GIS-based Map Illustrations: Integrating landscape archaeology data with geospatial visualisation',
-      ],
-      pdfUrl: '/data/Illustration_JonaSchlegel.pdf',
-    },
-    {
-      id: 'web-development',
-      slug: 'web-development',
-      name: 'Web Development & Design for Archaeology',
-      description:
-        'Your research deserves a platform as rigorous as your methodology. I build full-stack database-driven platforms and interactive data visualisation tools \u2014 from CIDOC CRM knowledge graphs and IIIF viewers to archaeology journaling apps and interactive maps \u2014 that let users explore and engage with heritage data directly.',
-      image: webDevelopment,
-      alt: 'Web development and design portfolio for archaeological projects by Jona Schlegel',
-      tools: 'Next.js, TypeScript, Tailwind CSS, Three.js, CesiumJS, Leaflet',
-      options: [
-        'Website Development: Custom-built platforms for archaeological projects and databases',
-        'Interactive Features: Enhancing user engagement with data visualisation and 3D tools',
-        'UI/UX Design: Creating user-friendly interfaces for archaeological content presentation',
-      ],
-      pdfUrl: '/data/WebDevelopment_JonaSchlegel.pdf',
-    },
-  ],
-};
-
-/** Client testimonials displayed in the carousel. */
-export const testimonialsData = [
-  {
-    name: 'Gabriella Campbell',
-    role: 'That Anthro Podcast',
-    image: profile01,
-    comment:
-      'I am so glad that I was able to work with Jona. Her art is incredible, and I know this is only the beginning of big things for her. I appreciate how much work and creativity Jona put into this.',
-  },
-
-  {
-    name: 'Tuna Çapar',
-    role: 'Research Associate',
-    image: profile02,
-    comment:
-      'After viewing Jona’s portfolio, I requested a logo design, and it was the best decision. She worked diligently, brought fresh ideas, and delivered an outstanding final concept. I’m very happy with my brand identity and grateful for her talent and dedication.',
-  },
-];
-
-/** Key statistics displayed on the home page. */
-export const statsData: import('../../types/global').StatType[] = [
-  { name: 'Years in Archaeological Research', number: '7+' },
-  { name: 'Countries Worked In', number: '6' },
-  { name: 'Peer-Reviewed Publications', number: '3' },
-  { name: 'Research Platforms Built', number: '10+' },
-];
-
-/** Latest writing from the archaeoINK Substack publication. */
-export const blogPostsData = [
-  {
-    title: 'Archaeology Finds a New Space on Bluesky?!',
-    date: '2024-11-11',
-    excerpt:
-      'A reflection on Bluesky’s growing archaeology community and its potential for more meaningful, inclusive professional exchange.',
-    url: 'https://archaeoink.substack.com/p/archaeology-finds-a-new-space-on',
-  },
-  {
-    title: 'Inktober 2024',
-    date: '2024-09-24',
-    excerpt:
-      'Combining the Inktober 2024 prompts with #archInk to turn daily drawings into conversations about archaeological concepts.',
-    url: 'https://archaeoink.substack.com/p/inktober-2024',
-  },
-  {
-    title: 'Public archaeology',
-    date: '2024-09-10',
-    excerpt:
-      'Exploring how illustration and visual communication can make archaeology clearer, more approachable, and easier to discuss.',
-    url: 'https://archaeoink.substack.com/p/public-archaeology',
-  },
-];
-
 /** Footer content including navigation, social links, and contact details. */
 export const footerdata = {
-  heading: "Let's Collaborate",
+  heading: 'Jona Schlegel',
   navLinks: [
-    { name: 'About', href: '/about' },
-    { name: 'Projects', href: '/projects' },
-    { name: 'Services', href: '/services' },
-    { name: 'CV', href: '/cv' },
-    { name: 'Blog', href: 'https://archaeoink.substack.com/archive' },
-    { name: 'Newsletter', href: 'https://archaeoink.substack.com/subscribe' },
+    { name: 'Selected', href: '/' },
+    { name: 'All work', href: '/work' },
+    { name: 'About / CV', href: '/about' },
+    { name: 'Writing', href: 'https://archaeoink.substack.com/' },
   ],
   socialLinks: [
     {
@@ -1116,135 +931,4 @@ export const footerdata = {
   ],
 } as const;
 
-/** Gallery images for the About page "Behind the Scenes" section. */
-export const aboutGalleryImages = [
-  {
-    src: jonaAcropolis,
-    alt: 'Jona visiting the Acropolis museum in Greece',
-    caption: 'Museum visit, Greece',
-  },
-  {
-    src: jonaConference,
-    alt: 'Jona presenting research at a conference in Oulu',
-    caption: 'Conference presentation',
-  },
-  {
-    src: jonaDeskMaps,
-    alt: 'Jona working with archaeological maps at the desk',
-    caption: 'Working with maps',
-  },
-  {
-    src: jonaGeophysics,
-    alt: 'Jona conducting geophysical fieldwork survey',
-    caption: 'Geophysical survey',
-  },
-  {
-    src: jonaRecording,
-    alt: 'Jona standing next to a globe',
-    caption: 'Portrait',
-  },
-  {
-    src: jonaScicomm,
-    alt: 'Jona working at desk with iPad for digital illustration',
-    caption: 'Digital illustration',
-  },
-  {
-    src: jonaInterview,
-    alt: 'Jona using prospection scanner during fieldwork',
-    caption: 'Prospection scanning',
-  },
-  {
-    src: jonaExcavationEarly,
-    alt: 'Jona during early excavation fieldwork',
-    caption: 'In the field',
-  },
-  {
-    src: jonaSorting,
-    alt: 'Jona sorting archaeological finds in the lab',
-    caption: 'Sorting finds',
-  },
-  {
-    src: jonaWatercolor,
-    alt: 'Early watercolor drawing by Jona',
-    caption: 'Watercolor illustration',
-  },
-  {
-    src: jonaDoodle,
-    alt: 'Jona doodling and sketching archaeological terms',
-    caption: 'Sketching',
-  },
-  {
-    src: jonaSpectrometry,
-    alt: 'Jona measuring artefacts with spectrometry equipment',
-    caption: 'Spectrometry analysis',
-  },
-  {
-    src: jonaLeiden,
-    alt: 'Jona visiting the Wereldmuseum in Leiden',
-    caption: 'Museum visit, Leiden',
-  },
-  {
-    src: jonaMotorised,
-    alt: 'Motorised magnetic prospection survey in the field',
-    caption: 'Magnetic prospection',
-  },
-  {
-    src: jonaGraffiti,
-    alt: 'Jona spraying on a legal graffiti wall',
-    caption: 'Street art',
-  },
-] as const;
-
-/** Personal images for contextual use across the site. */
 export const jonaConferenceImage = jonaConference;
-export const jonaRecordingImage = jonaRecording;
-export const jonaInterviewImage = jonaInterview;
-export const jonaDeskWorkingImage = jonaDeskWorking;
-export const jonaLaptopImage = jonaLaptop;
-export const jonaGeophysicsImage = jonaGeophysics;
-export const jonaScicommImage = jonaScicomm;
-
-/** FAQ content for the services page, targeting key search terms. */
-export const servicesFAQs = [
-  {
-    question: 'What is archaeological illustration?',
-    answer:
-      'Archaeological illustration is the practice of creating scientifically accurate visual representations of archaeological sites, artefacts, and contexts. It encompasses drawing, digital painting, sketching, and conceptual illustration \u2014 translating complex research into clear visuals for publications, exhibitions, and education.',
-  },
-  {
-    question: 'What types of archaeological drawing do you offer?',
-    answer:
-      'I offer reconstruction drawings, artefact illustrations, site plans, section drawings, and conceptual sketches. Each drawing is developed in close collaboration with researchers to ensure accuracy. Techniques range from detailed pencil sketching to fully rendered digital painting, depending on the publication context.',
-  },
-  {
-    question: 'Do you offer digital painting for archaeology?',
-    answer:
-      'Yes. I use tools like Procreate and Inkscape to create digital paintings for archaeological reconstructions, life-like scenes, and publication covers. Digital painting allows for flexible iteration and produces print-ready results suitable for journals, books, and exhibition panels.',
-  },
-  {
-    question: 'What is archaeology cover art?',
-    answer:
-      'Archaeology cover art refers to illustrated covers designed for archaeological journals, books, and magazines. I create cover art that visually communicates the theme of a publication while meeting academic design standards \u2014 for example, the ongoing cover illustration series for Adventuress Archaeologist magazine.',
-  },
-  {
-    question: 'How does web development for archaeology work?',
-    answer:
-      'Archaeology web development involves building digital platforms tailored to research needs: interactive databases, GIS-based mapping tools, 3D visualisation interfaces, and content management systems for heritage data. I use modern frameworks like Next.js, TypeScript, and Tailwind CSS alongside spatial tools such as CesiumJS and Leaflet.',
-  },
-  {
-    question:
-      'Can you create a brand identity for an archaeology organisation?',
-    answer:
-      'Absolutely. Archaeology brand identity includes logo design, visual systems, colour palettes, typography, and style guides tailored to heritage organisations, research projects, and academic publishers. The goal is a professional identity that communicates credibility and aligns with institutional values \u2014 like the PasTrace brand I developed for a heritage documentation company.',
-  },
-  {
-    question: 'What is conceptual illustration in archaeology?',
-    answer:
-      'Conceptual illustration in archaeology visualises ideas, processes, or hypotheses rather than depicting specific artefacts or sites. Examples include comic-style explanations of archaeological methods, educational infographics, and diagrammatic illustrations of research workflows \u2014 making abstract concepts tangible for diverse audiences.',
-  },
-  {
-    question: 'What is archaeology journaling?',
-    answer:
-      'Archaeology journaling combines reflective writing with visual documentation \u2014 sketching, note-taking, and illustrated observations from fieldwork and research. I share techniques and insights through the Trowel Journal blog and develop journaling workshops that help archaeologists integrate visual thinking into their practice.',
-  },
-];

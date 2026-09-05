@@ -78,6 +78,12 @@ const CvPage = async () => {
   const publications: Publication[] = JSON.parse(
     await fs.readFile(publicationsPath, 'utf8'),
   );
+  const completedEducation = educationalExperience.filter(
+    (education) =>
+      !/not (completed|finished)/i.test(
+        `${education.degree} ${education.description}`,
+      ),
+  );
 
   const parseDate = (dateStr: string): Date => {
     if (dateStr.toLowerCase() === 'present') {
@@ -277,7 +283,7 @@ const CvPage = async () => {
         'Landscape Archaeology',
         'Geophysical Prospection',
       ],
-      hasCredential: educationalExperience.map((edu) => ({
+      hasCredential: completedEducation.map((edu) => ({
         '@type': 'EducationalOccupationalCredential',
         name: edu.degree,
         credentialCategory: 'degree',

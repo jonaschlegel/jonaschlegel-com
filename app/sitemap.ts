@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { projectsData } from './data/content';
+import { visualWorks } from './content/works';
 
 /** Generates the sitemap.xml entries for all public pages and projects. */
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -15,9 +16,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${baseUrl}/projects`,
+      url: `${baseUrl}/work`,
       changeFrequency: 'weekly',
       priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/projects`,
+      changeFrequency: 'monthly',
+      priority: 0.6,
     },
     {
       url: `${baseUrl}/about`,
@@ -64,5 +70,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   );
 
-  return [...staticRoutes, ...projectRoutes];
+  const workRoutes: MetadataRoute.Sitemap = visualWorks.map((work) => ({
+    url: `${baseUrl}/work/${work.slug}`,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+
+  return [...staticRoutes, ...workRoutes, ...projectRoutes];
 }
