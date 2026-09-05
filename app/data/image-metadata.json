@@ -34,9 +34,33 @@
     },
     "sketchfab": [
       {
-        "id": "76bee1f4a8394dc78d3c5be74f8491ce",
+        "id": "7ed014e9988c4bf196faa32400f52982",
         "title": "Lengyel culture pottery",
         "alt": "Interactive 3D model of Lengyel culture pottery",
+        "practice": "3D documentation"
+      },
+      {
+        "id": "652efe34670f48aca9cd5226fb8e24bc",
+        "title": "Statue",
+        "alt": "Interactive 3D model of a statue",
+        "practice": "3D documentation"
+      },
+      {
+        "id": "c9db9791d7f8470da5c6bc40d6903529",
+        "title": "Gravestone from Rheinsberg (Germany)",
+        "alt": "Interactive 3D model of a gravestone from Rheinsberg, Germany",
+        "practice": "3D documentation"
+      },
+      {
+        "id": "d4ad1c489d474befb5fb51ca05921e6a",
+        "title": "Trowel",
+        "alt": "Interactive 3D model of an archaeological trowel",
+        "practice": "3D documentation"
+      },
+      {
+        "id": "5552540138ca4182b790555436358380",
+        "title": "Coat-of-arms relief",
+        "alt": "Interactive 3D model of a coat-of-arms relief",
         "practice": "3D documentation"
       }
     ]
