@@ -4,10 +4,10 @@ import Image, { type StaticImageData } from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import CalendlyButton from '../components/CalendlyButton';
-import adventuressCover from '../images/all-work/adventuress-cover.jpg';
-import necessaryReunions from '../images/archive/projects/necessary-reunions.png';
-import romanBurial from '../images/all-work/roman-burial.jpg';
-import surinameTijdmachine from '../images/archive/projects/suriname-tijdmachine.jpg';
+import adventuressCover from '../images/archive/adventuress-cover.jpg';
+import necessaryReunions from '../images/archive/necessary-reunions.png';
+import romanBurial from '../images/archive/roman-burial.jpg';
+import surinameTijdmachine from '../images/archive/suriname-tijdmachine.jpg';
 
 type ProjectExample = {
   name: string;

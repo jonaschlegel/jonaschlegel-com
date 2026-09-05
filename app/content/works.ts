@@ -1,32 +1,3 @@
-import type { StaticImageData } from 'next/image';
-import adventuress from '../images/all-work/adventuress-cover.jpg';
-import pigment from '../images/all-work/archInk-2025-1.jpg';
-import shell from '../images/all-work/archInk-2025-2.jpg';
-import residue from '../images/all-work/archInk-2025-3.jpg';
-import bronze from '../images/all-work/archInk-2025-4.jpg';
-import babylonMap from '../images/all-work/illustration-babylon-map.jpg';
-import bellBeaker from '../images/all-work/illustration-bell-beaker.jpg';
-import burial from '../images/all-work/illustration-burial-dog-human.jpg';
-import genderBias from '../images/all-work/illustration-gender-bias.jpg';
-import kore from '../images/all-work/illustration-kore-reconstruction.jpg';
-import ochre from '../images/all-work/illustration-ochre.jpg';
-import venus from '../images/all-work/illustration-torso-statue.jpg';
-import illustrationTypes from '../images/all-work/illustration-types-of-archaeological-illustration.jpg';
-import romanBurial from '../images/all-work/roman-burial.jpg';
-import suriname from '../images/all-work/suriname-tijdmachine-1.webp';
-import selectedAdventuress from '../images/landing-page/adventuress-cover.jpg';
-import selectedPigment from '../images/landing-page/archInk-2025-1.jpg';
-import selectedBabylonMap from '../images/landing-page/illustration-babylon-map.jpg';
-import selectedBellBeaker from '../images/landing-page/illustration-bell-beaker.jpg';
-import selectedBurial from '../images/landing-page/illustration-burial-dog-human.jpg';
-import selectedGenderBias from '../images/landing-page/illustration-gender-bias.jpg';
-import selectedKore from '../images/landing-page/illustration-kore-reconstruction.jpg';
-import selectedOchre from '../images/landing-page/illustration-ochre.jpg';
-import selectedVenus from '../images/landing-page/illustration-torso-statue.jpg';
-import selectedIllustrationTypes from '../images/landing-page/illustration-types-of-archaeological-illustration.jpg';
-import selectedRomanBurial from '../images/landing-page/roman-burial.jpg';
-import selectedSuriname from '../images/landing-page/suriname-tijdmachine-1.webp';
-
 export type WorkCopyStatus = 'draft' | 'in-review' | 'ready';
 
 export type WorkImageRole =
@@ -42,7 +13,7 @@ export interface WorkImageRights {
 }
 
 export interface WorkImage {
-  src: StaticImageData;
+  src: string;
   alt: string;
   role: WorkImageRole;
   title?: string;
@@ -128,7 +99,6 @@ export interface VisualWork {
   };
   images: {
     primary: WorkImage;
-    selection?: StaticImageData;
     gallery?: WorkImage[];
   };
   classification: WorkClassification;
@@ -151,9 +121,8 @@ export const visualWorks: VisualWork[] = [
     title: 'Adventuress',
     display: { order: 1 },
     images: {
-      selection: selectedAdventuress,
       primary: {
-        src: adventuress,
+        src: '/images/archive/adventuress-cover.jpg',
         alt: 'Cover illustration and preparatory drawings for Adventuress Archaeology',
         role: 'primary',
       },
@@ -193,9 +162,8 @@ export const visualWorks: VisualWork[] = [
     title: 'Ochre',
     display: { order: 2 },
     images: {
-      selection: selectedOchre,
       primary: {
-        src: ochre,
+        src: '/images/all-work/illustration-ochre.jpg',
         alt: 'Illustrated study of ochre pigments, hand stencils and painting tools',
         role: 'primary',
       },
@@ -222,9 +190,8 @@ export const visualWorks: VisualWork[] = [
     title: 'Kore in colour',
     display: { order: 3 },
     images: {
-      selection: selectedKore,
       primary: {
-        src: kore,
+        src: '/images/all-work/illustration-kore-reconstruction.jpg',
         alt: 'Three-stage reconstruction of a Kore sculpture with colour',
         role: 'primary',
       },
@@ -253,9 +220,8 @@ export const visualWorks: VisualWork[] = [
     title: 'The world from Babylon',
     display: { order: 4 },
     images: {
-      selection: selectedBabylonMap,
       primary: {
-        src: babylonMap,
+        src: '/images/all-work/illustration-babylon-map.jpg',
         alt: 'Illustrated explanation of the Babylonian Map of the World',
         role: 'primary',
       },
@@ -283,9 +249,8 @@ export const visualWorks: VisualWork[] = [
     title: 'Suriname Time Machine',
     display: { order: 5 },
     images: {
-      selection: selectedSuriname,
       primary: {
-        src: suriname,
+        src: '/images/archive/suriname-tijdmachine-1.webp',
         alt: 'Suriname Time Machine website shown across several screens',
         role: 'primary',
       },
@@ -326,9 +291,8 @@ export const visualWorks: VisualWork[] = [
     title: 'Gender bias',
     display: { order: 6 },
     images: {
-      selection: selectedGenderBias,
       primary: {
-        src: genderBias,
+        src: '/images/all-work/illustration-gender-bias.jpg',
         alt: 'Illustration about gender bias in archaeological interpretation',
         role: 'primary',
       },
@@ -356,9 +320,8 @@ export const visualWorks: VisualWork[] = [
     title: 'Venus',
     display: { order: 7 },
     images: {
-      selection: selectedVenus,
       primary: {
-        src: venus,
+        src: '/images/all-work/illustration-torso-statue.jpg',
         alt: 'Tonal illustration of a sculpted torso',
         role: 'primary',
       },
@@ -387,9 +350,8 @@ export const visualWorks: VisualWork[] = [
     title: 'Roman burial',
     display: { order: 8 },
     images: {
-      selection: selectedRomanBurial,
       primary: {
-        src: romanBurial,
+        src: '/images/archive/roman-burial.jpg',
         alt: 'Excavation photograph and drawn reconstruction of a Roman burial',
         role: 'primary',
       },
@@ -425,9 +387,8 @@ export const visualWorks: VisualWork[] = [
     title: 'Friends',
     display: { order: 9 },
     images: {
-      selection: selectedBurial,
       primary: {
-        src: burial,
+        src: '/images/all-work/illustration-burial-dog-human.jpg',
         alt: 'Ink drawing of a human and dog burial',
         role: 'primary',
       },
@@ -455,9 +416,8 @@ export const visualWorks: VisualWork[] = [
     title: 'What illustration can do',
     display: { order: 10 },
     images: {
-      selection: selectedIllustrationTypes,
       primary: {
-        src: illustrationTypes,
+        src: '/images/archive/illustration-types-of-archaeological-illustration.jpg',
         alt: 'Mind map of different forms of archaeological illustration',
         role: 'primary',
       },
@@ -485,9 +445,8 @@ export const visualWorks: VisualWork[] = [
     title: 'Bell Beaker',
     display: { order: 11 },
     images: {
-      selection: selectedBellBeaker,
       primary: {
-        src: bellBeaker,
+        src: '/images/all-work/illustration-bell-beaker.jpg',
         alt: 'Black-and-white archaeological drawing of a Bell Beaker vessel',
         role: 'primary',
       },
@@ -514,9 +473,8 @@ export const visualWorks: VisualWork[] = [
     title: 'Pigment',
     display: { order: 12 },
     images: {
-      selection: selectedPigment,
       primary: {
-        src: pigment,
+        src: '/images/archive/archInk-2025-1.jpg',
         alt: 'archInk page about prehistoric pigments and grinding stones',
         role: 'primary',
       },
@@ -550,7 +508,7 @@ export const visualWorks: VisualWork[] = [
     display: { order: 13 },
     images: {
       primary: {
-        src: shell,
+        src: '/images/all-work/archInk-2025-2.jpg',
         alt: 'archInk object study with a coloured shell at its centre',
         role: 'primary',
       },
@@ -585,7 +543,7 @@ export const visualWorks: VisualWork[] = [
     display: { order: 14 },
     images: {
       primary: {
-        src: residue,
+        src: '/images/all-work/archInk-2025-3.jpg',
         alt: 'Four-panel archInk drawing about archaeological residue analysis',
         role: 'primary',
       },
@@ -620,7 +578,7 @@ export const visualWorks: VisualWork[] = [
     display: { order: 15 },
     images: {
       primary: {
-        src: bronze,
+        src: '/images/all-work/archInk-2025-4.jpg',
         alt: 'archInk illustration of bronze artefacts and hands',
         role: 'primary',
       },
@@ -650,20 +608,6 @@ export const visualWorks: VisualWork[] = [
     },
   },
 ];
-
-export const selectedWorks = visualWorks.flatMap((work) => {
-  if (!work.images.selection) return [];
-
-  return [
-    {
-      ...work,
-      images: {
-        ...work.images,
-        primary: { ...work.images.primary, src: work.images.selection },
-      },
-    },
-  ];
-});
 
 export function getVisualWork(slug: string) {
   return visualWorks.find((work) => work.slug === slug);

@@ -7,9 +7,14 @@ import {
   visualWorks,
   type WorkImage,
 } from '../../content/works';
+import { allWorkAssets, archiveAssets } from '../../content/archive-assets';
 
 interface WorkPageProps {
   params: Promise<{ slug: string }>;
+}
+
+function sourceFilename(source: string) {
+  return source.split('/').pop();
 }
 
 export function generateStaticParams() {
@@ -30,6 +35,9 @@ export async function generateMetadata({
     (work.editorial.status === 'ready' ? work.editorial.summary : undefined) ??
     `${work.title}, ${work.classification.form.toLowerCase()} by Jona Schlegel.`;
   const shareImage = work.seo?.image ?? work.images.primary;
+  const shareAsset = [...allWorkAssets, ...archiveAssets].find(
+    (asset) => sourceFilename(shareImage.src) === asset.filename,
+  );
 
   return {
     title: work.seo?.title ?? work.title,
@@ -43,9 +51,9 @@ export async function generateMetadata({
       description,
       images: [
         {
-          url: shareImage.src.src,
-          width: shareImage.src.width,
-          height: shareImage.src.height,
+          url: shareAsset?.src.src ?? shareImage.src,
+          width: shareAsset?.width ?? 1200,
+          height: shareAsset?.height ?? 900,
           alt: shareImage.alt,
         },
       ],
@@ -54,7 +62,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: work.seo?.title ?? work.title,
       description,
-      images: [shareImage.src.src],
+      images: [shareAsset?.src.src ?? shareImage.src],
     },
   };
 }
@@ -162,6 +170,9 @@ export default async function VisualWorkPage({ params }: WorkPageProps) {
     work.sources?.length,
     work.links?.length,
   ].some(Boolean);
+  const primaryAsset = [...allWorkAssets, ...archiveAssets].find(
+    (asset) => sourceFilename(work.images.primary.src) === asset.filename,
+  );
 
   return (
     <article className="work-detail">
@@ -171,8 +182,10 @@ export default async function VisualWorkPage({ params }: WorkPageProps) {
       <div className="work-detail__layout">
         <figure className="work-detail__figure">
           <Image
-            src={work.images.primary.src}
+            src={primaryAsset?.src ?? work.images.primary.src}
             alt={work.images.primary.alt}
+            width={primaryAsset?.width ?? 1600}
+            height={primaryAsset?.height ?? 1200}
             priority
             sizes="(max-width: 800px) 100vw, 68vw"
             style={{
@@ -311,7 +324,7 @@ export default async function VisualWorkPage({ params }: WorkPageProps) {
             {work.images.gallery.map((image) => (
               <figure
                 className="work-gallery__figure"
-                key={`gallery-${work.slug}-${image.src.src}`}
+                key={`gallery-${work.slug}-${image.src}`}
               >
                 <Image
                   src={image.src}

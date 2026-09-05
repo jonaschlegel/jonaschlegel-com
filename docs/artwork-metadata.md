@@ -7,11 +7,10 @@ and archive layout decisions.
 
 ## Authoring workflow
 
-1. Add the primary image to `app/images/all-work` and write accurate
-   alt text.
-2. To feature it on the landing page, place a copy with the same filename in
-   `app/images/landing-page` and register that selection image in
-   `app/content/works.ts`.
+1. Add the image to `app/images/all-work` or `app/images/landing-page`; the
+   relevant grid discovers it automatically on the next dev/build run.
+2. If the image is a named work, add its metadata record to
+   `app/content/works.ts` and write accurate alt text.
 3. Add factual catalogue information: title, date, form, subjects, materials,
    techniques, tools, dimensions, and credits.
 4. Write the short summary and longer interpretive text.
@@ -57,15 +56,14 @@ the image remains uncropped.
 
 ## Images
 
-`images.primary` is required and must come from `images/all-work`. A work is
-included on the homepage when `images.selection` points to its matching copy in
-`images/landing-page`. Add supporting images to `images.gallery` using the
-same `WorkImage` structure.
+`images.primary` identifies the canonical detail-page image for a named work.
+The homepage and complete archive grids discover their image files directly
+from their respective folders. Add supporting images to `images.gallery` using
+the same `WorkImage` structure.
 
 | Images field | Required | Purpose                                                                                    |
 | ------------ | -------- | ------------------------------------------------------------------------------------------ |
-| `primary`    | yes      | Canonical `WorkImage`, whose source lives in `images/all-work`.                            |
-| `selection`  | no       | Matching static image from `images/landing-page`; its presence selects the work.           |
+| `primary`    | yes      | Canonical `WorkImage` used on the detail page.                                             |
 | `gallery`    | no       | Supporting detail, process, context, or comparison images using the `WorkImage` structure. |
 
 Each `WorkImage` uses the following fields:
@@ -192,7 +190,6 @@ the title and form and uses the primary image for Open Graph and Twitter cards.
     order: 20,
   },
   images: {
-    selection: selectedImage,
     primary: {
       src: importedImage,
       alt: 'Concise description of the visible content',

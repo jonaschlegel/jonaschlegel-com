@@ -1,52 +1,64 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import type { VisualWork } from '../content/works';
+import type { Route } from 'next';
+import type { ArchiveGridItem } from '../content/archive-grid';
 
 interface ArchiveGridProps {
-  works: VisualWork[];
+  items: ArchiveGridItem[];
   showLabels?: boolean;
 }
 
 /** Dense, image-led index of visual work. */
 export default function ArchiveGrid({
-  works,
+  items,
   showLabels = true,
 }: ArchiveGridProps) {
   return (
     <div className="archive-grid">
-      {works.map((work, index) => (
-        <Link
-          key={`work-${work.slug}`}
-          href={`/work/${work.slug}`}
-          className="archive-tile"
-          aria-label={`Open ${work.title}`}
-          style={{
-            flexBasis: `${
-              (work.images.primary.src.width / work.images.primary.src.height) *
-              15
-            }rem`,
-            flexGrow:
-              work.images.primary.src.width / work.images.primary.src.height,
-          }}
-        >
+      {items.map((item, index) => {
+        const content = (
           <Image
-            src={work.images.primary.src}
-            alt={work.images.primary.alt}
+            src={item.src}
+            alt={item.alt}
             className="archive-tile__image"
             loading={index === 0 ? 'eager' : 'lazy'}
             sizes="(max-width: 520px) 100vw, (max-width: 800px) 50vw, 33vw"
           />
-          {showLabels ? (
-            <span className="archive-tile__label">
-              <span>{work.title}</span>
-              <small>
-                {String(index + 1).padStart(2, '0')} ·{' '}
-                {work.classification.primaryPractice}
-              </small>
-            </span>
-          ) : null}
-        </Link>
-      ))}
+        );
+        const label = showLabels ? (
+          <span className="archive-tile__label">
+            <span>{item.title}</span>
+            <small>
+              {String(index + 1).padStart(2, '0')} ·{' '}
+              {item.primaryPractice ?? 'Visual work'}
+            </small>
+          </span>
+        ) : null;
+        const tileProps = {
+          className: 'archive-tile',
+          style: {
+            flexBasis: `${(item.src.width / item.src.height) * 15}rem`,
+            flexGrow: item.src.width / item.src.height,
+          },
+        };
+
+        return item.href ? (
+          <Link
+            key={`work-${item.href}`}
+            href={item.href as Route}
+            {...tileProps}
+            aria-label={`Open ${item.title}`}
+          >
+            {content}
+            {label}
+          </Link>
+        ) : (
+          <div key={`asset-${item.src.src}`} {...tileProps}>
+            {content}
+            {label}
+          </div>
+        );
+      })}
     </div>
   );
 }
