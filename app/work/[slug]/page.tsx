@@ -69,7 +69,7 @@ export default async function VisualWorkPage({ params }: WorkPageProps) {
             <Fact label="Year" value={work.year} />
             <Fact label="Practice" value={work.practice} />
             <Fact label="Form" value={work.form} />
-            <Fact label="Tools" value={work.tools.join(', ')} />
+            <Fact label="Tools" value={work.tools?.join(', ')} />
           </dl>
           <details className="work-more">
             <summary>Research, process &amp; credits</summary>

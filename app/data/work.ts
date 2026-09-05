@@ -37,7 +37,7 @@ export interface VisualWork {
   externalLabel?: string;
 }
 
-export const visualWorks = [
+export const visualWorks: VisualWork[] = [
   {
     slug: 'adventuress',
     title: 'Adventuress',
@@ -52,8 +52,7 @@ export const visualWorks = [
     year: '2024',
     tools: ['Procreate'],
     subject: 'Women in archaeology',
-    approach:
-      'Sketch studies developed into a layered editorial composition.',
+    approach: 'Sketch studies developed into a layered editorial composition.',
     role: 'Concept and illustration',
     context: 'Adventuress Archaeology',
     externalUrl: '/projects/adventuress-cover',
@@ -283,7 +282,8 @@ export const visualWorks = [
     alt: 'Four-panel archInk drawing about archaeological residue analysis',
     practice: 'archInk',
     form: 'Four-panel sketch',
-    summary: 'A short visual sequence about what remains on and inside an object.',
+    summary:
+      'A short visual sequence about what remains on and inside an object.',
     featured: false,
     shape: 'square',
     year: '2025',
@@ -308,11 +308,12 @@ export const visualWorks = [
     year: '2025',
     tools: ['Ink', 'Digital colour'],
     subject: 'Bronze artefacts',
-    approach: 'A warm, limited palette connects objects from different contexts.',
+    approach:
+      'A warm, limited palette connects objects from different contexts.',
     role: 'Research and illustration',
     context: 'Self-initiated',
   },
-] satisfies VisualWork[];
+];
 
 export const featuredWorks = visualWorks.filter((work) => work.featured);
 
