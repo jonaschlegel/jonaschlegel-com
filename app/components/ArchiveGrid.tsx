@@ -1,16 +1,21 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Route } from 'next';
-import type { ArchiveGridItem } from '../content/archive-grid';
+import type {
+  ArchiveGridItem,
+  SketchfabGridItem,
+} from '../content/archive-grid';
 
 interface ArchiveGridProps {
   items: ArchiveGridItem[];
+  sketchfabItems?: SketchfabGridItem[];
   showLabels?: boolean;
 }
 
 /** Dense, image-led index of visual work. */
 export default function ArchiveGrid({
   items,
+  sketchfabItems = [],
   showLabels = true,
 }: ArchiveGridProps) {
   return (
@@ -56,6 +61,26 @@ export default function ArchiveGrid({
           </div>
         );
       })}
+      {sketchfabItems.map((item) => (
+        <div
+          key={`sketchfab-${item.id}`}
+          className="archive-tile archive-tile--embed"
+          aria-label={item.alt}
+        >
+          <iframe
+            title={item.title}
+            className="archive-tile__embed"
+            src={`https://sketchfab.com/models/${item.id}/embed?ui_theme=dark`}
+            sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-popups-to-escape-sandbox"
+            allow="autoplay; fullscreen; xr-spatial-tracking"
+            loading="lazy"
+          />
+          <span className="archive-tile__label">
+            <span>{item.title}</span>
+            {item.primaryPractice && <small>{item.primaryPractice}</small>}
+          </span>
+        </div>
+      ))}
     </div>
   );
 }

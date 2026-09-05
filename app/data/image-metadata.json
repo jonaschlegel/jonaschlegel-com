@@ -31,6 +31,14 @@
       "title": "Venus",
       "alt": "Tonal illustration of a sculpted torso",
       "practice": "Visual reconstruction"
-    }
+    },
+    "sketchfab": [
+      {
+        "id": "76bee1f4a8394dc78d3c5be74f8491ce",
+        "title": "Lengyel culture pottery",
+        "alt": "Interactive 3D model of Lengyel culture pottery",
+        "practice": "3D documentation"
+      }
+    ]
   }
 }

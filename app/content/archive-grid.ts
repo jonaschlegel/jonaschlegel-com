@@ -11,6 +11,13 @@ export interface ArchiveGridItem {
   primaryPractice?: string;
 }
 
+export interface SketchfabGridItem {
+  id: string;
+  title: string;
+  alt: string;
+  primaryPractice?: string;
+}
+
 type ImageMetadata = {
   title?: string;
   alt?: string;
@@ -44,4 +51,8 @@ export function toArchiveGridItems(
         metadata?.practice ?? work?.classification.primaryPractice,
     };
   });
+}
+
+export function getSketchfabGridItems(): SketchfabGridItem[] {
+  return imageMetadata.metadata.sketchfab;
 }
