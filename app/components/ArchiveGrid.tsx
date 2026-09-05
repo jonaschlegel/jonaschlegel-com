@@ -11,10 +11,14 @@ const shapeClasses: Record<WorkShape, string> = {
 
 interface ArchiveGridProps {
   works: VisualWork[];
+  showLabels?: boolean;
 }
 
 /** Dense, image-led index of visual work. */
-export default function ArchiveGrid({ works }: ArchiveGridProps) {
+export default function ArchiveGrid({
+  works,
+  showLabels = true,
+}: ArchiveGridProps) {
   return (
     <div className="archive-grid">
       {works.map((work, index) => (
@@ -36,13 +40,15 @@ export default function ArchiveGrid({ works }: ArchiveGridProps) {
             }}
             sizes="(max-width: 520px) 50vw, (max-width: 800px) 33vw, 25vw"
           />
-          <span className="archive-tile__label">
-            <span>{work.title}</span>
-            <small>
-              {String(index + 1).padStart(2, '0')} ·{' '}
-              {work.classification.primaryPractice}
-            </small>
-          </span>
+          {showLabels ? (
+            <span className="archive-tile__label">
+              <span>{work.title}</span>
+              <small>
+                {String(index + 1).padStart(2, '0')} ·{' '}
+                {work.classification.primaryPractice}
+              </small>
+            </span>
+          ) : null}
         </Link>
       ))}
     </div>

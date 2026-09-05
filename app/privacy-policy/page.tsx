@@ -63,6 +63,7 @@ export default function PrivacyPolicy() {
             Information submitted through the project enquiry form, including
             your name, email address, project type, timeline, and message.
           </li>
+          <li>Information you choose to submit through the Crisp live chat.</li>
           <li>
             Limited usage and device information when you consent to analytics.
           </li>
@@ -95,6 +96,7 @@ export default function PrivacyPolicy() {
           <li>Vercel for website hosting and delivery.</li>
           <li>CookieYes for consent management.</li>
           <li>Google Analytics when analytics consent is granted.</li>
+          <li>Crisp for the live-chat service.</li>
           <li>
             Resend to deliver information submitted through the enquiry form.
           </li>

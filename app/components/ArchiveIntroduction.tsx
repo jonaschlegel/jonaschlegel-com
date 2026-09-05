@@ -1,6 +1,6 @@
 interface ArchiveIntroductionProps {
   title: string;
-  count: number;
+  count?: number;
   children: React.ReactNode;
 }
 
@@ -14,10 +14,12 @@ export default function ArchiveIntroduction({
     <header className="archive-introduction">
       <div>
         <h1>{title}</h1>
-        <p className="archive-index">
-          {count} works · Illustration · Reconstruction · Visual explanation ·
-          Web
-        </p>
+        {count !== undefined ? (
+          <p className="archive-index">
+            {count} works · Illustration · Reconstruction · Visual explanation ·
+            Web
+          </p>
+        ) : null}
       </div>
       <p>{children}</p>
     </header>

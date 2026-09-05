@@ -3,7 +3,7 @@
 import Image, { type StaticImageData } from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import ButtonPrimary from '../components/ButtonPrimary';
+import CalendlyButton from '../components/CalendlyButton';
 import adventuressCover from '../images/projects/adventuress-cover.jpg';
 import necessaryReunions from '../images/projects/necessary-reunions.png';
 import romanBurial from '../images/projects/roman-burial.jpg';
@@ -192,7 +192,9 @@ export default function ServicesContent() {
       <header className="container mx-auto grid gap-10 pb-20 pt-12 md:pb-32 md:pt-20 lg:grid-cols-12 lg:items-end">
         <div className="lg:col-span-8">
           <p className="eyebrow">Work with me</p>
-          <h1 className="mt-4">The right form for the story your research holds.</h1>
+          <h1 className="mt-4">
+            The right form for the story your research holds.
+          </h1>
         </div>
         <div className="lg:col-span-4 lg:pb-2">
           <p className="my-0 text-lg leading-relaxed text-gray-700">
@@ -215,9 +217,7 @@ export default function ServicesContent() {
             className="grid gap-12 border-t border-primary-dark/30 py-20 md:py-28 lg:grid-cols-12 lg:gap-16"
             aria-labelledby={`service-${service.number}`}
           >
-            <div
-              className={`lg:col-span-7 ${index === 1 ? 'lg:order-2' : ''}`}
-            >
+            <div className={`lg:col-span-7 ${index === 1 ? 'lg:order-2' : ''}`}>
               <ProjectPair examples={service.examples} />
             </div>
             <div
@@ -297,9 +297,7 @@ export default function ServicesContent() {
             and where you are stuck. I will reply within a few working days.
           </p>
           <div className="mt-7">
-            <ButtonPrimary calendlyEventSlug="jonaschlegel">
-              Or book a short call
-            </ButtonPrimary>
+            <CalendlyButton text="Or book a short call" />
           </div>
         </div>
 

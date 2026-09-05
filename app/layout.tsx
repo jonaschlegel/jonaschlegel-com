@@ -1,6 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
+import CrispScript from './components/CrispScript';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Tracking from './Tracking';
@@ -194,6 +195,7 @@ export default function RootLayout({
         <main id="main-content">{children}</main>
         <Footer />
         <Tracking />
+        <CrispScript />
       </body>
     </html>
   );

@@ -65,7 +65,7 @@ const nextConfig: NextConfig = {
           {
             key: 'Content-Security-Policy',
             value:
-              "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' cdn-cookieyes.com www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data: blob: *.google-analytics.com cdn-cookieyes.com *.basemaps.cartocdn.com *.tile.openstreetmap.org cdnjs.cloudflare.com; connect-src 'self' *.google-analytics.com *.analytics.google.com cdn-cookieyes.com log.cookieyes.com api.resend.com; frame-src 'self' sketchfab.com;",
+              "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' client.crisp.chat settings.crisp.chat widget.crisp.chat storage.crisp.chat cdn-cookieyes.com www.googletagmanager.com; style-src 'self' 'unsafe-inline' client.crisp.chat; font-src 'self' data: client.crisp.chat; img-src 'self' data: blob: *.google-analytics.com client.crisp.chat image.crisp.chat cdn-cookieyes.com *.basemaps.cartocdn.com *.tile.openstreetmap.org cdnjs.cloudflare.com; connect-src 'self' client.crisp.chat settings.crisp.chat wss://client.crisp.chat wss://client.relay.crisp.chat *.google-analytics.com *.analytics.google.com api.crisp.chat client.relay.crisp.chat cdn-cookieyes.com log.cookieyes.com api.resend.com; frame-src 'self' sketchfab.com;",
           },
         ],
       },
