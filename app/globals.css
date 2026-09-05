@@ -443,7 +443,8 @@ textarea:focus-visible {
   object-fit: contain;
 }
 
-.work-detail__figure figcaption {
+.work-detail__figure figcaption,
+.work-gallery__figure figcaption {
   padding: 0.65rem 0.75rem;
   color: #6c6a61;
   font-size: 0.75rem;
@@ -593,13 +594,6 @@ textarea:focus-visible {
   width: 100%;
   height: auto;
   object-fit: contain;
-}
-
-.work-gallery__figure figcaption {
-  padding: 0.65rem 0.75rem;
-  color: #6c6a61;
-  font-size: 0.75rem;
-  line-height: 1.45;
 }
 
 .about-archive {

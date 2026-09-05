@@ -257,8 +257,7 @@ function KnowledgeGroups({
     <div className="tool-groups">
       {groups.map((group) => (
         <p key={`knowledge-${group.title}`}>
-          <strong>{group.title}</strong>
-          {group.content}
+          <strong>{group.title}</strong> {group.content}
         </p>
       ))}
     </div>

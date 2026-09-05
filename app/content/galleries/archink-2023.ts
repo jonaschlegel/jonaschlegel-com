@@ -1,4 +1,4 @@
-import type { StaticImageData } from 'next/dist/shared/lib/image-external';
+import type { StaticImageData } from 'next/image';
 import acoustics from '../../images/archive/archInk-2023-acoustics.jpg';
 import animal from '../../images/all-work/archInk-2023-animal.jpg';
 import annotate from '../../images/all-work/archInk-2023-annotate.jpg';

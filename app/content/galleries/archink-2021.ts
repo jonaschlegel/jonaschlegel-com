@@ -1,4 +1,4 @@
-import type { StaticImageData } from 'next/dist/shared/lib/image-external';
+import type { StaticImageData } from 'next/image';
 import allTheBestRubbish from '../../images/all-work/archInk-2021-AllTheBestRubbish.webp';
 import archaeologicalIllustration from '../../images/all-work/archInk-2021-ArchaeologicalIllustration.jpg';
 import archaeologicalTheoryInDialogue from '../../images/archive/archInk-2021-ArchaeologicalTheoryInDialogue.jpg';

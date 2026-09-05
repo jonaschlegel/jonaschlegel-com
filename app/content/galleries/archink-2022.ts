@@ -1,4 +1,4 @@
-import type { StaticImageData } from 'next/dist/shared/lib/image-external';
+import type { StaticImageData } from 'next/image';
 import between from '../../images/all-work/archInk-2022-between.jpg';
 import bone from '../../images/all-work/archInk-2022-bone.jpg';
 import bones from '../../images/all-work/archInk-2022-bones.jpg';

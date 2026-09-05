@@ -1,4 +1,4 @@
-import type { StaticImageData } from 'next/dist/shared/lib/image-external';
+import type { StaticImageData } from 'next/image';
 import day1 from '../../images/archive/archInk-2025-1.jpg';
 import day18 from '../../images/all-work/archInk-2025-18.jpg';
 import day2 from '../../images/all-work/archInk-2025-2.jpg';

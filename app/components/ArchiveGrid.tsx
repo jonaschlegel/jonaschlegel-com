@@ -21,6 +21,10 @@ function shuffled<T>(values: T[]) {
   return [...values].sort(() => Math.random() - 0.5);
 }
 
+type ArchiveTile =
+  | { kind: 'image'; item: ArchiveGridItem }
+  | { kind: 'sketchfab'; item: SketchfabGridItem };
+
 /** Dense, image-led index of visual work. */
 export default function ArchiveGrid({
   items,
@@ -28,16 +32,24 @@ export default function ArchiveGrid({
   showLabels = true,
   randomize = false,
 }: ArchiveGridProps) {
-  const [orderedItems, setOrderedItems] = useState(items);
-  const [orderedSketchfabItems, setOrderedSketchfabItems] =
-    useState(sketchfabItems);
+  const [orderedTiles, setOrderedTiles] = useState<ArchiveTile[]>([
+    ...items.map((item) => ({ kind: 'image' as const, item })),
+    ...sketchfabItems.map((item) => ({ kind: 'sketchfab' as const, item })),
+  ]);
 
   useEffect(() => {
     if (!randomize) return;
 
     const shuffleTimer = window.setTimeout(() => {
-      setOrderedItems(shuffled(items));
-      setOrderedSketchfabItems(shuffled(sketchfabItems));
+      setOrderedTiles(
+        shuffled([
+          ...items.map((item) => ({ kind: 'image' as const, item })),
+          ...sketchfabItems.map((item) => ({
+            kind: 'sketchfab' as const,
+            item,
+          })),
+        ]),
+      );
     }, 0);
 
     return () => window.clearTimeout(shuffleTimer);
@@ -45,7 +57,14 @@ export default function ArchiveGrid({
 
   return (
     <div className="archive-grid">
-      {orderedItems.map((item, index) => {
+      {orderedTiles.map((tile, index) => {
+        if (tile.kind === 'sketchfab') {
+          return (
+            <SketchfabTile key={`sketchfab-${tile.item.id}`} item={tile.item} />
+          );
+        }
+
+        const item = tile.item;
         const content = (
           <Image
             src={item.src}
@@ -86,9 +105,6 @@ export default function ArchiveGrid({
           </div>
         );
       })}
-      {orderedSketchfabItems.map((item) => (
-        <SketchfabTile key={`sketchfab-${item.id}`} item={item} />
-      ))}
     </div>
   );
 }
