@@ -360,6 +360,32 @@ textarea:focus-visible {
   border: 0;
 }
 
+.archive-tile__embed-launch {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  border: 0;
+  background: #252923;
+  color: #fffdf7;
+  cursor: pointer;
+  text-align: left;
+}
+
+.archive-tile__embed-launch span {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.archive-tile__embed-launch small {
+  color: #c9c7bc;
+  font-size: 0.75rem;
+}
+
 .archive-tile__label {
   position: absolute;
   inset: auto 0 0;

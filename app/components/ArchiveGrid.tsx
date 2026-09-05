@@ -5,6 +5,7 @@ import type {
   ArchiveGridItem,
   SketchfabGridItem,
 } from '../content/archive-grid';
+import SketchfabTile from './SketchfabTile';
 
 interface ArchiveGridProps {
   items: ArchiveGridItem[];
@@ -62,24 +63,7 @@ export default function ArchiveGrid({
         );
       })}
       {sketchfabItems.map((item) => (
-        <div
-          key={`sketchfab-${item.id}`}
-          className="archive-tile archive-tile--embed"
-          aria-label={item.alt}
-        >
-          <iframe
-            title={item.title}
-            className="archive-tile__embed"
-            src={`https://sketchfab.com/models/${item.id}/embed?ui_theme=dark`}
-            sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-popups-to-escape-sandbox"
-            allow="autoplay; fullscreen; xr-spatial-tracking"
-            loading="lazy"
-          />
-          <span className="archive-tile__label">
-            <span>{item.title}</span>
-            {item.primaryPractice && <small>{item.primaryPractice}</small>}
-          </span>
-        </div>
+        <SketchfabTile key={`sketchfab-${item.id}`} item={item} />
       ))}
     </div>
   );
