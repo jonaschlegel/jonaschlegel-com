@@ -29,12 +29,13 @@ without presenting placeholder writing as finished work.
 
 ## Archive display
 
-`display` controls presentation rather than describing the artwork itself.
+`display` controls presentation rather than describing the artwork itself. The
+primary image's intrinsic dimensions determine its archive-tile proportions, so
+the image remains uncropped.
 
 | Field      | Required | Purpose                                                     |
 | ---------- | -------- | ----------------------------------------------------------- |
 | `featured` | yes      | Includes the work on the selected-work homepage.            |
-| `shape`    | yes      | Tile footprint: `feature`, `wide`, `square`, or `tall`.     |
 | `order`    | no       | Editorial order in the archive. Lower numbers appear first. |
 
 ## Images
@@ -162,7 +163,6 @@ the title and form and uses the primary image for Open Graph and Twitter cards.
   subtitle: 'Optional clarifying subtitle',
   display: {
     featured: false,
-    shape: 'square',
     order: 20,
   },
   images: {

@@ -1,10 +1,10 @@
 [
   {
-    "degree": "Ph.D. in Prehistory and Historical Archaeology",
+    "degree": "Doctoral studies in Prehistory and Historical Archaeology (not completed)",
     "institution": "University of Vienna",
     "startDate": "March 2019",
-    "endDate": "September 2023",
-    "description": "Doctoral studies focusing on prehistoric and historical archaeological research (not finished).",
+    "endDate": "September 2024",
+    "description": "Doctoral studies with a specialisation in Prehistory and Historical Archaeology. The doctoral degree was not completed.",
     "location": "Vienna, Austria",
     "url": "https://uha.univie.ac.at/en/",
     "connected project(s)": [
@@ -85,5 +85,22 @@
         "role(s)": ["hammer slag survey"]
       }
     ]
+  },
+  {
+    "degree": "B.Sc. studies in Technical Environmental Protection (not completed)",
+    "institution": "Technische Universität Berlin",
+    "startDate": "October 2009",
+    "endDate": "September 2011",
+    "description": "Undergraduate studies in technical environmental protection. The degree was not completed.",
+    "location": "Berlin, Germany",
+    "url": "https://www.tu.berlin/"
+  },
+  {
+    "degree": "Abitur",
+    "institution": "Ulrich-von-Hutten-Gymnasium",
+    "startDate": "2001",
+    "endDate": "2008",
+    "description": "Major subjects: History and Mathematics.",
+    "location": "Berlin, Germany"
   }
 ]

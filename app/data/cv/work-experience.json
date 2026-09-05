@@ -2,7 +2,7 @@
   {
     "title": "Freelancer",
     "organization": "archaeoINK",
-    "startDate": "January 2024",
+    "startDate": "October 2023",
     "endDate": "Present",
     "description": "Providing services in scientific communication, including web development (consulting and execution), illustration, knowledge management, database structures (CIDOC CRM), and controlled vocabulary for archaeological data sharing.",
     "location": "Amsterdam, Netherlands",
@@ -260,15 +260,15 @@
   {
     "title": "Excavation Worker",
     "organization": "Baden-Württemberg Landesdenkmalpflege, Ellwangen, Germany",
-    "startDate": "March 2013",
-    "endDate": "April 2013",
+    "startDate": "March 2014",
+    "endDate": "April 2014",
     "description": "Performed surveying with a total station, processed data using survey2GIS and QGIS, and conducted excavation work, including cleaning and packaging of finds for the rescue excavation at Ellwangen.",
     "location": "Ellwangen, Germany"
   },
   {
     "title": "Intern",
     "organization": "University of Tübingen, Germolles, France",
-    "startDate": "September 2013",
+    "startDate": "August 2013",
     "endDate": "September 2013",
     "description": "Conducted excavation and surveying work at the Paleolithic caves of Grottes de la Verpillière I and II, and instructed students in excavation techniques.",
     "location": "Germolles, France"
@@ -352,5 +352,29 @@
         "role(s)": ["technical drawing", "written documentation", "excavation"]
       }
     ]
+  },
+  {
+    "title": "Student Assistant",
+    "organization": "University of Vienna",
+    "startDate": "March 2021",
+    "endDate": "September 2021",
+    "description": "Lectured on archaeological surveying techniques and trained students in data processing and interpretation with ArcGIS Pro and HMC+ for the Tieschen project.",
+    "location": "Vienna, Austria"
+  },
+  {
+    "title": "Student Assistant",
+    "organization": "Ludwig Boltzmann Institute for Archaeological Prospection and Virtual Archaeology",
+    "startDate": "December 2017",
+    "endDate": "January 2018",
+    "description": "Interpreted thermoremanent anomalies and produced technical illustrations for the Carnuntum project.",
+    "location": "Vienna, Austria"
+  },
+  {
+    "title": "Student Assistant",
+    "organization": "Hochschule für Technik und Wirtschaft, Isparta, Turkey",
+    "startDate": "August 2017",
+    "endDate": "September 2017",
+    "description": "Directed geomagnetic and ground-penetrating radar prospection for the Seleukia Sidera project.",
+    "location": "Isparta, Turkey"
   }
 ]

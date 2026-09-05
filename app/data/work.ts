@@ -15,8 +15,6 @@ import adventuress from '../images/projects/adventuress-cover.jpg';
 import romanBurial from '../images/projects/roman-burial.jpg';
 import suriname from '../images/projects/suriname-tijdmachine-1.webp';
 
-export type WorkShape = 'feature' | 'wide' | 'square' | 'tall';
-
 export type WorkCopyStatus = 'draft' | 'in-review' | 'ready';
 
 export type WorkImageRole =
@@ -115,7 +113,6 @@ export interface VisualWork {
   subtitle?: string;
   display: {
     featured: boolean;
-    shape: WorkShape;
     order?: number;
   };
   images: {
@@ -140,7 +137,7 @@ export const visualWorks: VisualWork[] = [
   {
     slug: 'adventuress',
     title: 'Adventuress',
-    display: { featured: true, shape: 'feature', order: 1 },
+    display: { featured: true, order: 1 },
     images: {
       primary: {
         src: adventuress,
@@ -181,7 +178,7 @@ export const visualWorks: VisualWork[] = [
   {
     slug: 'ochre',
     title: 'Ochre',
-    display: { featured: true, shape: 'square', order: 2 },
+    display: { featured: true, order: 2 },
     images: {
       primary: {
         src: ochre,
@@ -209,7 +206,7 @@ export const visualWorks: VisualWork[] = [
   {
     slug: 'kore-in-colour',
     title: 'Kore in colour',
-    display: { featured: true, shape: 'square', order: 3 },
+    display: { featured: true, order: 3 },
     images: {
       primary: {
         src: kore,
@@ -239,7 +236,7 @@ export const visualWorks: VisualWork[] = [
   {
     slug: 'world-from-babylon',
     title: 'The world from Babylon',
-    display: { featured: true, shape: 'square', order: 4 },
+    display: { featured: true, order: 4 },
     images: {
       primary: {
         src: babylonMap,
@@ -268,7 +265,7 @@ export const visualWorks: VisualWork[] = [
   {
     slug: 'suriname-time-machine',
     title: 'Suriname Time Machine',
-    display: { featured: true, shape: 'wide', order: 5 },
+    display: { featured: true, order: 5 },
     images: {
       primary: {
         src: suriname,
@@ -310,7 +307,7 @@ export const visualWorks: VisualWork[] = [
   {
     slug: 'gender-bias',
     title: 'Gender bias',
-    display: { featured: true, shape: 'square', order: 6 },
+    display: { featured: true, order: 6 },
     images: {
       primary: {
         src: genderBias,
@@ -339,7 +336,7 @@ export const visualWorks: VisualWork[] = [
   {
     slug: 'venus',
     title: 'Venus',
-    display: { featured: true, shape: 'tall', order: 7 },
+    display: { featured: true, order: 7 },
     images: {
       primary: {
         src: venus,
@@ -369,7 +366,7 @@ export const visualWorks: VisualWork[] = [
   {
     slug: 'roman-burial',
     title: 'Roman burial',
-    display: { featured: true, shape: 'wide', order: 8 },
+    display: { featured: true, order: 8 },
     images: {
       primary: {
         src: romanBurial,
@@ -406,7 +403,7 @@ export const visualWorks: VisualWork[] = [
   {
     slug: 'friends',
     title: 'Friends',
-    display: { featured: true, shape: 'square', order: 9 },
+    display: { featured: true, order: 9 },
     images: {
       primary: {
         src: burial,
@@ -435,7 +432,7 @@ export const visualWorks: VisualWork[] = [
   {
     slug: 'what-illustration-can-do',
     title: 'What illustration can do',
-    display: { featured: true, shape: 'wide', order: 10 },
+    display: { featured: true, order: 10 },
     images: {
       primary: {
         src: illustrationTypes,
@@ -464,7 +461,7 @@ export const visualWorks: VisualWork[] = [
   {
     slug: 'bell-beaker',
     title: 'Bell Beaker',
-    display: { featured: true, shape: 'square', order: 11 },
+    display: { featured: true, order: 11 },
     images: {
       primary: {
         src: bellBeaker,
@@ -492,7 +489,7 @@ export const visualWorks: VisualWork[] = [
   {
     slug: 'pigment',
     title: 'Pigment',
-    display: { featured: true, shape: 'tall', order: 12 },
+    display: { featured: true, order: 12 },
     images: {
       primary: {
         src: pigment,
@@ -526,7 +523,7 @@ export const visualWorks: VisualWork[] = [
   {
     slug: 'shell',
     title: 'Shell',
-    display: { featured: false, shape: 'square', order: 13 },
+    display: { featured: false, order: 13 },
     images: {
       primary: {
         src: shell,
@@ -561,7 +558,7 @@ export const visualWorks: VisualWork[] = [
   {
     slug: 'residue',
     title: 'Residue',
-    display: { featured: false, shape: 'square', order: 14 },
+    display: { featured: false, order: 14 },
     images: {
       primary: {
         src: residue,
@@ -596,7 +593,7 @@ export const visualWorks: VisualWork[] = [
   {
     slug: 'bronze',
     title: 'Bronze',
-    display: { featured: false, shape: 'square', order: 15 },
+    display: { featured: false, order: 15 },
     images: {
       primary: {
         src: bronze,
