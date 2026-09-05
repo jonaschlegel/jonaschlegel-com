@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import ArchiveGrid from '../components/ArchiveGrid';
 import ArchiveIntroduction from '../components/ArchiveIntroduction';
-import { visualWorks } from '../data/work';
+import { visualWorks } from '../content/works';
 
 export const metadata: Metadata = {
   title: 'All work',

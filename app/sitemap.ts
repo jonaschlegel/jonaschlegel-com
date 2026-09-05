@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { projectsData } from './data/content';
-import { visualWorks } from './data/work';
+import { visualWorks } from './content/works';
 
 /** Generates the sitemap.xml entries for all public pages and projects. */
 export default function sitemap(): MetadataRoute.Sitemap {

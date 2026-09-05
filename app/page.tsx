@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import ArchiveGrid from './components/ArchiveGrid';
 import ArchiveIntroduction from './components/ArchiveIntroduction';
-import { selectedWorks } from './data/work';
+import { selectedWorks } from './content/works';
 
 export const metadata: Metadata = {
   title: 'archaeoINK — archaeology in images and interfaces',

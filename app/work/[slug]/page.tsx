@@ -2,7 +2,11 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getVisualWork, visualWorks, type WorkImage } from '../../data/work';
+import {
+  getVisualWork,
+  visualWorks,
+  type WorkImage,
+} from '../../content/works';
 
 interface WorkPageProps {
   params: Promise<{ slug: string }>;

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import type { VisualWork } from '../data/work';
+import type { VisualWork } from '../content/works';
 
 interface ArchiveGridProps {
   works: VisualWork[];

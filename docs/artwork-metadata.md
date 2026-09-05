@@ -1,17 +1,17 @@
 # Artwork metadata guide
 
 The visual archive has one canonical record type: `VisualWork` in
-`app/data/work.ts`. Each record describes one artwork, visual study, interface,
+`app/content/works.ts`. Each record describes one artwork, visual study, interface,
 or reconstruction. The structure separates authored content from image files
 and archive layout decisions.
 
 ## Authoring workflow
 
-1. Add the primary image to `app/images/archive/all-work` and write accurate
+1. Add the primary image to `app/images/all-work` and write accurate
    alt text.
 2. To feature it on the landing page, place a copy with the same filename in
-   `app/images/archive/landing-selection` and register that selection image in
-   `app/data/work.ts`.
+   `app/images/landing-page` and register that selection image in
+   `app/content/works.ts`.
 3. Add factual catalogue information: title, date, form, subjects, materials,
    techniques, tools, dimensions, and credits.
 4. Write the short summary and longer interpretive text.
@@ -27,9 +27,9 @@ without presenting placeholder writing as finished work.
 
 The two archive locations have deliberate, separate asset boundaries:
 
-- `app/images/archive/landing-selection` supplies only the image-led gallery on
+- `app/images/landing-page` supplies only the image-led gallery on
   the homepage.
-- `app/images/archive/all-work` supplies the complete `/work` archive and is the
+- `app/images/all-work` supplies the complete `/work` archive and is the
   canonical home of every work's primary image.
 
 The `app/images/jona-images` folder remains separate and supplies personal
@@ -57,15 +57,15 @@ the image remains uncropped.
 
 ## Images
 
-`images.primary` is required and must come from `archive/all-work`. A work is
+`images.primary` is required and must come from `images/all-work`. A work is
 included on the homepage when `images.selection` points to its matching copy in
-`archive/landing-selection`. Add supporting images to `images.gallery` using the
+`images/landing-page`. Add supporting images to `images.gallery` using the
 same `WorkImage` structure.
 
 | Images field | Required | Purpose                                                                                    |
 | ------------ | -------- | ------------------------------------------------------------------------------------------ |
-| `primary`    | yes      | Canonical `WorkImage`, whose source lives in `archive/all-work`.                           |
-| `selection`  | no       | Matching static image from `archive/landing-selection`; its presence selects the work.     |
+| `primary`    | yes      | Canonical `WorkImage`, whose source lives in `images/all-work`.                            |
+| `selection`  | no       | Matching static image from `images/landing-page`; its presence selects the work.           |
 | `gallery`    | no       | Supporting detail, process, context, or comparison images using the `WorkImage` structure. |
 
 Each `WorkImage` uses the following fields:
