@@ -15,7 +15,11 @@ export default function Navbar() {
 
   return (
     <header className="archive-masthead">
-      <Link href="/" className="archive-wordmark" aria-label="Jona Schlegel home">
+      <Link
+        href="/"
+        className="archive-wordmark"
+        aria-label="Jona Schlegel home"
+      >
         <span>Jona Schlegel</span>
         <small>Archaeology in images, objects &amp; interfaces</small>
       </Link>

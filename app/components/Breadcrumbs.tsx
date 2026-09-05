@@ -60,7 +60,10 @@ export default function Breadcrumbs({
                 <span itemProp="name">{item.label}</span>
               </Link>
             ) : (
-              <span className="inline-block leading-5 text-primary-dark" itemProp="name">
+              <span
+                className="inline-block leading-5 text-primary-dark"
+                itemProp="name"
+              >
                 {item.label}
               </span>
             )}

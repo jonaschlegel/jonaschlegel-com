@@ -85,7 +85,9 @@ export default function ProjectsGrid({
                   fill
                   priority={index === 0}
                   className="object-cover transition-transform duration-700 motion-reduce:transition-none group-hover:scale-[1.015] motion-reduce:group-hover:scale-100"
-                  sizes={index === 0 ? '100vw' : '(max-width: 1024px) 100vw, 58vw'}
+                  sizes={
+                    index === 0 ? '100vw' : '(max-width: 1024px) 100vw, 58vw'
+                  }
                 />
               </div>
               <div

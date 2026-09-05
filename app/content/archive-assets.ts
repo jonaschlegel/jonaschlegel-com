@@ -12,190 +12,183 @@ import landingPageillustrationGenderBias8 from '../images/landing-page/illustrat
 import landingPageillustrationKoreReconstruction9 from '../images/landing-page/illustration-kore-reconstruction.jpg';
 import landingPageillustrationOchre10 from '../images/landing-page/illustration-ochre.jpg';
 import landingPageillustrationTorsoStatue11 from '../images/landing-page/illustration-torso-statue.jpg';
-import allWorkadventuressCoverDesign0 from '../images/all-work/adventuress-cover-design.jpg';
-import allWorkallTheBestRubbish1 from '../images/all-work/All-The-Best-Rubbish.webp';
-import allWorkarchaeologicalIllustration2 from '../images/all-work/Archaeological-Illustration.jpg';
-import allWorkarchink2021TheArchaeologyOfHearts3 from '../images/all-work/archInk-2021-TheArchaeologyOfHearts.jpg';
-import allWorkarchink2021TheCosmonaut4 from '../images/all-work/archInk-2021-TheCosmonaut.jpg';
-import allWorkarchink2021TheLanguagesOfArchaeology5 from '../images/all-work/archInk-2021-TheLanguagesOfArchaeology.webp';
-import allWorkarchink2021TheSocialLifeOfThings6 from '../images/all-work/archInk-2021-TheSocialLifeOfThings.jpg';
-import allWorkarchink2022Between7 from '../images/all-work/archInk-2022-between.jpg';
-import allWorkarchink2022Bone8 from '../images/all-work/archInk-2022-bone.jpg';
-import allWorkarchink2022Bones9 from '../images/all-work/archInk-2022-bones.jpg';
-import allWorkarchink2022Classify10 from '../images/all-work/archInk-2022-classify.jpg';
-import allWorkarchink2022Exchange11 from '../images/all-work/archInk-2022-exchange.jpg';
-import allWorkarchink2022Fragile12 from '../images/all-work/archInk-2022-fragile.jpg';
-import allWorkarchink2022GragoyleDecoration13 from '../images/all-work/archInk-2022-gragoyle-decoration.jpg';
-import allWorkarchink2022Inscription14 from '../images/all-work/archInk-2022-inscription.jpg';
-import allWorkarchink2022Objectivity15 from '../images/all-work/archInk-2022-objectivity.jpg';
-import allWorkarchink2022Posthole16 from '../images/all-work/archInk-2022-posthole.jpg';
-import allWorkarchink2022Recreate17 from '../images/all-work/archInk-2022-recreate.jpg';
-import allWorkarchink2022Scraper18 from '../images/all-work/archInk-2022-scraper.jpg';
-import allWorkarchink2023Animal19 from '../images/all-work/archInk-2023-animal.jpg';
-import allWorkarchink2023Annotate20 from '../images/all-work/archInk-2023-annotate.jpg';
-import allWorkarchink2023Generative21 from '../images/all-work/archInk-2023-generative.jpg';
-import allWorkarchink2023Solidarity22 from '../images/all-work/archInk-2023-solidarity.jpg';
-import allWorkarchink2023Technology23 from '../images/all-work/archInk-2023-technology.jpg';
-import allWorkarchink2023Workers24 from '../images/all-work/archInk-2023-workers.jpg';
-import allWorkarchink2024125 from '../images/all-work/archInk-2024-1.jpg';
-import allWorkarchink2024226 from '../images/all-work/archInk-2024-2.jpg';
-import allWorkarchink2024427 from '../images/all-work/archInk-2024-4.jpg';
-import allWorkarchink20241028 from '../images/all-work/archInk-2024-10.jpg';
-import allWorkarchink20241429 from '../images/all-work/archInk-2024-14.jpg';
-import allWorkarchink20242030 from '../images/all-work/archInk-2024-20.jpg';
-import allWorkarchink20243131 from '../images/all-work/archInk-2024-31.jpg';
-import allWorkarchink2025232 from '../images/all-work/archInk-2025-2.jpg';
-import allWorkarchink2025333 from '../images/all-work/archInk-2025-3.jpg';
-import allWorkarchink2025434 from '../images/all-work/archInk-2025-4.jpg';
-import allWorkarchink2025535 from '../images/all-work/archInk-2025-5.jpg';
-import allWorkarchink2025836 from '../images/all-work/archInk-2025-8.jpg';
-import allWorkarchink20251837 from '../images/all-work/archInk-2025-18.jpg';
-import allWorkarchink20252038 from '../images/all-work/archInk-2025-20.jpg';
-import allWorkarchink20252139 from '../images/all-work/archInk-2025-21.jpg';
-import allWorkarchink20252240 from '../images/all-work/archInk-2025-22.jpg';
-import allWorkcache41 from '../images/all-work/Cache.jpg';
-import allWorkillustrationAnimalsInked42 from '../images/all-work/illustration-animals-inked.jpg';
-import allWorkillustrationAnthropologyLetters43 from '../images/all-work/illustration-anthropology-letters.jpg';
-import allWorkillustrationArchaeologicalStratigraphy44 from '../images/all-work/illustration-archaeological-stratigraphy.png';
-import allWorkillustrationAugnetizierCluster45 from '../images/all-work/illustration-augnetizier-cluster.jpg';
-import allWorkillustrationBabylonMap46 from '../images/all-work/illustration-babylon-map.jpg';
-import allWorkillustrationBellBeaker47 from '../images/all-work/illustration-bell-beaker.jpg';
-import allWorkillustrationBiasCherryPicking48 from '../images/all-work/illustration-bias-cherry-picking.jpg';
-import allWorkillustrationBiasEurocentismCopy49 from '../images/all-work/illustration-bias-eurocentism copy.jpg';
-import allWorkillustrationBiasEurocentism50 from '../images/all-work/illustration-bias-eurocentism.jpg';
-import allWorkillustrationBronzeAgeCluster51 from '../images/all-work/illustration-bronze-age-cluster.jpg';
-import allWorkillustrationBronzeHoard52 from '../images/all-work/illustration-bronze-hoard.jpg';
-import allWorkillustrationBrushStratigraphy53 from '../images/all-work/illustration-brush-stratigraphy.jpg';
-import allWorkillustrationBurialDogHuman54 from '../images/all-work/illustration-burial-dog-human.jpg';
-import allWorkillustrationCalcyladen55 from '../images/all-work/illustration-calcyladen.jpg';
-import allWorkillustrationCirclePosthole56 from '../images/all-work/illustration-circle-posthole.jpg';
-import allWorkillustrationFeedingReconstruction57 from '../images/all-work/illustration-feeding-reconstruction.jpg';
-import allWorkillustrationFemalBurialNecklace58 from '../images/all-work/illustration-femal-burial-necklace.jpg';
-import allWorkillustrationFueledByCoffee59 from '../images/all-work/illustration-fueled-by-coffee.jpg';
-import allWorkillustrationFunnelBeakerCluster60 from '../images/all-work/illustration-funnel-beaker-cluster.jpg';
-import allWorkillustrationGenderBias61 from '../images/all-work/illustration-gender-bias.jpg';
-import allWorkillustrationGoatVessel62 from '../images/all-work/illustration-goat-vessel.jpg';
-import allWorkillustrationKnife63 from '../images/all-work/illustration-knife.jpg';
-import allWorkillustrationKoreReconstruction64 from '../images/all-work/illustration-kore-reconstruction.jpg';
-import allWorkillustrationLinearPotteryCluster65 from '../images/all-work/illustration-linear-pottery-cluster.jpg';
-import allWorkillustrationNeolithicGraffitiReconstruction66 from '../images/all-work/illustration-neolithic-graffiti-reconstruction.jpg';
-import allWorkillustrationOchre67 from '../images/all-work/illustration-ochre.jpg';
-import allWorkillustrationPotsWithCati68 from '../images/all-work/illustration-pots-with-cati.jpg';
-import allWorkillustrationStillLife69 from '../images/all-work/illustration-still-life.jpeg';
-import allWorkillustrationTorsoStatue70 from '../images/all-work/illustration-torso-statue.jpg';
-import allWorkillustrationVenusOfWillendorfNeon71 from '../images/all-work/illustration-venus-of-willendorf-neon.jpg';
-import allWorkillustrationVenusWillendorf72 from '../images/all-work/illustration-venus-willendorf.jpg';
-import allWorkillustrationWallInterpretation73 from '../images/all-work/illustration-wall-interpretation.jpg';
-import allWorkimg2022120417082074 from '../images/all-work/Img_2022_12_04_17_08_20.jpeg';
-import allWorkimg2022120417084375 from '../images/all-work/Img_2022_12_04_17_08_43.jpeg';
-import allWorkimg2022122418004476 from '../images/all-work/Img_2022_12_24_18_00_44.jpeg';
-import allWorkimg2022122418010577 from '../images/all-work/Img_2022_12_24_18_01_05.jpeg';
-import allWorkimg2022122418103978 from '../images/all-work/Img_2022_12_24_18_10_39.jpeg';
-import allWorkimg2022122418135979 from '../images/all-work/Img_2022_12_24_18_13_59.jpeg';
-import allWorkimg535580 from '../images/all-work/IMG_5355.png';
-import allWorkimg536481 from '../images/all-work/IMG_5364.png';
-import allWorkimg537482 from '../images/all-work/IMG_5374.png';
-import allWorkimg537983 from '../images/all-work/IMG_5379.png';
-import allWorkimg539384 from '../images/all-work/IMG_5393.png';
-import allWorkimg540885 from '../images/all-work/IMG_5408.png';
-import allWorkimg554286 from '../images/all-work/IMG_5542.png';
-import allWorkimg557387 from '../images/all-work/IMG_5573.png';
-import allWorkimg558288 from '../images/all-work/IMG_5582.png';
-import allWorkimg558689 from '../images/all-work/IMG_5586.png';
-import allWorkimg560890 from '../images/all-work/IMG_5608.png';
-import allWorkimg567491 from '../images/all-work/IMG_5674.jpg';
-import allWorkimg570192 from '../images/all-work/IMG_5701.jpg';
-import allWorkimg577393 from '../images/all-work/IMG_5773.png';
-import allWorkimg578294 from '../images/all-work/IMG_5782.jpg';
-import allWorkimg581695 from '../images/all-work/IMG_5816.jpg';
-import allWorkimg589596 from '../images/all-work/IMG_5895.jpg';
-import allWorkimg593697 from '../images/all-work/IMG_5936.jpg';
-import allWorkimg593798 from '../images/all-work/IMG_5937.jpg';
-import allWorkimg597499 from '../images/all-work/IMG_5974.jpg';
-import allWorkimg5979100 from '../images/all-work/IMG_5979.jpg';
-import allWorkimg6003101 from '../images/all-work/IMG_6003.jpg';
-import allWorkimg6011102 from '../images/all-work/IMG_6011.jpg';
-import allWorkimg6012103 from '../images/all-work/IMG_6012.jpg';
-import allWorkimg6015104 from '../images/all-work/IMG_6015.jpg';
-import allWorkimg6016105 from '../images/all-work/IMG_6016.jpg';
-import allWorkimg6033106 from '../images/all-work/IMG_6033.jpg';
-import allWorkimg6042107 from '../images/all-work/IMG_6042.jpg';
-import allWorkimg6079108 from '../images/all-work/IMG_6079.jpg';
-import allWorkimg6103109 from '../images/all-work/IMG_6103.jpg';
-import allWorkimg6501110 from '../images/all-work/IMG_6501.jpg';
-import allWorkimg6523111 from '../images/all-work/IMG_6523.jpg';
-import allWorkimg6528112 from '../images/all-work/IMG_6528.jpg';
-import allWorkimg6538113 from '../images/all-work/IMG_6538.jpg';
-import allWorkimg6553114 from '../images/all-work/IMG_6553.jpg';
-import allWorkimg6564115 from '../images/all-work/IMG_6564.jpg';
-import allWorkimg6575116 from '../images/all-work/IMG_6575.jpg';
-import allWorkimg6629117 from '../images/all-work/IMG_6629.jpg';
-import allWorkimg6813118 from '../images/all-work/IMG_6813.png';
-import allWorkimg6829119 from '../images/all-work/IMG_6829.png';
-import allWorkimg6979120 from '../images/all-work/IMG_6979.png';
-import allWorkimg7023121 from '../images/all-work/IMG_7023.png';
-import allWorkimg7043122 from '../images/all-work/IMG_7043.png';
-import allWorkimg7185123 from '../images/all-work/IMG_7185.png';
-import allWorkimg7201124 from '../images/all-work/IMG_7201.png';
-import allWorkimg72302125 from '../images/all-work/IMG_7230~2.png';
-import allWorkimg7239126 from '../images/all-work/IMG_7239.png';
-import allWorkimg7245127 from '../images/all-work/IMG_7245.png';
-import allWorkimg7266128 from '../images/all-work/IMG_7266.png';
-import allWorkimg7267129 from '../images/all-work/IMG_7267.png';
-import allWorkimg7291130 from '../images/all-work/IMG_7291.png';
-import allWorkimg7340131 from '../images/all-work/IMG_7340.png';
-import allWorkimg7388132 from '../images/all-work/IMG_7388.png';
-import allWorkimg7421133 from '../images/all-work/IMG_7421.png';
-import allWorkimg7531134 from '../images/all-work/IMG_7531.jpg';
-import allWorkimg7548135 from '../images/all-work/IMG_7548.png';
-import allWorkimg7577136 from '../images/all-work/IMG_7577.png';
-import allWorkimg7624137 from '../images/all-work/IMG_7624.png';
-import allWorkimg7684138 from '../images/all-work/IMG_7684.png';
-import allWorkimg7765139 from '../images/all-work/IMG_7765.png';
-import allWorkimg7868140 from '../images/all-work/IMG_7868.png';
-import allWorkimg7899141 from '../images/all-work/IMG_7899.png';
-import allWorkimg7988142 from '../images/all-work/IMG_7988.png';
-import allWorkimg8010143 from '../images/all-work/IMG_8010.png';
-import allWorkimg8053144 from '../images/all-work/IMG_8053.png';
-import allWorkimg8054145 from '../images/all-work/IMG_8054.png';
-import allWorkimg8074146 from '../images/all-work/IMG_8074.png';
-import allWorkimg8199147 from '../images/all-work/IMG_8199.jpg';
-import allWorkimg8260148 from '../images/all-work/IMG_8260.png';
-import allWorkimg8395149 from '../images/all-work/IMG_8395.png';
-import allWorkimg8411150 from '../images/all-work/IMG_8411.png';
-import allWorkimg8421151 from '../images/all-work/IMG_8421.png';
-import allWorkimg8422152 from '../images/all-work/IMG_8422.png';
-import allWorkimg8436153 from '../images/all-work/IMG_8436.png';
-import allWorkimg8655154 from '../images/all-work/IMG_8655.jpg';
-import allWorkimg8675155 from '../images/all-work/IMG_8675.jpg';
-import allWorkimg8681156 from '../images/all-work/IMG_8681.jpg';
-import allWorkimg8683157 from '../images/all-work/IMG_8683.jpg';
-import allWorkimg8685158 from '../images/all-work/IMG_8685.jpg';
-import allWorkimg8688159 from '../images/all-work/IMG_8688.jpg';
-import allWorkimg8690160 from '../images/all-work/IMG_8690.jpg';
-import allWorkimg8693161 from '../images/all-work/IMG_8693.jpg';
-import allWorkimg8695162 from '../images/all-work/IMG_8695.jpg';
-import allWorkimg87742163 from '../images/all-work/IMG_8774~2.jpg';
-import allWorkimg8891164 from '../images/all-work/IMG_8891.jpg';
-import allWorkimg8897165 from '../images/all-work/IMG_8897.png';
-import allWorkimg8974166 from '../images/all-work/IMG_8974.jpg';
-import allWorkimg8975167 from '../images/all-work/IMG_8975.png';
-import allWorkimg8997168 from '../images/all-work/IMG_8997.png';
-import allWorkimg9017169 from '../images/all-work/IMG_9017.png';
-import allWorkimg9051170 from '../images/all-work/IMG_9051.png';
-import allWorkimg20220219112644003171 from '../images/all-work/IMG_20220219_112644_003.jpg';
-import allWorkimg20220727174100991172 from '../images/all-work/IMG_20220727_174100_991.jpg';
-import allWorkimg20230317194704586173 from '../images/all-work/IMG_20230317_194704_586.jpg';
-import allWorkimg20230512234322554174 from '../images/all-work/IMG_20230512_234322_554.jpg';
-import allWorkimg20230701165450492175 from '../images/all-work/IMG_20230701_165450_492.jpg';
-import allWorkimg20231126221732572176 from '../images/all-work/IMG_20231126_221732_572.jpg';
-import allWorkimg20240208223808458177 from '../images/all-work/IMG_20240208_223808_458.jpg';
-import allWorkimg20240214171242026178 from '../images/all-work/IMG_20240214_171242_026.jpg';
-import allWorkimg20240219233207074179 from '../images/all-work/IMG_20240219_233207_074.jpg';
-import allWorkpastraceBrandIdentity180 from '../images/all-work/pastrace-brand-identity.webp';
-import allWorkpxl20230617121211708181 from '../images/all-work/PXL_20230617_121211708.jpg';
-import allWorkraven182 from '../images/all-work/Raven.webp';
-import allWorkresearchDesign183 from '../images/all-work/Research-Design.jpg';
+import allWorkaLongTimeAgo0 from '../images/all-work/a-long-time-ago.png';
+import allWorka1 from '../images/all-work/A.jpg';
+import allWorkabsolutelySherding2 from '../images/all-work/absolutely-sherding.jpg';
+import allWorkallTheBestRubbish3 from '../images/all-work/All-The-Best-Rubbish.webp';
+import allWorkanAmarnaPeriodRelief4 from '../images/all-work/an-amarna-period-relief.png';
+import allWorkancientMaya5 from '../images/all-work/ancient-maya.png';
+import allWorkancientShellTools6 from '../images/all-work/Ancient-Shell-Tools.jpg';
+import allWorkancientSockBones7 from '../images/all-work/ancient-sock-bones.jpg';
+import allWorkannotate8 from '../images/all-work/Annotate.jpg';
+import allWorkanthropologyLetters9 from '../images/all-work/anthropology-letters.jpg';
+import allWorkarchaeo10 from '../images/all-work/archaeo.png';
+import allWorkarchaeologicalDiscoveries202211 from '../images/all-work/archaeological-discoveries-2022.jpg';
+import allWorkarchaeologicalIllustration12 from '../images/all-work/Archaeological-Illustration.jpg';
+import allWorkarchaeologicalMultiTool13 from '../images/all-work/archaeological-multi-tool.png';
+import allWorkarchaeologicalStratigraphy14 from '../images/all-work/archaeological-stratigraphy.png';
+import allWorkarchaeologyIceberg15 from '../images/all-work/archaeology-iceberg.jpg';
+import allWorkartifactCut16 from '../images/all-work/artifact-cut.jpg';
+import allWorkartifactsStippled17 from '../images/all-work/artifacts-stippled.png';
+import allWorkaugnetizierCluster18 from '../images/all-work/augnetizier-cluster.jpg';
+import allWorkautumnStratigraphy19 from '../images/all-work/autumn-stratigraphy.jpg';
+import allWorkaxes20 from '../images/all-work/axes.jpg';
+import allWorkbabylonMap21 from '../images/all-work/Babylon-map.jpg';
+import allWorkbackpack22 from '../images/all-work/Backpack.jpg';
+import allWorkbellBeakerMap23 from '../images/all-work/bell-beaker-map.png';
+import allWorkbellBeakerPaperCut24 from '../images/all-work/bell-beaker-paper-cut.jpg';
+import allWorkbellBeakerStillLife25 from '../images/all-work/bell-beaker-still-life.jpg';
+import allWorkbellBeaker26 from '../images/all-work/bell-beaker.jpg';
+import allWorkbiasCherryPicking27 from '../images/all-work/bias-cherry-picking.jpg';
+import allWorkbiasEurocentism28 from '../images/all-work/bias-eurocentism.jpg';
+import allWorkbioarchaeologyCover29 from '../images/all-work/bioarchaeology-cover.jpg';
+import allWorkbones30 from '../images/all-work/Bones.jpg';
+import allWorkbottleStippling31 from '../images/all-work/bottle-stippling.jpeg';
+import allWorkbronzeAgeCluster32 from '../images/all-work/bronze-age-cluster.jpg';
+import allWorkbronzeAgeStillLife33 from '../images/all-work/bronze-age-still-life.png';
+import allWorkbronzeBowl34 from '../images/all-work/bronze-bowl.jpg';
+import allWorkbronzeBull35 from '../images/all-work/bronze-bull.jpg';
+import allWorkbronze36 from '../images/all-work/Bronze.jpg';
+import allWorkbrushStratigraphy37 from '../images/all-work/brush-stratigraphy.jpg';
+import allWorkburialDogHuman38 from '../images/all-work/burial-dog-human.jpg';
+import allWorkcache39 from '../images/all-work/Cache.jpg';
+import allWorkcalcyladen40 from '../images/all-work/calcyladen.jpg';
+import allWorkcharmeleonGraffiti41 from '../images/all-work/charmeleon-graffiti.png';
+import allWorkcircleOfAPosthole42 from '../images/all-work/Circle-Of-A-Posthole.jpg';
+import allWorkclassify43 from '../images/all-work/Classify.jpg';
+import allWorkcowAnimalBones44 from '../images/all-work/Cow-Animal-Bones.jpg';
+import allWorkcyano45 from '../images/all-work/cyano.png';
+import allWorkdeerBoneTools46 from '../images/all-work/Deer-Bone-Tools.jpg';
+import allWorkdeerBones47 from '../images/all-work/deer-bones.jpg';
+import allWorkdeerFatLampIdeas48 from '../images/all-work/deer-fat-lamp-ideas.jpg';
+import allWorkdigitalElevationModel49 from '../images/all-work/digital-elevation-model.jpeg';
+import allWorkdiscoveryMedia50 from '../images/all-work/Discovery-Media.jpg';
+import allWorkdorothyGarrod51 from '../images/all-work/dorothy-garrod.png';
+import allWorkeasterBouquette52 from '../images/all-work/easter-bouquette.png';
+import allWorkembodiment53 from '../images/all-work/Embodiment.jpg';
+import allWorkexchangeBenin54 from '../images/all-work/Exchange-Benin.jpg';
+import allWorkexclusion55 from '../images/all-work/Exclusion.jpg';
+import allWorkexcotic56 from '../images/all-work/Excotic.jpg';
+import allWorkeyeIdolsStippled57 from '../images/all-work/eye-idols-stippled.jpg';
+import allWorkeyeIdols58 from '../images/all-work/eye-idols.png';
+import allWorkfemaleArchaeologistThroughTime59 from '../images/all-work/female-archaeologist-through-time.jpg';
+import allWorkfemaleBabyFeedingReconstruction60 from '../images/all-work/female-baby-feeding-reconstruction.jpg';
+import allWorkfemaleBurialReconstruction61 from '../images/all-work/female-burial-reconstruction.png';
+import allWorkfemaleBurialReconstructon62 from '../images/all-work/female-burial-reconstructon.jpg';
+import allWorkflake63 from '../images/all-work/flake.jpg';
+import allWorkflight64 from '../images/all-work/flight.png';
+import allWorkflintCollage65 from '../images/all-work/Flint-Collage.jpg';
+import allWorkflowerCrown66 from '../images/all-work/flower-crown.jpg';
+import allWorkfragile67 from '../images/all-work/Fragile.jpg';
+import allWorkfrogVesselStippled68 from '../images/all-work/frog-vessel-stippled.jpg';
+import allWorkfueledByCoffee69 from '../images/all-work/fueled-by-coffee.jpg';
+import allWorkfunnelBeakerCluster70 from '../images/all-work/Funnel-beaker-cluster.jpg';
+import allWorkgargoyle71 from '../images/all-work/gargoyle.jpg';
+import allWorkgearsInArchaeology72 from '../images/all-work/gears-in-archaeology.jpeg';
+import allWorkgenderBias73 from '../images/all-work/gender-bias.jpg';
+import allWorkgenerative74 from '../images/all-work/Generative.jpg';
+import allWorkgirlsAndWomenInScience75 from '../images/all-work/girls-and-women-in-science.jpeg';
+import allWorkglassStratigraphyTrowel76 from '../images/all-work/glass-stratigraphy-trowel.jpg';
+import allWorkgoatVessel77 from '../images/all-work/goat-vessel.jpg';
+import allWorkgraffitiArchaeologicalFeatureComparisson78 from '../images/all-work/graffiti-archaeological-feature-comparisson.png';
+import allWorkgragoyleDecoration79 from '../images/all-work/Gragoyle-Decoration.jpg';
+import allWorkgroundPenetratingRaderCrossSection80 from '../images/all-work/ground-penetrating-rader-cross-section.png';
+import allWorkh81 from '../images/all-work/H.jpg';
+import allWorkhatchingTorsoStatue82 from '../images/all-work/hatching-torso-statue.jpg';
+import allWorkhelmet83 from '../images/all-work/helmet.jpg';
+import allWorkindianaJonesShelf84 from '../images/all-work/indiana-jones-shelf.png';
+import allWorkinkedAnimals85 from '../images/all-work/Inked-Animals.jpg';
+import allWorkinscriptionStone86 from '../images/all-work/inscription-stone.jpg';
+import allWorkinscription87 from '../images/all-work/Inscription.jpg';
+import allWorkinternationalWomensDay88 from '../images/all-work/international-womens-day.jpeg';
+import allWorkipadProInArchaeology89 from '../images/all-work/ipad-pro-in-archaeology.png';
+import allWorkitWasntMe90 from '../images/all-work/it-wasnt-me.jpg';
+import allWorkknife91 from '../images/all-work/knife.jpg';
+import allWorkkoreReconstructionColoured92 from '../images/all-work/kore-reconstruction-coloured.jpg';
+import allWorkkreteColoured93 from '../images/all-work/krete-coloured.jpg';
+import allWorkl94 from '../images/all-work/L.jpg';
+import allWorklaptopCidocCrm95 from '../images/all-work/laptop-cidoc-crm.jpg';
+import allWorklengyell96 from '../images/all-work/lengyell.png';
+import allWorklinearPotteryCluster97 from '../images/all-work/linear-pottery-cluster.jpg';
+import allWorkmanyFieldsOfArchaeology98 from '../images/all-work/many-fields-of-archaeology.png';
+import allWorkmanyHatsOfArchaeologist99 from '../images/all-work/many-hats-of-archaeologist.jpg';
+import allWorkmayTheFourth100 from '../images/all-work/may-the-fourth.jpeg';
+import allWorkmeetTheArtist101 from '../images/all-work/meet-the-artist.jpg';
+import allWorkmiddleBronzeAgeIvoryComb102 from '../images/all-work/middle-bronze-age-ivory-comb.jpg';
+import allWorkmonoliths103 from '../images/all-work/monoliths.jpg';
+import allWorkmovementStatue104 from '../images/all-work/movement-statue.jpg';
+import allWorkmulledWineRecipe105 from '../images/all-work/mulled-wine-recipe.jpg';
+import allWorkmyPhdResearch106 from '../images/all-work/my-phd-research.png';
+import allWorknebraBronzeHoard107 from '../images/all-work/nebra-bronze-hoard.jpg';
+import allWorkneolithicGraffitiReconstruction108 from '../images/all-work/neolithic-graffiti-reconstruction.jpg';
+import allWorkneolithicStillLife109 from '../images/all-work/neolithic-still-life.png';
+import allWorknomadicBurial110 from '../images/all-work/Nomadic-Burial.jpg';
+import allWorko111 from '../images/all-work/O.jpg';
+import allWorkobjectivity112 from '../images/all-work/Objectivity.jpg';
+import allWorkochrePainting113 from '../images/all-work/ochre-painting.jpg';
+import allWorkoctopusVesselWatercolour114 from '../images/all-work/octopus-vessel-watercolour.jpg';
+import allWorkpastraceBrandIdentity115 from '../images/all-work/pastrace-brand-identity.webp';
+import allWorkphdDirectionMap116 from '../images/all-work/phd-direction-map.png';
+import allWorkpostholePaperCut117 from '../images/all-work/posthole-paper-cut.jpg';
+import allWorkpotsWithCati118 from '../images/all-work/pots-with-cati.jpg';
+import allWorkprovenance119 from '../images/all-work/Provenance.jpg';
+import allWorkr120 from '../images/all-work/R.png';
+import allWorkratSkeleton121 from '../images/all-work/rat-skeleton.jpg';
+import allWorkraven122 from '../images/all-work/Raven.webp';
+import allWorkrecreate123 from '../images/all-work/Recreate.jpg';
+import allWorkresearchDesign124 from '../images/all-work/Research-Design.jpg';
+import allWorkresearchJournalGraffiti125 from '../images/all-work/research-journal-graffiti.jpg';
+import allWorkresidue126 from '../images/all-work/Residue.jpg';
+import allWorkroamAncientSites127 from '../images/all-work/Roam-Ancient-Sites.jpg';
+import allWorkromanBurialRecontruction128 from '../images/all-work/roman-burial-recontruction.jpg';
+import allWorksafetyTools129 from '../images/all-work/safety-tools.jpg';
+import allWorkscapulaArchaeology130 from '../images/all-work/scapula-archaeology.jpg';
+import allWorkscraper131 from '../images/all-work/Scraper.jpg';
+import allWorkscribbles132 from '../images/all-work/scribbles.jpg';
+import allWorkshipsInked133 from '../images/all-work/ships-inked.png';
+import allWorksickle134 from '../images/all-work/sickle.png';
+import allWorksolidarity135 from '../images/all-work/Solidarity.jpg';
+import allWorkspectrum136 from '../images/all-work/spectrum.jpg';
+import allWorkstartigraphyLayers137 from '../images/all-work/startigraphy-layers.png';
+import allWorkstealing138 from '../images/all-work/stealing.png';
+import allWorkstereotypesTheDinosaurExcavator139 from '../images/all-work/stereotypes-the-dinosaur-excavator.jpg';
+import allWorkstereotypesTheIndianaJones140 from '../images/all-work/stereotypes-the-indiana-jones.png';
+import allWorkstereotypesTheTreasureHunter141 from '../images/all-work/stereotypes-the-treasure-hunter.jpg';
+import allWorkstillLife142 from '../images/all-work/still-life.jpg';
+import allWorkstillLife143 from '../images/all-work/still-life.png';
+import allWorkstonehenge144 from '../images/all-work/Stonehenge.jpg';
+import allWorkstratigraphicCrossSectionDrawing145 from '../images/all-work/stratigraphic-cross-section-drawing.png';
+import allWorkstratigraphicLayersLife146 from '../images/all-work/stratigraphic-layers-life.png';
+import allWorkstratigraphy147 from '../images/all-work/Stratigraphy.jpg';
+import allWorkteam148 from '../images/all-work/team.jpg';
+import allWorktechnology149 from '../images/all-work/Technology.jpg';
+import allWorktheArchaeologyOfHearts150 from '../images/all-work/The-Archaeology-Of-Hearts.jpg';
+import allWorktheBabylonianMapOfTheWorld151 from '../images/all-work/the-babylonian-map-of-the-world.png';
+import allWorktheCosmonautRecipe152 from '../images/all-work/The-Cosmonaut-Recipe.jpg';
+import allWorktheLanguagesOfArchaeology153 from '../images/all-work/The-Languages-Of-Archaeology.webp';
+import allWorktheLineBetween154 from '../images/all-work/The-Line-Between.jpg';
+import allWorkthePhoenicians155 from '../images/all-work/the-phoenicians.png';
+import allWorktheSocialLifeOfThings156 from '../images/all-work/The-Social-Life-Of-Things.jpg';
+import allWorktorsoBlended157 from '../images/all-work/torso-blended.png';
+import allWorktorsoColoured158 from '../images/all-work/torso-coloured.png';
+import allWorktoyChariotModel159 from '../images/all-work/toy-chariot-model.png';
+import allWorktrowelRainbow160 from '../images/all-work/trowel-rainbow.png';
+import allWorktrowel161 from '../images/all-work/trowel.jpg';
+import allWorktroyAndSchliemann162 from '../images/all-work/troy-and-schliemann.png';
+import allWorkunchartedVideoGame163 from '../images/all-work/Uncharted-Video-Game.jpg';
+import allWorkvenusFigureine164 from '../images/all-work/venus-figureine.png';
+import allWorkvenusFigurine165 from '../images/all-work/venus-figurine.png';
+import allWorkvenusFigurines166 from '../images/all-work/venus-figurines.jpg';
+import allWorkvenusOfWillendorfInked167 from '../images/all-work/venus-of-willendorf-inked.jpg';
+import allWorkvenusOfWillendorfNeon168 from '../images/all-work/venus-of-willendorf-neon.jpg';
+import allWorkvenusOfWillendorfSketch169 from '../images/all-work/venus-of-willendorf-sketch.png';
+import allWorkvenus170 from '../images/all-work/venus.png';
+import allWorkvisibility171 from '../images/all-work/Visibility.jpg';
+import allWorkwallGraphicInterpretation172 from '../images/all-work/wall-graphic-interpretation.jpg';
+import allWorkwomensDay173 from '../images/all-work/womens-day.png';
+import allWorkwomensHistoryMonth174 from '../images/all-work/womens-history-month.png';
+import allWorkworkers175 from '../images/all-work/Workers.jpg';
+import allWorkyouAmphoraeMyWorld176 from '../images/all-work/you-amphorae-my-world.png';
 import archiveadventuressArchaeology0 from '../images/archive/adventuress-archaeology.png';
 import archiveadventuressCoverConcept1 from '../images/archive/adventuress-cover-concept.jpg';
 import archiveadventuressCover2 from '../images/archive/adventuress-cover.jpg';
@@ -326,324 +319,2141 @@ export interface ArchiveAsset {
 }
 
 export const landingPageAssets: ArchiveAsset[] = [
-  { filename: "archInk-2021-PC.jpg", src: landingPagearchink2021PC0, width: 2400, height: 2400, alt: "ArchInk 2021 PC" },
-  { filename: "archInk-2021-WhatThisAwlMeans.jpg", src: landingPagearchink2021WhatThisAwlMeans1, width: 2400, height: 2400, alt: "ArchInk 2021 WhatThisAwlMeans" },
-  { filename: "archInk-2024-2.jpg", src: landingPagearchink202422, width: 2400, height: 2400, alt: "ArchInk 2024 2" },
-  { filename: "illustration-bell-beaker.jpg", src: landingPageillustrationBellBeaker3, width: 2400, height: 2400, alt: "Illustration Bell Beaker" },
-  { filename: "illustration-bias-eurocentism copy.jpg", src: landingPageillustrationBiasEurocentismCopy4, width: 2400, height: 1004, alt: "Illustration Bias Eurocentism Copy" },
-  { filename: "illustration-burial-dog-human.jpg", src: landingPageillustrationBurialDogHuman5, width: 2400, height: 2400, alt: "Illustration Burial Dog Human" },
-  { filename: "illustration-fueled-by-coffee.jpg", src: landingPageillustrationFueledByCoffee6, width: 2400, height: 1799, alt: "Illustration Fueled By Coffee" },
-  { filename: "illustration-funnel-beaker-cluster.jpg", src: landingPageillustrationFunnelBeakerCluster7, width: 2400, height: 2400, alt: "Illustration Funnel Beaker Cluster" },
-  { filename: "illustration-gender-bias.jpg", src: landingPageillustrationGenderBias8, width: 2000, height: 2000, alt: "Illustration Gender Bias" },
-  { filename: "illustration-kore-reconstruction.jpg", src: landingPageillustrationKoreReconstruction9, width: 2400, height: 2400, alt: "Illustration Kore Reconstruction" },
-  { filename: "illustration-ochre.jpg", src: landingPageillustrationOchre10, width: 1800, height: 2400, alt: "Illustration Ochre" },
-  { filename: "illustration-torso-statue.jpg", src: landingPageillustrationTorsoStatue11, width: 2000, height: 2000, alt: "Illustration Torso Statue" },
+  {
+    filename: 'archInk-2021-PC.jpg',
+    src: landingPagearchink2021PC0,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2021 PC',
+  },
+  {
+    filename: 'archInk-2021-WhatThisAwlMeans.jpg',
+    src: landingPagearchink2021WhatThisAwlMeans1,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2021 WhatThisAwlMeans',
+  },
+  {
+    filename: 'archInk-2024-2.jpg',
+    src: landingPagearchink202422,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2024 2',
+  },
+  {
+    filename: 'illustration-bell-beaker.jpg',
+    src: landingPageillustrationBellBeaker3,
+    width: 2400,
+    height: 2400,
+    alt: 'Illustration Bell Beaker',
+  },
+  {
+    filename: 'illustration-bias-eurocentism copy.jpg',
+    src: landingPageillustrationBiasEurocentismCopy4,
+    width: 2400,
+    height: 1004,
+    alt: 'Illustration Bias Eurocentism Copy',
+  },
+  {
+    filename: 'illustration-burial-dog-human.jpg',
+    src: landingPageillustrationBurialDogHuman5,
+    width: 2400,
+    height: 2400,
+    alt: 'Illustration Burial Dog Human',
+  },
+  {
+    filename: 'illustration-fueled-by-coffee.jpg',
+    src: landingPageillustrationFueledByCoffee6,
+    width: 2400,
+    height: 1799,
+    alt: 'Illustration Fueled By Coffee',
+  },
+  {
+    filename: 'illustration-funnel-beaker-cluster.jpg',
+    src: landingPageillustrationFunnelBeakerCluster7,
+    width: 2400,
+    height: 2400,
+    alt: 'Illustration Funnel Beaker Cluster',
+  },
+  {
+    filename: 'illustration-gender-bias.jpg',
+    src: landingPageillustrationGenderBias8,
+    width: 2000,
+    height: 2000,
+    alt: 'Illustration Gender Bias',
+  },
+  {
+    filename: 'illustration-kore-reconstruction.jpg',
+    src: landingPageillustrationKoreReconstruction9,
+    width: 2400,
+    height: 2400,
+    alt: 'Illustration Kore Reconstruction',
+  },
+  {
+    filename: 'illustration-ochre.jpg',
+    src: landingPageillustrationOchre10,
+    width: 1800,
+    height: 2400,
+    alt: 'Illustration Ochre',
+  },
+  {
+    filename: 'illustration-torso-statue.jpg',
+    src: landingPageillustrationTorsoStatue11,
+    width: 2000,
+    height: 2000,
+    alt: 'Illustration Torso Statue',
+  },
 ];
 export const allWorkAssets: ArchiveAsset[] = [
-  { filename: "adventuress-cover-design.jpg", src: allWorkadventuressCoverDesign0, width: 1200, height: 1698, alt: "Adventuress Cover Design" },
-  { filename: "All-The-Best-Rubbish.webp", src: allWorkallTheBestRubbish1, width: 2000, height: 2000, alt: "All The Best Rubbish" },
-  { filename: "Archaeological-Illustration.jpg", src: allWorkarchaeologicalIllustration2, width: 2400, height: 2400, alt: "Archaeological Illustration" },
-  { filename: "archInk-2021-TheArchaeologyOfHearts.jpg", src: allWorkarchink2021TheArchaeologyOfHearts3, width: 2400, height: 2400, alt: "ArchInk 2021 TheArchaeologyOfHearts" },
-  { filename: "archInk-2021-TheCosmonaut.jpg", src: allWorkarchink2021TheCosmonaut4, width: 2400, height: 2400, alt: "ArchInk 2021 TheCosmonaut" },
-  { filename: "archInk-2021-TheLanguagesOfArchaeology.webp", src: allWorkarchink2021TheLanguagesOfArchaeology5, width: 2400, height: 2400, alt: "ArchInk 2021 TheLanguagesOfArchaeology" },
-  { filename: "archInk-2021-TheSocialLifeOfThings.jpg", src: allWorkarchink2021TheSocialLifeOfThings6, width: 2400, height: 2400, alt: "ArchInk 2021 TheSocialLifeOfThings" },
-  { filename: "archInk-2022-between.jpg", src: allWorkarchink2022Between7, width: 2400, height: 2400, alt: "ArchInk 2022 Between" },
-  { filename: "archInk-2022-bone.jpg", src: allWorkarchink2022Bone8, width: 2400, height: 2400, alt: "ArchInk 2022 Bone" },
-  { filename: "archInk-2022-bones.jpg", src: allWorkarchink2022Bones9, width: 3000, height: 3000, alt: "ArchInk 2022 Bones" },
-  { filename: "archInk-2022-classify.jpg", src: allWorkarchink2022Classify10, width: 2400, height: 2400, alt: "ArchInk 2022 Classify" },
-  { filename: "archInk-2022-exchange.jpg", src: allWorkarchink2022Exchange11, width: 2400, height: 2400, alt: "ArchInk 2022 Exchange" },
-  { filename: "archInk-2022-fragile.jpg", src: allWorkarchink2022Fragile12, width: 2400, height: 2400, alt: "ArchInk 2022 Fragile" },
-  { filename: "archInk-2022-gragoyle-decoration.jpg", src: allWorkarchink2022GragoyleDecoration13, width: 2400, height: 2400, alt: "ArchInk 2022 Gragoyle Decoration" },
-  { filename: "archInk-2022-inscription.jpg", src: allWorkarchink2022Inscription14, width: 2400, height: 2400, alt: "ArchInk 2022 Inscription" },
-  { filename: "archInk-2022-objectivity.jpg", src: allWorkarchink2022Objectivity15, width: 2400, height: 2400, alt: "ArchInk 2022 Objectivity" },
-  { filename: "archInk-2022-posthole.jpg", src: allWorkarchink2022Posthole16, width: 2400, height: 2400, alt: "ArchInk 2022 Posthole" },
-  { filename: "archInk-2022-recreate.jpg", src: allWorkarchink2022Recreate17, width: 2400, height: 2400, alt: "ArchInk 2022 Recreate" },
-  { filename: "archInk-2022-scraper.jpg", src: allWorkarchink2022Scraper18, width: 3000, height: 3000, alt: "ArchInk 2022 Scraper" },
-  { filename: "archInk-2023-animal.jpg", src: allWorkarchink2023Animal19, width: 2000, height: 2000, alt: "ArchInk 2023 Animal" },
-  { filename: "archInk-2023-annotate.jpg", src: allWorkarchink2023Annotate20, width: 2000, height: 2000, alt: "ArchInk 2023 Annotate" },
-  { filename: "archInk-2023-generative.jpg", src: allWorkarchink2023Generative21, width: 2400, height: 2400, alt: "ArchInk 2023 Generative" },
-  { filename: "archInk-2023-solidarity.jpg", src: allWorkarchink2023Solidarity22, width: 2000, height: 2000, alt: "ArchInk 2023 Solidarity" },
-  { filename: "archInk-2023-technology.jpg", src: allWorkarchink2023Technology23, width: 2048, height: 2048, alt: "ArchInk 2023 Technology" },
-  { filename: "archInk-2023-workers.jpg", src: allWorkarchink2023Workers24, width: 2000, height: 2000, alt: "ArchInk 2023 Workers" },
-  { filename: "archInk-2024-1.jpg", src: allWorkarchink2024125, width: 2400, height: 2400, alt: "ArchInk 2024 1" },
-  { filename: "archInk-2024-2.jpg", src: allWorkarchink2024226, width: 2400, height: 2400, alt: "ArchInk 2024 2" },
-  { filename: "archInk-2024-4.jpg", src: allWorkarchink2024427, width: 2400, height: 2400, alt: "ArchInk 2024 4" },
-  { filename: "archInk-2024-10.jpg", src: allWorkarchink20241028, width: 2400, height: 2400, alt: "ArchInk 2024 10" },
-  { filename: "archInk-2024-14.jpg", src: allWorkarchink20241429, width: 2400, height: 2400, alt: "ArchInk 2024 14" },
-  { filename: "archInk-2024-20.jpg", src: allWorkarchink20242030, width: 2400, height: 2400, alt: "ArchInk 2024 20" },
-  { filename: "archInk-2024-31.jpg", src: allWorkarchink20243131, width: 2400, height: 2400, alt: "ArchInk 2024 31" },
-  { filename: "archInk-2025-2.jpg", src: allWorkarchink2025232, width: 1920, height: 2400, alt: "ArchInk 2025 2" },
-  { filename: "archInk-2025-3.jpg", src: allWorkarchink2025333, width: 1799, height: 2400, alt: "ArchInk 2025 3" },
-  { filename: "archInk-2025-4.jpg", src: allWorkarchink2025434, width: 1920, height: 2400, alt: "ArchInk 2025 4" },
-  { filename: "archInk-2025-5.jpg", src: allWorkarchink2025535, width: 1920, height: 2400, alt: "ArchInk 2025 5" },
-  { filename: "archInk-2025-8.jpg", src: allWorkarchink2025836, width: 1920, height: 2400, alt: "ArchInk 2025 8" },
-  { filename: "archInk-2025-18.jpg", src: allWorkarchink20251837, width: 1853, height: 2317, alt: "ArchInk 2025 18" },
-  { filename: "archInk-2025-20.jpg", src: allWorkarchink20252038, width: 1920, height: 2400, alt: "ArchInk 2025 20" },
-  { filename: "archInk-2025-21.jpg", src: allWorkarchink20252139, width: 2160, height: 2700, alt: "ArchInk 2025 21" },
-  { filename: "archInk-2025-22.jpg", src: allWorkarchink20252240, width: 1920, height: 2400, alt: "ArchInk 2025 22" },
-  { filename: "Cache.jpg", src: allWorkcache41, width: 2400, height: 2400, alt: "Cache" },
-  { filename: "illustration-animals-inked.jpg", src: allWorkillustrationAnimalsInked42, width: 1350, height: 2400, alt: "Illustration Animals Inked" },
-  { filename: "illustration-anthropology-letters.jpg", src: allWorkillustrationAnthropologyLetters43, width: 2400, height: 2400, alt: "Illustration Anthropology Letters" },
-  { filename: "illustration-archaeological-stratigraphy.png", src: allWorkillustrationArchaeologicalStratigraphy44, width: 2400, height: 1799, alt: "Illustration Archaeological Stratigraphy" },
-  { filename: "illustration-augnetizier-cluster.jpg", src: allWorkillustrationAugnetizierCluster45, width: 2400, height: 2400, alt: "Illustration Augnetizier Cluster" },
-  { filename: "illustration-babylon-map.jpg", src: allWorkillustrationBabylonMap46, width: 2400, height: 2400, alt: "Illustration Babylon Map" },
-  { filename: "illustration-bell-beaker.jpg", src: allWorkillustrationBellBeaker47, width: 2400, height: 2400, alt: "Illustration Bell Beaker" },
-  { filename: "illustration-bias-cherry-picking.jpg", src: allWorkillustrationBiasCherryPicking48, width: 2000, height: 2000, alt: "Illustration Bias Cherry Picking" },
-  { filename: "illustration-bias-eurocentism copy.jpg", src: allWorkillustrationBiasEurocentismCopy49, width: 2400, height: 1004, alt: "Illustration Bias Eurocentism Copy" },
-  { filename: "illustration-bias-eurocentism.jpg", src: allWorkillustrationBiasEurocentism50, width: 2400, height: 1004, alt: "Illustration Bias Eurocentism" },
-  { filename: "illustration-bronze-age-cluster.jpg", src: allWorkillustrationBronzeAgeCluster51, width: 2400, height: 2400, alt: "Illustration Bronze Age Cluster" },
-  { filename: "illustration-bronze-hoard.jpg", src: allWorkillustrationBronzeHoard52, width: 2400, height: 2400, alt: "Illustration Bronze Hoard" },
-  { filename: "illustration-brush-stratigraphy.jpg", src: allWorkillustrationBrushStratigraphy53, width: 2400, height: 2400, alt: "Illustration Brush Stratigraphy" },
-  { filename: "illustration-burial-dog-human.jpg", src: allWorkillustrationBurialDogHuman54, width: 2400, height: 2400, alt: "Illustration Burial Dog Human" },
-  { filename: "illustration-calcyladen.jpg", src: allWorkillustrationCalcyladen55, width: 2243, height: 2243, alt: "Illustration Calcyladen" },
-  { filename: "illustration-circle-posthole.jpg", src: allWorkillustrationCirclePosthole56, width: 1152, height: 1138, alt: "Illustration Circle Posthole" },
-  { filename: "illustration-feeding-reconstruction.jpg", src: allWorkillustrationFeedingReconstruction57, width: 2400, height: 2400, alt: "Illustration Feeding Reconstruction" },
-  { filename: "illustration-femal-burial-necklace.jpg", src: allWorkillustrationFemalBurialNecklace58, width: 2400, height: 2400, alt: "Illustration Femal Burial Necklace" },
-  { filename: "illustration-fueled-by-coffee.jpg", src: allWorkillustrationFueledByCoffee59, width: 2400, height: 1799, alt: "Illustration Fueled By Coffee" },
-  { filename: "illustration-funnel-beaker-cluster.jpg", src: allWorkillustrationFunnelBeakerCluster60, width: 2400, height: 2400, alt: "Illustration Funnel Beaker Cluster" },
-  { filename: "illustration-gender-bias.jpg", src: allWorkillustrationGenderBias61, width: 2000, height: 2000, alt: "Illustration Gender Bias" },
-  { filename: "illustration-goat-vessel.jpg", src: allWorkillustrationGoatVessel62, width: 2400, height: 2400, alt: "Illustration Goat Vessel" },
-  { filename: "illustration-knife.jpg", src: allWorkillustrationKnife63, width: 2400, height: 2400, alt: "Illustration Knife" },
-  { filename: "illustration-kore-reconstruction.jpg", src: allWorkillustrationKoreReconstruction64, width: 2400, height: 2400, alt: "Illustration Kore Reconstruction" },
-  { filename: "illustration-linear-pottery-cluster.jpg", src: allWorkillustrationLinearPotteryCluster65, width: 2400, height: 2400, alt: "Illustration Linear Pottery Cluster" },
-  { filename: "illustration-neolithic-graffiti-reconstruction.jpg", src: allWorkillustrationNeolithicGraffitiReconstruction66, width: 2400, height: 2400, alt: "Illustration Neolithic Graffiti Reconstruction" },
-  { filename: "illustration-ochre.jpg", src: allWorkillustrationOchre67, width: 1800, height: 2400, alt: "Illustration Ochre" },
-  { filename: "illustration-pots-with-cati.jpg", src: allWorkillustrationPotsWithCati68, width: 2400, height: 2400, alt: "Illustration Pots With Cati" },
-  { filename: "illustration-still-life.jpeg", src: allWorkillustrationStillLife69, width: 1120, height: 896, alt: "Illustration Still Life" },
-  { filename: "illustration-torso-statue.jpg", src: allWorkillustrationTorsoStatue70, width: 2000, height: 2000, alt: "Illustration Torso Statue" },
-  { filename: "illustration-venus-of-willendorf-neon.jpg", src: allWorkillustrationVenusOfWillendorfNeon71, width: 2730, height: 2730, alt: "Illustration Venus Of Willendorf Neon" },
-  { filename: "illustration-venus-willendorf.jpg", src: allWorkillustrationVenusWillendorf72, width: 2400, height: 2400, alt: "Illustration Venus Willendorf" },
-  { filename: "illustration-wall-interpretation.jpg", src: allWorkillustrationWallInterpretation73, width: 2400, height: 2400, alt: "Illustration Wall Interpretation" },
-  { filename: "Img_2022_12_04_17_08_20.jpeg", src: allWorkimg2022120417082074, width: 1152, height: 1149, alt: "Img 2022 12 04 17 08 20" },
-  { filename: "Img_2022_12_04_17_08_43.jpeg", src: allWorkimg2022120417084375, width: 1152, height: 1153, alt: "Img 2022 12 04 17 08 43" },
-  { filename: "Img_2022_12_24_18_00_44.jpeg", src: allWorkimg2022122418004476, width: 1152, height: 1152, alt: "Img 2022 12 24 18 00 44" },
-  { filename: "Img_2022_12_24_18_01_05.jpeg", src: allWorkimg2022122418010577, width: 1152, height: 1150, alt: "Img 2022 12 24 18 01 05" },
-  { filename: "Img_2022_12_24_18_10_39.jpeg", src: allWorkimg2022122418103978, width: 1152, height: 1153, alt: "Img 2022 12 24 18 10 39" },
-  { filename: "Img_2022_12_24_18_13_59.jpeg", src: allWorkimg2022122418135979, width: 1152, height: 1153, alt: "Img 2022 12 24 18 13 59" },
-  { filename: "IMG_5355.png", src: allWorkimg535580, width: 3000, height: 3000, alt: "IMG 5355" },
-  { filename: "IMG_5364.png", src: allWorkimg536481, width: 3000, height: 3000, alt: "IMG 5364" },
-  { filename: "IMG_5374.png", src: allWorkimg537482, width: 3000, height: 3000, alt: "IMG 5374" },
-  { filename: "IMG_5379.png", src: allWorkimg537983, width: 3000, height: 3000, alt: "IMG 5379" },
-  { filename: "IMG_5393.png", src: allWorkimg539384, width: 3000, height: 3000, alt: "IMG 5393" },
-  { filename: "IMG_5408.png", src: allWorkimg540885, width: 3000, height: 3000, alt: "IMG 5408" },
-  { filename: "IMG_5542.png", src: allWorkimg554286, width: 3000, height: 3000, alt: "IMG 5542" },
-  { filename: "IMG_5573.png", src: allWorkimg557387, width: 3000, height: 3000, alt: "IMG 5573" },
-  { filename: "IMG_5582.png", src: allWorkimg558288, width: 3000, height: 3000, alt: "IMG 5582" },
-  { filename: "IMG_5586.png", src: allWorkimg558689, width: 4098, height: 3072, alt: "IMG 5586" },
-  { filename: "IMG_5608.png", src: allWorkimg560890, width: 3000, height: 3000, alt: "IMG 5608" },
-  { filename: "IMG_5674.jpg", src: allWorkimg567491, width: 4098, height: 3072, alt: "IMG 5674" },
-  { filename: "IMG_5701.jpg", src: allWorkimg570192, width: 3072, height: 4098, alt: "IMG 5701" },
-  { filename: "IMG_5773.png", src: allWorkimg577393, width: 3000, height: 3000, alt: "IMG 5773" },
-  { filename: "IMG_5782.jpg", src: allWorkimg578294, width: 3072, height: 4098, alt: "IMG 5782" },
-  { filename: "IMG_5816.jpg", src: allWorkimg581695, width: 3000, height: 3000, alt: "IMG 5816" },
-  { filename: "IMG_5895.jpg", src: allWorkimg589596, width: 3000, height: 3000, alt: "IMG 5895" },
-  { filename: "IMG_5936.jpg", src: allWorkimg593697, width: 3000, height: 3000, alt: "IMG 5936" },
-  { filename: "IMG_5937.jpg", src: allWorkimg593798, width: 3000, height: 3000, alt: "IMG 5937" },
-  { filename: "IMG_5974.jpg", src: allWorkimg597499, width: 1080, height: 1920, alt: "IMG 5974" },
-  { filename: "IMG_5979.jpg", src: allWorkimg5979100, width: 1080, height: 1920, alt: "IMG 5979" },
-  { filename: "IMG_6003.jpg", src: allWorkimg6003101, width: 3000, height: 3000, alt: "IMG 6003" },
-  { filename: "IMG_6011.jpg", src: allWorkimg6011102, width: 893, height: 995, alt: "IMG 6011" },
-  { filename: "IMG_6012.jpg", src: allWorkimg6012103, width: 839, height: 1056, alt: "IMG 6012" },
-  { filename: "IMG_6015.jpg", src: allWorkimg6015104, width: 701, height: 1024, alt: "IMG 6015" },
-  { filename: "IMG_6016.jpg", src: allWorkimg6016105, width: 866, height: 1046, alt: "IMG 6016" },
-  { filename: "IMG_6033.jpg", src: allWorkimg6033106, width: 4000, height: 4000, alt: "IMG 6033" },
-  { filename: "IMG_6042.jpg", src: allWorkimg6042107, width: 3000, height: 3000, alt: "IMG 6042" },
-  { filename: "IMG_6079.jpg", src: allWorkimg6079108, width: 4000, height: 4000, alt: "IMG 6079" },
-  { filename: "IMG_6103.jpg", src: allWorkimg6103109, width: 3000, height: 3000, alt: "IMG 6103" },
-  { filename: "IMG_6501.jpg", src: allWorkimg6501110, width: 2000, height: 2027, alt: "IMG 6501" },
-  { filename: "IMG_6523.jpg", src: allWorkimg6523111, width: 3000, height: 3000, alt: "IMG 6523" },
-  { filename: "IMG_6528.jpg", src: allWorkimg6528112, width: 3000, height: 3000, alt: "IMG 6528" },
-  { filename: "IMG_6538.jpg", src: allWorkimg6538113, width: 3000, height: 3000, alt: "IMG 6538" },
-  { filename: "IMG_6553.jpg", src: allWorkimg6553114, width: 3000, height: 3000, alt: "IMG 6553" },
-  { filename: "IMG_6564.jpg", src: allWorkimg6564115, width: 1435, height: 2550, alt: "IMG 6564" },
-  { filename: "IMG_6575.jpg", src: allWorkimg6575116, width: 1435, height: 2550, alt: "IMG 6575" },
-  { filename: "IMG_6629.jpg", src: allWorkimg6629117, width: 3000, height: 3000, alt: "IMG 6629" },
-  { filename: "IMG_6813.png", src: allWorkimg6813118, width: 2700, height: 4800, alt: "IMG 6813" },
-  { filename: "IMG_6829.png", src: allWorkimg6829119, width: 2700, height: 4800, alt: "IMG 6829" },
-  { filename: "IMG_6979.png", src: allWorkimg6979120, width: 2700, height: 4800, alt: "IMG 6979" },
-  { filename: "IMG_7023.png", src: allWorkimg7023121, width: 3000, height: 3000, alt: "IMG 7023" },
-  { filename: "IMG_7043.png", src: allWorkimg7043122, width: 3000, height: 3000, alt: "IMG 7043" },
-  { filename: "IMG_7185.png", src: allWorkimg7185123, width: 2700, height: 4800, alt: "IMG 7185" },
-  { filename: "IMG_7201.png", src: allWorkimg7201124, width: 2700, height: 4800, alt: "IMG 7201" },
-  { filename: "IMG_7230~2.png", src: allWorkimg72302125, width: 2856, height: 2731, alt: "IMG 7230~2" },
-  { filename: "IMG_7239.png", src: allWorkimg7239126, width: 4000, height: 4000, alt: "IMG 7239" },
-  { filename: "IMG_7245.png", src: allWorkimg7245127, width: 3000, height: 3000, alt: "IMG 7245" },
-  { filename: "IMG_7266.png", src: allWorkimg7266128, width: 2000, height: 3556, alt: "IMG 7266" },
-  { filename: "IMG_7267.png", src: allWorkimg7267129, width: 4098, height: 3072, alt: "IMG 7267" },
-  { filename: "IMG_7291.png", src: allWorkimg7291130, width: 4892, height: 3271, alt: "IMG 7291" },
-  { filename: "IMG_7340.png", src: allWorkimg7340131, width: 4000, height: 4000, alt: "IMG 7340" },
-  { filename: "IMG_7388.png", src: allWorkimg7388132, width: 6047, height: 2646, alt: "IMG 7388" },
-  { filename: "IMG_7421.png", src: allWorkimg7421133, width: 4000, height: 4000, alt: "IMG 7421" },
-  { filename: "IMG_7531.jpg", src: allWorkimg7531134, width: 3000, height: 3000, alt: "IMG 7531" },
-  { filename: "IMG_7548.png", src: allWorkimg7548135, width: 4098, height: 3072, alt: "IMG 7548" },
-  { filename: "IMG_7577.png", src: allWorkimg7577136, width: 2700, height: 4800, alt: "IMG 7577" },
-  { filename: "IMG_7624.png", src: allWorkimg7624137, width: 3508, height: 2480, alt: "IMG 7624" },
-  { filename: "IMG_7684.png", src: allWorkimg7684138, width: 4000, height: 4000, alt: "IMG 7684" },
-  { filename: "IMG_7765.png", src: allWorkimg7765139, width: 4000, height: 4000, alt: "IMG 7765" },
-  { filename: "IMG_7868.png", src: allWorkimg7868140, width: 4098, height: 3072, alt: "IMG 7868" },
-  { filename: "IMG_7899.png", src: allWorkimg7899141, width: 4098, height: 3072, alt: "IMG 7899" },
-  { filename: "IMG_7988.png", src: allWorkimg7988142, width: 4000, height: 4000, alt: "IMG 7988" },
-  { filename: "IMG_8010.png", src: allWorkimg8010143, width: 4000, height: 4000, alt: "IMG 8010" },
-  { filename: "IMG_8053.png", src: allWorkimg8053144, width: 1080, height: 1920, alt: "IMG 8053" },
-  { filename: "IMG_8054.png", src: allWorkimg8054145, width: 1080, height: 1920, alt: "IMG 8054" },
-  { filename: "IMG_8074.png", src: allWorkimg8074146, width: 6000, height: 2000, alt: "IMG 8074" },
-  { filename: "IMG_8199.jpg", src: allWorkimg8199147, width: 3000, height: 3000, alt: "IMG 8199" },
-  { filename: "IMG_8260.png", src: allWorkimg8260148, width: 3000, height: 3000, alt: "IMG 8260" },
-  { filename: "IMG_8395.png", src: allWorkimg8395149, width: 2700, height: 4800, alt: "IMG 8395" },
-  { filename: "IMG_8411.png", src: allWorkimg8411150, width: 2700, height: 4800, alt: "IMG 8411" },
-  { filename: "IMG_8421.png", src: allWorkimg8421151, width: 2700, height: 4800, alt: "IMG 8421" },
-  { filename: "IMG_8422.png", src: allWorkimg8422152, width: 2700, height: 4800, alt: "IMG 8422" },
-  { filename: "IMG_8436.png", src: allWorkimg8436153, width: 2700, height: 4800, alt: "IMG 8436" },
-  { filename: "IMG_8655.jpg", src: allWorkimg8655154, width: 4000, height: 4000, alt: "IMG 8655" },
-  { filename: "IMG_8675.jpg", src: allWorkimg8675155, width: 3000, height: 3000, alt: "IMG 8675" },
-  { filename: "IMG_8681.jpg", src: allWorkimg8681156, width: 4000, height: 4000, alt: "IMG 8681" },
-  { filename: "IMG_8683.jpg", src: allWorkimg8683157, width: 4000, height: 4000, alt: "IMG 8683" },
-  { filename: "IMG_8685.jpg", src: allWorkimg8685158, width: 4000, height: 4000, alt: "IMG 8685" },
-  { filename: "IMG_8688.jpg", src: allWorkimg8688159, width: 3000, height: 3000, alt: "IMG 8688" },
-  { filename: "IMG_8690.jpg", src: allWorkimg8690160, width: 3000, height: 3000, alt: "IMG 8690" },
-  { filename: "IMG_8693.jpg", src: allWorkimg8693161, width: 3000, height: 3000, alt: "IMG 8693" },
-  { filename: "IMG_8695.jpg", src: allWorkimg8695162, width: 3000, height: 3000, alt: "IMG 8695" },
-  { filename: "IMG_8774~2.jpg", src: allWorkimg87742163, width: 2065, height: 2923, alt: "IMG 8774~2" },
-  { filename: "IMG_8891.jpg", src: allWorkimg8891164, width: 4000, height: 4000, alt: "IMG 8891" },
-  { filename: "IMG_8897.png", src: allWorkimg8897165, width: 4000, height: 4000, alt: "IMG 8897" },
-  { filename: "IMG_8974.jpg", src: allWorkimg8974166, width: 4000, height: 4000, alt: "IMG 8974" },
-  { filename: "IMG_8975.png", src: allWorkimg8975167, width: 4000, height: 4000, alt: "IMG 8975" },
-  { filename: "IMG_8997.png", src: allWorkimg8997168, width: 4000, height: 4000, alt: "IMG 8997" },
-  { filename: "IMG_9017.png", src: allWorkimg9017169, width: 4000, height: 4000, alt: "IMG 9017" },
-  { filename: "IMG_9051.png", src: allWorkimg9051170, width: 2268, height: 1276, alt: "IMG 9051" },
-  { filename: "IMG_20220219_112644_003.jpg", src: allWorkimg20220219112644003171, width: 3000, height: 3000, alt: "IMG 20220219 112644 003" },
-  { filename: "IMG_20220727_174100_991.jpg", src: allWorkimg20220727174100991172, width: 1440, height: 1440, alt: "IMG 20220727 174100 991" },
-  { filename: "IMG_20230317_194704_586.jpg", src: allWorkimg20230317194704586173, width: 1918, height: 1918, alt: "IMG 20230317 194704 586" },
-  { filename: "IMG_20230512_234322_554.jpg", src: allWorkimg20230512234322554174, width: 3508, height: 3508, alt: "IMG 20230512 234322 554" },
-  { filename: "IMG_20230701_165450_492.jpg", src: allWorkimg20230701165450492175, width: 1915, height: 1915, alt: "IMG 20230701 165450 492" },
-  { filename: "IMG_20231126_221732_572.jpg", src: allWorkimg20231126221732572176, width: 1440, height: 1440, alt: "IMG 20231126 221732 572" },
-  { filename: "IMG_20240208_223808_458.jpg", src: allWorkimg20240208223808458177, width: 2000, height: 2000, alt: "IMG 20240208 223808 458" },
-  { filename: "IMG_20240214_171242_026.jpg", src: allWorkimg20240214171242026178, width: 1440, height: 1440, alt: "IMG 20240214 171242 026" },
-  { filename: "IMG_20240219_233207_074.jpg", src: allWorkimg20240219233207074179, width: 2000, height: 2000, alt: "IMG 20240219 233207 074" },
-  { filename: "pastrace-brand-identity.webp", src: allWorkpastraceBrandIdentity180, width: 1672, height: 941, alt: "Pastrace Brand Identity" },
-  { filename: "PXL_20230617_121211708.jpg", src: allWorkpxl20230617121211708181, width: 2268, height: 4032, alt: "PXL 20230617 121211708" },
-  { filename: "Raven.webp", src: allWorkraven182, width: 2400, height: 2400, alt: "Raven" },
-  { filename: "Research-Design.jpg", src: allWorkresearchDesign183, width: 2400, height: 2400, alt: "Research Design" },
+  {
+    filename: 'a-long-time-ago.png',
+    src: allWorkaLongTimeAgo0,
+    width: 3000,
+    height: 3000,
+    alt: 'A Long Time Ago',
+  },
+  { filename: 'A.jpg', src: allWorka1, width: 839, height: 1056, alt: 'A' },
+  {
+    filename: 'absolutely-sherding.jpg',
+    src: allWorkabsolutelySherding2,
+    width: 1440,
+    height: 1440,
+    alt: 'Absolutely Sherding',
+  },
+  {
+    filename: 'All-The-Best-Rubbish.webp',
+    src: allWorkallTheBestRubbish3,
+    width: 2000,
+    height: 2000,
+    alt: 'All The Best Rubbish',
+  },
+  {
+    filename: 'an-amarna-period-relief.png',
+    src: allWorkanAmarnaPeriodRelief4,
+    width: 4000,
+    height: 4000,
+    alt: 'An Amarna Period Relief',
+  },
+  {
+    filename: 'ancient-maya.png',
+    src: allWorkancientMaya5,
+    width: 4098,
+    height: 3072,
+    alt: 'Ancient Maya',
+  },
+  {
+    filename: 'Ancient-Shell-Tools.jpg',
+    src: allWorkancientShellTools6,
+    width: 1920,
+    height: 2400,
+    alt: 'Ancient Shell Tools',
+  },
+  {
+    filename: 'ancient-sock-bones.jpg',
+    src: allWorkancientSockBones7,
+    width: 4000,
+    height: 4000,
+    alt: 'Ancient Sock Bones',
+  },
+  {
+    filename: 'Annotate.jpg',
+    src: allWorkannotate8,
+    width: 2000,
+    height: 2000,
+    alt: 'Annotate',
+  },
+  {
+    filename: 'anthropology-letters.jpg',
+    src: allWorkanthropologyLetters9,
+    width: 2400,
+    height: 2400,
+    alt: 'Anthropology Letters',
+  },
+  {
+    filename: 'archaeo.png',
+    src: allWorkarchaeo10,
+    width: 6000,
+    height: 2000,
+    alt: 'Archaeo',
+  },
+  {
+    filename: 'archaeological-discoveries-2022.jpg',
+    src: allWorkarchaeologicalDiscoveries202211,
+    width: 3000,
+    height: 3000,
+    alt: 'Archaeological Discoveries 2022',
+  },
+  {
+    filename: 'Archaeological-Illustration.jpg',
+    src: allWorkarchaeologicalIllustration12,
+    width: 2400,
+    height: 2400,
+    alt: 'Archaeological Illustration',
+  },
+  {
+    filename: 'archaeological-multi-tool.png',
+    src: allWorkarchaeologicalMultiTool13,
+    width: 4098,
+    height: 3072,
+    alt: 'Archaeological Multi Tool',
+  },
+  {
+    filename: 'archaeological-stratigraphy.png',
+    src: allWorkarchaeologicalStratigraphy14,
+    width: 2400,
+    height: 1799,
+    alt: 'Archaeological Stratigraphy',
+  },
+  {
+    filename: 'archaeology-iceberg.jpg',
+    src: allWorkarchaeologyIceberg15,
+    width: 3000,
+    height: 3000,
+    alt: 'Archaeology Iceberg',
+  },
+  {
+    filename: 'artifact-cut.jpg',
+    src: allWorkartifactCut16,
+    width: 3000,
+    height: 3000,
+    alt: 'Artifact Cut',
+  },
+  {
+    filename: 'artifacts-stippled.png',
+    src: allWorkartifactsStippled17,
+    width: 3000,
+    height: 3000,
+    alt: 'Artifacts Stippled',
+  },
+  {
+    filename: 'augnetizier-cluster.jpg',
+    src: allWorkaugnetizierCluster18,
+    width: 2400,
+    height: 2400,
+    alt: 'Augnetizier Cluster',
+  },
+  {
+    filename: 'autumn-stratigraphy.jpg',
+    src: allWorkautumnStratigraphy19,
+    width: 1080,
+    height: 1920,
+    alt: 'Autumn Stratigraphy',
+  },
+  {
+    filename: 'axes.jpg',
+    src: allWorkaxes20,
+    width: 1915,
+    height: 1915,
+    alt: 'Axes',
+  },
+  {
+    filename: 'Babylon-map.jpg',
+    src: allWorkbabylonMap21,
+    width: 2400,
+    height: 2400,
+    alt: 'Babylon Map',
+  },
+  {
+    filename: 'Backpack.jpg',
+    src: allWorkbackpack22,
+    width: 2400,
+    height: 2400,
+    alt: 'Backpack',
+  },
+  {
+    filename: 'bell-beaker-map.png',
+    src: allWorkbellBeakerMap23,
+    width: 4000,
+    height: 4000,
+    alt: 'Bell Beaker Map',
+  },
+  {
+    filename: 'bell-beaker-paper-cut.jpg',
+    src: allWorkbellBeakerPaperCut24,
+    width: 2000,
+    height: 2027,
+    alt: 'Bell Beaker Paper Cut',
+  },
+  {
+    filename: 'bell-beaker-still-life.jpg',
+    src: allWorkbellBeakerStillLife25,
+    width: 1918,
+    height: 1918,
+    alt: 'Bell Beaker Still Life',
+  },
+  {
+    filename: 'bell-beaker.jpg',
+    src: allWorkbellBeaker26,
+    width: 2400,
+    height: 2400,
+    alt: 'Bell Beaker',
+  },
+  {
+    filename: 'bias-cherry-picking.jpg',
+    src: allWorkbiasCherryPicking27,
+    width: 2000,
+    height: 2000,
+    alt: 'Bias Cherry Picking',
+  },
+  {
+    filename: 'bias-eurocentism.jpg',
+    src: allWorkbiasEurocentism28,
+    width: 2400,
+    height: 1004,
+    alt: 'Bias Eurocentism',
+  },
+  {
+    filename: 'bioarchaeology-cover.jpg',
+    src: allWorkbioarchaeologyCover29,
+    width: 4000,
+    height: 4000,
+    alt: 'Bioarchaeology Cover',
+  },
+  {
+    filename: 'Bones.jpg',
+    src: allWorkbones30,
+    width: 3000,
+    height: 3000,
+    alt: 'Bones',
+  },
+  {
+    filename: 'bottle-stippling.jpeg',
+    src: allWorkbottleStippling31,
+    width: 1152,
+    height: 1153,
+    alt: 'Bottle Stippling',
+  },
+  {
+    filename: 'bronze-age-cluster.jpg',
+    src: allWorkbronzeAgeCluster32,
+    width: 2400,
+    height: 2400,
+    alt: 'Bronze Age Cluster',
+  },
+  {
+    filename: 'bronze-age-still-life.png',
+    src: allWorkbronzeAgeStillLife33,
+    width: 2700,
+    height: 4800,
+    alt: 'Bronze Age Still Life',
+  },
+  {
+    filename: 'bronze-bowl.jpg',
+    src: allWorkbronzeBowl34,
+    width: 3000,
+    height: 3000,
+    alt: 'Bronze Bowl',
+  },
+  {
+    filename: 'bronze-bull.jpg',
+    src: allWorkbronzeBull35,
+    width: 4000,
+    height: 4000,
+    alt: 'Bronze Bull',
+  },
+  {
+    filename: 'Bronze.jpg',
+    src: allWorkbronze36,
+    width: 1920,
+    height: 2400,
+    alt: 'Bronze',
+  },
+  {
+    filename: 'brush-stratigraphy.jpg',
+    src: allWorkbrushStratigraphy37,
+    width: 2400,
+    height: 2400,
+    alt: 'Brush Stratigraphy',
+  },
+  {
+    filename: 'burial-dog-human.jpg',
+    src: allWorkburialDogHuman38,
+    width: 2400,
+    height: 2400,
+    alt: 'Burial Dog Human',
+  },
+  {
+    filename: 'Cache.jpg',
+    src: allWorkcache39,
+    width: 2400,
+    height: 2400,
+    alt: 'Cache',
+  },
+  {
+    filename: 'calcyladen.jpg',
+    src: allWorkcalcyladen40,
+    width: 2243,
+    height: 2243,
+    alt: 'Calcyladen',
+  },
+  {
+    filename: 'charmeleon-graffiti.png',
+    src: allWorkcharmeleonGraffiti41,
+    width: 4892,
+    height: 3271,
+    alt: 'Charmeleon Graffiti',
+  },
+  {
+    filename: 'Circle-Of-A-Posthole.jpg',
+    src: allWorkcircleOfAPosthole42,
+    width: 2400,
+    height: 2400,
+    alt: 'Circle Of A Posthole',
+  },
+  {
+    filename: 'Classify.jpg',
+    src: allWorkclassify43,
+    width: 2400,
+    height: 2400,
+    alt: 'Classify',
+  },
+  {
+    filename: 'Cow-Animal-Bones.jpg',
+    src: allWorkcowAnimalBones44,
+    width: 2000,
+    height: 2000,
+    alt: 'Cow Animal Bones',
+  },
+  {
+    filename: 'cyano.png',
+    src: allWorkcyano45,
+    width: 3000,
+    height: 3000,
+    alt: 'Cyano',
+  },
+  {
+    filename: 'Deer-Bone-Tools.jpg',
+    src: allWorkdeerBoneTools46,
+    width: 2400,
+    height: 2400,
+    alt: 'Deer Bone Tools',
+  },
+  {
+    filename: 'deer-bones.jpg',
+    src: allWorkdeerBones47,
+    width: 1435,
+    height: 2550,
+    alt: 'Deer Bones',
+  },
+  {
+    filename: 'deer-fat-lamp-ideas.jpg',
+    src: allWorkdeerFatLampIdeas48,
+    width: 3000,
+    height: 3000,
+    alt: 'Deer Fat Lamp Ideas',
+  },
+  {
+    filename: 'digital-elevation-model.jpeg',
+    src: allWorkdigitalElevationModel49,
+    width: 1152,
+    height: 1149,
+    alt: 'Digital Elevation Model',
+  },
+  {
+    filename: 'Discovery-Media.jpg',
+    src: allWorkdiscoveryMedia50,
+    width: 2400,
+    height: 2400,
+    alt: 'Discovery Media',
+  },
+  {
+    filename: 'dorothy-garrod.png',
+    src: allWorkdorothyGarrod51,
+    width: 3000,
+    height: 3000,
+    alt: 'Dorothy Garrod',
+  },
+  {
+    filename: 'easter-bouquette.png',
+    src: allWorkeasterBouquette52,
+    width: 4000,
+    height: 4000,
+    alt: 'Easter Bouquette',
+  },
+  {
+    filename: 'Embodiment.jpg',
+    src: allWorkembodiment53,
+    width: 2160,
+    height: 2700,
+    alt: 'Embodiment',
+  },
+  {
+    filename: 'Exchange-Benin.jpg',
+    src: allWorkexchangeBenin54,
+    width: 2400,
+    height: 2400,
+    alt: 'Exchange Benin',
+  },
+  {
+    filename: 'Exclusion.jpg',
+    src: allWorkexclusion55,
+    width: 1853,
+    height: 2317,
+    alt: 'Exclusion',
+  },
+  {
+    filename: 'Excotic.jpg',
+    src: allWorkexcotic56,
+    width: 2400,
+    height: 2400,
+    alt: 'Excotic',
+  },
+  {
+    filename: 'eye-idols-stippled.jpg',
+    src: allWorkeyeIdolsStippled57,
+    width: 3000,
+    height: 3000,
+    alt: 'Eye Idols Stippled',
+  },
+  {
+    filename: 'eye-idols.png',
+    src: allWorkeyeIdols58,
+    width: 3000,
+    height: 3000,
+    alt: 'Eye Idols',
+  },
+  {
+    filename: 'female-archaeologist-through-time.jpg',
+    src: allWorkfemaleArchaeologistThroughTime59,
+    width: 1200,
+    height: 1698,
+    alt: 'Female Archaeologist Through Time',
+  },
+  {
+    filename: 'female-baby-feeding-reconstruction.jpg',
+    src: allWorkfemaleBabyFeedingReconstruction60,
+    width: 2400,
+    height: 2400,
+    alt: 'Female Baby Feeding Reconstruction',
+  },
+  {
+    filename: 'female-burial-reconstruction.png',
+    src: allWorkfemaleBurialReconstruction61,
+    width: 2700,
+    height: 4800,
+    alt: 'Female Burial Reconstruction',
+  },
+  {
+    filename: 'female-burial-reconstructon.jpg',
+    src: allWorkfemaleBurialReconstructon62,
+    width: 2400,
+    height: 2400,
+    alt: 'Female Burial Reconstructon',
+  },
+  {
+    filename: 'flake.jpg',
+    src: allWorkflake63,
+    width: 3000,
+    height: 3000,
+    alt: 'Flake',
+  },
+  {
+    filename: 'flight.png',
+    src: allWorkflight64,
+    width: 3000,
+    height: 3000,
+    alt: 'Flight',
+  },
+  {
+    filename: 'Flint-Collage.jpg',
+    src: allWorkflintCollage65,
+    width: 1920,
+    height: 2400,
+    alt: 'Flint Collage',
+  },
+  {
+    filename: 'flower-crown.jpg',
+    src: allWorkflowerCrown66,
+    width: 1440,
+    height: 1440,
+    alt: 'Flower Crown',
+  },
+  {
+    filename: 'Fragile.jpg',
+    src: allWorkfragile67,
+    width: 2400,
+    height: 2400,
+    alt: 'Fragile',
+  },
+  {
+    filename: 'frog-vessel-stippled.jpg',
+    src: allWorkfrogVesselStippled68,
+    width: 3000,
+    height: 3000,
+    alt: 'Frog Vessel Stippled',
+  },
+  {
+    filename: 'fueled-by-coffee.jpg',
+    src: allWorkfueledByCoffee69,
+    width: 2400,
+    height: 1799,
+    alt: 'Fueled By Coffee',
+  },
+  {
+    filename: 'Funnel-beaker-cluster.jpg',
+    src: allWorkfunnelBeakerCluster70,
+    width: 2400,
+    height: 2400,
+    alt: 'Funnel Beaker Cluster',
+  },
+  {
+    filename: 'gargoyle.jpg',
+    src: allWorkgargoyle71,
+    width: 3000,
+    height: 3000,
+    alt: 'Gargoyle',
+  },
+  {
+    filename: 'gears-in-archaeology.jpeg',
+    src: allWorkgearsInArchaeology72,
+    width: 1152,
+    height: 1153,
+    alt: 'Gears In Archaeology',
+  },
+  {
+    filename: 'gender-bias.jpg',
+    src: allWorkgenderBias73,
+    width: 2000,
+    height: 2000,
+    alt: 'Gender Bias',
+  },
+  {
+    filename: 'Generative.jpg',
+    src: allWorkgenerative74,
+    width: 2400,
+    height: 2400,
+    alt: 'Generative',
+  },
+  {
+    filename: 'girls-and-women-in-science.jpeg',
+    src: allWorkgirlsAndWomenInScience75,
+    width: 1152,
+    height: 1153,
+    alt: 'Girls And Women In Science',
+  },
+  {
+    filename: 'glass-stratigraphy-trowel.jpg',
+    src: allWorkglassStratigraphyTrowel76,
+    width: 3072,
+    height: 4098,
+    alt: 'Glass Stratigraphy Trowel',
+  },
+  {
+    filename: 'goat-vessel.jpg',
+    src: allWorkgoatVessel77,
+    width: 2400,
+    height: 2400,
+    alt: 'Goat Vessel',
+  },
+  {
+    filename: 'graffiti-archaeological-feature-comparisson.png',
+    src: allWorkgraffitiArchaeologicalFeatureComparisson78,
+    width: 6047,
+    height: 2646,
+    alt: 'Graffiti Archaeological Feature Comparisson',
+  },
+  {
+    filename: 'Gragoyle-Decoration.jpg',
+    src: allWorkgragoyleDecoration79,
+    width: 2400,
+    height: 2400,
+    alt: 'Gragoyle Decoration',
+  },
+  {
+    filename: 'ground-penetrating-rader-cross-section.png',
+    src: allWorkgroundPenetratingRaderCrossSection80,
+    width: 2700,
+    height: 4800,
+    alt: 'Ground Penetrating Rader Cross Section',
+  },
+  { filename: 'H.jpg', src: allWorkh81, width: 893, height: 995, alt: 'H' },
+  {
+    filename: 'hatching-torso-statue.jpg',
+    src: allWorkhatchingTorsoStatue82,
+    width: 2000,
+    height: 2000,
+    alt: 'Hatching Torso Statue',
+  },
+  {
+    filename: 'helmet.jpg',
+    src: allWorkhelmet83,
+    width: 4000,
+    height: 4000,
+    alt: 'Helmet',
+  },
+  {
+    filename: 'indiana-jones-shelf.png',
+    src: allWorkindianaJonesShelf84,
+    width: 4098,
+    height: 3072,
+    alt: 'Indiana Jones Shelf',
+  },
+  {
+    filename: 'Inked-Animals.jpg',
+    src: allWorkinkedAnimals85,
+    width: 1350,
+    height: 2400,
+    alt: 'Inked Animals',
+  },
+  {
+    filename: 'inscription-stone.jpg',
+    src: allWorkinscriptionStone86,
+    width: 3000,
+    height: 3000,
+    alt: 'Inscription Stone',
+  },
+  {
+    filename: 'Inscription.jpg',
+    src: allWorkinscription87,
+    width: 2400,
+    height: 2400,
+    alt: 'Inscription',
+  },
+  {
+    filename: 'international-womens-day.jpeg',
+    src: allWorkinternationalWomensDay88,
+    width: 1152,
+    height: 1152,
+    alt: 'International Womens Day',
+  },
+  {
+    filename: 'ipad-pro-in-archaeology.png',
+    src: allWorkipadProInArchaeology89,
+    width: 3000,
+    height: 3000,
+    alt: 'Ipad Pro In Archaeology',
+  },
+  {
+    filename: 'it-wasnt-me.jpg',
+    src: allWorkitWasntMe90,
+    width: 3000,
+    height: 3000,
+    alt: 'It Wasnt Me',
+  },
+  {
+    filename: 'knife.jpg',
+    src: allWorkknife91,
+    width: 2400,
+    height: 2400,
+    alt: 'Knife',
+  },
+  {
+    filename: 'kore-reconstruction-coloured.jpg',
+    src: allWorkkoreReconstructionColoured92,
+    width: 2400,
+    height: 2400,
+    alt: 'Kore Reconstruction Coloured',
+  },
+  {
+    filename: 'krete-coloured.jpg',
+    src: allWorkkreteColoured93,
+    width: 3508,
+    height: 3508,
+    alt: 'Krete Coloured',
+  },
+  { filename: 'L.jpg', src: allWorkl94, width: 701, height: 1024, alt: 'L' },
+  {
+    filename: 'laptop-cidoc-crm.jpg',
+    src: allWorklaptopCidocCrm95,
+    width: 4000,
+    height: 4000,
+    alt: 'Laptop Cidoc Crm',
+  },
+  {
+    filename: 'lengyell.png',
+    src: allWorklengyell96,
+    width: 4000,
+    height: 4000,
+    alt: 'Lengyell',
+  },
+  {
+    filename: 'linear-pottery-cluster.jpg',
+    src: allWorklinearPotteryCluster97,
+    width: 2400,
+    height: 2400,
+    alt: 'Linear Pottery Cluster',
+  },
+  {
+    filename: 'many-fields-of-archaeology.png',
+    src: allWorkmanyFieldsOfArchaeology98,
+    width: 4000,
+    height: 4000,
+    alt: 'Many Fields Of Archaeology',
+  },
+  {
+    filename: 'many-hats-of-archaeologist.jpg',
+    src: allWorkmanyHatsOfArchaeologist99,
+    width: 4000,
+    height: 4000,
+    alt: 'Many Hats Of Archaeologist',
+  },
+  {
+    filename: 'may-the-fourth.jpeg',
+    src: allWorkmayTheFourth100,
+    width: 1152,
+    height: 1150,
+    alt: 'May The Fourth',
+  },
+  {
+    filename: 'meet-the-artist.jpg',
+    src: allWorkmeetTheArtist101,
+    width: 4000,
+    height: 4000,
+    alt: 'Meet The Artist',
+  },
+  {
+    filename: 'middle-bronze-age-ivory-comb.jpg',
+    src: allWorkmiddleBronzeAgeIvoryComb102,
+    width: 3000,
+    height: 3000,
+    alt: 'Middle Bronze Age Ivory Comb',
+  },
+  {
+    filename: 'monoliths.jpg',
+    src: allWorkmonoliths103,
+    width: 1440,
+    height: 1440,
+    alt: 'Monoliths',
+  },
+  {
+    filename: 'movement-statue.jpg',
+    src: allWorkmovementStatue104,
+    width: 3000,
+    height: 3000,
+    alt: 'Movement Statue',
+  },
+  {
+    filename: 'mulled-wine-recipe.jpg',
+    src: allWorkmulledWineRecipe105,
+    width: 3000,
+    height: 3000,
+    alt: 'Mulled Wine Recipe',
+  },
+  {
+    filename: 'my-phd-research.png',
+    src: allWorkmyPhdResearch106,
+    width: 4098,
+    height: 3072,
+    alt: 'My Phd Research',
+  },
+  {
+    filename: 'nebra-bronze-hoard.jpg',
+    src: allWorknebraBronzeHoard107,
+    width: 2400,
+    height: 2400,
+    alt: 'Nebra Bronze Hoard',
+  },
+  {
+    filename: 'neolithic-graffiti-reconstruction.jpg',
+    src: allWorkneolithicGraffitiReconstruction108,
+    width: 2400,
+    height: 2400,
+    alt: 'Neolithic Graffiti Reconstruction',
+  },
+  {
+    filename: 'neolithic-still-life.png',
+    src: allWorkneolithicStillLife109,
+    width: 2700,
+    height: 4800,
+    alt: 'Neolithic Still Life',
+  },
+  {
+    filename: 'Nomadic-Burial.jpg',
+    src: allWorknomadicBurial110,
+    width: 2400,
+    height: 2400,
+    alt: 'Nomadic Burial',
+  },
+  { filename: 'O.jpg', src: allWorko111, width: 866, height: 1046, alt: 'O' },
+  {
+    filename: 'Objectivity.jpg',
+    src: allWorkobjectivity112,
+    width: 2400,
+    height: 2400,
+    alt: 'Objectivity',
+  },
+  {
+    filename: 'ochre-painting.jpg',
+    src: allWorkochrePainting113,
+    width: 1800,
+    height: 2400,
+    alt: 'Ochre Painting',
+  },
+  {
+    filename: 'octopus-vessel-watercolour.jpg',
+    src: allWorkoctopusVesselWatercolour114,
+    width: 2268,
+    height: 4032,
+    alt: 'Octopus Vessel Watercolour',
+  },
+  {
+    filename: 'pastrace-brand-identity.webp',
+    src: allWorkpastraceBrandIdentity115,
+    width: 1672,
+    height: 941,
+    alt: 'Pastrace Brand Identity',
+  },
+  {
+    filename: 'phd-direction-map.png',
+    src: allWorkphdDirectionMap116,
+    width: 3000,
+    height: 3000,
+    alt: 'Phd Direction Map',
+  },
+  {
+    filename: 'posthole-paper-cut.jpg',
+    src: allWorkpostholePaperCut117,
+    width: 3000,
+    height: 3000,
+    alt: 'Posthole Paper Cut',
+  },
+  {
+    filename: 'pots-with-cati.jpg',
+    src: allWorkpotsWithCati118,
+    width: 2400,
+    height: 2400,
+    alt: 'Pots With Cati',
+  },
+  {
+    filename: 'Provenance.jpg',
+    src: allWorkprovenance119,
+    width: 1920,
+    height: 2400,
+    alt: 'Provenance',
+  },
+  { filename: 'R.png', src: allWorkr120, width: 4000, height: 4000, alt: 'R' },
+  {
+    filename: 'rat-skeleton.jpg',
+    src: allWorkratSkeleton121,
+    width: 3000,
+    height: 3000,
+    alt: 'Rat Skeleton',
+  },
+  {
+    filename: 'Raven.webp',
+    src: allWorkraven122,
+    width: 2400,
+    height: 2400,
+    alt: 'Raven',
+  },
+  {
+    filename: 'Recreate.jpg',
+    src: allWorkrecreate123,
+    width: 2400,
+    height: 2400,
+    alt: 'Recreate',
+  },
+  {
+    filename: 'Research-Design.jpg',
+    src: allWorkresearchDesign124,
+    width: 2400,
+    height: 2400,
+    alt: 'Research Design',
+  },
+  {
+    filename: 'research-journal-graffiti.jpg',
+    src: allWorkresearchJournalGraffiti125,
+    width: 4098,
+    height: 3072,
+    alt: 'Research Journal Graffiti',
+  },
+  {
+    filename: 'Residue.jpg',
+    src: allWorkresidue126,
+    width: 1799,
+    height: 2400,
+    alt: 'Residue',
+  },
+  {
+    filename: 'Roam-Ancient-Sites.jpg',
+    src: allWorkroamAncientSites127,
+    width: 2400,
+    height: 2400,
+    alt: 'Roam Ancient Sites',
+  },
+  {
+    filename: 'roman-burial-recontruction.jpg',
+    src: allWorkromanBurialRecontruction128,
+    width: 2065,
+    height: 2923,
+    alt: 'Roman Burial Recontruction',
+  },
+  {
+    filename: 'safety-tools.jpg',
+    src: allWorksafetyTools129,
+    width: 3000,
+    height: 3000,
+    alt: 'Safety Tools',
+  },
+  {
+    filename: 'scapula-archaeology.jpg',
+    src: allWorkscapulaArchaeology130,
+    width: 3000,
+    height: 3000,
+    alt: 'Scapula Archaeology',
+  },
+  {
+    filename: 'Scraper.jpg',
+    src: allWorkscraper131,
+    width: 3000,
+    height: 3000,
+    alt: 'Scraper',
+  },
+  {
+    filename: 'scribbles.jpg',
+    src: allWorkscribbles132,
+    width: 1080,
+    height: 1920,
+    alt: 'Scribbles',
+  },
+  {
+    filename: 'ships-inked.png',
+    src: allWorkshipsInked133,
+    width: 2700,
+    height: 4800,
+    alt: 'Ships Inked',
+  },
+  {
+    filename: 'sickle.png',
+    src: allWorksickle134,
+    width: 4000,
+    height: 4000,
+    alt: 'Sickle',
+  },
+  {
+    filename: 'Solidarity.jpg',
+    src: allWorksolidarity135,
+    width: 2000,
+    height: 2000,
+    alt: 'Solidarity',
+  },
+  {
+    filename: 'spectrum.jpg',
+    src: allWorkspectrum136,
+    width: 3000,
+    height: 3000,
+    alt: 'Spectrum',
+  },
+  {
+    filename: 'startigraphy-layers.png',
+    src: allWorkstartigraphyLayers137,
+    width: 2856,
+    height: 2731,
+    alt: 'Startigraphy Layers',
+  },
+  {
+    filename: 'stealing.png',
+    src: allWorkstealing138,
+    width: 3000,
+    height: 3000,
+    alt: 'Stealing',
+  },
+  {
+    filename: 'stereotypes-the-dinosaur-excavator.jpg',
+    src: allWorkstereotypesTheDinosaurExcavator139,
+    width: 2000,
+    height: 2000,
+    alt: 'Stereotypes The Dinosaur Excavator',
+  },
+  {
+    filename: 'stereotypes-the-indiana-jones.png',
+    src: allWorkstereotypesTheIndianaJones140,
+    width: 4000,
+    height: 4000,
+    alt: 'Stereotypes The Indiana Jones',
+  },
+  {
+    filename: 'stereotypes-the-treasure-hunter.jpg',
+    src: allWorkstereotypesTheTreasureHunter141,
+    width: 2000,
+    height: 2000,
+    alt: 'Stereotypes The Treasure Hunter',
+  },
+  {
+    filename: 'still-life.jpg',
+    src: allWorkstillLife142,
+    width: 4000,
+    height: 4000,
+    alt: 'Still Life',
+  },
+  {
+    filename: 'still-life.png',
+    src: allWorkstillLife143,
+    width: 2700,
+    height: 4800,
+    alt: 'Still Life',
+  },
+  {
+    filename: 'Stonehenge.jpg',
+    src: allWorkstonehenge144,
+    width: 2400,
+    height: 2400,
+    alt: 'Stonehenge',
+  },
+  {
+    filename: 'stratigraphic-cross-section-drawing.png',
+    src: allWorkstratigraphicCrossSectionDrawing145,
+    width: 2268,
+    height: 1276,
+    alt: 'Stratigraphic Cross Section Drawing',
+  },
+  {
+    filename: 'stratigraphic-layers-life.png',
+    src: allWorkstratigraphicLayersLife146,
+    width: 2000,
+    height: 3556,
+    alt: 'Stratigraphic Layers Life',
+  },
+  {
+    filename: 'Stratigraphy.jpg',
+    src: allWorkstratigraphy147,
+    width: 1920,
+    height: 2400,
+    alt: 'Stratigraphy',
+  },
+  {
+    filename: 'team.jpg',
+    src: allWorkteam148,
+    width: 3000,
+    height: 3000,
+    alt: 'Team',
+  },
+  {
+    filename: 'Technology.jpg',
+    src: allWorktechnology149,
+    width: 2048,
+    height: 2048,
+    alt: 'Technology',
+  },
+  {
+    filename: 'The-Archaeology-Of-Hearts.jpg',
+    src: allWorktheArchaeologyOfHearts150,
+    width: 2400,
+    height: 2400,
+    alt: 'The Archaeology Of Hearts',
+  },
+  {
+    filename: 'the-babylonian-map-of-the-world.png',
+    src: allWorktheBabylonianMapOfTheWorld151,
+    width: 3000,
+    height: 3000,
+    alt: 'The Babylonian Map Of The World',
+  },
+  {
+    filename: 'The-Cosmonaut-Recipe.jpg',
+    src: allWorktheCosmonautRecipe152,
+    width: 2400,
+    height: 2400,
+    alt: 'The Cosmonaut Recipe',
+  },
+  {
+    filename: 'The-Languages-Of-Archaeology.webp',
+    src: allWorktheLanguagesOfArchaeology153,
+    width: 2400,
+    height: 2400,
+    alt: 'The Languages Of Archaeology',
+  },
+  {
+    filename: 'The-Line-Between.jpg',
+    src: allWorktheLineBetween154,
+    width: 2400,
+    height: 2400,
+    alt: 'The Line Between',
+  },
+  {
+    filename: 'the-phoenicians.png',
+    src: allWorkthePhoenicians155,
+    width: 3000,
+    height: 3000,
+    alt: 'The Phoenicians',
+  },
+  {
+    filename: 'The-Social-Life-Of-Things.jpg',
+    src: allWorktheSocialLifeOfThings156,
+    width: 2400,
+    height: 2400,
+    alt: 'The Social Life Of Things',
+  },
+  {
+    filename: 'torso-blended.png',
+    src: allWorktorsoBlended157,
+    width: 1080,
+    height: 1920,
+    alt: 'Torso Blended',
+  },
+  {
+    filename: 'torso-coloured.png',
+    src: allWorktorsoColoured158,
+    width: 1080,
+    height: 1920,
+    alt: 'Torso Coloured',
+  },
+  {
+    filename: 'toy-chariot-model.png',
+    src: allWorktoyChariotModel159,
+    width: 3000,
+    height: 3000,
+    alt: 'Toy Chariot Model',
+  },
+  {
+    filename: 'trowel-rainbow.png',
+    src: allWorktrowelRainbow160,
+    width: 4000,
+    height: 4000,
+    alt: 'Trowel Rainbow',
+  },
+  {
+    filename: 'trowel.jpg',
+    src: allWorktrowel161,
+    width: 3072,
+    height: 4098,
+    alt: 'Trowel',
+  },
+  {
+    filename: 'troy-and-schliemann.png',
+    src: allWorktroyAndSchliemann162,
+    width: 3000,
+    height: 3000,
+    alt: 'Troy And Schliemann',
+  },
+  {
+    filename: 'Uncharted-Video-Game.jpg',
+    src: allWorkunchartedVideoGame163,
+    width: 2400,
+    height: 2400,
+    alt: 'Uncharted Video Game',
+  },
+  {
+    filename: 'venus-figureine.png',
+    src: allWorkvenusFigureine164,
+    width: 2700,
+    height: 4800,
+    alt: 'Venus Figureine',
+  },
+  {
+    filename: 'venus-figurine.png',
+    src: allWorkvenusFigurine165,
+    width: 2700,
+    height: 4800,
+    alt: 'Venus Figurine',
+  },
+  {
+    filename: 'venus-figurines.jpg',
+    src: allWorkvenusFigurines166,
+    width: 1435,
+    height: 2550,
+    alt: 'Venus Figurines',
+  },
+  {
+    filename: 'venus-of-willendorf-inked.jpg',
+    src: allWorkvenusOfWillendorfInked167,
+    width: 2400,
+    height: 2400,
+    alt: 'Venus Of Willendorf Inked',
+  },
+  {
+    filename: 'venus-of-willendorf-neon.jpg',
+    src: allWorkvenusOfWillendorfNeon168,
+    width: 2730,
+    height: 2730,
+    alt: 'Venus Of Willendorf Neon',
+  },
+  {
+    filename: 'venus-of-willendorf-sketch.png',
+    src: allWorkvenusOfWillendorfSketch169,
+    width: 2700,
+    height: 4800,
+    alt: 'Venus Of Willendorf Sketch',
+  },
+  {
+    filename: 'venus.png',
+    src: allWorkvenus170,
+    width: 2700,
+    height: 4800,
+    alt: 'Venus',
+  },
+  {
+    filename: 'Visibility.jpg',
+    src: allWorkvisibility171,
+    width: 1920,
+    height: 2400,
+    alt: 'Visibility',
+  },
+  {
+    filename: 'wall-graphic-interpretation.jpg',
+    src: allWorkwallGraphicInterpretation172,
+    width: 2400,
+    height: 2400,
+    alt: 'Wall Graphic Interpretation',
+  },
+  {
+    filename: 'womens-day.png',
+    src: allWorkwomensDay173,
+    width: 3000,
+    height: 3000,
+    alt: 'Womens Day',
+  },
+  {
+    filename: 'womens-history-month.png',
+    src: allWorkwomensHistoryMonth174,
+    width: 4000,
+    height: 4000,
+    alt: 'Womens History Month',
+  },
+  {
+    filename: 'Workers.jpg',
+    src: allWorkworkers175,
+    width: 2000,
+    height: 2000,
+    alt: 'Workers',
+  },
+  {
+    filename: 'you-amphorae-my-world.png',
+    src: allWorkyouAmphoraeMyWorld176,
+    width: 4000,
+    height: 4000,
+    alt: 'You Amphorae My World',
+  },
 ];
 export const archiveAssets: ArchiveAsset[] = [
-  { filename: "adventuress-archaeology.png", src: archiveadventuressArchaeology0, width: 500, height: 500, alt: "Adventuress Archaeology" },
-  { filename: "adventuress-cover-concept.jpg", src: archiveadventuressCoverConcept1, width: 1200, height: 1698, alt: "Adventuress Cover Concept" },
-  { filename: "adventuress-cover.jpg", src: archiveadventuressCover2, width: 1200, height: 901, alt: "Adventuress Cover" },
-  { filename: "archaeo-zine.jpg", src: archivearchaeoZine3, width: 2000, height: 1501, alt: "Archaeo Zine" },
-  { filename: "archaeological-illustrating.jpg", src: archivearchaeologicalIllustrating4, width: 2000, height: 1501, alt: "Archaeological Illustrating" },
-  { filename: "archaeological-sci-comm.jpg", src: archivearchaeologicalSciComm5, width: 2000, height: 1501, alt: "Archaeological Sci Comm" },
-  { filename: "archaeological-site-overview.webp", src: archivearchaeologicalSiteOverview6, width: 2400, height: 944, alt: "Archaeological Site Overview" },
-  { filename: "archaeology-journaling.png", src: archivearchaeologyJournaling7, width: 1200, height: 901, alt: "Archaeology Journaling" },
-  { filename: "archaeology-of-bias.png", src: archivearchaeologyOfBias8, width: 1200, height: 901, alt: "Archaeology Of Bias" },
-  { filename: "archeomatch.png", src: archivearcheomatch9, width: 1200, height: 901, alt: "Archeomatch" },
-  { filename: "archInk-2021-ArchaeologicalTheoryInDialogue.jpg", src: archivearchink2021ArchaeologicalTheoryInDialogue10, width: 2400, height: 2400, alt: "ArchInk 2021 ArchaeologicalTheoryInDialogue" },
-  { filename: "archInk-2021-ArchaeologyIsABrand.jpg", src: archivearchink2021ArchaeologyIsABrand11, width: 2400, height: 2400, alt: "ArchInk 2021 ArchaeologyIsABrand" },
-  { filename: "archInk-2021-Choose.jpg", src: archivearchink2021Choose12, width: 2400, height: 2400, alt: "ArchInk 2021 Choose" },
-  { filename: "archInk-2021-InSmallThingsForgotten.jpg", src: archivearchink2021InSmallThingsForgotten13, width: 2400, height: 2400, alt: "ArchInk 2021 InSmallThingsForgotten" },
-  { filename: "archInk-2021-ReadingTheEveryday.jpg", src: archivearchink2021ReadingTheEveryday14, width: 2400, height: 2400, alt: "ArchInk 2021 ReadingTheEveryday" },
-  { filename: "archInk-2021-ThePerceptionOfTheEnvironment.jpg", src: archivearchink2021ThePerceptionOfTheEnvironment15, width: 2400, height: 2400, alt: "ArchInk 2021 ThePerceptionOfTheEnvironment" },
-  { filename: "archInk-2021-ThePlaceOfStone.jpg", src: archivearchink2021ThePlaceOfStone16, width: 2400, height: 2400, alt: "ArchInk 2021 ThePlaceOfStone" },
-  { filename: "archInk-2021-uncommonGround.png", src: archivearchink2021UncommonGround17, width: 2400, height: 2400, alt: "ArchInk 2021 UncommonGround" },
-  { filename: "archInk-2022-building.jpg", src: archivearchink2022Building18, width: 2400, height: 2400, alt: "ArchInk 2022 Building" },
-  { filename: "archInk-2022-goat.jpg", src: archivearchink2022Goat19, width: 3000, height: 3000, alt: "ArchInk 2022 Goat" },
-  { filename: "archInk-2022-matter-scrurry.jpg", src: archivearchink2022MatterScrurry20, width: 2048, height: 2048, alt: "ArchInk 2022 Matter Scrurry" },
-  { filename: "archInk-2022-porous.jpg", src: archivearchink2022Porous21, width: 2400, height: 2400, alt: "ArchInk 2022 Porous" },
-  { filename: "archInk-2022-scallop-patina.jpg", src: archivearchink2022ScallopPatina22, width: 2048, height: 2048, alt: "ArchInk 2022 Scallop Patina" },
-  { filename: "archInk-2022-sound.jpg", src: archivearchink2022Sound23, width: 2400, height: 2400, alt: "ArchInk 2022 Sound" },
-  { filename: "archInk-2022-spectrum.jpg", src: archivearchink2022Spectrum24, width: 2400, height: 2400, alt: "ArchInk 2022 Spectrum" },
-  { filename: "archInk-2022-subfield.jpg", src: archivearchink2022Subfield25, width: 3000, height: 3000, alt: "ArchInk 2022 Subfield" },
-  { filename: "archInk-2022-team.jpg", src: archivearchink2022Team26, width: 2400, height: 2400, alt: "ArchInk 2022 Team" },
-  { filename: "archInk-2022-triangle.jpeg", src: archivearchink2022Triangle27, width: 1149, height: 1148, alt: "ArchInk 2022 Triangle" },
-  { filename: "archInk-2023-acoustics.jpg", src: archivearchink2023Acoustics28, width: 2400, height: 2400, alt: "ArchInk 2023 Acoustics" },
-  { filename: "archInk-2023-border.jpg", src: archivearchink2023Border29, width: 2400, height: 2400, alt: "ArchInk 2023 Border" },
-  { filename: "archInk-2023-bread.jpg", src: archivearchink2023Bread30, width: 2400, height: 2400, alt: "ArchInk 2023 Bread" },
-  { filename: "archInk-2023-care.jpg", src: archivearchink2023Care31, width: 2400, height: 2400, alt: "ArchInk 2023 Care" },
-  { filename: "archInk-2023-consolidate.jpg", src: archivearchink2023Consolidate32, width: 2000, height: 2000, alt: "ArchInk 2023 Consolidate" },
-  { filename: "archInk-2023-consult.jpg", src: archivearchink2023Consult33, width: 2000, height: 2000, alt: "ArchInk 2023 Consult" },
-  { filename: "archInk-2023-craft.jpg", src: archivearchink2023Craft34, width: 2400, height: 2400, alt: "ArchInk 2023 Craft" },
-  { filename: "archInk-2023-dinner.jpg", src: archivearchink2023Dinner35, width: 2400, height: 2400, alt: "ArchInk 2023 Dinner" },
-  { filename: "archInk-2023-distribution.jpg", src: archivearchink2023Distribution36, width: 2400, height: 2400, alt: "ArchInk 2023 Distribution" },
-  { filename: "archInk-2023-revolution.jpg", src: archivearchink2023Revolution37, width: 2400, height: 2400, alt: "ArchInk 2023 Revolution" },
-  { filename: "archInk-2023-roses.jpg", src: archivearchink2023Roses38, width: 2400, height: 2400, alt: "ArchInk 2023 Roses" },
-  { filename: "archInk-2023-teeth.jpg", src: archivearchink2023Teeth39, width: 2000, height: 2000, alt: "ArchInk 2023 Teeth" },
-  { filename: "archInk-2023-trust.jpg", src: archivearchink2023Trust40, width: 2000, height: 2000, alt: "ArchInk 2023 Trust" },
-  { filename: "archInk-2024-3.jpg", src: archivearchink2024341, width: 2400, height: 2400, alt: "ArchInk 2024 3" },
-  { filename: "archInk-2024-5.jpg", src: archivearchink2024542, width: 1152, height: 1129, alt: "ArchInk 2024 5" },
-  { filename: "archInk-2024-6.jpg", src: archivearchink2024643, width: 2400, height: 2400, alt: "ArchInk 2024 6" },
-  { filename: "archInk-2024-7.jpg", src: archivearchink2024744, width: 2400, height: 2400, alt: "ArchInk 2024 7" },
-  { filename: "archInk-2024-8.jpg", src: archivearchink2024845, width: 2400, height: 2400, alt: "ArchInk 2024 8" },
-  { filename: "archInk-2024-9.jpg", src: archivearchink2024946, width: 2400, height: 2400, alt: "ArchInk 2024 9" },
-  { filename: "archInk-2024-11.jpg", src: archivearchink20241147, width: 2400, height: 2400, alt: "ArchInk 2024 11" },
-  { filename: "archInk-2024-13.jpg", src: archivearchink20241348, width: 2400, height: 2400, alt: "ArchInk 2024 13" },
-  { filename: "archInk-2024-15.jpg", src: archivearchink20241549, width: 2400, height: 2400, alt: "ArchInk 2024 15" },
-  { filename: "archInk-2024-16.jpg", src: archivearchink20241650, width: 2400, height: 2400, alt: "ArchInk 2024 16" },
-  { filename: "archInk-2024-17.jpg", src: archivearchink20241751, width: 2400, height: 2400, alt: "ArchInk 2024 17" },
-  { filename: "archInk-2024-18.jpg", src: archivearchink20241852, width: 2400, height: 2400, alt: "ArchInk 2024 18" },
-  { filename: "archInk-2024-19.jpg", src: archivearchink20241953, width: 2400, height: 2400, alt: "ArchInk 2024 19" },
-  { filename: "archInk-2024-21.jpg", src: archivearchink20242154, width: 2400, height: 2400, alt: "ArchInk 2024 21" },
-  { filename: "archInk-2024-22.jpg", src: archivearchink20242255, width: 2400, height: 2400, alt: "ArchInk 2024 22" },
-  { filename: "archInk-2024-23.jpg", src: archivearchink20242356, width: 2400, height: 2400, alt: "ArchInk 2024 23" },
-  { filename: "archInk-2024-24.jpg", src: archivearchink20242457, width: 2400, height: 2400, alt: "ArchInk 2024 24" },
-  { filename: "archInk-2024-25.jpg", src: archivearchink20242558, width: 2400, height: 2400, alt: "ArchInk 2024 25" },
-  { filename: "archInk-2024-27.jpg", src: archivearchink20242759, width: 2400, height: 2400, alt: "ArchInk 2024 27" },
-  { filename: "archInk-2024-28.jpg", src: archivearchink20242860, width: 2400, height: 2400, alt: "ArchInk 2024 28" },
-  { filename: "archInk-2024-30.jpg", src: archivearchink20243061, width: 2400, height: 2400, alt: "ArchInk 2024 30" },
-  { filename: "archink-2024-overview.webp", src: archivearchink2024Overview62, width: 1448, height: 1086, alt: "Archink 2024 Overview" },
-  { filename: "archInk-2025-1.jpg", src: archivearchink2025163, width: 1759, height: 2346, alt: "ArchInk 2025 1" },
-  { filename: "archInk-2025-7.jpg", src: archivearchink2025764, width: 1929, height: 2400, alt: "ArchInk 2025 7" },
-  { filename: "archInk-2025-9.jpg", src: archivearchink2025965, width: 1920, height: 2400, alt: "ArchInk 2025 9" },
-  { filename: "archInk-2025-23.jpg", src: archivearchink20252366, width: 1920, height: 2400, alt: "ArchInk 2025 23" },
-  { filename: "archink-2025.png", src: archivearchink202567, width: 1200, height: 901, alt: "Archink 2025" },
-  { filename: "dh-benelux.jpg", src: archivedhBenelux68, width: 1200, height: 901, alt: "Dh Benelux" },
-  { filename: "dh-benelux.png", src: archivedhBenelux69, width: 480, height: 206, alt: "Dh Benelux" },
-  { filename: "dutch-learning-platform.png", src: archivedutchLearningPlatform70, width: 1200, height: 901, alt: "Dutch Learning Platform" },
-  { filename: "exploring-archaeological-disciplines.jpg", src: archiveexploringArchaeologicalDisciplines71, width: 1500, height: 1126, alt: "Exploring Archaeological Disciplines" },
-  { filename: "exploring-archaeological-disciplines.webp", src: archiveexploringArchaeologicalDisciplines72, width: 1672, height: 941, alt: "Exploring Archaeological Disciplines" },
-  { filename: "gaia-prospection.png", src: archivegaiaProspection73, width: 193, height: 192, alt: "Gaia Prospection" },
-  { filename: "geophysical-prospection.webp", src: archivegeophysicalProspection74, width: 1100, height: 560, alt: "Geophysical Prospection" },
-  { filename: "herobg.jpg", src: archiveherobg75, width: 1800, height: 1013, alt: "Herobg" },
-  { filename: "huygens-institute.png", src: archivehuygensInstitute76, width: 394, height: 198, alt: "Huygens Institute" },
-  { filename: "illustration-artefact-female-sign.jpg", src: archiveillustrationArtefactFemaleSign77, width: 2400, height: 2400, alt: "Illustration Artefact Female Sign" },
-  { filename: "illustration-benin-mask.jpg", src: archiveillustrationBeninMask78, width: 2400, height: 2400, alt: "Illustration Benin Mask" },
-  { filename: "illustration-greenland-map.jpg", src: archiveillustrationGreenlandMap79, width: 2400, height: 2400, alt: "Illustration Greenland Map" },
-  { filename: "illustration-new-years-wishes.jpg", src: archiveillustrationNewYearsWishes80, width: 2400, height: 2400, alt: "Illustration New Years Wishes" },
-  { filename: "illustration-terracotta-mug-classification.jpg", src: archiveillustrationTerracottaMugClassification81, width: 2400, height: 2400, alt: "Illustration Terracotta Mug Classification" },
-  { filename: "illustration-types-of-archaeological-illustration.jpg", src: archiveillustrationTypesOfArchaeologicalIllustration82, width: 2400, height: 1695, alt: "Illustration Types Of Archaeological Illustration" },
-  { filename: "jona.webp", src: archivejona83, width: 1500, height: 1500, alt: "Jona" },
-  { filename: "kerala-coast-annotated-map.png", src: archivekeralaCoastAnnotatedMap84, width: 650, height: 249, alt: "Kerala Coast Annotated Map" },
-  { filename: "kerala-map-annotation-example.jpg", src: archivekeralaMapAnnotationExample85, width: 1463, height: 1000, alt: "Kerala Map Annotation Example" },
-  { filename: "logo.webp", src: archivelogo86, width: 2481, height: 2481, alt: "Logo" },
-  { filename: "muestair-findings.png", src: archivemuestairFindings87, width: 1600, height: 1000, alt: "Muestair Findings" },
-  { filename: "muestair-hero.png", src: archivemuestairHero88, width: 1600, height: 1000, alt: "Muestair Hero" },
-  { filename: "muestair-methods.png", src: archivemuestairMethods89, width: 1600, height: 1000, alt: "Muestair Methods" },
-  { filename: "necessary-reunions.png", src: archivenecessaryReunions90, width: 1200, height: 901, alt: "Necessary Reunions" },
-  { filename: "overview.webp", src: archiveoverview91, width: 1500, height: 2342, alt: "Overview" },
-  { filename: "pastforwardhub-1.webp", src: archivepastforwardhub192, width: 1672, height: 941, alt: "Pastforwardhub 1" },
-  { filename: "pastforwardhub-2.webp", src: archivepastforwardhub293, width: 1448, height: 1086, alt: "Pastforwardhub 2" },
-  { filename: "pastforwardhub.png", src: archivepastforwardhub94, width: 1200, height: 901, alt: "Pastforwardhub" },
-  { filename: "pastrace-full-logo.png", src: archivepastraceFullLogo95, width: 544, height: 216, alt: "Pastrace Full Logo" },
-  { filename: "pastrace-logo-collection.png", src: archivepastraceLogoCollection96, width: 1200, height: 901, alt: "Pastrace Logo Collection" },
-  { filename: "pastrace-logo-symbol.png", src: archivepastraceLogoSymbol97, width: 260, height: 260, alt: "Pastrace Logo Symbol" },
-  { filename: "pastrace-new.png", src: archivepastraceNew98, width: 1200, height: 901, alt: "Pastrace New" },
-  { filename: "pastrace-with-tagline.png", src: archivepastraceWithTagline99, width: 545, height: 216, alt: "Pastrace With Tagline" },
-  { filename: "pastrace.jpg", src: archivepastrace100, width: 1200, height: 901, alt: "Pastrace" },
-  { filename: "profile01.jpg", src: archiveprofile01101, width: 1200, height: 1200, alt: "Profile01" },
-  { filename: "profile02.jpg", src: archiveprofile02102, width: 260, height: 260, alt: "Profile02" },
-  { filename: "prospection-areas.webp", src: archiveprospectionAreas103, width: 2400, height: 1589, alt: "Prospection Areas" },
-  { filename: "radar-magnetic-results-historical-map-irrigation-system.png", src: archiveradarMagneticResultsHistoricalMapIrrigationSystem104, width: 1864, height: 2400, alt: "Radar Magnetic Results Historical Map Irrigation System" },
-  { filename: "radar-results-grave-situtation-3d.png", src: archiveradarResultsGraveSitutation3d105, width: 2400, height: 1703, alt: "Radar Results Grave Situtation 3d" },
-  { filename: "radar-results-plantatower.png", src: archiveradarResultsPlantatower106, width: 2400, height: 1706, alt: "Radar Results Plantatower" },
-  { filename: "recharted-interface-logo.png", src: archiverechartedInterfaceLogo107, width: 2048, height: 2048, alt: "Recharted Interface Logo" },
-  { filename: "roman-burial.jpg", src: archiveromanBurial108, width: 1200, height: 901, alt: "Roman Burial" },
-  { filename: "suriname-tijdmachine-1.webp", src: archivesurinameTijdmachine1109, width: 1672, height: 941, alt: "Suriname Tijdmachine 1" },
-  { filename: "suriname-tijdmachine-2.webp", src: archivesurinameTijdmachine2110, width: 1448, height: 1086, alt: "Suriname Tijdmachine 2" },
-  { filename: "suriname-tijdmachine.jpg", src: archivesurinameTijdmachine111, width: 1200, height: 901, alt: "Suriname Tijdmachine" },
-  { filename: "trowel-journal-blog.jpg", src: archivetrowelJournalBlog112, width: 1200, height: 901, alt: "Trowel Journal Blog" },
-  { filename: "university-vienna.png", src: archiveuniversityVienna113, width: 187, height: 58, alt: "University Vienna" },
-  { filename: "upleveled.png", src: archiveupleveled114, width: 476, height: 155, alt: "Upleveled" },
-  { filename: "urban-chameleon-1.jpg", src: archiveurbanChameleon1115, width: 1200, height: 913, alt: "Urban Chameleon 1" },
-  { filename: "urban-chameleon-2.jpg", src: archiveurbanChameleon2116, width: 1708, height: 532, alt: "Urban Chameleon 2" },
-  { filename: "urban-chameleon-3.jpg", src: archiveurbanChameleon3117, width: 1092, height: 1408, alt: "Urban Chameleon 3" },
-  { filename: "urban-chameleon.jpg", src: archiveurbanChameleon118, width: 1200, height: 901, alt: "Urban Chameleon" },
-  { filename: "web-development.jpg", src: archivewebDevelopment119, width: 2000, height: 1501, alt: "Web Development" },
+  {
+    filename: 'adventuress-archaeology.png',
+    src: archiveadventuressArchaeology0,
+    width: 500,
+    height: 500,
+    alt: 'Adventuress Archaeology',
+  },
+  {
+    filename: 'adventuress-cover-concept.jpg',
+    src: archiveadventuressCoverConcept1,
+    width: 1200,
+    height: 1698,
+    alt: 'Adventuress Cover Concept',
+  },
+  {
+    filename: 'adventuress-cover.jpg',
+    src: archiveadventuressCover2,
+    width: 1200,
+    height: 901,
+    alt: 'Adventuress Cover',
+  },
+  {
+    filename: 'archaeo-zine.jpg',
+    src: archivearchaeoZine3,
+    width: 2000,
+    height: 1501,
+    alt: 'Archaeo Zine',
+  },
+  {
+    filename: 'archaeological-illustrating.jpg',
+    src: archivearchaeologicalIllustrating4,
+    width: 2000,
+    height: 1501,
+    alt: 'Archaeological Illustrating',
+  },
+  {
+    filename: 'archaeological-sci-comm.jpg',
+    src: archivearchaeologicalSciComm5,
+    width: 2000,
+    height: 1501,
+    alt: 'Archaeological Sci Comm',
+  },
+  {
+    filename: 'archaeological-site-overview.webp',
+    src: archivearchaeologicalSiteOverview6,
+    width: 2400,
+    height: 944,
+    alt: 'Archaeological Site Overview',
+  },
+  {
+    filename: 'archaeology-journaling.png',
+    src: archivearchaeologyJournaling7,
+    width: 1200,
+    height: 901,
+    alt: 'Archaeology Journaling',
+  },
+  {
+    filename: 'archaeology-of-bias.png',
+    src: archivearchaeologyOfBias8,
+    width: 1200,
+    height: 901,
+    alt: 'Archaeology Of Bias',
+  },
+  {
+    filename: 'archeomatch.png',
+    src: archivearcheomatch9,
+    width: 1200,
+    height: 901,
+    alt: 'Archeomatch',
+  },
+  {
+    filename: 'archInk-2021-ArchaeologicalTheoryInDialogue.jpg',
+    src: archivearchink2021ArchaeologicalTheoryInDialogue10,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2021 ArchaeologicalTheoryInDialogue',
+  },
+  {
+    filename: 'archInk-2021-ArchaeologyIsABrand.jpg',
+    src: archivearchink2021ArchaeologyIsABrand11,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2021 ArchaeologyIsABrand',
+  },
+  {
+    filename: 'archInk-2021-Choose.jpg',
+    src: archivearchink2021Choose12,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2021 Choose',
+  },
+  {
+    filename: 'archInk-2021-InSmallThingsForgotten.jpg',
+    src: archivearchink2021InSmallThingsForgotten13,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2021 InSmallThingsForgotten',
+  },
+  {
+    filename: 'archInk-2021-ReadingTheEveryday.jpg',
+    src: archivearchink2021ReadingTheEveryday14,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2021 ReadingTheEveryday',
+  },
+  {
+    filename: 'archInk-2021-ThePerceptionOfTheEnvironment.jpg',
+    src: archivearchink2021ThePerceptionOfTheEnvironment15,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2021 ThePerceptionOfTheEnvironment',
+  },
+  {
+    filename: 'archInk-2021-ThePlaceOfStone.jpg',
+    src: archivearchink2021ThePlaceOfStone16,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2021 ThePlaceOfStone',
+  },
+  {
+    filename: 'archInk-2021-uncommonGround.png',
+    src: archivearchink2021UncommonGround17,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2021 UncommonGround',
+  },
+  {
+    filename: 'archInk-2022-building.jpg',
+    src: archivearchink2022Building18,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2022 Building',
+  },
+  {
+    filename: 'archInk-2022-goat.jpg',
+    src: archivearchink2022Goat19,
+    width: 3000,
+    height: 3000,
+    alt: 'ArchInk 2022 Goat',
+  },
+  {
+    filename: 'archInk-2022-matter-scrurry.jpg',
+    src: archivearchink2022MatterScrurry20,
+    width: 2048,
+    height: 2048,
+    alt: 'ArchInk 2022 Matter Scrurry',
+  },
+  {
+    filename: 'archInk-2022-porous.jpg',
+    src: archivearchink2022Porous21,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2022 Porous',
+  },
+  {
+    filename: 'archInk-2022-scallop-patina.jpg',
+    src: archivearchink2022ScallopPatina22,
+    width: 2048,
+    height: 2048,
+    alt: 'ArchInk 2022 Scallop Patina',
+  },
+  {
+    filename: 'archInk-2022-sound.jpg',
+    src: archivearchink2022Sound23,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2022 Sound',
+  },
+  {
+    filename: 'archInk-2022-spectrum.jpg',
+    src: archivearchink2022Spectrum24,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2022 Spectrum',
+  },
+  {
+    filename: 'archInk-2022-subfield.jpg',
+    src: archivearchink2022Subfield25,
+    width: 3000,
+    height: 3000,
+    alt: 'ArchInk 2022 Subfield',
+  },
+  {
+    filename: 'archInk-2022-team.jpg',
+    src: archivearchink2022Team26,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2022 Team',
+  },
+  {
+    filename: 'archInk-2022-triangle.jpeg',
+    src: archivearchink2022Triangle27,
+    width: 1149,
+    height: 1148,
+    alt: 'ArchInk 2022 Triangle',
+  },
+  {
+    filename: 'archInk-2023-acoustics.jpg',
+    src: archivearchink2023Acoustics28,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2023 Acoustics',
+  },
+  {
+    filename: 'archInk-2023-border.jpg',
+    src: archivearchink2023Border29,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2023 Border',
+  },
+  {
+    filename: 'archInk-2023-bread.jpg',
+    src: archivearchink2023Bread30,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2023 Bread',
+  },
+  {
+    filename: 'archInk-2023-care.jpg',
+    src: archivearchink2023Care31,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2023 Care',
+  },
+  {
+    filename: 'archInk-2023-consolidate.jpg',
+    src: archivearchink2023Consolidate32,
+    width: 2000,
+    height: 2000,
+    alt: 'ArchInk 2023 Consolidate',
+  },
+  {
+    filename: 'archInk-2023-consult.jpg',
+    src: archivearchink2023Consult33,
+    width: 2000,
+    height: 2000,
+    alt: 'ArchInk 2023 Consult',
+  },
+  {
+    filename: 'archInk-2023-craft.jpg',
+    src: archivearchink2023Craft34,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2023 Craft',
+  },
+  {
+    filename: 'archInk-2023-dinner.jpg',
+    src: archivearchink2023Dinner35,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2023 Dinner',
+  },
+  {
+    filename: 'archInk-2023-distribution.jpg',
+    src: archivearchink2023Distribution36,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2023 Distribution',
+  },
+  {
+    filename: 'archInk-2023-revolution.jpg',
+    src: archivearchink2023Revolution37,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2023 Revolution',
+  },
+  {
+    filename: 'archInk-2023-roses.jpg',
+    src: archivearchink2023Roses38,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2023 Roses',
+  },
+  {
+    filename: 'archInk-2023-teeth.jpg',
+    src: archivearchink2023Teeth39,
+    width: 2000,
+    height: 2000,
+    alt: 'ArchInk 2023 Teeth',
+  },
+  {
+    filename: 'archInk-2023-trust.jpg',
+    src: archivearchink2023Trust40,
+    width: 2000,
+    height: 2000,
+    alt: 'ArchInk 2023 Trust',
+  },
+  {
+    filename: 'archInk-2024-3.jpg',
+    src: archivearchink2024341,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2024 3',
+  },
+  {
+    filename: 'archInk-2024-5.jpg',
+    src: archivearchink2024542,
+    width: 1152,
+    height: 1129,
+    alt: 'ArchInk 2024 5',
+  },
+  {
+    filename: 'archInk-2024-6.jpg',
+    src: archivearchink2024643,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2024 6',
+  },
+  {
+    filename: 'archInk-2024-7.jpg',
+    src: archivearchink2024744,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2024 7',
+  },
+  {
+    filename: 'archInk-2024-8.jpg',
+    src: archivearchink2024845,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2024 8',
+  },
+  {
+    filename: 'archInk-2024-9.jpg',
+    src: archivearchink2024946,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2024 9',
+  },
+  {
+    filename: 'archInk-2024-11.jpg',
+    src: archivearchink20241147,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2024 11',
+  },
+  {
+    filename: 'archInk-2024-13.jpg',
+    src: archivearchink20241348,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2024 13',
+  },
+  {
+    filename: 'archInk-2024-15.jpg',
+    src: archivearchink20241549,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2024 15',
+  },
+  {
+    filename: 'archInk-2024-16.jpg',
+    src: archivearchink20241650,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2024 16',
+  },
+  {
+    filename: 'archInk-2024-17.jpg',
+    src: archivearchink20241751,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2024 17',
+  },
+  {
+    filename: 'archInk-2024-18.jpg',
+    src: archivearchink20241852,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2024 18',
+  },
+  {
+    filename: 'archInk-2024-19.jpg',
+    src: archivearchink20241953,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2024 19',
+  },
+  {
+    filename: 'archInk-2024-21.jpg',
+    src: archivearchink20242154,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2024 21',
+  },
+  {
+    filename: 'archInk-2024-22.jpg',
+    src: archivearchink20242255,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2024 22',
+  },
+  {
+    filename: 'archInk-2024-23.jpg',
+    src: archivearchink20242356,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2024 23',
+  },
+  {
+    filename: 'archInk-2024-24.jpg',
+    src: archivearchink20242457,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2024 24',
+  },
+  {
+    filename: 'archInk-2024-25.jpg',
+    src: archivearchink20242558,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2024 25',
+  },
+  {
+    filename: 'archInk-2024-27.jpg',
+    src: archivearchink20242759,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2024 27',
+  },
+  {
+    filename: 'archInk-2024-28.jpg',
+    src: archivearchink20242860,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2024 28',
+  },
+  {
+    filename: 'archInk-2024-30.jpg',
+    src: archivearchink20243061,
+    width: 2400,
+    height: 2400,
+    alt: 'ArchInk 2024 30',
+  },
+  {
+    filename: 'archink-2024-overview.webp',
+    src: archivearchink2024Overview62,
+    width: 1448,
+    height: 1086,
+    alt: 'Archink 2024 Overview',
+  },
+  {
+    filename: 'archInk-2025-1.jpg',
+    src: archivearchink2025163,
+    width: 1759,
+    height: 2346,
+    alt: 'ArchInk 2025 1',
+  },
+  {
+    filename: 'archInk-2025-7.jpg',
+    src: archivearchink2025764,
+    width: 1929,
+    height: 2400,
+    alt: 'ArchInk 2025 7',
+  },
+  {
+    filename: 'archInk-2025-9.jpg',
+    src: archivearchink2025965,
+    width: 1920,
+    height: 2400,
+    alt: 'ArchInk 2025 9',
+  },
+  {
+    filename: 'archInk-2025-23.jpg',
+    src: archivearchink20252366,
+    width: 1920,
+    height: 2400,
+    alt: 'ArchInk 2025 23',
+  },
+  {
+    filename: 'archink-2025.png',
+    src: archivearchink202567,
+    width: 1200,
+    height: 901,
+    alt: 'Archink 2025',
+  },
+  {
+    filename: 'dh-benelux.jpg',
+    src: archivedhBenelux68,
+    width: 1200,
+    height: 901,
+    alt: 'Dh Benelux',
+  },
+  {
+    filename: 'dh-benelux.png',
+    src: archivedhBenelux69,
+    width: 480,
+    height: 206,
+    alt: 'Dh Benelux',
+  },
+  {
+    filename: 'dutch-learning-platform.png',
+    src: archivedutchLearningPlatform70,
+    width: 1200,
+    height: 901,
+    alt: 'Dutch Learning Platform',
+  },
+  {
+    filename: 'exploring-archaeological-disciplines.jpg',
+    src: archiveexploringArchaeologicalDisciplines71,
+    width: 1500,
+    height: 1126,
+    alt: 'Exploring Archaeological Disciplines',
+  },
+  {
+    filename: 'exploring-archaeological-disciplines.webp',
+    src: archiveexploringArchaeologicalDisciplines72,
+    width: 1672,
+    height: 941,
+    alt: 'Exploring Archaeological Disciplines',
+  },
+  {
+    filename: 'gaia-prospection.png',
+    src: archivegaiaProspection73,
+    width: 193,
+    height: 192,
+    alt: 'Gaia Prospection',
+  },
+  {
+    filename: 'geophysical-prospection.webp',
+    src: archivegeophysicalProspection74,
+    width: 1100,
+    height: 560,
+    alt: 'Geophysical Prospection',
+  },
+  {
+    filename: 'herobg.jpg',
+    src: archiveherobg75,
+    width: 1800,
+    height: 1013,
+    alt: 'Herobg',
+  },
+  {
+    filename: 'huygens-institute.png',
+    src: archivehuygensInstitute76,
+    width: 394,
+    height: 198,
+    alt: 'Huygens Institute',
+  },
+  {
+    filename: 'illustration-artefact-female-sign.jpg',
+    src: archiveillustrationArtefactFemaleSign77,
+    width: 2400,
+    height: 2400,
+    alt: 'Illustration Artefact Female Sign',
+  },
+  {
+    filename: 'illustration-benin-mask.jpg',
+    src: archiveillustrationBeninMask78,
+    width: 2400,
+    height: 2400,
+    alt: 'Illustration Benin Mask',
+  },
+  {
+    filename: 'illustration-greenland-map.jpg',
+    src: archiveillustrationGreenlandMap79,
+    width: 2400,
+    height: 2400,
+    alt: 'Illustration Greenland Map',
+  },
+  {
+    filename: 'illustration-new-years-wishes.jpg',
+    src: archiveillustrationNewYearsWishes80,
+    width: 2400,
+    height: 2400,
+    alt: 'Illustration New Years Wishes',
+  },
+  {
+    filename: 'illustration-terracotta-mug-classification.jpg',
+    src: archiveillustrationTerracottaMugClassification81,
+    width: 2400,
+    height: 2400,
+    alt: 'Illustration Terracotta Mug Classification',
+  },
+  {
+    filename: 'illustration-types-of-archaeological-illustration.jpg',
+    src: archiveillustrationTypesOfArchaeologicalIllustration82,
+    width: 2400,
+    height: 1695,
+    alt: 'Illustration Types Of Archaeological Illustration',
+  },
+  {
+    filename: 'jona.webp',
+    src: archivejona83,
+    width: 1500,
+    height: 1500,
+    alt: 'Jona',
+  },
+  {
+    filename: 'kerala-coast-annotated-map.png',
+    src: archivekeralaCoastAnnotatedMap84,
+    width: 650,
+    height: 249,
+    alt: 'Kerala Coast Annotated Map',
+  },
+  {
+    filename: 'kerala-map-annotation-example.jpg',
+    src: archivekeralaMapAnnotationExample85,
+    width: 1463,
+    height: 1000,
+    alt: 'Kerala Map Annotation Example',
+  },
+  {
+    filename: 'logo.webp',
+    src: archivelogo86,
+    width: 2481,
+    height: 2481,
+    alt: 'Logo',
+  },
+  {
+    filename: 'muestair-findings.png',
+    src: archivemuestairFindings87,
+    width: 1600,
+    height: 1000,
+    alt: 'Muestair Findings',
+  },
+  {
+    filename: 'muestair-hero.png',
+    src: archivemuestairHero88,
+    width: 1600,
+    height: 1000,
+    alt: 'Muestair Hero',
+  },
+  {
+    filename: 'muestair-methods.png',
+    src: archivemuestairMethods89,
+    width: 1600,
+    height: 1000,
+    alt: 'Muestair Methods',
+  },
+  {
+    filename: 'necessary-reunions.png',
+    src: archivenecessaryReunions90,
+    width: 1200,
+    height: 901,
+    alt: 'Necessary Reunions',
+  },
+  {
+    filename: 'overview.webp',
+    src: archiveoverview91,
+    width: 1500,
+    height: 2342,
+    alt: 'Overview',
+  },
+  {
+    filename: 'pastforwardhub-1.webp',
+    src: archivepastforwardhub192,
+    width: 1672,
+    height: 941,
+    alt: 'Pastforwardhub 1',
+  },
+  {
+    filename: 'pastforwardhub-2.webp',
+    src: archivepastforwardhub293,
+    width: 1448,
+    height: 1086,
+    alt: 'Pastforwardhub 2',
+  },
+  {
+    filename: 'pastforwardhub.png',
+    src: archivepastforwardhub94,
+    width: 1200,
+    height: 901,
+    alt: 'Pastforwardhub',
+  },
+  {
+    filename: 'pastrace-full-logo.png',
+    src: archivepastraceFullLogo95,
+    width: 544,
+    height: 216,
+    alt: 'Pastrace Full Logo',
+  },
+  {
+    filename: 'pastrace-logo-collection.png',
+    src: archivepastraceLogoCollection96,
+    width: 1200,
+    height: 901,
+    alt: 'Pastrace Logo Collection',
+  },
+  {
+    filename: 'pastrace-logo-symbol.png',
+    src: archivepastraceLogoSymbol97,
+    width: 260,
+    height: 260,
+    alt: 'Pastrace Logo Symbol',
+  },
+  {
+    filename: 'pastrace-new.png',
+    src: archivepastraceNew98,
+    width: 1200,
+    height: 901,
+    alt: 'Pastrace New',
+  },
+  {
+    filename: 'pastrace-with-tagline.png',
+    src: archivepastraceWithTagline99,
+    width: 545,
+    height: 216,
+    alt: 'Pastrace With Tagline',
+  },
+  {
+    filename: 'pastrace.jpg',
+    src: archivepastrace100,
+    width: 1200,
+    height: 901,
+    alt: 'Pastrace',
+  },
+  {
+    filename: 'profile01.jpg',
+    src: archiveprofile01101,
+    width: 1200,
+    height: 1200,
+    alt: 'Profile01',
+  },
+  {
+    filename: 'profile02.jpg',
+    src: archiveprofile02102,
+    width: 260,
+    height: 260,
+    alt: 'Profile02',
+  },
+  {
+    filename: 'prospection-areas.webp',
+    src: archiveprospectionAreas103,
+    width: 2400,
+    height: 1589,
+    alt: 'Prospection Areas',
+  },
+  {
+    filename: 'radar-magnetic-results-historical-map-irrigation-system.png',
+    src: archiveradarMagneticResultsHistoricalMapIrrigationSystem104,
+    width: 1864,
+    height: 2400,
+    alt: 'Radar Magnetic Results Historical Map Irrigation System',
+  },
+  {
+    filename: 'radar-results-grave-situtation-3d.png',
+    src: archiveradarResultsGraveSitutation3d105,
+    width: 2400,
+    height: 1703,
+    alt: 'Radar Results Grave Situtation 3d',
+  },
+  {
+    filename: 'radar-results-plantatower.png',
+    src: archiveradarResultsPlantatower106,
+    width: 2400,
+    height: 1706,
+    alt: 'Radar Results Plantatower',
+  },
+  {
+    filename: 'recharted-interface-logo.png',
+    src: archiverechartedInterfaceLogo107,
+    width: 2048,
+    height: 2048,
+    alt: 'Recharted Interface Logo',
+  },
+  {
+    filename: 'roman-burial.jpg',
+    src: archiveromanBurial108,
+    width: 1200,
+    height: 901,
+    alt: 'Roman Burial',
+  },
+  {
+    filename: 'suriname-tijdmachine-1.webp',
+    src: archivesurinameTijdmachine1109,
+    width: 1672,
+    height: 941,
+    alt: 'Suriname Tijdmachine 1',
+  },
+  {
+    filename: 'suriname-tijdmachine-2.webp',
+    src: archivesurinameTijdmachine2110,
+    width: 1448,
+    height: 1086,
+    alt: 'Suriname Tijdmachine 2',
+  },
+  {
+    filename: 'suriname-tijdmachine.jpg',
+    src: archivesurinameTijdmachine111,
+    width: 1200,
+    height: 901,
+    alt: 'Suriname Tijdmachine',
+  },
+  {
+    filename: 'trowel-journal-blog.jpg',
+    src: archivetrowelJournalBlog112,
+    width: 1200,
+    height: 901,
+    alt: 'Trowel Journal Blog',
+  },
+  {
+    filename: 'university-vienna.png',
+    src: archiveuniversityVienna113,
+    width: 187,
+    height: 58,
+    alt: 'University Vienna',
+  },
+  {
+    filename: 'upleveled.png',
+    src: archiveupleveled114,
+    width: 476,
+    height: 155,
+    alt: 'Upleveled',
+  },
+  {
+    filename: 'urban-chameleon-1.jpg',
+    src: archiveurbanChameleon1115,
+    width: 1200,
+    height: 913,
+    alt: 'Urban Chameleon 1',
+  },
+  {
+    filename: 'urban-chameleon-2.jpg',
+    src: archiveurbanChameleon2116,
+    width: 1708,
+    height: 532,
+    alt: 'Urban Chameleon 2',
+  },
+  {
+    filename: 'urban-chameleon-3.jpg',
+    src: archiveurbanChameleon3117,
+    width: 1092,
+    height: 1408,
+    alt: 'Urban Chameleon 3',
+  },
+  {
+    filename: 'urban-chameleon.jpg',
+    src: archiveurbanChameleon118,
+    width: 1200,
+    height: 901,
+    alt: 'Urban Chameleon',
+  },
+  {
+    filename: 'web-development.jpg',
+    src: archivewebDevelopment119,
+    width: 2000,
+    height: 1501,
+    alt: 'Web Development',
+  },
 ];

@@ -163,7 +163,7 @@ export const visualWorks: VisualWork[] = [
     display: { order: 2 },
     images: {
       primary: {
-        src: '/images/all-work/illustration-ochre.jpg',
+        src: '/images/all-work/ochre-painting.jpg',
         alt: 'Illustrated study of ochre pigments, hand stencils and painting tools',
         role: 'primary',
       },
@@ -191,7 +191,7 @@ export const visualWorks: VisualWork[] = [
     display: { order: 3 },
     images: {
       primary: {
-        src: '/images/all-work/illustration-kore-reconstruction.jpg',
+        src: '/images/all-work/kore-reconstruction-coloured.jpg',
         alt: 'Three-stage reconstruction of a Kore sculpture with colour',
         role: 'primary',
       },
@@ -221,7 +221,7 @@ export const visualWorks: VisualWork[] = [
     display: { order: 4 },
     images: {
       primary: {
-        src: '/images/all-work/illustration-babylon-map.jpg',
+        src: '/images/all-work/Babylon-map.jpg',
         alt: 'Illustrated explanation of the Babylonian Map of the World',
         role: 'primary',
       },
@@ -292,7 +292,7 @@ export const visualWorks: VisualWork[] = [
     display: { order: 6 },
     images: {
       primary: {
-        src: '/images/all-work/illustration-gender-bias.jpg',
+        src: '/images/all-work/gender-bias.jpg',
         alt: 'Illustration about gender bias in archaeological interpretation',
         role: 'primary',
       },
@@ -321,7 +321,7 @@ export const visualWorks: VisualWork[] = [
     display: { order: 7 },
     images: {
       primary: {
-        src: '/images/all-work/illustration-torso-statue.jpg',
+        src: '/images/all-work/hatching-torso-statue.jpg',
         alt: 'Tonal illustration of a sculpted torso',
         role: 'primary',
       },
@@ -388,7 +388,7 @@ export const visualWorks: VisualWork[] = [
     display: { order: 9 },
     images: {
       primary: {
-        src: '/images/all-work/illustration-burial-dog-human.jpg',
+        src: '/images/all-work/burial-dog-human.jpg',
         alt: 'Ink drawing of a human and dog burial',
         role: 'primary',
       },
@@ -446,7 +446,7 @@ export const visualWorks: VisualWork[] = [
     display: { order: 11 },
     images: {
       primary: {
-        src: '/images/all-work/illustration-bell-beaker.jpg',
+        src: '/images/all-work/bell-beaker.jpg',
         alt: 'Black-and-white archaeological drawing of a Bell Beaker vessel',
         role: 'primary',
       },
@@ -508,7 +508,7 @@ export const visualWorks: VisualWork[] = [
     display: { order: 13 },
     images: {
       primary: {
-        src: '/images/all-work/archInk-2025-2.jpg',
+        src: '/images/all-work/Ancient-Shell-Tools.jpg',
         alt: 'archInk object study with a coloured shell at its centre',
         role: 'primary',
       },
@@ -543,7 +543,7 @@ export const visualWorks: VisualWork[] = [
     display: { order: 14 },
     images: {
       primary: {
-        src: '/images/all-work/archInk-2025-3.jpg',
+        src: '/images/all-work/Residue.jpg',
         alt: 'Four-panel archInk drawing about archaeological residue analysis',
         role: 'primary',
       },
@@ -578,7 +578,7 @@ export const visualWorks: VisualWork[] = [
     display: { order: 15 },
     images: {
       primary: {
-        src: '/images/all-work/archInk-2025-4.jpg',
+        src: '/images/all-work/Bronze.jpg',
         alt: 'archInk illustration of bronze artefacts and hands',
         role: 'primary',
       },

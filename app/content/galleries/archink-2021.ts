@@ -10,12 +10,12 @@ import pc from '../../images/landing-page/archInk-2021-PC.jpg';
 import raven from '../../images/all-work/Raven.webp';
 import readingTheEveryday from '../../images/archive/archInk-2021-ReadingTheEveryday.jpg';
 import researchDesign from '../../images/all-work/Research-Design.jpg';
-import theArchaeologyOfHearts from '../../images/all-work/archInk-2021-TheArchaeologyOfHearts.jpg';
-import theCosmonaut from '../../images/all-work/archInk-2021-TheCosmonaut.jpg';
-import theLanguagesOfArchaeology from '../../images/all-work/archInk-2021-TheLanguagesOfArchaeology.webp';
+import theArchaeologyOfHearts from '../../images/all-work/The-Archaeology-Of-Hearts.jpg';
+import theCosmonaut from '../../images/all-work/The-Cosmonaut-Recipe.jpg';
+import theLanguagesOfArchaeology from '../../images/all-work/The-Languages-Of-Archaeology.webp';
 import thePerceptionOfTheEnvironment from '../../images/archive/archInk-2021-ThePerceptionOfTheEnvironment.jpg';
 import thePlaceOfStone from '../../images/archive/archInk-2021-ThePlaceOfStone.jpg';
-import theSocialLifeOfThings from '../../images/all-work/archInk-2021-TheSocialLifeOfThings.jpg';
+import theSocialLifeOfThings from '../../images/all-work/The-Social-Life-Of-Things.jpg';
 import uncommonGround from '../../images/archive/archInk-2021-uncommonGround.png';
 import whatThisAwlMeans from '../../images/landing-page/archInk-2021-WhatThisAwlMeans.jpg';
 
