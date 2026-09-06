@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import ArchiveGrid from './components/ArchiveGrid';
 import ArchiveIntroduction from './components/ArchiveIntroduction';
+import CalendlyButton from './components/CalendlyButton';
 import { landingPageAssets } from './content/archive-assets';
 import { visualWorks } from './content/works';
 import { toArchiveGridItems } from './content/archive-grid';
@@ -37,6 +38,21 @@ export default function HomePage() {
         items={toArchiveGridItems(landingPageAssets, visualWorks)}
         showLabels={false}
       />
+      <section
+        id="contact"
+        className="archive-contact"
+        aria-labelledby="contact-title"
+      >
+        <div>
+          <p className="archive-eyebrow">Contact</p>
+          <h2 id="contact-title">Have a research story to make visible?</h2>
+          <p>
+            Tell me what you are working on, and we can find the right visual or
+            digital form for it.
+          </p>
+        </div>
+        <CalendlyButton text="Book an appointment" />
+      </section>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

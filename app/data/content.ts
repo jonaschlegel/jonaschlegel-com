@@ -39,6 +39,7 @@ export const navLinks = [
   { name: 'Selected', href: '/' },
   { name: 'All work', href: '/work' },
   { name: 'About / CV', href: '/about' },
+  { name: 'Contact', href: '/#contact' },
   {
     name: 'Writing ↗',
     href: 'https://archaeoink.substack.com/',
