@@ -9,6 +9,7 @@ export interface ArchiveGridItem {
   href?: string;
   title?: string;
   primaryPractice?: string;
+  creditLine?: string;
 }
 
 export interface SketchfabGridItem {
@@ -22,6 +23,7 @@ type ImageMetadata = {
   title?: string;
   alt?: string;
   practice?: string;
+  creditLine?: string;
 };
 
 function filenameFromSource(source: string) {
@@ -49,6 +51,7 @@ export function toArchiveGridItems(
       title: metadata?.title ?? work?.title ?? asset.alt,
       primaryPractice:
         metadata?.practice ?? work?.classification.primaryPractice,
+      creditLine: metadata?.creditLine,
     };
   });
 }

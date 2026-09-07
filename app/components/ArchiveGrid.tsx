@@ -76,7 +76,10 @@ export default function ArchiveGrid({
         );
         const label = showLabels ? (
           <span className="archive-tile__label">
-            <span>{item.title}</span>
+            <span className="archive-tile__label-copy">
+              <span>{item.title}</span>
+              {item.creditLine && <small>{item.creditLine}</small>}
+            </span>
             {item.primaryPractice && <small>{item.primaryPractice}</small>}
           </span>
         ) : null;
