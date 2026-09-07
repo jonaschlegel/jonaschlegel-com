@@ -104,15 +104,32 @@ Use the image scripts before adding or replacing larger assets:
 
 ```bash
 pnpm image:audit
-pnpm image:optimize -- --write
+pnpm image:optimize
 ```
 
-The optimizer keeps filenames and extensions stable, strips metadata, caps very large images to a web-sized maximum dimension, and writes files only when the optimized result is smaller.
+The optimizer caps the longest edge at 2400px where that produces a smaller
+published file, uses quality 82 for lossy formats, and strips embedded EXIF,
+IPTC, and XMP metadata from rewritten files. A generated content-hash manifest
+makes the command safe to run again: unchanged images are not repeatedly
+recompressed. Keep full-resolution master files outside this deployed
+repository before optimizing a new batch.
+
+File extensions must match their actual formats (`.jpg` for JPEG, `.png` for
+PNG, and `.webp` for WebP). The audit reports format mismatches and unusually
+large assets for review.
 
 ## Deployment
 
 The website is deployed using [Vercel](https://vercel.com/). You can find the production site at [jonaschlegel.com](https://jonaschlegel.com).
 
-## License
+## Copyright and image rights
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+Unless otherwise credited, portfolio images and illustrations are © Jona
+Schlegel / archaeoINK. All rights are reserved. They are not offered under an
+open-source software licence. See the public
+[image rights and licensing page](https://jonaschlegel.com/image-licensing) for
+permission requests and exceptions.
+
+No software licence is currently granted for the repository as a whole.
+The site also emits a machine-readable `TDM-Reservation: 1` response header
+and blocks named automated-training crawlers in `robots.txt`.

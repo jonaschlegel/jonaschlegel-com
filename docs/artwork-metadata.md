@@ -9,14 +9,17 @@ and archive layout decisions.
 
 1. Add the image to `app/images/all-work` or `app/images/landing-page`; the
    relevant grid discovers it automatically on the next dev/build run.
-2. If the image is a named work, add its metadata record to
+2. Keep the full-resolution master outside the deployed repository, then run
+   `pnpm image:optimize`. The content-hash manifest prevents unchanged files
+   from being recompressed on later runs.
+3. If the image is a named work, add its metadata record to
    `app/content/works.ts` and write accurate alt text.
-3. Add factual catalogue information: title, date, form, subjects, materials,
+4. Add factual catalogue information: title, date, form, subjects, materials,
    techniques, tools, dimensions, and credits.
-4. Write the short summary and longer interpretive text.
-5. Add sources, rights, and external links.
-6. Review SEO title, description, keywords, and share image.
-7. Change `editorial.status` from `draft` to `in-review`, then to `ready`.
+5. Write the short summary and longer interpretive text.
+6. Add sources, rights, and external links.
+7. Review SEO title, description, keywords, and share image.
+8. Change `editorial.status` from `draft` to `in-review`, then to `ready`.
 
 Draft editorial prose is intentionally not shown on the public detail page and
 is not used as the SEO description. This lets records be completed gradually
@@ -35,6 +38,14 @@ The `app/images/jona-images` folder remains separate and supplies personal
 photographs such as the image on the About/CV page. Other image folders continue
 to support legacy project pages, annual archInk galleries, services, and site
 branding; they are not read by either visual-archive grid.
+
+## Rights defaults and overrides
+
+`app/data/image-metadata.json` contains the site-wide default rights statement.
+It applies only when an image does not have a more specific credit or licence.
+For client, institutional, collaborative, public-domain, or openly licensed
+material, add the exact rights information to the corresponding `WorkImage`
+record. Individual image rights always take priority over the site default.
 
 ## Top-level identity
 

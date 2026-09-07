@@ -78,6 +78,9 @@ export const metadata: Metadata = {
     'format-detection': 'telephone=no',
     'apple-mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-status-bar-style': 'black-translucent',
+    copyright: '© Jona Schlegel / archaeoINK. All rights reserved.',
+    rights: 'https://jonaschlegel.com/image-licensing',
+    'tdm-reservation': '1',
   },
 };
 

@@ -205,6 +205,10 @@ export default async function VisualWorkPage({ params }: WorkPageProps) {
             <Fact label="Dimensions" value={dimensionsLabel} />
             <Fact label="Duration" value={work.creation?.duration} />
           </dl>
+          <p className="work-detail__rights">
+            Unless otherwise credited, © Jona Schlegel / archaeoINK. All rights
+            reserved. <Link href="/image-licensing">Usage details</Link>.
+          </p>
         </div>
       </div>
     </article>

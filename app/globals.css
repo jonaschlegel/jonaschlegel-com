@@ -785,6 +785,19 @@ textarea:focus-visible {
   color: inherit;
 }
 
+.work-detail__rights {
+  max-width: 34rem;
+  padding-top: 1rem;
+  border-top: 1px solid #c7c3b8;
+  color: #6c6a61;
+  font-size: 0.75rem;
+}
+
+.work-detail__rights a {
+  color: inherit;
+  text-underline-offset: 0.2rem;
+}
+
 @media (max-width: 50rem) {
   .archive-masthead {
     display: grid;

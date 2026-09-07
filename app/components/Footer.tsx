@@ -26,7 +26,9 @@ export default function Footer() {
         </ul>
       </nav>
       <div className="archive-footer__secondary">
-        <span>© {new Date().getFullYear()} Jona Schlegel</span>
+        <span>© {new Date().getFullYear()} Jona Schlegel / archaeoINK</span>
+        <span>Images unless otherwise credited: all rights reserved.</span>
+        <Link href="/image-licensing">Image rights</Link>
         <a href={KVK_URL} target="_blank" rel="noreferrer">
           KVK {KVK_NUMBER}
         </a>

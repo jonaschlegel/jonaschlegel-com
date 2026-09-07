@@ -63,6 +63,10 @@ const nextConfig: NextConfig = {
             value: 'origin-when-cross-origin',
           },
           {
+            key: 'TDM-Reservation',
+            value: '1',
+          },
+          {
             key: 'Content-Security-Policy',
             value:
               "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.crisp.chat cdn-cookieyes.com www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://*.crisp.chat; font-src 'self' data: https://*.crisp.chat; img-src 'self' data: blob: *.google-analytics.com https://*.crisp.chat cdn-cookieyes.com *.basemaps.cartocdn.com *.tile.openstreetmap.org cdnjs.cloudflare.com; worker-src 'self' blob: https://*.crisp.chat; connect-src 'self' https://*.crisp.chat wss://*.relay.crisp.chat wss://*.relay.rescue.crisp.chat *.google-analytics.com *.analytics.google.com cdn.cookieyes.com log.cookieyes.com api.resend.com; frame-src 'self' https://sketchfab.com https://*.sketchfab.com;",

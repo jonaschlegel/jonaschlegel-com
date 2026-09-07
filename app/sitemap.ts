@@ -56,6 +56,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.3,
     },
     {
+      url: `${baseUrl}/image-licensing`,
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
+    {
       url: `${baseUrl}/terms-and-conditions`,
       changeFrequency: 'yearly',
       priority: 0.3,

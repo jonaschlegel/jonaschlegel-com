@@ -56,6 +56,14 @@ async function collectImages(directory) {
 
 function getRecommendation({ extension, size, metadata }) {
   const maxDimension = Math.max(metadata.width ?? 0, metadata.height ?? 0);
+  const extensionMatchesFormat =
+    (metadata.format === 'jpeg' &&
+      (extension === '.jpg' || extension === '.jpeg')) ||
+    extension === `.${metadata.format}`;
+
+  if (!extensionMatchesFormat) {
+    return `rename to ${metadata.format === 'jpeg' ? '.jpg' : `.${metadata.format}`}`;
+  }
 
   if (size > 1_500_000 || maxDimension > 2400) {
     return 'optimize';

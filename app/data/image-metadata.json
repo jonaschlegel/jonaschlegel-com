@@ -1,6 +1,14 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "description": "Image-level metadata overrides for the landing-page, all-work and archive folders. Add one entry per filename when an image needs a specific title, alt text or practice label.",
+  "description": "Image-level metadata overrides for the landing-page, all-work and archive folders. Add one entry per filename when an image needs a specific title, alt text, practice label or rights override.",
+  "defaultRights": {
+    "creator": "Jona Schlegel",
+    "copyrightHolder": "Jona Schlegel / archaeoINK",
+    "rightsStatement": "All rights reserved",
+    "notice": "Unless otherwise credited, original images and illustrations on this website are © Jona Schlegel / archaeoINK. Permission is required for reuse beyond exceptions allowed by law.",
+    "licenseUrl": "/image-licensing",
+    "contact": "jonaschlegel@gmail.com"
+  },
   "metadata": {
     "bell-beaker.jpg": {
       "title": "Bell Beaker",

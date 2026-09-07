@@ -12,30 +12,30 @@ import landingPageillustrationGenderBias8 from '../images/landing-page/illustrat
 import landingPageillustrationKoreReconstruction9 from '../images/landing-page/illustration-kore-reconstruction.jpg';
 import landingPageillustrationOchre10 from '../images/landing-page/illustration-ochre.jpg';
 import landingPageillustrationTorsoStatue11 from '../images/landing-page/illustration-torso-statue.jpg';
-import allWorkaLongTimeAgo0 from '../images/all-work/a-long-time-ago.png';
+import allWorkaLongTimeAgo0 from '../images/all-work/a-long-time-ago.jpg';
 import allWorka1 from '../images/all-work/A.jpg';
-import allWorkabsolutelySherding2 from '../images/all-work/absolutely-sherding.jpg';
+import allWorkabsolutelySherding2 from '../images/all-work/absolutely-sherding.webp';
 import allWorkallTheBestRubbish3 from '../images/all-work/All-The-Best-Rubbish.webp';
-import allWorkanAmarnaPeriodRelief4 from '../images/all-work/an-amarna-period-relief.png';
-import allWorkancientMaya5 from '../images/all-work/ancient-maya.png';
+import allWorkanAmarnaPeriodRelief4 from '../images/all-work/an-amarna-period-relief.jpg';
+import allWorkancientMaya5 from '../images/all-work/ancient-maya.jpg';
 import allWorkancientShellTools6 from '../images/all-work/Ancient-Shell-Tools.jpg';
 import allWorkancientSockBones7 from '../images/all-work/ancient-sock-bones.jpg';
 import allWorkannotate8 from '../images/all-work/Annotate.jpg';
 import allWorkanthropologyLetters9 from '../images/all-work/anthropology-letters.jpg';
-import allWorkarchaeo10 from '../images/all-work/archaeo.png';
+import allWorkarchaeo10 from '../images/all-work/archaeo.jpg';
 import allWorkarchaeologicalDiscoveries202211 from '../images/all-work/archaeological-discoveries-2022.jpg';
 import allWorkarchaeologicalIllustration12 from '../images/all-work/Archaeological-Illustration.jpg';
-import allWorkarchaeologicalMultiTool13 from '../images/all-work/archaeological-multi-tool.png';
+import allWorkarchaeologicalMultiTool13 from '../images/all-work/archaeological-multi-tool.jpg';
 import allWorkarchaeologicalStratigraphy14 from '../images/all-work/archaeological-stratigraphy.png';
 import allWorkarchaeologyIceberg15 from '../images/all-work/archaeology-iceberg.jpg';
 import allWorkartifactCut16 from '../images/all-work/artifact-cut.jpg';
-import allWorkartifactsStippled17 from '../images/all-work/artifacts-stippled.png';
+import allWorkartifactsStippled17 from '../images/all-work/artifacts-stippled.jpg';
 import allWorkaugnetizierCluster18 from '../images/all-work/augnetizier-cluster.jpg';
 import allWorkautumnStratigraphy19 from '../images/all-work/autumn-stratigraphy.jpg';
 import allWorkaxes20 from '../images/all-work/axes.jpg';
 import allWorkbabylonMap21 from '../images/all-work/Babylon-map.jpg';
 import allWorkbackpack22 from '../images/all-work/Backpack.jpg';
-import allWorkbellBeakerMap23 from '../images/all-work/bell-beaker-map.png';
+import allWorkbellBeakerMap23 from '../images/all-work/bell-beaker-map.jpg';
 import allWorkbellBeakerPaperCut24 from '../images/all-work/bell-beaker-paper-cut.jpg';
 import allWorkbellBeakerStillLife25 from '../images/all-work/bell-beaker-still-life.jpg';
 import allWorkbellBeaker26 from '../images/all-work/bell-beaker.jpg';
@@ -43,7 +43,7 @@ import allWorkbiasCherryPicking27 from '../images/all-work/bias-cherry-picking.j
 import allWorkbiasEurocentism28 from '../images/all-work/bias-eurocentism.jpg';
 import allWorkbioarchaeologyCover29 from '../images/all-work/bioarchaeology-cover.jpg';
 import allWorkbones30 from '../images/all-work/Bones.jpg';
-import allWorkbottleStippling31 from '../images/all-work/bottle-stippling.jpeg';
+import allWorkbottleStippling31 from '../images/all-work/bottle-stippling.jpg';
 import allWorkbronzeAgeCluster32 from '../images/all-work/bronze-age-cluster.jpg';
 import allWorkbronzeAgeStillLife33 from '../images/all-work/bronze-age-still-life.png';
 import allWorkbronzeBowl34 from '../images/all-work/bronze-bowl.jpg';
@@ -53,72 +53,72 @@ import allWorkbrushStratigraphy37 from '../images/all-work/brush-stratigraphy.jp
 import allWorkburialDogHuman38 from '../images/all-work/burial-dog-human.jpg';
 import allWorkcache39 from '../images/all-work/Cache.jpg';
 import allWorkcalcyladen40 from '../images/all-work/calcyladen.jpg';
-import allWorkcharmeleonGraffiti41 from '../images/all-work/charmeleon-graffiti.png';
+import allWorkcharmeleonGraffiti41 from '../images/all-work/charmeleon-graffiti.jpg';
 import allWorkcircleOfAPosthole42 from '../images/all-work/Circle-Of-A-Posthole.jpg';
 import allWorkclassify43 from '../images/all-work/Classify.jpg';
 import allWorkcowAnimalBones44 from '../images/all-work/Cow-Animal-Bones.jpg';
-import allWorkcyano45 from '../images/all-work/cyano.png';
+import allWorkcyano45 from '../images/all-work/cyano.jpg';
 import allWorkdeerBoneTools46 from '../images/all-work/Deer-Bone-Tools.jpg';
 import allWorkdeerBones47 from '../images/all-work/deer-bones.jpg';
 import allWorkdeerFatLampIdeas48 from '../images/all-work/deer-fat-lamp-ideas.jpg';
-import allWorkdigitalElevationModel49 from '../images/all-work/digital-elevation-model.jpeg';
+import allWorkdigitalElevationModel49 from '../images/all-work/digital-elevation-model.jpg';
 import allWorkdiscoveryMedia50 from '../images/all-work/Discovery-Media.jpg';
-import allWorkdorothyGarrod51 from '../images/all-work/dorothy-garrod.png';
-import allWorkeasterBouquette52 from '../images/all-work/easter-bouquette.png';
+import allWorkdorothyGarrod51 from '../images/all-work/dorothy-garrod.jpg';
+import allWorkeasterBouquette52 from '../images/all-work/easter-bouquette.jpg';
 import allWorkembodiment53 from '../images/all-work/Embodiment.jpg';
 import allWorkexchangeBenin54 from '../images/all-work/Exchange-Benin.jpg';
 import allWorkexclusion55 from '../images/all-work/Exclusion.jpg';
 import allWorkexcotic56 from '../images/all-work/Excotic.jpg';
 import allWorkeyeIdolsStippled57 from '../images/all-work/eye-idols-stippled.jpg';
-import allWorkeyeIdols58 from '../images/all-work/eye-idols.png';
+import allWorkeyeIdols58 from '../images/all-work/eye-idols.jpg';
 import allWorkfemaleArchaeologistThroughTime59 from '../images/all-work/female-archaeologist-through-time.jpg';
 import allWorkfemaleBabyFeedingReconstruction60 from '../images/all-work/female-baby-feeding-reconstruction.jpg';
 import allWorkfemaleBurialReconstruction61 from '../images/all-work/female-burial-reconstruction.png';
 import allWorkfemaleBurialReconstructon62 from '../images/all-work/female-burial-reconstructon.jpg';
 import allWorkflake63 from '../images/all-work/flake.jpg';
-import allWorkflight64 from '../images/all-work/flight.png';
+import allWorkflight64 from '../images/all-work/flight.jpg';
 import allWorkflintCollage65 from '../images/all-work/Flint-Collage.jpg';
-import allWorkflowerCrown66 from '../images/all-work/flower-crown.jpg';
+import allWorkflowerCrown66 from '../images/all-work/flower-crown.webp';
 import allWorkfragile67 from '../images/all-work/Fragile.jpg';
 import allWorkfrogVesselStippled68 from '../images/all-work/frog-vessel-stippled.jpg';
 import allWorkfueledByCoffee69 from '../images/all-work/fueled-by-coffee.jpg';
 import allWorkfunnelBeakerCluster70 from '../images/all-work/Funnel-beaker-cluster.jpg';
 import allWorkgargoyle71 from '../images/all-work/gargoyle.jpg';
-import allWorkgearsInArchaeology72 from '../images/all-work/gears-in-archaeology.jpeg';
+import allWorkgearsInArchaeology72 from '../images/all-work/gears-in-archaeology.jpg';
 import allWorkgenderBias73 from '../images/all-work/gender-bias.jpg';
 import allWorkgenerative74 from '../images/all-work/Generative.jpg';
-import allWorkgirlsAndWomenInScience75 from '../images/all-work/girls-and-women-in-science.jpeg';
+import allWorkgirlsAndWomenInScience75 from '../images/all-work/girls-and-women-in-science.jpg';
 import allWorkglassStratigraphyTrowel76 from '../images/all-work/glass-stratigraphy-trowel.jpg';
 import allWorkgoatVessel77 from '../images/all-work/goat-vessel.jpg';
 import allWorkgraffitiArchaeologicalFeatureComparisson78 from '../images/all-work/graffiti-archaeological-feature-comparisson.png';
 import allWorkgragoyleDecoration79 from '../images/all-work/Gragoyle-Decoration.jpg';
-import allWorkgroundPenetratingRaderCrossSection80 from '../images/all-work/ground-penetrating-rader-cross-section.png';
+import allWorkgroundPenetratingRaderCrossSection80 from '../images/all-work/ground-penetrating-rader-cross-section.jpg';
 import allWorkh81 from '../images/all-work/H.jpg';
 import allWorkhatchingTorsoStatue82 from '../images/all-work/hatching-torso-statue.jpg';
 import allWorkhelmet83 from '../images/all-work/helmet.jpg';
-import allWorkindianaJonesShelf84 from '../images/all-work/indiana-jones-shelf.png';
+import allWorkindianaJonesShelf84 from '../images/all-work/indiana-jones-shelf.jpg';
 import allWorkinkedAnimals85 from '../images/all-work/Inked-Animals.jpg';
 import allWorkinscriptionStone86 from '../images/all-work/inscription-stone.jpg';
 import allWorkinscription87 from '../images/all-work/Inscription.jpg';
-import allWorkinternationalWomensDay88 from '../images/all-work/international-womens-day.jpeg';
-import allWorkipadProInArchaeology89 from '../images/all-work/ipad-pro-in-archaeology.png';
+import allWorkinternationalWomensDay88 from '../images/all-work/international-womens-day.jpg';
+import allWorkipadProInArchaeology89 from '../images/all-work/ipad-pro-in-archaeology.jpg';
 import allWorkitWasntMe90 from '../images/all-work/it-wasnt-me.jpg';
 import allWorkknife91 from '../images/all-work/knife.jpg';
 import allWorkkoreReconstructionColoured92 from '../images/all-work/kore-reconstruction-coloured.jpg';
 import allWorkkreteColoured93 from '../images/all-work/krete-coloured.jpg';
 import allWorkl94 from '../images/all-work/L.jpg';
 import allWorklaptopCidocCrm95 from '../images/all-work/laptop-cidoc-crm.jpg';
-import allWorklengyell96 from '../images/all-work/lengyell.png';
+import allWorklengyell96 from '../images/all-work/lengyell.jpg';
 import allWorklinearPotteryCluster97 from '../images/all-work/linear-pottery-cluster.jpg';
-import allWorkmanyFieldsOfArchaeology98 from '../images/all-work/many-fields-of-archaeology.png';
+import allWorkmanyFieldsOfArchaeology98 from '../images/all-work/many-fields-of-archaeology.jpg';
 import allWorkmanyHatsOfArchaeologist99 from '../images/all-work/many-hats-of-archaeologist.jpg';
-import allWorkmayTheFourth100 from '../images/all-work/may-the-fourth.jpeg';
+import allWorkmayTheFourth100 from '../images/all-work/may-the-fourth.jpg';
 import allWorkmeetTheArtist101 from '../images/all-work/meet-the-artist.jpg';
 import allWorkmiddleBronzeAgeIvoryComb102 from '../images/all-work/middle-bronze-age-ivory-comb.jpg';
-import allWorkmonoliths103 from '../images/all-work/monoliths.jpg';
+import allWorkmonoliths103 from '../images/all-work/monoliths.webp';
 import allWorkmovementStatue104 from '../images/all-work/movement-statue.jpg';
 import allWorkmulledWineRecipe105 from '../images/all-work/mulled-wine-recipe.jpg';
-import allWorkmyPhdResearch106 from '../images/all-work/my-phd-research.png';
+import allWorkmyPhdResearch106 from '../images/all-work/my-phd-research.jpg';
 import allWorknebraBronzeHoard107 from '../images/all-work/nebra-bronze-hoard.jpg';
 import allWorkneolithicGraffitiReconstruction108 from '../images/all-work/neolithic-graffiti-reconstruction.jpg';
 import allWorkneolithicStillLife109 from '../images/all-work/neolithic-still-life.png';
@@ -128,11 +128,11 @@ import allWorkobjectivity112 from '../images/all-work/Objectivity.jpg';
 import allWorkochrePainting113 from '../images/all-work/ochre-painting.jpg';
 import allWorkoctopusVesselWatercolour114 from '../images/all-work/octopus-vessel-watercolour.jpg';
 import allWorkpastraceBrandIdentity115 from '../images/all-work/pastrace-brand-identity.webp';
-import allWorkphdDirectionMap116 from '../images/all-work/phd-direction-map.png';
+import allWorkphdDirectionMap116 from '../images/all-work/phd-direction-map.jpg';
 import allWorkpostholePaperCut117 from '../images/all-work/posthole-paper-cut.jpg';
 import allWorkpotsWithCati118 from '../images/all-work/pots-with-cati.jpg';
 import allWorkprovenance119 from '../images/all-work/Provenance.jpg';
-import allWorkr120 from '../images/all-work/R.png';
+import allWorkr120 from '../images/all-work/R.jpg';
 import allWorkratSkeleton121 from '../images/all-work/rat-skeleton.jpg';
 import allWorkraven122 from '../images/all-work/Raven.webp';
 import allWorkrecreate123 from '../images/all-work/Recreate.jpg';
@@ -146,49 +146,49 @@ import allWorkscapulaArchaeology130 from '../images/all-work/scapula-archaeology
 import allWorkscraper131 from '../images/all-work/Scraper.jpg';
 import allWorkscribbles132 from '../images/all-work/scribbles.jpg';
 import allWorkshipsInked133 from '../images/all-work/ships-inked.png';
-import allWorksickle134 from '../images/all-work/sickle.png';
+import allWorksickle134 from '../images/all-work/sickle.jpg';
 import allWorksolidarity135 from '../images/all-work/Solidarity.jpg';
 import allWorkspectrum136 from '../images/all-work/spectrum.jpg';
-import allWorkstartigraphyLayers137 from '../images/all-work/startigraphy-layers.png';
-import allWorkstealing138 from '../images/all-work/stealing.png';
+import allWorkstartigraphyLayers137 from '../images/all-work/startigraphy-layers.jpg';
+import allWorkstealing138 from '../images/all-work/stealing.jpg';
 import allWorkstereotypesTheDinosaurExcavator139 from '../images/all-work/stereotypes-the-dinosaur-excavator.jpg';
-import allWorkstereotypesTheIndianaJones140 from '../images/all-work/stereotypes-the-indiana-jones.png';
+import allWorkstereotypesTheIndianaJones140 from '../images/all-work/stereotypes-the-indiana-jones.jpg';
 import allWorkstereotypesTheTreasureHunter141 from '../images/all-work/stereotypes-the-treasure-hunter.jpg';
 import allWorkstillLife142 from '../images/all-work/still-life.jpg';
 import allWorkstillLife143 from '../images/all-work/still-life.png';
 import allWorkstonehenge144 from '../images/all-work/Stonehenge.jpg';
-import allWorkstratigraphicCrossSectionDrawing145 from '../images/all-work/stratigraphic-cross-section-drawing.png';
-import allWorkstratigraphicLayersLife146 from '../images/all-work/stratigraphic-layers-life.png';
+import allWorkstratigraphicCrossSectionDrawing145 from '../images/all-work/stratigraphic-cross-section-drawing.jpg';
+import allWorkstratigraphicLayersLife146 from '../images/all-work/stratigraphic-layers-life.jpg';
 import allWorkstratigraphy147 from '../images/all-work/Stratigraphy.jpg';
 import allWorkteam148 from '../images/all-work/team.jpg';
 import allWorktechnology149 from '../images/all-work/Technology.jpg';
 import allWorktheArchaeologyOfHearts150 from '../images/all-work/The-Archaeology-Of-Hearts.jpg';
-import allWorktheBabylonianMapOfTheWorld151 from '../images/all-work/the-babylonian-map-of-the-world.png';
+import allWorktheBabylonianMapOfTheWorld151 from '../images/all-work/the-babylonian-map-of-the-world.jpg';
 import allWorktheCosmonautRecipe152 from '../images/all-work/The-Cosmonaut-Recipe.jpg';
 import allWorktheLanguagesOfArchaeology153 from '../images/all-work/The-Languages-Of-Archaeology.webp';
 import allWorktheLineBetween154 from '../images/all-work/The-Line-Between.jpg';
-import allWorkthePhoenicians155 from '../images/all-work/the-phoenicians.png';
+import allWorkthePhoenicians155 from '../images/all-work/the-phoenicians.jpg';
 import allWorktheSocialLifeOfThings156 from '../images/all-work/The-Social-Life-Of-Things.jpg';
-import allWorktorsoBlended157 from '../images/all-work/torso-blended.png';
-import allWorktorsoColoured158 from '../images/all-work/torso-coloured.png';
-import allWorktoyChariotModel159 from '../images/all-work/toy-chariot-model.png';
-import allWorktrowelRainbow160 from '../images/all-work/trowel-rainbow.png';
+import allWorktorsoBlended157 from '../images/all-work/torso-blended.jpg';
+import allWorktorsoColoured158 from '../images/all-work/torso-coloured.jpg';
+import allWorktoyChariotModel159 from '../images/all-work/toy-chariot-model.jpg';
+import allWorktrowelRainbow160 from '../images/all-work/trowel-rainbow.jpg';
 import allWorktrowel161 from '../images/all-work/trowel.jpg';
-import allWorktroyAndSchliemann162 from '../images/all-work/troy-and-schliemann.png';
+import allWorktroyAndSchliemann162 from '../images/all-work/troy-and-schliemann.jpg';
 import allWorkunchartedVideoGame163 from '../images/all-work/Uncharted-Video-Game.jpg';
-import allWorkvenusFigureine164 from '../images/all-work/venus-figureine.png';
-import allWorkvenusFigurine165 from '../images/all-work/venus-figurine.png';
+import allWorkvenusFigureine164 from '../images/all-work/venus-figureine.jpg';
+import allWorkvenusFigurine165 from '../images/all-work/venus-figurine.jpg';
 import allWorkvenusFigurines166 from '../images/all-work/venus-figurines.jpg';
 import allWorkvenusOfWillendorfInked167 from '../images/all-work/venus-of-willendorf-inked.jpg';
 import allWorkvenusOfWillendorfNeon168 from '../images/all-work/venus-of-willendorf-neon.jpg';
-import allWorkvenusOfWillendorfSketch169 from '../images/all-work/venus-of-willendorf-sketch.png';
-import allWorkvenus170 from '../images/all-work/venus.png';
+import allWorkvenusOfWillendorfSketch169 from '../images/all-work/venus-of-willendorf-sketch.jpg';
+import allWorkvenus170 from '../images/all-work/venus.jpg';
 import allWorkvisibility171 from '../images/all-work/Visibility.jpg';
 import allWorkwallGraphicInterpretation172 from '../images/all-work/wall-graphic-interpretation.jpg';
-import allWorkwomensDay173 from '../images/all-work/womens-day.png';
-import allWorkwomensHistoryMonth174 from '../images/all-work/womens-history-month.png';
+import allWorkwomensDay173 from '../images/all-work/womens-day.jpg';
+import allWorkwomensHistoryMonth174 from '../images/all-work/womens-history-month.jpg';
 import allWorkworkers175 from '../images/all-work/Workers.jpg';
-import allWorkyouAmphoraeMyWorld176 from '../images/all-work/you-amphorae-my-world.png';
+import allWorkyouAmphoraeMyWorld176 from '../images/all-work/you-amphorae-my-world.jpg';
 import archiveadventuressArchaeology0 from '../images/archive/adventuress-archaeology.png';
 import archiveadventuressCoverConcept1 from '../images/archive/adventuress-cover-concept.jpg';
 import archiveadventuressCover2 from '../images/archive/adventuress-cover.jpg';
@@ -216,7 +216,7 @@ import archivearchink2022Sound23 from '../images/archive/archInk-2022-sound.jpg'
 import archivearchink2022Spectrum24 from '../images/archive/archInk-2022-spectrum.jpg';
 import archivearchink2022Subfield25 from '../images/archive/archInk-2022-subfield.jpg';
 import archivearchink2022Team26 from '../images/archive/archInk-2022-team.jpg';
-import archivearchink2022Triangle27 from '../images/archive/archInk-2022-triangle.jpeg';
+import archivearchink2022Triangle27 from '../images/archive/archInk-2022-triangle.jpg';
 import archivearchink2023Acoustics28 from '../images/archive/archInk-2023-acoustics.jpg';
 import archivearchink2023Border29 from '../images/archive/archInk-2023-border.jpg';
 import archivearchink2023Bread30 from '../images/archive/archInk-2023-bread.jpg';
@@ -406,15 +406,15 @@ export const landingPageAssets: ArchiveAsset[] = [
 ];
 export const allWorkAssets: ArchiveAsset[] = [
   {
-    filename: 'a-long-time-ago.png',
+    filename: 'a-long-time-ago.jpg',
     src: allWorkaLongTimeAgo0,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'A Long Time Ago',
   },
   { filename: 'A.jpg', src: allWorka1, width: 839, height: 1056, alt: 'A' },
   {
-    filename: 'absolutely-sherding.jpg',
+    filename: 'absolutely-sherding.webp',
     src: allWorkabsolutelySherding2,
     width: 1440,
     height: 1440,
@@ -428,17 +428,17 @@ export const allWorkAssets: ArchiveAsset[] = [
     alt: 'All The Best Rubbish',
   },
   {
-    filename: 'an-amarna-period-relief.png',
+    filename: 'an-amarna-period-relief.jpg',
     src: allWorkanAmarnaPeriodRelief4,
-    width: 4000,
-    height: 4000,
+    width: 2400,
+    height: 2400,
     alt: 'An Amarna Period Relief',
   },
   {
-    filename: 'ancient-maya.png',
+    filename: 'ancient-maya.jpg',
     src: allWorkancientMaya5,
-    width: 4098,
-    height: 3072,
+    width: 2400,
+    height: 1799,
     alt: 'Ancient Maya',
   },
   {
@@ -451,8 +451,8 @@ export const allWorkAssets: ArchiveAsset[] = [
   {
     filename: 'ancient-sock-bones.jpg',
     src: allWorkancientSockBones7,
-    width: 4000,
-    height: 4000,
+    width: 2400,
+    height: 2400,
     alt: 'Ancient Sock Bones',
   },
   {
@@ -470,17 +470,17 @@ export const allWorkAssets: ArchiveAsset[] = [
     alt: 'Anthropology Letters',
   },
   {
-    filename: 'archaeo.png',
+    filename: 'archaeo.jpg',
     src: allWorkarchaeo10,
-    width: 6000,
-    height: 2000,
+    width: 2400,
+    height: 800,
     alt: 'Archaeo',
   },
   {
     filename: 'archaeological-discoveries-2022.jpg',
     src: allWorkarchaeologicalDiscoveries202211,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'Archaeological Discoveries 2022',
   },
   {
@@ -491,10 +491,10 @@ export const allWorkAssets: ArchiveAsset[] = [
     alt: 'Archaeological Illustration',
   },
   {
-    filename: 'archaeological-multi-tool.png',
+    filename: 'archaeological-multi-tool.jpg',
     src: allWorkarchaeologicalMultiTool13,
-    width: 4098,
-    height: 3072,
+    width: 2400,
+    height: 1799,
     alt: 'Archaeological Multi Tool',
   },
   {
@@ -507,22 +507,22 @@ export const allWorkAssets: ArchiveAsset[] = [
   {
     filename: 'archaeology-iceberg.jpg',
     src: allWorkarchaeologyIceberg15,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'Archaeology Iceberg',
   },
   {
     filename: 'artifact-cut.jpg',
     src: allWorkartifactCut16,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'Artifact Cut',
   },
   {
-    filename: 'artifacts-stippled.png',
+    filename: 'artifacts-stippled.jpg',
     src: allWorkartifactsStippled17,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'Artifacts Stippled',
   },
   {
@@ -561,10 +561,10 @@ export const allWorkAssets: ArchiveAsset[] = [
     alt: 'Backpack',
   },
   {
-    filename: 'bell-beaker-map.png',
+    filename: 'bell-beaker-map.jpg',
     src: allWorkbellBeakerMap23,
-    width: 4000,
-    height: 4000,
+    width: 2400,
+    height: 2400,
     alt: 'Bell Beaker Map',
   },
   {
@@ -605,19 +605,19 @@ export const allWorkAssets: ArchiveAsset[] = [
   {
     filename: 'bioarchaeology-cover.jpg',
     src: allWorkbioarchaeologyCover29,
-    width: 4000,
-    height: 4000,
+    width: 2400,
+    height: 2400,
     alt: 'Bioarchaeology Cover',
   },
   {
     filename: 'Bones.jpg',
     src: allWorkbones30,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'Bones',
   },
   {
-    filename: 'bottle-stippling.jpeg',
+    filename: 'bottle-stippling.jpg',
     src: allWorkbottleStippling31,
     width: 1152,
     height: 1153,
@@ -633,22 +633,22 @@ export const allWorkAssets: ArchiveAsset[] = [
   {
     filename: 'bronze-age-still-life.png',
     src: allWorkbronzeAgeStillLife33,
-    width: 2700,
-    height: 4800,
+    width: 1350,
+    height: 2400,
     alt: 'Bronze Age Still Life',
   },
   {
     filename: 'bronze-bowl.jpg',
     src: allWorkbronzeBowl34,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'Bronze Bowl',
   },
   {
     filename: 'bronze-bull.jpg',
     src: allWorkbronzeBull35,
-    width: 4000,
-    height: 4000,
+    width: 2400,
+    height: 2400,
     alt: 'Bronze Bull',
   },
   {
@@ -687,10 +687,10 @@ export const allWorkAssets: ArchiveAsset[] = [
     alt: 'Calcyladen',
   },
   {
-    filename: 'charmeleon-graffiti.png',
+    filename: 'charmeleon-graffiti.jpg',
     src: allWorkcharmeleonGraffiti41,
-    width: 4892,
-    height: 3271,
+    width: 2400,
+    height: 1605,
     alt: 'Charmeleon Graffiti',
   },
   {
@@ -715,10 +715,10 @@ export const allWorkAssets: ArchiveAsset[] = [
     alt: 'Cow Animal Bones',
   },
   {
-    filename: 'cyano.png',
+    filename: 'cyano.jpg',
     src: allWorkcyano45,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'Cyano',
   },
   {
@@ -731,19 +731,19 @@ export const allWorkAssets: ArchiveAsset[] = [
   {
     filename: 'deer-bones.jpg',
     src: allWorkdeerBones47,
-    width: 1435,
-    height: 2550,
+    width: 1351,
+    height: 2400,
     alt: 'Deer Bones',
   },
   {
     filename: 'deer-fat-lamp-ideas.jpg',
     src: allWorkdeerFatLampIdeas48,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'Deer Fat Lamp Ideas',
   },
   {
-    filename: 'digital-elevation-model.jpeg',
+    filename: 'digital-elevation-model.jpg',
     src: allWorkdigitalElevationModel49,
     width: 1152,
     height: 1149,
@@ -757,24 +757,24 @@ export const allWorkAssets: ArchiveAsset[] = [
     alt: 'Discovery Media',
   },
   {
-    filename: 'dorothy-garrod.png',
+    filename: 'dorothy-garrod.jpg',
     src: allWorkdorothyGarrod51,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'Dorothy Garrod',
   },
   {
-    filename: 'easter-bouquette.png',
+    filename: 'easter-bouquette.jpg',
     src: allWorkeasterBouquette52,
-    width: 4000,
-    height: 4000,
+    width: 2400,
+    height: 2400,
     alt: 'Easter Bouquette',
   },
   {
     filename: 'Embodiment.jpg',
     src: allWorkembodiment53,
-    width: 2160,
-    height: 2700,
+    width: 1920,
+    height: 2400,
     alt: 'Embodiment',
   },
   {
@@ -801,15 +801,15 @@ export const allWorkAssets: ArchiveAsset[] = [
   {
     filename: 'eye-idols-stippled.jpg',
     src: allWorkeyeIdolsStippled57,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'Eye Idols Stippled',
   },
   {
-    filename: 'eye-idols.png',
+    filename: 'eye-idols.jpg',
     src: allWorkeyeIdols58,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'Eye Idols',
   },
   {
@@ -829,8 +829,8 @@ export const allWorkAssets: ArchiveAsset[] = [
   {
     filename: 'female-burial-reconstruction.png',
     src: allWorkfemaleBurialReconstruction61,
-    width: 2700,
-    height: 4800,
+    width: 1350,
+    height: 2400,
     alt: 'Female Burial Reconstruction',
   },
   {
@@ -843,15 +843,15 @@ export const allWorkAssets: ArchiveAsset[] = [
   {
     filename: 'flake.jpg',
     src: allWorkflake63,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'Flake',
   },
   {
-    filename: 'flight.png',
+    filename: 'flight.jpg',
     src: allWorkflight64,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'Flight',
   },
   {
@@ -862,7 +862,7 @@ export const allWorkAssets: ArchiveAsset[] = [
     alt: 'Flint Collage',
   },
   {
-    filename: 'flower-crown.jpg',
+    filename: 'flower-crown.webp',
     src: allWorkflowerCrown66,
     width: 1440,
     height: 1440,
@@ -878,8 +878,8 @@ export const allWorkAssets: ArchiveAsset[] = [
   {
     filename: 'frog-vessel-stippled.jpg',
     src: allWorkfrogVesselStippled68,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'Frog Vessel Stippled',
   },
   {
@@ -899,12 +899,12 @@ export const allWorkAssets: ArchiveAsset[] = [
   {
     filename: 'gargoyle.jpg',
     src: allWorkgargoyle71,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'Gargoyle',
   },
   {
-    filename: 'gears-in-archaeology.jpeg',
+    filename: 'gears-in-archaeology.jpg',
     src: allWorkgearsInArchaeology72,
     width: 1152,
     height: 1153,
@@ -925,7 +925,7 @@ export const allWorkAssets: ArchiveAsset[] = [
     alt: 'Generative',
   },
   {
-    filename: 'girls-and-women-in-science.jpeg',
+    filename: 'girls-and-women-in-science.jpg',
     src: allWorkgirlsAndWomenInScience75,
     width: 1152,
     height: 1153,
@@ -934,8 +934,8 @@ export const allWorkAssets: ArchiveAsset[] = [
   {
     filename: 'glass-stratigraphy-trowel.jpg',
     src: allWorkglassStratigraphyTrowel76,
-    width: 3072,
-    height: 4098,
+    width: 1799,
+    height: 2400,
     alt: 'Glass Stratigraphy Trowel',
   },
   {
@@ -948,8 +948,8 @@ export const allWorkAssets: ArchiveAsset[] = [
   {
     filename: 'graffiti-archaeological-feature-comparisson.png',
     src: allWorkgraffitiArchaeologicalFeatureComparisson78,
-    width: 6047,
-    height: 2646,
+    width: 2400,
+    height: 1050,
     alt: 'Graffiti Archaeological Feature Comparisson',
   },
   {
@@ -960,10 +960,10 @@ export const allWorkAssets: ArchiveAsset[] = [
     alt: 'Gragoyle Decoration',
   },
   {
-    filename: 'ground-penetrating-rader-cross-section.png',
+    filename: 'ground-penetrating-rader-cross-section.jpg',
     src: allWorkgroundPenetratingRaderCrossSection80,
-    width: 2700,
-    height: 4800,
+    width: 1350,
+    height: 2400,
     alt: 'Ground Penetrating Rader Cross Section',
   },
   { filename: 'H.jpg', src: allWorkh81, width: 893, height: 995, alt: 'H' },
@@ -977,15 +977,15 @@ export const allWorkAssets: ArchiveAsset[] = [
   {
     filename: 'helmet.jpg',
     src: allWorkhelmet83,
-    width: 4000,
-    height: 4000,
+    width: 2400,
+    height: 2400,
     alt: 'Helmet',
   },
   {
-    filename: 'indiana-jones-shelf.png',
+    filename: 'indiana-jones-shelf.jpg',
     src: allWorkindianaJonesShelf84,
-    width: 4098,
-    height: 3072,
+    width: 2400,
+    height: 1799,
     alt: 'Indiana Jones Shelf',
   },
   {
@@ -998,8 +998,8 @@ export const allWorkAssets: ArchiveAsset[] = [
   {
     filename: 'inscription-stone.jpg',
     src: allWorkinscriptionStone86,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'Inscription Stone',
   },
   {
@@ -1010,24 +1010,24 @@ export const allWorkAssets: ArchiveAsset[] = [
     alt: 'Inscription',
   },
   {
-    filename: 'international-womens-day.jpeg',
+    filename: 'international-womens-day.jpg',
     src: allWorkinternationalWomensDay88,
     width: 1152,
     height: 1152,
     alt: 'International Womens Day',
   },
   {
-    filename: 'ipad-pro-in-archaeology.png',
+    filename: 'ipad-pro-in-archaeology.jpg',
     src: allWorkipadProInArchaeology89,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'Ipad Pro In Archaeology',
   },
   {
     filename: 'it-wasnt-me.jpg',
     src: allWorkitWasntMe90,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'It Wasnt Me',
   },
   {
@@ -1047,23 +1047,23 @@ export const allWorkAssets: ArchiveAsset[] = [
   {
     filename: 'krete-coloured.jpg',
     src: allWorkkreteColoured93,
-    width: 3508,
-    height: 3508,
+    width: 2400,
+    height: 2400,
     alt: 'Krete Coloured',
   },
   { filename: 'L.jpg', src: allWorkl94, width: 701, height: 1024, alt: 'L' },
   {
     filename: 'laptop-cidoc-crm.jpg',
     src: allWorklaptopCidocCrm95,
-    width: 4000,
-    height: 4000,
+    width: 2400,
+    height: 2400,
     alt: 'Laptop Cidoc Crm',
   },
   {
-    filename: 'lengyell.png',
+    filename: 'lengyell.jpg',
     src: allWorklengyell96,
-    width: 4000,
-    height: 4000,
+    width: 2400,
+    height: 2400,
     alt: 'Lengyell',
   },
   {
@@ -1074,21 +1074,21 @@ export const allWorkAssets: ArchiveAsset[] = [
     alt: 'Linear Pottery Cluster',
   },
   {
-    filename: 'many-fields-of-archaeology.png',
+    filename: 'many-fields-of-archaeology.jpg',
     src: allWorkmanyFieldsOfArchaeology98,
-    width: 4000,
-    height: 4000,
+    width: 2400,
+    height: 2400,
     alt: 'Many Fields Of Archaeology',
   },
   {
     filename: 'many-hats-of-archaeologist.jpg',
     src: allWorkmanyHatsOfArchaeologist99,
-    width: 4000,
-    height: 4000,
+    width: 2400,
+    height: 2400,
     alt: 'Many Hats Of Archaeologist',
   },
   {
-    filename: 'may-the-fourth.jpeg',
+    filename: 'may-the-fourth.jpg',
     src: allWorkmayTheFourth100,
     width: 1152,
     height: 1150,
@@ -1097,19 +1097,19 @@ export const allWorkAssets: ArchiveAsset[] = [
   {
     filename: 'meet-the-artist.jpg',
     src: allWorkmeetTheArtist101,
-    width: 4000,
-    height: 4000,
+    width: 2400,
+    height: 2400,
     alt: 'Meet The Artist',
   },
   {
     filename: 'middle-bronze-age-ivory-comb.jpg',
     src: allWorkmiddleBronzeAgeIvoryComb102,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'Middle Bronze Age Ivory Comb',
   },
   {
-    filename: 'monoliths.jpg',
+    filename: 'monoliths.webp',
     src: allWorkmonoliths103,
     width: 1440,
     height: 1440,
@@ -1118,22 +1118,22 @@ export const allWorkAssets: ArchiveAsset[] = [
   {
     filename: 'movement-statue.jpg',
     src: allWorkmovementStatue104,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'Movement Statue',
   },
   {
     filename: 'mulled-wine-recipe.jpg',
     src: allWorkmulledWineRecipe105,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'Mulled Wine Recipe',
   },
   {
-    filename: 'my-phd-research.png',
+    filename: 'my-phd-research.jpg',
     src: allWorkmyPhdResearch106,
-    width: 4098,
-    height: 3072,
+    width: 2400,
+    height: 1799,
     alt: 'My Phd Research',
   },
   {
@@ -1153,8 +1153,8 @@ export const allWorkAssets: ArchiveAsset[] = [
   {
     filename: 'neolithic-still-life.png',
     src: allWorkneolithicStillLife109,
-    width: 2700,
-    height: 4800,
+    width: 1350,
+    height: 2400,
     alt: 'Neolithic Still Life',
   },
   {
@@ -1182,8 +1182,8 @@ export const allWorkAssets: ArchiveAsset[] = [
   {
     filename: 'octopus-vessel-watercolour.jpg',
     src: allWorkoctopusVesselWatercolour114,
-    width: 2268,
-    height: 4032,
+    width: 1350,
+    height: 2400,
     alt: 'Octopus Vessel Watercolour',
   },
   {
@@ -1194,17 +1194,17 @@ export const allWorkAssets: ArchiveAsset[] = [
     alt: 'Pastrace Brand Identity',
   },
   {
-    filename: 'phd-direction-map.png',
+    filename: 'phd-direction-map.jpg',
     src: allWorkphdDirectionMap116,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'Phd Direction Map',
   },
   {
     filename: 'posthole-paper-cut.jpg',
     src: allWorkpostholePaperCut117,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'Posthole Paper Cut',
   },
   {
@@ -1221,12 +1221,12 @@ export const allWorkAssets: ArchiveAsset[] = [
     height: 2400,
     alt: 'Provenance',
   },
-  { filename: 'R.png', src: allWorkr120, width: 4000, height: 4000, alt: 'R' },
+  { filename: 'R.jpg', src: allWorkr120, width: 2400, height: 2400, alt: 'R' },
   {
     filename: 'rat-skeleton.jpg',
     src: allWorkratSkeleton121,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'Rat Skeleton',
   },
   {
@@ -1253,8 +1253,8 @@ export const allWorkAssets: ArchiveAsset[] = [
   {
     filename: 'research-journal-graffiti.jpg',
     src: allWorkresearchJournalGraffiti125,
-    width: 4098,
-    height: 3072,
+    width: 2400,
+    height: 1799,
     alt: 'Research Journal Graffiti',
   },
   {
@@ -1274,29 +1274,29 @@ export const allWorkAssets: ArchiveAsset[] = [
   {
     filename: 'roman-burial-recontruction.jpg',
     src: allWorkromanBurialRecontruction128,
-    width: 2065,
-    height: 2923,
+    width: 1696,
+    height: 2400,
     alt: 'Roman Burial Recontruction',
   },
   {
     filename: 'safety-tools.jpg',
     src: allWorksafetyTools129,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'Safety Tools',
   },
   {
     filename: 'scapula-archaeology.jpg',
     src: allWorkscapulaArchaeology130,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'Scapula Archaeology',
   },
   {
     filename: 'Scraper.jpg',
     src: allWorkscraper131,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'Scraper',
   },
   {
@@ -1309,15 +1309,15 @@ export const allWorkAssets: ArchiveAsset[] = [
   {
     filename: 'ships-inked.png',
     src: allWorkshipsInked133,
-    width: 2700,
-    height: 4800,
+    width: 1350,
+    height: 2400,
     alt: 'Ships Inked',
   },
   {
-    filename: 'sickle.png',
+    filename: 'sickle.jpg',
     src: allWorksickle134,
-    width: 4000,
-    height: 4000,
+    width: 2400,
+    height: 2400,
     alt: 'Sickle',
   },
   {
@@ -1330,22 +1330,22 @@ export const allWorkAssets: ArchiveAsset[] = [
   {
     filename: 'spectrum.jpg',
     src: allWorkspectrum136,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'Spectrum',
   },
   {
-    filename: 'startigraphy-layers.png',
+    filename: 'startigraphy-layers.jpg',
     src: allWorkstartigraphyLayers137,
-    width: 2856,
-    height: 2731,
+    width: 2400,
+    height: 2295,
     alt: 'Startigraphy Layers',
   },
   {
-    filename: 'stealing.png',
+    filename: 'stealing.jpg',
     src: allWorkstealing138,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'Stealing',
   },
   {
@@ -1356,10 +1356,10 @@ export const allWorkAssets: ArchiveAsset[] = [
     alt: 'Stereotypes The Dinosaur Excavator',
   },
   {
-    filename: 'stereotypes-the-indiana-jones.png',
+    filename: 'stereotypes-the-indiana-jones.jpg',
     src: allWorkstereotypesTheIndianaJones140,
-    width: 4000,
-    height: 4000,
+    width: 2400,
+    height: 2400,
     alt: 'Stereotypes The Indiana Jones',
   },
   {
@@ -1372,15 +1372,15 @@ export const allWorkAssets: ArchiveAsset[] = [
   {
     filename: 'still-life.jpg',
     src: allWorkstillLife142,
-    width: 4000,
-    height: 4000,
+    width: 2400,
+    height: 2400,
     alt: 'Still Life',
   },
   {
     filename: 'still-life.png',
     src: allWorkstillLife143,
-    width: 2700,
-    height: 4800,
+    width: 1350,
+    height: 2400,
     alt: 'Still Life',
   },
   {
@@ -1391,17 +1391,17 @@ export const allWorkAssets: ArchiveAsset[] = [
     alt: 'Stonehenge',
   },
   {
-    filename: 'stratigraphic-cross-section-drawing.png',
+    filename: 'stratigraphic-cross-section-drawing.jpg',
     src: allWorkstratigraphicCrossSectionDrawing145,
     width: 2268,
     height: 1276,
     alt: 'Stratigraphic Cross Section Drawing',
   },
   {
-    filename: 'stratigraphic-layers-life.png',
+    filename: 'stratigraphic-layers-life.jpg',
     src: allWorkstratigraphicLayersLife146,
-    width: 2000,
-    height: 3556,
+    width: 1350,
+    height: 2400,
     alt: 'Stratigraphic Layers Life',
   },
   {
@@ -1414,8 +1414,8 @@ export const allWorkAssets: ArchiveAsset[] = [
   {
     filename: 'team.jpg',
     src: allWorkteam148,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'Team',
   },
   {
@@ -1433,10 +1433,10 @@ export const allWorkAssets: ArchiveAsset[] = [
     alt: 'The Archaeology Of Hearts',
   },
   {
-    filename: 'the-babylonian-map-of-the-world.png',
+    filename: 'the-babylonian-map-of-the-world.jpg',
     src: allWorktheBabylonianMapOfTheWorld151,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'The Babylonian Map Of The World',
   },
   {
@@ -1461,10 +1461,10 @@ export const allWorkAssets: ArchiveAsset[] = [
     alt: 'The Line Between',
   },
   {
-    filename: 'the-phoenicians.png',
+    filename: 'the-phoenicians.jpg',
     src: allWorkthePhoenicians155,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'The Phoenicians',
   },
   {
@@ -1475,45 +1475,45 @@ export const allWorkAssets: ArchiveAsset[] = [
     alt: 'The Social Life Of Things',
   },
   {
-    filename: 'torso-blended.png',
+    filename: 'torso-blended.jpg',
     src: allWorktorsoBlended157,
     width: 1080,
     height: 1920,
     alt: 'Torso Blended',
   },
   {
-    filename: 'torso-coloured.png',
+    filename: 'torso-coloured.jpg',
     src: allWorktorsoColoured158,
     width: 1080,
     height: 1920,
     alt: 'Torso Coloured',
   },
   {
-    filename: 'toy-chariot-model.png',
+    filename: 'toy-chariot-model.jpg',
     src: allWorktoyChariotModel159,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'Toy Chariot Model',
   },
   {
-    filename: 'trowel-rainbow.png',
+    filename: 'trowel-rainbow.jpg',
     src: allWorktrowelRainbow160,
-    width: 4000,
-    height: 4000,
+    width: 2400,
+    height: 2400,
     alt: 'Trowel Rainbow',
   },
   {
     filename: 'trowel.jpg',
     src: allWorktrowel161,
-    width: 3072,
-    height: 4098,
+    width: 1799,
+    height: 2400,
     alt: 'Trowel',
   },
   {
-    filename: 'troy-and-schliemann.png',
+    filename: 'troy-and-schliemann.jpg',
     src: allWorktroyAndSchliemann162,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'Troy And Schliemann',
   },
   {
@@ -1524,24 +1524,24 @@ export const allWorkAssets: ArchiveAsset[] = [
     alt: 'Uncharted Video Game',
   },
   {
-    filename: 'venus-figureine.png',
+    filename: 'venus-figureine.jpg',
     src: allWorkvenusFigureine164,
-    width: 2700,
-    height: 4800,
+    width: 1350,
+    height: 2400,
     alt: 'Venus Figureine',
   },
   {
-    filename: 'venus-figurine.png',
+    filename: 'venus-figurine.jpg',
     src: allWorkvenusFigurine165,
-    width: 2700,
-    height: 4800,
+    width: 1350,
+    height: 2400,
     alt: 'Venus Figurine',
   },
   {
     filename: 'venus-figurines.jpg',
     src: allWorkvenusFigurines166,
-    width: 1435,
-    height: 2550,
+    width: 1351,
+    height: 2400,
     alt: 'Venus Figurines',
   },
   {
@@ -1554,22 +1554,22 @@ export const allWorkAssets: ArchiveAsset[] = [
   {
     filename: 'venus-of-willendorf-neon.jpg',
     src: allWorkvenusOfWillendorfNeon168,
-    width: 2730,
-    height: 2730,
+    width: 2400,
+    height: 2400,
     alt: 'Venus Of Willendorf Neon',
   },
   {
-    filename: 'venus-of-willendorf-sketch.png',
+    filename: 'venus-of-willendorf-sketch.jpg',
     src: allWorkvenusOfWillendorfSketch169,
-    width: 2700,
-    height: 4800,
+    width: 1350,
+    height: 2400,
     alt: 'Venus Of Willendorf Sketch',
   },
   {
-    filename: 'venus.png',
+    filename: 'venus.jpg',
     src: allWorkvenus170,
-    width: 2700,
-    height: 4800,
+    width: 1350,
+    height: 2400,
     alt: 'Venus',
   },
   {
@@ -1587,17 +1587,17 @@ export const allWorkAssets: ArchiveAsset[] = [
     alt: 'Wall Graphic Interpretation',
   },
   {
-    filename: 'womens-day.png',
+    filename: 'womens-day.jpg',
     src: allWorkwomensDay173,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'Womens Day',
   },
   {
-    filename: 'womens-history-month.png',
+    filename: 'womens-history-month.jpg',
     src: allWorkwomensHistoryMonth174,
-    width: 4000,
-    height: 4000,
+    width: 2400,
+    height: 2400,
     alt: 'Womens History Month',
   },
   {
@@ -1608,10 +1608,10 @@ export const allWorkAssets: ArchiveAsset[] = [
     alt: 'Workers',
   },
   {
-    filename: 'you-amphorae-my-world.png',
+    filename: 'you-amphorae-my-world.jpg',
     src: allWorkyouAmphoraeMyWorld176,
-    width: 4000,
-    height: 4000,
+    width: 2400,
+    height: 2400,
     alt: 'You Amphorae My World',
   },
 ];
@@ -1752,8 +1752,8 @@ export const archiveAssets: ArchiveAsset[] = [
   {
     filename: 'archInk-2022-goat.jpg',
     src: archivearchink2022Goat19,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'ArchInk 2022 Goat',
   },
   {
@@ -1794,8 +1794,8 @@ export const archiveAssets: ArchiveAsset[] = [
   {
     filename: 'archInk-2022-subfield.jpg',
     src: archivearchink2022Subfield25,
-    width: 3000,
-    height: 3000,
+    width: 2400,
+    height: 2400,
     alt: 'ArchInk 2022 Subfield',
   },
   {
@@ -1806,7 +1806,7 @@ export const archiveAssets: ArchiveAsset[] = [
     alt: 'ArchInk 2022 Team',
   },
   {
-    filename: 'archInk-2022-triangle.jpeg',
+    filename: 'archInk-2022-triangle.jpg',
     src: archivearchink2022Triangle27,
     width: 1149,
     height: 1148,

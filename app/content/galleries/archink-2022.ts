@@ -20,7 +20,7 @@ import sound from '../../images/archive/archInk-2022-sound.jpg';
 import spectrum from '../../images/archive/archInk-2022-spectrum.jpg';
 import subfield from '../../images/archive/archInk-2022-subfield.jpg';
 import team from '../../images/archive/archInk-2022-team.jpg';
-import triangle from '../../images/archive/archInk-2022-triangle.jpeg';
+import triangle from '../../images/archive/archInk-2022-triangle.jpg';
 
 export const archink2022Gallery: { src: StaticImageData; caption?: string }[] =
   [
