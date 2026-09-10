@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "build": "next build",
-    "prebuild": "node scripts/generate-archive-assets.mjs",
+    "prebuild": "node scripts/generate-archive-assets.mjs && node --experimental-strip-types scripts/sync-archive-catalog.mjs",
     "dev": "next dev",
-    "predev": "node scripts/generate-archive-assets.mjs",
+    "predev": "node scripts/generate-archive-assets.mjs && node --experimental-strip-types scripts/sync-archive-catalog.mjs",
+    "archive:sync": "node --experimental-strip-types scripts/sync-archive-catalog.mjs",
     "image:audit": "node scripts/image-audit.mjs",
     "image:optimize": "node scripts/optimize-images.mjs --write",
     "lint": "eslint .",

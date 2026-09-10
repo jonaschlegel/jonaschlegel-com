@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
 import educationData from '../data/cv/educational-experience.json';
 import publicationsData from '../data/cv/publications.json';
 import workExperienceData from '../data/cv/work-experience.json';
@@ -354,20 +353,6 @@ export default function AboutPage() {
             </div>
           ))}
         </section>
-
-        <p className="about-writing">
-          <Link href="/cv">View the full CV, map and publication list</Link>
-        </p>
-        <p className="about-writing">
-          Read essays and field notes on{' '}
-          <a
-            href="https://archaeoink.substack.com/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Substack <span aria-hidden="true">↗</span>
-          </a>
-        </p>
       </div>
     </div>
   );

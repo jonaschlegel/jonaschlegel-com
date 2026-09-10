@@ -1,25 +1,66 @@
 # Artwork metadata guide
 
-The visual archive has one canonical record type: `VisualWork` in
-`app/content/works.ts`. Each record describes one artwork, visual study, interface,
-or reconstruction. The structure separates authored content from image files
-and archive layout decisions.
+The editable index for the Selected and All work grids is
+`app/data/archive-catalog.json`. Every displayed image is listed under `works`
+using its unchanged filename as the key. Interactive Sketchfab records are listed
+under `models`.
+
+This is the only file needed for ordinary archive editing. It controls titles,
+alt text, categories, dates, ordering, grouping, visibility and the concise
+metadata shown in the lightbox. The accompanying
+`app/data/archive-catalog.schema.json` supplies allowed values and editor
+validation.
+
+Named works with full standalone detail pages can still have a richer
+`VisualWork` record in `app/content/works.ts`. That file is no longer required
+for routine grid sorting or metadata corrections.
+
+## Quick archive editing
+
+The top-level `featured` list controls the homepage selection. Add or remove
+filenames there and rearrange the lines to set the homepage order.
+
+Find an image filename inside `archive-catalog.json`, then edit its fields:
+
+- `title`: the visible title.
+- `alt`: a concise description of what can be seen.
+- `category`: `illustration`, `maps`, `3d`, `web-interfaces`, or
+  `brand-graphic-design`.
+- `collection`: `main` includes the image in the default All view; `studies`
+  keeps it accessible through its category without placing it in that opening
+  selection.
+- `visible`: set to `false` to hide the record without deleting its image or
+  metadata.
+- `order`: lower numbers appear first in All Work. Decimals are valid, so an
+  image can be placed between `20` and `30` using `25`.
+- `year`, `practice`, `form`, `tools`, `context`, `credits`, and `creditLine`:
+  optional lightbox information.
+- `series`: give related records the same `id` and `title` to combine them into
+  one tile. Remove `series` to show an image on its own.
+
+Run `pnpm archive:sync` after adding images. The command appends missing records
+with useful defaults and never overwrites existing catalogue entries. It also
+runs automatically before `pnpm dev` and `pnpm build`.
 
 ## Authoring workflow
 
-1. Add the image to `app/images/all-work` or `app/images/landing-page`; the
-   relevant grid discovers it automatically on the next dev/build run.
+1. Add the image to `app/images/all-work` or `app/images/landing-page`; the next
+   dev/build run discovers it and adds a starter entry to
+   `archive-catalog.json`.
 2. Keep the full-resolution master outside the deployed repository, then run
    `pnpm image:optimize`. The content-hash manifest prevents unchanged files
    from being recompressed on later runs.
-3. If the image is a named work, add its metadata record to
-   `app/content/works.ts` and write accurate alt text.
-4. Add factual catalogue information: title, date, form, subjects, materials,
+3. Open `app/data/archive-catalog.json`, find the new filename, and review its
+   title, alt text, category, collection and order. Add its filename to
+   `featured` if it should also appear on the homepage.
+4. Only if the image needs a full standalone detail page, add a richer record to
+   `app/content/works.ts`.
+5. Add factual catalogue information: title, date, form, subjects, materials,
    techniques, tools, dimensions, and credits.
-5. Write the short summary and longer interpretive text.
-6. Add sources, rights, and external links.
-7. Review SEO title, description, keywords, and share image.
-8. Change `editorial.status` from `draft` to `in-review`, then to `ready`.
+6. Write the short summary and longer interpretive text.
+7. Add sources, rights, and external links.
+8. Review SEO title, description, keywords, and share image.
+9. Change `editorial.status` from `draft` to `in-review`, then to `ready`.
 
 Draft editorial prose is intentionally not shown on the public detail page and
 is not used as the SEO description. This lets records be completed gradually
@@ -57,9 +98,9 @@ record. Individual image rights always take priority over the site default.
 
 ## Archive display
 
-`display` controls presentation rather than describing the artwork itself. The
-primary image's intrinsic dimensions determine its archive-tile proportions, so
-the image remains uncropped.
+For the grid, edit `order`, `collection`, `visible`, and `series` in
+`archive-catalog.json`. The primary image's intrinsic dimensions determine its
+archive-tile proportions, so the image remains uncropped.
 
 | Field   | Required | Purpose                                                     |
 | ------- | -------- | ----------------------------------------------------------- |

@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Jona Schlegel visual archive catalogue",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["featured", "works", "models"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "description": { "type": "string" },
+    "featured": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "works": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/$defs/work" }
+    },
+    "models": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/model" }
+    }
+  },
+  "$defs": {
+    "category": {
+      "enum": [
+        "illustration",
+        "maps",
+        "3d",
+        "web-interfaces",
+        "brand-graphic-design"
+      ]
+    },
+    "work": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sourceFolder",
+        "title",
+        "alt",
+        "category",
+        "collection",
+        "visible",
+        "order",
+        "practice",
+        "form"
+      ],
+      "properties": {
+        "sourceFolder": {
+          "enum": ["landing-page", "all-work", "archive"]
+        },
+        "title": { "type": "string", "minLength": 1 },
+        "alt": { "type": "string", "minLength": 1 },
+        "category": { "$ref": "#/$defs/category" },
+        "collection": { "enum": ["main", "studies"] },
+        "visible": { "type": "boolean" },
+        "order": { "type": "number" },
+        "year": { "type": "string" },
+        "practice": { "type": "string" },
+        "form": { "type": "string" },
+        "tools": { "type": "array", "items": { "type": "string" } },
+        "context": { "type": "string" },
+        "credits": { "type": "string" },
+        "creditLine": { "type": "string" },
+        "series": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id", "title"],
+          "properties": {
+            "id": { "type": "string", "minLength": 1 },
+            "title": { "type": "string", "minLength": 1 }
+          }
+        }
+      }
+    },
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "alt", "practice", "visible", "order"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "alt": { "type": "string", "minLength": 1 },
+        "practice": { "type": "string" },
+        "visible": { "type": "boolean" },
+        "order": { "type": "number" }
+      }
+    }
+  }
+}

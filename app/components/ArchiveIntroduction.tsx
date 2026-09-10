@@ -15,10 +15,7 @@ export default function ArchiveIntroduction({
       <div>
         <h1>{title}</h1>
         {count !== undefined ? (
-          <p className="archive-index">
-            {count} works · Illustration · Reconstruction · Visual explanation ·
-            Web
-          </p>
+          <p className="archive-index">{count} works in the visual archive</p>
         ) : null}
       </div>
       <p>{children}</p>

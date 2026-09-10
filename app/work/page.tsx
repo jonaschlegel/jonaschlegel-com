@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
-import ArchiveGrid from '../components/ArchiveGrid';
 import ArchiveIntroduction from '../components/ArchiveIntroduction';
-import { allWorkAssets } from '../content/archive-assets';
+import WorkArchive from '../components/WorkArchive';
+import { allWorkAssets, archiveAssets } from '../content/archive-assets';
 import {
   getSketchfabGridItems,
   toArchiveGridItems,
@@ -15,23 +15,35 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://jonaschlegel.com/work' },
 };
 
+const projectPlateFilenames = new Set([
+  'suriname-tijdmachine-1.webp',
+  'necessary-reunions.png',
+  'pastforwardhub-2.webp',
+]);
+
 export default function WorkPage() {
   const sketchfabItems = getSketchfabGridItems();
+  const archiveItems = toArchiveGridItems(
+    [
+      ...allWorkAssets,
+      ...archiveAssets.filter((asset) =>
+        projectPlateFilenames.has(asset.filename),
+      ),
+    ],
+    visualWorks,
+  );
 
   return (
     <div className="archive-page">
       <ArchiveIntroduction
         title="All work"
-        count={allWorkAssets.length + sketchfabItems.length}
+        count={archiveItems.length + sketchfabItems.length}
       >
-        One archive of all and some of my works, from sketches to visual studies
-        and 3D models.
+        An index of illustrations, visual explanations, maps, reconstructions,
+        interfaces, models and working studies. Browse by practice or search for
+        a title.
       </ArchiveIntroduction>
-      <ArchiveGrid
-        items={toArchiveGridItems(allWorkAssets, visualWorks)}
-        sketchfabItems={sketchfabItems}
-        randomize
-      />
+      <WorkArchive items={archiveItems} sketchfabItems={sketchfabItems} />
     </div>
   );
 }

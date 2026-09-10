@@ -1,10 +1,16 @@
 import type { Metadata } from 'next';
-import CalendlyButton from './components/CalendlyButton';
 import ArchiveGrid from './components/ArchiveGrid';
 import ArchiveIntroduction from './components/ArchiveIntroduction';
-import { allWorkAssets, archiveAssets, landingPageAssets } from './content/archive-assets';
+import {
+  allWorkAssets,
+  archiveAssets,
+  landingPageAssets,
+} from './content/archive-assets';
+import {
+  getFeaturedArchiveItems,
+  toArchiveGridItems,
+} from './content/archive-grid';
 import { visualWorks } from './content/works';
-import { toArchiveGridItems } from './content/archive-grid';
 
 export const metadata: Metadata = {
   title: 'Archaeology, drawn, mapped and made usable',
@@ -13,27 +19,12 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://jonaschlegel.com' },
 };
 
-// Keep the landing page a generous visual archive: the small landing collection
-// is supplemented with a few maps, reconstructions, interfaces and identity studies.
-const additionalLandingFilenames = new Set([
-  'Babylon-map.jpg',
-  'europe-graffiti-history-spray-can.jpg',
-  'trier-roman-economy-geology-and-raw-materials-map.webp',
-  'trier-roman-pottery-workshop-reconstruction-close.webp',
-  'archaeological-multi-tool.jpg',
-  'digital-elevation-model.jpg',
-  'bell-beaker-map.jpg',
-  'archaeological-stratigraphy.png',
-  'pastrace-brand-identity.webp',
-]);
-
-const interfaceFilenames = new Set(['suriname-tijdmachine-1.webp', 'necessary-reunions.png']);
-
-const selectedAssets = [
-  ...landingPageAssets,
-  ...allWorkAssets.filter((asset) => additionalLandingFilenames.has(asset.filename)),
-  ...archiveAssets.filter((asset) => interfaceFilenames.has(asset.filename)),
-];
+const featuredItems = getFeaturedArchiveItems(
+  toArchiveGridItems(
+    [...landingPageAssets, ...allWorkAssets, ...archiveAssets],
+    visualWorks,
+  ),
+);
 
 export default function HomePage() {
   const structuredData = {
@@ -52,10 +43,11 @@ export default function HomePage() {
 
   return (
     <div className="archive-page home-page">
-      <ArchiveIntroduction title="Archaeology, drawn, mapped and made usable.">
-        I am Jona Schlegel, an archaeologist, illustrator and web developer. I turn research,
-        objects and complex data into illustrations, reconstructions, maps and digital interfaces
-        for archaeological projects, publications and public engagement.
+      <ArchiveIntroduction title="Welcome to archaeoINK.">
+        I am Jona Schlegel, an archaeologist, illustrator and web developer. I
+        turn research, objects and complex data into illustrations,
+        reconstructions, maps and digital interfaces for archaeological
+        projects, publications and public engagement.
       </ArchiveIntroduction>
 
       <section aria-labelledby="selected-work-heading">
@@ -64,18 +56,35 @@ export default function HomePage() {
             A selection of things I have made
           </p>
         </div>
-        <ArchiveGrid
-          items={toArchiveGridItems(selectedAssets, visualWorks)}
-          showLabels
-          randomize={false}
-        />
+        <ArchiveGrid items={featuredItems} showLabels randomize={false} />
       </section>
 
-      <section id="contact" className="archive-contact" aria-labelledby="contact-heading">
-        <p className="archive-eyebrow">Contact</p>
-        <h2 id="contact-heading">Have a research story to make visible?</h2>
-        <p>Tell me what you are working on, and we can find the right visual or digital form for it.</p>
-        <CalendlyButton text="Book an appointment" />
+      <section
+        id="contact"
+        className="archive-contact"
+        aria-labelledby="contact-heading"
+      >
+        <div>
+          <p className="archive-eyebrow">Contact</p>
+          <h2 id="contact-heading">Write to me.</h2>
+        </div>
+        <div className="archive-contact__copy">
+          <p>
+            For questions about the work, an idea you would like to discuss, or
+            simply to say hello.
+          </p>
+          <div className="archive-contact__links">
+            <a href="mailto:jonaschlegel@gmail.com">jonaschlegel@gmail.com</a>
+            <a
+              href="https://calendly.com/jonaschlegel"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Choose a time
+              <span className="sr-only"> (opens in a new tab)</span>
+            </a>
+          </div>
+        </div>
       </section>
 
       <script
