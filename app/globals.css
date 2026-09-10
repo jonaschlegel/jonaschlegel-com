@@ -320,28 +320,6 @@ textarea:focus-visible {
   text-transform: uppercase;
 }
 
-.home-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem 2rem;
-  margin-top: clamp(2rem, 5vw, 4rem);
-  padding-top: 1rem;
-  border-top: 1px solid #c7c3b8;
-}
-
-.home-links a {
-  border-bottom: 1px solid #181814;
-  color: #181814;
-  font-size: 0.875rem;
-  line-height: 1.8;
-  text-decoration: none;
-}
-
-.home-links a:hover {
-  border-bottom-color: #9b351e;
-  color: #9b351e;
-}
-
 .archive-grid {
   display: flex;
   flex-wrap: wrap;

@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import type { Metadata } from 'next';
 import CalendlyButton from './components/CalendlyButton';
 import ArchiveGrid from './components/ArchiveGrid';
@@ -71,14 +70,6 @@ export default function HomePage() {
           randomize={false}
         />
       </section>
-
-      <nav className="home-links" aria-label="Explore the archive">
-        <Link href="/work">All work</Link>
-        <a href="https://archaeoink.substack.com/" target="_blank" rel="noreferrer">
-          Research notebook ↗
-        </a>
-        <a href="#contact">Contact</a>
-      </nav>
 
       <section id="contact" className="archive-contact" aria-labelledby="contact-heading">
         <p className="archive-eyebrow">Contact</p>
