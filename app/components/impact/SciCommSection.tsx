@@ -168,7 +168,7 @@ const SciCommSection: FC<SciCommSectionProps> = ({
                         rel="noopener noreferrer"
                         className="text-xs text-primary-green hover:underline"
                       >
-                        Listen →
+                        Listen ↗
                       </a>
                     )}
                   </div>

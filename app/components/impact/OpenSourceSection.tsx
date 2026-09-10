@@ -64,7 +64,7 @@ const OpenSourceSection: FC<OpenSourceSectionProps> = ({
             rel="noopener noreferrer"
             className="rounded-full border border-gray-200 px-4 py-2 text-xs font-medium text-primary-green transition-colors hover:border-primary-green"
           >
-            View on GitHub →
+            View on GitHub ↗
           </a>
         )}
       </div>

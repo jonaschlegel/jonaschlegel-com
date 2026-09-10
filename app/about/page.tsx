@@ -356,9 +356,7 @@ export default function AboutPage() {
         </section>
 
         <p className="about-writing">
-          <Link href="/cv">
-            Open the complete CV, map and publication list →
-          </Link>
+          <Link href="/cv">Open the complete CV, map and publication list</Link>
         </p>
         <p className="about-writing">
           Essays, field notes and unfinished thoughts live on{' '}

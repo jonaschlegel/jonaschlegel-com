@@ -205,7 +205,7 @@ export default function ServicesContent() {
             href="#contact"
             className="mt-6 inline-block border-b border-primary-dark pb-1 text-sm font-semibold text-primary-dark transition-colors hover:border-primary-green hover:text-primary-green"
           >
-            Tell me what you are working on&nbsp; ↓
+            Tell me what you are working on
           </a>
         </div>
       </header>

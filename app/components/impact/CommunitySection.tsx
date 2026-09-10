@@ -81,7 +81,7 @@ const CommunitySection: FC<CommunitySectionProps> = ({
                 </span>
                 <p className="text-xs text-gray-500">{platform.purpose}</p>
               </div>
-              <span className="text-xs text-gray-400">→</span>
+              <span className="text-xs text-gray-400">↗</span>
             </a>
           ))}
         </div>
