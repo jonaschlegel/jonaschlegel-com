@@ -356,16 +356,16 @@ export default function AboutPage() {
         </section>
 
         <p className="about-writing">
-          <Link href="/cv">Open the complete CV, map and publication list</Link>
+          <Link href="/cv">View the full CV, map and publication list</Link>
         </p>
         <p className="about-writing">
-          Essays, field notes and unfinished thoughts live on{' '}
+          Read essays and field notes on{' '}
           <a
             href="https://archaeoink.substack.com/"
             target="_blank"
             rel="noreferrer"
           >
-            Substack ↗
+            Substack <span aria-hidden="true">↗</span>
           </a>
         </p>
       </div>
