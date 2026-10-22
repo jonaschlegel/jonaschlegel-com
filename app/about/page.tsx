@@ -103,41 +103,96 @@ const programmingKnowledge = [
     content: 'React, Next.js, Node.js',
   },
   {
-    title: 'Spatial web',
-    content: 'CesiumJS, Resium, Leaflet',
+    title: 'Styling & animation',
+    content: 'Tailwind CSS, SCSS, Framer Motion',
   },
-  { title: 'Additional', content: 'SQL, R and NetLogo' },
+  {
+    title: 'Data visualisation & spatial web',
+    content: 'D3.js, Three.js, Leaflet',
+  },
+  {
+    title: 'Databases & query languages',
+    content: 'SQL, PostgreSQL, SQLite',
+  },
+
+{
+  title: 'Version control & code collaboration',
+  content: 'GitHub, Gitea, GitLab',
+},
+ {
+    title: 'Development tools & version control',
+    content: 'Git, pnpm',
+  },
+  {
+    title: 'Digital heritage standards & data formats',
+    content: 'IIIF, GeoJSON, W3C Web Annotation',
+  },
+  {
+    title: 'Ontologies & controlled vocabularies',
+    content: 'CIDOC CRM, CRMarchaeo, SKOS',
+  },
+  {
+    title: 'Additional languages & modelling',
+    content: 'R, NetLogo',
+  },
 ];
 
 const softwareKnowledge = [
   {
     title: 'Design & illustration',
     content:
-      'Figma, Procreate, Photoshop, InDesign, Lightroom, Inkscape, GIMP, RawTherapee, Vectornator and Miro',
+      'Figma, Procreate, Photoshop, InDesign, Lightroom, Inkscape, GIMP, RawTherapee, Vectornator, Miro',
   },
   {
     title: 'GIS & mapping',
     content:
-      'QGIS, ArcGIS Pro, survey2gis, SAGA GIS, GRASS GIS and Google Earth Pro',
+      'QGIS, ArcGIS Pro, survey2gis, SAGA GIS, GRASS GIS, Google Earth Pro',
   },
   {
-    title: 'Databases & knowledge systems',
+    title: 'Database & vocabulary tools',
     content:
-      'PostgreSQL, SQLite, Microsoft Access, OpenAtlas, CIDOC CRM, SKOS and dbdiagram.io',
+      'Microsoft Access, OpenAtlas, Skosmos, dbdiagram.io',
   },
   {
-    title: '3D & photogrammetry',
+    title: '3D modelling & spatial sketching',
     content:
-      'Blender, 3ds Max, Agisoft Metashape, Meshroom, MeshLab, CloudCompare, Kubit PhoToPlan and TachyCAD',
+      'Blender, Autodesk Maya, 3ds Max, Shapr3D, Nomad Sculpt, Feather, Mental Canvas',
   },
   {
-    title: 'Prospection data',
+    title: 'Photogrammetry & point clouds',
     content:
-      'Golden Software Surfer, RiScan, RiProcess, RiSolve, RiPano, ApSoft and LoggerVis',
+      'Agisoft Metashape, Meshroom, MeshLab, CloudCompare, Kubit PhoToPlan, TachyCAD',
   },
+  {
+    title: 'Scientific 3D visualisation',
+    content: 'Vaa3D',
+  },
+  {
+    title: 'Prospection & survey data',
+    content:
+      'Golden Software Surfer, RiScan, RiProcess, RiSolve, RiPano, ApSoft, LoggerVis',
+  },
+
+  {
+    title: 'Georeferencing & annotation',
+    content: 'Allmaps, re:Charted',
+  },
+  {
+    title: '3D publishing',
+    content: 'Sketchfab',
+  },
+  {
+  title: 'Knowledge management & collaboration',
+  content: 'Notion, Obsidian, Miro,',
+},
+{
+  title: 'Research & reference management',
+  content: 'Zotero, Zenodo',
+},
   {
     title: 'Writing & office',
-    content: 'Microsoft Office, LibreOffice, OpenOffice, LaTeX and Markdown',
+    content:
+      'Microsoft Office, LibreOffice, OpenOffice, LaTeX, Markdown, Scrivener',
   },
 ];
 
