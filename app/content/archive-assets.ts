@@ -31,186 +31,188 @@ import allWorkarchaeologicalObjectsDigitalColourStudy15 from '../images/all-work
 import allWorkarchaeologicalPhasePlanBuildingAndBurials16 from '../images/all-work/archaeological-phase-plan-building-and-burials.png';
 import allWorkarchaeologicalStratigraphy17 from '../images/all-work/archaeological-stratigraphy.png';
 import allWorkarchaeologyIceberg18 from '../images/all-work/archaeology-iceberg.jpg';
-import allWorkartifactCut19 from '../images/all-work/artifact-cut.jpg';
-import allWorkartifactsStippled20 from '../images/all-work/artifacts-stippled.jpg';
-import allWorkaugnetizierCluster21 from '../images/all-work/augnetizier-cluster.jpg';
-import allWorkautumnStratigraphy22 from '../images/all-work/autumn-stratigraphy.jpg';
-import allWorkaxes23 from '../images/all-work/axes.jpg';
-import allWorkbabylonMap24 from '../images/all-work/Babylon-map.jpg';
-import allWorkbackpack25 from '../images/all-work/Backpack.jpg';
-import allWorkbellBeakerMap26 from '../images/all-work/bell-beaker-map.jpg';
-import allWorkbellBeakerPaperCut27 from '../images/all-work/bell-beaker-paper-cut.jpg';
-import allWorkbellBeakerStillLife28 from '../images/all-work/bell-beaker-still-life.jpg';
-import allWorkbellBeaker29 from '../images/all-work/bell-beaker.jpg';
-import allWorkbiasCherryPicking30 from '../images/all-work/bias-cherry-picking.jpg';
-import allWorkbiasEurocentism31 from '../images/all-work/bias-eurocentism.jpg';
-import allWorkbioarchaeologyCover32 from '../images/all-work/bioarchaeology-cover.jpg';
-import allWorkbones33 from '../images/all-work/Bones.jpg';
-import allWorkbottleStippling34 from '../images/all-work/bottle-stippling.jpg';
-import allWorkbronzeAgeCluster35 from '../images/all-work/bronze-age-cluster.jpg';
-import allWorkbronzeAgeStillLife36 from '../images/all-work/bronze-age-still-life.png';
-import allWorkbronzeBowl37 from '../images/all-work/bronze-bowl.jpg';
-import allWorkbronzeBull38 from '../images/all-work/bronze-bull.jpg';
-import allWorkbronze39 from '../images/all-work/Bronze.jpg';
-import allWorkbrushStratigraphy40 from '../images/all-work/brush-stratigraphy.jpg';
-import allWorkburialDogHuman41 from '../images/all-work/burial-dog-human.jpg';
-import allWorkcache42 from '../images/all-work/Cache.jpg';
-import allWorkcalcyladen43 from '../images/all-work/calcyladen.jpg';
-import allWorkcharmeleonGraffiti44 from '../images/all-work/charmeleon-graffiti.jpg';
-import allWorkcircleOfAPosthole45 from '../images/all-work/Circle-Of-A-Posthole.jpg';
-import allWorkclassify46 from '../images/all-work/Classify.jpg';
-import allWorkcowAnimalBones47 from '../images/all-work/Cow-Animal-Bones.jpg';
-import allWorkcyano48 from '../images/all-work/cyano.jpg';
-import allWorkdecoratedCeramicVesselDigitalColourStudy49 from '../images/all-work/decorated-ceramic-vessel-digital-colour-study.jpg';
-import allWorkdecoratedChestWithSkull3dReconstruction50 from '../images/all-work/decorated-chest-with-skull-3d-reconstruction.jpg';
-import allWorkdecoratedPedestalVessel3dReconstruction51 from '../images/all-work/decorated-pedestal-vessel-3d-reconstruction.jpg';
-import allWorkdeerBoneTools52 from '../images/all-work/Deer-Bone-Tools.jpg';
-import allWorkdeerBones53 from '../images/all-work/deer-bones.jpg';
-import allWorkdeerFatLampIdeas54 from '../images/all-work/deer-fat-lamp-ideas.jpg';
-import allWorkdigitalElevationModel55 from '../images/all-work/digital-elevation-model.jpg';
-import allWorkdiscoveryMedia56 from '../images/all-work/Discovery-Media.jpg';
-import allWorkdorothyGarrod57 from '../images/all-work/dorothy-garrod.jpg';
-import allWorkeasterBouquette58 from '../images/all-work/easter-bouquette.jpg';
-import allWorkembodiment59 from '../images/all-work/Embodiment.jpg';
-import allWorkeuropeGraffitiHistorySprayCan60 from '../images/all-work/europe-graffiti-history-spray-can.jpg';
-import allWorkeuropeGraffitiHistoryTak18361 from '../images/all-work/europe-graffiti-history-tak-183.jpg';
-import allWorkexcavationSection5GprMagneticInterpretation62 from '../images/all-work/excavation-section-5-gpr-magnetic-interpretation.png';
-import allWorkexchangeBenin63 from '../images/all-work/Exchange-Benin.jpg';
-import allWorkexclusion64 from '../images/all-work/Exclusion.jpg';
-import allWorkexcotic65 from '../images/all-work/Excotic.jpg';
-import allWorkeyeIdolsStippled66 from '../images/all-work/eye-idols-stippled.jpg';
-import allWorkeyeIdols67 from '../images/all-work/eye-idols.jpg';
-import allWorkfemaleArchaeologistThroughTime68 from '../images/all-work/female-archaeologist-through-time.jpg';
-import allWorkfemaleBabyFeedingReconstruction69 from '../images/all-work/female-baby-feeding-reconstruction.jpg';
-import allWorkfemaleBurialReconstruction70 from '../images/all-work/female-burial-reconstruction.png';
-import allWorkfemaleBurialReconstructon71 from '../images/all-work/female-burial-reconstructon.jpg';
-import allWorkflake72 from '../images/all-work/flake.jpg';
-import allWorkflight73 from '../images/all-work/flight.jpg';
-import allWorkflintCollage74 from '../images/all-work/Flint-Collage.jpg';
-import allWorkflowerCrown75 from '../images/all-work/flower-crown.webp';
-import allWorkfragile76 from '../images/all-work/Fragile.jpg';
-import allWorkfrogVesselStippled77 from '../images/all-work/frog-vessel-stippled.jpg';
-import allWorkfueledByCoffee78 from '../images/all-work/fueled-by-coffee.jpg';
-import allWorkfunnelBeakerCluster79 from '../images/all-work/Funnel-beaker-cluster.jpg';
-import allWorkgargoyle80 from '../images/all-work/gargoyle.jpg';
-import allWorkgearsInArchaeology81 from '../images/all-work/gears-in-archaeology.jpg';
-import allWorkgenderBias82 from '../images/all-work/gender-bias.jpg';
-import allWorkgenerative83 from '../images/all-work/Generative.jpg';
-import allWorkgirlsAndWomenInScience84 from '../images/all-work/girls-and-women-in-science.jpg';
-import allWorkglassStratigraphyTrowel85 from '../images/all-work/glass-stratigraphy-trowel.jpg';
-import allWorkgoatVessel86 from '../images/all-work/goat-vessel.jpg';
-import allWorkgraffitiArchaeologicalFeatureComparisson87 from '../images/all-work/graffiti-archaeological-feature-comparisson.png';
-import allWorkgragoyleDecoration88 from '../images/all-work/Gragoyle-Decoration.jpg';
-import allWorkgroundPenetratingRaderCrossSection89 from '../images/all-work/ground-penetrating-rader-cross-section.jpg';
-import allWorkh90 from '../images/all-work/H.jpg';
-import allWorkhatchingTorsoStatue91 from '../images/all-work/hatching-torso-statue.jpg';
-import allWorkhelmet92 from '../images/all-work/helmet.jpg';
-import allWorkindianaJonesShelf93 from '../images/all-work/indiana-jones-shelf.jpg';
-import allWorkinkedAnimals94 from '../images/all-work/Inked-Animals.jpg';
-import allWorkinscriptionStone95 from '../images/all-work/inscription-stone.jpg';
-import allWorkinscription96 from '../images/all-work/Inscription.jpg';
-import allWorkinternationalWomensDay97 from '../images/all-work/international-womens-day.jpg';
-import allWorkipadProInArchaeology98 from '../images/all-work/ipad-pro-in-archaeology.jpg';
-import allWorkitWasntMe99 from '../images/all-work/it-wasnt-me.jpg';
-import allWorkknife100 from '../images/all-work/knife.jpg';
-import allWorkkoreReconstructionColoured101 from '../images/all-work/kore-reconstruction-coloured.jpg';
-import allWorkkreteColoured102 from '../images/all-work/krete-coloured.jpg';
-import allWorkl103 from '../images/all-work/L.jpg';
-import allWorklaptopCidocCrm104 from '../images/all-work/laptop-cidoc-crm.jpg';
-import allWorklengyell105 from '../images/all-work/lengyell.jpg';
-import allWorklinearPotteryCluster106 from '../images/all-work/linear-pottery-cluster.jpg';
-import allWorkmanyFieldsOfArchaeology107 from '../images/all-work/many-fields-of-archaeology.jpg';
-import allWorkmanyHatsOfArchaeologist108 from '../images/all-work/many-hats-of-archaeologist.jpg';
-import allWorkmayTheFourth109 from '../images/all-work/may-the-fourth.jpg';
-import allWorkmeetTheArtist110 from '../images/all-work/meet-the-artist.jpg';
-import allWorkmiddleBronzeAgeIvoryComb111 from '../images/all-work/middle-bronze-age-ivory-comb.jpg';
-import allWorkmonoliths112 from '../images/all-work/monoliths.webp';
-import allWorkmovementStatue113 from '../images/all-work/movement-statue.jpg';
-import allWorkmulledWineRecipe114 from '../images/all-work/mulled-wine-recipe.jpg';
-import allWorkmyPhdResearch115 from '../images/all-work/my-phd-research.jpg';
-import allWorknebraBronzeHoard116 from '../images/all-work/nebra-bronze-hoard.jpg';
-import allWorkneolithicGraffitiReconstruction117 from '../images/all-work/neolithic-graffiti-reconstruction.jpg';
-import allWorkneolithicStillLife118 from '../images/all-work/neolithic-still-life.png';
-import allWorknomadicBurial119 from '../images/all-work/Nomadic-Burial.jpg';
-import allWorko120 from '../images/all-work/O.jpg';
-import allWorkobjectivity121 from '../images/all-work/Objectivity.jpg';
-import allWorkochrePainting122 from '../images/all-work/ochre-painting.jpg';
-import allWorkoctopusVesselWatercolour123 from '../images/all-work/octopus-vessel-watercolour.jpg';
-import allWorkpastraceBrandIdentity124 from '../images/all-work/pastrace-brand-identity.webp';
-import allWorkpergamonBuckleDistributionMap125 from '../images/all-work/pergamon-buckle-distribution-map.jpg';
-import allWorkphdDirectionMap126 from '../images/all-work/phd-direction-map.jpg';
-import allWorkpostholePaperCut127 from '../images/all-work/posthole-paper-cut.jpg';
-import allWorkpotsWithCati128 from '../images/all-work/pots-with-cati.jpg';
-import allWorkprovenance129 from '../images/all-work/Provenance.jpg';
-import allWorkr130 from '../images/all-work/R.jpg';
-import allWorkratSkeleton131 from '../images/all-work/rat-skeleton.jpg';
-import allWorkraven132 from '../images/all-work/Raven.webp';
-import allWorkrecreate133 from '../images/all-work/Recreate.jpg';
-import allWorkresearchDesign134 from '../images/all-work/Research-Design.jpg';
-import allWorkresearchJournalGraffiti135 from '../images/all-work/research-journal-graffiti.jpg';
-import allWorkresidue136 from '../images/all-work/Residue.jpg';
-import allWorkroamAncientSites137 from '../images/all-work/Roam-Ancient-Sites.jpg';
-import allWorkrocherDesAuresExcavation6Layer2Hillshade138 from '../images/all-work/rocher-des-aures-excavation-6-layer-2-hillshade.jpg';
-import allWorkrocherDesAuresExcavation6Layer2Orthophoto139 from '../images/all-work/rocher-des-aures-excavation-6-layer-2-orthophoto.jpg';
-import allWorkrocherDesAuresExcavation6Layer3Orthophoto140 from '../images/all-work/rocher-des-aures-excavation-6-layer-3-orthophoto.jpg';
-import allWorkrocherDesAuresExcavation6Layer5Plan141 from '../images/all-work/rocher-des-aures-excavation-6-layer-5-plan.jpg';
-import allWorkromanBurialRecontruction142 from '../images/all-work/roman-burial-recontruction.jpg';
-import allWorksafetyTools143 from '../images/all-work/safety-tools.jpg';
-import allWorksalzburgIllustratedCityMap144 from '../images/all-work/salzburg-illustrated-city-map.jpg';
-import allWorkscapulaArchaeology145 from '../images/all-work/scapula-archaeology.jpg';
-import allWorkscraper146 from '../images/all-work/Scraper.jpg';
-import allWorkscribbles147 from '../images/all-work/scribbles.jpg';
-import allWorkshipsInked148 from '../images/all-work/ships-inked.png';
-import allWorksickle149 from '../images/all-work/sickle.jpg';
-import allWorksolidarity150 from '../images/all-work/Solidarity.jpg';
-import allWorkspectrum151 from '../images/all-work/spectrum.jpg';
-import allWorkstartigraphyLayers152 from '../images/all-work/startigraphy-layers.jpg';
-import allWorkstatueModelDigitalColourStudy153 from '../images/all-work/statue-model-digital-colour-study.jpg';
-import allWorkstealing154 from '../images/all-work/stealing.jpg';
-import allWorkstereotypesTheDinosaurExcavator155 from '../images/all-work/stereotypes-the-dinosaur-excavator.jpg';
-import allWorkstereotypesTheIndianaJones156 from '../images/all-work/stereotypes-the-indiana-jones.jpg';
-import allWorkstereotypesTheTreasureHunter157 from '../images/all-work/stereotypes-the-treasure-hunter.jpg';
-import allWorkstillLife158 from '../images/all-work/still-life.jpg';
-import allWorkstillLife159 from '../images/all-work/still-life.png';
-import allWorkstonehenge160 from '../images/all-work/Stonehenge.jpg';
-import allWorkstratigraphicCrossSectionDrawing161 from '../images/all-work/stratigraphic-cross-section-drawing.jpg';
-import allWorkstratigraphicLayersLife162 from '../images/all-work/stratigraphic-layers-life.jpg';
-import allWorkstratigraphy163 from '../images/all-work/Stratigraphy.jpg';
-import allWorkteam164 from '../images/all-work/team.jpg';
-import allWorktechnology165 from '../images/all-work/Technology.jpg';
-import allWorktheArchaeologyOfHearts166 from '../images/all-work/The-Archaeology-Of-Hearts.jpg';
-import allWorktheBabylonianMapOfTheWorld167 from '../images/all-work/the-babylonian-map-of-the-world.jpg';
-import allWorktheCosmonautRecipe168 from '../images/all-work/The-Cosmonaut-Recipe.jpg';
-import allWorktheLanguagesOfArchaeology169 from '../images/all-work/The-Languages-Of-Archaeology.webp';
-import allWorktheLineBetween170 from '../images/all-work/The-Line-Between.jpg';
-import allWorkthePhoenicians171 from '../images/all-work/the-phoenicians.jpg';
-import allWorktheSocialLifeOfThings172 from '../images/all-work/The-Social-Life-Of-Things.jpg';
-import allWorktorsoBlended173 from '../images/all-work/torso-blended.jpg';
-import allWorktorsoColoured174 from '../images/all-work/torso-coloured.jpg';
-import allWorktoyChariotModel175 from '../images/all-work/toy-chariot-model.jpg';
-import allWorktrierExcavationSection1BuildingAndKilnsPlan176 from '../images/all-work/trier-excavation-section-1-building-and-kilns-plan.jpg';
-import allWorktrierLongWallIronSmeltingGeologyMap177 from '../images/all-work/trier-long-wall-iron-smelting-geology-map.png';
-import allWorktrierRomanEconomyGeologyAndRawMaterialsMap178 from '../images/all-work/trier-roman-economy-geology-and-raw-materials-map.webp';
-import allWorktrierRomanPotteryWorkshopReconstructionClose179 from '../images/all-work/trier-roman-pottery-workshop-reconstruction-close.webp';
-import allWorktrierRomanPotteryWorkshopReconstructionOverview180 from '../images/all-work/trier-roman-pottery-workshop-reconstruction-overview.webp';
-import allWorktrowelRainbow181 from '../images/all-work/trowel-rainbow.jpg';
-import allWorktrowel182 from '../images/all-work/trowel.jpg';
-import allWorktroyAndSchliemann183 from '../images/all-work/troy-and-schliemann.jpg';
-import allWorkunchartedVideoGame184 from '../images/all-work/Uncharted-Video-Game.jpg';
-import allWorkvenusFigureine185 from '../images/all-work/venus-figureine.jpg';
-import allWorkvenusFigurine186 from '../images/all-work/venus-figurine.jpg';
-import allWorkvenusFigurines187 from '../images/all-work/venus-figurines.jpg';
-import allWorkvenusOfWillendorfInked188 from '../images/all-work/venus-of-willendorf-inked.jpg';
-import allWorkvenusOfWillendorfNeon189 from '../images/all-work/venus-of-willendorf-neon.jpg';
-import allWorkvenusOfWillendorfSketch190 from '../images/all-work/venus-of-willendorf-sketch.jpg';
-import allWorkvenus191 from '../images/all-work/venus.jpg';
-import allWorkviennaDanubeCanalGraffitiResearchMap192 from '../images/all-work/vienna-danube-canal-graffiti-research-map.jpg';
-import allWorkvisibility193 from '../images/all-work/Visibility.jpg';
-import allWorkwallGraphicInterpretation194 from '../images/all-work/wall-graphic-interpretation.jpg';
-import allWorkwomensDay195 from '../images/all-work/womens-day.jpg';
-import allWorkwomensHistoryMonth196 from '../images/all-work/womens-history-month.jpg';
-import allWorkworkers197 from '../images/all-work/Workers.jpg';
-import allWorkyouAmphoraeMyWorld198 from '../images/all-work/you-amphorae-my-world.jpg';
+import allWorkarchink2020Overview19 from '../images/all-work/archInk-2020-overview.jpg';
+import allWorkarchink2023Overview20 from '../images/all-work/archInk-2023-overview.jpg';
+import allWorkartifactCut21 from '../images/all-work/artifact-cut.jpg';
+import allWorkartifactsStippled22 from '../images/all-work/artifacts-stippled.jpg';
+import allWorkaugnetizierCluster23 from '../images/all-work/augnetizier-cluster.jpg';
+import allWorkautumnStratigraphy24 from '../images/all-work/autumn-stratigraphy.jpg';
+import allWorkaxes25 from '../images/all-work/axes.jpg';
+import allWorkbabylonMap26 from '../images/all-work/Babylon-map.jpg';
+import allWorkbackpack27 from '../images/all-work/Backpack.jpg';
+import allWorkbellBeakerMap28 from '../images/all-work/bell-beaker-map.jpg';
+import allWorkbellBeakerPaperCut29 from '../images/all-work/bell-beaker-paper-cut.jpg';
+import allWorkbellBeakerStillLife30 from '../images/all-work/bell-beaker-still-life.jpg';
+import allWorkbellBeaker31 from '../images/all-work/bell-beaker.jpg';
+import allWorkbiasCherryPicking32 from '../images/all-work/bias-cherry-picking.jpg';
+import allWorkbiasEurocentism33 from '../images/all-work/bias-eurocentism.jpg';
+import allWorkbioarchaeologyCover34 from '../images/all-work/bioarchaeology-cover.jpg';
+import allWorkbones35 from '../images/all-work/Bones.jpg';
+import allWorkbottleStippling36 from '../images/all-work/bottle-stippling.jpg';
+import allWorkbronzeAgeCluster37 from '../images/all-work/bronze-age-cluster.jpg';
+import allWorkbronzeAgeStillLife38 from '../images/all-work/bronze-age-still-life.png';
+import allWorkbronzeBowl39 from '../images/all-work/bronze-bowl.jpg';
+import allWorkbronzeBull40 from '../images/all-work/bronze-bull.jpg';
+import allWorkbronze41 from '../images/all-work/Bronze.jpg';
+import allWorkbrushStratigraphy42 from '../images/all-work/brush-stratigraphy.jpg';
+import allWorkburialDogHuman43 from '../images/all-work/burial-dog-human.jpg';
+import allWorkcache44 from '../images/all-work/Cache.jpg';
+import allWorkcalcyladen45 from '../images/all-work/calcyladen.jpg';
+import allWorkcharmeleonGraffiti46 from '../images/all-work/charmeleon-graffiti.jpg';
+import allWorkcircleOfAPosthole47 from '../images/all-work/Circle-Of-A-Posthole.jpg';
+import allWorkclassify48 from '../images/all-work/Classify.jpg';
+import allWorkcowAnimalBones49 from '../images/all-work/Cow-Animal-Bones.jpg';
+import allWorkcyano50 from '../images/all-work/cyano.jpg';
+import allWorkdecoratedCeramicVesselDigitalColourStudy51 from '../images/all-work/decorated-ceramic-vessel-digital-colour-study.jpg';
+import allWorkdecoratedChestWithSkull3dReconstruction52 from '../images/all-work/decorated-chest-with-skull-3d-reconstruction.jpg';
+import allWorkdecoratedPedestalVessel3dReconstruction53 from '../images/all-work/decorated-pedestal-vessel-3d-reconstruction.jpg';
+import allWorkdeerBoneTools54 from '../images/all-work/Deer-Bone-Tools.jpg';
+import allWorkdeerBones55 from '../images/all-work/deer-bones.jpg';
+import allWorkdeerFatLampIdeas56 from '../images/all-work/deer-fat-lamp-ideas.jpg';
+import allWorkdigitalElevationModel57 from '../images/all-work/digital-elevation-model.jpg';
+import allWorkdiscoveryMedia58 from '../images/all-work/Discovery-Media.jpg';
+import allWorkdorothyGarrod59 from '../images/all-work/dorothy-garrod.jpg';
+import allWorkeasterBouquette60 from '../images/all-work/easter-bouquette.jpg';
+import allWorkembodiment61 from '../images/all-work/Embodiment.jpg';
+import allWorkeuropeGraffitiHistorySprayCan62 from '../images/all-work/europe-graffiti-history-spray-can.jpg';
+import allWorkeuropeGraffitiHistoryTak18363 from '../images/all-work/europe-graffiti-history-tak-183.jpg';
+import allWorkexcavationSection5GprMagneticInterpretation64 from '../images/all-work/excavation-section-5-gpr-magnetic-interpretation.png';
+import allWorkexchangeBenin65 from '../images/all-work/Exchange-Benin.jpg';
+import allWorkexclusion66 from '../images/all-work/Exclusion.jpg';
+import allWorkexcotic67 from '../images/all-work/Excotic.jpg';
+import allWorkeyeIdolsStippled68 from '../images/all-work/eye-idols-stippled.jpg';
+import allWorkeyeIdols69 from '../images/all-work/eye-idols.jpg';
+import allWorkfemaleArchaeologistThroughTime70 from '../images/all-work/female-archaeologist-through-time.jpg';
+import allWorkfemaleBabyFeedingReconstruction71 from '../images/all-work/female-baby-feeding-reconstruction.jpg';
+import allWorkfemaleBurialReconstruction72 from '../images/all-work/female-burial-reconstruction.png';
+import allWorkfemaleBurialReconstructon73 from '../images/all-work/female-burial-reconstructon.jpg';
+import allWorkflake74 from '../images/all-work/flake.jpg';
+import allWorkflight75 from '../images/all-work/flight.jpg';
+import allWorkflintCollage76 from '../images/all-work/Flint-Collage.jpg';
+import allWorkflowerCrown77 from '../images/all-work/flower-crown.webp';
+import allWorkfragile78 from '../images/all-work/Fragile.jpg';
+import allWorkfrogVesselStippled79 from '../images/all-work/frog-vessel-stippled.jpg';
+import allWorkfueledByCoffee80 from '../images/all-work/fueled-by-coffee.jpg';
+import allWorkfunnelBeakerCluster81 from '../images/all-work/Funnel-beaker-cluster.jpg';
+import allWorkgargoyle82 from '../images/all-work/gargoyle.jpg';
+import allWorkgearsInArchaeology83 from '../images/all-work/gears-in-archaeology.jpg';
+import allWorkgenderBias84 from '../images/all-work/gender-bias.jpg';
+import allWorkgenerative85 from '../images/all-work/Generative.jpg';
+import allWorkgirlsAndWomenInScience86 from '../images/all-work/girls-and-women-in-science.jpg';
+import allWorkglassStratigraphyTrowel87 from '../images/all-work/glass-stratigraphy-trowel.jpg';
+import allWorkgoatVessel88 from '../images/all-work/goat-vessel.jpg';
+import allWorkgraffitiArchaeologicalFeatureComparisson89 from '../images/all-work/graffiti-archaeological-feature-comparisson.png';
+import allWorkgragoyleDecoration90 from '../images/all-work/Gragoyle-Decoration.jpg';
+import allWorkgroundPenetratingRaderCrossSection91 from '../images/all-work/ground-penetrating-rader-cross-section.jpg';
+import allWorkh92 from '../images/all-work/H.jpg';
+import allWorkhatchingTorsoStatue93 from '../images/all-work/hatching-torso-statue.jpg';
+import allWorkhelmet94 from '../images/all-work/helmet.jpg';
+import allWorkindianaJonesShelf95 from '../images/all-work/indiana-jones-shelf.jpg';
+import allWorkinkedAnimals96 from '../images/all-work/Inked-Animals.jpg';
+import allWorkinscriptionStone97 from '../images/all-work/inscription-stone.jpg';
+import allWorkinscription98 from '../images/all-work/Inscription.jpg';
+import allWorkinternationalWomensDay99 from '../images/all-work/international-womens-day.jpg';
+import allWorkipadProInArchaeology100 from '../images/all-work/ipad-pro-in-archaeology.jpg';
+import allWorkitWasntMe101 from '../images/all-work/it-wasnt-me.jpg';
+import allWorkknife102 from '../images/all-work/knife.jpg';
+import allWorkkoreReconstructionColoured103 from '../images/all-work/kore-reconstruction-coloured.jpg';
+import allWorkkreteColoured104 from '../images/all-work/krete-coloured.jpg';
+import allWorkl105 from '../images/all-work/L.jpg';
+import allWorklaptopCidocCrm106 from '../images/all-work/laptop-cidoc-crm.jpg';
+import allWorklengyell107 from '../images/all-work/lengyell.jpg';
+import allWorklinearPotteryCluster108 from '../images/all-work/linear-pottery-cluster.jpg';
+import allWorkmanyFieldsOfArchaeology109 from '../images/all-work/many-fields-of-archaeology.jpg';
+import allWorkmanyHatsOfArchaeologist110 from '../images/all-work/many-hats-of-archaeologist.jpg';
+import allWorkmayTheFourth111 from '../images/all-work/may-the-fourth.jpg';
+import allWorkmeetTheArtist112 from '../images/all-work/meet-the-artist.jpg';
+import allWorkmiddleBronzeAgeIvoryComb113 from '../images/all-work/middle-bronze-age-ivory-comb.jpg';
+import allWorkmonoliths114 from '../images/all-work/monoliths.webp';
+import allWorkmovementStatue115 from '../images/all-work/movement-statue.jpg';
+import allWorkmulledWineRecipe116 from '../images/all-work/mulled-wine-recipe.jpg';
+import allWorkmyPhdResearch117 from '../images/all-work/my-phd-research.jpg';
+import allWorknebraBronzeHoard118 from '../images/all-work/nebra-bronze-hoard.jpg';
+import allWorkneolithicGraffitiReconstruction119 from '../images/all-work/neolithic-graffiti-reconstruction.jpg';
+import allWorkneolithicStillLife120 from '../images/all-work/neolithic-still-life.png';
+import allWorknomadicBurial121 from '../images/all-work/Nomadic-Burial.jpg';
+import allWorko122 from '../images/all-work/O.jpg';
+import allWorkobjectivity123 from '../images/all-work/Objectivity.jpg';
+import allWorkochrePainting124 from '../images/all-work/ochre-painting.jpg';
+import allWorkoctopusVesselWatercolour125 from '../images/all-work/octopus-vessel-watercolour.jpg';
+import allWorkpastraceBrandIdentity126 from '../images/all-work/pastrace-brand-identity.webp';
+import allWorkpergamonBuckleDistributionMap127 from '../images/all-work/pergamon-buckle-distribution-map.jpg';
+import allWorkphdDirectionMap128 from '../images/all-work/phd-direction-map.jpg';
+import allWorkpostholePaperCut129 from '../images/all-work/posthole-paper-cut.jpg';
+import allWorkpotsWithCati130 from '../images/all-work/pots-with-cati.jpg';
+import allWorkprovenance131 from '../images/all-work/Provenance.jpg';
+import allWorkr132 from '../images/all-work/R.jpg';
+import allWorkratSkeleton133 from '../images/all-work/rat-skeleton.jpg';
+import allWorkraven134 from '../images/all-work/Raven.webp';
+import allWorkrecreate135 from '../images/all-work/Recreate.jpg';
+import allWorkresearchDesign136 from '../images/all-work/Research-Design.jpg';
+import allWorkresearchJournalGraffiti137 from '../images/all-work/research-journal-graffiti.jpg';
+import allWorkresidue138 from '../images/all-work/Residue.jpg';
+import allWorkroamAncientSites139 from '../images/all-work/Roam-Ancient-Sites.jpg';
+import allWorkrocherDesAuresExcavation6Layer2Hillshade140 from '../images/all-work/rocher-des-aures-excavation-6-layer-2-hillshade.jpg';
+import allWorkrocherDesAuresExcavation6Layer2Orthophoto141 from '../images/all-work/rocher-des-aures-excavation-6-layer-2-orthophoto.jpg';
+import allWorkrocherDesAuresExcavation6Layer3Orthophoto142 from '../images/all-work/rocher-des-aures-excavation-6-layer-3-orthophoto.jpg';
+import allWorkrocherDesAuresExcavation6Layer5Plan143 from '../images/all-work/rocher-des-aures-excavation-6-layer-5-plan.jpg';
+import allWorkromanBurialRecontruction144 from '../images/all-work/roman-burial-recontruction.jpg';
+import allWorksafetyTools145 from '../images/all-work/safety-tools.jpg';
+import allWorksalzburgIllustratedCityMap146 from '../images/all-work/salzburg-illustrated-city-map.jpg';
+import allWorkscapulaArchaeology147 from '../images/all-work/scapula-archaeology.jpg';
+import allWorkscraper148 from '../images/all-work/Scraper.jpg';
+import allWorkscribbles149 from '../images/all-work/scribbles.jpg';
+import allWorkshipsInked150 from '../images/all-work/ships-inked.png';
+import allWorksickle151 from '../images/all-work/sickle.jpg';
+import allWorksolidarity152 from '../images/all-work/Solidarity.jpg';
+import allWorkspectrum153 from '../images/all-work/spectrum.jpg';
+import allWorkstartigraphyLayers154 from '../images/all-work/startigraphy-layers.jpg';
+import allWorkstatueModelDigitalColourStudy155 from '../images/all-work/statue-model-digital-colour-study.jpg';
+import allWorkstealing156 from '../images/all-work/stealing.jpg';
+import allWorkstereotypesTheDinosaurExcavator157 from '../images/all-work/stereotypes-the-dinosaur-excavator.jpg';
+import allWorkstereotypesTheIndianaJones158 from '../images/all-work/stereotypes-the-indiana-jones.jpg';
+import allWorkstereotypesTheTreasureHunter159 from '../images/all-work/stereotypes-the-treasure-hunter.jpg';
+import allWorkstillLife160 from '../images/all-work/still-life.jpg';
+import allWorkstillLife161 from '../images/all-work/still-life.png';
+import allWorkstonehenge162 from '../images/all-work/Stonehenge.jpg';
+import allWorkstratigraphicCrossSectionDrawing163 from '../images/all-work/stratigraphic-cross-section-drawing.jpg';
+import allWorkstratigraphicLayersLife164 from '../images/all-work/stratigraphic-layers-life.jpg';
+import allWorkstratigraphy165 from '../images/all-work/Stratigraphy.jpg';
+import allWorkteam166 from '../images/all-work/team.jpg';
+import allWorktechnology167 from '../images/all-work/Technology.jpg';
+import allWorktheArchaeologyOfHearts168 from '../images/all-work/The-Archaeology-Of-Hearts.jpg';
+import allWorktheBabylonianMapOfTheWorld169 from '../images/all-work/the-babylonian-map-of-the-world.jpg';
+import allWorktheCosmonautRecipe170 from '../images/all-work/The-Cosmonaut-Recipe.jpg';
+import allWorktheLanguagesOfArchaeology171 from '../images/all-work/The-Languages-Of-Archaeology.webp';
+import allWorktheLineBetween172 from '../images/all-work/The-Line-Between.jpg';
+import allWorkthePhoenicians173 from '../images/all-work/the-phoenicians.jpg';
+import allWorktheSocialLifeOfThings174 from '../images/all-work/The-Social-Life-Of-Things.jpg';
+import allWorktorsoBlended175 from '../images/all-work/torso-blended.jpg';
+import allWorktorsoColoured176 from '../images/all-work/torso-coloured.jpg';
+import allWorktoyChariotModel177 from '../images/all-work/toy-chariot-model.jpg';
+import allWorktrierExcavationSection1BuildingAndKilnsPlan178 from '../images/all-work/trier-excavation-section-1-building-and-kilns-plan.jpg';
+import allWorktrierLongWallIronSmeltingGeologyMap179 from '../images/all-work/trier-long-wall-iron-smelting-geology-map.png';
+import allWorktrierRomanEconomyGeologyAndRawMaterialsMap180 from '../images/all-work/trier-roman-economy-geology-and-raw-materials-map.webp';
+import allWorktrierRomanPotteryWorkshopReconstructionClose181 from '../images/all-work/trier-roman-pottery-workshop-reconstruction-close.webp';
+import allWorktrierRomanPotteryWorkshopReconstructionOverview182 from '../images/all-work/trier-roman-pottery-workshop-reconstruction-overview.webp';
+import allWorktrowelRainbow183 from '../images/all-work/trowel-rainbow.jpg';
+import allWorktrowel184 from '../images/all-work/trowel.jpg';
+import allWorktroyAndSchliemann185 from '../images/all-work/troy-and-schliemann.jpg';
+import allWorkunchartedVideoGame186 from '../images/all-work/Uncharted-Video-Game.jpg';
+import allWorkvenusFigureine187 from '../images/all-work/venus-figureine.jpg';
+import allWorkvenusFigurine188 from '../images/all-work/venus-figurine.jpg';
+import allWorkvenusFigurines189 from '../images/all-work/venus-figurines.jpg';
+import allWorkvenusOfWillendorfInked190 from '../images/all-work/venus-of-willendorf-inked.jpg';
+import allWorkvenusOfWillendorfNeon191 from '../images/all-work/venus-of-willendorf-neon.jpg';
+import allWorkvenusOfWillendorfSketch192 from '../images/all-work/venus-of-willendorf-sketch.jpg';
+import allWorkvenus193 from '../images/all-work/venus.jpg';
+import allWorkviennaDanubeCanalGraffitiResearchMap194 from '../images/all-work/vienna-danube-canal-graffiti-research-map.jpg';
+import allWorkvisibility195 from '../images/all-work/Visibility.jpg';
+import allWorkwallGraphicInterpretation196 from '../images/all-work/wall-graphic-interpretation.jpg';
+import allWorkwomensDay197 from '../images/all-work/womens-day.jpg';
+import allWorkwomensHistoryMonth198 from '../images/all-work/womens-history-month.jpg';
+import allWorkworkers199 from '../images/all-work/Workers.jpg';
+import allWorkyouAmphoraeMyWorld200 from '../images/all-work/you-amphorae-my-world.jpg';
 import archiveadventuressArchaeology0 from '../images/archive/adventuress-archaeology.png';
 import archiveadventuressCoverConcept1 from '../images/archive/adventuress-cover-concept.jpg';
 import archiveadventuressCover2 from '../images/archive/adventuress-cover.jpg';
@@ -374,186 +376,188 @@ export const allWorkAssets: ArchiveAsset[] = [
   { filename: "archaeological-phase-plan-building-and-burials.png", src: allWorkarchaeologicalPhasePlanBuildingAndBurials16, width: 1698, height: 2400, alt: "Archaeological Phase Plan Building And Burials" },
   { filename: "archaeological-stratigraphy.png", src: allWorkarchaeologicalStratigraphy17, width: 2400, height: 1799, alt: "Archaeological Stratigraphy" },
   { filename: "archaeology-iceberg.jpg", src: allWorkarchaeologyIceberg18, width: 2400, height: 2400, alt: "Archaeology Iceberg" },
-  { filename: "artifact-cut.jpg", src: allWorkartifactCut19, width: 2400, height: 2400, alt: "Artifact Cut" },
-  { filename: "artifacts-stippled.jpg", src: allWorkartifactsStippled20, width: 2400, height: 2400, alt: "Artifacts Stippled" },
-  { filename: "augnetizier-cluster.jpg", src: allWorkaugnetizierCluster21, width: 2400, height: 2400, alt: "Augnetizier Cluster" },
-  { filename: "autumn-stratigraphy.jpg", src: allWorkautumnStratigraphy22, width: 1080, height: 1920, alt: "Autumn Stratigraphy" },
-  { filename: "axes.jpg", src: allWorkaxes23, width: 1915, height: 1915, alt: "Axes" },
-  { filename: "Babylon-map.jpg", src: allWorkbabylonMap24, width: 2400, height: 2400, alt: "Babylon Map" },
-  { filename: "Backpack.jpg", src: allWorkbackpack25, width: 2400, height: 2400, alt: "Backpack" },
-  { filename: "bell-beaker-map.jpg", src: allWorkbellBeakerMap26, width: 2400, height: 2400, alt: "Bell Beaker Map" },
-  { filename: "bell-beaker-paper-cut.jpg", src: allWorkbellBeakerPaperCut27, width: 2000, height: 2027, alt: "Bell Beaker Paper Cut" },
-  { filename: "bell-beaker-still-life.jpg", src: allWorkbellBeakerStillLife28, width: 1918, height: 1918, alt: "Bell Beaker Still Life" },
-  { filename: "bell-beaker.jpg", src: allWorkbellBeaker29, width: 2400, height: 2400, alt: "Bell Beaker" },
-  { filename: "bias-cherry-picking.jpg", src: allWorkbiasCherryPicking30, width: 2000, height: 2000, alt: "Bias Cherry Picking" },
-  { filename: "bias-eurocentism.jpg", src: allWorkbiasEurocentism31, width: 2400, height: 1004, alt: "Bias Eurocentism" },
-  { filename: "bioarchaeology-cover.jpg", src: allWorkbioarchaeologyCover32, width: 2400, height: 2400, alt: "Bioarchaeology Cover" },
-  { filename: "Bones.jpg", src: allWorkbones33, width: 2400, height: 2400, alt: "Bones" },
-  { filename: "bottle-stippling.jpg", src: allWorkbottleStippling34, width: 1152, height: 1153, alt: "Bottle Stippling" },
-  { filename: "bronze-age-cluster.jpg", src: allWorkbronzeAgeCluster35, width: 2400, height: 2400, alt: "Bronze Age Cluster" },
-  { filename: "bronze-age-still-life.png", src: allWorkbronzeAgeStillLife36, width: 1350, height: 2400, alt: "Bronze Age Still Life" },
-  { filename: "bronze-bowl.jpg", src: allWorkbronzeBowl37, width: 2400, height: 2400, alt: "Bronze Bowl" },
-  { filename: "bronze-bull.jpg", src: allWorkbronzeBull38, width: 2400, height: 2400, alt: "Bronze Bull" },
-  { filename: "Bronze.jpg", src: allWorkbronze39, width: 1920, height: 2400, alt: "Bronze" },
-  { filename: "brush-stratigraphy.jpg", src: allWorkbrushStratigraphy40, width: 2400, height: 2400, alt: "Brush Stratigraphy" },
-  { filename: "burial-dog-human.jpg", src: allWorkburialDogHuman41, width: 2400, height: 2400, alt: "Burial Dog Human" },
-  { filename: "Cache.jpg", src: allWorkcache42, width: 2400, height: 2400, alt: "Cache" },
-  { filename: "calcyladen.jpg", src: allWorkcalcyladen43, width: 2243, height: 2243, alt: "Calcyladen" },
-  { filename: "charmeleon-graffiti.jpg", src: allWorkcharmeleonGraffiti44, width: 2400, height: 1605, alt: "Charmeleon Graffiti" },
-  { filename: "Circle-Of-A-Posthole.jpg", src: allWorkcircleOfAPosthole45, width: 2400, height: 2400, alt: "Circle Of A Posthole" },
-  { filename: "Classify.jpg", src: allWorkclassify46, width: 2400, height: 2400, alt: "Classify" },
-  { filename: "Cow-Animal-Bones.jpg", src: allWorkcowAnimalBones47, width: 2000, height: 2000, alt: "Cow Animal Bones" },
-  { filename: "cyano.jpg", src: allWorkcyano48, width: 2400, height: 2400, alt: "Cyano" },
-  { filename: "decorated-ceramic-vessel-digital-colour-study.jpg", src: allWorkdecoratedCeramicVesselDigitalColourStudy49, width: 1280, height: 1280, alt: "Decorated Ceramic Vessel Digital Colour Study" },
-  { filename: "decorated-chest-with-skull-3d-reconstruction.jpg", src: allWorkdecoratedChestWithSkull3dReconstruction50, width: 2048, height: 2048, alt: "Decorated Chest With Skull 3d Reconstruction" },
-  { filename: "decorated-pedestal-vessel-3d-reconstruction.jpg", src: allWorkdecoratedPedestalVessel3dReconstruction51, width: 2400, height: 2400, alt: "Decorated Pedestal Vessel 3d Reconstruction" },
-  { filename: "Deer-Bone-Tools.jpg", src: allWorkdeerBoneTools52, width: 2400, height: 2400, alt: "Deer Bone Tools" },
-  { filename: "deer-bones.jpg", src: allWorkdeerBones53, width: 1351, height: 2400, alt: "Deer Bones" },
-  { filename: "deer-fat-lamp-ideas.jpg", src: allWorkdeerFatLampIdeas54, width: 2400, height: 2400, alt: "Deer Fat Lamp Ideas" },
-  { filename: "digital-elevation-model.jpg", src: allWorkdigitalElevationModel55, width: 1152, height: 1149, alt: "Digital Elevation Model" },
-  { filename: "Discovery-Media.jpg", src: allWorkdiscoveryMedia56, width: 2400, height: 2400, alt: "Discovery Media" },
-  { filename: "dorothy-garrod.jpg", src: allWorkdorothyGarrod57, width: 2400, height: 2400, alt: "Dorothy Garrod" },
-  { filename: "easter-bouquette.jpg", src: allWorkeasterBouquette58, width: 2400, height: 2400, alt: "Easter Bouquette" },
-  { filename: "Embodiment.jpg", src: allWorkembodiment59, width: 1920, height: 2400, alt: "Embodiment" },
-  { filename: "europe-graffiti-history-spray-can.jpg", src: allWorkeuropeGraffitiHistorySprayCan60, width: 2400, height: 2400, alt: "Europe Graffiti History Spray Can" },
-  { filename: "europe-graffiti-history-tak-183.jpg", src: allWorkeuropeGraffitiHistoryTak18361, width: 2400, height: 2400, alt: "Europe Graffiti History Tak 183" },
-  { filename: "excavation-section-5-gpr-magnetic-interpretation.png", src: allWorkexcavationSection5GprMagneticInterpretation62, width: 1698, height: 2400, alt: "Excavation Section 5 Gpr Magnetic Interpretation" },
-  { filename: "Exchange-Benin.jpg", src: allWorkexchangeBenin63, width: 2400, height: 2400, alt: "Exchange Benin" },
-  { filename: "Exclusion.jpg", src: allWorkexclusion64, width: 1853, height: 2317, alt: "Exclusion" },
-  { filename: "Excotic.jpg", src: allWorkexcotic65, width: 2400, height: 2400, alt: "Excotic" },
-  { filename: "eye-idols-stippled.jpg", src: allWorkeyeIdolsStippled66, width: 2400, height: 2400, alt: "Eye Idols Stippled" },
-  { filename: "eye-idols.jpg", src: allWorkeyeIdols67, width: 2400, height: 2400, alt: "Eye Idols" },
-  { filename: "female-archaeologist-through-time.jpg", src: allWorkfemaleArchaeologistThroughTime68, width: 1200, height: 1698, alt: "Female Archaeologist Through Time" },
-  { filename: "female-baby-feeding-reconstruction.jpg", src: allWorkfemaleBabyFeedingReconstruction69, width: 2400, height: 2400, alt: "Female Baby Feeding Reconstruction" },
-  { filename: "female-burial-reconstruction.png", src: allWorkfemaleBurialReconstruction70, width: 1350, height: 2400, alt: "Female Burial Reconstruction" },
-  { filename: "female-burial-reconstructon.jpg", src: allWorkfemaleBurialReconstructon71, width: 2400, height: 2400, alt: "Female Burial Reconstructon" },
-  { filename: "flake.jpg", src: allWorkflake72, width: 2400, height: 2400, alt: "Flake" },
-  { filename: "flight.jpg", src: allWorkflight73, width: 2400, height: 2400, alt: "Flight" },
-  { filename: "Flint-Collage.jpg", src: allWorkflintCollage74, width: 1920, height: 2400, alt: "Flint Collage" },
-  { filename: "flower-crown.webp", src: allWorkflowerCrown75, width: 1440, height: 1440, alt: "Flower Crown" },
-  { filename: "Fragile.jpg", src: allWorkfragile76, width: 2400, height: 2400, alt: "Fragile" },
-  { filename: "frog-vessel-stippled.jpg", src: allWorkfrogVesselStippled77, width: 2400, height: 2400, alt: "Frog Vessel Stippled" },
-  { filename: "fueled-by-coffee.jpg", src: allWorkfueledByCoffee78, width: 2400, height: 1799, alt: "Fueled By Coffee" },
-  { filename: "Funnel-beaker-cluster.jpg", src: allWorkfunnelBeakerCluster79, width: 2400, height: 2400, alt: "Funnel Beaker Cluster" },
-  { filename: "gargoyle.jpg", src: allWorkgargoyle80, width: 2400, height: 2400, alt: "Gargoyle" },
-  { filename: "gears-in-archaeology.jpg", src: allWorkgearsInArchaeology81, width: 1152, height: 1153, alt: "Gears In Archaeology" },
-  { filename: "gender-bias.jpg", src: allWorkgenderBias82, width: 2000, height: 2000, alt: "Gender Bias" },
-  { filename: "Generative.jpg", src: allWorkgenerative83, width: 2400, height: 2400, alt: "Generative" },
-  { filename: "girls-and-women-in-science.jpg", src: allWorkgirlsAndWomenInScience84, width: 1152, height: 1153, alt: "Girls And Women In Science" },
-  { filename: "glass-stratigraphy-trowel.jpg", src: allWorkglassStratigraphyTrowel85, width: 1799, height: 2400, alt: "Glass Stratigraphy Trowel" },
-  { filename: "goat-vessel.jpg", src: allWorkgoatVessel86, width: 2400, height: 2400, alt: "Goat Vessel" },
-  { filename: "graffiti-archaeological-feature-comparisson.png", src: allWorkgraffitiArchaeologicalFeatureComparisson87, width: 2400, height: 1050, alt: "Graffiti Archaeological Feature Comparisson" },
-  { filename: "Gragoyle-Decoration.jpg", src: allWorkgragoyleDecoration88, width: 2400, height: 2400, alt: "Gragoyle Decoration" },
-  { filename: "ground-penetrating-rader-cross-section.jpg", src: allWorkgroundPenetratingRaderCrossSection89, width: 1350, height: 2400, alt: "Ground Penetrating Rader Cross Section" },
-  { filename: "H.jpg", src: allWorkh90, width: 893, height: 995, alt: "H" },
-  { filename: "hatching-torso-statue.jpg", src: allWorkhatchingTorsoStatue91, width: 2000, height: 2000, alt: "Hatching Torso Statue" },
-  { filename: "helmet.jpg", src: allWorkhelmet92, width: 2400, height: 2400, alt: "Helmet" },
-  { filename: "indiana-jones-shelf.jpg", src: allWorkindianaJonesShelf93, width: 2400, height: 1799, alt: "Indiana Jones Shelf" },
-  { filename: "Inked-Animals.jpg", src: allWorkinkedAnimals94, width: 1350, height: 2400, alt: "Inked Animals" },
-  { filename: "inscription-stone.jpg", src: allWorkinscriptionStone95, width: 2400, height: 2400, alt: "Inscription Stone" },
-  { filename: "Inscription.jpg", src: allWorkinscription96, width: 2400, height: 2400, alt: "Inscription" },
-  { filename: "international-womens-day.jpg", src: allWorkinternationalWomensDay97, width: 1152, height: 1152, alt: "International Womens Day" },
-  { filename: "ipad-pro-in-archaeology.jpg", src: allWorkipadProInArchaeology98, width: 2400, height: 2400, alt: "Ipad Pro In Archaeology" },
-  { filename: "it-wasnt-me.jpg", src: allWorkitWasntMe99, width: 2400, height: 2400, alt: "It Wasnt Me" },
-  { filename: "knife.jpg", src: allWorkknife100, width: 2400, height: 2400, alt: "Knife" },
-  { filename: "kore-reconstruction-coloured.jpg", src: allWorkkoreReconstructionColoured101, width: 2400, height: 2400, alt: "Kore Reconstruction Coloured" },
-  { filename: "krete-coloured.jpg", src: allWorkkreteColoured102, width: 2400, height: 2400, alt: "Krete Coloured" },
-  { filename: "L.jpg", src: allWorkl103, width: 701, height: 1024, alt: "L" },
-  { filename: "laptop-cidoc-crm.jpg", src: allWorklaptopCidocCrm104, width: 2400, height: 2400, alt: "Laptop Cidoc Crm" },
-  { filename: "lengyell.jpg", src: allWorklengyell105, width: 2400, height: 2400, alt: "Lengyell" },
-  { filename: "linear-pottery-cluster.jpg", src: allWorklinearPotteryCluster106, width: 2400, height: 2400, alt: "Linear Pottery Cluster" },
-  { filename: "many-fields-of-archaeology.jpg", src: allWorkmanyFieldsOfArchaeology107, width: 2400, height: 2400, alt: "Many Fields Of Archaeology" },
-  { filename: "many-hats-of-archaeologist.jpg", src: allWorkmanyHatsOfArchaeologist108, width: 2400, height: 2400, alt: "Many Hats Of Archaeologist" },
-  { filename: "may-the-fourth.jpg", src: allWorkmayTheFourth109, width: 1152, height: 1150, alt: "May The Fourth" },
-  { filename: "meet-the-artist.jpg", src: allWorkmeetTheArtist110, width: 2400, height: 2400, alt: "Meet The Artist" },
-  { filename: "middle-bronze-age-ivory-comb.jpg", src: allWorkmiddleBronzeAgeIvoryComb111, width: 2400, height: 2400, alt: "Middle Bronze Age Ivory Comb" },
-  { filename: "monoliths.webp", src: allWorkmonoliths112, width: 1440, height: 1440, alt: "Monoliths" },
-  { filename: "movement-statue.jpg", src: allWorkmovementStatue113, width: 2400, height: 2400, alt: "Movement Statue" },
-  { filename: "mulled-wine-recipe.jpg", src: allWorkmulledWineRecipe114, width: 2400, height: 2400, alt: "Mulled Wine Recipe" },
-  { filename: "my-phd-research.jpg", src: allWorkmyPhdResearch115, width: 2400, height: 1799, alt: "My Phd Research" },
-  { filename: "nebra-bronze-hoard.jpg", src: allWorknebraBronzeHoard116, width: 2400, height: 2400, alt: "Nebra Bronze Hoard" },
-  { filename: "neolithic-graffiti-reconstruction.jpg", src: allWorkneolithicGraffitiReconstruction117, width: 2400, height: 2400, alt: "Neolithic Graffiti Reconstruction" },
-  { filename: "neolithic-still-life.png", src: allWorkneolithicStillLife118, width: 1350, height: 2400, alt: "Neolithic Still Life" },
-  { filename: "Nomadic-Burial.jpg", src: allWorknomadicBurial119, width: 2400, height: 2400, alt: "Nomadic Burial" },
-  { filename: "O.jpg", src: allWorko120, width: 866, height: 1046, alt: "O" },
-  { filename: "Objectivity.jpg", src: allWorkobjectivity121, width: 2400, height: 2400, alt: "Objectivity" },
-  { filename: "ochre-painting.jpg", src: allWorkochrePainting122, width: 1800, height: 2400, alt: "Ochre Painting" },
-  { filename: "octopus-vessel-watercolour.jpg", src: allWorkoctopusVesselWatercolour123, width: 1350, height: 2400, alt: "Octopus Vessel Watercolour" },
-  { filename: "pastrace-brand-identity.webp", src: allWorkpastraceBrandIdentity124, width: 1672, height: 941, alt: "Pastrace Brand Identity" },
-  { filename: "pergamon-buckle-distribution-map.jpg", src: allWorkpergamonBuckleDistributionMap125, width: 2400, height: 1697, alt: "Pergamon Buckle Distribution Map" },
-  { filename: "phd-direction-map.jpg", src: allWorkphdDirectionMap126, width: 2400, height: 2400, alt: "Phd Direction Map" },
-  { filename: "posthole-paper-cut.jpg", src: allWorkpostholePaperCut127, width: 2400, height: 2400, alt: "Posthole Paper Cut" },
-  { filename: "pots-with-cati.jpg", src: allWorkpotsWithCati128, width: 2400, height: 2400, alt: "Pots With Cati" },
-  { filename: "Provenance.jpg", src: allWorkprovenance129, width: 1920, height: 2400, alt: "Provenance" },
-  { filename: "R.jpg", src: allWorkr130, width: 2400, height: 2400, alt: "R" },
-  { filename: "rat-skeleton.jpg", src: allWorkratSkeleton131, width: 2400, height: 2400, alt: "Rat Skeleton" },
-  { filename: "Raven.webp", src: allWorkraven132, width: 2400, height: 2400, alt: "Raven" },
-  { filename: "Recreate.jpg", src: allWorkrecreate133, width: 2400, height: 2400, alt: "Recreate" },
-  { filename: "Research-Design.jpg", src: allWorkresearchDesign134, width: 2400, height: 2400, alt: "Research Design" },
-  { filename: "research-journal-graffiti.jpg", src: allWorkresearchJournalGraffiti135, width: 2400, height: 1799, alt: "Research Journal Graffiti" },
-  { filename: "Residue.jpg", src: allWorkresidue136, width: 1799, height: 2400, alt: "Residue" },
-  { filename: "Roam-Ancient-Sites.jpg", src: allWorkroamAncientSites137, width: 2400, height: 2400, alt: "Roam Ancient Sites" },
-  { filename: "rocher-des-aures-excavation-6-layer-2-hillshade.jpg", src: allWorkrocherDesAuresExcavation6Layer2Hillshade138, width: 2400, height: 1697, alt: "Rocher Des Aures Excavation 6 Layer 2 Hillshade" },
-  { filename: "rocher-des-aures-excavation-6-layer-2-orthophoto.jpg", src: allWorkrocherDesAuresExcavation6Layer2Orthophoto139, width: 2400, height: 1697, alt: "Rocher Des Aures Excavation 6 Layer 2 Orthophoto" },
-  { filename: "rocher-des-aures-excavation-6-layer-3-orthophoto.jpg", src: allWorkrocherDesAuresExcavation6Layer3Orthophoto140, width: 2400, height: 1697, alt: "Rocher Des Aures Excavation 6 Layer 3 Orthophoto" },
-  { filename: "rocher-des-aures-excavation-6-layer-5-plan.jpg", src: allWorkrocherDesAuresExcavation6Layer5Plan141, width: 2400, height: 1697, alt: "Rocher Des Aures Excavation 6 Layer 5 Plan" },
-  { filename: "roman-burial-recontruction.jpg", src: allWorkromanBurialRecontruction142, width: 1696, height: 2400, alt: "Roman Burial Recontruction" },
-  { filename: "safety-tools.jpg", src: allWorksafetyTools143, width: 2400, height: 2400, alt: "Safety Tools" },
-  { filename: "salzburg-illustrated-city-map.jpg", src: allWorksalzburgIllustratedCityMap144, width: 1080, height: 1080, alt: "Salzburg Illustrated City Map" },
-  { filename: "scapula-archaeology.jpg", src: allWorkscapulaArchaeology145, width: 2400, height: 2400, alt: "Scapula Archaeology" },
-  { filename: "Scraper.jpg", src: allWorkscraper146, width: 2400, height: 2400, alt: "Scraper" },
-  { filename: "scribbles.jpg", src: allWorkscribbles147, width: 1080, height: 1920, alt: "Scribbles" },
-  { filename: "ships-inked.png", src: allWorkshipsInked148, width: 1350, height: 2400, alt: "Ships Inked" },
-  { filename: "sickle.jpg", src: allWorksickle149, width: 2400, height: 2400, alt: "Sickle" },
-  { filename: "Solidarity.jpg", src: allWorksolidarity150, width: 2000, height: 2000, alt: "Solidarity" },
-  { filename: "spectrum.jpg", src: allWorkspectrum151, width: 2400, height: 2400, alt: "Spectrum" },
-  { filename: "startigraphy-layers.jpg", src: allWorkstartigraphyLayers152, width: 2400, height: 2295, alt: "Startigraphy Layers" },
-  { filename: "statue-model-digital-colour-study.jpg", src: allWorkstatueModelDigitalColourStudy153, width: 1280, height: 1280, alt: "Statue Model Digital Colour Study" },
-  { filename: "stealing.jpg", src: allWorkstealing154, width: 2400, height: 2400, alt: "Stealing" },
-  { filename: "stereotypes-the-dinosaur-excavator.jpg", src: allWorkstereotypesTheDinosaurExcavator155, width: 2000, height: 2000, alt: "Stereotypes The Dinosaur Excavator" },
-  { filename: "stereotypes-the-indiana-jones.jpg", src: allWorkstereotypesTheIndianaJones156, width: 2400, height: 2400, alt: "Stereotypes The Indiana Jones" },
-  { filename: "stereotypes-the-treasure-hunter.jpg", src: allWorkstereotypesTheTreasureHunter157, width: 2000, height: 2000, alt: "Stereotypes The Treasure Hunter" },
-  { filename: "still-life.jpg", src: allWorkstillLife158, width: 2400, height: 2400, alt: "Still Life" },
-  { filename: "still-life.png", src: allWorkstillLife159, width: 1350, height: 2400, alt: "Still Life" },
-  { filename: "Stonehenge.jpg", src: allWorkstonehenge160, width: 2400, height: 2400, alt: "Stonehenge" },
-  { filename: "stratigraphic-cross-section-drawing.jpg", src: allWorkstratigraphicCrossSectionDrawing161, width: 2268, height: 1276, alt: "Stratigraphic Cross Section Drawing" },
-  { filename: "stratigraphic-layers-life.jpg", src: allWorkstratigraphicLayersLife162, width: 1350, height: 2400, alt: "Stratigraphic Layers Life" },
-  { filename: "Stratigraphy.jpg", src: allWorkstratigraphy163, width: 1920, height: 2400, alt: "Stratigraphy" },
-  { filename: "team.jpg", src: allWorkteam164, width: 2400, height: 2400, alt: "Team" },
-  { filename: "Technology.jpg", src: allWorktechnology165, width: 2048, height: 2048, alt: "Technology" },
-  { filename: "The-Archaeology-Of-Hearts.jpg", src: allWorktheArchaeologyOfHearts166, width: 2400, height: 2400, alt: "The Archaeology Of Hearts" },
-  { filename: "the-babylonian-map-of-the-world.jpg", src: allWorktheBabylonianMapOfTheWorld167, width: 2400, height: 2400, alt: "The Babylonian Map Of The World" },
-  { filename: "The-Cosmonaut-Recipe.jpg", src: allWorktheCosmonautRecipe168, width: 2400, height: 2400, alt: "The Cosmonaut Recipe" },
-  { filename: "The-Languages-Of-Archaeology.webp", src: allWorktheLanguagesOfArchaeology169, width: 2400, height: 2400, alt: "The Languages Of Archaeology" },
-  { filename: "The-Line-Between.jpg", src: allWorktheLineBetween170, width: 2400, height: 2400, alt: "The Line Between" },
-  { filename: "the-phoenicians.jpg", src: allWorkthePhoenicians171, width: 2400, height: 2400, alt: "The Phoenicians" },
-  { filename: "The-Social-Life-Of-Things.jpg", src: allWorktheSocialLifeOfThings172, width: 2400, height: 2400, alt: "The Social Life Of Things" },
-  { filename: "torso-blended.jpg", src: allWorktorsoBlended173, width: 1080, height: 1920, alt: "Torso Blended" },
-  { filename: "torso-coloured.jpg", src: allWorktorsoColoured174, width: 1080, height: 1920, alt: "Torso Coloured" },
-  { filename: "toy-chariot-model.jpg", src: allWorktoyChariotModel175, width: 2400, height: 2400, alt: "Toy Chariot Model" },
-  { filename: "trier-excavation-section-1-building-and-kilns-plan.jpg", src: allWorktrierExcavationSection1BuildingAndKilnsPlan176, width: 1698, height: 2400, alt: "Trier Excavation Section 1 Building And Kilns Plan" },
-  { filename: "trier-long-wall-iron-smelting-geology-map.png", src: allWorktrierLongWallIronSmeltingGeologyMap177, width: 2400, height: 1697, alt: "Trier Long Wall Iron Smelting Geology Map" },
-  { filename: "trier-roman-economy-geology-and-raw-materials-map.webp", src: allWorktrierRomanEconomyGeologyAndRawMaterialsMap178, width: 2400, height: 1697, alt: "Trier Roman Economy Geology And Raw Materials Map" },
-  { filename: "trier-roman-pottery-workshop-reconstruction-close.webp", src: allWorktrierRomanPotteryWorkshopReconstructionClose179, width: 1920, height: 1080, alt: "Trier Roman Pottery Workshop Reconstruction Close" },
-  { filename: "trier-roman-pottery-workshop-reconstruction-overview.webp", src: allWorktrierRomanPotteryWorkshopReconstructionOverview180, width: 1920, height: 1080, alt: "Trier Roman Pottery Workshop Reconstruction Overview" },
-  { filename: "trowel-rainbow.jpg", src: allWorktrowelRainbow181, width: 2400, height: 2400, alt: "Trowel Rainbow" },
-  { filename: "trowel.jpg", src: allWorktrowel182, width: 1799, height: 2400, alt: "Trowel" },
-  { filename: "troy-and-schliemann.jpg", src: allWorktroyAndSchliemann183, width: 2400, height: 2400, alt: "Troy And Schliemann" },
-  { filename: "Uncharted-Video-Game.jpg", src: allWorkunchartedVideoGame184, width: 2400, height: 2400, alt: "Uncharted Video Game" },
-  { filename: "venus-figureine.jpg", src: allWorkvenusFigureine185, width: 1350, height: 2400, alt: "Venus Figureine" },
-  { filename: "venus-figurine.jpg", src: allWorkvenusFigurine186, width: 1350, height: 2400, alt: "Venus Figurine" },
-  { filename: "venus-figurines.jpg", src: allWorkvenusFigurines187, width: 1351, height: 2400, alt: "Venus Figurines" },
-  { filename: "venus-of-willendorf-inked.jpg", src: allWorkvenusOfWillendorfInked188, width: 2400, height: 2400, alt: "Venus Of Willendorf Inked" },
-  { filename: "venus-of-willendorf-neon.jpg", src: allWorkvenusOfWillendorfNeon189, width: 2400, height: 2400, alt: "Venus Of Willendorf Neon" },
-  { filename: "venus-of-willendorf-sketch.jpg", src: allWorkvenusOfWillendorfSketch190, width: 1350, height: 2400, alt: "Venus Of Willendorf Sketch" },
-  { filename: "venus.jpg", src: allWorkvenus191, width: 1350, height: 2400, alt: "Venus" },
-  { filename: "vienna-danube-canal-graffiti-research-map.jpg", src: allWorkviennaDanubeCanalGraffitiResearchMap192, width: 1624, height: 1135, alt: "Vienna Danube Canal Graffiti Research Map" },
-  { filename: "Visibility.jpg", src: allWorkvisibility193, width: 1920, height: 2400, alt: "Visibility" },
-  { filename: "wall-graphic-interpretation.jpg", src: allWorkwallGraphicInterpretation194, width: 2400, height: 2400, alt: "Wall Graphic Interpretation" },
-  { filename: "womens-day.jpg", src: allWorkwomensDay195, width: 2400, height: 2400, alt: "Womens Day" },
-  { filename: "womens-history-month.jpg", src: allWorkwomensHistoryMonth196, width: 2400, height: 2400, alt: "Womens History Month" },
-  { filename: "Workers.jpg", src: allWorkworkers197, width: 2000, height: 2000, alt: "Workers" },
-  { filename: "you-amphorae-my-world.jpg", src: allWorkyouAmphoraeMyWorld198, width: 2400, height: 2400, alt: "You Amphorae My World" },
+  { filename: "archInk-2020-overview.jpg", src: allWorkarchink2020Overview19, width: 2003, height: 1445, alt: "ArchInk 2020 Overview" },
+  { filename: "archInk-2023-overview.jpg", src: allWorkarchink2023Overview20, width: 2003, height: 1445, alt: "ArchInk 2023 Overview" },
+  { filename: "artifact-cut.jpg", src: allWorkartifactCut21, width: 2400, height: 2400, alt: "Artifact Cut" },
+  { filename: "artifacts-stippled.jpg", src: allWorkartifactsStippled22, width: 2400, height: 2400, alt: "Artifacts Stippled" },
+  { filename: "augnetizier-cluster.jpg", src: allWorkaugnetizierCluster23, width: 2400, height: 2400, alt: "Augnetizier Cluster" },
+  { filename: "autumn-stratigraphy.jpg", src: allWorkautumnStratigraphy24, width: 1080, height: 1920, alt: "Autumn Stratigraphy" },
+  { filename: "axes.jpg", src: allWorkaxes25, width: 1915, height: 1915, alt: "Axes" },
+  { filename: "Babylon-map.jpg", src: allWorkbabylonMap26, width: 2400, height: 2400, alt: "Babylon Map" },
+  { filename: "Backpack.jpg", src: allWorkbackpack27, width: 2400, height: 2400, alt: "Backpack" },
+  { filename: "bell-beaker-map.jpg", src: allWorkbellBeakerMap28, width: 2400, height: 2400, alt: "Bell Beaker Map" },
+  { filename: "bell-beaker-paper-cut.jpg", src: allWorkbellBeakerPaperCut29, width: 2000, height: 2027, alt: "Bell Beaker Paper Cut" },
+  { filename: "bell-beaker-still-life.jpg", src: allWorkbellBeakerStillLife30, width: 1918, height: 1918, alt: "Bell Beaker Still Life" },
+  { filename: "bell-beaker.jpg", src: allWorkbellBeaker31, width: 2400, height: 2400, alt: "Bell Beaker" },
+  { filename: "bias-cherry-picking.jpg", src: allWorkbiasCherryPicking32, width: 2000, height: 2000, alt: "Bias Cherry Picking" },
+  { filename: "bias-eurocentism.jpg", src: allWorkbiasEurocentism33, width: 2400, height: 1004, alt: "Bias Eurocentism" },
+  { filename: "bioarchaeology-cover.jpg", src: allWorkbioarchaeologyCover34, width: 2400, height: 2400, alt: "Bioarchaeology Cover" },
+  { filename: "Bones.jpg", src: allWorkbones35, width: 2400, height: 2400, alt: "Bones" },
+  { filename: "bottle-stippling.jpg", src: allWorkbottleStippling36, width: 1152, height: 1153, alt: "Bottle Stippling" },
+  { filename: "bronze-age-cluster.jpg", src: allWorkbronzeAgeCluster37, width: 2400, height: 2400, alt: "Bronze Age Cluster" },
+  { filename: "bronze-age-still-life.png", src: allWorkbronzeAgeStillLife38, width: 1350, height: 2400, alt: "Bronze Age Still Life" },
+  { filename: "bronze-bowl.jpg", src: allWorkbronzeBowl39, width: 2400, height: 2400, alt: "Bronze Bowl" },
+  { filename: "bronze-bull.jpg", src: allWorkbronzeBull40, width: 2400, height: 2400, alt: "Bronze Bull" },
+  { filename: "Bronze.jpg", src: allWorkbronze41, width: 1920, height: 2400, alt: "Bronze" },
+  { filename: "brush-stratigraphy.jpg", src: allWorkbrushStratigraphy42, width: 2400, height: 2400, alt: "Brush Stratigraphy" },
+  { filename: "burial-dog-human.jpg", src: allWorkburialDogHuman43, width: 2400, height: 2400, alt: "Burial Dog Human" },
+  { filename: "Cache.jpg", src: allWorkcache44, width: 2400, height: 2400, alt: "Cache" },
+  { filename: "calcyladen.jpg", src: allWorkcalcyladen45, width: 2243, height: 2243, alt: "Calcyladen" },
+  { filename: "charmeleon-graffiti.jpg", src: allWorkcharmeleonGraffiti46, width: 2400, height: 1605, alt: "Charmeleon Graffiti" },
+  { filename: "Circle-Of-A-Posthole.jpg", src: allWorkcircleOfAPosthole47, width: 2400, height: 2400, alt: "Circle Of A Posthole" },
+  { filename: "Classify.jpg", src: allWorkclassify48, width: 2400, height: 2400, alt: "Classify" },
+  { filename: "Cow-Animal-Bones.jpg", src: allWorkcowAnimalBones49, width: 2000, height: 2000, alt: "Cow Animal Bones" },
+  { filename: "cyano.jpg", src: allWorkcyano50, width: 2400, height: 2400, alt: "Cyano" },
+  { filename: "decorated-ceramic-vessel-digital-colour-study.jpg", src: allWorkdecoratedCeramicVesselDigitalColourStudy51, width: 1280, height: 1280, alt: "Decorated Ceramic Vessel Digital Colour Study" },
+  { filename: "decorated-chest-with-skull-3d-reconstruction.jpg", src: allWorkdecoratedChestWithSkull3dReconstruction52, width: 2048, height: 2048, alt: "Decorated Chest With Skull 3d Reconstruction" },
+  { filename: "decorated-pedestal-vessel-3d-reconstruction.jpg", src: allWorkdecoratedPedestalVessel3dReconstruction53, width: 2400, height: 2400, alt: "Decorated Pedestal Vessel 3d Reconstruction" },
+  { filename: "Deer-Bone-Tools.jpg", src: allWorkdeerBoneTools54, width: 2400, height: 2400, alt: "Deer Bone Tools" },
+  { filename: "deer-bones.jpg", src: allWorkdeerBones55, width: 1351, height: 2400, alt: "Deer Bones" },
+  { filename: "deer-fat-lamp-ideas.jpg", src: allWorkdeerFatLampIdeas56, width: 2400, height: 2400, alt: "Deer Fat Lamp Ideas" },
+  { filename: "digital-elevation-model.jpg", src: allWorkdigitalElevationModel57, width: 1152, height: 1149, alt: "Digital Elevation Model" },
+  { filename: "Discovery-Media.jpg", src: allWorkdiscoveryMedia58, width: 2400, height: 2400, alt: "Discovery Media" },
+  { filename: "dorothy-garrod.jpg", src: allWorkdorothyGarrod59, width: 2400, height: 2400, alt: "Dorothy Garrod" },
+  { filename: "easter-bouquette.jpg", src: allWorkeasterBouquette60, width: 2400, height: 2400, alt: "Easter Bouquette" },
+  { filename: "Embodiment.jpg", src: allWorkembodiment61, width: 1920, height: 2400, alt: "Embodiment" },
+  { filename: "europe-graffiti-history-spray-can.jpg", src: allWorkeuropeGraffitiHistorySprayCan62, width: 2400, height: 2400, alt: "Europe Graffiti History Spray Can" },
+  { filename: "europe-graffiti-history-tak-183.jpg", src: allWorkeuropeGraffitiHistoryTak18363, width: 2400, height: 2400, alt: "Europe Graffiti History Tak 183" },
+  { filename: "excavation-section-5-gpr-magnetic-interpretation.png", src: allWorkexcavationSection5GprMagneticInterpretation64, width: 1698, height: 2400, alt: "Excavation Section 5 Gpr Magnetic Interpretation" },
+  { filename: "Exchange-Benin.jpg", src: allWorkexchangeBenin65, width: 2400, height: 2400, alt: "Exchange Benin" },
+  { filename: "Exclusion.jpg", src: allWorkexclusion66, width: 1853, height: 2317, alt: "Exclusion" },
+  { filename: "Excotic.jpg", src: allWorkexcotic67, width: 2400, height: 2400, alt: "Excotic" },
+  { filename: "eye-idols-stippled.jpg", src: allWorkeyeIdolsStippled68, width: 2400, height: 2400, alt: "Eye Idols Stippled" },
+  { filename: "eye-idols.jpg", src: allWorkeyeIdols69, width: 2400, height: 2400, alt: "Eye Idols" },
+  { filename: "female-archaeologist-through-time.jpg", src: allWorkfemaleArchaeologistThroughTime70, width: 1200, height: 1698, alt: "Female Archaeologist Through Time" },
+  { filename: "female-baby-feeding-reconstruction.jpg", src: allWorkfemaleBabyFeedingReconstruction71, width: 2400, height: 2400, alt: "Female Baby Feeding Reconstruction" },
+  { filename: "female-burial-reconstruction.png", src: allWorkfemaleBurialReconstruction72, width: 1350, height: 2400, alt: "Female Burial Reconstruction" },
+  { filename: "female-burial-reconstructon.jpg", src: allWorkfemaleBurialReconstructon73, width: 2400, height: 2400, alt: "Female Burial Reconstructon" },
+  { filename: "flake.jpg", src: allWorkflake74, width: 2400, height: 2400, alt: "Flake" },
+  { filename: "flight.jpg", src: allWorkflight75, width: 2400, height: 2400, alt: "Flight" },
+  { filename: "Flint-Collage.jpg", src: allWorkflintCollage76, width: 1920, height: 2400, alt: "Flint Collage" },
+  { filename: "flower-crown.webp", src: allWorkflowerCrown77, width: 1440, height: 1440, alt: "Flower Crown" },
+  { filename: "Fragile.jpg", src: allWorkfragile78, width: 2400, height: 2400, alt: "Fragile" },
+  { filename: "frog-vessel-stippled.jpg", src: allWorkfrogVesselStippled79, width: 2400, height: 2400, alt: "Frog Vessel Stippled" },
+  { filename: "fueled-by-coffee.jpg", src: allWorkfueledByCoffee80, width: 2400, height: 1799, alt: "Fueled By Coffee" },
+  { filename: "Funnel-beaker-cluster.jpg", src: allWorkfunnelBeakerCluster81, width: 2400, height: 2400, alt: "Funnel Beaker Cluster" },
+  { filename: "gargoyle.jpg", src: allWorkgargoyle82, width: 2400, height: 2400, alt: "Gargoyle" },
+  { filename: "gears-in-archaeology.jpg", src: allWorkgearsInArchaeology83, width: 1152, height: 1153, alt: "Gears In Archaeology" },
+  { filename: "gender-bias.jpg", src: allWorkgenderBias84, width: 2000, height: 2000, alt: "Gender Bias" },
+  { filename: "Generative.jpg", src: allWorkgenerative85, width: 2400, height: 2400, alt: "Generative" },
+  { filename: "girls-and-women-in-science.jpg", src: allWorkgirlsAndWomenInScience86, width: 1152, height: 1153, alt: "Girls And Women In Science" },
+  { filename: "glass-stratigraphy-trowel.jpg", src: allWorkglassStratigraphyTrowel87, width: 1799, height: 2400, alt: "Glass Stratigraphy Trowel" },
+  { filename: "goat-vessel.jpg", src: allWorkgoatVessel88, width: 2400, height: 2400, alt: "Goat Vessel" },
+  { filename: "graffiti-archaeological-feature-comparisson.png", src: allWorkgraffitiArchaeologicalFeatureComparisson89, width: 2400, height: 1050, alt: "Graffiti Archaeological Feature Comparisson" },
+  { filename: "Gragoyle-Decoration.jpg", src: allWorkgragoyleDecoration90, width: 2400, height: 2400, alt: "Gragoyle Decoration" },
+  { filename: "ground-penetrating-rader-cross-section.jpg", src: allWorkgroundPenetratingRaderCrossSection91, width: 1350, height: 2400, alt: "Ground Penetrating Rader Cross Section" },
+  { filename: "H.jpg", src: allWorkh92, width: 893, height: 995, alt: "H" },
+  { filename: "hatching-torso-statue.jpg", src: allWorkhatchingTorsoStatue93, width: 2000, height: 2000, alt: "Hatching Torso Statue" },
+  { filename: "helmet.jpg", src: allWorkhelmet94, width: 2400, height: 2400, alt: "Helmet" },
+  { filename: "indiana-jones-shelf.jpg", src: allWorkindianaJonesShelf95, width: 2400, height: 1799, alt: "Indiana Jones Shelf" },
+  { filename: "Inked-Animals.jpg", src: allWorkinkedAnimals96, width: 1350, height: 2400, alt: "Inked Animals" },
+  { filename: "inscription-stone.jpg", src: allWorkinscriptionStone97, width: 2400, height: 2400, alt: "Inscription Stone" },
+  { filename: "Inscription.jpg", src: allWorkinscription98, width: 2400, height: 2400, alt: "Inscription" },
+  { filename: "international-womens-day.jpg", src: allWorkinternationalWomensDay99, width: 1152, height: 1152, alt: "International Womens Day" },
+  { filename: "ipad-pro-in-archaeology.jpg", src: allWorkipadProInArchaeology100, width: 2400, height: 2400, alt: "Ipad Pro In Archaeology" },
+  { filename: "it-wasnt-me.jpg", src: allWorkitWasntMe101, width: 2400, height: 2400, alt: "It Wasnt Me" },
+  { filename: "knife.jpg", src: allWorkknife102, width: 2400, height: 2400, alt: "Knife" },
+  { filename: "kore-reconstruction-coloured.jpg", src: allWorkkoreReconstructionColoured103, width: 2400, height: 2400, alt: "Kore Reconstruction Coloured" },
+  { filename: "krete-coloured.jpg", src: allWorkkreteColoured104, width: 2400, height: 2400, alt: "Krete Coloured" },
+  { filename: "L.jpg", src: allWorkl105, width: 701, height: 1024, alt: "L" },
+  { filename: "laptop-cidoc-crm.jpg", src: allWorklaptopCidocCrm106, width: 2400, height: 2400, alt: "Laptop Cidoc Crm" },
+  { filename: "lengyell.jpg", src: allWorklengyell107, width: 2400, height: 2400, alt: "Lengyell" },
+  { filename: "linear-pottery-cluster.jpg", src: allWorklinearPotteryCluster108, width: 2400, height: 2400, alt: "Linear Pottery Cluster" },
+  { filename: "many-fields-of-archaeology.jpg", src: allWorkmanyFieldsOfArchaeology109, width: 2400, height: 2400, alt: "Many Fields Of Archaeology" },
+  { filename: "many-hats-of-archaeologist.jpg", src: allWorkmanyHatsOfArchaeologist110, width: 2400, height: 2400, alt: "Many Hats Of Archaeologist" },
+  { filename: "may-the-fourth.jpg", src: allWorkmayTheFourth111, width: 1152, height: 1150, alt: "May The Fourth" },
+  { filename: "meet-the-artist.jpg", src: allWorkmeetTheArtist112, width: 2400, height: 2400, alt: "Meet The Artist" },
+  { filename: "middle-bronze-age-ivory-comb.jpg", src: allWorkmiddleBronzeAgeIvoryComb113, width: 2400, height: 2400, alt: "Middle Bronze Age Ivory Comb" },
+  { filename: "monoliths.webp", src: allWorkmonoliths114, width: 1440, height: 1440, alt: "Monoliths" },
+  { filename: "movement-statue.jpg", src: allWorkmovementStatue115, width: 2400, height: 2400, alt: "Movement Statue" },
+  { filename: "mulled-wine-recipe.jpg", src: allWorkmulledWineRecipe116, width: 2400, height: 2400, alt: "Mulled Wine Recipe" },
+  { filename: "my-phd-research.jpg", src: allWorkmyPhdResearch117, width: 2400, height: 1799, alt: "My Phd Research" },
+  { filename: "nebra-bronze-hoard.jpg", src: allWorknebraBronzeHoard118, width: 2400, height: 2400, alt: "Nebra Bronze Hoard" },
+  { filename: "neolithic-graffiti-reconstruction.jpg", src: allWorkneolithicGraffitiReconstruction119, width: 2400, height: 2400, alt: "Neolithic Graffiti Reconstruction" },
+  { filename: "neolithic-still-life.png", src: allWorkneolithicStillLife120, width: 1350, height: 2400, alt: "Neolithic Still Life" },
+  { filename: "Nomadic-Burial.jpg", src: allWorknomadicBurial121, width: 2400, height: 2400, alt: "Nomadic Burial" },
+  { filename: "O.jpg", src: allWorko122, width: 866, height: 1046, alt: "O" },
+  { filename: "Objectivity.jpg", src: allWorkobjectivity123, width: 2400, height: 2400, alt: "Objectivity" },
+  { filename: "ochre-painting.jpg", src: allWorkochrePainting124, width: 1800, height: 2400, alt: "Ochre Painting" },
+  { filename: "octopus-vessel-watercolour.jpg", src: allWorkoctopusVesselWatercolour125, width: 1350, height: 2400, alt: "Octopus Vessel Watercolour" },
+  { filename: "pastrace-brand-identity.webp", src: allWorkpastraceBrandIdentity126, width: 1672, height: 941, alt: "Pastrace Brand Identity" },
+  { filename: "pergamon-buckle-distribution-map.jpg", src: allWorkpergamonBuckleDistributionMap127, width: 2400, height: 1697, alt: "Pergamon Buckle Distribution Map" },
+  { filename: "phd-direction-map.jpg", src: allWorkphdDirectionMap128, width: 2400, height: 2400, alt: "Phd Direction Map" },
+  { filename: "posthole-paper-cut.jpg", src: allWorkpostholePaperCut129, width: 2400, height: 2400, alt: "Posthole Paper Cut" },
+  { filename: "pots-with-cati.jpg", src: allWorkpotsWithCati130, width: 2400, height: 2400, alt: "Pots With Cati" },
+  { filename: "Provenance.jpg", src: allWorkprovenance131, width: 1920, height: 2400, alt: "Provenance" },
+  { filename: "R.jpg", src: allWorkr132, width: 2400, height: 2400, alt: "R" },
+  { filename: "rat-skeleton.jpg", src: allWorkratSkeleton133, width: 2400, height: 2400, alt: "Rat Skeleton" },
+  { filename: "Raven.webp", src: allWorkraven134, width: 2400, height: 2400, alt: "Raven" },
+  { filename: "Recreate.jpg", src: allWorkrecreate135, width: 2400, height: 2400, alt: "Recreate" },
+  { filename: "Research-Design.jpg", src: allWorkresearchDesign136, width: 2400, height: 2400, alt: "Research Design" },
+  { filename: "research-journal-graffiti.jpg", src: allWorkresearchJournalGraffiti137, width: 2400, height: 1799, alt: "Research Journal Graffiti" },
+  { filename: "Residue.jpg", src: allWorkresidue138, width: 1799, height: 2400, alt: "Residue" },
+  { filename: "Roam-Ancient-Sites.jpg", src: allWorkroamAncientSites139, width: 2400, height: 2400, alt: "Roam Ancient Sites" },
+  { filename: "rocher-des-aures-excavation-6-layer-2-hillshade.jpg", src: allWorkrocherDesAuresExcavation6Layer2Hillshade140, width: 2400, height: 1697, alt: "Rocher Des Aures Excavation 6 Layer 2 Hillshade" },
+  { filename: "rocher-des-aures-excavation-6-layer-2-orthophoto.jpg", src: allWorkrocherDesAuresExcavation6Layer2Orthophoto141, width: 2400, height: 1697, alt: "Rocher Des Aures Excavation 6 Layer 2 Orthophoto" },
+  { filename: "rocher-des-aures-excavation-6-layer-3-orthophoto.jpg", src: allWorkrocherDesAuresExcavation6Layer3Orthophoto142, width: 2400, height: 1697, alt: "Rocher Des Aures Excavation 6 Layer 3 Orthophoto" },
+  { filename: "rocher-des-aures-excavation-6-layer-5-plan.jpg", src: allWorkrocherDesAuresExcavation6Layer5Plan143, width: 2400, height: 1697, alt: "Rocher Des Aures Excavation 6 Layer 5 Plan" },
+  { filename: "roman-burial-recontruction.jpg", src: allWorkromanBurialRecontruction144, width: 1696, height: 2400, alt: "Roman Burial Recontruction" },
+  { filename: "safety-tools.jpg", src: allWorksafetyTools145, width: 2400, height: 2400, alt: "Safety Tools" },
+  { filename: "salzburg-illustrated-city-map.jpg", src: allWorksalzburgIllustratedCityMap146, width: 1080, height: 1080, alt: "Salzburg Illustrated City Map" },
+  { filename: "scapula-archaeology.jpg", src: allWorkscapulaArchaeology147, width: 2400, height: 2400, alt: "Scapula Archaeology" },
+  { filename: "Scraper.jpg", src: allWorkscraper148, width: 2400, height: 2400, alt: "Scraper" },
+  { filename: "scribbles.jpg", src: allWorkscribbles149, width: 1080, height: 1920, alt: "Scribbles" },
+  { filename: "ships-inked.png", src: allWorkshipsInked150, width: 1350, height: 2400, alt: "Ships Inked" },
+  { filename: "sickle.jpg", src: allWorksickle151, width: 2400, height: 2400, alt: "Sickle" },
+  { filename: "Solidarity.jpg", src: allWorksolidarity152, width: 2000, height: 2000, alt: "Solidarity" },
+  { filename: "spectrum.jpg", src: allWorkspectrum153, width: 2400, height: 2400, alt: "Spectrum" },
+  { filename: "startigraphy-layers.jpg", src: allWorkstartigraphyLayers154, width: 2400, height: 2295, alt: "Startigraphy Layers" },
+  { filename: "statue-model-digital-colour-study.jpg", src: allWorkstatueModelDigitalColourStudy155, width: 1280, height: 1280, alt: "Statue Model Digital Colour Study" },
+  { filename: "stealing.jpg", src: allWorkstealing156, width: 2400, height: 2400, alt: "Stealing" },
+  { filename: "stereotypes-the-dinosaur-excavator.jpg", src: allWorkstereotypesTheDinosaurExcavator157, width: 2000, height: 2000, alt: "Stereotypes The Dinosaur Excavator" },
+  { filename: "stereotypes-the-indiana-jones.jpg", src: allWorkstereotypesTheIndianaJones158, width: 2400, height: 2400, alt: "Stereotypes The Indiana Jones" },
+  { filename: "stereotypes-the-treasure-hunter.jpg", src: allWorkstereotypesTheTreasureHunter159, width: 2000, height: 2000, alt: "Stereotypes The Treasure Hunter" },
+  { filename: "still-life.jpg", src: allWorkstillLife160, width: 2400, height: 2400, alt: "Still Life" },
+  { filename: "still-life.png", src: allWorkstillLife161, width: 1350, height: 2400, alt: "Still Life" },
+  { filename: "Stonehenge.jpg", src: allWorkstonehenge162, width: 2400, height: 2400, alt: "Stonehenge" },
+  { filename: "stratigraphic-cross-section-drawing.jpg", src: allWorkstratigraphicCrossSectionDrawing163, width: 2268, height: 1276, alt: "Stratigraphic Cross Section Drawing" },
+  { filename: "stratigraphic-layers-life.jpg", src: allWorkstratigraphicLayersLife164, width: 1350, height: 2400, alt: "Stratigraphic Layers Life" },
+  { filename: "Stratigraphy.jpg", src: allWorkstratigraphy165, width: 1920, height: 2400, alt: "Stratigraphy" },
+  { filename: "team.jpg", src: allWorkteam166, width: 2400, height: 2400, alt: "Team" },
+  { filename: "Technology.jpg", src: allWorktechnology167, width: 2048, height: 2048, alt: "Technology" },
+  { filename: "The-Archaeology-Of-Hearts.jpg", src: allWorktheArchaeologyOfHearts168, width: 2400, height: 2400, alt: "The Archaeology Of Hearts" },
+  { filename: "the-babylonian-map-of-the-world.jpg", src: allWorktheBabylonianMapOfTheWorld169, width: 2400, height: 2400, alt: "The Babylonian Map Of The World" },
+  { filename: "The-Cosmonaut-Recipe.jpg", src: allWorktheCosmonautRecipe170, width: 2400, height: 2400, alt: "The Cosmonaut Recipe" },
+  { filename: "The-Languages-Of-Archaeology.webp", src: allWorktheLanguagesOfArchaeology171, width: 2400, height: 2400, alt: "The Languages Of Archaeology" },
+  { filename: "The-Line-Between.jpg", src: allWorktheLineBetween172, width: 2400, height: 2400, alt: "The Line Between" },
+  { filename: "the-phoenicians.jpg", src: allWorkthePhoenicians173, width: 2400, height: 2400, alt: "The Phoenicians" },
+  { filename: "The-Social-Life-Of-Things.jpg", src: allWorktheSocialLifeOfThings174, width: 2400, height: 2400, alt: "The Social Life Of Things" },
+  { filename: "torso-blended.jpg", src: allWorktorsoBlended175, width: 1080, height: 1920, alt: "Torso Blended" },
+  { filename: "torso-coloured.jpg", src: allWorktorsoColoured176, width: 1080, height: 1920, alt: "Torso Coloured" },
+  { filename: "toy-chariot-model.jpg", src: allWorktoyChariotModel177, width: 2400, height: 2400, alt: "Toy Chariot Model" },
+  { filename: "trier-excavation-section-1-building-and-kilns-plan.jpg", src: allWorktrierExcavationSection1BuildingAndKilnsPlan178, width: 1698, height: 2400, alt: "Trier Excavation Section 1 Building And Kilns Plan" },
+  { filename: "trier-long-wall-iron-smelting-geology-map.png", src: allWorktrierLongWallIronSmeltingGeologyMap179, width: 2400, height: 1697, alt: "Trier Long Wall Iron Smelting Geology Map" },
+  { filename: "trier-roman-economy-geology-and-raw-materials-map.webp", src: allWorktrierRomanEconomyGeologyAndRawMaterialsMap180, width: 2400, height: 1697, alt: "Trier Roman Economy Geology And Raw Materials Map" },
+  { filename: "trier-roman-pottery-workshop-reconstruction-close.webp", src: allWorktrierRomanPotteryWorkshopReconstructionClose181, width: 1920, height: 1080, alt: "Trier Roman Pottery Workshop Reconstruction Close" },
+  { filename: "trier-roman-pottery-workshop-reconstruction-overview.webp", src: allWorktrierRomanPotteryWorkshopReconstructionOverview182, width: 1920, height: 1080, alt: "Trier Roman Pottery Workshop Reconstruction Overview" },
+  { filename: "trowel-rainbow.jpg", src: allWorktrowelRainbow183, width: 2400, height: 2400, alt: "Trowel Rainbow" },
+  { filename: "trowel.jpg", src: allWorktrowel184, width: 1799, height: 2400, alt: "Trowel" },
+  { filename: "troy-and-schliemann.jpg", src: allWorktroyAndSchliemann185, width: 2400, height: 2400, alt: "Troy And Schliemann" },
+  { filename: "Uncharted-Video-Game.jpg", src: allWorkunchartedVideoGame186, width: 2400, height: 2400, alt: "Uncharted Video Game" },
+  { filename: "venus-figureine.jpg", src: allWorkvenusFigureine187, width: 1350, height: 2400, alt: "Venus Figureine" },
+  { filename: "venus-figurine.jpg", src: allWorkvenusFigurine188, width: 1350, height: 2400, alt: "Venus Figurine" },
+  { filename: "venus-figurines.jpg", src: allWorkvenusFigurines189, width: 1351, height: 2400, alt: "Venus Figurines" },
+  { filename: "venus-of-willendorf-inked.jpg", src: allWorkvenusOfWillendorfInked190, width: 2400, height: 2400, alt: "Venus Of Willendorf Inked" },
+  { filename: "venus-of-willendorf-neon.jpg", src: allWorkvenusOfWillendorfNeon191, width: 2400, height: 2400, alt: "Venus Of Willendorf Neon" },
+  { filename: "venus-of-willendorf-sketch.jpg", src: allWorkvenusOfWillendorfSketch192, width: 1350, height: 2400, alt: "Venus Of Willendorf Sketch" },
+  { filename: "venus.jpg", src: allWorkvenus193, width: 1350, height: 2400, alt: "Venus" },
+  { filename: "vienna-danube-canal-graffiti-research-map.jpg", src: allWorkviennaDanubeCanalGraffitiResearchMap194, width: 1624, height: 1135, alt: "Vienna Danube Canal Graffiti Research Map" },
+  { filename: "Visibility.jpg", src: allWorkvisibility195, width: 1920, height: 2400, alt: "Visibility" },
+  { filename: "wall-graphic-interpretation.jpg", src: allWorkwallGraphicInterpretation196, width: 2400, height: 2400, alt: "Wall Graphic Interpretation" },
+  { filename: "womens-day.jpg", src: allWorkwomensDay197, width: 2400, height: 2400, alt: "Womens Day" },
+  { filename: "womens-history-month.jpg", src: allWorkwomensHistoryMonth198, width: 2400, height: 2400, alt: "Womens History Month" },
+  { filename: "Workers.jpg", src: allWorkworkers199, width: 2000, height: 2000, alt: "Workers" },
+  { filename: "you-amphorae-my-world.jpg", src: allWorkyouAmphoraeMyWorld200, width: 2400, height: 2400, alt: "You Amphorae My World" },
 ];
 export const archiveAssets: ArchiveAsset[] = [
   { filename: "adventuress-archaeology.png", src: archiveadventuressArchaeology0, width: 500, height: 500, alt: "Adventuress Archaeology" },

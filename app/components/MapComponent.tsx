@@ -494,7 +494,7 @@ const MapContent: React.FC<{
 
         markers.forEach((marker) => markerClusterGroup.addLayer(marker));
         map.addLayer(markerClusterGroup);
-        addedLayers.push(markerClusterGroup as L.Layer);
+        addedLayers.push(markerClusterGroup);
       } else {
         markers.forEach((marker) => {
           if (cancelled) return;

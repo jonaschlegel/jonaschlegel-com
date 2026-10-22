@@ -269,6 +269,34 @@
       "context": "PasTrace",
       "credits": "Logo design and brand identity development"
     },
+    "archInk-2020-overview.jpg": {
+      "sourceFolder": "all-work",
+      "title": "archInk 2020: 31 drawings",
+      "alt": "Overview of all 31 archInk drawings made for Inktober 2020, arranged by prompt number",
+      "category": "illustration",
+      "collection": "main",
+      "visible": true,
+      "order": 19,
+      "year": "2020",
+      "practice": "archInk",
+      "form": "Series overview",
+      "context": "Inktober 2020; prompt list by Dr. K. Cook",
+      "credits": "Illustrations and layout by Jona Schlegel"
+    },
+    "archInk-2023-overview.jpg": {
+      "sourceFolder": "all-work",
+      "title": "archInk 2023: 31 drawings",
+      "alt": "Overview of all 31 archInk drawings made for Inktober 2023, arranged by prompt number",
+      "category": "illustration",
+      "collection": "main",
+      "visible": true,
+      "order": 20,
+      "year": "2023",
+      "practice": "archInk",
+      "form": "Series overview",
+      "context": "Inktober 2023; prompt list by the Black Trowel Collective",
+      "credits": "Illustrations and layout by Jona Schlegel"
+    },
     "a-long-time-ago.jpg": {
       "sourceFolder": "all-work",
       "title": "A Long Time Ago",
