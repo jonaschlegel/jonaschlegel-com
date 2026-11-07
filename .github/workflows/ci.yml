@@ -14,6 +14,8 @@ jobs:
           node-version: 'lts/*'
           cache: 'pnpm'
       - run: pnpm install
+      # Type-aware lint rules need the generated Next.js route types.
+      - run: pnpm exec next typegen
       - run: pnpm eslint . --max-warnings 0
       - run: pnpm build
       - run: pnpm tsc
