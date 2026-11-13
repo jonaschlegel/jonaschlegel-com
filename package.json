@@ -43,7 +43,7 @@
     "postcss": "^8.5.15",
     "prettier": "3.9.10",
     "sharp": "^0.35.2",
-    "stylelint": "^17.13.0",
+    "stylelint": "^18.0.0",
     "stylelint-config-upleveled": "^2.0.5",
     "tailwindcss": "^4.3.1",
     "typescript": "^6.0.3"
